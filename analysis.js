@@ -53,6 +53,13 @@ const modelFamilies={
     halfLifeYears:.75,
     evidenceScale:.55,
     focus:"Map1・Veto・直近マップ勝率・Rating・ロスター"
+  },
+  cs2_series:{
+    name:"CS2｜BO3シリーズ勝者専用",
+    priorStrength:8,
+    halfLifeYears:.75,
+    evidenceScale:.40,
+    focus:"両側市場no-vig・VRS/HLTV差・中期勝率・H2H・Veto/マッププール"
   }
 };
 
@@ -90,6 +97,11 @@ const probabilityModels={
   cs2:{
     family:"cs2_map1",display:"Bounty Hunters",odds:1.13,
     eventDate:"2026-09-22T00:00:00-03:00",
+    dated:[],evidence:[]
+  },
+  oddik:{
+    family:"cs2_series",display:"ODDIK",odds:1.24,opposingOdds:3.80,
+    eventDate:"2026-09-24T06:00:00-03:00",
     dated:[],evidence:[]
   },
   lyon:{
@@ -188,6 +200,12 @@ function updateCalibration(){
 }
 
 const easySummaries={
+  "detail-oddik-procyon":{
+    market:"BO3勝者：ODDIK",
+    reason:"VRS 109順位差・186pt差、3か月勝率72.2% vs 42.1%、唯一のH2Hを2-0・26-16で勝利。",
+    caution:"Procyonは直近5戦4勝1敗。H2Hは1シリーズのみで、Veto未確定・ロスター変更もある。",
+    model:"oddik"
+  },
   "detail-lyon":{
     market:"前半1X2：リヨン",
     reason:"リヨンの直近3試合は前半3勝0敗・前半12得点1失点。前半の強さが最も直接的な根拠。",
@@ -386,6 +404,7 @@ function calculateCompound(rows,base=300){
 }
 
 const detailToModel={
+  "detail-oddik-procyon":"oddik",
   "detail-lyon":"lyon",
   "detail-italy":"italy",
   "detail-cs2":"cs2",
