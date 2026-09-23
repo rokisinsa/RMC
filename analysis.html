@@ -33,7 +33,19 @@ th{color:#8fb4c3;font-weight:700;background:rgba(255,255,255,.025);position:stic
 .win{color:#68ef88}.loss{color:#ff6b6b}.open{color:#ffd15f}
 .profit-pos{color:#69f0a5;font-weight:900}.profit-neg{color:#ff7272;font-weight:900}.muted{color:#87949b}
 .note{margin-top:12px;color:#8398a2;font-size:11px;line-height:1.7}
+.h2h-panel{margin-top:18px;border:1px solid rgba(110,210,255,.22);background:linear-gradient(180deg,rgba(15,29,40,.88),rgba(5,9,14,.92));border-radius:20px;padding:16px}
+.h2h-panel h2{margin:0 0 6px;font-size:22px;color:#dff8ff}
+.h2h-summary{margin:0 0 14px;color:#9fb5bf;font-size:12px;line-height:1.7}
+.h2h-summary strong{color:#72e8a5}
+.h2h-list{display:grid;gap:8px}
+.h2h-row{display:grid;grid-template-columns:115px 1fr 72px;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.05)}
+.h2h-date{font-size:12px;color:#8fa6b1}
+.h2h-match{font-size:13px;font-weight:800;color:#f4f8fa}
+.h2h-score{font-size:15px;font-weight:900;color:#69f0a5;text-align:right}
+.h2h-sets{grid-column:2 / 4;font-size:11px;color:#81939c;line-height:1.55}
 @media(max-width:700px){
+  .h2h-row{grid-template-columns:92px 1fr 54px}
+
   .summary{grid-template-columns:repeat(2,1fr)}
   .panel{padding:12px;border-radius:16px}
 }
@@ -130,6 +142,33 @@ th{color:#8fb4c3;font-weight:700;background:rgba(255,255,255,.025);position:stic
 ○＝勝ち　×＝負け　△＝未確定。<br>
 一覧は常に「新しい日付 → 古い日付」の順で自動表示します。確定収支には未確定分を含めません。
 </div>
+</section>
+
+<section class="h2h-panel">
+<h2>イタリア vs フィンランド H2H</h2>
+<p class="h2h-summary">確認できた対戦は<strong>19試合</strong>。イタリア<strong>19勝0敗</strong>、セット通算<strong>57-14</strong>。確認できるものはセット別スコアまで掲載しています。</p>
+<div class="h2h-list">
+<div class="h2h-row"><div class="h2h-date">2018/09/21</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">25-20 / 25-18 / 25-16</div></div>
+<div class="h2h-row"><div class="h2h-date">2015/10/13</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">25-19 / 25-16 / 25-22</div></div>
+<div class="h2h-row"><div class="h2h-date">2013/09/25</div><div class="h2h-match">フィンランド vs イタリア</div><div class="h2h-score">1-3</div><div class="h2h-sets">25-23 / 20-25 / 22-25 / 22-25</div></div>
+<div class="h2h-row"><div class="h2h-date">2012/05/08</div><div class="h2h-match">フィンランド vs イタリア</div><div class="h2h-score">2-3</div><div class="h2h-sets">21-25 / 25-16 / 28-30 / 25-16 / 14-16</div></div>
+<div class="h2h-row"><div class="h2h-date">2011/09/15</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">25-18 / 25-20 / 29-31 / 25-21</div></div>
+<div class="h2h-row"><div class="h2h-date">2011/09/11</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">25-23 / 27-25 / 25-21</div></div>
+<div class="h2h-row"><div class="h2h-date">2009/09/10</div><div class="h2h-match">フィンランド vs イタリア</div><div class="h2h-score">0-3</div><div class="h2h-sets">25-27 / 19-25 / 25-27</div></div>
+<div class="h2h-row"><div class="h2h-date">2007/09/06</div><div class="h2h-match">フィンランド vs イタリア</div><div class="h2h-score">2-3</div><div class="h2h-sets">21-25 / 18-25 / 25-21 / 22-25 / 13-15</div></div>
+<div class="h2h-row"><div class="h2h-date">1993</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">15-9 / 15-2 / 15-0</div></div>
+<div class="h2h-row"><div class="h2h-date">1993</div><div class="h2h-match">フィンランド vs イタリア</div><div class="h2h-score">0-3</div><div class="h2h-sets">4-15 / 6-15 / 6-15</div></div>
+<div class="h2h-row"><div class="h2h-date">1982/10/07</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">15-13 / 15-10 / 15-11</div></div>
+<div class="h2h-row"><div class="h2h-date">1981/09/26</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">15-13 / 15-4 / 9-15 / 15-8</div></div>
+<div class="h2h-row"><div class="h2h-date">1977/09/26</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-2</div><div class="h2h-sets">15-13 / 10-15 / 15-13 / 9-15 / 15-8</div></div>
+<div class="h2h-row"><div class="h2h-date">1971/09/24</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">15-6 / 15-8 / 15-13</div></div>
+<div class="h2h-row"><div class="h2h-date">1967/10/26</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">15-8 / 8-15 / 15-10 / 19-17</div></div>
+<div class="h2h-row"><div class="h2h-date">1963/11/02</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">15-3 / 15-13 / 7-15 / 15-7</div></div>
+<div class="h2h-row"><div class="h2h-date">1962/10/18</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">12-15 / 15-5 / 15-7 / 15-11</div></div>
+<div class="h2h-row"><div class="h2h-date">1958/09/05</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">15-13 / 10-15 / 18-16 / 15-9</div></div>
+<div class="h2h-row"><div class="h2h-date">1955/06/24</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">15-11 / 15-7 / 15-17 / 15-9</div></div>
+</div>
+<div class="note">※1993年のWorld League 2試合は、確認できた資料では月日が表示されていないため「1993」としています。</div>
 </section>
 </div>
 
