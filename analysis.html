@@ -18,6 +18,11 @@ body{min-height:100svh;background:radial-gradient(circle at 50% 0%,rgba(70,190,2
 .label{font-size:12px;color:#8fa8b5;margin-bottom:7px}
 .kelly-explain{margin-top:7px;padding-top:7px;border-top:1px solid rgba(255,255,255,.07);font-size:10px;line-height:1.55;color:#8fa8b5}
 .compound-explain{margin-top:7px;padding-top:7px;border-top:1px solid rgba(255,255,255,.07);font-size:10px;line-height:1.55;color:#8fa8b5}
+.compound-history{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.07);font-size:10px;line-height:1.6;color:#a9bac2}
+.compound-history .ch-title{font-weight:900;color:#dff8ff;margin-bottom:4px}
+.compound-history .ch-success{color:#69f0a5}
+.compound-history .ch-fail{color:#ff7b87}
+.compound-history .ch-current{color:#ffd45d}
 .value{font-size:24px;font-weight:800;letter-spacing:.02em}
 .plus{color:#57e38d}.minus{color:#ff6b78}.blue{color:#7edcff}.gold{color:#ffd45d}.muted{color:#8d9aa1}
 .section-title{font-size:20px;margin:24px 2px 12px;color:#dff8ff}
@@ -191,7 +196,7 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 
 <section class="summary">
   <div class="card"><div class="label">単利収益</div><div class="value plus" id="simpleProfit">+$0.00</div><div class="label" style="margin-top:5px">実取引の確定損益合計</div></div>
-  <div class="card"><div class="label">複利収益</div><div class="value plus" id="compoundProfit">+$0.00</div><div class="label" id="compoundNote" style="margin-top:5px">現在資金 $0.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="compoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="compoundStockNote" style="margin-top:3px">確保済み 0回</div><div class="compound-explain"><strong>複利ルール：</strong>元金が2倍になったら利益をストックへ移し、運用資金は元金に戻して再スタート。</div></div>
+  <div class="card"><div class="label">複利収益</div><div class="value plus" id="compoundProfit">+$0.00</div><div class="label" id="compoundNote" style="margin-top:5px">現在資金 $0.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="compoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="compoundStockNote" style="margin-top:3px">確保済み 0回</div><div class="compound-explain"><strong>複利ルール：</strong>元金が2倍になったら利益をストックへ移し、運用資金は元金に戻して再スタート。途中で負けた場合はその挑戦を「失敗」として記録し、次の挑戦を元金から再開。</div><div class="compound-history" id="compoundHistory"><div class="ch-title">挑戦履歴</div>まだ確定結果がありません。</div></div>
   <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="quarterKellyProfit">+$0.00</div><div class="label" id="quarterKellyNote" style="margin-top:5px">初期$300・現行モデルの事前確率で再計算</div><div class="kelly-explain"><strong>1/4ケリー法とは：</strong>その時点の<strong>現在資金</strong>を基準に、推定勝率とオッズから「今回いくら使うか」を自動計算する方法。<br><strong>※現在の実数例：</strong><span id="kellyLiveExample">計算中...</span></div></div>
   <div class="card"><div class="label">戦績</div><div class="value blue" id="record">0戦 0勝 0敗</div><div class="label" id="winRate" style="margin-top:5px">勝率 0.0%</div><div class="label" id="allCount" style="margin-top:3px">全0件 / 未確定0件</div></div>
   <div class="card"><div class="label">投入金額合計</div><div class="value" id="settledStake">$0.00</div><div class="label" style="margin-top:5px">一覧へ追加した時点で自動加算</div></div>
@@ -682,7 +687,7 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 
   <section class="summary">
     <div class="card"><div class="label">単利収益</div><div class="value plus" id="testSimpleProfit">+$0.00</div><div class="label" style="margin-top:5px">固定$100での確定損益合計</div></div>
-    <div class="card"><div class="label">複利収益</div><div class="value plus" id="testCompoundProfit">+$0.00</div><div class="label" id="testCompoundNote" style="margin-top:5px">現在資金 $100.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="testCompoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="testCompoundStockNote" style="margin-top:3px">確保済み 0回</div><div class="compound-explain"><strong>複利ルール：</strong>元金が2倍になったら利益をストックへ移し、運用資金は元金に戻して再スタート。</div></div>
+    <div class="card"><div class="label">複利収益</div><div class="value plus" id="testCompoundProfit">+$0.00</div><div class="label" id="testCompoundNote" style="margin-top:5px">現在資金 $100.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="testCompoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="testCompoundStockNote" style="margin-top:3px">確保済み 0回</div><div class="compound-explain"><strong>複利ルール：</strong>元金が2倍になったら利益をストックへ移し、運用資金は元金に戻して再スタート。途中で負けた場合はその挑戦を「失敗」として記録し、次の挑戦を元金から再開。</div><div class="compound-history" id="testCompoundHistory"><div class="ch-title">挑戦履歴</div>まだ確定結果がありません。</div></div>
     <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="testQuarterKellyProfit">+$0.00</div><div class="label" id="testQuarterKellyNote" style="margin-top:5px">初期$100・確定0件</div><div class="kelly-explain"><strong>1/4ケリー法とは：</strong>その時点の<strong>現在資金</strong>を基準に、推定勝率とオッズから「今回いくら使うか」を自動計算する方法。<br><strong>※現在の実数例：</strong><span id="testKellyLiveExample">計算中...</span></div></div>
     <div class="card"><div class="label">戦績</div><div class="value blue" id="testRecord">0戦 0勝 0敗</div><div class="label" id="testWinRate" style="margin-top:5px">勝率 0.0%</div><div class="label" id="testAllCount" style="margin-top:3px">全0件 / 未確定0件</div></div>
     <div class="card"><div class="label">確定投入額</div><div class="value" id="testSettledStake">$0.00</div></div>
