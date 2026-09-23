@@ -376,15 +376,26 @@ function calculateCompound(rows,base=300){
   let balance=base;
   let stock=0;
   let cycles=0;
+  let challengeNo=1;
+  let stepInChallenge=0;
+  const history=[];
 
   [...rows]
     .filter(r=>r.dataset.status==="win"||r.dataset.status==="loss")
     .sort((a,b)=>a.dataset.ts.localeCompare(b.dataset.ts))
     .forEach(r=>{
-      if(balance<=0) return;
+      stepInChallenge++;
 
       if(r.dataset.status==="loss"){
-        balance=0;
+        history.push({
+          challenge:challengeNo,
+          type:"fail",
+          step:stepInChallenge,
+          date:r.dataset.ts
+        });
+        balance=base;
+        challengeNo++;
+        stepInChallenge=0;
         return;
       }
 
@@ -395,13 +406,56 @@ function calculateCompound(rows,base=300){
 
       if(balance>=target){
         stock+=(balance-base);
-        balance=base;
         cycles++;
+        history.push({
+          challenge:challengeNo,
+          type:"success",
+          step:stepInChallenge,
+          date:r.dataset.ts
+        });
+        balance=base;
+        challengeNo++;
+        stepInChallenge=0;
       }
     });
 
-  return {balance,stock,cycles,profit:balance-base};
+  return {
+    balance,
+    stock,
+    cycles,
+    profit:balance-base,
+    history,
+    currentChallenge:challengeNo,
+    currentStep:stepInChallenge
+  };
 }
+
+
+function renderCompoundHistory(targetId,c){
+  const el=byId(targetId);
+  if(!el) return;
+
+  if(!c.history.length && c.currentStep===0){
+    el.innerHTML='<div class="ch-title">挑戦履歴</div>まだ確定結果がありません。';
+    return;
+  }
+
+  let html='<div class="ch-title">挑戦履歴</div>';
+  c.history.forEach(h=>{
+    if(h.type==="success"){
+      html+='<div class="ch-success">成功 '+h.challenge+'回目：'+h.step+'取引目で倍額到達</div>';
+    }else{
+      html+='<div class="ch-fail">失敗 '+h.challenge+'回目：'+h.step+'取引目で失敗</div>';
+    }
+  });
+
+  if(c.currentStep>0){
+    html+='<div class="ch-current">進行中 '+c.currentChallenge+'回目：現在'+c.currentStep+'取引完了</div>';
+  }
+  el.innerHTML=html;
+}
+
+
 
 const detailToModel={
   "detail-oddik-procyon":"oddik",
@@ -459,6 +513,7 @@ function renderTradeSummary(rows){
   setText("compoundNote","現在資金 "+amount(c.balance));
   setText("compoundStock",amount(c.stock));
   setText("compoundStockNote","確保済み "+c.cycles+"回");
+  renderCompoundHistory("compoundHistory",c);
   setText("quarterKellyProfit",money(k.profit));
   setText("quarterKellyNote","初期"+amount(300)+"・確定"+b.settledGames+"件で自動計算");
   setText("kellyLiveExample",
@@ -514,6 +569,7 @@ function renderTestSummary(rows){
   setText("testCompoundNote","現在資金 "+amount(c.balance));
   setText("testCompoundStock",amount(c.stock));
   setText("testCompoundStockNote","確保済み "+c.cycles+"回");
+  renderCompoundHistory("testCompoundHistory",c);
   setText("testQuarterKellyProfit",money(k.profit));
   setText("testQuarterKellyNote","初期"+amount(TEST_STAKE)+"・確定"+b.settledGames+"件で自動計算");
   setText("testKellyLiveExample",
