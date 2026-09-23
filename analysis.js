@@ -391,7 +391,8 @@ function calculateCompound(rows,base=300){
           challenge:challengeNo,
           type:"fail",
           step:stepInChallenge,
-          date:r.dataset.ts
+          date:r.dataset.ts,
+          balanceBefore:balance
         });
         balance=base;
         challengeNo++;
@@ -411,7 +412,8 @@ function calculateCompound(rows,base=300){
           challenge:challengeNo,
           type:"success",
           step:stepInChallenge,
-          date:r.dataset.ts
+          date:r.dataset.ts,
+          reachedBalance:balance
         });
         balance=base;
         challengeNo++;
@@ -443,7 +445,7 @@ function renderCompoundHistory(targetId,c){
   let html='<div class="ch-title">挑戦履歴</div>';
   c.history.forEach(h=>{
     if(h.type==="success"){
-      html+='<div class="ch-success">成功 '+h.challenge+'回目：'+h.step+'取引目で倍額到達</div>';
+      html+='<div class="ch-success">成功 '+h.challenge+'回目：'+h.step+'取引目で倍額到達'+(h.reachedBalance?('（'+amount(h.reachedBalance)+'）'):'')+'</div>';
     }else{
       html+='<div class="ch-fail">失敗 '+h.challenge+'回目：'+h.step+'取引目で失敗</div>';
     }
