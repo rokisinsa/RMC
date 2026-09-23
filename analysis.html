@@ -7,56 +7,58 @@
 <style>
 *{box-sizing:border-box}
 html,body{margin:0;background:#05070a;color:#fff;font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
-body{min-height:100svh;background:
-radial-gradient(circle at 50% 0%,rgba(70,190,255,.18),transparent 34%),
-linear-gradient(180deg,#03070b,#050505 62%,#000)}
-.wrap{width:min(100%,1100px);margin:0 auto;padding:24px 14px 50px}
-.back{display:inline-block;color:#8edcff;text-decoration:none;font-size:14px;margin-bottom:18px}
-.hero{text-align:center;padding:12px 0 24px}
-.hero h1{margin:0;font-size:clamp(38px,10vw,72px);letter-spacing:.08em;background:linear-gradient(180deg,#e9fbff,#75d8ff 50%,#2e8fbd);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{margin:8px 0 0;color:#9ec8d9;font-size:12px;letter-spacing:.18em}
-.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
-.stat{background:linear-gradient(180deg,rgba(17,34,47,.95),rgba(7,13,20,.95));border:1px solid rgba(112,210,255,.2);border-radius:16px;padding:14px;text-align:center}
-.stat .label{font-size:11px;color:#8ea5b0;margin-bottom:6px}
-.stat .value{font-size:clamp(18px,5vw,28px);font-weight:900}
-.stat .sub{font-size:11px;color:#7f939e;margin-top:5px}
-.plus{color:#69f0a5}.minus{color:#ff7272}.blue{color:#7cdaff}.gold{color:#ffd777}
-.panel{border:1px solid rgba(110,210,255,.22);background:linear-gradient(180deg,rgba(15,29,40,.88),rgba(5,9,14,.92));border-radius:20px;padding:16px;box-shadow:0 0 36px rgba(44,169,230,.07)}
-.panel h2{margin:0 0 14px;font-size:22px}
-.table-wrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;min-width:900px}
-th,td{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;font-size:13px}
-th{color:#8fb4c3;font-weight:700;background:rgba(255,255,255,.025);position:sticky;top:0}
-.match{font-weight:800;color:#f4f8fa}
-.market{font-size:11px;color:#92a9b3;margin-top:4px}
-.result{font-size:24px;font-weight:900;text-align:center}
-.win{color:#68ef88}.loss{color:#ff6b6b}.open{color:#ffd15f}
-.profit-pos{color:#69f0a5;font-weight:900}.profit-neg{color:#ff7272;font-weight:900}.muted{color:#87949b}
-.note{margin-top:12px;color:#8398a2;font-size:11px;line-height:1.7}
-.history-panel{margin-top:18px;border:1px solid rgba(110,210,255,.22);background:linear-gradient(180deg,rgba(15,29,40,.88),rgba(5,9,14,.92));border-radius:20px;padding:16px}
-.history-panel h2{margin:0 0 6px;font-size:22px;color:#dff8ff}
-.history-panel>p{margin:0 0 14px;color:#91a8b3;font-size:12px;line-height:1.7}
-.history-card{border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:14px;margin:10px 0;background:rgba(255,255,255,.025)}
-.history-card h3{margin:0 0 9px;font-size:16px;color:#f2f7f9}
-.history-card .meta{font-size:11px;color:#7e94a0;margin-bottom:8px}
-.history-card ul{margin:0;padding-left:18px}
-.history-card li{font-size:12px;color:#c1cdd3;line-height:1.7;margin:3px 0}
-.history-card .warn{margin-top:8px;font-size:10px;color:#8b9aa2;line-height:1.6}
-.h2h-panel{margin-top:18px;border:1px solid rgba(110,210,255,.22);background:linear-gradient(180deg,rgba(15,29,40,.88),rgba(5,9,14,.92));border-radius:20px;padding:16px}
-.h2h-panel h2{margin:0 0 6px;font-size:22px;color:#dff8ff}
-.h2h-summary{margin:0 0 14px;color:#9fb5bf;font-size:12px;line-height:1.7}
-.h2h-summary strong{color:#72e8a5}
-.h2h-list{display:grid;gap:8px}
-.h2h-row{display:grid;grid-template-columns:115px 1fr 72px;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.05)}
-.h2h-date{font-size:12px;color:#8fa6b1}
-.h2h-match{font-size:13px;font-weight:800;color:#f4f8fa}
-.h2h-score{font-size:15px;font-weight:900;color:#69f0a5;text-align:right}
-.h2h-sets{grid-column:2 / 4;font-size:11px;color:#81939c;line-height:1.55}
-@media(max-width:700px){
-  .h2h-row{grid-template-columns:92px 1fr 54px}
-
-  .summary{grid-template-columns:repeat(2,1fr)}
-  .panel{padding:12px;border-radius:16px}
+body{min-height:100svh;background:radial-gradient(circle at 50% 0%,rgba(70,190,255,.16),transparent 32%),linear-gradient(180deg,#03070b,#050505 62%,#000)}
+.wrap{width:min(100%,1160px);margin:0 auto;padding:22px 14px 54px}
+.back{display:inline-block;color:#8edcff;text-decoration:none;font-size:14px;margin-bottom:12px}
+.hero{text-align:center;padding:10px 0 24px}
+.hero h1{margin:0;font-size:clamp(36px,10vw,70px);letter-spacing:.08em;background:linear-gradient(180deg,#e9fbff,#75d8ff 50%,#2e8fbd);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{margin:8px 0 0;color:#9fc9da;letter-spacing:.14em;font-size:12px}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.card{border:1px solid rgba(110,210,255,.18);background:linear-gradient(180deg,rgba(15,29,40,.92),rgba(5,9,14,.95));border-radius:16px;padding:15px;box-shadow:0 0 28px rgba(44,169,230,.06)}
+.label{font-size:12px;color:#8fa8b5;margin-bottom:7px}
+.value{font-size:24px;font-weight:800;letter-spacing:.02em}
+.plus{color:#57e38d}.minus{color:#ff6b78}.blue{color:#7edcff}.gold{color:#ffd45d}.muted{color:#8d9aa1}
+.section-title{font-size:20px;margin:24px 2px 12px;color:#dff8ff}
+.note{font-size:11px;color:#82949e;line-height:1.7;margin:10px 2px 0}
+.table-wrap{overflow-x:auto;border:1px solid rgba(110,210,255,.16);border-radius:16px;background:rgba(7,13,20,.8)}
+table{width:100%;border-collapse:collapse;min-width:980px}
+th,td{padding:13px 12px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left;vertical-align:middle}
+th{font-size:12px;color:#8fa8b5;background:#0d1721}
+td{font-size:14px}
+.trade-row{cursor:pointer;transition:background .15s}
+.trade-row:hover,.trade-row.opened{background:rgba(83,199,255,.055)}
+.trade-row td:first-child{width:56px}
+.result{font-size:23px;font-weight:900;text-align:center}
+.win{color:#67e38f}.loss{color:#ff6674}.open{color:#ffd45d}
+.match{font-weight:800;color:#f3f7f9}
+.market{font-size:11px;color:#91a1ab;margin-top:4px}
+.money{text-align:right;white-space:nowrap}
+.positive{color:#58e68e;font-weight:800}.negative{color:#ff6d7a;font-weight:800}.pending{color:#ffd45d;font-weight:700}
+.chev{display:inline-block;margin-left:6px;color:#75d9ff;transition:transform .2s}
+.trade-row.opened .chev{transform:rotate(180deg)}
+.detail-row{display:none;background:linear-gradient(180deg,rgba(9,19,28,.98),rgba(4,8,12,.98))}
+.detail-row.show{display:table-row}
+.detail-cell{padding:18px 16px 22px!important}
+.detail-title{font-size:18px;font-weight:900;color:#e8faff;margin-bottom:4px}
+.detail-sub{font-size:11px;color:#8299a5;margin-bottom:14px}
+.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.box{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.055);border-radius:12px;padding:12px}
+.box h3{font-size:11px;color:#76d9ff;margin:0 0 7px;letter-spacing:.04em}
+.box p,.box li{font-size:12px;line-height:1.72;color:#c7d2d8}
+.box p{margin:0}.box ul{margin:0;padding-left:18px}
+.reason{margin-top:10px;border-left:3px solid #69d9ff;background:rgba(72,184,235,.07);padding:11px 12px;border-radius:0 10px 10px 0;font-size:12px;line-height:1.72;color:#e6f7ff}
+.h2h{margin-top:12px;border-top:1px solid rgba(255,255,255,.07);padding-top:12px}
+.h2h h3{margin:0 0 8px;font-size:13px;color:#dff8ff}
+.h2h-table{width:100%;min-width:720px;border-collapse:collapse}
+.h2h-table th,.h2h-table td{font-size:11px;padding:8px;border-bottom:1px solid rgba(255,255,255,.055)}
+.h2h-table th{background:rgba(255,255,255,.035);color:#8eb2c1}
+.tag{display:inline-block;padding:3px 7px;border-radius:999px;background:rgba(255,255,255,.06);font-size:10px;color:#a8bac3}
+.source-note{margin-top:9px;font-size:10px;color:#7f929c;line-height:1.6}
+@media(max-width:760px){
+  .summary{grid-template-columns:1fr 1fr}
+  .value{font-size:20px}
+  .detail-grid{grid-template-columns:1fr}
+  .detail-cell{padding:14px 10px 18px!important}
 }
 </style>
 </head>
@@ -65,221 +67,222 @@ th{color:#8fb4c3;font-weight:700;background:rgba(255,255,255,.025);position:stic
 <a class="back" href="./">← RMCトップへ戻る</a>
 
 <section class="hero">
-<h1>分析情報</h1>
-<p>RMC ANALYSIS INFORMATION</p>
+  <h1>分析情報</h1>
+  <p>RESULT LOG / WHY THIS MATCH</p>
 </section>
 
 <section class="summary">
-  <div class="stat"><div class="label">確定収支</div><div class="value plus" id="settledProfit">$0.00</div></div>
-  <div class="stat"><div class="label">戦績</div><div class="value blue" id="record">0戦 0勝 0敗</div><div class="sub" id="allCount">全0件 / 未確定0件</div></div>
-  <div class="stat"><div class="label">確定投入額</div><div class="value" id="settledStake">$0.00</div></div>
-  <div class="stat"><div class="label">未確定・予想損益</div><div class="value gold" id="openProfit">$0.00</div></div>
+  <div class="card"><div class="label">確定収支</div><div class="value plus" id="realizedProfit">+$0.00</div></div>
+  <div class="card"><div class="label">戦績</div><div class="value blue" id="record">0戦 0勝 0敗</div><div class="label" id="allCount" style="margin-top:5px">全0件 / 未確定0件</div></div>
+  <div class="card"><div class="label">確定投入額</div><div class="value" id="settledStake">$0.00</div></div>
+  <div class="card"><div class="label">未確定・予想損益</div><div class="value gold" id="openProfit">+$0.00</div></div>
 </section>
 
-<section class="panel">
-<h2>取引・結果一覧</h2>
+<h2 class="section-title">取引結果一覧</h2>
 <div class="table-wrap">
 <table id="resultTable">
 <thead>
 <tr>
-<th>結果</th>
-<th>日付</th>
-<th>組み合わせ</th>
-<th>オッズ</th>
-<th>投入額</th>
-<th>払戻し / 予想払戻し</th>
-<th>損益</th>
+<th>結果</th><th>日付</th><th>組み合わせ</th><th>オッズ</th><th class="money">投入額</th><th class="money">払戻し / 予定</th><th class="money">損益</th>
 </tr>
 </thead>
 <tbody>
 
-<tr data-ts="2026-09-21T21:39:00" data-status="win" data-stake="300" data-payout="351">
-<td class="result win">○</td>
-<td>2026/9/21 21:39</td>
-<td><div class="match">チュニジア vs Rwanda</div><div class="market">第1セット・勝者 チュニジア</div></td>
-<td>1.17</td>
-<td>$300.00</td>
-<td>$351.00</td>
-<td class="profit-pos">+$51.00</td>
-</tr>
-
-<tr data-ts="2026-09-22T02:07:00" data-status="win" data-stake="300" data-payout="333">
-<td class="result win">○</td>
-<td>2026/9/22 02:07</td>
-<td><div class="match">SCコリンチャンスSP vs EC バイーア BA</div><div class="market">ドローノーベット SCコリンチャンスSP</div></td>
-<td>1.11</td>
-<td>$300.00</td>
-<td>$333.00</td>
-<td class="profit-pos">+$33.00</td>
-</tr>
-
-<tr data-ts="2026-09-22T21:42:00" data-status="win" data-stake="300" data-payout="339">
-<td class="result win">○</td>
-<td>2026/9/22 21:42</td>
-<td><div class="match">Damajuana vs Bounty Hunters Esports</div><div class="market">第1マップ・勝者 Bounty Hunters Esports</div></td>
-<td>1.13</td>
-<td>$300.00</td>
-<td>$339.00</td>
-<td class="profit-pos">+$39.00</td>
-</tr>
-
-<tr data-ts="2026-09-22T21:56:00" data-status="open" data-stake="300" data-payout="369">
-<td class="result open">△</td>
-<td>2026/9/22 21:56</td>
-<td><div class="match">イタリア vs フィンランド</div><div class="market">第1セット・勝者 イタリア</div></td>
-<td>1.23</td>
-<td>$300.00</td>
-<td>$369.00 <span class="muted">予想</span></td>
-<td class="open">+$69.00 予想</td>
-</tr>
-
-<tr data-ts="2026-09-23T12:13:00" data-status="open" data-stake="300" data-payout="336">
+<tr class="trade-row" data-ts="2026-09-23T12:13:00" data-status="open" data-stake="300" data-payout="336" data-target="detail-lyon">
 <td class="result open">△</td>
 <td>2026/9/23 12:13</td>
-<td><div class="match">セルヴェットFC vs オリンピック・リヨン</div><div class="market">前半 1x2 オリンピック・リヨン</div></td>
-<td>1.12</td>
-<td>$300.00</td>
-<td>$336.00 <span class="muted">予想</span></td>
-<td class="open">+$36.00 予想</td>
+<td><div class="match">セルヴェットFC vs オリンピック・リヨン <span class="chev">▼</span></div><div class="market">女子サッカー / 前半1X2：オリンピック・リヨン</div></td>
+<td>1.12</td><td class="money">$300.00</td><td class="money">$336.00 予定</td><td class="money pending">+$36.00 予定</td>
 </tr>
+<tr class="detail-row" id="detail-lyon"><td colspan="7" class="detail-cell">
+<div class="detail-title">なぜこの組み合わせを選んだか</div>
+<div class="detail-sub">セルヴェットFC Chênois Féminin vs OL Lyonnes / 前半リヨン</div>
+<div class="detail-grid">
+<div class="box"><h3>当時の比較</h3><p>過去チャットでは「前半から差が出やすいカード」として整理。リヨンの直近公式3試合は7-1、7-1、8-1で合計22得点3失点。前半だけで6-1、2-0、4-0、計12得点1失点。</p></div>
+<div class="box"><h3>現在確認できる指標</h3><p>OL LyonnesはUEFA女子クラブ係数2026/27で2位・98.750。セルヴェットはスイス女子リーグで7試合5勝1分1敗、15得点8失点、勝点16で1位。</p></div>
+<div class="box"><h3>セルヴェットの直近</h3><p>0-0 FC Zürich、2-1 Rapperswil-Jona、3-2 Yverdon、3-1 GC Zürich、3-0 Sparta Praha。5試合で11得点4失点。</p></div>
+<div class="box"><h3>ホーム / アウェイ</h3><p>今回の試合はセルヴェットのホーム（ジュネーブ）。過去チャットではセルヴェットの前半直近5試合が2勝2分1敗、5得点3失点。一方リヨンは直近公式3試合すべて前半リード。</p></div>
+<div class="box"><h3>直接対戦の扱い</h3><p>過去チャットでは、UEFA公式対戦としては初対戦という記録と、親善試合を含めた2試合の記録が両方ありました。矛盾を消さず、そのまま下に残しています。</p></div>
+<div class="box"><h3>ファーストゴール</h3><p>過去チャットで確認できた2025/8/9の試合は前半2-0まで確認。先制点の得点者・時刻は履歴内では未確認のため、推測せず空欄扱い。</p></div>
+</div>
+<div class="reason"><strong>主な分析要素：</strong>前半得点力、直近の大量得点、欧州係数、ホーム/アウェイ、直近5試合の得失点、対スイス勢実績を総合して比較。</div>
+<div class="h2h"><h3>直接対戦・関連記録</h3><div class="table-wrap"><table class="h2h-table">
+<tr><th>日付</th><th>ホーム</th><th>アウェイ</th><th>スコア</th><th>前半</th><th>先制点</th><th>備考</th></tr>
+<tr><td>2025/8/9</td><td>OL Lyonnes</td><td>Servette</td><td>5-0</td><td>2-0</td><td>未確認</td><td>親善試合として過去チャットに記録</td></tr>
+<tr><td>2022/8/3</td><td>Servette</td><td>OL Lyonnes</td><td>3-0</td><td>未確認</td><td>未確認</td><td>親善試合として過去チャットに記録</td></tr>
+</table></div><div class="source-note">UEFA公式競技での直接対戦は初対戦として過去チャットに記録。</div></div>
+</td></tr>
+
+<tr class="trade-row" data-ts="2026-09-22T21:56:00" data-status="open" data-stake="300" data-payout="369" data-target="detail-italy">
+<td class="result open">△</td>
+<td>2026/9/22 21:56</td>
+<td><div class="match">イタリア vs フィンランド <span class="chev">▼</span></div><div class="market">男子バレー / 第1セット勝者：イタリア</div></td>
+<td>1.23</td><td class="money">$300.00</td><td class="money">$369.00 予定</td><td class="money pending">+$69.00 予定</td>
+</tr>
+<tr class="detail-row" id="detail-italy"><td colspan="7" class="detail-cell">
+<div class="detail-title">なぜこの組み合わせを選んだか</div>
+<div class="detail-sub">イタリア vs フィンランド / 第1セット勝者 イタリア</div>
+<div class="detail-grid">
+<div class="box"><h3>当時 / 最新確認ランキング</h3><p>2026/9/9更新のFIVB男子世界ランキングで、イタリア2位・355.84pt、フィンランド16位・218.01pt。14位差、137.83pt差。</p></div>
+<div class="box"><h3>H2H全体</h3><p>1955年以降の確認記録は19試合。イタリア19勝0敗、セット通算57-14。第1セットはセット詳細からイタリア17勝、フィンランド2勝。</p></div>
+<div class="box"><h3>直近10試合</h3><p>過去チャット時点では両国とも9勝1敗。ただし相手強度、H2H、ランキング差はイタリア側が大きく上。</p></div>
+<div class="box"><h3>大会成績</h3><p>過去チャットではイタリア5勝0敗・セット15-4、フィンランド4勝1敗・セット14-9。VNL 2026のイタリアは4位、12試合8勝4敗、セット30-18。</p></div>
+<div class="box"><h3>第1セットに絞った理由</h3><p>H2Hの最終勝敗だけでなく、過去19試合の第1セット取得も確認するとイタリア17勝2敗。今回の市場が「第1セット勝者」だったため、ここを最重視。</p></div>
+<div class="box"><h3>ホーム / アウェイ</h3><p>代表戦のため開催地は大会ごとに異なる。下のH2H表は表記上のホーム/アウェイを残していますが、代表大会では実質中立地の試合も含まれます。</p></div>
+</div>
+<div class="reason"><strong>主な分析要素：</strong>世界ランキング差、19戦無敗、セット通算57-14、第1セット17勝2敗、直近成績、大会セット差。</div>
+<div class="h2h"><h3>H2H 19試合（確認できた全件）</h3><div class="table-wrap"><table class="h2h-table">
+<tr><th>日付</th><th>大会</th><th>ホーム</th><th>アウェイ</th><th>最終</th><th>セットスコア</th><th>第1セット</th></tr>
+<tr><td>2018/9/21</td><td>世界選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>25-20 / 25-18 / 25-16</td><td>イタリア</td></tr>
+<tr><td>2015/10/13</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>25-19 / 25-16 / 25-22</td><td>イタリア</td></tr>
+<tr><td>2013/9/25</td><td>欧州選手権</td><td>フィンランド</td><td>イタリア</td><td>1-3</td><td>25-23 / 20-25 / 22-25 / 22-25</td><td>フィンランド</td></tr>
+<tr><td>2012/5/8</td><td>五輪欧州予選</td><td>フィンランド</td><td>イタリア</td><td>2-3</td><td>21-25 / 25-16 / 28-30 / 25-16 / 14-16</td><td>イタリア</td></tr>
+<tr><td>2011/9/15</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>25-18 / 25-20 / 29-31 / 25-21</td><td>イタリア</td></tr>
+<tr><td>2011/9/11</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>25-23 / 27-25 / 25-21</td><td>イタリア</td></tr>
+<tr><td>2009/9/10</td><td>欧州選手権</td><td>フィンランド</td><td>イタリア</td><td>0-3</td><td>25-27 / 19-25 / 25-27</td><td>イタリア</td></tr>
+<tr><td>2007/9/6</td><td>欧州選手権</td><td>フィンランド</td><td>イタリア</td><td>2-3</td><td>21-25 / 18-25 / 25-21 / 22-25 / 13-15</td><td>イタリア</td></tr>
+<tr><td>1993</td><td>World League</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>15-9 / 15-2 / 15-0</td><td>イタリア</td></tr>
+<tr><td>1993</td><td>World League</td><td>フィンランド</td><td>イタリア</td><td>0-3</td><td>4-15 / 6-15 / 6-15</td><td>イタリア</td></tr>
+<tr><td>1982/10/7</td><td>世界選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>15-13 / 15-10 / 15-11</td><td>イタリア</td></tr>
+<tr><td>1981/9/26</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>15-13 / 15-4 / 9-15 / 15-8</td><td>イタリア</td></tr>
+<tr><td>1977/9/26</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-2</td><td>15-13 / 10-15 / 15-13 / 9-15 / 15-8</td><td>イタリア</td></tr>
+<tr><td>1971/9/24</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>15-6 / 15-8 / 15-13</td><td>イタリア</td></tr>
+<tr><td>1967/10/26</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>15-8 / 8-15 / 15-10 / 19-17</td><td>イタリア</td></tr>
+<tr><td>1963/11/2</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>15-3 / 15-13 / 7-15 / 15-7</td><td>イタリア</td></tr>
+<tr><td>1962/10/18</td><td>世界選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>12-15 / 15-5 / 15-7 / 15-11</td><td>フィンランド</td></tr>
+<tr><td>1958/9/5</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>15-13 / 10-15 / 18-16 / 15-9</td><td>イタリア</td></tr>
+<tr><td>1955/6/24</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>15-11 / 15-7 / 15-17 / 15-9</td><td>イタリア</td></tr>
+</table></div></div>
+</td></tr>
+
+<tr class="trade-row" data-ts="2026-09-22T21:42:00" data-status="win" data-stake="300" data-payout="339" data-target="detail-cs2">
+<td class="result win">○</td>
+<td>2026/9/22 21:42</td>
+<td><div class="match">DAMAJUANA vs Bounty Hunters Esports <span class="chev">▼</span></div><div class="market">CS2 / 第1マップ勝者：Bounty Hunters</div></td>
+<td>1.13</td><td class="money">$300.00</td><td class="money">$339.00</td><td class="money positive">+$39.00</td>
+</tr>
+<tr class="detail-row" id="detail-cs2"><td colspan="7" class="detail-cell">
+<div class="detail-title">なぜこの組み合わせを選んだか</div>
+<div class="detail-sub">DAMAJUANA vs Bounty Hunters / 第1マップ Bounty Hunters</div>
+<div class="detail-grid">
+<div class="box"><h3>当時のランキング</h3><p>過去チャットにはVRS #389 vs #88、HLTV #227 vs #95という記録。さらに少し前のスナップショットではVRS #375 vs #98、HLTV #220 vs #138。</p></div>
+<div class="box"><h3>現在確認ランキング</h3><p>DAMAJUANAはHLTV #227・Valve #393。Bounty HuntersはHLTV #95・VRS #87。</p></div>
+<div class="box"><h3>直近フォーム</h3><p>過去チャット時点：DAMAJUANA 1勝3敗〜直近5戦1勝4敗、Bounty Hunters 7勝3敗・2連勝。現在の3か月勝率はDAMAJUANA 20%、Bounty Hunters 50%。</p></div>
+<div class="box"><h3>選手Rating</h3><p>過去チャット：DAMAJUANA 1.00 / 0.94 / 0.93 / 0.84 / 0.66。Bounty Hunters 1.07 / 1.06 / 1.03 / 1.03 / 0.95。</p></div>
+<div class="box"><h3>マップ・Veto</h3><p>実際のVeto：DAMAJUANA Ancient除外 → Bounty Hunters Inferno除外 → DAMAJUANA Mirage選択 → Bounty Hunters Cache選択。第1マップMirageはBounty Huntersが13-6で勝利。</p></div>
+<div class="box"><h3>ファーストキル系指標</h3><p>Bounty HuntersのCache現行データでは、先にキルを取ったラウンドの勝率71.6%、先にデスしたラウンドの勝率33.0%。ピストルラウンド勝率57.5%。</p></div>
+</div>
+<div class="reason"><strong>主な分析要素：</strong>ランキング差、直近フォーム、選手Rating、マップ勝率、Veto、ロスター継続性。シリーズ2-0ではなく、第1マップに絞っていた。</div>
+<div class="h2h"><h3>直接対戦</h3><div class="table-wrap"><table class="h2h-table">
+<tr><th>日付</th><th>大会</th><th>カード</th><th>Map1</th><th>Map2</th><th>シリーズ</th><th>備考</th></tr>
+<tr><td>2026/9/22</td><td>ECL S52 SA Cup 2</td><td>DAMAJUANA vs Bounty Hunters</td><td>Mirage 6-13</td><td>Cache 10-13</td><td>0-2</td><td>事前H2Hは0件。今回が確認できた直接対戦。</td></tr>
+</table></div></div>
+</td></tr>
+
+<tr class="trade-row" data-ts="2026-09-22T02:07:00" data-status="win" data-stake="300" data-payout="333" data-target="detail-cor">
+<td class="result win">○</td>
+<td>2026/9/22 02:07</td>
+<td><div class="match">SCコリンチャンスSP vs ECバイーアBA <span class="chev">▼</span></div><div class="market">女子サッカー / ドローノーベット：コリンチャンス</div></td>
+<td>1.11</td><td class="money">$300.00</td><td class="money">$333.00</td><td class="money positive">+$33.00</td>
+</tr>
+<tr class="detail-row" id="detail-cor"><td colspan="7" class="detail-cell">
+<div class="detail-title">なぜこの組み合わせを選んだか</div>
+<div class="detail-sub">Corinthians Women vs Bahia Women / DNB Corinthians</div>
+<div class="detail-grid">
+<div class="box"><h3>当時の順位・得失点</h3><p>2026ブラジル女子A1第1フェーズ：コリンチャンス2位、17試合12勝2分3敗、42得点18失点、得失点差+24、勝点38。バイーア6位、17試合8勝5分4敗、30得点21失点、得失点差+9、勝点29。</p></div>
+<div class="box"><h3>H2H</h3><p>今回の準決勝第2戦を含めると、確認8試合でコリンチャンス7勝1分0敗。過去7試合時点の総得点は18-4で、今回の1-0を加えると19-4。</p></div>
+<div class="box"><h3>ホーム / アウェイ</h3><p>第1戦はバイーアのホーム（Arena Fonte Nova）でコリンチャンスが1-0勝利。第2戦はコリンチャンスのホーム（Neo Química Arena）で1-0勝利。</p></div>
+<div class="box"><h3>ファーストゴール</h3><p>2026準決勝の第1戦・第2戦はいずれもJhonsonが決勝点。つまり両試合とも最初の得点者もJhonson。</p></div>
+<div class="box"><h3>大会状況</h3><p>コリンチャンスは準決勝を2戦合計2-0で勝ち上がり、10大会連続の決勝進出を決めた。</p></div>
+<div class="box"><h3>市場をDNBにした理由</h3><p>1X2よりも引分時の返金を残しながら、H2H無敗・第1戦勝利・第2戦ホームという優位条件を取りにいく形。</p></div>
+</div>
+<div class="reason"><strong>主な分析要素：</strong>H2H無敗、19-4の直接対戦得失点、リーグ順位、シーズン得失点差、準決勝第1戦結果、ホーム開催、先制点傾向。</div>
+<div class="h2h"><h3>H2H（確認8試合）</h3><div class="table-wrap"><table class="h2h-table">
+<tr><th>日付</th><th>ホーム</th><th>アウェイ</th><th>スコア</th><th>先制点</th><th>ホーム/アウェイ</th></tr>
+<tr><td>2026/9/21</td><td>コリンチャンス</td><td>バイーア</td><td>1-0</td><td>Jhonson</td><td>コリンチャンスHOME</td></tr>
+<tr><td>2026/9/15</td><td>バイーア</td><td>コリンチャンス</td><td>0-1</td><td>Jhonson</td><td>コリンチャンスAWAY</td></tr>
+<tr><td>2026/8/15</td><td>バイーア</td><td>コリンチャンス</td><td>1-1</td><td>未確認</td><td>コリンチャンスAWAY</td></tr>
+<tr><td>2025/8/16</td><td>コリンチャンス</td><td>バイーア</td><td>2-0</td><td>未確認</td><td>コリンチャンスHOME</td></tr>
+<tr><td>2025/8/9</td><td>バイーア</td><td>コリンチャンス</td><td>1-2</td><td>未確認</td><td>コリンチャンスAWAY</td></tr>
+<tr><td>2025/5/4</td><td>コリンチャンス</td><td>バイーア</td><td>5-1</td><td>未確認</td><td>コリンチャンスHOME</td></tr>
+<tr><td>2023/6/12</td><td>バイーア</td><td>コリンチャンス</td><td>1-5</td><td>未確認</td><td>コリンチャンスAWAY</td></tr>
+<tr><td>2021/5/30</td><td>コリンチャンス</td><td>バイーア</td><td>2-0</td><td>未確認</td><td>コリンチャンスHOME</td></tr>
+</table></div></div>
+</td></tr>
+
+<tr class="trade-row" data-ts="2026-09-21T21:39:00" data-status="win" data-stake="300" data-payout="351" data-target="detail-tun">
+<td class="result win">○</td>
+<td>2026/9/21 21:39</td>
+<td><div class="match">チュニジア vs ルワンダ <span class="chev">▼</span></div><div class="market">男子バレー / 第1セット勝者：チュニジア</div></td>
+<td>1.17</td><td class="money">$300.00</td><td class="money">$351.00</td><td class="money positive">+$51.00</td>
+</tr>
+<tr class="detail-row" id="detail-tun"><td colspan="7" class="detail-cell">
+<div class="detail-title">なぜこの組み合わせを選んだか</div>
+<div class="detail-sub">チュニジア vs ルワンダ / 第1セット勝者 チュニジア</div>
+<div class="detail-grid">
+<div class="box"><h3>当時 / 現在ランキング</h3><p>2026/9/9時点でチュニジアはFIVB 43位・108.93pt。大会直前のFIVB記事では44位、アフリカ2番手。ルワンダの正確な最新FIVB順位は今回確認できた資料では数値未掲載のため、推測していません。</p></div>
+<div class="box"><h3>H2H</h3><p>2026年の準々決勝を加えると確認3試合。チュニジア3勝0敗、セット9-0。第1セットも3試合すべてチュニジア。</p></div>
+<div class="box"><h3>2026大会前の流れ</h3><p>過去チャットではチュニジアがガーナ3-0、ケニア3-0。ルワンダは中央アフリカ3-0、DRコンゴ3-1、カメルーン1-3、ガンビア3-0。</p></div>
+<div class="box"><h3>今回の実際の結果</h3><p>2026/9/21、開催国チュニジアが3-0勝利。セットは25-13 / 25-18 / 25-18。第1セットもチュニジアが12点差で取得。</p></div>
+<div class="box"><h3>ホーム / アウェイ</h3><p>2026アフリカ選手権はチュニジア開催。代表戦なので通常のクラブHOME/AWAYとは違うが、今回チュニジアは開催国。</p></div>
+<div class="box"><h3>セット差・得点差</h3><p>確認3試合のセットは9-0。2026年対戦の総得点は75-49、得点差+26。過去2試合もストレート勝ち。</p></div>
+</div>
+<div class="reason"><strong>主な分析要素：</strong>H2H全勝・全ストレート、第1セット全勝、開催国、アフリカ上位のランキング、セット得点差。</div>
+<div class="h2h"><h3>H2H（確認3試合）</h3><div class="table-wrap"><table class="h2h-table">
+<tr><th>日付</th><th>大会</th><th>表記順</th><th>最終</th><th>セットスコア</th><th>第1セット</th></tr>
+<tr><td>2026/9/21</td><td>アフリカ選手権</td><td>チュニジア vs ルワンダ</td><td>3-0</td><td>25-13 / 25-18 / 25-18</td><td>チュニジア</td></tr>
+<tr><td>2023/9/12</td><td>過去対戦</td><td>チュニジア vs ルワンダ</td><td>3-0</td><td>25-17 / 25-18 / 25-21</td><td>チュニジア</td></tr>
+<tr><td>2015/7/25</td><td>過去対戦</td><td>チュニジア vs ルワンダ</td><td>3-0</td><td>25-19 / 25-11 / 25-12</td><td>チュニジア</td></tr>
+</table></div></div>
+</td></tr>
 
 </tbody>
 </table>
 </div>
-
-<div class="note">
-○＝勝ち　×＝負け　△＝未確定。<br>
-一覧は常に「新しい日付 → 古い日付」の順で自動表示します。確定収支には未確定分を含めません。
-</div>
-</section>
-
-<section class="h2h-panel">
-<h2>イタリア vs フィンランド H2H</h2>
-<p class="h2h-summary">確認できた対戦は<strong>19試合</strong>。イタリア<strong>19勝0敗</strong>、セット通算<strong>57-14</strong>。確認できるものはセット別スコアまで掲載しています。</p>
-<div class="h2h-list">
-<div class="h2h-row"><div class="h2h-date">2018/09/21</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">25-20 / 25-18 / 25-16</div></div>
-<div class="h2h-row"><div class="h2h-date">2015/10/13</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">25-19 / 25-16 / 25-22</div></div>
-<div class="h2h-row"><div class="h2h-date">2013/09/25</div><div class="h2h-match">フィンランド vs イタリア</div><div class="h2h-score">1-3</div><div class="h2h-sets">25-23 / 20-25 / 22-25 / 22-25</div></div>
-<div class="h2h-row"><div class="h2h-date">2012/05/08</div><div class="h2h-match">フィンランド vs イタリア</div><div class="h2h-score">2-3</div><div class="h2h-sets">21-25 / 25-16 / 28-30 / 25-16 / 14-16</div></div>
-<div class="h2h-row"><div class="h2h-date">2011/09/15</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">25-18 / 25-20 / 29-31 / 25-21</div></div>
-<div class="h2h-row"><div class="h2h-date">2011/09/11</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">25-23 / 27-25 / 25-21</div></div>
-<div class="h2h-row"><div class="h2h-date">2009/09/10</div><div class="h2h-match">フィンランド vs イタリア</div><div class="h2h-score">0-3</div><div class="h2h-sets">25-27 / 19-25 / 25-27</div></div>
-<div class="h2h-row"><div class="h2h-date">2007/09/06</div><div class="h2h-match">フィンランド vs イタリア</div><div class="h2h-score">2-3</div><div class="h2h-sets">21-25 / 18-25 / 25-21 / 22-25 / 13-15</div></div>
-<div class="h2h-row"><div class="h2h-date">1993</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">15-9 / 15-2 / 15-0</div></div>
-<div class="h2h-row"><div class="h2h-date">1993</div><div class="h2h-match">フィンランド vs イタリア</div><div class="h2h-score">0-3</div><div class="h2h-sets">4-15 / 6-15 / 6-15</div></div>
-<div class="h2h-row"><div class="h2h-date">1982/10/07</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">15-13 / 15-10 / 15-11</div></div>
-<div class="h2h-row"><div class="h2h-date">1981/09/26</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">15-13 / 15-4 / 9-15 / 15-8</div></div>
-<div class="h2h-row"><div class="h2h-date">1977/09/26</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-2</div><div class="h2h-sets">15-13 / 10-15 / 15-13 / 9-15 / 15-8</div></div>
-<div class="h2h-row"><div class="h2h-date">1971/09/24</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-0</div><div class="h2h-sets">15-6 / 15-8 / 15-13</div></div>
-<div class="h2h-row"><div class="h2h-date">1967/10/26</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">15-8 / 8-15 / 15-10 / 19-17</div></div>
-<div class="h2h-row"><div class="h2h-date">1963/11/02</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">15-3 / 15-13 / 7-15 / 15-7</div></div>
-<div class="h2h-row"><div class="h2h-date">1962/10/18</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">12-15 / 15-5 / 15-7 / 15-11</div></div>
-<div class="h2h-row"><div class="h2h-date">1958/09/05</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">15-13 / 10-15 / 18-16 / 15-9</div></div>
-<div class="h2h-row"><div class="h2h-date">1955/06/24</div><div class="h2h-match">イタリア vs フィンランド</div><div class="h2h-score">3-1</div><div class="h2h-sets">15-11 / 15-7 / 15-17 / 15-9</div></div>
-</div>
-<div class="note">※1993年のWorld League 2試合は、確認できた資料では月日が表示されていないため「1993」としています。</div>
-</section>
+<p class="note">各行をタップすると「なぜ選んだか」「H2H」「ランキング」「直近成績」「ホーム/アウェイ」「第1セット・先制点」などの詳細が開きます。確認できない値は推測せず「未確認」と表示しています。</p>
 </div>
 
-
-<section class="history-panel">
-<h2>過去チャットから回収した分析記録</h2>
-<p>これまでの別チャットで実際に確認していたH2H、直近成績、ランキング、前半・セット・マップ情報を、確認できたものだけ記録しています。</p>
-
-<div class="history-card">
-<h3>セルヴェットFC vs オリンピック・リヨン</h3>
-<div class="meta">2026/9/23掲載分・女子サッカー</div>
-<ul>
-<li>過去チャットには直接H2Hについて2種類の記録あり：①「初対戦」②「2025/8/9 リヨン5-0セルヴェット（前半2-0）、2022/8/3 セルヴェット3-0リヨン」の2試合。</li>
-<li>別記録ではリヨンはスイス勢との5試合で5勝0敗、総得点31-1。</li>
-<li>リヨン直近公式3試合：Fleury 7-1、Paris FC 7-1、Le Havre 8-1。合計22得点3失点。</li>
-<li>同3試合の前半：6-1、2-0、4-0。前半3勝0敗、12得点1失点。</li>
-<li>セルヴェット直近5試合の前半：2勝2分1敗、5得点3失点。</li>
-<li>女子CL優勝8回という欧州実績を確認していた。</li>
-</ul>
-<div class="warn">※直接H2Hについて過去チャット内で記録が食い違っているため、両方を残しています。</div>
-</div>
-
-<div class="history-card">
-<h3>Damajuana vs Bounty Hunters Esports</h3>
-<div class="meta">2026/9/22掲載分・CS2</div>
-<ul>
-<li>大会：ECL Season 52 South America Cup 2、BO3、オンライン。</li>
-<li>過去時点の順位記録：HLTV #220 vs #138、VRS #375 vs #98。別時点ではHLTV #227 vs #95、VRS #389 vs #88。</li>
-<li>直近5戦：Damajuana 1勝4敗、Bounty Hunters 3勝2敗。</li>
-<li>Damajuana：BESTIA Academy 0-2、Zetta 2-0、paiN Academy 0-2、BORRACHEIROS 1-2、BESTIA Academy 0-2。</li>
-<li>Bounty Hunters：Galorys 2-1、Yawara 2-1、Imperial 1-2、Yawara 2-0、Back to Back 0-2。</li>
-<li>別時点ではBounty Hunters直近10戦7勝3敗・2連勝。</li>
-<li>直接H2Hなし。</li>
-<li>選手Rating記録：Damajuana 1.00 / 0.94 / 0.93 / 0.84 / 0.66、Bounty Hunters 1.07 / 1.06 / 1.03 / 1.03 / 0.95。</li>
-<li>Bounty Huntersマップ勝率記録：Cache 58%、Nuke 57%、Anubis 60%、Mirage 50%、Ancient 30%。</li>
-</ul>
-</div>
-
-<div class="history-card">
-<h3>SCコリンチャンスSP vs ECバイーアBA</h3>
-<div class="meta">2026/9/22掲載分・女子サッカー</div>
-<ul>
-<li>ブラジル女子選手権準決勝第2戦。第1戦は2026/9/16、バイーア0-1コリンチャンス。第2戦はコリンチャンスホーム。</li>
-<li>H2H確認7試合：コリンチャンス6勝1分0敗。</li>
-<li>2026/9/16 バイーア 0-1 コリンチャンス</li>
-<li>2026/8/15 バイーア 1-1 コリンチャンス</li>
-<li>2025/8/16 コリンチャンス 2-0 バイーア</li>
-<li>2025/8/9 バイーア 1-2 コリンチャンス</li>
-<li>2025/5/4 コリンチャンス 5-1 バイーア</li>
-<li>2023/6/12 バイーア 1-5 コリンチャンス</li>
-<li>2021/5/30 コリンチャンス 2-0 バイーア</li>
-</ul>
-</div>
-
-<div class="history-card">
-<h3>チュニジア vs ルワンダ</h3>
-<div class="meta">2026/9/21掲載分・バレーボール</div>
-<ul>
-<li>H2H確認2試合、チュニジア2勝0敗、セット6-0。</li>
-<li>2015/7/25 チュニジア 3-0 ルワンダ（25-19 / 25-11 / 25-12）</li>
-<li>2023/9/12 チュニジア 3-0 ルワンダ（25-17 / 25-18 / 25-21）</li>
-<li>今大会記録：チュニジア 3-0 ガーナ、3-0 ケニア。</li>
-<li>ルワンダ：3-0 中央アフリカ、3-1 DRコンゴ、1-3 カメルーン、3-0 ガンビア。</li>
-</ul>
-</div>
-</section>
 <script>
 const tbody=document.querySelector('#resultTable tbody');
+const tradeRows=[...tbody.querySelectorAll('.trade-row')];
+tradeRows.sort((a,b)=>b.dataset.ts.localeCompare(a.dataset.ts)).forEach(row=>{
+  const detail=document.getElementById(row.dataset.target);
+  tbody.appendChild(row);
+  tbody.appendChild(detail);
+});
 
-/* 新しいものを上、古いものを下へ自動並び替え */
-[...tbody.querySelectorAll('tr')]
-  .sort((a,b)=>b.dataset.ts.localeCompare(a.dataset.ts))
-  .forEach(row=>tbody.appendChild(row));
+tradeRows.forEach(row=>{
+  row.addEventListener('click',()=>{
+    const detail=document.getElementById(row.dataset.target);
+    const isOpen=detail.classList.contains('show');
+    document.querySelectorAll('.detail-row.show').forEach(d=>d.classList.remove('show'));
+    document.querySelectorAll('.trade-row.opened').forEach(r=>r.classList.remove('opened'));
+    if(!isOpen){
+      detail.classList.add('show');
+      row.classList.add('opened');
+    }
+  });
+});
 
-let settledStake=0, settledPayout=0, wins=0, losses=0, openStake=0, openPayout=0;
-
-tbody.querySelectorAll('tr').forEach(row=>{
+let settledStake=0,settledPayout=0,wins=0,losses=0,openStake=0,openPayout=0;
+tradeRows.forEach(row=>{
   const status=row.dataset.status;
   const stake=Number(row.dataset.stake||0);
   const payout=Number(row.dataset.payout||0);
-
-  if(status==='win' || status==='loss'){
-    settledStake += stake;
-    settledPayout += payout;
-    if(status==='win') wins++;
-    if(status==='loss') losses++;
-  }else if(status==='open'){
-    openStake += stake;
-    openPayout += payout;
+  if(status==='win'||status==='loss'){
+    settledStake+=stake; settledPayout+=payout;
+    if(status==='win')wins++; else losses++;
+  }else{
+    openStake+=stake; openPayout+=payout;
   }
 });
-
-const settledProfit=settledPayout-settledStake;
+const realized=settledPayout-settledStake;
 const openProfit=openPayout-openStake;
 const settledGames=wins+losses;
-const totalEntries=tbody.querySelectorAll('tr').length;
-const openEntries=tbody.querySelectorAll('tr[data-status="open"]').length;
-
-document.getElementById('settledProfit').textContent=(settledProfit>=0?'+':'')+'$'+settledProfit.toFixed(2);
+document.getElementById('realizedProfit').textContent=(realized>=0?'+':'')+'$'+realized.toFixed(2);
 document.getElementById('settledStake').textContent='$'+settledStake.toFixed(2);
 document.getElementById('record').textContent=settledGames+'戦 '+wins+'勝 '+losses+'敗';
-document.getElementById('allCount').textContent='全'+totalEntries+'件 / 未確定'+openEntries+'件';
+document.getElementById('allCount').textContent='全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
 document.getElementById('openProfit').textContent=(openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
 </script>
 </body>
