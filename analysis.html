@@ -111,6 +111,22 @@ td{font-size:14px}
     font-weight:800;
   }
 }
+
+.h2h-analysis{margin:0 0 14px;padding:13px;border:1px solid rgba(104,220,255,.18);border-radius:14px;background:linear-gradient(180deg,rgba(18,39,52,.75),rgba(7,15,22,.72))}
+.h2h-analysis-title{font-size:14px;font-weight:900;color:#e8fbff;margin-bottom:9px}
+.h2h-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.h2h-stat{background:rgba(255,255,255,.04);border-radius:10px;padding:10px}
+.h2h-stat span{display:block;font-size:10px;color:#7fa0ae;margin-bottom:4px}
+.h2h-stat strong{display:block;font-size:14px;line-height:1.35;color:#f4fbff}
+.h2h-homeaway{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.h2h-ha{background:rgba(255,255,255,.03);border-radius:10px;padding:10px;font-size:11px;line-height:1.65;color:#c1d0d7}
+.h2h-ha b{color:#7edcff}
+.h2h-read{margin-top:9px;padding:10px 11px;border-left:3px solid #63e3a1;background:rgba(77,217,148,.06);border-radius:0 9px 9px 0;font-size:11px;line-height:1.7;color:#d9f6e6}
+@media(max-width:760px){
+  .h2h-stats{grid-template-columns:1fr 1fr}
+  .h2h-homeaway{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -157,7 +173,24 @@ td{font-size:14px}
 <div class="box"><h3>ファーストゴール</h3><p>過去チャットで確認できた2025/8/9の試合は前半2-0まで確認。先制点の得点者・時刻は履歴内では未確認のため、推測せず空欄扱い。</p></div>
 </div>
 <div class="reason"><strong>主な分析要素：</strong>前半得点力、直近の大量得点、欧州係数、ホーム/アウェイ、直近5試合の得失点、対スイス勢実績を総合して比較。</div>
-<div class="h2h"><h3>直接対戦・関連記録</h3><div class="table-wrap"><table class="h2h-table">
+<div class="h2h"><h3>直接対戦・関連記録</h3>
+<div class="h2h-analysis">
+  <div class="h2h-analysis-title">H2H集計・分析</div>
+  <div class="h2h-stats">
+    <div class="h2h-stat"><span>確認試合数</span><strong>2試合</strong></div>
+    <div class="h2h-stat"><span>リヨン戦績</span><strong>1勝0分1敗</strong></div>
+    <div class="h2h-stat"><span>総得点</span><strong>リヨン 5 - 3 セルヴェット</strong></div>
+    <div class="h2h-stat"><span>1試合平均得点</span><strong>2.50 - 1.50</strong></div>
+    <div class="h2h-stat"><span>前半確認分</span><strong>1試合：2-0</strong></div>
+    <div class="h2h-stat"><span>公式競技H2H</span><strong>0試合</strong></div>
+  </div>
+  <div class="h2h-homeaway">
+    <div class="h2h-ha"><b>リヨン表記HOME：</b>1試合 1勝0敗、得点5-0。</div>
+    <div class="h2h-ha"><b>リヨン表記AWAY：</b>1試合 0勝1敗、得点0-3。</div>
+  </div>
+  <div class="h2h-read"><strong>ここから言えること：</strong>親善試合ベースでは得失点はリヨン優位ですが、2試合しかなく1勝1敗なのでH2H単独では強い根拠にしにくいです。今回の判断ではH2Hより、リヨンの直近得点力・前半成績・欧州係数を重く見るのが妥当です。</div>
+</div>
+<div class="table-wrap"><table class="h2h-table">
 <tr><th>日付</th><th>ホーム</th><th>アウェイ</th><th>スコア</th><th>前半</th><th>先制点</th><th>備考</th></tr>
 <tr><td>2025/8/9</td><td>OL Lyonnes</td><td>Servette</td><td>5-0</td><td>2-0</td><td>未確認</td><td>親善試合として過去チャットに記録</td></tr>
 <tr><td>2022/8/3</td><td>Servette</td><td>OL Lyonnes</td><td>3-0</td><td>未確認</td><td>未確認</td><td>親善試合として過去チャットに記録</td></tr>
@@ -175,14 +208,31 @@ td{font-size:14px}
 <div class="detail-sub">イタリア vs フィンランド / 第1セット勝者 イタリア</div>
 <div class="detail-grid">
 <div class="box"><h3>当時 / 最新確認ランキング</h3><p>2026/9/9更新のFIVB男子世界ランキングで、イタリア2位・355.84pt、フィンランド16位・218.01pt。14位差、137.83pt差。</p></div>
-<div class="box"><h3>H2H全体</h3><p>1955年以降の確認記録は19試合。イタリア19勝0敗、セット通算57-14。第1セットはセット詳細からイタリア17勝、フィンランド2勝。</p></div>
+<div class="box"><h3>H2H全体</h3><p>1955年以降の確認記録は19試合。イタリア19勝0敗、セット通算58-13。第1セットはセット詳細からイタリア17勝、フィンランド2勝。</p></div>
 <div class="box"><h3>直近10試合</h3><p>過去チャット時点では両国とも9勝1敗。ただし相手強度、H2H、ランキング差はイタリア側が大きく上。</p></div>
 <div class="box"><h3>大会成績</h3><p>過去チャットではイタリア5勝0敗・セット15-4、フィンランド4勝1敗・セット14-9。VNL 2026のイタリアは4位、12試合8勝4敗、セット30-18。</p></div>
 <div class="box"><h3>第1セットに絞った理由</h3><p>H2Hの最終勝敗だけでなく、過去19試合の第1セット取得も確認するとイタリア17勝2敗。今回の市場が「第1セット勝者」だったため、ここを最重視。</p></div>
 <div class="box"><h3>ホーム / アウェイ</h3><p>代表戦のため開催地は大会ごとに異なる。下のH2H表は表記上のホーム/アウェイを残していますが、代表大会では実質中立地の試合も含まれます。</p></div>
 </div>
-<div class="reason"><strong>主な分析要素：</strong>世界ランキング差、19戦無敗、セット通算57-14、第1セット17勝2敗、直近成績、大会セット差。</div>
-<div class="h2h"><h3>H2H 19試合（確認できた全件）</h3><div class="table-wrap"><table class="h2h-table">
+<div class="reason"><strong>主な分析要素：</strong>世界ランキング差、19戦無敗、セット通算58-13、第1セット17勝2敗、直近成績、大会セット差。</div>
+<div class="h2h"><h3>H2H 19試合（確認できた全件）</h3>
+<div class="h2h-analysis">
+  <div class="h2h-analysis-title">H2H集計・分析</div>
+  <div class="h2h-stats">
+    <div class="h2h-stat"><span>対戦数</span><strong>19試合</strong></div>
+    <div class="h2h-stat"><span>勝敗</span><strong>イタリア 19勝0敗</strong></div>
+    <div class="h2h-stat"><span>セット通算</span><strong>58 - 13</strong></div>
+    <div class="h2h-stat"><span>総得点</span><strong>1304 - 1055</strong></div>
+    <div class="h2h-stat"><span>得点差</span><strong>+249 イタリア</strong></div>
+    <div class="h2h-stat"><span>第1セット</span><strong>17勝2敗</strong></div>
+  </div>
+  <div class="h2h-homeaway">
+    <div class="h2h-ha"><b>イタリア表記HOME：</b>14試合14勝0敗、セット42-9、総得点868-669、第1セット13勝1敗。</div>
+    <div class="h2h-ha"><b>イタリア表記AWAY：</b>5試合5勝0敗、セット16-4、総得点436-386、第1セット4勝1敗。</div>
+  </div>
+  <div class="h2h-read"><strong>ここから言えること：</strong>表記上のHOME/AWAYどちらでも全勝しており、勝敗だけでなくセット差も58-13と大きいです。特に第1セット17勝2敗なので、「第1セット勝者」という今回の市場に直結するH2H傾向が強く出ています。代表戦は中立地もあるためHOME/AWAYは会場優位そのものとは限りません。</div>
+</div>
+<div class="table-wrap"><table class="h2h-table">
 <tr><th>日付</th><th>大会</th><th>ホーム</th><th>アウェイ</th><th>最終</th><th>セットスコア</th><th>第1セット</th></tr>
 <tr><td>2018/9/21</td><td>世界選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>25-20 / 25-18 / 25-16</td><td>イタリア</td></tr>
 <tr><td>2015/10/13</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>25-19 / 25-16 / 25-22</td><td>イタリア</td></tr>
@@ -224,7 +274,24 @@ td{font-size:14px}
 <div class="box"><h3>ファーストキル系指標</h3><p>Bounty HuntersのCache現行データでは、先にキルを取ったラウンドの勝率71.6%、先にデスしたラウンドの勝率33.0%。ピストルラウンド勝率57.5%。</p></div>
 </div>
 <div class="reason"><strong>主な分析要素：</strong>ランキング差、直近フォーム、選手Rating、マップ勝率、Veto、ロスター継続性。シリーズ2-0ではなく、第1マップに絞っていた。</div>
-<div class="h2h"><h3>直接対戦</h3><div class="table-wrap"><table class="h2h-table">
+<div class="h2h"><h3>直接対戦</h3>
+<div class="h2h-analysis">
+  <div class="h2h-analysis-title">H2H集計・分析</div>
+  <div class="h2h-stats">
+    <div class="h2h-stat"><span>確認シリーズ</span><strong>1試合</strong></div>
+    <div class="h2h-stat"><span>シリーズ勝敗</span><strong>Bounty 1勝0敗</strong></div>
+    <div class="h2h-stat"><span>マップ通算</span><strong>2 - 0</strong></div>
+    <div class="h2h-stat"><span>ラウンド通算</span><strong>26 - 16</strong></div>
+    <div class="h2h-stat"><span>ラウンド差</span><strong>+10 Bounty</strong></div>
+    <div class="h2h-stat"><span>第1マップ</span><strong>13 - 6</strong></div>
+  </div>
+  <div class="h2h-homeaway">
+    <div class="h2h-ha"><b>HOME/AWAY：</b>オンラインCS2のため通常のホーム/アウェイ分析は適用しません。</div>
+    <div class="h2h-ha"><b>Map別：</b>Mirage 13-6、Cache 13-10でBounty Huntersが両方取得。</div>
+  </div>
+  <div class="h2h-read"><strong>ここから言えること：</strong>現在確認できる直接対戦は1シリーズだけなのでH2H単独の信頼度は低めです。ただし、その1戦では2-0・ラウンド26-16で、特に第1マップを7ラウンド差で取っています。事前判断ではH2Hよりランキング差・直近フォーム・選手Rating・Vetoを主材料にするのが適切です。</div>
+</div>
+<div class="table-wrap"><table class="h2h-table">
 <tr><th>日付</th><th>大会</th><th>カード</th><th>Map1</th><th>Map2</th><th>シリーズ</th><th>備考</th></tr>
 <tr><td>2026/9/22</td><td>ECL S52 SA Cup 2</td><td>DAMAJUANA vs Bounty Hunters</td><td>Mirage 6-13</td><td>Cache 10-13</td><td>0-2</td><td>事前H2Hは0件。今回が確認できた直接対戦。</td></tr>
 </table></div></div>
@@ -248,7 +315,24 @@ td{font-size:14px}
 <div class="box"><h3>市場をDNBにした理由</h3><p>1X2よりも引分時の返金を残しながら、H2H無敗・第1戦勝利・第2戦ホームという優位条件を取りにいく形。</p></div>
 </div>
 <div class="reason"><strong>主な分析要素：</strong>H2H無敗、19-4の直接対戦得失点、リーグ順位、シーズン得失点差、準決勝第1戦結果、ホーム開催、先制点傾向。</div>
-<div class="h2h"><h3>H2H（確認8試合）</h3><div class="table-wrap"><table class="h2h-table">
+<div class="h2h"><h3>H2H（確認8試合）</h3>
+<div class="h2h-analysis">
+  <div class="h2h-analysis-title">H2H集計・分析</div>
+  <div class="h2h-stats">
+    <div class="h2h-stat"><span>対戦数</span><strong>8試合</strong></div>
+    <div class="h2h-stat"><span>コリンチャンス戦績</span><strong>7勝1分0敗</strong></div>
+    <div class="h2h-stat"><span>総得点</span><strong>19 - 4</strong></div>
+    <div class="h2h-stat"><span>得失点差</span><strong>+15</strong></div>
+    <div class="h2h-stat"><span>平均得点</span><strong>2.38 - 0.50</strong></div>
+    <div class="h2h-stat"><span>先制点確認分</span><strong>2/2 コリンチャンス</strong></div>
+  </div>
+  <div class="h2h-homeaway">
+    <div class="h2h-ha"><b>コリンチャンスHOME：</b>4試合4勝0分0敗、総得点10-1。</div>
+    <div class="h2h-ha"><b>コリンチャンスAWAY：</b>4試合3勝1分0敗、総得点9-3。</div>
+  </div>
+  <div class="h2h-read"><strong>ここから言えること：</strong>8試合で無敗、ホームでは4戦全勝・10-1、アウェイでも3勝1分・9-3です。開催地に左右されにくく、H2Hでは得点力と守備力の両方に一貫した差があります。先制点を確認できた直近2試合も両方コリンチャンスで、DNBを選ぶ根拠と整合します。</div>
+</div>
+<div class="table-wrap"><table class="h2h-table">
 <tr><th>日付</th><th>ホーム</th><th>アウェイ</th><th>スコア</th><th>先制点</th><th>ホーム/アウェイ</th></tr>
 <tr><td>2026/9/21</td><td>コリンチャンス</td><td>バイーア</td><td>1-0</td><td>Jhonson</td><td>コリンチャンスHOME</td></tr>
 <tr><td>2026/9/15</td><td>バイーア</td><td>コリンチャンス</td><td>0-1</td><td>Jhonson</td><td>コリンチャンスAWAY</td></tr>
@@ -279,7 +363,24 @@ td{font-size:14px}
 <div class="box"><h3>セット差・得点差</h3><p>確認3試合のセットは9-0。2026年対戦の総得点は75-49、得点差+26。過去2試合もストレート勝ち。</p></div>
 </div>
 <div class="reason"><strong>主な分析要素：</strong>H2H全勝・全ストレート、第1セット全勝、開催国、アフリカ上位のランキング、セット得点差。</div>
-<div class="h2h"><h3>H2H（確認3試合）</h3><div class="table-wrap"><table class="h2h-table">
+<div class="h2h"><h3>H2H（確認3試合）</h3>
+<div class="h2h-analysis">
+  <div class="h2h-analysis-title">H2H集計・分析</div>
+  <div class="h2h-stats">
+    <div class="h2h-stat"><span>対戦数</span><strong>3試合</strong></div>
+    <div class="h2h-stat"><span>勝敗</span><strong>チュニジア 3勝0敗</strong></div>
+    <div class="h2h-stat"><span>セット通算</span><strong>9 - 0</strong></div>
+    <div class="h2h-stat"><span>総得点</span><strong>225 - 147</strong></div>
+    <div class="h2h-stat"><span>得点差</span><strong>+78</strong></div>
+    <div class="h2h-stat"><span>第1セット</span><strong>3勝0敗 / 75-49</strong></div>
+  </div>
+  <div class="h2h-homeaway">
+    <div class="h2h-ha"><b>開催国として確認できる試合：</b>2026年チュニジア開催で1勝0敗、セット3-0、得点75-49。</div>
+    <div class="h2h-ha"><b>その他2試合：</b>過去履歴では会場・HOME/AWAYの確定情報が不足しているため、無理に分類していません。</div>
+  </div>
+  <div class="h2h-read"><strong>ここから言えること：</strong>3試合すべてストレート勝ちで、セット9-0、総得点差+78。さらに第1セットも3戦全勝・75-49で、今回の「第1セット勝者」という市場に直接つながるH2H傾向です。対戦数は3試合なので、ランキングや大会直近成績と合わせて見るのが妥当です。</div>
+</div>
+<div class="table-wrap"><table class="h2h-table">
 <tr><th>日付</th><th>大会</th><th>表記順</th><th>最終</th><th>セットスコア</th><th>第1セット</th></tr>
 <tr><td>2026/9/21</td><td>アフリカ選手権</td><td>チュニジア vs ルワンダ</td><td>3-0</td><td>25-13 / 25-18 / 25-18</td><td>チュニジア</td></tr>
 <tr><td>2023/9/12</td><td>過去対戦</td><td>チュニジア vs ルワンダ</td><td>3-0</td><td>25-17 / 25-18 / 25-21</td><td>チュニジア</td></tr>
