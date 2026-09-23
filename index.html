@@ -6,308 +6,364 @@
 <title>RMC | RESTART MONEY CLUB</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
 html,body{
   width:100%;
-  min-height:100%;
-  background:#020202;
-  overflow-x:hidden;
-}
-body{
-  font-family:Georgia,"Times New Roman",serif;
-  color:white;
-}
-.stage{
-  width:100%;
-  min-height:100vh;
-  position:relative;
+  height:100%;
+  background:#000;
   overflow:hidden;
-  background:
-    radial-gradient(circle at 50% 60%,rgba(135,91,26,.15),transparent 40%),
-    #020202;
 }
-.logo{
-  text-align:center;
-  padding-top:5vh;
-  position:relative;
-  z-index:5;
-}
-.logo h1{
-  font-size:clamp(70px,19vw,180px);
-  line-height:.85;
-  letter-spacing:.03em;
-  background:linear-gradient(90deg,#8e571b,#fff1b3,#a76119,#fff2bd,#8e571b);
-  -webkit-background-clip:text;
-  color:transparent;
-  text-shadow:0 0 28px rgba(255,180,55,.20);
-}
-.logo p{
-  margin-top:16px;
-  font-size:clamp(12px,3vw,25px);
-  letter-spacing:.42em;
-  color:#efd7bd;
-}
-.hall{
-  width:100%;
-  max-width:1500px;
-  margin:8vh auto 0;
-  padding:0 2vw;
+
+.stage{
+  position:fixed;
+  inset:0;
+  background:#000;
   display:flex;
-  align-items:flex-end;
   justify-content:center;
-  gap:1.5vw;
+  align-items:flex-start;
+}
+
+.scene{
+  position:relative;
+  width:100vw;
+  max-width:1536px;
+  aspect-ratio:3/2;
+  overflow:hidden;
   perspective:1400px;
 }
-.portal{
-  position:relative;
-  width:31.5%;
-  aspect-ratio:.66;
-  filter:drop-shadow(0 0 25px var(--glow));
-}
-.arch{
+
+.main-image{
   position:absolute;
   inset:0;
-  border:clamp(5px,1vw,15px) solid var(--metal);
-  border-radius:48% 48% 4% 4% / 24% 24% 3% 3%;
-  background:
-    linear-gradient(90deg,
-      #080808 0%,
-      var(--dark) 7%,
-      #171717 12%,
-      #050505 18%,
-      #050505 82%,
-      #171717 88%,
-      var(--dark) 93%,
-      #080808 100%);
-  box-shadow:
-    inset 0 0 20px var(--glow),
-    0 0 18px var(--glow),
-    0 20px 35px #000;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  user-select:none;
+  -webkit-user-drag:none;
 }
-.arch:before{
-  content:"";
+
+/* 左の青い扉を操作するエリア */
+.door-area{
   position:absolute;
-  inset:5%;
-  border:3px solid var(--bright);
-  border-radius:48% 48% 2% 2% / 23% 23% 2% 2%;
-  box-shadow:0 0 20px var(--glow),inset 0 0 20px var(--glow);
-}
-.gem{
-  position:absolute;
-  top:7%;
-  left:50%;
-  width:14%;
-  aspect-ratio:1;
-  transform:translateX(-50%) rotate(45deg);
-  border:3px solid var(--bright);
-  background:radial-gradient(circle,#fff,var(--bright) 35%,var(--dark));
-  box-shadow:0 0 25px var(--glow);
-  z-index:4;
-}
-.door-wrap{
-  position:absolute;
-  left:17%;
-  right:17%;
+  left:5%;
   top:22%;
-  bottom:10%;
+  width:29%;
+  height:61%;
+  z-index:10;
+  touch-action:none;
   perspective:1200px;
 }
+
+/* 開いた時に見える青い光 */
+.portal{
+  position:absolute;
+  left:17%;
+  top:12%;
+  width:55%;
+  height:73%;
+  opacity:0;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(95,220,255,.95) 0%,
+      rgba(0,120,255,.55) 30%,
+      rgba(20,50,160,.25) 55%,
+      transparent 75%
+    );
+  filter:blur(10px);
+  transition:opacity .25s;
+}
+
+/* 左の扉 */
 .door{
   position:absolute;
-  inset:0;
+  left:10%;
+  top:5%;
+  width:62%;
+  height:86%;
+
   transform-origin:left center;
   transform-style:preserve-3d;
-  border:4px solid var(--bright);
-  background:
-    linear-gradient(125deg,rgba(255,255,255,.08),transparent 28%),
-    radial-gradient(circle at 50% 45%,var(--dark),#050505 65%);
-  box-shadow:
-    inset 0 0 25px var(--glow),
-    0 0 20px var(--glow);
+
+  background-image:url("file_00000000833c820991aac55d8267af46.png");
+  background-repeat:no-repeat;
+
+  /*
+   元画像の左扉部分をそのまま使う
+  */
+  background-size:360% 122%;
+  background-position:1% 45%;
+
+  clip-path:polygon(
+    18% 0%,
+    82% 3%,
+    100% 14%,
+    100% 91%,
+    82% 100%,
+    18% 96%,
+    0% 86%,
+    0% 15%
+  );
+
+  opacity:0;
+
+  filter:
+    drop-shadow(0 0 8px #27baff)
+    drop-shadow(0 0 18px rgba(0,150,255,.8));
+
+  will-change:transform;
 }
-.door:before{
-  content:"";
-  position:absolute;
-  inset:8%;
-  border:3px solid var(--metal);
-  box-shadow:inset 0 0 18px var(--glow);
+
+/*
+ 普段は元画像そのものなので、
+ 完全に見た目が同じ。
+ 指を動かした瞬間だけ
+ 可動扉を表示する。
+*/
+.door-area.active .door{
+  opacity:1;
 }
-.door:after{
-  content:"◆";
-  position:absolute;
-  left:50%;
-  top:42%;
-  transform:translate(-50%,-50%);
-  color:var(--bright);
-  font-size:clamp(25px,6vw,70px);
-  text-shadow:0 0 25px var(--glow);
+
+.door-area.active .portal{
+  opacity:1;
 }
-.blue{
-  --bright:#62d6ff;
-  --metal:#8ccce5;
-  --dark:#06243a;
-  --glow:rgba(38,180,255,.8);
-}
-.purple{
-  --bright:#d261ff;
-  --metal:#9c55bd;
-  --dark:#29043d;
-  --glow:rgba(179,41,255,.75);
-}
-.gold{
-  --bright:#ffe584;
-  --metal:#d7a646;
-  --dark:#3a2403;
-  --glow:rgba(255,185,43,.8);
-}
-.base{
-  position:absolute;
-  bottom:-2%;
-  left:-5%;
-  width:110%;
-  height:8%;
-  background:linear-gradient(#222,var(--metal),#080808);
-  border-top:2px solid var(--bright);
-  box-shadow:0 0 22px var(--glow);
-}
+
 .hint{
   position:absolute;
-  bottom:2%;
-  width:100%;
+  left:7%;
+  top:73%;
+  width:26%;
   text-align:center;
-  font-family:Arial,sans-serif;
-  font-size:clamp(10px,2.4vw,16px);
-  color:rgba(255,255,255,.65);
+  color:white;
+  font-family:sans-serif;
+  font-size:clamp(10px,1.3vw,20px);
   letter-spacing:.15em;
+  opacity:.72;
+  text-shadow:
+    0 0 5px #35cfff,
+    0 0 12px #008cff;
+  pointer-events:none;
 }
-.blue .hint{
-  color:#aeeaff;
-}
-@media(max-width:600px){
-  .stage{min-height:100svh}
-  .logo{padding-top:6vh}
-  .logo h1{font-size:20vw}
-  .logo p{
-    font-size:2.6vw;
-    letter-spacing:.32em;
+
+/* スマホ縦画面 */
+@media (max-aspect-ratio:3/2){
+
+  .stage{
+    align-items:center;
   }
-  .hall{
-    margin-top:18vh;
-    gap:1vw;
-    padding:0 1vw;
+
+  .scene{
+    width:100vw;
+    height:auto;
   }
-  .portal{width:32.6%}
 }
 </style>
 </head>
 
 <body>
-<main class="stage">
 
-  <header class="logo">
-    <h1>RMC</h1>
-    <p>RESTART MONEY CLUB</p>
-  </header>
+<div class="stage">
 
-  <section class="hall">
+  <div class="scene">
 
-    <div class="portal blue" id="bluePortal">
-      <div class="arch"></div>
-      <div class="gem"></div>
-      <div class="door-wrap">
-        <div class="door" id="blueDoor"></div>
+    <!--
+      あなたがアップロードした画像を
+      そのままサイト全面に表示
+    -->
+    <img
+      class="main-image"
+      src="file_00000000833c820991aac55d8267af46.png"
+      alt="RMC RESTART MONEY CLUB"
+    >
+
+    <!-- 左の青い扉 -->
+    <div class="door-area" id="doorArea">
+
+      <div class="portal"></div>
+
+      <div
+        class="door"
+        id="door">
       </div>
-      <div class="base"></div>
-      <div class="hint">指で右へドラッグ</div>
+
     </div>
 
-    <div class="portal purple">
-      <div class="arch"></div>
-      <div class="gem"></div>
-      <div class="door-wrap">
-        <div class="door"></div>
-      </div>
-      <div class="base"></div>
+    <div class="hint">
+      → スライドして扉を開く
     </div>
 
-    <div class="portal gold">
-      <div class="arch"></div>
-      <div class="gem"></div>
-      <div class="door-wrap">
-        <div class="door"></div>
-      </div>
-      <div class="base"></div>
-    </div>
+  </div>
 
-  </section>
-</main>
+</div>
 
 <script>
-const portal = document.getElementById("bluePortal");
-const door = document.getElementById("blueDoor");
+
+const area =
+document.getElementById("doorArea");
+
+const door =
+document.getElementById("door");
 
 let startX = 0;
-let amount = 0;
+let progress = 0;
 let dragging = false;
 
-function start(x){
-  dragging = true;
-  startX = x;
-  door.style.transition = "none";
-}
 
-function move(x){
-  if(!dragging) return;
+/* 扉の角度 */
 
-  const dx = Math.max(0,x-startX);
-  const max = Math.max(100,portal.offsetWidth * .85);
+function moveDoor(value){
 
-  amount = Math.min(dx/max,1);
+  progress =
+  Math.max(
+    0,
+    Math.min(1,value)
+  );
 
-  const angle = amount * -105;
-  const forward = amount * 45;
+  /*
+   右へスライドするほど
+   左側を軸にして手前へ開く
+  */
+
+  const angle =
+  -112 * progress;
+
+  const forward =
+  110 * progress;
+
+  const shift =
+  20 * progress;
 
   door.style.transform =
-    `translateZ(${forward}px) rotateY(${angle}deg)`;
+  `
+  translate3d(
+    ${shift}px,
+    0,
+    ${forward}px
+  )
+  rotateY(${angle}deg)
+  `;
 
-  door.style.filter =
-    `brightness(${1 + amount*.45})`;
-
-  door.style.boxShadow =
-    `0 0 ${20 + amount*45}px rgba(70,200,255,.9)`;
 }
 
-function end(){
-  if(!dragging) return;
-  dragging=false;
+
+/* 指を置く */
+
+area.addEventListener(
+"pointerdown",
+function(e){
+
+  dragging = true;
+
+  startX =
+  e.clientX;
+
+  area.classList.add(
+    "active"
+  );
 
   door.style.transition =
-    "transform .55s cubic-bezier(.2,.8,.2,1), filter .55s";
+  "none";
 
-  if(amount>.45){
-    amount=1;
-    door.style.transform="translateZ(45px) rotateY(-105deg)";
-    door.style.filter="brightness(1.45)";
-  }else{
-    amount=0;
-    door.style.transform="translateZ(0) rotateY(0)";
-    door.style.filter="brightness(1)";
+  if(area.setPointerCapture){
+    area.setPointerCapture(
+      e.pointerId
+    );
   }
+
+  e.preventDefault();
+
+},
+{passive:false}
+);
+
+
+/* 右へ動かす */
+
+area.addEventListener(
+"pointermove",
+function(e){
+
+  if(!dragging)
+    return;
+
+  const distance =
+  e.clientX - startX;
+
+  const required =
+  Math.max(
+    100,
+    area.clientWidth * .85
+  );
+
+  moveDoor(
+    distance / required
+  );
+
+  e.preventDefault();
+
+},
+{passive:false}
+);
+
+
+/* 指を離す */
+
+function release(e){
+
+  if(!dragging)
+    return;
+
+  dragging = false;
+
+  door.style.transition =
+  "transform .55s cubic-bezier(.18,.85,.25,1)";
+
+  /*
+   35%以上開いたら
+   最後まで開く
+  */
+
+  if(progress > .35){
+
+    moveDoor(1);
+
+  }else{
+
+    moveDoor(0);
+
+    setTimeout(
+      function(){
+        area.classList.remove(
+          "active"
+        );
+      },
+      550
+    );
+
+  }
+
+  e.preventDefault();
+
 }
 
-portal.addEventListener("touchstart",e=>{
-  start(e.touches[0].clientX);
-},{passive:true});
 
-portal.addEventListener("touchmove",e=>{
-  move(e.touches[0].clientX);
-},{passive:true});
+area.addEventListener(
+"pointerup",
+release,
+{passive:false}
+);
 
-portal.addEventListener("touchend",end);
+area.addEventListener(
+"pointercancel",
+release,
+{passive:false}
+);
 
-portal.addEventListener("mousedown",e=>start(e.clientX));
-window.addEventListener("mousemove",e=>move(e.clientX));
-window.addEventListener("mouseup",end);
 </script>
 
 </body>
