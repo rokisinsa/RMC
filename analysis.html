@@ -16,6 +16,7 @@ body{min-height:100svh;background:radial-gradient(circle at 50% 0%,rgba(70,190,2
 .summary{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:20px}
 .card{border:1px solid rgba(110,210,255,.18);background:linear-gradient(180deg,rgba(15,29,40,.92),rgba(5,9,14,.95));border-radius:16px;padding:15px;box-shadow:0 0 28px rgba(44,169,230,.06)}
 .label{font-size:12px;color:#8fa8b5;margin-bottom:7px}
+.kelly-explain{margin-top:7px;padding-top:7px;border-top:1px solid rgba(255,255,255,.07);font-size:10px;line-height:1.55;color:#8fa8b5}
 .value{font-size:24px;font-weight:800;letter-spacing:.02em}
 .plus{color:#57e38d}.minus{color:#ff6b78}.blue{color:#7edcff}.gold{color:#ffd45d}.muted{color:#8d9aa1}
 .section-title{font-size:20px;margin:24px 2px 12px;color:#dff8ff}
@@ -188,9 +189,9 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 </section>
 
 <section class="summary">
-  <div class="card"><div class="label">単利収益</div><div class="value plus" id="simpleProfit">+$0.00</div><div class="label" style="margin-top:5px">固定$100での確定損益合計</div></div>
+  <div class="card"><div class="label">単利収益</div><div class="value plus" id="simpleProfit">+$0.00</div><div class="label" style="margin-top:5px">実取引の確定損益合計</div></div>
   <div class="card"><div class="label">複利収益</div><div class="value plus" id="compoundProfit">+$0.00</div><div class="label" id="compoundNote" style="margin-top:5px">現在資金 $0.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="compoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="compoundStockNote" style="margin-top:3px">確保済み 0回</div></div>
-  <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="quarterKellyProfit">+$0.00</div><div class="label" id="quarterKellyNote" style="margin-top:5px">初期$300・現行モデルの事前確率で再計算</div></div>
+  <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="quarterKellyProfit">+$0.00</div><div class="label" id="quarterKellyNote" style="margin-top:5px">初期$300・現行モデルの事前確率で再計算</div><div class="kelly-explain"><strong>1/4ケリー法とは：</strong>推定勝率とオッズから出した「適正投入率」の25%だけを使い、資金の増加を狙いつつリスクを抑える方法。</div></div>
   <div class="card"><div class="label">戦績</div><div class="value blue" id="record">0戦 0勝 0敗</div><div class="label" id="winRate" style="margin-top:5px">勝率 0.0%</div><div class="label" id="allCount" style="margin-top:3px">全0件 / 未確定0件</div></div>
   <div class="card"><div class="label">確定投入額</div><div class="value" id="settledStake">$0.00</div></div>
   <div class="card"><div class="label">未確定・予想損益</div><div class="value gold" id="openProfit">+$0.00</div></div>
@@ -516,7 +517,7 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
   <section class="summary">
     <div class="card"><div class="label">単利収益</div><div class="value plus" id="testSimpleProfit">+$0.00</div><div class="label" style="margin-top:5px">固定$100での確定損益合計</div></div>
     <div class="card"><div class="label">複利収益</div><div class="value plus" id="testCompoundProfit">+$0.00</div><div class="label" id="testCompoundNote" style="margin-top:5px">現在資金 $100.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="testCompoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="testCompoundStockNote" style="margin-top:3px">確保済み 0回</div></div>
-    <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="testQuarterKellyProfit">+$0.00</div><div class="label" id="testQuarterKellyNote" style="margin-top:5px">初期$100・確定0件</div></div>
+    <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="testQuarterKellyProfit">+$0.00</div><div class="label" id="testQuarterKellyNote" style="margin-top:5px">初期$100・確定0件</div><div class="kelly-explain"><strong>1/4ケリー法とは：</strong>推定勝率とオッズから出した「適正投入率」の25%だけを使い、資金の増加を狙いつつリスクを抑える方法。</div></div>
     <div class="card"><div class="label">戦績</div><div class="value blue" id="testRecord">0戦 0勝 0敗</div><div class="label" id="testWinRate" style="margin-top:5px">勝率 0.0%</div><div class="label" id="testAllCount" style="margin-top:3px">全0件 / 未確定0件</div></div>
     <div class="card"><div class="label">確定投入額</div><div class="value" id="testSettledStake">$0.00</div></div>
     <div class="card"><div class="label">未確定・予想損益</div><div class="value gold" id="testOpenProfit">+$0.00</div></div>
