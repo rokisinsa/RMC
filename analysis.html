@@ -183,7 +183,7 @@ td{font-size:14px}
 <div class="box"><h3>直接対戦の扱い</h3><p>過去チャットでは、UEFA公式対戦としては初対戦という記録と、親善試合を含めた2試合の記録が両方ありました。矛盾を消さず、そのまま下に残しています。</p></div>
 <div class="box"><h3>ファーストゴール</h3><p>過去チャットで確認できた2025/8/9の試合は前半2-0まで確認。先制点の得点者・時刻は履歴内では未確認のため、推測せず空欄扱い。</p></div>
 </div>
-<div class="reason"><strong>主な分析要素：</strong>前半得点力、直近の大量得点、欧州係数、ホーム/アウェイ、直近5試合の得失点、対スイス勢実績を総合して比較。</div><div class="probability-box" id="prob-lyon">
+<div class="reason"><strong>主な分析要素：</strong>前半得点力、直近の大量得点、欧州係数、ホーム/アウェイ、直近5試合の得失点、対スイス勢実績を総合して比較。</div><div class="probability-box" id="prob-lyon" data-model="lyon">
   <div class="probability-head"><span>今回の前半勝利確率（オリンピック・リヨン）</span><strong>87.0%</strong></div>
   <div class="probability-grid"><div><b>当時オッズ1.12：</b>単純逆算89.3%（控除前）</div><div><b>直近公式3試合の前半：</b>3勝0敗・12得点1失点</div><div><b>セルヴェット前半直近5試合：</b>2勝2分1敗</div><div><b>会場：</b>セルヴェットHOME／リヨンAWAY</div></div>
   <div class="probability-note">事前データだけを使用したモデル推定。H2H公式戦がなくサンプルが小さいため、市場確率と直近前半成績を重めにしています。</div>
@@ -223,16 +223,16 @@ td{font-size:14px}
 <div class="detail-sub">イタリア vs フィンランド / 第1セット勝者 イタリア</div>
 <div class="detail-grid">
 <div class="box"><h3>当時 / 最新確認ランキング</h3><p>2026/9/9更新のFIVB男子世界ランキングで、イタリア2位・355.84pt、フィンランド16位・218.01pt。14位差、137.83pt差。</p></div>
-<div class="box"><h3>H2H全体</h3><p>1955年以降の確認記録は19試合。イタリア19勝0敗、セット通算57-14。第1セットはセット詳細からイタリア17勝、フィンランド2勝。</p></div>
+<div class="box"><h3>H2Hの正確な区分</h3><p>イタリア代表の全公式記録アーカイブでは対フィンランド通算39試合でイタリア34勝5敗。下にセット詳細まで確認できた主要大会19試合を別集計し、その19試合ではイタリア19勝0敗、セット57-14、第1セット17勝2敗です。</p></div>
 <div class="box"><h3>直近10試合</h3><p>過去チャット時点では両国とも9勝1敗。ただし相手強度、H2H、ランキング差はイタリア側が大きく上。</p></div>
 <div class="box"><h3>大会成績</h3><p>過去チャットではイタリア5勝0敗・セット15-4、フィンランド4勝1敗・セット14-9。VNL 2026のイタリアは4位、12試合8勝4敗、セット30-18。</p></div>
 <div class="box"><h3>第1セットに絞った理由</h3><p>H2Hの最終勝敗だけでなく、過去19試合の第1セット取得も確認するとイタリア17勝2敗。今回の市場が「第1セット勝者」だったため、ここを最重視。</p></div>
 <div class="box"><h3>今回のホーム / アウェイ</h3><p>今回の準々決勝はPalaVela（トリノ・イタリア）開催。イタリアは開催国側で、実質的にホーム環境。過去H2Hの多くは中立地なので、単純なHOME/AWAY表記だけではなく実開催地も分けて考える必要があります。</p></div>
 </div>
 <div class="reason"><strong>主な分析要素：</strong>世界ランキング差、19戦無敗、セット通算57-14、第1セット17勝2敗、直近成績、大会セット差。</div>
-<div class="probability-box">
+<div class="probability-box" id="prob-italy" data-model="italy">
   <div class="probability-head">
-    <span>試合開始前データだけで計算した今回の第1セット取得確率</span>
+    <span>今回の第1セット取得確率（事前モデル推定）</span>
     <strong>イタリア 85.5%</strong>
   </div>
   <div class="probability-grid">
@@ -247,7 +247,7 @@ td{font-size:14px}
     モデル中心値85.5%。重みはH2H全体30%・近年H2H20%・今大会フォーム25%・市場確率25%。ホーム要素は当時オッズに織り込まれている可能性が高いため、二重加算していません。実際の真の確率を事前に正確に知ることはできないため、実用レンジは約80〜90%として扱います。
   </div>
 </div>
-<div class="h2h"><h3>H2H 19試合（確認できた全件）</h3>
+<div class="h2h"><h3>H2H：全公式39試合 / セット詳細確認19試合</h3>
 <div class="h2h-analysis">
   <div class="h2h-analysis-title">H2H集計・分析</div>
   <div class="h2h-stats">
@@ -262,7 +262,7 @@ td{font-size:14px}
     <div class="h2h-ha"><b>イタリア表記HOME：</b>14試合14勝0敗、セット41-10、第1セット13勝1敗。</div>
     <div class="h2h-ha"><b>イタリア表記AWAY：</b>5試合5勝0敗、セット16-4、第1セット4勝1敗。</div>
   </div>
-  <div class="h2h-read"><strong>ここから言えること：</strong>表記上のHOME/AWAYどちらでも全勝しており、勝敗だけでなくセット差も58-13と大きいです。特に第1セット17勝2敗なので、「第1セット勝者」という今回の市場に直結するH2H傾向が強く出ています。代表戦は中立地もあるためHOME/AWAYは会場優位そのものとは限りません。</div>
+  <div class="h2h-read"><strong>ここから言えること：</strong>全公式39試合では34勝5敗。さらにセット詳細を確認できた主要大会19試合では19勝0敗・セット57-14・第1セット17勝2敗です。長期H2Hはイタリア優位ですが、古い試合も多いので今回の確率計算では近年データ・現ランキング・今大会フォーム・開催地をより強く重み付けします。</div>
 </div>
 <div class="table-wrap"><table class="h2h-table">
 <tr><th>日付</th><th>大会</th><th>ホーム</th><th>アウェイ</th><th>最終</th><th>セットスコア</th><th>第1セット</th></tr>
@@ -305,7 +305,7 @@ td{font-size:14px}
 <div class="box"><h3>マップ・Veto</h3><p>実際のVeto：DAMAJUANA Ancient除外 → Bounty Hunters Inferno除外 → DAMAJUANA Mirage選択 → Bounty Hunters Cache選択。第1マップMirageはBounty Huntersが13-6で勝利。</p></div>
 <div class="box"><h3>ファーストキル系指標</h3><p>Bounty HuntersのCache現行データでは、先にキルを取ったラウンドの勝率71.6%、先にデスしたラウンドの勝率33.0%。ピストルラウンド勝率57.5%。</p></div>
 </div>
-<div class="reason"><strong>主な分析要素：</strong>ランキング差、直近フォーム、選手Rating、マップ勝率、Veto、ロスター継続性。シリーズ2-0ではなく、第1マップに絞っていた。</div><div class="probability-box" id="prob-cs2">
+<div class="reason"><strong>主な分析要素：</strong>ランキング差、直近フォーム、選手Rating、マップ勝率、Veto、ロスター継続性。シリーズ2-0ではなく、第1マップに絞っていた。</div><div class="probability-box" id="prob-cs2" data-model="cs2">
   <div class="probability-head"><span>今回の第1マップ取得確率（Bounty Hunters）</span><strong>86.5%</strong></div>
   <div class="probability-grid"><div><b>当時オッズ1.13：</b>単純逆算88.5%（控除前）</div><div><b>直近フォーム：</b>Bounty Hunters 7勝3敗／DAMAJUANAは低調</div><div><b>ランキング差：</b>VRS・HLTVともBounty Huntersが上位</div><div><b>事前H2H：</b>0試合のため直接対戦は重みに入れず</div></div>
   <div class="probability-note">事前情報だけのモデル推定。CS2はマップ、Veto、ロスター、当日サーバー状態の影響が大きいため、H2Hよりランキング・フォーム・マップ適性を重視しています。</div>
@@ -350,7 +350,7 @@ td{font-size:14px}
 <div class="box"><h3>大会状況</h3><p>コリンチャンスは準決勝を2戦合計2-0で勝ち上がり、10大会連続の決勝進出を決めた。</p></div>
 <div class="box"><h3>市場をDNBにした理由</h3><p>1X2よりも引分時の返金を残しながら、H2H無敗・第1戦勝利・第2戦ホームという優位条件を取りにいく形。</p></div>
 </div>
-<div class="reason"><strong>主な分析要素：</strong>H2H無敗、19-4の直接対戦得失点、リーグ順位、シーズン得失点差、準決勝第1戦結果、ホーム開催、先制点傾向。</div><div class="probability-box" id="prob-cor">
+<div class="reason"><strong>主な分析要素：</strong>H2H無敗、19-4の直接対戦得失点、リーグ順位、シーズン得失点差、準決勝第1戦結果、ホーム開催、先制点傾向。</div><div class="probability-box" id="prob-cor" data-model="cor">
   <div class="probability-head"><span>今回のDNB非敗戦確率（コリンチャンス）</span><strong>92.0%</strong></div>
   <div class="probability-grid"><div><b>当時オッズ1.11：</b>単純逆算90.1%（控除前）</div><div><b>H2H：</b>8試合 7勝1分0敗＝非敗戦100%</div><div><b>HOME H2H：</b>4戦4勝・得点10-1</div><div><b>リーグ比較：</b>2位・得失点+24 vs 6位・+9</div></div>
   <div class="probability-note">DNBは引分なら返金なので、ここでは「負けない確率」を表示。H2H無敗・HOME実績・当時の市場確率を中心にした事前モデル推定です。</div>
@@ -402,7 +402,7 @@ td{font-size:14px}
 <div class="box"><h3>ホーム / アウェイ</h3><p>2026アフリカ選手権はチュニジア開催。代表戦なので通常のクラブHOME/AWAYとは違うが、今回チュニジアは開催国。</p></div>
 <div class="box"><h3>セット差・得点差</h3><p>確認3試合のセットは9-0。2026年対戦の総得点は75-49、得点差+26。過去2試合もストレート勝ち。</p></div>
 </div>
-<div class="reason"><strong>主な分析要素：</strong>H2H全勝・全ストレート、第1セット全勝、開催国、アフリカ上位のランキング、セット得点差。</div><div class="probability-box" id="prob-tun">
+<div class="reason"><strong>主な分析要素：</strong>H2H全勝・全ストレート、第1セット全勝、開催国、アフリカ上位のランキング、セット得点差。</div><div class="probability-box" id="prob-tun" data-model="tun">
   <div class="probability-head"><span>今回の第1セット取得確率（チュニジア）</span><strong>86.0%</strong></div>
   <div class="probability-grid"><div><b>当時オッズ1.17：</b>単純逆算85.5%（控除前）</div><div><b>H2H第1セット：</b>確認3試合すべてチュニジア</div><div><b>H2Hセット通算：</b>9-0</div><div><b>開催条件：</b>2026大会はチュニジア開催</div></div>
   <div class="probability-note">H2Hは3試合と少ないため100%をそのまま確率にはせず、市場確率・開催条件・大会フォームへ縮約した事前モデル推定です。</div>
@@ -436,10 +436,34 @@ td{font-size:14px}
 </table>
 </div>
 <p class="note">各行をタップすると「なぜ選んだか」「H2H」「ランキング」「直近成績」「ホーム/アウェイ」「第1セット・先制点」などの詳細が開きます。確認できない値は推測せず「未確認」と表示しています。</p>
-<p class="note"><strong>今後の確率表示ルール：</strong>対象市場ごとに、H2Hの該当市場成績・直近フォーム・当時オッズの市場確率・ランキング/レーティング・HOME/AWAYまたは開催地・競技固有要素（セット、マップ、先制点など）を使って「今回の○○取得/成功確率」を自動計算して表示します。結果判明後のデータは事前確率の計算には混ぜません。</p>
+<p class="note"><strong>今後の確率表示ルール：</strong>対象市場ごとに、H2Hの該当市場成績・直近フォーム・当時オッズの市場確率・ランキング/レーティング・HOME/AWAYまたは開催地・競技固有要素（セット、マップ、先制点など）を入力値として、ページ側で「今回の○○取得/成功確率」を自動計算します。結果判明後のデータは事前確率の計算には混ぜません。</p>
 </div>
 
 <script>
+
+const probabilityModels={
+  italy:{components:[{p:89.5,w:.30},{p:87.5,w:.20},{p:83.3,w:.25},{p:81.3,w:.25}]},
+  tun:{components:[{p:85.5,w:.40},{p:90.0,w:.25},{p:88.0,w:.20},{p:85.0,w:.15}]},
+  cor:{components:[{p:90.1,w:.40},{p:96.0,w:.25},{p:95.0,w:.20},{p:90.0,w:.15}]},
+  cs2:{components:[{p:88.5,w:.45},{p:84.0,w:.20},{p:87.0,w:.20},{p:84.0,w:.15}]},
+  lyon:{components:[{p:89.3,w:.50},{p:90.0,w:.20},{p:82.0,w:.15},{p:82.0,w:.15}]}
+};
+function weightedProbability(model){
+  const cfg=probabilityModels[model];
+  if(!cfg) return null;
+  const sum=cfg.components.reduce((a,x)=>a+x.p*x.w,0);
+  const w=cfg.components.reduce((a,x)=>a+x.w,0);
+  return sum/w;
+}
+document.querySelectorAll('.probability-box[data-model]').forEach(box=>{
+  const p=weightedProbability(box.dataset.model);
+  const strong=box.querySelector('.probability-head strong');
+  if(p!==null && strong){
+    const label=strong.textContent.split(/\s+/)[0];
+    strong.textContent=label+' '+p.toFixed(1)+'%';
+  }
+});
+
 const tbody=document.querySelector('#resultTable tbody');
 const tradeRows=[...tbody.querySelectorAll('.trade-row')];
 tradeRows.sort((a,b)=>b.dataset.ts.localeCompare(a.dataset.ts)).forEach(row=>{
