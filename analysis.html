@@ -138,6 +138,15 @@ td{font-size:14px}
 .probability-note{margin-top:9px;font-size:10px;color:#87a096;line-height:1.65}
 @media(max-width:760px){.probability-grid{grid-template-columns:1fr}}
 
+
+.accuracy-panel{margin:0 0 20px;border:1px solid rgba(105,240,165,.2);background:linear-gradient(180deg,rgba(12,35,28,.72),rgba(5,14,12,.82));border-radius:16px;padding:14px}
+.accuracy-panel h2{margin:0 0 8px;font-size:16px;color:#dfffee}
+.accuracy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.accuracy-item{background:rgba(255,255,255,.035);border-radius:10px;padding:10px;font-size:11px;line-height:1.55;color:#b9cbc2}
+.accuracy-item b{display:block;color:#6ff0a8;margin-bottom:3px}
+.model-meta{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.07);font-size:10px;line-height:1.6;color:#86a096}
+.calibration-line{margin-top:10px;font-size:11px;color:#a8bbb2}
+@media(max-width:760px){.accuracy-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -156,6 +165,16 @@ td{font-size:14px}
   <div class="card"><div class="label">未確定・予想損益</div><div class="value gold" id="openProfit">+$0.00</div></div>
 </section>
 
+<section class="accuracy-panel">
+  <h2>RMC Probability Engine v4.1</h2>
+  <div class="accuracy-grid">
+    <div class="accuracy-item"><b>試合後リーク禁止</b>確率計算には試合開始前に取得できたデータだけを使用。結果判明後のH2Hやスコアは分析表示には残しても、事前確率には混ぜません。</div>
+    <div class="accuracy-item"><b>市場確率の扱い</b>両側オッズが取れた場合はno-vig化。片側オッズしかない場合は控除を除去できないため、弱い事前分布としてのみ使用します。</div>
+    <div class="accuracy-item"><b>古いH2Hを減衰</b>昔の対戦を現在と同じ1試合として数えず、競技ごとの半減期で時系列減衰。対象市場と同じ「第1セット・前半・第1マップ」データを優先します。</div>
+  </div>
+  <div class="calibration-line" id="calibrationStatus">精度検証：試合前にロックした予測だけをBrier Score / Log Lossで採点します。</div>
+</section>
+
 <h2 class="section-title">取引結果一覧</h2>
 <div class="table-wrap">
 <table id="resultTable">
@@ -166,7 +185,7 @@ td{font-size:14px}
 </thead>
 <tbody>
 
-<tr class="trade-row" data-ts="2026-09-23T12:13:00" data-status="open" data-stake="300" data-payout="336" data-target="detail-lyon">
+<tr class="trade-row" data-ts="2026-09-23T12:13:00" data-status="open" data-stake="300" data-payout="336" data-target="detail-lyon" data-locked-prob="0.922">
 <td class="result open">△</td>
 <td>2026/9/23 12:13</td>
 <td><div class="match">セルヴェットFC vs オリンピック・リヨン <span class="chev">▼</span></div><div class="market">女子サッカー / 前半1X2：オリンピック・リヨン</div></td>
@@ -186,7 +205,7 @@ td{font-size:14px}
 <div class="reason"><strong>主な分析要素：</strong>前半得点力、直近の大量得点、欧州係数、ホーム/アウェイ、直近5試合の得失点、対スイス勢実績を総合して比較。</div><div class="probability-box" id="prob-lyon" data-model="lyon">
   <div class="probability-head"><span>今回の前半勝利確率（オリンピック・リヨン）</span><strong>87.0%</strong></div>
   <div class="probability-grid"><div><b>当時オッズ1.12：</b>単純逆算89.3%（控除前）</div><div><b>直近公式3試合の前半：</b>3勝0敗・12得点1失点</div><div><b>セルヴェット前半直近5試合：</b>2勝2分1敗</div><div><b>会場：</b>セルヴェットHOME／リヨンAWAY</div></div>
-  <div class="probability-note">事前データだけを使用したモデル推定。H2H公式戦がなくサンプルが小さいため、市場確率と直近前半成績を重めにしています。</div>
+  <div class="probability-note">試合前データ限定。片側市場オッズを弱い事前分布にし、リヨン直近3試合の前半3勝0敗は「同一対戦ではない」ため1試合あたり0.5相当の証拠量に縮小して更新しています。</div>
 </div>
 <div class="h2h"><h3>直接対戦・関連記録</h3>
 <div class="h2h-analysis">
@@ -212,7 +231,7 @@ td{font-size:14px}
 </table></div><div class="source-note">UEFA公式競技での直接対戦は初対戦として過去チャットに記録。</div></div>
 </td></tr>
 
-<tr class="trade-row" data-ts="2026-09-22T21:56:00" data-status="open" data-stake="300" data-payout="369" data-target="detail-italy">
+<tr class="trade-row" data-ts="2026-09-22T21:56:00" data-status="open" data-stake="300" data-payout="369" data-target="detail-italy" data-locked-prob="0.802">
 <td class="result open">△</td>
 <td>2026/9/22 21:56</td>
 <td><div class="match">イタリア vs フィンランド <span class="chev">▼</span></div><div class="market">男子バレー / 第1セット勝者：イタリア</div></td>
@@ -238,13 +257,13 @@ td{font-size:14px}
   <div class="probability-grid">
     <div><b>H2H全19試合：</b>第1セット17勝2敗＝89.5%</div>
     <div><b>近年H2H（2007年以降8試合）：</b>第1セット7勝1敗＝87.5%</div>
-    <div><b>今大会イタリア：</b>第1セット5勝1敗＝83.3%</div>
+    <div><b>今大会イタリア：</b>準々決勝前まで第1セット6勝0敗＝100%</div>
     <div><b>今大会フィンランド：</b>第1セット3勝3敗＝50.0%</div>
     <div><b>当時オッズ1.23：</b>単純逆算の市場確率81.3%（控除前）</div>
     <div><b>開催地：</b>PalaVela・トリノ。イタリア国内開催でホーム環境</div>
   </div>
   <div class="probability-note">
-    モデル中心値85.5%。重みはH2H全体30%・近年H2H20%・今大会フォーム25%・市場確率25%。ホーム要素は当時オッズに織り込まれている可能性が高いため、二重加算していません。実際の真の確率を事前に正確に知ることはできないため、実用レンジは約80〜90%として扱います。
+    v4.1では単純な加重平均を廃止。片側オッズを弱い市場事前分布にし、古いH2Hは6年半減期で減衰、今大会の第1セット成績を追加してベイズ更新します。フィンランドは準々決勝前6試合で第1セット3勝3敗。開催地・ランキングは市場オッズへの二重計上を避け、数値調整には直接足していません。
   </div>
 </div>
 <div class="h2h"><h3>H2H：全公式39試合 / セット詳細確認19試合</h3>
@@ -308,7 +327,7 @@ td{font-size:14px}
 <div class="reason"><strong>主な分析要素：</strong>ランキング差、直近フォーム、選手Rating、マップ勝率、Veto、ロスター継続性。シリーズ2-0ではなく、第1マップに絞っていた。</div><div class="probability-box" id="prob-cs2" data-model="cs2">
   <div class="probability-head"><span>今回の第1マップ取得確率（Bounty Hunters）</span><strong>86.5%</strong></div>
   <div class="probability-grid"><div><b>当時オッズ1.13：</b>単純逆算88.5%（控除前）</div><div><b>直近フォーム：</b>Bounty Hunters 7勝3敗／DAMAJUANAは低調</div><div><b>ランキング差：</b>VRS・HLTVともBounty Huntersが上位</div><div><b>事前H2H：</b>0試合のため直接対戦は重みに入れず</div></div>
-  <div class="probability-note">事前情報だけのモデル推定。CS2はマップ、Veto、ロスター、当日サーバー状態の影響が大きいため、H2Hよりランキング・フォーム・マップ適性を重視しています。</div>
+  <div class="probability-note">事前H2Hが0件で、第1マップ専用の独立サンプルも不足しているため、v4.1ではランキング差や一般勝率を無理に確率へ変換せず、市場確率を暫定中心値として残します。Veto・Ratingは説明変数として表示し、係数がバックテストで校正されるまで数値へ直接加算しません。</div>
 </div>
 <div class="h2h"><h3>直接対戦</h3>
 <div class="h2h-analysis">
@@ -353,7 +372,7 @@ td{font-size:14px}
 <div class="reason"><strong>主な分析要素：</strong>H2H無敗、19-4の直接対戦得失点、リーグ順位、シーズン得失点差、準決勝第1戦結果、ホーム開催、先制点傾向。</div><div class="probability-box" id="prob-cor" data-model="cor">
   <div class="probability-head"><span>今回のDNB非敗戦確率（コリンチャンス）</span><strong>92.0%</strong></div>
   <div class="probability-grid"><div><b>当時オッズ1.11：</b>単純逆算90.1%（控除前）</div><div><b>H2H：</b>8試合 7勝1分0敗＝非敗戦100%</div><div><b>HOME H2H：</b>4戦4勝・得点10-1</div><div><b>リーグ比較：</b>2位・得失点+24 vs 6位・+9</div></div>
-  <div class="probability-note">DNBは引分なら返金なので、ここでは「負けない確率」を表示。H2H無敗・HOME実績・当時の市場確率を中心にした事前モデル推定です。</div>
+  <div class="probability-note">DNBは引分なら返金なので「負けない確率」を表示。今回の結果を除外した事前H2H 7試合を2年半減期で時系列減衰し、片側市場オッズの事前分布を更新しています。</div>
 </div>
 <div class="h2h"><h3>H2H（確認8試合）</h3>
 <div class="h2h-analysis">
@@ -405,7 +424,7 @@ td{font-size:14px}
 <div class="reason"><strong>主な分析要素：</strong>H2H全勝・全ストレート、第1セット全勝、開催国、アフリカ上位のランキング、セット得点差。</div><div class="probability-box" id="prob-tun" data-model="tun">
   <div class="probability-head"><span>今回の第1セット取得確率（チュニジア）</span><strong>86.0%</strong></div>
   <div class="probability-grid"><div><b>当時オッズ1.17：</b>単純逆算85.5%（控除前）</div><div><b>H2H第1セット：</b>確認3試合すべてチュニジア</div><div><b>H2Hセット通算：</b>9-0</div><div><b>開催条件：</b>2026大会はチュニジア開催</div></div>
-  <div class="probability-note">H2Hは3試合と少ないため100%をそのまま確率にはせず、市場確率・開催条件・大会フォームへ縮約した事前モデル推定です。</div>
+  <div class="probability-note">今回の結果は確率計算から除外し、試合前に存在したH2H 2試合だけを6年半減期で減衰。片側市場オッズの事前分布へベイズ更新しています。開催地は市場に織り込まれている可能性があるため二重加算していません。</div>
 </div>
 <div class="h2h"><h3>H2H（確認3試合）</h3>
 <div class="h2h-analysis">
@@ -441,28 +460,143 @@ td{font-size:14px}
 
 <script>
 
-const probabilityModels={
-  italy:{components:[{p:89.5,w:.30},{p:87.5,w:.20},{p:83.3,w:.25},{p:81.3,w:.25}]},
-  tun:{components:[{p:85.5,w:.40},{p:90.0,w:.25},{p:88.0,w:.20},{p:85.0,w:.15}]},
-  cor:{components:[{p:90.1,w:.40},{p:96.0,w:.25},{p:95.0,w:.20},{p:90.0,w:.15}]},
-  cs2:{components:[{p:88.5,w:.45},{p:84.0,w:.20},{p:87.0,w:.20},{p:84.0,w:.15}]},
-  lyon:{components:[{p:89.3,w:.50},{p:90.0,w:.20},{p:82.0,w:.15},{p:82.0,w:.15}]}
-};
-function weightedProbability(model){
-  const cfg=probabilityModels[model];
-  if(!cfg) return null;
-  const sum=cfg.components.reduce((a,x)=>a+x.p*x.w,0);
-  const w=cfg.components.reduce((a,x)=>a+x.w,0);
-  return sum/w;
-}
-document.querySelectorAll('.probability-box[data-model]').forEach(box=>{
-  const p=weightedProbability(box.dataset.model);
-  const strong=box.querySelector('.probability-head strong');
-  if(p!==null && strong){
-    const label=strong.textContent.split(/\s+/)[0];
-    strong.textContent=label+' '+p.toFixed(1)+'%';
+const MODEL_VERSION="4.1";
+
+function clamp(x,min,max){return Math.max(min,Math.min(max,x));}
+function marketPrior(odds,opposingOdds){
+  const q1=1/odds;
+  if(opposingOdds){
+    const q2=1/opposingOdds;
+    return {p:q1/(q1+q2),strength:8,label:"no-vig市場確率"};
   }
+  return {p:clamp(q1,.01,.99),strength:4,label:"片側オッズ逆算（控除未除去）"};
+}
+function decayWeight(date,eventDate,halfLifeYears){
+  const ms=new Date(eventDate)-new Date(date);
+  if(ms<=0) return 0;
+  const years=ms/(365.25*24*3600*1000);
+  return Math.pow(.5,years/halfLifeYears);
+}
+const probabilityModels={
+  italy:{
+    display:"イタリア",
+    odds:1.23,
+    eventDate:"2026-09-23T21:05:00+02:00",
+    halfLifeYears:6,
+    dated:[
+      ["2018-09-21",1],["2015-10-13",1],["2013-09-25",0],["2012-05-08",1],
+      ["2011-09-15",1],["2011-09-11",1],["2009-09-10",1],["2007-09-06",1],
+      ["1993-07-01",1],["1993-06-01",1],["1982-10-07",1],["1981-09-26",1],
+      ["1977-09-26",1],["1971-09-24",1],["1967-10-26",1],["1963-11-02",1],
+      ["1962-10-18",0],["1958-09-05",1],["1955-06-24",1]
+    ],
+    evidence:[
+      {s:6,f:0,w:1,label:"EuroVolley 2026 イタリア第1セット 6-0"},
+      {s:3,f:3,w:.75,label:"フィンランド今大会第1セット 3勝3敗（対戦相手側の失敗率として使用）"}
+    ]
+  },
+  tun:{
+    display:"チュニジア",
+    odds:1.17,
+    eventDate:"2026-09-21T00:00:00+01:00",
+    halfLifeYears:6,
+    dated:[["2023-09-12",1],["2015-07-25",1]],
+    evidence:[]
+  },
+  cor:{
+    display:"コリンチャンス",
+    odds:1.11,
+    eventDate:"2026-09-21T21:30:00-03:00",
+    halfLifeYears:2,
+    dated:[
+      ["2026-09-15",1],["2026-08-15",1],["2025-08-16",1],["2025-08-09",1],
+      ["2025-05-04",1],["2023-06-12",1],["2021-05-30",1]
+    ],
+    evidence:[]
+  },
+  cs2:{
+    display:"Bounty Hunters",
+    odds:1.13,
+    eventDate:"2026-09-22T00:00:00-03:00",
+    halfLifeYears:1,
+    dated:[],
+    evidence:[]
+  },
+  lyon:{
+    display:"オリンピック・リヨン",
+    odds:1.12,
+    eventDate:"2026-09-23T00:00:00+02:00",
+    halfLifeYears:2,
+    dated:[],
+    evidence:[{s:3,f:0,w:.5,label:"リヨン直近公式3試合の前半3勝0敗（非H2Hなので50%重み）"}]
+  }
+};
+function bayesEstimate(cfg){
+  const prior=marketPrior(cfg.odds,cfg.opposingOdds);
+  let a=prior.p*prior.strength;
+  let b=(1-prior.p)*prior.strength;
+  let eff=0;
+  (cfg.dated||[]).forEach(([date,success])=>{
+    const w=decayWeight(date,cfg.eventDate,cfg.halfLifeYears||3);
+    if(success) a+=w; else b+=w;
+    eff+=w;
+  });
+  (cfg.evidence||[]).forEach(e=>{
+    a+=e.s*e.w;
+    b+=e.f*e.w;
+    eff+=(e.s+e.f)*e.w;
+  });
+  const mean=a/(a+b);
+  const variance=(a*b)/((a+b)*(a+b)*(a+b+1));
+  const sd=Math.sqrt(variance);
+  return {
+    p:mean,
+    lo:clamp(mean-1.645*sd,0,1),
+    hi:clamp(mean+1.645*sd,0,1),
+    eff,
+    prior
+  };
+}
+const modelEstimates={};
+document.querySelectorAll('.probability-box[data-model]').forEach(box=>{
+  const key=box.dataset.model;
+  const cfg=probabilityModels[key];
+  if(!cfg) return;
+  const est=bayesEstimate(cfg);
+  modelEstimates[key]=est;
+  const strong=box.querySelector('.probability-head strong');
+  if(strong) strong.textContent=cfg.display+" "+(est.p*100).toFixed(1)+"%";
+  let meta=box.querySelector('.model-meta');
+  if(!meta){
+    meta=document.createElement('div');
+    meta.className='model-meta';
+    box.appendChild(meta);
+  }
+  const quality=est.eff>=8?"比較的高い":est.eff>=3?"中程度":"限定的";
+  meta.textContent="v"+MODEL_VERSION+"｜今回の事前推定 "+(est.p*100).toFixed(1)+"%｜90%モデル不確実性目安 "+(est.lo*100).toFixed(1)+"〜"+(est.hi*100).toFixed(1)+"%｜追加証拠量 "+est.eff.toFixed(1)+"試合相当｜データ量 "+quality+"｜"+est.prior.label;
 });
+
+// 試合前にロックした予測だけでモデル精度を採点する。
+function updateCalibration(){
+  const rows=[...document.querySelectorAll('.trade-row[data-locked-prob]')]
+    .filter(r=>r.dataset.status==="win"||r.dataset.status==="loss");
+  const el=document.getElementById("calibrationStatus");
+  if(!el) return;
+  if(!rows.length){
+    el.textContent="精度検証：事前ロック済み予測のうち確定済みは0件。過去に結果を見た後で作った推定は採点対象にしません。";
+    return;
+  }
+  let brier=0,logloss=0;
+  rows.forEach(r=>{
+    const p=Number(r.dataset.lockedProb);
+    const y=r.dataset.status==="win"?1:0;
+    brier+=(p-y)*(p-y);
+    logloss+=-(y*Math.log(clamp(p,1e-6,1-1e-6))+(1-y)*Math.log(clamp(1-p,1e-6,1-1e-6)));
+  });
+  brier/=rows.length; logloss/=rows.length;
+  el.textContent="精度検証：事前ロック "+rows.length+"件｜Brier "+brier.toFixed(4)+"｜Log Loss "+logloss.toFixed(4);
+}
+updateCalibration();
 
 const tbody=document.querySelector('#resultTable tbody');
 const tradeRows=[...tbody.querySelectorAll('.trade-row')];
