@@ -438,7 +438,7 @@ function renderTradeSummary(rows){
   setText("compoundStock",amount(c.stock));
   setText("compoundStockNote","確保済み "+c.cycles+"回");
   setText("quarterKellyProfit",money(k.profit));
-  setText("quarterKellyNote","初期"+amount(300)+"・確定"+k.bets+"件を現行モデルで再計算");
+  setText("quarterKellyNote","初期"+amount(300)+"・確定"+b.settledGames+"件で自動計算");
   setText("settledStake",amount(b.settledStake));
   setText("record",b.settledGames+"戦 "+b.wins+"勝 "+b.losses+"敗");
   setText("winRate","勝率 "+b.winRate.toFixed(1)+"%");
@@ -488,7 +488,7 @@ function renderTestSummary(rows){
   setText("testCompoundStock",amount(c.stock));
   setText("testCompoundStockNote","確保済み "+c.cycles+"回");
   setText("testQuarterKellyProfit",money(k.profit));
-  setText("testQuarterKellyNote","初期"+amount(TEST_STAKE)+"・確定"+k.bets+"件");
+  setText("testQuarterKellyNote","初期"+amount(TEST_STAKE)+"・確定"+b.settledGames+"件で自動計算");
   setText("testRecord",b.settledGames+"戦 "+b.wins+"勝 "+b.losses+"敗");
   setText("testWinRate","勝率 "+b.winRate.toFixed(1)+"%");
   setText("testAllCount","全"+rows.length+"件 / 未確定"+rows.filter(r=>r.dataset.status==="open").length+"件");
