@@ -314,7 +314,7 @@ function sortRows(tbody,rowClass){
 }
 
 function calculateBasic(rows,fixedStake=null){
-  let settledStake=0,settledPayout=0,wins=0,losses=0,openStake=0,openPayout=0;
+  let settledStake=0,settledPayout=0,wins=0,losses=0,openStake=0,openPayout=0,totalStake=0;
   rows.forEach(row=>{
     const status=row.dataset.status;
     const originalStake=Number(row.dataset.stake||0);
@@ -323,6 +323,8 @@ function calculateBasic(rows,fixedStake=null){
     const payout=fixedStake!==null
       ? (originalStake>0 ? originalPayout*(fixedStake/originalStake) : 0)
       : originalPayout;
+
+    totalStake+=stake;
 
     if(status==="win"||status==="loss"){
       settledStake+=stake;
@@ -346,6 +348,7 @@ function calculateBasic(rows,fixedStake=null){
     simpleProfit:settledPayout-settledStake,
     openProfit:openPayout-openStake,
     settledGames,
+    totalStake,
     winRate:settledGames>0?wins/settledGames*100:0
   };
 }
@@ -439,7 +442,7 @@ function renderTradeSummary(rows){
   setText("compoundStockNote","確保済み "+c.cycles+"回");
   setText("quarterKellyProfit",money(k.profit));
   setText("quarterKellyNote","初期"+amount(300)+"・確定"+b.settledGames+"件で自動計算");
-  setText("settledStake",amount(b.settledStake));
+  setText("settledStake",amount(b.totalStake));
   setText("record",b.settledGames+"戦 "+b.wins+"勝 "+b.losses+"敗");
   setText("winRate","勝率 "+b.winRate.toFixed(1)+"%");
   setText("allCount","全"+rows.length+"件 / 未確定"+rows.filter(r=>r.dataset.status==="open").length+"件");
