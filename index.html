@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>RMC | RESTART MONEY CLUB</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{
+  width:100%;
+  min-height:100%;
+  background:#020202;
+  overflow-x:hidden;
+}
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  color:white;
+}
+.stage{
+  width:100%;
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 60%,rgba(135,91,26,.15),transparent 40%),
+    #020202;
+}
+.logo{
+  text-align:center;
+  padding-top:5vh;
+  position:relative;
+  z-index:5;
+}
+.logo h1{
+  font-size:clamp(70px,19vw,180px);
+  line-height:.85;
+  letter-spacing:.03em;
+  background:linear-gradient(90deg,#8e571b,#fff1b3,#a76119,#fff2bd,#8e571b);
+  -webkit-background-clip:text;
+  color:transparent;
+  text-shadow:0 0 28px rgba(255,180,55,.20);
+}
+.logo p{
+  margin-top:16px;
+  font-size:clamp(12px,3vw,25px);
+  letter-spacing:.42em;
+  color:#efd7bd;
+}
+.hall{
+  width:100%;
+  max-width:1500px;
+  margin:8vh auto 0;
+  padding:0 2vw;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  gap:1.5vw;
+  perspective:1400px;
+}
+.portal{
+  position:relative;
+  width:31.5%;
+  aspect-ratio:.66;
+  filter:drop-shadow(0 0 25px var(--glow));
+}
+.arch{
+  position:absolute;
+  inset:0;
+  border:clamp(5px,1vw,15px) solid var(--metal);
+  border-radius:48% 48% 4% 4% / 24% 24% 3% 3%;
+  background:
+    linear-gradient(90deg,
+      #080808 0%,
+      var(--dark) 7%,
+      #171717 12%,
+      #050505 18%,
+      #050505 82%,
+      #171717 88%,
+      var(--dark) 93%,
+      #080808 100%);
+  box-shadow:
+    inset 0 0 20px var(--glow),
+    0 0 18px var(--glow),
+    0 20px 35px #000;
+}
+.arch:before{
+  content:"";
+  position:absolute;
+  inset:5%;
+  border:3px solid var(--bright);
+  border-radius:48% 48% 2% 2% / 23% 23% 2% 2%;
+  box-shadow:0 0 20px var(--glow),inset 0 0 20px var(--glow);
+}
+.gem{
+  position:absolute;
+  top:7%;
+  left:50%;
+  width:14%;
+  aspect-ratio:1;
+  transform:translateX(-50%) rotate(45deg);
+  border:3px solid var(--bright);
+  background:radial-gradient(circle,#fff,var(--bright) 35%,var(--dark));
+  box-shadow:0 0 25px var(--glow);
+  z-index:4;
+}
+.door-wrap{
+  position:absolute;
+  left:17%;
+  right:17%;
+  top:22%;
+  bottom:10%;
+  perspective:1200px;
+}
+.door{
+  position:absolute;
+  inset:0;
+  transform-origin:left center;
+  transform-style:preserve-3d;
+  border:4px solid var(--bright);
+  background:
+    linear-gradient(125deg,rgba(255,255,255,.08),transparent 28%),
+    radial-gradient(circle at 50% 45%,var(--dark),#050505 65%);
+  box-shadow:
+    inset 0 0 25px var(--glow),
+    0 0 20px var(--glow);
+}
+.door:before{
+  content:"";
+  position:absolute;
+  inset:8%;
+  border:3px solid var(--metal);
+  box-shadow:inset 0 0 18px var(--glow);
+}
+.door:after{
+  content:"◆";
+  position:absolute;
+  left:50%;
+  top:42%;
+  transform:translate(-50%,-50%);
+  color:var(--bright);
+  font-size:clamp(25px,6vw,70px);
+  text-shadow:0 0 25px var(--glow);
+}
+.blue{
+  --bright:#62d6ff;
+  --metal:#8ccce5;
+  --dark:#06243a;
+  --glow:rgba(38,180,255,.8);
+}
+.purple{
+  --bright:#d261ff;
+  --metal:#9c55bd;
+  --dark:#29043d;
+  --glow:rgba(179,41,255,.75);
+}
+.gold{
+  --bright:#ffe584;
+  --metal:#d7a646;
+  --dark:#3a2403;
+  --glow:rgba(255,185,43,.8);
+}
+.base{
+  position:absolute;
+  bottom:-2%;
+  left:-5%;
+  width:110%;
+  height:8%;
+  background:linear-gradient(#222,var(--metal),#080808);
+  border-top:2px solid var(--bright);
+  box-shadow:0 0 22px var(--glow);
+}
+.hint{
+  position:absolute;
+  bottom:2%;
+  width:100%;
+  text-align:center;
+  font-family:Arial,sans-serif;
+  font-size:clamp(10px,2.4vw,16px);
+  color:rgba(255,255,255,.65);
+  letter-spacing:.15em;
+}
+.blue .hint{
+  color:#aeeaff;
+}
+@media(max-width:600px){
+  .stage{min-height:100svh}
+  .logo{padding-top:6vh}
+  .logo h1{font-size:20vw}
+  .logo p{
+    font-size:2.6vw;
+    letter-spacing:.32em;
+  }
+  .hall{
+    margin-top:18vh;
+    gap:1vw;
+    padding:0 1vw;
+  }
+  .portal{width:32.6%}
+}
+</style>
+</head>
+
+<body>
+<main class="stage">
+
+  <header class="logo">
+    <h1>RMC</h1>
+    <p>RESTART MONEY CLUB</p>
+  </header>
+
+  <section class="hall">
+
+    <div class="portal blue" id="bluePortal">
+      <div class="arch"></div>
+      <div class="gem"></div>
+      <div class="door-wrap">
+        <div class="door" id="blueDoor"></div>
+      </div>
+      <div class="base"></div>
+      <div class="hint">指で右へドラッグ</div>
+    </div>
+
+    <div class="portal purple">
+      <div class="arch"></div>
+      <div class="gem"></div>
+      <div class="door-wrap">
+        <div class="door"></div>
+      </div>
+      <div class="base"></div>
+    </div>
+
+    <div class="portal gold">
+      <div class="arch"></div>
+      <div class="gem"></div>
+      <div class="door-wrap">
+        <div class="door"></div>
+      </div>
+      <div class="base"></div>
+    </div>
+
+  </section>
+</main>
+
+<script>
+const portal = document.getElementById("bluePortal");
+const door = document.getElementById("blueDoor");
+
+let startX = 0;
+let amount = 0;
+let dragging = false;
+
+function start(x){
+  dragging = true;
+  startX = x;
+  door.style.transition = "none";
+}
+
+function move(x){
+  if(!dragging) return;
+
+  const dx = Math.max(0,x-startX);
+  const max = Math.max(100,portal.offsetWidth * .85);
+
+  amount = Math.min(dx/max,1);
+
+  const angle = amount * -105;
+  const forward = amount * 45;
+
+  door.style.transform =
+    `translateZ(${forward}px) rotateY(${angle}deg)`;
+
+  door.style.filter =
+    `brightness(${1 + amount*.45})`;
+
+  door.style.boxShadow =
+    `0 0 ${20 + amount*45}px rgba(70,200,255,.9)`;
+}
+
+function end(){
+  if(!dragging) return;
+  dragging=false;
+
+  door.style.transition =
+    "transform .55s cubic-bezier(.2,.8,.2,1), filter .55s";
+
+  if(amount>.45){
+    amount=1;
+    door.style.transform="translateZ(45px) rotateY(-105deg)";
+    door.style.filter="brightness(1.45)";
+  }else{
+    amount=0;
+    door.style.transform="translateZ(0) rotateY(0)";
+    door.style.filter="brightness(1)";
+  }
+}
+
+portal.addEventListener("touchstart",e=>{
+  start(e.touches[0].clientX);
+},{passive:true});
+
+portal.addEventListener("touchmove",e=>{
+  move(e.touches[0].clientX);
+},{passive:true});
+
+portal.addEventListener("touchend",end);
+
+portal.addEventListener("mousedown",e=>start(e.clientX));
+window.addEventListener("mousemove",e=>move(e.clientX));
+window.addEventListener("mouseup",end);
+</script>
+
+</body>
+</html>
