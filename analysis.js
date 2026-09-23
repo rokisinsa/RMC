@@ -461,6 +461,11 @@ function renderTradeSummary(rows){
   setText("compoundStockNote","確保済み "+c.cycles+"回");
   setText("quarterKellyProfit",money(k.profit));
   setText("quarterKellyNote","初期"+amount(300)+"・確定"+b.settledGames+"件で自動計算");
+  setText("kellyLiveExample",
+    "現在資金は "+amount(k.balance)+"（初期"+amount(300)+"＋収益"+money(k.profit)+"）。"+
+    "次の取引で1/4ケリー投入率が5%なら、"+amount(k.balance)+"×5%＝"+amount(k.balance*0.05)+"を投入。"+
+    "期待値が足りなければ0%＝見送り。"
+  );
   setText("settledStake",amount(b.totalStake));
   setText("record",b.settledGames+"戦 "+b.wins+"勝 "+b.losses+"敗");
   setText("winRate","勝率 "+b.winRate.toFixed(1)+"%");
@@ -511,6 +516,11 @@ function renderTestSummary(rows){
   setText("testCompoundStockNote","確保済み "+c.cycles+"回");
   setText("testQuarterKellyProfit",money(k.profit));
   setText("testQuarterKellyNote","初期"+amount(TEST_STAKE)+"・確定"+b.settledGames+"件で自動計算");
+  setText("testKellyLiveExample",
+    "現在資金は "+amount(k.balance)+"（初期"+amount(TEST_STAKE)+"＋収益"+money(k.profit)+"）。"+
+    "次のテストで1/4ケリー投入率が5%なら、"+amount(k.balance)+"×5%＝"+amount(k.balance*0.05)+"を投入。"+
+    "期待値が足りなければ0%＝見送り。"
+  );
   setText("testRecord",b.settledGames+"戦 "+b.wins+"勝 "+b.losses+"敗");
   setText("testWinRate","勝率 "+b.winRate.toFixed(1)+"%");
   setText("testAllCount","全"+rows.length+"件 / 未確定"+rows.filter(r=>r.dataset.status==="open").length+"件");
