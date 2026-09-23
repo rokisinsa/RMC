@@ -127,6 +127,17 @@ td{font-size:14px}
   .h2h-homeaway{grid-template-columns:1fr}
 }
 
+
+.probability-box{margin:12px 0 14px;padding:14px;border:1px solid rgba(105,240,165,.24);border-radius:14px;background:linear-gradient(180deg,rgba(18,50,40,.38),rgba(6,16,14,.58))}
+.probability-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:10px}
+.probability-head span{font-size:11px;color:#8fb3a0}
+.probability-head strong{font-size:30px;color:#69f0a5;line-height:1}
+.probability-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.probability-grid div{background:rgba(255,255,255,.035);border-radius:10px;padding:10px;font-size:11px;line-height:1.55;color:#c8d7d0}
+.probability-grid b{color:#eafff2}
+.probability-note{margin-top:9px;font-size:10px;color:#87a096;line-height:1.65}
+@media(max-width:760px){.probability-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -208,13 +219,30 @@ td{font-size:14px}
 <div class="detail-sub">イタリア vs フィンランド / 第1セット勝者 イタリア</div>
 <div class="detail-grid">
 <div class="box"><h3>当時 / 最新確認ランキング</h3><p>2026/9/9更新のFIVB男子世界ランキングで、イタリア2位・355.84pt、フィンランド16位・218.01pt。14位差、137.83pt差。</p></div>
-<div class="box"><h3>H2H全体</h3><p>1955年以降の確認記録は19試合。イタリア19勝0敗、セット通算58-13。第1セットはセット詳細からイタリア17勝、フィンランド2勝。</p></div>
+<div class="box"><h3>H2H全体</h3><p>1955年以降の確認記録は19試合。イタリア19勝0敗、セット通算57-14。第1セットはセット詳細からイタリア17勝、フィンランド2勝。</p></div>
 <div class="box"><h3>直近10試合</h3><p>過去チャット時点では両国とも9勝1敗。ただし相手強度、H2H、ランキング差はイタリア側が大きく上。</p></div>
 <div class="box"><h3>大会成績</h3><p>過去チャットではイタリア5勝0敗・セット15-4、フィンランド4勝1敗・セット14-9。VNL 2026のイタリアは4位、12試合8勝4敗、セット30-18。</p></div>
 <div class="box"><h3>第1セットに絞った理由</h3><p>H2Hの最終勝敗だけでなく、過去19試合の第1セット取得も確認するとイタリア17勝2敗。今回の市場が「第1セット勝者」だったため、ここを最重視。</p></div>
-<div class="box"><h3>ホーム / アウェイ</h3><p>代表戦のため開催地は大会ごとに異なる。下のH2H表は表記上のホーム/アウェイを残していますが、代表大会では実質中立地の試合も含まれます。</p></div>
+<div class="box"><h3>今回のホーム / アウェイ</h3><p>今回の準々決勝はPalaVela（トリノ・イタリア）開催。イタリアは開催国側で、実質的にホーム環境。過去H2Hの多くは中立地なので、単純なHOME/AWAY表記だけではなく実開催地も分けて考える必要があります。</p></div>
 </div>
-<div class="reason"><strong>主な分析要素：</strong>世界ランキング差、19戦無敗、セット通算58-13、第1セット17勝2敗、直近成績、大会セット差。</div>
+<div class="reason"><strong>主な分析要素：</strong>世界ランキング差、19戦無敗、セット通算57-14、第1セット17勝2敗、直近成績、大会セット差。</div>
+<div class="probability-box">
+  <div class="probability-head">
+    <span>試合開始前データだけで計算した第1セット取得確率</span>
+    <strong>イタリア 85.5%</strong>
+  </div>
+  <div class="probability-grid">
+    <div><b>H2H全19試合：</b>第1セット17勝2敗＝89.5%</div>
+    <div><b>近年H2H（2007年以降8試合）：</b>第1セット7勝1敗＝87.5%</div>
+    <div><b>今大会イタリア：</b>第1セット5勝1敗＝83.3%</div>
+    <div><b>今大会フィンランド：</b>第1セット3勝3敗＝50.0%</div>
+    <div><b>当時オッズ1.23：</b>単純逆算の市場確率81.3%（控除前）</div>
+    <div><b>開催地：</b>PalaVela・トリノ。イタリア国内開催でホーム環境</div>
+  </div>
+  <div class="probability-note">
+    モデル中心値85.5%。重みはH2H全体30%・近年H2H20%・今大会フォーム25%・市場確率25%。ホーム要素は当時オッズに織り込まれている可能性が高いため、二重加算していません。実際の真の確率を事前に正確に知ることはできないため、実用レンジは約80〜90%として扱います。
+  </div>
+</div>
 <div class="h2h"><h3>H2H 19試合（確認できた全件）</h3>
 <div class="h2h-analysis">
   <div class="h2h-analysis-title">H2H集計・分析</div>
@@ -227,8 +255,8 @@ td{font-size:14px}
     <div class="h2h-stat"><span>第1セット</span><strong>17勝2敗</strong></div>
   </div>
   <div class="h2h-homeaway">
-    <div class="h2h-ha"><b>イタリア表記HOME：</b>14試合14勝0敗、セット42-9、総得点868-669、第1セット13勝1敗。</div>
-    <div class="h2h-ha"><b>イタリア表記AWAY：</b>5試合5勝0敗、セット16-4、総得点436-386、第1セット4勝1敗。</div>
+    <div class="h2h-ha"><b>イタリア表記HOME：</b>14試合14勝0敗、セット41-10、第1セット13勝1敗。</div>
+    <div class="h2h-ha"><b>イタリア表記AWAY：</b>5試合5勝0敗、セット16-4、第1セット4勝1敗。</div>
   </div>
   <div class="h2h-read"><strong>ここから言えること：</strong>表記上のHOME/AWAYどちらでも全勝しており、勝敗だけでなくセット差も58-13と大きいです。特に第1セット17勝2敗なので、「第1セット勝者」という今回の市場に直結するH2H傾向が強く出ています。代表戦は中立地もあるためHOME/AWAYは会場優位そのものとは限りません。</div>
 </div>
