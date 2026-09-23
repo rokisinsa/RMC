@@ -10,32 +10,74 @@ body{min-height:100svh;overflow-x:hidden}
 .stage{width:100%;background:#000}
 .art{position:relative;width:100vw;max-width:1536px;margin:0 auto;overflow:hidden;touch-action:none}
 .art>img{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
-.door-hit{position:absolute;left:38%;top:24%;width:24%;height:58%;z-index:5;touch-action:none;perspective:1400px}
+.door-hit{position:absolute;left:38%;top:24%;width:24%;height:58%;z-index:5;touch-action:none;perspective:1400px;cursor:pointer}
 .door-piece{position:absolute;inset:-41.4% -158.3% -31% -158.3%;background:url("file_00000000833c820991aac55d8267af46.png") center/100% 100% no-repeat;clip-path:polygon(42% 27%,58% 27%,59% 82%,41% 82%);transform-origin:42% 54%;opacity:0;will-change:transform,filter,opacity;filter:drop-shadow(0 0 18px rgba(83,213,255,.9))}
 .door-hit.active .door-piece{opacity:1}
-@media (max-width:700px){
-  .art{margin-top:0}
-}
+@media (max-width:700px){.art{margin-top:0}}
 </style>
 </head>
 <body>
 <main class="stage">
   <div class="art" id="art">
     <img src="file_00000000833c820991aac55d8267af46.png" alt="RMC">
-    <div class="door-hit" id="hit"><div class="door-piece" id="piece"></div></div>
+    <div class="door-hit" id="hit" aria-label="アイスブルーの扉"><div class="door-piece" id="piece"></div></div>
   </div>
 </main>
 <script>
 const hit=document.getElementById('hit'), piece=document.getElementById('piece');
-let sx=0,p=0,drag=false;
+
+/* リンク先は、あとでここに設定 */
+const ICE_BLUE_LINK = "";
+
+let sx=0,p=0,drag=false,moved=false;
+
 function apply(v){
   p=Math.max(0,Math.min(1,v));
   piece.style.transform=`translateZ(${85*p}px) rotateY(${-105*p}deg)`;
   piece.style.filter=`brightness(${1+.25*p}) drop-shadow(0 0 ${18+32*p}px rgba(83,213,255,.95))`;
 }
-function start(e){drag=true;sx=e.clientX;hit.classList.add('active');piece.style.transition='none';hit.setPointerCapture?.(e.pointerId);e.preventDefault()}
-function move(e){if(!drag)return;apply((e.clientX-sx)/Math.max(100,hit.clientWidth*.9));e.preventDefault()}
-function end(e){if(!drag)return;drag=false;piece.style.transition='transform .5s cubic-bezier(.2,.8,.2,1),filter .5s,opacity .2s';if(p>.38){apply(1)}else{apply(0);setTimeout(()=>hit.classList.remove('active'),520)}e.preventDefault()}
+
+function start(e){
+  drag=true;
+  moved=false;
+  sx=e.clientX;
+  piece.style.transition='none';
+  hit.setPointerCapture?.(e.pointerId);
+  e.preventDefault();
+}
+
+function move(e){
+  if(!drag)return;
+  const dx=e.clientX-sx;
+  if(Math.abs(dx)>8){
+    moved=true;
+    hit.classList.add('active');
+  }
+  if(moved) apply(dx/Math.max(100,hit.clientWidth*.9));
+  e.preventDefault();
+}
+
+function end(e){
+  if(!drag)return;
+  drag=false;
+
+  /* タップならリンクへ。リンク未設定の間は何もしない */
+  if(!moved){
+    if(ICE_BLUE_LINK) window.location.href=ICE_BLUE_LINK;
+    e.preventDefault();
+    return;
+  }
+
+  piece.style.transition='transform .5s cubic-bezier(.2,.8,.2,1),filter .5s,opacity .2s';
+  if(p>.38){
+    apply(1);
+  }else{
+    apply(0);
+    setTimeout(()=>hit.classList.remove('active'),520);
+  }
+  e.preventDefault();
+}
+
 hit.addEventListener('pointerdown',start,{passive:false});
 hit.addEventListener('pointermove',move,{passive:false});
 hit.addEventListener('pointerup',end,{passive:false});
