@@ -313,12 +313,16 @@ function sortRows(tbody,rowClass){
   return rows;
 }
 
-function calculateBasic(rows){
+function calculateBasic(rows,fixedStake=null){
   let settledStake=0,settledPayout=0,wins=0,losses=0,openStake=0,openPayout=0;
   rows.forEach(row=>{
     const status=row.dataset.status;
-    const stake=Number(row.dataset.stake||0);
-    const payout=Number(row.dataset.payout||0);
+    const originalStake=Number(row.dataset.stake||0);
+    const originalPayout=Number(row.dataset.payout||0);
+    const stake=fixedStake!==null ? fixedStake : originalStake;
+    const payout=fixedStake!==null
+      ? (originalStake>0 ? originalPayout*(fixedStake/originalStake) : 0)
+      : originalPayout;
 
     if(status==="win"||status==="loss"){
       settledStake+=stake;
@@ -346,9 +350,8 @@ function calculateBasic(rows){
   };
 }
 
-function calculateCompound(rows){
-  const base=300;
-  const target=600;
+function calculateCompound(rows,base=300){
+  const target=base*2;
   let balance=base;
   let stock=0;
   let cycles=0;
@@ -387,8 +390,8 @@ const detailToModel={
   "detail-tun":"tun"
 };
 
-function calculateQuarterKelly(rows,isTest){
-  let balance=300;
+function calculateQuarterKelly(rows,isTest,base=300){
+  let balance=base;
   let bets=0;
 
   [...rows]
@@ -421,7 +424,7 @@ function calculateQuarterKelly(rows,isTest){
       else balance-=bet;
     });
 
-  return {balance,bets,profit:balance-300};
+  return {balance,bets,profit:balance-base};
 }
 
 function renderTradeSummary(rows){
@@ -443,10 +446,41 @@ function renderTradeSummary(rows){
   setText("openProfit",money(b.openProfit));
 }
 
+function normalizeTestRows(rows){
+  const TEST_STAKE=100;
+  rows.forEach(row=>{
+    const cells=row.querySelectorAll("td");
+    const originalStake=Number(row.dataset.stake||0);
+    const originalPayout=Number(row.dataset.payout||0);
+    const ratio=originalStake>0 ? TEST_STAKE/originalStake : 1;
+    const normalizedPayout=originalPayout*ratio;
+
+    row.dataset.stake=String(TEST_STAKE);
+    row.dataset.payout=String(normalizedPayout);
+
+    if(cells[6]) cells[6].textContent=amount(TEST_STAKE);
+
+    const status=row.dataset.status;
+    if(cells[7]){
+      cells[7].textContent=status==="open"
+        ? amount(normalizedPayout)+" 予定"
+        : amount(normalizedPayout);
+    }
+    if(cells[8]){
+      const profit=normalizedPayout-TEST_STAKE;
+      cells[8].textContent=status==="open"
+        ? money(profit)+" 予定"
+        : money(profit);
+      cells[8].className="money "+(status==="open"?"pending":profit>=0?"positive":"negative");
+    }
+  });
+}
+
 function renderTestSummary(rows){
-  const b=calculateBasic(rows);
-  const c=calculateCompound(rows);
-  const k=calculateQuarterKelly(rows,true);
+  const TEST_STAKE=100;
+  const b=calculateBasic(rows,TEST_STAKE);
+  const c=calculateCompound(rows,TEST_STAKE);
+  const k=calculateQuarterKelly(rows,true,TEST_STAKE);
 
   setText("testSimpleProfit",money(b.simpleProfit));
   setText("testCompoundProfit",money(c.profit));
@@ -454,7 +488,7 @@ function renderTestSummary(rows){
   setText("testCompoundStock",amount(c.stock));
   setText("testCompoundStockNote","確保済み "+c.cycles+"回");
   setText("testQuarterKellyProfit",money(k.profit));
-  setText("testQuarterKellyNote","初期"+amount(300)+"・確定"+k.bets+"件");
+  setText("testQuarterKellyNote","初期"+amount(TEST_STAKE)+"・確定"+k.bets+"件");
   setText("testRecord",b.settledGames+"戦 "+b.wins+"勝 "+b.losses+"敗");
   setText("testWinRate","勝率 "+b.winRate.toFixed(1)+"%");
   setText("testAllCount","全"+rows.length+"件 / 未確定"+rows.filter(r=>r.dataset.status==="open").length+"件");
@@ -478,6 +512,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   const testTbody=document.querySelector("#testResultTable tbody");
   const testRows=sortRows(testTbody,".test-row");
+  normalizeTestRows(testRows);
   initExpandableRows(".test-row",".test-detail-row");
   renderTestSummary(testRows);
 });
