@@ -10,29 +10,154 @@ html,body{margin:0;background:#05070a;color:#fff;font-family:"Yu Gothic","Hiragi
 body{min-height:100svh;background:
 radial-gradient(circle at 50% 0%,rgba(70,190,255,.18),transparent 34%),
 linear-gradient(180deg,#03070b,#050505 62%,#000)}
-.wrap{width:min(100%,980px);margin:0 auto;padding:28px 18px 48px}
-.back{display:inline-block;color:#8edcff;text-decoration:none;font-size:14px;margin-bottom:24px}
-.hero{text-align:center;padding:20px 0 34px}
-.hero h1{margin:0;font-size:clamp(42px,11vw,80px);letter-spacing:.08em;background:linear-gradient(180deg,#e9fbff,#75d8ff 50%,#2e8fbd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 30px rgba(70,190,255,.18)}
-.hero p{margin:10px 0 0;color:#b9d9e7;letter-spacing:.16em;font-size:13px}
-.panel{border:1px solid rgba(110,210,255,.22);background:linear-gradient(180deg,rgba(15,29,40,.88),rgba(5,9,14,.92));border-radius:22px;padding:24px;box-shadow:0 0 40px rgba(44,169,230,.09)}
-.panel h2{margin:0 0 12px;font-size:24px;color:#dff8ff}
-.panel p{margin:0;color:#b7c7cf;line-height:1.9}
-.placeholder{margin-top:18px;padding:20px;border:1px dashed rgba(130,210,245,.28);border-radius:16px;color:#7f96a2;text-align:center}
+.wrap{width:min(100%,1100px);margin:0 auto;padding:24px 14px 50px}
+.back{display:inline-block;color:#8edcff;text-decoration:none;font-size:14px;margin-bottom:18px}
+.hero{text-align:center;padding:12px 0 24px}
+.hero h1{margin:0;font-size:clamp(38px,10vw,72px);letter-spacing:.08em;background:linear-gradient(180deg,#e9fbff,#75d8ff 50%,#2e8fbd);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{margin:8px 0 0;color:#9ec8d9;font-size:12px;letter-spacing:.18em}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.stat{background:linear-gradient(180deg,rgba(17,34,47,.95),rgba(7,13,20,.95));border:1px solid rgba(112,210,255,.2);border-radius:16px;padding:14px;text-align:center}
+.stat .label{font-size:11px;color:#8ea5b0;margin-bottom:6px}
+.stat .value{font-size:clamp(18px,5vw,28px);font-weight:900}
+.plus{color:#69f0a5}.minus{color:#ff7272}.blue{color:#7cdaff}.gold{color:#ffd777}
+.panel{border:1px solid rgba(110,210,255,.22);background:linear-gradient(180deg,rgba(15,29,40,.88),rgba(5,9,14,.92));border-radius:20px;padding:16px;box-shadow:0 0 36px rgba(44,169,230,.07)}
+.panel h2{margin:0 0 14px;font-size:22px}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:900px}
+th,td{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;font-size:13px}
+th{color:#8fb4c3;font-weight:700;background:rgba(255,255,255,.025);position:sticky;top:0}
+.match{font-weight:800;color:#f4f8fa}
+.market{font-size:11px;color:#92a9b3;margin-top:4px}
+.result{font-size:24px;font-weight:900;text-align:center}
+.win{color:#68ef88}.loss{color:#ff6b6b}.open{color:#ffd15f}
+.profit-pos{color:#69f0a5;font-weight:900}.profit-neg{color:#ff7272;font-weight:900}.muted{color:#87949b}
+.note{margin-top:12px;color:#8398a2;font-size:11px;line-height:1.7}
+@media(max-width:700px){
+  .summary{grid-template-columns:repeat(2,1fr)}
+  .panel{padding:12px;border-radius:16px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 <a class="back" href="./">← RMCトップへ戻る</a>
+
 <section class="hero">
 <h1>分析情報</h1>
 <p>RMC ANALYSIS INFORMATION</p>
 </section>
+
+<section class="summary">
+  <div class="stat"><div class="label">確定収支</div><div class="value plus" id="settledProfit">$0.00</div></div>
+  <div class="stat"><div class="label">勝敗</div><div class="value blue" id="record">0勝 0敗</div></div>
+  <div class="stat"><div class="label">確定投入額</div><div class="value" id="settledStake">$0.00</div></div>
+  <div class="stat"><div class="label">未確定・予想損益</div><div class="value gold" id="openProfit">$0.00</div></div>
+</section>
+
 <section class="panel">
-<h2>分析情報</h2>
-<p>このページに、今後の分析データ・比較・レポートをまとめて掲載していきます。</p>
-<div class="placeholder">分析コンテンツをここに追加していきます</div>
+<h2>取引・結果一覧</h2>
+<div class="table-wrap">
+<table id="resultTable">
+<thead>
+<tr>
+<th>結果</th>
+<th>日付</th>
+<th>組み合わせ</th>
+<th>オッズ</th>
+<th>投入額</th>
+<th>払戻し / 予想払戻し</th>
+<th>損益</th>
+</tr>
+</thead>
+<tbody>
+
+<tr data-status="win" data-stake="300" data-payout="351">
+<td class="result win">○</td>
+<td>2026/9/21</td>
+<td><div class="match">チュニジア vs Rwanda</div><div class="market">第1セット・勝者 チュニジア</div></td>
+<td>1.17</td>
+<td>$300.00</td>
+<td>$351.00</td>
+<td class="profit-pos">+$51.00</td>
+</tr>
+
+<tr data-status="win" data-stake="300" data-payout="333">
+<td class="result win">○</td>
+<td>2026/9/22</td>
+<td><div class="match">SCコリンチャンスSP vs EC バイーア BA</div><div class="market">ドローノーベット SCコリンチャンスSP</div></td>
+<td>1.11</td>
+<td>$300.00</td>
+<td>$333.00</td>
+<td class="profit-pos">+$33.00</td>
+</tr>
+
+<tr data-status="win" data-stake="300" data-payout="339">
+<td class="result win">○</td>
+<td>2026/9/22</td>
+<td><div class="match">Damajuana vs Bounty Hunters Esports</div><div class="market">第1マップ・勝者 Bounty Hunters Esports</div></td>
+<td>1.13</td>
+<td>$300.00</td>
+<td>$339.00</td>
+<td class="profit-pos">+$39.00</td>
+</tr>
+
+<tr data-status="open" data-stake="300" data-payout="369">
+<td class="result open">△</td>
+<td>2026/9/22</td>
+<td><div class="match">イタリア vs フィンランド</div><div class="market">第1セット・勝者 イタリア</div></td>
+<td>1.23</td>
+<td>$300.00</td>
+<td>$369.00 <span class="muted">予想</span></td>
+<td class="open">+$69.00 予想</td>
+</tr>
+
+<tr data-status="open" data-stake="300" data-payout="336">
+<td class="result open">△</td>
+<td>2026/9/23</td>
+<td><div class="match">セルヴェットFC vs オリンピック・リヨン</div><div class="market">前半 1x2 オリンピック・リヨン</div></td>
+<td>1.12</td>
+<td>$300.00</td>
+<td>$336.00 <span class="muted">予想</span></td>
+<td class="open">+$36.00 予想</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div class="note">
+○＝勝ち　×＝負け　△＝未確定。<br>
+確定収支には未確定の2件を含めず、未確定分は「予想損益」として別計算しています。
+</div>
 </section>
 </div>
+
+<script>
+let settledStake=0, settledPayout=0, wins=0, losses=0, openStake=0, openPayout=0;
+
+document.querySelectorAll('#resultTable tbody tr').forEach(row=>{
+  const status=row.dataset.status;
+  const stake=Number(row.dataset.stake||0);
+  const payout=Number(row.dataset.payout||0);
+
+  if(status==='win' || status==='loss'){
+    settledStake += stake;
+    settledPayout += payout;
+    if(status==='win') wins++;
+    if(status==='loss') losses++;
+  }else if(status==='open'){
+    openStake += stake;
+    openPayout += payout;
+  }
+});
+
+const settledProfit=settledPayout-settledStake;
+const openProfit=openPayout-openStake;
+
+document.getElementById('settledProfit').textContent=(settledProfit>=0?'+':'')+'$'+settledProfit.toFixed(2);
+document.getElementById('settledStake').textContent='$'+settledStake.toFixed(2);
+document.getElementById('record').textContent=wins+'勝 '+losses+'敗';
+document.getElementById('openProfit').textContent=(openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
+</script>
 </body>
 </html>
