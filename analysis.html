@@ -758,58 +758,62 @@ tradeRows.forEach(row=>{
 });
 
 let settledStake=0,settledPayout=0,wins=0,losses=0,openStake=0,openPayout=0;
+
 tradeRows.forEach(row=>{
   const status=row.dataset.status;
   const stake=Number(row.dataset.stake||0);
   const payout=Number(row.dataset.payout||0);
+
   if(status==='win'||status==='loss'){
-    settledStake+=stake; settledPayout+=payout;
-    if(status==='win')wins++; else losses++;
-  }else{
-    openStake+=stake; openPayout+=payout;
+    settledStake+=stake;
+    settledPayout+=payout;
+    if(status==='win') wins++;
+    else losses++;
+  }else if(status==='open'){
+    openStake+=stake;
+    openPayout+=payout;
   }
 });
+
 const simpleProfit=settledPayout-settledStake;
 const openProfit=openPayout-openStake;
 const settledGames=wins+losses;
 
-// 複利：初期$300を確定済み取引へ古い順に全額再投資した場合
+// 複利：初期$300を、確定済み取引へ古い順に毎回全額再投資した場合
 let compoundBalance=300;
 [...tradeRows]
   .filter(r=>r.dataset.status==='win'||r.dataset.status==='loss')
   .sort((a,b)=>a.dataset.ts.localeCompare(b.dataset.ts))
   .forEach(r=>{
+    if(r.dataset.status==='loss'){
+      compoundBalance=0;
+      return;
+    }
     const stake=Number(r.dataset.stake||0);
     const payout=Number(r.dataset.payout||0);
-    const factor=stake>0 ? payout/stake : 1;
-    compoundBalance*=factor;
+    const multiplier=stake>0 ? payout/stake : 1;
+    compoundBalance*=multiplier;
   });
+
 const compoundProfit=compoundBalance-300;
 
-document.getElementById('simpleProfit').textContent=(simpleProfit>=0?'+':'')+'
-document.getElementById('record').textContent=settledGames+'戦 '+wins+'勝 '+losses+'敗';
-document.getElementById('allCount').textContent='全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
-document.getElementById('openProfit').textContent=(openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
-</script>
-</body>
-</html>+simpleProfit.toFixed(2);
-document.getElementById('compoundProfit').textContent=(compoundProfit>=0?'+':'')+'
-document.getElementById('record').textContent=settledGames+'戦 '+wins+'勝 '+losses+'敗';
-document.getElementById('allCount').textContent='全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
-document.getElementById('openProfit').textContent=(openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
-</script>
-</body>
-</html>+compoundProfit.toFixed(2);
-document.getElementById('settledStake').textContent='
-document.getElementById('record').textContent=settledGames+'戦 '+wins+'勝 '+losses+'敗';
-document.getElementById('allCount').textContent='全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
-document.getElementById('openProfit').textContent=(openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
-</script>
-</body>
-</html>+settledStake.toFixed(2);
-document.getElementById('record').textContent=settledGames+'戦 '+wins+'勝 '+losses+'敗';
-document.getElementById('allCount').textContent='全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
-document.getElementById('openProfit').textContent=(openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
+document.getElementById('simpleProfit').textContent=
+  (simpleProfit>=0?'+':'')+'$'+simpleProfit.toFixed(2);
+
+document.getElementById('compoundProfit').textContent=
+  (compoundProfit>=0?'+':'')+'$'+compoundProfit.toFixed(2);
+
+document.getElementById('settledStake').textContent=
+  '$'+settledStake.toFixed(2);
+
+document.getElementById('record').textContent=
+  settledGames+'戦 '+wins+'勝 '+losses+'敗';
+
+document.getElementById('allCount').textContent=
+  '全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
+
+document.getElementById('openProfit').textContent=
+  (openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
 </script>
 </body>
 </html>
