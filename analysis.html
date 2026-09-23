@@ -192,7 +192,7 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 <section class="summary">
   <div class="card"><div class="label">単利収益</div><div class="value plus" id="simpleProfit">+$0.00</div><div class="label" style="margin-top:5px">実取引の確定損益合計</div></div>
   <div class="card"><div class="label">複利収益</div><div class="value plus" id="compoundProfit">+$0.00</div><div class="label" id="compoundNote" style="margin-top:5px">現在資金 $0.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="compoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="compoundStockNote" style="margin-top:3px">確保済み 0回</div><div class="compound-explain"><strong>複利ルール：</strong>元金が2倍になったら利益をストックへ移し、運用資金は元金に戻して再スタート。</div></div>
-  <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="quarterKellyProfit">+$0.00</div><div class="label" id="quarterKellyNote" style="margin-top:5px">初期$300・現行モデルの事前確率で再計算</div><div class="kelly-explain"><strong>1/4ケリー法とは：</strong>その時点の<strong>現在資金</strong>を基準に、推定勝率とオッズから「今回いくら使うか」を自動計算する方法。資金が増えれば投入額も少し増え、資金が減れば投入額も小さくなる。通常のケリー法で出た適正額の<strong>1/4だけ</strong>を使うので、増やしすぎを抑えながら運用する。期待値が足りない場合は<strong>投入0＝見送り</strong>。</div></div>
+  <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="quarterKellyProfit">+$0.00</div><div class="label" id="quarterKellyNote" style="margin-top:5px">初期$300・現行モデルの事前確率で再計算</div><div class="kelly-explain"><strong>1/4ケリー法とは：</strong>その時点の<strong>現在資金</strong>を基準に、推定勝率とオッズから「今回いくら使うか」を自動計算する方法。<br><strong>※現在の実数例：</strong><span id="kellyLiveExample">計算中...</span></div></div>
   <div class="card"><div class="label">戦績</div><div class="value blue" id="record">0戦 0勝 0敗</div><div class="label" id="winRate" style="margin-top:5px">勝率 0.0%</div><div class="label" id="allCount" style="margin-top:3px">全0件 / 未確定0件</div></div>
   <div class="card"><div class="label">投入金額合計</div><div class="value" id="settledStake">$0.00</div><div class="label" style="margin-top:5px">一覧へ追加した時点で自動加算</div></div>
   <div class="card"><div class="label">未確定・予想損益</div><div class="value gold" id="openProfit">+$0.00</div></div>
@@ -217,6 +217,18 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 </tr>
 </thead>
 <tbody>
+
+<tr class="trade-row" data-ts="2026-09-24T04:40:00+09:00" data-status="open" data-stake="300" data-payout="354">
+<td class="result open">△</td>
+<td>2026/9/24 04:40</td>
+<td class="sport-col">女子テニス</td>
+<td><div class="match">サッカリ、マリア vs 日比野、菜緒</div><div class="market">勝者：サッカリ、マリア</div></td>
+<td class="market-result pending-result">未確定</td>
+<td>1.18</td>
+<td class="money">$300.00</td>
+<td class="money">$354.00 予定</td>
+<td class="money pending">+$54.00 予定</td>
+</tr>
 
 <tr class="trade-row" data-ts="2026-09-24T03:47:00" data-status="open" data-stake="270" data-payout="334.80" data-target="detail-oddik-procyon" data-locked-prob="0.7542"
  data-factor-vrs-rank-gap="109" data-factor-vrs-point-gap="186" data-factor-hltv-rank-gap="33"
@@ -359,13 +371,13 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 </table></div><div class="source-note">UEFA公式競技での直接対戦は初対戦として過去チャットに記録。</div></div>
 </td></tr>
 
-<tr class="trade-row" data-ts="2026-09-22T21:56:00" data-status="open" data-stake="300" data-payout="369" data-target="detail-italy" data-locked-prob="0.802">
-<td class="result open">△</td>
+<tr class="trade-row" data-ts="2026-09-22T21:56:00" data-status="win" data-stake="300" data-payout="369" data-target="detail-italy" data-locked-prob="0.802">
+<td class="result win">○</td>
 <td>2026/9/22 21:56</td>
 <td class="sport-col">男子バレー</td>
 <td><div class="match">イタリア vs フィンランド <span class="chev">▼</span></div><div class="market">第1セット勝者：イタリア</div></td>
-<td class="market-result pending-result">未確定</td>
-<td>1.23</td><td class="money">$300.00</td><td class="money">$369.00 予定</td><td class="money pending">+$69.00 予定</td>
+<td class="market-result">第1S 勝利（スコア未確認）</td>
+<td>1.23</td><td class="money">$300.00</td><td class="money">$369.00</td><td class="money positive">+$69.00</td>
 </tr>
 <tr class="detail-row" id="detail-italy"><td colspan="9" class="detail-cell">
 <div class="detail-title">なぜこの組み合わせを選んだか</div>
@@ -599,7 +611,7 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
   <section class="summary">
     <div class="card"><div class="label">単利収益</div><div class="value plus" id="testSimpleProfit">+$0.00</div><div class="label" style="margin-top:5px">固定$100での確定損益合計</div></div>
     <div class="card"><div class="label">複利収益</div><div class="value plus" id="testCompoundProfit">+$0.00</div><div class="label" id="testCompoundNote" style="margin-top:5px">現在資金 $100.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="testCompoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="testCompoundStockNote" style="margin-top:3px">確保済み 0回</div><div class="compound-explain"><strong>複利ルール：</strong>元金が2倍になったら利益をストックへ移し、運用資金は元金に戻して再スタート。</div></div>
-    <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="testQuarterKellyProfit">+$0.00</div><div class="label" id="testQuarterKellyNote" style="margin-top:5px">初期$100・確定0件</div><div class="kelly-explain"><strong>1/4ケリー法とは：</strong>その時点の<strong>現在資金</strong>を基準に、推定勝率とオッズから「今回いくら使うか」を自動計算する方法。資金が増えれば投入額も少し増え、資金が減れば投入額も小さくなる。通常のケリー法で出た適正額の<strong>1/4だけ</strong>を使うので、増やしすぎを抑えながら運用する。期待値が足りない場合は<strong>投入0＝見送り</strong>。</div></div>
+    <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="testQuarterKellyProfit">+$0.00</div><div class="label" id="testQuarterKellyNote" style="margin-top:5px">初期$100・確定0件</div><div class="kelly-explain"><strong>1/4ケリー法とは：</strong>その時点の<strong>現在資金</strong>を基準に、推定勝率とオッズから「今回いくら使うか」を自動計算する方法。<br><strong>※現在の実数例：</strong><span id="testKellyLiveExample">計算中...</span></div></div>
     <div class="card"><div class="label">戦績</div><div class="value blue" id="testRecord">0戦 0勝 0敗</div><div class="label" id="testWinRate" style="margin-top:5px">勝率 0.0%</div><div class="label" id="testAllCount" style="margin-top:3px">全0件 / 未確定0件</div></div>
     <div class="card"><div class="label">確定投入額</div><div class="value" id="testSettledStake">$0.00</div></div>
     <div class="card"><div class="label">未確定・予想損益</div><div class="value gold" id="testOpenProfit">+$0.00</div></div>
