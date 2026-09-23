@@ -13,7 +13,7 @@ body{min-height:100svh;background:radial-gradient(circle at 50% 0%,rgba(70,190,2
 .hero{text-align:center;padding:10px 0 24px}
 .hero h1{margin:0;font-size:clamp(36px,10vw,70px);letter-spacing:.08em;background:linear-gradient(180deg,#e9fbff,#75d8ff 50%,#2e8fbd);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{margin:8px 0 0;color:#9fc9da;letter-spacing:.14em;font-size:12px}
-.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.summary{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}
 .card{border:1px solid rgba(110,210,255,.18);background:linear-gradient(180deg,rgba(15,29,40,.92),rgba(5,9,14,.95));border-radius:16px;padding:15px;box-shadow:0 0 28px rgba(44,169,230,.06)}
 .label{font-size:12px;color:#8fa8b5;margin-bottom:7px}
 .value{font-size:24px;font-weight:800;letter-spacing:.02em}
@@ -32,8 +32,8 @@ td{font-size:14px}
 .win{color:#67e38f}.loss{color:#ff6674}.open{color:#ffd45d}
 .match{font-weight:800;color:#f3f7f9}
 .market{font-size:11px;color:#91a1ab;margin-top:4px}
-.sport-col{font-weight:900;color:#7edcff;white-space:nowrap;text-align:center}
-th.sport-head{text-align:center;color:#7edcff;white-space:nowrap}
+.sport-col{font-weight:400;color:inherit;white-space:nowrap;text-align:center}
+th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700}
 .money{text-align:right;white-space:nowrap}
 .positive{color:#58e68e;font-weight:800}.negative{color:#ff6d7a;font-weight:800}.pending{color:#ffd45d;font-weight:700}
 .chev{display:inline-block;margin-left:6px;color:#75d9ff;transition:transform .2s}
@@ -182,7 +182,8 @@ th.sport-head{text-align:center;color:#7edcff;white-space:nowrap}
 </section>
 
 <section class="summary">
-  <div class="card"><div class="label">確定収支</div><div class="value plus" id="realizedProfit">+$0.00</div></div>
+  <div class="card"><div class="label">単利収益</div><div class="value plus" id="simpleProfit">+$0.00</div><div class="label" style="margin-top:5px">固定$300での確定損益合計</div></div>
+  <div class="card"><div class="label">複利収益</div><div class="value plus" id="compoundProfit">+$0.00</div><div class="label" style="margin-top:5px">初期$300を毎回全額再投資した場合</div></div>
   <div class="card"><div class="label">戦績</div><div class="value blue" id="record">0戦 0勝 0敗</div><div class="label" id="allCount" style="margin-top:5px">全0件 / 未確定0件</div></div>
   <div class="card"><div class="label">確定投入額</div><div class="value" id="settledStake">$0.00</div></div>
   <div class="card"><div class="label">未確定・予想損益</div><div class="value gold" id="openProfit">+$0.00</div></div>
@@ -768,11 +769,44 @@ tradeRows.forEach(row=>{
     openStake+=stake; openPayout+=payout;
   }
 });
-const realized=settledPayout-settledStake;
+const simpleProfit=settledPayout-settledStake;
 const openProfit=openPayout-openStake;
 const settledGames=wins+losses;
-document.getElementById('realizedProfit').textContent=(realized>=0?'+':'')+'$'+realized.toFixed(2);
-document.getElementById('settledStake').textContent='$'+settledStake.toFixed(2);
+
+// 複利：初期$300を確定済み取引へ古い順に全額再投資した場合
+let compoundBalance=300;
+[...tradeRows]
+  .filter(r=>r.dataset.status==='win'||r.dataset.status==='loss')
+  .sort((a,b)=>a.dataset.ts.localeCompare(b.dataset.ts))
+  .forEach(r=>{
+    const stake=Number(r.dataset.stake||0);
+    const payout=Number(r.dataset.payout||0);
+    const factor=stake>0 ? payout/stake : 1;
+    compoundBalance*=factor;
+  });
+const compoundProfit=compoundBalance-300;
+
+document.getElementById('simpleProfit').textContent=(simpleProfit>=0?'+':'')+'
+document.getElementById('record').textContent=settledGames+'戦 '+wins+'勝 '+losses+'敗';
+document.getElementById('allCount').textContent='全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
+document.getElementById('openProfit').textContent=(openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
+</script>
+</body>
+</html>+simpleProfit.toFixed(2);
+document.getElementById('compoundProfit').textContent=(compoundProfit>=0?'+':'')+'
+document.getElementById('record').textContent=settledGames+'戦 '+wins+'勝 '+losses+'敗';
+document.getElementById('allCount').textContent='全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
+document.getElementById('openProfit').textContent=(openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
+</script>
+</body>
+</html>+compoundProfit.toFixed(2);
+document.getElementById('settledStake').textContent='
+document.getElementById('record').textContent=settledGames+'戦 '+wins+'勝 '+losses+'敗';
+document.getElementById('allCount').textContent='全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
+document.getElementById('openProfit').textContent=(openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
+</script>
+</body>
+</html>+settledStake.toFixed(2);
 document.getElementById('record').textContent=settledGames+'戦 '+wins+'勝 '+losses+'敗';
 document.getElementById('allCount').textContent='全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
 document.getElementById('openProfit').textContent=(openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
