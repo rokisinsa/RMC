@@ -13,7 +13,7 @@ body{min-height:100svh;background:radial-gradient(circle at 50% 0%,rgba(70,190,2
 .hero{text-align:center;padding:10px 0 24px}
 .hero h1{margin:0;font-size:clamp(36px,10vw,70px);letter-spacing:.08em;background:linear-gradient(180deg,#e9fbff,#75d8ff 50%,#2e8fbd);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{margin:8px 0 0;color:#9fc9da;letter-spacing:.14em;font-size:12px}
-.summary{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}
+.summary{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:20px}
 .card{border:1px solid rgba(110,210,255,.18);background:linear-gradient(180deg,rgba(15,29,40,.92),rgba(5,9,14,.95));border-radius:16px;padding:15px;box-shadow:0 0 28px rgba(44,169,230,.06)}
 .label{font-size:12px;color:#8fa8b5;margin-bottom:7px}
 .value{font-size:24px;font-weight:800;letter-spacing:.02em}
@@ -186,7 +186,8 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 <section class="summary">
   <div class="card"><div class="label">単利収益</div><div class="value plus" id="simpleProfit">+$0.00</div><div class="label" style="margin-top:5px">固定$300での確定損益合計</div></div>
   <div class="card"><div class="label">複利収益</div><div class="value plus" id="compoundProfit">+$0.00</div><div class="label" style="margin-top:5px">初期$300を毎回全額再投資した場合</div></div>
-  <div class="card"><div class="label">戦績</div><div class="value blue" id="record">0戦 0勝 0敗</div><div class="label" id="allCount" style="margin-top:5px">全0件 / 未確定0件</div></div>
+  <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="quarterKellyProfit">+$0.00</div><div class="label" id="quarterKellyNote" style="margin-top:5px">初期$300・現行モデルの事前確率で再計算</div></div>
+  <div class="card"><div class="label">戦績</div><div class="value blue" id="record">0戦 0勝 0敗</div><div class="label" id="winRate" style="margin-top:5px">勝率 0.0%</div><div class="label" id="allCount" style="margin-top:3px">全0件 / 未確定0件</div></div>
   <div class="card"><div class="label">確定投入額</div><div class="value" id="settledStake">$0.00</div></div>
   <div class="card"><div class="label">未確定・予想損益</div><div class="value gold" id="openProfit">+$0.00</div></div>
 </section>
@@ -804,11 +805,85 @@ let compoundBalance=300;
 
 const compoundProfit=compoundBalance-300;
 
+// 1/4ケリー法：初期$300、各取引の事前モデル確率と実オッズで投入率を決定
+// フルケリー f*=(odds*p-1)/(odds-1)、実際の投入率はその1/4。
+// マイナスケリーは見送り（0%）とする。
+const detailToModel={
+  'detail-lyon':'lyon',
+  'detail-italy':'italy',
+  'detail-cs2':'cs2',
+  'detail-cor':'cor',
+  'detail-tun':'tun'
+};
+let quarterKellyBalance=300;
+let quarterKellyBets=0;
+
+[...tradeRows]
+  .filter(r=>r.dataset.status==='win'||r.dataset.status==='loss')
+  .sort((a,b)=>a.dataset.ts.localeCompare(b.dataset.ts))
+  .forEach(r=>{
+    const modelKey=detailToModel[r.dataset.target];
+    const est=modelEstimates[modelKey];
+    const odds=Number(r.querySelectorAll('td')[5]?.textContent?.trim()) || Number(probabilityModels[modelKey]?.odds || 0);
+    if(!est || !odds || odds<=1) return;
+
+    const p=est.p;
+    const fullKelly=(odds*p-1)/(odds-1);
+    const fraction=clamp(fullKelly/4,0,0.25);
+    if(fraction<=0) return;
+
+    const bet=quarterKellyBalance*fraction;
+    quarterKellyBets++;
+    if(r.dataset.status==='win'){
+      quarterKellyBalance += bet*(odds-1);
+    }else{
+      quarterKellyBalance -= bet;
+    }
+  });
+
+const quarterKellyProfit=quarterKellyBalance-300;
+
 document.getElementById('simpleProfit').textContent=
   (simpleProfit>=0?'+':'')+'$'+simpleProfit.toFixed(2);
 
 document.getElementById('compoundProfit').textContent=
-  (compoundProfit>=0?'+':'')+'$'+compoundProfit.toFixed(2);
+  (compoundProfit>=0?'+':'')+'
+  '$'+settledStake.toFixed(2);
+
+document.getElementById('record').textContent=
+  settledGames+'戦 '+wins+'勝 '+losses+'敗';
+
+const winRate=settledGames>0 ? (wins/settledGames*100) : 0;
+document.getElementById('winRate').textContent=
+  '勝率 '+winRate.toFixed(1)+'%';
+
+document.getElementById('allCount').textContent=
+  '全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
+
+document.getElementById('openProfit').textContent=
+  (openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
+</script>
+</body>
+</html>+compoundProfit.toFixed(2);
+
+document.getElementById('quarterKellyProfit').textContent=
+  (quarterKellyProfit>=0?'+':'')+'
+  '$'+settledStake.toFixed(2);
+
+document.getElementById('record').textContent=
+  settledGames+'戦 '+wins+'勝 '+losses+'敗';
+
+document.getElementById('allCount').textContent=
+  '全'+tradeRows.length+'件 / 未確定'+tradeRows.filter(r=>r.dataset.status==='open').length+'件';
+
+document.getElementById('openProfit').textContent=
+  (openProfit>=0?'+':'')+'$'+openProfit.toFixed(2);
+</script>
+</body>
+</html>+quarterKellyProfit.toFixed(2);
+
+document.getElementById('quarterKellyNote').textContent=
+  '初期$300・確定'+quarterKellyBets+'件を現行モデルで再計算';
 
 document.getElementById('settledStake').textContent=
   '$'+settledStake.toFixed(2);
