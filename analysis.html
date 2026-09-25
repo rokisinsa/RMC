@@ -183,6 +183,21 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 }
 
 .test-area{margin-top:34px;padding-top:24px;border-top:1px solid rgba(110,210,255,.18)}
+.odds-test-area{margin-top:34px;padding-top:26px;border-top:1px solid rgba(255,212,93,.20)}
+.odds-test-area .section-title{margin-top:0}
+.value-overview{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:10px 0 14px}
+.value-mini{padding:11px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06);font-size:11px;color:#a9bbc4}
+.value-mini strong{display:block;font-size:18px;color:#f5fbff;margin-top:4px}
+.value-badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:10px;font-weight:900;white-space:nowrap}
+.value-badge.formal{background:rgba(105,240,165,.12);color:#69f0a5;border:1px solid rgba(105,240,165,.25)}
+.value-badge.watch{background:rgba(255,212,93,.10);color:#ffd45d;border:1px solid rgba(255,212,93,.22)}
+.value-badge.exclude{background:rgba(255,107,120,.10);color:#ff7b87;border:1px solid rgba(255,107,120,.22)}
+.value-detail{margin:8px 0 2px;border:1px solid rgba(110,210,255,.12);border-radius:12px;background:rgba(255,255,255,.025)}
+.value-detail summary{cursor:pointer;padding:10px 12px;font-size:11px;font-weight:800;color:#8edcff}
+.value-detail-body{padding:0 12px 12px;font-size:11px;line-height:1.75;color:#c2ced4}
+.value-detail-body strong{color:#f2fbff}
+.excluded-log{margin-top:12px;padding:12px;border-radius:12px;border:1px solid rgba(255,107,120,.14);background:rgba(255,107,120,.035);font-size:11px;line-height:1.75;color:#b9c5ca}
+@media(max-width:760px){.value-overview{grid-template-columns:1fr 1fr}}
 .test-area .section-title{margin-top:0}
 .empty-test{padding:18px;text-align:center;color:#8497a1;font-size:12px;border:1px dashed rgba(110,210,255,.16);border-radius:14px;margin-top:10px}
 </style>
@@ -232,16 +247,17 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 <td>2026/9/24 20:35</td>
 <td class="sport-col">男子サッカー</td>
 <td><div class="match">中国 vs モルディブ <span class="chev">▼</span></div><div class="market">国際親善試合 / 北京 / メモ登録</div></td>
-<td class="market-result pending-result">未入力</td>
+<td class="market-result">中国 3-0 モルディブ</td>
 <td>—</td>
 <td class="money">—</td>
 <td class="money">—</td>
-<td class="money muted">—</td>
+<td class="money muted">メモ</td>
 </tr>
 
 <tr class="detail-row" id="detail-china-maldives"><td colspan="9" class="detail-cell">
 <div class="detail-title">なぜこの組み合わせを選んだのか</div>
 <div class="detail-sub">中国 vs モルディブ / 男子サッカー・国際親善試合 / 2026/9/24 20:35 JST / 北京</div>
+<div class="reason" style="border-left-color:#69f0a5;background:rgba(105,240,165,.07)"><strong>最終結果：</strong>中国 3-0 モルディブ。</div>
 
 <div class="easy-summary">
   <div class="easy-title">まずここだけ見ればOK</div>
@@ -299,16 +315,16 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 <div class="source-note">この分析は、ユーザーが当時の別チャットでまとめたH2H・直近成績・ランキング・市場参考値を、今回の取引メモに紐づけて保存したものです。先制点など未確認の項目は推測せず未確認のまま残しています。</div>
 </td></tr>
 
-<tr class="trade-row" data-ts="2026-09-24T04:40:00+09:00" data-status="open" data-stake="300" data-payout="354">
-<td class="result open">△</td>
+<tr class="trade-row" data-ts="2026-09-24T04:40:00+09:00" data-status="win" data-stake="300" data-payout="354">
+<td class="result win">○</td>
 <td>2026/9/24 04:40</td>
 <td class="sport-col">女子テニス</td>
 <td><div class="match">サッカリ、マリア vs 日比野、菜緒</div><div class="market">勝者：サッカリ、マリア</div></td>
-<td class="market-result pending-result">未確定</td>
+<td class="market-result">サッカリ 2-0（日比野 7-5 / 6-1）</td>
 <td>1.18</td>
 <td class="money">$300.00</td>
-<td class="money">$354.00 予定</td>
-<td class="money pending">+$54.00 予定</td>
+<td class="money">$354.00</td>
+<td class="money positive">+$54.00</td>
 </tr>
 
 <tr class="trade-row" data-ts="2026-09-24T03:47:00" data-status="loss" data-stake="270" data-payout="0" data-target="detail-oddik-procyon" data-locked-prob="0.7542"
@@ -911,8 +927,105 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
   <p class="note">テスト結果は実取引とは完全に分離して計算します。試合ごとに確定結果、単利、複利、複利ストック、1/4ケリー法、戦績、勝率を同じルールで集計します。</p>
 </section>
 
+
+<section class="odds-test-area">
+  <h2 class="section-title">テスト中オッズ結果一覧</h2>
+  <p class="note">VALUE ENGINE｜2026/9/25 事前固定。試合前に「選択側・取得オッズ・必要勝率・推定勝率・EV・対象/監視/除外」を保存し、試合後に実結果・Closing Odds・CLV・$100固定損益・累計損益・ROIを追記します。</p>
+
+  <div class="value-overview">
+    <div class="value-mini">正式VALUE対象<strong>2件</strong></div>
+    <div class="value-mini">監視候補<strong>3件</strong></div>
+    <div class="value-mini">深掘り除外<strong>3件</strong></div>
+    <div class="value-mini">$100固定確定損益<strong>$0.00</strong></div>
+  </div>
+
+  <div class="table-wrap">
+  <table id="oddsTestTable">
+  <thead>
+  <tr>
+    <th>判定</th><th>日付</th><th>種目</th><th>組み合わせ / 選択</th><th>取得オッズ</th><th>必要勝率</th><th>推定勝率</th><th>推定EV</th><th>$100</th><th>結果</th><th>Closing</th><th>CLV</th><th>損益</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr>
+    <td><span class="value-badge formal">正式VALUE</span></td>
+    <td>2026/9/25</td>
+    <td>CS2</td>
+    <td><div class="match">NiP vs 3DMAX</div><div class="market">選択：3DMAX / BO3</div></td>
+    <td>1.95〜2.00</td><td>約50.0〜51.3%</td><td>56〜58%</td><td class="positive">約+9〜+16%</td><td>$100</td><td class="pending">未確定</td><td>—</td><td>—</td><td>—</td>
+  </tr>
+  <tr><td colspan="13">
+    <details class="value-detail"><summary>分析を表示</summary><div class="value-detail-body">
+      <strong>選定理由：</strong>3DMAXが圧倒的に強いからではなく、市場がほぼ五分と見ている価格に対し、戦力・ランキング・直近成績などから3DMAXを56〜58%程度まで評価できる可能性があるという「市場評価とのズレ」を検証する。<br>
+      <strong>保存判定：</strong>正式VALUE対象。仮想投資$100。勝敗判明後にClosing Odds、CLV、固定$100損益、累計損益、ROIを追記する。
+    </div></details>
+  </td></tr>
+
+  <tr>
+    <td><span class="value-badge formal">正式VALUE</span></td>
+    <td>2026/9/25</td>
+    <td>男子バレー</td>
+    <td><div class="match">Slovenia vs Poland</div><div class="market">選択：Poland / EuroVolley 2026 準決勝</div></td>
+    <td>1.25</td><td>80.0%</td><td>84〜87%</td><td class="positive">+5.0〜+8.75%</td><td>$100</td><td class="pending">未確定</td><td>—</td><td>—</td><td>—</td>
+  </tr>
+  <tr><td colspan="13">
+    <details class="value-detail"><summary>分析を表示</summary><div class="value-detail-body">
+      <strong>選定理由：</strong>現在のチーム力・大会実績・直接対決・直近内容を複合して、1.25で必要な80%を上回る84〜87%程度と暫定評価。単に強豪だからではなく、価格1.25でも余白があるかを検証する。<br>
+      <strong>保存条件：</strong>1.25以上なら正式VALUE対象。今回は1.25として$100固定で保存。
+    </div></details>
+  </td></tr>
+
+  <tr>
+    <td><span class="value-badge watch">監視</span></td>
+    <td>2026/9/25</td>
+    <td>CS2</td>
+    <td><div class="match">HEROIC vs fnatic</div><div class="market">選択候補：HEROIC / BO3・LAN・準々決勝</div></td>
+    <td>1.35</td><td>74.1%</td><td>未固定</td><td>未固定</td><td>—</td><td class="pending">監視中</td><td>—</td><td>—</td><td>—</td>
+  </tr>
+  <tr><td colspan="13">
+    <details class="value-detail"><summary>分析を表示</summary><div class="value-detail-body">
+      HEROIC優勢の材料はあるが、1.35では74.1%以上の勝率が必要。事前時点でMapがTBAのため、価格とMap条件を追加確認する監視候補として固定。HLTV #34、VRS #25という保存時点情報も残す。
+    </div></details>
+  </td></tr>
+
+  <tr>
+    <td><span class="value-badge watch">監視</span></td>
+    <td>2026/9/25</td>
+    <td>男子バレー</td>
+    <td><div class="match">Finland vs France</div><div class="market">選択候補：France / EuroVolley 2026 準決勝</div></td>
+    <td>約1.20</td><td>83.3%</td><td>未固定</td><td>未固定</td><td>—</td><td class="pending">監視中</td><td>—</td><td>—</td><td>—</td>
+  </tr>
+  <tr><td colspan="13">
+    <details class="value-detail"><summary>分析を表示</summary><div class="value-detail-body">
+      Franceは今大会6勝1敗で、決勝トーナメントでもPortugal、Romaniaに3-0。一方Finlandもグループ4勝1敗からItalyを3-2で破っており、単純な格下扱いはしない。1.20では83.3%以上必要なので余白が小さく、価格上昇時に再評価する監視候補。
+    </div></details>
+  </td></tr>
+
+  <tr>
+    <td><span class="value-badge watch">監視</span></td>
+    <td>2026/9/25</td>
+    <td>VALORANT</td>
+    <td><div class="match">Karmine Corp vs Xi Lai Gaming</div><div class="market">選択候補：Karmine Corp / BO3</div></td>
+    <td>1.17〜1.20</td><td>83.3〜85.5%</td><td>未固定</td><td>未固定</td><td>—</td><td class="pending">監視中</td><td>—</td><td>—</td><td>—</td>
+  </tr>
+  <tr><td colspan="13">
+    <details class="value-detail"><summary>分析を表示</summary><div class="value-detail-body">
+      H2Hは過去対戦なし。直近5シリーズはKC 5勝0敗、XLG 2勝3敗で方向はKC側。ただし1.17〜1.20では83.3〜85.5%の勝率が必要。「KCが強い」と「この価格にVALUEがある」は別問題として、正式$100対象には入れず監視候補で固定。
+    </div></details>
+  </td></tr>
+
+  </tbody>
+  </table>
+  </div>
+
+  <div class="excluded-log"><strong>深掘りで除外：</strong>Afghanistan vs Nepal / NAVI vs Nemesis / Tunisia vs Cameroon。最初のスクリーニングでは候補だったが、格差・ランキング・直近成績・H2H・メンバー・大会状況・オッズ・必要勝率を追加確認して正式候補から除外。勝った候補を後から追加したり、負けた候補を削除したりしない。</div>
+  <p class="note">推定勝率・EVは保存時点の暫定値。目的は100試合、300試合、500試合と蓄積したときに、市場価格より高い精度で評価できているかを検証すること。</p>
+</section>
+
+
 </div>
 
-<script src="./analysis.js?v=20260924-0501" defer></script>
+<script src="./analysis.js?v=20260925-1228" defer></script>
 </body>
 </html>
