@@ -589,7 +589,36 @@ function renderTestSummary(rows){
   if(empty) empty.style.display=rows.length?"none":"block";
 }
 
+
+function renderActualBetSummary(){
+  const rows=[...document.querySelectorAll("#actualBetTable .actual-row")];
+  let totalStake=0, settledProfit=0, openProfitKnown=0, openCount=0, unknownOdds=0;
+
+  rows.forEach(r=>{
+    const stake=Number(r.dataset.stake||0);
+    const payout=Number(r.dataset.payout||0);
+    const status=r.dataset.status;
+    const payoutKnown=r.dataset.payoutKnown==="1";
+    totalStake+=stake;
+
+    if(status==="win"||status==="loss"){
+      settledProfit+=payout-stake;
+    }else if(status==="open"){
+      openCount++;
+      if(payoutKnown) openProfitKnown+=payout-stake;
+      else unknownOdds++;
+    }
+  });
+
+  setText("actualSettledProfit",money(settledProfit));
+  setText("actualTotalStake",amount(totalStake));
+  setText("actualOpenCount",openCount+"件");
+  setText("actualOpenProfit",money(openProfitKnown));
+  setText("actualOpenNote","未入力オッズ "+unknownOdds+"件");
+}
+
 document.addEventListener("DOMContentLoaded",()=>{
+  renderActualBetSummary();
   initProbabilityBoxes();
   updateCalibration();
   initEasySummaries();
