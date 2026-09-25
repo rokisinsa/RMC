@@ -14,6 +14,12 @@ body{min-height:100svh;background:radial-gradient(circle at 50% 0%,rgba(70,190,2
 .hero h1{margin:0;font-size:clamp(36px,10vw,70px);letter-spacing:.08em;background:linear-gradient(180deg,#e9fbff,#75d8ff 50%,#2e8fbd);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{margin:8px 0 0;color:#9fc9da;letter-spacing:.14em;font-size:12px}
 .summary{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:20px}
+.actual-bet-area{margin:0 0 26px;padding:18px;border:1px solid rgba(255,212,93,.24);border-radius:20px;background:linear-gradient(180deg,rgba(48,38,10,.34),rgba(10,9,5,.76));box-shadow:0 0 34px rgba(255,212,93,.05)}
+.actual-bet-area h2{margin:0 0 6px;font-size:23px;color:#fff1b8}
+.actual-bet-area .subtext{font-size:11px;line-height:1.7;color:#b7ad83;margin-bottom:14px}
+.actual-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:14px}
+.actual-summary .card{border-color:rgba(255,212,93,.18)}
+@media(max-width:760px){.actual-summary{grid-template-columns:1fr 1fr}}
 .card{border:1px solid rgba(110,210,255,.18);background:linear-gradient(180deg,rgba(15,29,40,.92),rgba(5,9,14,.95));border-radius:16px;padding:15px;box-shadow:0 0 28px rgba(44,169,230,.06)}
 .label{font-size:12px;color:#8fa8b5;margin-bottom:7px}
 .kelly-explain{margin-top:7px;padding-top:7px;border-top:1px solid rgba(255,255,255,.07);font-size:10px;line-height:1.55;color:#8fa8b5}
@@ -212,6 +218,63 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
   <p>RESULT LOG / WHY THIS MATCH</p>
 </section>
 
+<section class="actual-bet-area">
+  <h2>実際にベットしたもの</h2>
+  <div class="subtext">取引結果一覧とは別管理。ここは実際に入れた金額だけを集計します。未入力のオッズは勝手に補完せず、そのまま未入力で残します。</div>
+
+  <div class="actual-summary">
+    <div class="card"><div class="label">確定収支</div><div class="value plus" id="actualSettledProfit">+$0.00</div></div>
+    <div class="card"><div class="label">投入額合計</div><div class="value" id="actualTotalStake">$0.00</div></div>
+    <div class="card"><div class="label">未確定</div><div class="value blue" id="actualOpenCount">0件</div></div>
+    <div class="card"><div class="label">未確定・既知オッズ分の予想損益</div><div class="value gold" id="actualOpenProfit">+$0.00</div><div class="label" id="actualOpenNote" style="margin-top:5px">未入力オッズ 0件</div></div>
+  </div>
+
+  <div class="table-wrap">
+  <table id="actualBetTable">
+    <thead>
+      <tr><th>結果</th><th>日付</th><th>種目</th><th>組み合わせ</th><th>ベット内容</th><th>オッズ</th><th class="money">投入額</th><th class="money">払戻し / 予定</th><th class="money">損益</th></tr>
+    </thead>
+    <tbody>
+      <tr class="actual-row" data-ts="2026-09-25T12:29:00+09:00" data-status="open" data-stake="300" data-payout="315" data-payout-known="1">
+        <td class="result open">△</td>
+        <td>2026/9/25</td>
+        <td class="sport-col">女子テニス</td>
+        <td><div class="match">石井さやか vs 板谷莉央</div><div class="market">ITF W50 七尾</div></td>
+        <td>正確なセットスコア 2-0：石井さやか</td>
+        <td>1.05</td>
+        <td class="money">$300.00</td>
+        <td class="money">$315.00 予定</td>
+        <td class="money pending">+$15.00 予定</td>
+      </tr>
+
+      <tr class="actual-row" data-ts="2026-09-25T12:28:00+09:00" data-status="open" data-stake="180" data-payout="237.60" data-payout-known="1">
+        <td class="result open">△</td>
+        <td>2026/9/25</td>
+        <td class="sport-col">女子テニス</td>
+        <td><div class="match">ボリネッツ、ケイティ vs ビレル、キンバリー</div><div class="market">WTAソウル</div></td>
+        <td>マッチウィナー：ケイティ・ボリネッツ</td>
+        <td>1.32</td>
+        <td class="money">$180.00</td>
+        <td class="money">$237.60 予定</td>
+        <td class="money pending">+$57.60 予定</td>
+      </tr>
+
+      <tr class="actual-row" data-ts="2026-09-25T12:27:00+09:00" data-status="open" data-stake="300" data-payout="300" data-payout-known="0">
+        <td class="result open">△</td>
+        <td>2026/9/25</td>
+        <td class="sport-col">女子テニス</td>
+        <td><div class="match">サッカリ、マリア vs ギブソン、タイラ</div><div class="market">WTAシンガポール</div></td>
+        <td>マッチウィナー：マリア・サッカリ</td>
+        <td>未入力</td>
+        <td class="money">$300.00</td>
+        <td class="money">未入力</td>
+        <td class="money pending">未確定</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
 <section class="summary">
   <div class="card"><div class="label">単利収益</div><div class="value plus" id="simpleProfit">+$0.00</div><div class="label" style="margin-top:5px">実取引の確定損益合計</div></div>
   <div class="card"><div class="label">複利収益</div><div class="value plus" id="compoundProfit">+$0.00</div><div class="label" id="compoundNote" style="margin-top:5px">現在資金 $0.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="compoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="compoundStockNote" style="margin-top:3px">確保済み 0回</div><div class="compound-explain"><strong>複利ルール：</strong>元金が2倍になったら利益をストックへ移し、運用資金は元金に戻して再スタート。途中で負けた場合はその挑戦を「失敗」として記録し、次の挑戦を元金から再開。</div><div class="compound-history" id="compoundHistory"><div class="ch-title">挑戦履歴</div>まだ確定結果がありません。</div></div>
@@ -243,42 +306,6 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 </thead>
 <tbody>
 
-<tr class="trade-row" data-ts="2026-09-25T12:29:00+09:00" data-status="open" data-stake="300" data-payout="300" data-payout-known="0">
-<td class="result open">△</td>
-<td>2026/9/25 12:29</td>
-<td class="sport-col">女子テニス</td>
-<td><div class="match">石井さやか vs 板谷莉央</div><div class="market">ITF W50 七尾 / 第1セット勝者：石井さやか</div></td>
-<td class="market-result pending-result">未確定</td>
-<td>未入力</td>
-<td class="money">$300.00</td>
-<td class="money">未入力</td>
-<td class="money pending">未確定</td>
-</tr>
-
-<tr class="trade-row" data-ts="2026-09-25T12:28:00+09:00" data-status="open" data-stake="300" data-payout="300" data-payout-known="0">
-<td class="result open">△</td>
-<td>2026/9/25 12:28</td>
-<td class="sport-col">女子テニス</td>
-<td><div class="match">ボリネッツ、ケイティ vs ビレル、キンバリー</div><div class="market">WTAソウル / 勝者：ボリネッツ、ケイティ</div></td>
-<td class="market-result pending-result">未確定</td>
-<td>未入力</td>
-<td class="money">$300.00</td>
-<td class="money">未入力</td>
-<td class="money pending">未確定</td>
-</tr>
-
-<tr class="trade-row" data-ts="2026-09-25T12:27:00+09:00" data-status="open" data-stake="300" data-payout="300" data-payout-known="0">
-<td class="result open">△</td>
-<td>2026/9/25 12:27</td>
-<td class="sport-col">女子テニス</td>
-<td><div class="match">サッカリ、マリア vs ギブソン、タイラ</div><div class="market">WTAシンガポール / 勝者：サッカリ、マリア</div></td>
-<td class="market-result pending-result">未確定</td>
-<td>未入力</td>
-<td class="money">$300.00</td>
-<td class="money">未入力</td>
-<td class="money pending">未確定</td>
-</tr>
-
 <tr class="trade-row" data-ts="2026-09-22T15:00:00+09:00" data-status="win" data-stake="100" data-payout="119">
 <td class="result win">○</td>
 <td>2026/9/22</td>
@@ -291,22 +318,22 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 <td class="money positive">+$19.00</td>
 </tr>
 
-<tr class="trade-row" data-ts="2026-09-24T20:35:00+09:00" data-status="loss" data-stake="100" data-payout="0" data-target="detail-china-maldives">
+<tr class="trade-row" data-ts="2026-09-24T20:35:00+09:00" data-status="loss" data-stake="300" data-payout="0" data-target="detail-china-maldives">
 <td class="result loss">×</td>
 <td>2026/9/24 20:35</td>
 <td class="sport-col">男子サッカー</td>
-<td><div class="match">中国 vs モルディブ <span class="chev">▼</span></div><div class="market">前半1X2：中国</div></td>
+<td><div class="match">中国 vs モルディブ <span class="chev">▼</span></div><div class="market">前半1X2：中国 / 前半17分頃・0-0でベット</div></td>
 <td class="market-result">前半 0-0</td>
-<td>未入力</td>
-<td class="money">$100.00</td>
+<td>1.27</td>
+<td class="money">$300.00</td>
 <td class="money">$0.00</td>
-<td class="money negative">-$100.00</td>
+<td class="money negative">-$300.00</td>
 </tr>
 
 <tr class="detail-row" id="detail-china-maldives"><td colspan="9" class="detail-cell">
 <div class="detail-title">なぜこの組み合わせを選んだのか</div>
 <div class="detail-sub">中国 vs モルディブ / 男子サッカー・国際親善試合 / 2026/9/24 20:35 JST / 北京</div>
-<div class="reason" style="border-left-color:#ff6b78;background:rgba(255,107,120,.07)"><strong>ベット結果：×</strong> 前半1X2で中国を選択。前半は0-0だったため不的中。試合全体は中国が3-0で勝利。</div>
+<div class="reason" style="border-left-color:#ff6b78;background:rgba(255,107,120,.07)"><strong>ベット結果：×</strong> 前半17分頃、0-0の時点で前半1X2の中国をオッズ1.27・$300でベット。前半は0-0のまま終了したため不的中。試合全体は中国が3-0で勝利。</div>
 
 <div class="easy-summary">
   <div class="easy-title">まずここだけ見ればOK</div>
@@ -1133,6 +1160,6 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 
 </div>
 
-<script src="./analysis.js?v=20260925-1240" defer></script>
+<script src="./analysis.js?v=20260925-1305" defer></script>
 </body>
 </html>
