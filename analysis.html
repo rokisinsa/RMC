@@ -876,6 +876,40 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
   <div class="card"><div class="label">$100固定投入合計</div><div class="value" id="oddsSettledStake">$300.00</div><div class="label" style="margin-top:5px">確定3件</div></div>
   <div class="card"><div class="label">未確定</div><div class="value gold" id="oddsOpenCount">6件</div><div class="label" style="margin-top:5px">確定まで収益に含めない</div></div>
 </section>
+
+<section class="odds-test-area" id="oddsTestArea2">
+  <h2 class="section-title">テスト中オッズ結果一覧②</h2>
+  <p class="note">VALUE ENGINE ②｜目的は$100均等買いで長期ROIをプラスに残すこと。市場基準確率、VALUE幅、Calibration、CLV、オッズ帯別ROI、Upset Risk、情報鮮度、Strength of Schedule、H2H、直近フォーム、競技/大会特性を組み合わせる。採用・監視・除外を試合前に固定し、結果後に勝敗だけでなく敗因/成功要因を監査。1試合だけで閾値を変更せず、複数サンプルで再現性を確認して改善する。</p>
+  <section class="summary">
+    <div class="card"><div class="label">均等買い単利収益</div><div class="value" id="odds2SimpleProfit">$0.00</div><div class="label" style="margin-top:5px">$100固定・確定0件</div></div>
+    <div class="card"><div class="label">均等買いROI</div><div class="value" id="odds2Roi">0.0%</div><div class="label" style="margin-top:5px">主評価指標</div></div>
+    <div class="card"><div class="label">戦績 / Calibration</div><div class="value blue" id="odds2Record">0戦 0勝 0敗</div><div class="label" style="margin-top:5px">サンプル蓄積後に勝率帯別で検証</div></div>
+    <div class="card"><div class="label">CLV</div><div class="value" id="odds2Clv">集計待ち</div><div class="label" style="margin-top:5px">Closing取得後に更新</div></div>
+    <div class="card"><div class="label">最大連敗</div><div class="value" id="odds2LosingStreak">0</div><div class="label" style="margin-top:5px">確定カード基準</div></div>
+    <div class="card"><div class="label">未確定</div><div class="value gold" id="odds2OpenCount">2件</div><div class="label" style="margin-top:5px">収益には未算入</div></div>
+  </section>
+  <table id="oddsTestTable2">
+    <thead><tr><th>結果</th><th>判定</th><th>日付</th><th>種目</th><th>組み合わせ / 選択</th><th>取得オッズ</th><th>必要勝率</th><th>推定勝率</th><th>市場差</th><th>Upset Risk</th><th>$100投入</th><th>$100収益</th><th>Closing / CLV</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="result open">△</td><td><span class="value-badge formal">VALUE②採用</span></td>
+        <td>2026/9/26<div class="start-jst">試合開始 18:00 JST</div></td><td>VALORANT</td>
+        <td><div class="match">Global Esports vs Team Vitality</div><div class="market">VALORANT Champions 2026 Group Stage Opening B / 選択：Team Vitality / BO3 LAN</div></td>
+        <td>1.76</td><td>56.8%</td><td>60〜63%</td><td class="positive">+3.2〜+6.2pt</td><td>中</td><td>$100</td><td class="pending">未確定</td><td>—</td>
+      </tr>
+      <tr><td colspan="13"><details open><summary>②検証ロジック</summary><p><strong>市場基準：</strong>1.76の単純必要勝率56.8%。<strong>H2H：</strong>確認できる2シリーズはいずれもVitality勝利（2023 LOCK//IN 2-1、Convergence 2-0）。<strong>直近：</strong>GEは直近5シリーズ4勝1敗、Vitalityは3勝2敗でフォームはGE側が強く、これは逆材料。H2Hだけで過大評価せず、BO3/LAN・直近相手強度・情報鮮度を含め60〜63%に抑えた。市場差+3.2〜+6.2ptを初期VALUE②サンプルとして採用。Closing取得後にCLV、結果後にCalibration/均等ROIへ反映する。</p></details></td></tr>
+      <tr>
+        <td class="result open">△</td><td><span class="value-badge watch">VALUE②監視</span></td>
+        <td>2026/9/26<div class="start-jst">試合開始 21:00 JST</div></td><td>VALORANT</td>
+        <td><div class="match">LOUD vs EDward Gaming</div><div class="market">VALORANT Champions 2026 Group Stage Opening B / 選択候補：LOUD / BO3 LAN</div></td>
+        <td>1.37〜1.43</td><td>69.9〜73.0%</td><td>72〜75%</td><td>価格次第 -1.0〜+5.1pt</td><td>中〜高</td><td>—</td><td class="pending">監視・未算入</td><td>—</td>
+      </tr>
+      <tr><td colspan="13"><details><summary>②検証ロジック</summary><p><strong>H2H：</strong>LOUD 2勝、EDG 1勝。<strong>直近：</strong>LOUDは直近5で3勝2敗、EDGは2勝3敗。LOUDは直近月67%勝率という強材料がある一方、シーズン全体51%で安定性に弱さ。EDGは直近月0%でも長期61%と反発余地がある。1.37では必要73.0%で薄く、1.43なら69.9%。価格依存が大きいため②では監視に落とし、良い価格が取れた場合だけ採用候補にする。</p></details></td></tr>
+    </tbody>
+  </table>
+  <div class="source-note"><strong>②で毎回更新する検証：</strong>均等買い損益/ROI、オッズ帯別ROI、VALUE幅別ROI、推定勝率帯別Calibration、Closing/CLV、最大連敗、競技・市場別成績、Upset Risk別成績。敗戦時は敗因分類→不足データ候補→複数サンプルで再検証→必要な場合のみロジック修正。</div>
+</section>
+
 <div class="value-overview">
     <div class="value-mini">正式VALUE対象<strong>2件</strong></div>
     <div class="value-mini">条件付きVALUE<strong>1件</strong></div>
