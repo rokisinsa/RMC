@@ -506,9 +506,10 @@ function calculateQuarterKelly(rows,isTest,base=100){
 }
 
 function renderTradeSummary(rows){
-  const b=calculateBasic(rows);
-  const c=calculateCompound(rows);
-  const k=calculateQuarterKelly(rows,false);
+  const RECOMMEND_STAKE=100;
+  const b=calculateBasic(rows,RECOMMEND_STAKE);
+  const c=calculateCompound(rows,RECOMMEND_STAKE);
+  const k=calculateQuarterKelly(rows,false,RECOMMEND_STAKE);
 
   setText("simpleProfit",money(b.simpleProfit));
   setText("compoundProfit",money(c.profit));
