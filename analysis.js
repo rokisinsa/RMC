@@ -371,7 +371,7 @@ function calculateBasic(rows,fixedStake=null){
   };
 }
 
-function calculateCompound(rows,base=300){
+function calculateCompound(rows,base=100){
   const target=base*2;
   let balance=base;
   let stock=0;
@@ -468,7 +468,7 @@ const detailToModel={
   "detail-tun":"tun"
 };
 
-function calculateQuarterKelly(rows,isTest,base=300){
+function calculateQuarterKelly(rows,isTest,base=100){
   let balance=base;
   let bets=0;
 
