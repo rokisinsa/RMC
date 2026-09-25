@@ -219,6 +219,44 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
   <p>RESULT LOG / WHY THIS MATCH</p>
 </section>
 
+
+
+<section class="summary">
+  <div class="card"><div class="label">単利収益</div><div class="value plus" id="simpleProfit">+$0.00</div><div class="label" style="margin-top:5px">実取引の確定損益合計</div></div>
+  <div class="card"><div class="label">複利収益</div><div class="value plus" id="compoundProfit">+$0.00</div><div class="label" id="compoundNote" style="margin-top:5px">現在資金 $0.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="compoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="compoundStockNote" style="margin-top:3px">確保済み 0回</div><div class="compound-explain"><strong>複利ルール：</strong>元金が2倍になったら利益をストックへ移し、運用資金は元金に戻して再スタート。途中で負けた場合はその挑戦を「失敗」として記録し、次の挑戦を元金から再開。</div><div class="compound-history" id="compoundHistory"><div class="ch-title">挑戦履歴</div>まだ確定結果がありません。</div></div>
+  <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="quarterKellyProfit">+$0.00</div><div class="label" id="quarterKellyNote" style="margin-top:5px">初期$300・現行モデルの事前確率で再計算</div><div class="kelly-explain"><strong>1/4ケリー法とは：</strong>その時点の<strong>現在資金</strong>を基準に、推定勝率とオッズから「今回いくら使うか」を自動計算する方法。<br><strong>※現在の実数例：</strong><span id="kellyLiveExample">計算中...</span></div></div>
+  <div class="card"><div class="label">戦績</div><div class="value blue" id="record">0戦 0勝 0敗</div><div class="label" id="winRate" style="margin-top:5px">勝率 0.0%</div><div class="label" id="allCount" style="margin-top:3px">全0件 / 未確定0件</div></div>
+  <div class="card"><div class="label">投入金額合計</div><div class="value" id="settledStake">$0.00</div><div class="label" style="margin-top:5px">一覧へ追加した時点で自動加算</div></div>
+  <div class="card"><div class="label">未確定・予想損益</div><div class="value gold" id="openProfit">+$0.00</div></div>
+</section>
+
+<div class="live-bet-note"><strong>ライブ確認メモ：</strong>オッズが低すぎて対象のベットができない場合は、ライブで市場を確認する。試合開始後に、クォーターごと・セットごと・前半/後半など、その時点で新しいベット市場が出ることがあるため、対象市場が事前にない場合はライブで見る。</div>
+
+<section class="accuracy-panel">
+  <h2>RMC Probability Engine v5.0｜競技・市場別モデル</h2>
+  <div class="accuracy-grid">
+    <div class="accuracy-item"><b>試合後リーク禁止</b>確率計算には試合開始前に取得できたデータだけを使用。結果判明後のH2Hやスコアは分析表示には残しても、事前確率には混ぜません。</div>
+    <div class="accuracy-item"><b>市場確率の扱い</b>両側オッズが取れた場合はno-vig化。片側オッズしかない場合は控除を除去できないため、弱い事前分布としてのみ使用します。</div>
+    <div class="accuracy-item"><b>競技・市場ごとに別モデル</b>バレー第1セット、サッカー前半、サッカーDNB、CS2第1マップを別モデルとして扱い、古いH2Hの減衰速度・市場の重み・使う指標を分けます。</div>
+  </div>
+  <div class="calibration-line" id="calibrationStatus">精度検証：試合前にロックした予測だけをBrier Score / Log Lossで採点します。</div>
+</section>
+
+<h2 class="section-title">推奨取引一覧</h2>
+<div class="table-wrap">
+<table id="resultTable">
+<thead>
+<tr>
+<th>結果</th><th>日付</th><th class="sport-head">種目</th><th>組み合わせ</th><th>結果内容</th><th>オッズ</th><th class="money">投入額</th><th class="money">払戻し / 予定</th><th class="money">損益</th><th>信頼度</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="trade-row" data-ts="2026-09-26T23:30:00+09:00" data-status="open" data-stake="0" data-payout="0" data-target="detail-log-barca-rec">
+<td class="result open">△</td><td>2026/9/26<div class="start-jst">試合開始 23:30 JST</div></td><td class="sport-col">女子サッカー</td>
+<td><div class="match">Logroño United vs FC Barcelona <span class="chev">▼</span></div><div class="market">プリメーラディビシオン女子・第5節 / 注目：Barcelona</div></td><td class="market-result pending-result">未確定</td><td>公開市場：Barcelona 1.02〜1.05級（直近試合参考）</td><td class="money">未設定</td><td class="money">—</td><td class="money pending">—</td><td class="confidence-cell">A</td></tr>
+<tr class="detail-row" id="detail-log-barca-rec"><td colspan="10" class="detail-cell"><div class="detail-title">Logroño United vs FC Barcelona</div><div class="detail-sub">2026/9/26 23:30 JST / プリメーラディビシオン女子 / Las Gaunas</div><div class="easy-summary"><div class="easy-title">徹底深掘り要点</div><div class="easy-grid"><div class="easy-item"><span>格差スコア</span><strong>94/100（勝率ではない）</strong></div><div class="easy-item"><span>信頼度</span><strong>A</strong></div><div class="easy-item"><span>今季</span><strong>Logroño 2勝0分2敗 4-3 / Barça 4勝0分0敗 19-2</strong></div><div class="easy-item"><span>シュート / パス</span><strong>42 vs 83 / 1458 vs 2629</strong></div></div></div><div class="h2h-analysis"><div class="h2h-analysis-title">確認できたH2H全9試合</div><div class="h2h-stats"><div class="h2h-stat"><span>Barcelona</span><strong>9勝0分0敗</strong></div><div class="h2h-stat"><span>総得点</span><strong>Barcelona 35-0</strong></div><div class="h2h-stat"><span>平均</span><strong>3.89-0.00</strong></div></div></div><div class="table-wrap"><table class="h2h-table"><tr><th>日付</th><th>結果</th></tr><tr><td>2026/2/8</td><td>Logroño 0-3 Barcelona</td></tr><tr><td>2025/9/12</td><td>Barcelona 4-0 Logroño</td></tr><tr><td>2021/2/13</td><td>Barcelona 3-0 Logroño</td></tr><tr><td>2021/2/6</td><td>Logroño 0-2 Barcelona</td></tr><tr><td>2020/10/11</td><td>Barcelona 6-0 Logroño</td></tr><tr><td>2020/2/23</td><td>Logroño 0-6 Barcelona</td></tr><tr><td>2019/10/20</td><td>Barcelona 5-0 Logroño</td></tr><tr><td>2019/3/31</td><td>Logroño 0-4 Barcelona</td></tr><tr><td>2018/12/15</td><td>Barcelona 2-0 Logroño</td></tr></table>
+
 <section class="actual-bet-area">
   <h2>経験値取引一覧</h2>
   <div class="subtext">推奨取引一覧とは別管理。ここは実際に入れた金額だけを集計します。未入力のオッズは勝手に補完せず、そのまま未入力で残します。</div>
@@ -259,70 +297,10 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
         <td class="money">$315.00</td>
         <td class="money positive">+$15.00</td>
       </tr>
-
-      <tr class="actual-row" data-ts="2026-09-25T12:28:00+09:00" data-status="open" data-stake="180" data-payout="237.60" data-payout-known="1">
-        <td class="result open">△</td>
-        <td>2026/9/25<div class="start-jst">試合開始 12:05 JST</div></td>
-        <td class="sport-col">女子テニス</td>
-        <td><div class="match">ボリネッツ、ケイティ vs ビレル、キンバリー</div><div class="market">WTAソウル</div></td>
-        <td><div>マッチウィナー：ケイティ・ボリネッツ</div><div class="market">延期中：6-2 / 2-6 / 第3セット 2-4</div></td>
-        <td>1.32</td>
-        <td class="money">$180.00</td>
-        <td class="money">$237.60 予定</td>
-        <td class="money pending">+$57.60 予定</td>
-      </tr>
-
-      <tr class="actual-row" data-ts="2026-09-25T12:27:00+09:00" data-status="open" data-stake="300" data-payout="426" data-payout-known="1">
-        <td class="result open">△</td>
-        <td>2026/9/25<div class="start-jst">試合開始 23:00 JST</div></td>
-        <td class="sport-col">女子テニス</td>
-        <td><div class="match">サッカリ、マリア vs ギブソン、タイラ</div><div class="market">WTAシンガポール</div></td>
-        <td>マッチウィナー：マリア・サッカリ</td>
-        <td>1.42</td>
-        <td class="money">$300.00</td>
-        <td class="money">$426.00 予定</td>
-        <td class="money pending">+$126.00 予定</td>
-      </tr>
     </tbody>
   </table>
   </div>
-</section>
-
-<section class="summary">
-  <div class="card"><div class="label">単利収益</div><div class="value plus" id="simpleProfit">+$0.00</div><div class="label" style="margin-top:5px">実取引の確定損益合計</div></div>
-  <div class="card"><div class="label">複利収益</div><div class="value plus" id="compoundProfit">+$0.00</div><div class="label" id="compoundNote" style="margin-top:5px">現在資金 $0.00</div><div class="label" style="margin-top:6px">複利ストック <strong id="compoundStock" style="color:#ffd45d">$0.00</strong></div><div class="label" id="compoundStockNote" style="margin-top:3px">確保済み 0回</div><div class="compound-explain"><strong>複利ルール：</strong>元金が2倍になったら利益をストックへ移し、運用資金は元金に戻して再スタート。途中で負けた場合はその挑戦を「失敗」として記録し、次の挑戦を元金から再開。</div><div class="compound-history" id="compoundHistory"><div class="ch-title">挑戦履歴</div>まだ確定結果がありません。</div></div>
-  <div class="card"><div class="label">1/4ケリー法収益</div><div class="value plus" id="quarterKellyProfit">+$0.00</div><div class="label" id="quarterKellyNote" style="margin-top:5px">初期$300・現行モデルの事前確率で再計算</div><div class="kelly-explain"><strong>1/4ケリー法とは：</strong>その時点の<strong>現在資金</strong>を基準に、推定勝率とオッズから「今回いくら使うか」を自動計算する方法。<br><strong>※現在の実数例：</strong><span id="kellyLiveExample">計算中...</span></div></div>
-  <div class="card"><div class="label">戦績</div><div class="value blue" id="record">0戦 0勝 0敗</div><div class="label" id="winRate" style="margin-top:5px">勝率 0.0%</div><div class="label" id="allCount" style="margin-top:3px">全0件 / 未確定0件</div></div>
-  <div class="card"><div class="label">投入金額合計</div><div class="value" id="settledStake">$0.00</div><div class="label" style="margin-top:5px">一覧へ追加した時点で自動加算</div></div>
-  <div class="card"><div class="label">未確定・予想損益</div><div class="value gold" id="openProfit">+$0.00</div></div>
-</section>
-
-<div class="live-bet-note"><strong>ライブ確認メモ：</strong>オッズが低すぎて対象のベットができない場合は、ライブで市場を確認する。試合開始後に、クォーターごと・セットごと・前半/後半など、その時点で新しいベット市場が出ることがあるため、対象市場が事前にない場合はライブで見る。</div>
-
-<section class="accuracy-panel">
-  <h2>RMC Probability Engine v5.0｜競技・市場別モデル</h2>
-  <div class="accuracy-grid">
-    <div class="accuracy-item"><b>試合後リーク禁止</b>確率計算には試合開始前に取得できたデータだけを使用。結果判明後のH2Hやスコアは分析表示には残しても、事前確率には混ぜません。</div>
-    <div class="accuracy-item"><b>市場確率の扱い</b>両側オッズが取れた場合はno-vig化。片側オッズしかない場合は控除を除去できないため、弱い事前分布としてのみ使用します。</div>
-    <div class="accuracy-item"><b>競技・市場ごとに別モデル</b>バレー第1セット、サッカー前半、サッカーDNB、CS2第1マップを別モデルとして扱い、古いH2Hの減衰速度・市場の重み・使う指標を分けます。</div>
-  </div>
-  <div class="calibration-line" id="calibrationStatus">精度検証：試合前にロックした予測だけをBrier Score / Log Lossで採点します。</div>
-</section>
-
-<h2 class="section-title">推奨取引一覧</h2>
-<div class="table-wrap">
-<table id="resultTable">
-<thead>
-<tr>
-<th>結果</th><th>日付</th><th class="sport-head">種目</th><th>組み合わせ</th><th>結果内容</th><th>オッズ</th><th class="money">投入額</th><th class="money">払戻し / 予定</th><th class="money">損益</th><th>信頼度</th>
-</tr>
-</thead>
-<tbody>
-
-<tr class="trade-row" data-ts="2026-09-26T23:30:00+09:00" data-status="open" data-stake="0" data-payout="0" data-target="detail-log-barca-rec">
-<td class="result open">△</td><td>2026/9/26<div class="start-jst">試合開始 23:30 JST</div></td><td class="sport-col">女子サッカー</td>
-<td><div class="match">Logroño United vs FC Barcelona <span class="chev">▼</span></div><div class="market">プリメーラディビシオン女子・第5節 / 注目：Barcelona</div></td><td class="market-result pending-result">未確定</td><td>公開市場：Barcelona 1.02〜1.05級（直近試合参考）</td><td class="money">未設定</td><td class="money">—</td><td class="money pending">—</td><td class="confidence-cell">A</td></tr>
-<tr class="detail-row" id="detail-log-barca-rec"><td colspan="10" class="detail-cell"><div class="detail-title">Logroño United vs FC Barcelona</div><div class="detail-sub">2026/9/26 23:30 JST / プリメーラディビシオン女子 / Las Gaunas</div><div class="easy-summary"><div class="easy-title">徹底深掘り要点</div><div class="easy-grid"><div class="easy-item"><span>格差スコア</span><strong>94/100（勝率ではない）</strong></div><div class="easy-item"><span>信頼度</span><strong>A</strong></div><div class="easy-item"><span>今季</span><strong>Logroño 2勝0分2敗 4-3 / Barça 4勝0分0敗 19-2</strong></div><div class="easy-item"><span>シュート / パス</span><strong>42 vs 83 / 1458 vs 2629</strong></div></div></div><div class="h2h-analysis"><div class="h2h-analysis-title">確認できたH2H全9試合</div><div class="h2h-stats"><div class="h2h-stat"><span>Barcelona</span><strong>9勝0分0敗</strong></div><div class="h2h-stat"><span>総得点</span><strong>Barcelona 35-0</strong></div><div class="h2h-stat"><span>平均</span><strong>3.89-0.00</strong></div></div></div><div class="table-wrap"><table class="h2h-table"><tr><th>日付</th><th>結果</th></tr><tr><td>2026/2/8</td><td>Logroño 0-3 Barcelona</td></tr><tr><td>2025/9/12</td><td>Barcelona 4-0 Logroño</td></tr><tr><td>2021/2/13</td><td>Barcelona 3-0 Logroño</td></tr><tr><td>2021/2/6</td><td>Logroño 0-2 Barcelona</td></tr><tr><td>2020/10/11</td><td>Barcelona 6-0 Logroño</td></tr><tr><td>2020/2/23</td><td>Logroño 0-6 Barcelona</td></tr><tr><td>2019/10/20</td><td>Barcelona 5-0 Logroño</td></tr><tr><td>2019/3/31</td><td>Logroño 0-4 Barcelona</td></tr><tr><td>2018/12/15</td><td>Barcelona 2-0 Logroño</td></tr></table></div><div class="reason"><strong>判定：</strong>H2H全9戦がBarcelona勝利かつ35-0。今季も4戦19得点2失点、首位。順位・得失点・シュート・パス・H2Hがすべて同方向。直近10戦は複数ソースで完全10件を照合できていないため、未確認分は補完しない。</div></td></tr>
+</section></div><div class="reason"><strong>判定：</strong>H2H全9戦がBarcelona勝利かつ35-0。今季も4戦19得点2失点、首位。順位・得失点・シュート・パス・H2Hがすべて同方向。直近10戦は複数ソースで完全10件を照合できていないため、未確認分は補完しない。</div></td></tr>
 
 <tr class="trade-row" data-ts="2026-09-26T21:30:00+09:00" data-status="open" data-stake="0" data-payout="0" data-target="detail-charlton-city-rec">
 <td class="result open">△</td><td>2026/9/26<div class="start-jst">試合開始 21:30 JST</div></td><td class="sport-col">女子サッカー</td><td><div class="match">Charlton Athletic Women vs Manchester City Women <span class="chev">▼</span></div><div class="market">Barclays Women's Super League 2026/27 / 注目：Manchester City</div></td><td class="market-result pending-result">未確定</td><td>Man City 1.03〜1.06（公開市場）</td><td class="money">未設定</td><td class="money">—</td><td class="money pending">—</td><td class="confidence-cell">A-</td></tr>
