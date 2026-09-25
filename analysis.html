@@ -191,6 +191,7 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 .value-badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:10px;font-weight:900;white-space:nowrap}
 .value-badge.formal{background:rgba(105,240,165,.12);color:#69f0a5;border:1px solid rgba(105,240,165,.25)}
 .value-badge.watch{background:rgba(255,212,93,.10);color:#ffd45d;border:1px solid rgba(255,212,93,.22)}
+.value-badge.conditional{background:rgba(126,220,255,.10);color:#7edcff;border:1px solid rgba(126,220,255,.24)}
 .value-badge.exclude{background:rgba(255,107,120,.10);color:#ff7b87;border:1px solid rgba(255,107,120,.22)}
 .value-detail{margin:8px 0 2px;border:1px solid rgba(110,210,255,.12);border-radius:12px;background:rgba(255,255,255,.025)}
 .value-detail summary{cursor:pointer;padding:10px 12px;font-size:11px;font-weight:800;color:#8edcff}
@@ -241,6 +242,30 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 </tr>
 </thead>
 <tbody>
+
+<tr class="trade-row" data-ts="2026-09-25T12:28:00+09:00" data-status="memo" data-stake="0" data-payout="0">
+<td class="result muted">・</td>
+<td>2026/9/25 12:28</td>
+<td class="sport-col">女子テニス</td>
+<td><div class="match">ボリネッツ、ケイティ vs ビレル、キンバリー</div><div class="market">WTAソウル / 対戦メモ / 選択未入力</div></td>
+<td class="market-result pending-result">未確定</td>
+<td>—</td>
+<td class="money">—</td>
+<td class="money">—</td>
+<td class="money muted">メモ</td>
+</tr>
+
+<tr class="trade-row" data-ts="2026-09-25T12:27:00+09:00" data-status="memo" data-stake="0" data-payout="0">
+<td class="result muted">・</td>
+<td>2026/9/25 12:27</td>
+<td class="sport-col">女子テニス</td>
+<td><div class="match">サッカリ、マリア vs ギブソン、タイラ</div><div class="market">WTAシンガポール / 勝者：サッカリ、マリア / メモ登録</div></td>
+<td class="market-result pending-result">未確定</td>
+<td>—</td>
+<td class="money">—</td>
+<td class="money">—</td>
+<td class="money muted">メモ</td>
+</tr>
 
 <tr class="trade-row" data-ts="2026-09-24T20:35:00+09:00" data-status="memo" data-stake="0" data-payout="0" data-target="detail-china-maldives">
 <td class="result muted">・</td>
@@ -934,6 +959,7 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 
   <div class="value-overview">
     <div class="value-mini">正式VALUE対象<strong>2件</strong></div>
+    <div class="value-mini">条件付きVALUE<strong>1件</strong></div>
     <div class="value-mini">監視候補<strong>3件</strong></div>
     <div class="value-mini">深掘り除外<strong>3件</strong></div>
     <div class="value-mini">$100固定確定損益<strong>$0.00</strong></div>
@@ -947,6 +973,38 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
   </tr>
   </thead>
   <tbody>
+
+  <tr>
+    <td><span class="value-badge conditional">条件付きVALUE</span></td>
+    <td>2026/9/25</td>
+    <td>サッカーU21</td>
+    <td><div class="match">Bulgaria U21 vs Portugal U21</div><div class="market">選択：Portugal U21 / 注目価格 1.25以上</div></td>
+    <td>1.25以上</td>
+    <td>80.0%以下</td>
+    <td>82〜86%</td>
+    <td class="positive">1.25時 約+2.5〜+7.5%</td>
+    <td>条件成立時$100</td>
+    <td class="pending">未確定</td>
+    <td>—</td><td>—</td><td>—</td>
+  </tr>
+  <tr><td colspan="13">
+    <details class="value-detail" open><summary>分析を表示</summary><div class="value-detail-body">
+      <strong>格差スコア：</strong>89〜92 / 100（勝率ではない）<br>
+      <strong>暫定推定勝率：</strong>Portugal U21 82〜86%<br>
+      <strong>注目ライン：</strong>Portugal 1.25以上。1.25なら必要勝率80.0%。1.20まで下がると必要勝率83.33%となり、VALUE余地は小さくなる。<br><br>
+
+      <strong>① 現サイクルH2H：</strong>Portugal U21 3-0 Bulgaria U21。U21は世代交代が大きいため、古いH2Hより現在世代に近い直接対決を重視。<br>
+      <strong>② Portugal直近10試合：</strong>8勝1分1敗、36得点1失点、平均3.60得点・0.10失点。主な結果はNorthern Ireland 4-0、Scotland 3-0、Azerbaijan 4-0、Czechia 0-0、Gibraltar 11-0、Bulgaria 3-0、Scotland 2-0、Azerbaijan 5-0など。予選部分は7勝1分0敗・28得点0失点。<br>
+      <strong>③ Bulgaria直近10試合：</strong>5勝2分3敗、10得点10失点、平均1.00得点・1.00失点。Portugalに0-3、Scotlandに0-1。Gibraltarには1-0、3-0、Azerbaijanとは0-0、1-1。<br>
+      <strong>④ 共通対戦相手：</strong>Azerbaijan戦はPortugal 5-0 / 4-0、Bulgaria 1-1 / 0-0。Gibraltar戦はPortugal 11-0、Bulgaria 3-0 / 1-0。Scotland戦はPortugal 2-0 / 3-0、Bulgaria 0-1。複数の共通相手比較でPortugal側が上。<br>
+      <strong>⑤ 現在の予選成績：</strong>Portugalは7勝1分0敗・28得点0失点。勝っているだけでなく、失点を抑えながら格下相手に複数得点する傾向を重視。<br>
+      <strong>⑥ ホーム / アウェイ：</strong>今回Portugalはアウェー。Tiago Tomás、Youssef Chermitiなどの欠場情報も事前リスクとして保存。<br>
+      <strong>⑦ オッズと必要勝率：</strong>1.25なら必要勝率80.0%。推定82%ならEV約+2.5%、84%なら約+5.0%、86%なら約+7.5%。1.20なら必要勝率83.33%で、84%評価でもEV約+0.8%に縮小。<br><br>
+
+      <strong>最終判断：</strong>「Portugalが強い」ことだけではなく、H2H、直近10試合、得失点、共通相手、予選成績、開催条件、必要勝率の複数要素が同方向。したがって1.25以上をVALUE候補の条件として事前固定する。<br>
+      <strong>試合後に追記：</strong>実際の結果、Closing Odds、CLV、$100固定損益、累計損益、ROI。
+    </div></details>
+  </td></tr>
 
   <tr>
     <td><span class="value-badge formal">正式VALUE</span></td>
@@ -1026,6 +1084,6 @@ th.sport-head{text-align:center;color:#8fa8b5;white-space:nowrap;font-weight:700
 
 </div>
 
-<script src="./analysis.js?v=20260925-1228" defer></script>
+<script src="./analysis.js?v=20260925-1235" defer></script>
 </body>
 </html>
