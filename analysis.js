@@ -517,9 +517,9 @@ function renderTradeSummary(rows){
   setText("compoundStockNote","確保済み "+c.cycles+"回");
   renderCompoundHistory("compoundHistory",c);
   setText("quarterKellyProfit",money(k.profit));
-  setText("quarterKellyNote","初期"+amount(300)+"・確定"+b.settledGames+"件で自動計算");
+  setText("quarterKellyNote","初期"+amount(100)+"・確定"+b.settledGames+"件で自動計算");
   setText("kellyLiveExample",
-    "現在資金は "+amount(k.balance)+"（初期"+amount(300)+"＋収益"+money(k.profit)+"）。"+
+    "現在資金は "+amount(k.balance)+"（初期"+amount(100)+"＋収益"+money(k.profit)+"）。"+
     "次の取引で1/4ケリー投入率が5%なら、"+amount(k.balance)+"×5%＝"+amount(k.balance*0.05)+"を投入。"+
     "期待値が足りなければ0%＝見送り。"
   );
