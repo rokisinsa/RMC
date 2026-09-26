@@ -40,10 +40,9 @@ function eventFrom(o, sourceUrl, category){
 
 const browser = await chromium.launch({headless:true});
 const ctx = await browser.newContext({locale:"ja-JP", timezoneId:"Asia/Tokyo"});
-const page = await ctx.newPage();
-page.setDefaultTimeout(15000);
-
 async function collectPage(url, label){
+  const page = await ctx.newPage();
+  page.setDefaultTimeout(10000);
   const events = new Map();
   const jsonUrls = new Set();
   const responseErrors = [];
@@ -60,14 +59,14 @@ async function collectPage(url, label){
   try{
     const r=await page.goto(url,{waitUntil:"domcontentloaded",timeout:30000});
     navStatus=r?.status()??null;
-    await page.waitForTimeout(2500);
-    for(let i=0;i<25;i++){
+    await page.waitForTimeout(900);
+    for(let i=0;i<10;i++){
       const btn=page.getByText("もっと試合を表示する",{exact:false}).last();
       if(await btn.count()===0) break;
       try{
         if(!(await btn.isVisible())) break;
         await btn.click({timeout:2000});
-        await page.waitForTimeout(700);
+        await page.waitForTimeout(250);
       }catch{break;}
     }
     title=await page.title();
@@ -88,6 +87,7 @@ async function collectPage(url, label){
     }
   }catch(e){ responseErrors.push({url,error:String(e.message||e)}); }
   page.off("response",onResponse);
+  await page.close();
   return {url,label,nav_status:navStatus,title,json_urls:[...jsonUrls],event_count:events.size,events:[...events.values()],errors:responseErrors,body_excerpt:bodyText};
 }
 
@@ -102,9 +102,12 @@ for(const a of anchors){
 const categories=[...catsMap.values()].sort((a,b)=>Number(a.ct)-Number(b.ct));
 
 const results=[];
-for(const c of categories){
-  const r=await collectPage(c.url,c.label);
-  results.push({...c,...r});
+const CONCURRENCY=8;
+for(let i=0;i<categories.length;i+=CONCURRENCY){
+  const batch=categories.slice(i,i+CONCURRENCY);
+  const got=await Promise.all(batch.map(async c=>({...c,...await collectPage(c.url,c.label)})));
+  results.push(...got);
+  console.log(`progress ${Math.min(i+CONCURRENCY,categories.length)}/${categories.length}`);
 }
 await browser.close();
 
