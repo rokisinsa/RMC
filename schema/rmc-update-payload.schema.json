@@ -295,7 +295,8 @@
             "bet_channel",
             "casitabi",
             "yuugado",
-            "union_sports"
+            "union_sports",
+            "source_audit"
           ],
           "additionalProperties": false,
           "properties": {
@@ -339,6 +340,173 @@
                 "minLength": 1
               },
               "uniqueItems": true
+            },
+            "source_audit": {
+              "type": "object",
+              "required": [
+                "bet_channel",
+                "casitabi",
+                "yuugado"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "bet_channel": {
+                  "type": "object",
+                  "required": [
+                    "checked_at",
+                    "source_urls",
+                    "menu_end_verified",
+                    "category_count",
+                    "event_count",
+                    "access_status"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "checked_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "source_urls": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "menu_end_verified": {
+                      "type": "boolean"
+                    },
+                    "category_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "event_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "access_status": {
+                      "enum": [
+                        "direct",
+                        "public_fallback",
+                        "partial",
+                        "unavailable"
+                      ]
+                    },
+                    "note": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                "casitabi": {
+                  "type": "object",
+                  "required": [
+                    "checked_at",
+                    "source_urls",
+                    "menu_end_verified",
+                    "category_count",
+                    "event_count",
+                    "access_status"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "checked_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "source_urls": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "menu_end_verified": {
+                      "type": "boolean"
+                    },
+                    "category_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "event_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "access_status": {
+                      "enum": [
+                        "direct",
+                        "public_fallback",
+                        "partial",
+                        "unavailable"
+                      ]
+                    },
+                    "note": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                "yuugado": {
+                  "type": "object",
+                  "required": [
+                    "checked_at",
+                    "source_urls",
+                    "menu_end_verified",
+                    "category_count",
+                    "event_count",
+                    "access_status"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "checked_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "source_urls": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "menu_end_verified": {
+                      "type": "boolean"
+                    },
+                    "category_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "event_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "access_status": {
+                      "enum": [
+                        "direct",
+                        "public_fallback",
+                        "partial",
+                        "unavailable"
+                      ]
+                    },
+                    "note": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              }
             }
           }
         },
@@ -500,7 +668,9 @@
         "deep_dived",
         "accepted",
         "watch",
-        "rejected"
+        "rejected",
+        "card_ids",
+        "sport_card_counts"
       ],
       "additionalProperties": false,
       "properties": {
@@ -563,6 +733,23 @@
             "minLength": 1
           },
           "uniqueItems": true
+        },
+        "card_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "description": "実際に一次確認したカードの一意ID。cards_checkedはこの配列長から検証する"
+        },
+        "sport_card_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "description": "対象競技マスター全競技をキーに実カード件数を記録。0件も0として明示"
         }
       }
     }
