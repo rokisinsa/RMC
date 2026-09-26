@@ -103,6 +103,9 @@ check("VALUE① 正式VALUE件数", d.value1_hardcoded.overview["正式VALUE対�
 check("VALUE① 監視件数", d.value1_hardcoded.overview["監視候補"], `${V1.verdict_counts.watch}件`, V1_REASON);
 check("VALUE① 条件付き件数", d.value1_hardcoded.overview["条件付きVALUE"], `${V1.verdict_counts.conditional}件`);
 check("VALUE① 深掘り除外", d.value1_hardcoded.overview["深掘り除外"], `${vm.legacy_unassigned.length}件`, null);
+check("VALUE① 1/4ケリー", d.value1_hardcoded.oddsKellyProfit, "集計保留",
+  "旧表示は「+$0.00」＋注記「推定勝率未固定の監視カードを含むため集計保留」。V2 は数値を出さず「集計保留」と表示（推定勝率がレンジで点推定が無いため）");
+check("VALUE② CLV", d.value2_hardcoded.odds2Clv, V2.rows.some(r => r.bucket === "official" && r.closing_odds != null) ? "取得あり" : "集計待ち");
 check("VALUE② 単利", d.value2_hardcoded.odds2SimpleProfit, money(V2.official.netProfit));
 check("VALUE② 戦績", d.value2_hardcoded.odds2Record, `${V2.official.settledGames}戦 ${V2.official.wins}勝 ${V2.official.losses}敗`);
 check("VALUE② 未確定", d.value2_hardcoded.odds2OpenCount, `${V2.official.pending}件`,

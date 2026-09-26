@@ -182,6 +182,9 @@ test("HTML render smoke test：4系統が別セクションで描画され、NaN
     assert.ok(!/<script/i.test(html));
   }
   assert.ok(renderPage(vm).includes("サンプル不足（n=0"));
+  const html = renderPage(vm);
+  assert.ok(html.slice(html.indexOf('id="sec-v1"'), html.indexOf('id="sec-v2"')).includes("集計保留"));   // 旧画面の VALUE① ケリー欄を維持
+  assert.ok(html.slice(html.indexOf('id="sec-v2"'), html.indexOf('id="sec-pe"')).includes("集計待ち"));   // 旧画面の VALUE② CLV欄を維持
 });
 
 test("書式：金額の符号と日本時間", () => {
