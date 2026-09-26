@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "recommendations.schema.json",
+  "title": "data/recommendations.json — 推奨取引固有データ",
+  "type": "object",
+  "required": ["schema_version", "system", "discovery_runs", "picks"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "system": { "const": "recommendations" },
+    "discovery_runs": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "defs.schema.json#/$defs/discoveryRun" },
+          { "properties": { "run_id": { "pattern": "^rec-" } } }
+        ]
+      }
+    },
+    "picks": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "defs.schema.json#/$defs/pickBase" },
+          {
+            "properties": {
+              "id": { "pattern": "^rec-" },
+              "system": { "const": "recommendations" },
+              "run_id": { "pattern": "^rec-" },
+              "locked": { "$ref": "#/$defs/locked" }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "locked": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "description": "試合開始前に固定した推奨取引の事前分析。locked_at 以降は変更禁止。",
+      "properties": {
+        "prob": { "$ref": "defs.schema.json#/$defs/probOrNull" },
+        "gap_score": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "confidence": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+        "model_version": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+        "summary": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+      }
+    }
+  }
+}

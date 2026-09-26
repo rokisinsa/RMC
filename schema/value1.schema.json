@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "value1.schema.json",
+  "title": "data/value1.json — VALUE①固有データ",
+  "type": "object",
+  "required": ["schema_version", "system", "discovery_runs", "picks"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "system": { "const": "value1" },
+    "discovery_runs": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "defs.schema.json#/$defs/discoveryRun" },
+          { "properties": { "run_id": { "pattern": "^v1-" } } }
+        ]
+      }
+    },
+    "excluded_log": {
+      "type": "array",
+      "description": "深掘りで除外した候補の記録（成績には算入しない）。",
+      "items": {
+        "type": "object",
+        "required": ["label", "run_id"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "run_id": { "type": ["string", "null"], "pattern": "^v1-" },
+          "match_id": { "type": ["string", "null"] },
+          "reason": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+        }
+      }
+    },
+    "picks": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "defs.schema.json#/$defs/pickBase" },
+          {
+            "properties": {
+              "id": { "pattern": "^v1-" },
+              "system": { "const": "value1" },
+              "run_id": { "pattern": "^v1-" },
+              "locked": { "$ref": "#/$defs/locked" }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "locked": {
+      "type": ["object", "null"],
+      "required": ["verdict"],
+      "additionalProperties": false,
+      "description": "試合開始前に固定したVALUE①の判定と事前推定。locked_at 以降は変更禁止。",
+      "properties": {
+        "verdict": {
+          "enum": ["formal", "conditional", "watch", "excluded"],
+          "description": "formal=正式VALUE（本成績） / conditional=条件付き（condition.met=trueが開始前に確認された場合のみ本成績） / watch=監視（参考成績のみ） / excluded=除外"
+        },
+        "prob_lo": { "$ref": "defs.schema.json#/$defs/probOrNull" },
+        "prob_hi": { "$ref": "defs.schema.json#/$defs/probOrNull" },
+        "prob_point": { "$ref": "defs.schema.json#/$defs/probOrNull" },
+        "required_prob": { "$ref": "defs.schema.json#/$defs/probOrNull" },
+        "ev_lo": { "$ref": "defs.schema.json#/$defs/numberOrNull" },
+        "ev_hi": { "$ref": "defs.schema.json#/$defs/numberOrNull" },
+        "gap_score": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "model_version": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+        "summary": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+      }
+    }
+  }
+}

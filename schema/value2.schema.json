@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "value2.schema.json",
+  "title": "data/value2.json — VALUE②固有データ",
+  "type": "object",
+  "required": ["schema_version", "system", "discovery_runs", "picks"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "system": { "const": "value2" },
+    "discovery_runs": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "defs.schema.json#/$defs/discoveryRun" },
+          { "properties": { "run_id": { "pattern": "^v2-" } } }
+        ]
+      }
+    },
+    "excluded_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "run_id"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "run_id": { "type": ["string", "null"], "pattern": "^v2-" },
+          "match_id": { "type": ["string", "null"] },
+          "reason": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+        }
+      }
+    },
+    "picks": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "defs.schema.json#/$defs/pickBase" },
+          {
+            "properties": {
+              "id": { "pattern": "^v2-" },
+              "system": { "const": "value2" },
+              "run_id": { "pattern": "^v2-" },
+              "locked": { "$ref": "#/$defs/locked" }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "locked": {
+      "type": ["object", "null"],
+      "required": ["verdict"],
+      "additionalProperties": false,
+      "description": "試合開始前に固定したVALUE②の判定と事前推定。locked_at 以降は変更禁止。",
+      "properties": {
+        "verdict": {
+          "enum": ["adopted", "watch", "excluded"],
+          "description": "adopted=VALUE②採用（本成績） / watch=監視（参考成績のみ） / excluded=除外"
+        },
+        "prob_lo": { "$ref": "defs.schema.json#/$defs/probOrNull" },
+        "prob_hi": { "$ref": "defs.schema.json#/$defs/probOrNull" },
+        "prob_point": { "$ref": "defs.schema.json#/$defs/probOrNull" },
+        "required_prob": { "$ref": "defs.schema.json#/$defs/probOrNull" },
+        "market_gap_lo": { "$ref": "defs.schema.json#/$defs/numberOrNull" },
+        "market_gap_hi": { "$ref": "defs.schema.json#/$defs/numberOrNull" },
+        "upset_risk": { "enum": ["low", "mid", "mid_high", "high", null] },
+        "model_version": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+        "summary": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+      }
+    }
+  }
+}

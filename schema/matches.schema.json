@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "matches.schema.json",
+  "title": "data/matches.json — 客観的な試合事実",
+  "$comment": "推奨/VALUE判定・推定勝率・EV・オッズ・選択など分析判断は入れない（additionalProperties:false と integrity の禁止キー検査で二重に防ぐ）。",
+  "type": "object",
+  "required": ["schema_version", "matches"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "matches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "sport", "competition", "home", "away", "start_at", "status", "result"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "$ref": "defs.schema.json#/$defs/id" },
+          "sport": { "type": "string", "minLength": 1 },
+          "competition": { "type": "string", "minLength": 1 },
+          "home": { "type": "string", "minLength": 1 },
+          "away": { "type": "string", "minLength": 1 },
+          "venue": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+          "start_at": { "$ref": "defs.schema.json#/$defs/dateTime" },
+          "start_verified": { "type": "boolean" },
+          "status": { "enum": ["scheduled", "live", "final", "cancelled", "postponed", "abandoned"] },
+          "result": {
+            "type": ["object", "null"],
+            "additionalProperties": false,
+            "properties": {
+              "final": { "$ref": "defs.schema.json#/$defs/score" },
+              "periods": {
+                "type": "object",
+                "description": "ht=前半, set1=第1セット, map1=第1マップ など",
+                "additionalProperties": { "$ref": "defs.schema.json#/$defs/score" }
+              },
+              "text": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+            }
+          },
+          "sources": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+          "verified_at": { "$ref": "defs.schema.json#/$defs/dateTimeOrNull" },
+          "note": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+# 自動テスト専用（スキーマ検証・計算検証・重複検出・locked 保護）。
+# 候補探索・分析などの AI 処理はここへ移さない。
+name: tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 単体テスト（精算・集計・重複・独立性・locked・時刻・オッズ・VALUE区分・baseline）
+        run: npm test
+
+      - name: data/*.json のスキーマ・整合性検証（未作成ならスキップ）
+        run: node scripts/validate-data.js
+
+      - name: locked 事前値の保護（直前の状態と比較）
+        env:
+          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+        run: node scripts/check-locked.js "$BASE_SHA"

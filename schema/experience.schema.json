@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "experience.schema.json",
+  "title": "data/experience.json — 経験値取引（実際に投入した取引）固有データ",
+  "$comment": "経験値取引は候補探索系統ではないため discovery_runs を持たない。run_id は null。",
+  "type": "object",
+  "required": ["schema_version", "system", "picks"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "system": { "const": "experience" },
+    "picks": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "defs.schema.json#/$defs/pickBase" },
+          {
+            "properties": {
+              "id": { "pattern": "^exp-" },
+              "system": { "const": "experience" },
+              "run_id": { "type": "null" },
+              "locked": { "$ref": "#/$defs/locked" }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "locked": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "summary": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+      }
+    }
+  }
+}
