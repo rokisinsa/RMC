@@ -27,6 +27,12 @@
       "started_at": "2026-09-26T22:54:00+09:00",
       "slot": "adhoc",
       "note": "独立PRO EDGE探索。Mannarino/Shapovalov市場2.84/1.42のno-vig Shapovalov確率は約66.67%。独立ベースは72-75%方向だが、1.42で中心73.5%ならEV約4.37%。ただしPRO EDGE専用の再現可能なbase model入力一式と複数book consensusをこの回で固定できないためaccepted/watch登録は見送り。市場確率をbaseへコピーしていない。"
+    },
+    {
+      "run_id": "pe-wide-20260926-2359",
+      "started_at": "2026-09-26T23:59:00+09:00",
+      "slot": "adhoc",
+      "note": "Independent full-category price scan. No accepted/watch card because multiple-book no-vig market snapshot plus reproducible independent base model was not simultaneously available for a new card. Market probability was not copied into base probability. No logic changes."
     }
   ],
   "picks": []

@@ -4,7 +4,7 @@
     "generated_by": "scripts/rmc-production-update.mjs",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-09-26T22:54:00+09:00",
+    "as_of": "2026-09-26T23:59:00+09:00",
     "status": "active",
     "note": "本番更新 workflow の実行記録（追記のみ）"
   },
@@ -148,6 +148,41 @@
       "actions_result": "pass",
       "pages_result": "pending",
       "note": "完全分析試走。①〜④を独立探索。採用は各系統の独立条件で判定。"
+    },
+    {
+      "run_id": "rmc-wide-audit-20260926-2359",
+      "started_at": "2026-09-26T23:54:13+09:00",
+      "finished_at": "2026-09-26T23:54:13+09:00",
+      "source": "ChatGPT complete production trial",
+      "payload_generated_at": "2026-09-26T23:59:00+09:00",
+      "payload_sha256": "399fd9647df8d45e26b0eeec6febe7e5e1c23e3b4ebf2e9d2c0f2435eccc45d7",
+      "start_sha": "c23971b3831bb033076a72ae618e1679ebab55b8",
+      "end_sha": null,
+      "systems_checked": [
+        "recommendations",
+        "experience",
+        "value1",
+        "value2",
+        "pro_edge"
+      ],
+      "cards_checked": 47,
+      "results_updated": 0,
+      "metadata_updated": 0,
+      "new_candidates": {
+        "recommendations": 0,
+        "experience": 0,
+        "value1": 0,
+        "value2": 0,
+        "pro_edge": 0
+      },
+      "accepted": 0,
+      "watch": 0,
+      "rejected": 0,
+      "postmortems_created": 0,
+      "validation_result": "pass",
+      "actions_result": "pass",
+      "pages_result": "pending",
+      "note": "3 sportsbook category audit + worldwide full-scope trial. No existing logic/locked values changed."
     }
   ]
 }
