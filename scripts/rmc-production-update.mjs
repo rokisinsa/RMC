@@ -381,6 +381,30 @@ function gitHead() {
   try { return execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim(); } catch { return null; }
 }
 
+// ── 完全版の探索網羅性ゲート ──────────────────────────────────────
+function checkCoverageAudit(payload, ledger) {
+  const scheduled = new Set(["06:00", "12:00", "18:00", "23:00"]);
+  if (!scheduled.has(payload.slot)) return;
+  const c = payload.coverage_audit;
+  if (!c) { ledger.error("coverage", "payload", null, "定時更新は coverage_audit 必須。全競技探索を数値で証明できないため拒否"); return; }
+  const master = c.sportsbook_master?.union_sports ?? [];
+  if (!master.length) ledger.error("coverage", "payload", null, "3サイト和集合の対象競技マスターが空");
+  const uniq = new Set(master.map(x => String(x).trim().toLowerCase()));
+  if (uniq.size !== master.length) ledger.error("coverage", "payload", null, "対象競技マスターに重複がある");
+  for (const system of DISCOVERY) {
+    const x = c.systems?.[system];
+    if (!x) { ledger.error("coverage", system, null, "系統別coverageが無い"); continue; }
+    if (x.target_sports !== master.length) ledger.error("coverage", system, null, `target_sports ${x.target_sports} != master ${master.length}`);
+    if (x.scanned_sports + x.unscanned_sports !== x.target_sports) ledger.error("coverage", system, null, "scanned + unscanned が target と一致しない");
+    if (x.unscanned_sports !== 0) ledger.error("coverage", system, null, `未走査競技 ${x.unscanned_sports} 件。完全版として本番反映しない`);
+    if (x.unscanned_sport_names?.length) ledger.error("coverage", system, null, `未走査競技名が残っている: ${x.unscanned_sport_names.join(", ")}`);
+    if (x.scanned_sport_names && x.scanned_sport_names.length !== x.scanned_sports) ledger.error("coverage", system, null, "scanned_sport_names 件数が scanned_sports と一致しない");
+    if (x.cards_checked < 20 && x.unavailable_sports < x.target_sports) ledger.error("coverage", system, null, `一次確認 ${x.cards_checked} カード。20未満で、全競技取得不能でもないため探索不足`);
+    const runs = payload.systems?.[system]?.discovery_runs ?? [];
+    if (!runs.length) ledger.error("coverage", system, null, "独立discovery_runが無い");
+  }
+}
+
 // ── 実行 ──────────────────────────────────────────────
 export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().toISOString(), apply = false, startSha = gitHead(), startedAt = jstNow() }) {
   const ledger = new Ledger();
@@ -401,17 +425,18 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
   if (audit.runs.some(r => r.run_id === payload.run_id)) ledger.error("duplicate", "automation_runs", payload.run_id, "この run_id は適用済み（同じ更新を二重に適用しない）");
 
   checkPayloadShape(payload, ledger, { now });
+  checkCoverageAudit(payload, ledger);
   const { next, stats } = applyPayload(current, payload, ledger);
   const { vmBefore, vmAfter, plChanges } = checkNext(current, next, payload, ledger, { schemas, cfg, now });
 
-  const cardsChecked = PICK_SYSTEMS.reduce((t, s) => t + next[s].picks.length, 0);
+  const cardsChecked = payload.coverage_audit ? DISCOVERY.reduce((t, s) => t + payload.coverage_audit.systems[s].cards_checked, 0) : PICK_SYSTEMS.reduce((t, s) => t + next[s].picks.length, 0);
   const record = {
     run_id: payload.run_id, started_at: startedAt, finished_at: jstNow(), source: payload.source,
     payload_generated_at: payload.generated_at, payload_sha256: sha256(payloadText),
     start_sha: startSha, end_sha: null, systems_checked: [...PICK_SYSTEMS], cards_checked: cardsChecked,
     results_updated: stats.results_updated, metadata_updated: stats.metadata_updated, new_candidates: stats.new_candidates,
     accepted: stats.accepted, watch: stats.watch, rejected: stats.rejected, postmortems_created: stats.postmortems_created,
-    validation_result: "pass", actions_result: "pending", pages_result: "pending", note: payload.note ?? null,
+    validation_result: "pass", actions_result: "pending", pages_result: "pending", coverage_audit: payload.coverage_audit ?? null, note: payload.note ?? null,
   };
   const ok = ledger.errors.length === 0;
   const result = { ok, ledger, payload, stats, record, vmBefore, vmAfter, plChanges, written: [] };
@@ -508,6 +533,16 @@ function finalize(dataDir, runId, actionsResult) {
   writeFileSync(path, JSON.stringify(obj, null, 2) + "\n");
   console.log(`実行記録 ${runId}: actions_result = pass`);
 }
+function finalizePages(dataDir, runId) {
+  const path = join(dataDir, AUDIT_FILE);
+  const obj = JSON.parse(readFileSync(path, "utf8"));
+  const rec = [...obj.runs].reverse().find(r => r.run_id === runId);
+  if (!rec) fail("pages確定対象の run_id が実行記録にない", 1);
+  if (rec.actions_result !== "pass") fail("Actions PASS 前に Pages published は記録できない", 1);
+  rec.pages_result = "published";
+  writeFileSync(path, JSON.stringify(obj, null, 2) + "\n");
+  console.log(`実行記録 ${runId}: pages_result = published`);
+}
 function fail(message, code = 2) { console.error(`✖ ${message}`); process.exit(code); }
 
 const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
@@ -519,6 +554,7 @@ if (isMain) {
   if (has("--receive")) receive(resolve(ROOT, opt("--out") ?? ".tmp-tests/production-update/payload.json"));
   else if (has("--check-diff")) checkDiff();
   else if (has("--finalize")) finalize(dataDir, opt("--run-id"), opt("--actions-result"));
+  else if (has("--finalize-pages")) finalizePages(dataDir, opt("--run-id"));
   else {
     const payloadPath = opt("--payload");
     if (!payloadPath) fail("--payload <file> を指定してください");
