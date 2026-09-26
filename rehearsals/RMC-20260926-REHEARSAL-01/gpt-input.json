@@ -1,0 +1,178 @@
+{
+  "$comment": "リハーサル用（架空）の GPT 定時更新入力。実在の試合・実際のオッズではない。data/ には入れない。docs/gpt-update-spec.md の形式で GPT から届く内容を再現したもの。",
+  "update_id": "RMC-20260926-REHEARSAL-01",
+  "slot": "18:00",
+  "run_at": "2026-09-27T18:00:00+09:00",
+
+  "setup": {
+    "$comment": "前回（架空）の定時更新 RMC-20260926-REHEARSAL-00 で登録済みだった状態。2026-09-27-rhpa-rhpb は ①・②・④ の3系統が同じ試合を扱う（共有は試合事実だけ）",
+    "matches_update_run": { "run_id": "mr-2026-09-27-0600-rehearsal-00-matches", "kind": "result_update", "at": "2026-09-27T06:00:00+09:00", "source": "リハーサル（架空）GPT定時更新 06:00", "note": "新規試合の登録" },
+    "matches": [
+      { "id": "2026-09-27-rhpa-rhpb", "sport": "男子テニス", "competition": "リハーサル用（架空）", "side_a": "Rehearsal Player A", "side_b": "Rehearsal Player B", "start_at": "2026-09-27T12:00:00+09:00" }
+    ],
+    "systems": {
+      "recommendations": {
+        "discovery_run": { "run_id": "rec-2026-09-27-0600-rh", "started_at": "2026-09-27T06:00:00+09:00", "slot": "06:00", "note": "リハーサル（架空）①独自の探索回" },
+        "picks": [
+          { "id": "rec-rh-00-a", "match_id": "2026-09-27-rhpa-rhpb", "market": "match_winner", "selection": "side_a", "selection_label": "Rehearsal Player A",
+            "odds_taken": 1.80, "stake": 100, "bet_at": "2026-09-27T06:40:00+09:00", "discovered_at": "2026-09-27T06:10:00+09:00", "locked_at": "2026-09-27T06:30:00+09:00",
+            "locked": { "prob": null, "gap_score": 81, "confidence": "A-", "model_version": null, "summary": "①独自の分析（架空）" } }
+        ]
+      },
+      "value1": {
+        "discovery_run": { "run_id": "v1-2026-09-27-0600-rh", "started_at": "2026-09-27T06:00:00+09:00", "slot": "06:00", "note": "リハーサル（架空）②独自の探索回" },
+        "picks": [
+          { "id": "v1-rh-00-a", "match_id": "2026-09-27-rhpa-rhpb", "market": "match_winner", "selection": "side_a", "selection_label": "Rehearsal Player A",
+            "odds_taken": 1.85, "stake": null, "discovered_at": "2026-09-27T06:15:00+09:00", "locked_at": "2026-09-27T06:35:00+09:00",
+            "locked": { "verdict": "watch", "prob_lo": 0.55, "prob_hi": 0.59, "prob_point": null, "required_prob": 0.5405, "ev_lo": 0.0175, "ev_hi": 0.0915, "gap_score": null, "model_version": null, "summary": "②独自の分析（架空）" } }
+        ]
+      },
+      "pro_edge": {
+        "discovery_run": { "run_id": "pe-2026-09-27-0600-rh", "started_at": "2026-09-27T06:00:00+09:00", "slot": "06:00", "note": "リハーサル（架空）④独自の探索回" },
+        "picks": [
+          { "id": "pe-rh-00-a", "match_id": "2026-09-27-rhpa-rhpb", "analysis_id": "pe-an-rh-00-a", "market": "match_winner", "selection": "side_a", "selection_label": "Rehearsal Player A",
+            "discovered_at": "2026-09-27T06:20:00+09:00", "locked_at": "2026-09-27T06:38:00+09:00", "bet_at": "2026-09-27T06:45:00+09:00",
+            "price_snapshots": [
+              { "snapshot_id": "ps-rh-00-a-open-a", "kind": "opening", "bookmaker": "BookA", "market": "match_winner", "outcomes": { "side_a": 1.90, "side_b": 1.95 }, "observed_at": "2026-09-26T22:00:00+09:00", "source": "BookA 公開オッズ（架空）" },
+              { "snapshot_id": "ps-rh-00-a-an-a", "kind": "analysis", "bookmaker": "BookA", "market": "match_winner", "outcomes": { "side_a": 1.85, "side_b": 2.00 }, "observed_at": "2026-09-27T06:25:00+09:00", "source": "BookA 公開オッズ（架空）" },
+              { "snapshot_id": "ps-rh-00-a-an-b", "kind": "analysis", "bookmaker": "BookB", "market": "match_winner", "outcomes": { "side_a": 1.80, "side_b": 2.05 }, "observed_at": "2026-09-27T06:26:00+09:00", "source": "BookB 公開オッズ（架空）" }
+            ],
+            "bet_odds": 1.85, "bet_bookmaker": "BookA", "stake": 100,
+            "locked": {
+              "decision": "accepted", "decision_reason": "EV が required_EV 以上", "required_ev": 0.03,
+              "market_reference": { "snapshot_ids": ["ps-rh-00-a-an-a", "ps-rh-00-a-an-b"], "method": "consensus" },
+              "offered_price": { "snapshot_id": "ps-rh-00-a-an-a" },
+              "model": { "model_id": "tennis-elo-logit", "model_version": "0.1.0", "sport_module": "tennis", "method": "elo_logistic", "trained_through": "2026-09-26T23:59:00+09:00" },
+              "base_probability": 0.56,
+              "expert_adjustments": [ { "adjustment_value": 0.02, "category": "condition", "reason": "相手の連戦（架空）", "source": "大会公式日程（架空）", "created_at": "2026-09-27T06:30:00+09:00" } ],
+              "features": [
+                { "name": "rating", "status": "present", "value": 1720, "observed_at": "2026-09-26T23:00:00+09:00", "source": "公開レーティング（架空）", "note": null },
+                { "name": "h2h_all", "status": "present", "value": "2勝1敗", "observed_at": "2026-09-26T23:00:00+09:00", "source": "公開記録（架空）", "note": null },
+                { "name": "recent6", "status": "present", "value": "4勝2敗", "observed_at": "2026-09-26T23:00:00+09:00", "source": "公開記録（架空）", "note": null },
+                { "name": "serve_hold_rate", "status": "missing", "value": null, "observed_at": null, "source": null, "note": "取得できず" }
+              ],
+              "data_confidence": "medium",
+              "price_gap_factors": ["市場は直近大会の結果を重視（架空）"], "disagreement_reasons": ["RMCは相手の連戦を重く見る（架空）"], "missing_information": ["serve_hold_rate"],
+              "summary": null
+            } }
+        ]
+      }
+    }
+  },
+
+  "steps": {
+    "s1_result_update": {
+      "$comment": "□1 結果更新：2026-09-27-rhpa-rhpb を scheduled → final（架空の公式ソース）",
+      "run": {
+        "run_id": "mr-2026-09-27-1800-rehearsal-01", "kind": "result_update", "at": "2026-09-27T18:00:00+09:00", "source": "リハーサル（架空）GPT定時更新 18:00", "note": "RMC-20260926-REHEARSAL-01",
+        "changes": [
+          { "match_id": "2026-09-27-rhpa-rhpb",
+            "set": { "status": "final", "result": { "final": { "a": 2, "b": 0 }, "text": "Rehearsal Player A 2-0（架空）" }, "result_confirmed_at": "2026-09-27T14:30:00+09:00" },
+            "evidence": { "sources": [ { "name": "大会公式（架空）", "url": "https://rehearsal.example/official/rhpa-rhpb", "type": "official" } ], "verified_at": "2026-09-27T17:55:00+09:00", "source_confidence": "official", "note": "リハーサル用（架空）" } }
+        ],
+        "reviews": []
+      }
+    },
+    "s2_pending_cards": {
+      "$comment": "□2 未確定カード更新：試合前に取得した締切オッズの追記（④はスナップショット、①は closing_odds）",
+      "pro_edge_snapshots": [
+        { "pick_id": "pe-rh-00-a", "snapshot": { "snapshot_id": "ps-rh-00-a-close-a", "kind": "closing", "bookmaker": "BookA", "market": "match_winner", "outcomes": { "side_a": 1.75, "side_b": 2.10 }, "observed_at": "2026-09-27T11:58:00+09:00", "source": "BookA 公開オッズ（架空）" } }
+      ],
+      "closing_odds": [ { "system": "recommendations", "pick_id": "rec-rh-00-a", "closing_odds": 1.75 } ]
+    },
+    "new_matches": {
+      "$comment": "□3〜□6 の新規候補が使う試合（試合事実のみ）。各試合は1つの系統だけが使う",
+      "matches_update_run": { "run_id": "mr-2026-09-27-1800-rehearsal-01-matches", "kind": "result_update", "at": "2026-09-27T18:00:00+09:00", "source": "リハーサル（架空）GPT定時更新 18:00", "note": "新規試合の登録" },
+      "matches": [
+        { "id": "2026-09-28-rhfa-rhfb", "sport": "男子サッカー", "competition": "リハーサル用（架空）", "side_a": "Rehearsal FC A", "side_b": "Rehearsal FC B", "start_at": "2026-09-28T03:00:00+09:00" },
+        { "id": "2026-09-28-rhta-rhtb", "sport": "CS2", "competition": "リハーサル用（架空）", "side_a": "Rehearsal Team A", "side_b": "Rehearsal Team B", "start_at": "2026-09-28T04:00:00+09:00" },
+        { "id": "2026-09-28-rhva-rhvb", "sport": "男子バレー", "competition": "リハーサル用（架空）", "side_a": "Rehearsal VC A", "side_b": "Rehearsal VC B", "start_at": "2026-09-28T02:00:00+09:00" },
+        { "id": "2026-09-28-rhea-rheb", "sport": "VALORANT", "competition": "リハーサル用（架空）", "side_a": "Rehearsal Esports A", "side_b": "Rehearsal Esports B", "start_at": "2026-09-28T05:00:00+09:00" },
+        { "id": "2026-09-28-rhwa-rhwb", "sport": "女子サッカー", "competition": "リハーサル用（架空）", "side_a": "Rehearsal Women A", "side_b": "Rehearsal Women B", "start_at": "2026-09-28T01:00:00+09:00" }
+      ]
+    },
+    "s3_recommendations": {
+      "discovery_run": { "run_id": "rec-2026-09-27-1800-rh", "started_at": "2026-09-27T18:00:00+09:00", "slot": "18:00", "note": "リハーサル（架空）①独自の探索回" },
+      "picks": [
+        { "id": "rec-rh-01", "match_id": "2026-09-28-rhfa-rhfb", "market": "match_1x2", "selection": "side_b", "selection_label": "Rehearsal FC B",
+          "market_odds": { "text": "1.15〜1.20", "min": 1.15, "max": 1.20, "observed_at": "2026-09-27T18:05:00+09:00", "source": "公開オッズ（架空）" },
+          "odds_taken": null, "stake": 100, "discovered_at": "2026-09-27T18:05:00+09:00", "locked_at": "2026-09-27T18:20:00+09:00",
+          "locked": { "prob": null, "gap_score": 90, "confidence": "A", "model_version": null, "summary": "①独自の分析（架空）" } }
+      ]
+    },
+    "s4_value1": {
+      "discovery_run": { "run_id": "v1-2026-09-27-1800-rh", "started_at": "2026-09-27T18:00:00+09:00", "slot": "18:00", "note": "リハーサル（架空）②独自の探索回" },
+      "picks": [
+        { "id": "v1-rh-01", "match_id": "2026-09-28-rhta-rhtb", "market": "match_winner", "selection": "side_a", "selection_label": "Rehearsal Team A",
+          "odds_taken": 1.90, "stake": 100, "discovered_at": "2026-09-27T18:06:00+09:00", "locked_at": "2026-09-27T18:25:00+09:00",
+          "locked": { "verdict": "formal", "prob_lo": 0.56, "prob_hi": 0.60, "prob_point": null, "required_prob": 0.5263, "ev_lo": 0.064, "ev_hi": 0.14, "gap_score": null, "model_version": null, "summary": "②独自の分析（架空）" } }
+      ]
+    },
+    "s5_value2": {
+      "discovery_run": { "run_id": "v2-2026-09-27-1800-rh", "started_at": "2026-09-27T18:00:00+09:00", "slot": "18:00", "note": "リハーサル（架空）③独自の探索回" },
+      "picks": [
+        { "id": "v2-rh-01", "match_id": "2026-09-28-rhva-rhvb", "market": "match_winner", "selection": "side_b", "selection_label": "Rehearsal VC B",
+          "odds_taken": 1.65, "stake": 100, "discovered_at": "2026-09-27T18:07:00+09:00", "locked_at": "2026-09-27T18:28:00+09:00",
+          "locked": { "verdict": "adopted", "prob_lo": 0.64, "prob_hi": 0.67, "prob_point": null, "required_prob": 0.6061, "market_gap_lo": 3.4, "market_gap_hi": 6.4, "upset_risk": "mid", "model_version": null, "summary": "③独自の分析（架空）" } }
+      ]
+    },
+    "s6_pro_edge": {
+      "discovery_run": { "run_id": "pe-2026-09-27-1800-rh", "started_at": "2026-09-27T18:00:00+09:00", "slot": "18:00", "note": "リハーサル（架空）④独自の探索回" },
+      "picks": [
+        { "id": "pe-rh-01", "match_id": "2026-09-28-rhea-rheb", "analysis_id": "pe-an-rh-01", "market": "match_winner", "selection": "side_a", "selection_label": "Rehearsal Esports A",
+          "discovered_at": "2026-09-27T18:08:00+09:00", "locked_at": "2026-09-27T18:30:00+09:00", "bet_at": "2026-09-27T18:40:00+09:00",
+          "price_snapshots": [ { "snapshot_id": "ps-rh-01-an-a", "kind": "analysis", "bookmaker": "BookA", "market": "match_winner", "outcomes": { "side_a": 2.20, "side_b": 1.70 }, "observed_at": "2026-09-27T18:10:00+09:00", "source": "BookA 公開オッズ（架空）" } ],
+          "bet_odds": 2.20, "bet_bookmaker": "BookA", "stake": 100,
+          "locked": {
+            "decision": "accepted", "decision_reason": "EV が required_EV 以上", "required_ev": 0.03,
+            "market_reference": { "snapshot_ids": ["ps-rh-01-an-a"], "method": "single_book" },
+            "offered_price": { "snapshot_id": "ps-rh-01-an-a" },
+            "model": { "model_id": "esports-elo-logit", "model_version": "0.1.0", "sport_module": "esports", "method": "elo_logistic", "trained_through": "2026-09-26T23:59:00+09:00" },
+            "base_probability": 0.50, "expert_adjustments": [],
+            "features": [
+              { "name": "map_pool", "status": "present", "value": "Ascent/Bind/Lotus", "observed_at": "2026-09-27T12:00:00+09:00", "source": "公開記録（架空）", "note": null },
+              { "name": "veto", "status": "missing", "value": null, "observed_at": null, "source": null, "note": "試合前に未公開" }
+            ],
+            "data_confidence": "low",
+            "price_gap_factors": ["市場は直近の敗戦を過大評価（架空）"], "disagreement_reasons": ["マップ相性の評価差（架空）"], "missing_information": ["veto"],
+            "summary": null
+          } },
+        { "id": "pe-rh-02", "match_id": "2026-09-28-rhwa-rhwb", "analysis_id": "pe-an-rh-02", "market": "match_1x2", "selection": "side_a", "selection_label": "Rehearsal Women A",
+          "discovered_at": "2026-09-27T18:09:00+09:00", "locked_at": "2026-09-27T18:32:00+09:00", "bet_at": null,
+          "price_snapshots": [ { "snapshot_id": "ps-rh-02-an-a", "kind": "analysis", "bookmaker": "BookA", "market": "match_1x2", "outcomes": { "side_a": 1.30, "draw": 5.00, "side_b": 9.00 }, "observed_at": "2026-09-27T18:12:00+09:00", "source": "BookA 公開オッズ（架空）" } ],
+          "bet_odds": null, "bet_bookmaker": null, "stake": null,
+          "locked": {
+            "decision": "rejected", "decision_reason": "圧倒的な格差だが価格が適正以下（EV マイナス）", "required_ev": 0.03,
+            "market_reference": { "snapshot_ids": ["ps-rh-02-an-a"], "method": "single_book" },
+            "offered_price": { "snapshot_id": "ps-rh-02-an-a" },
+            "model": { "model_id": "soccer-elo-logit", "model_version": "0.1.0", "sport_module": "soccer", "method": "elo_logistic", "trained_through": "2026-09-26T23:59:00+09:00" },
+            "base_probability": 0.70, "expert_adjustments": [],
+            "features": [ { "name": "rating", "status": "present", "value": 1810, "observed_at": "2026-09-27T12:00:00+09:00", "source": "公開レーティング（架空）", "note": null } ],
+            "data_confidence": "medium", "price_gap_factors": [], "disagreement_reasons": [], "missing_information": [], "summary": null
+          } }
+      ]
+    },
+    "s8_post_match_reviews": {
+      "recommendations": [
+        { "pick_id": "rec-rh-00-a", "created_at": "2026-09-27T18:45:00+09:00", "update_run": "RMC-20260926-REHEARSAL-01", "outcome": "win", "category": "other", "findings": "事前の格差評価どおりの展開（架空）", "missing_data": [], "action": "none", "proposal": null }
+      ],
+      "pro_edge": [
+        { "pick_id": "pe-rh-00-a", "created_at": "2026-09-27T18:45:00+09:00", "update_run": "RMC-20260926-REHEARSAL-01", "outcome": "win", "category": "variance", "findings": "締切で価格が動き CLV プラス（架空）", "missing_data": ["serve_hold_rate"], "action": "monitor", "proposal": null }
+      ]
+    }
+  },
+
+  "correction_fixture": {
+    "$comment": "別シナリオ：2026-09-27-rhpa-rhpb の確定結果を訂正（final → corrected final）",
+    "run": {
+      "run_id": "mr-2026-09-27-2000-rehearsal-correction", "kind": "result_update", "at": "2026-09-27T20:00:00+09:00", "source": "リハーサル（架空）結果訂正", "note": null,
+      "changes": [
+        { "match_id": "2026-09-27-rhpa-rhpb",
+          "set": { "result": { "final": { "a": 1, "b": 2 }, "text": "Rehearsal Player B 2-1（訂正後・架空）" }, "result_confirmed_at": "2026-09-27T19:40:00+09:00" },
+          "correction": { "reason": "公式記録の訂正（リハーサル・架空）" },
+          "evidence": { "sources": [ { "name": "大会公式 訂正発表（架空）", "url": "https://rehearsal.example/official/rhpa-rhpb-correction", "type": "official" } ], "verified_at": "2026-09-27T19:50:00+09:00", "source_confidence": "official", "note": "リハーサル用（架空）" } }
+      ],
+      "reviews": []
+    }
+  }
+}

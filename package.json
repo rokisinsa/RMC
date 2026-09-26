@@ -13,6 +13,7 @@
     "validate": "node scripts/validate-data.js",
     "check-locked": "node scripts/check-locked.js",
     "audit": "node scripts/audit-report.js",
+    "rehearsal": "node scripts/rehearsal.js",
     "baseline": "node baseline/capture-baseline.js"
   }
 }

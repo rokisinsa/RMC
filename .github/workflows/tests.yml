@@ -37,3 +37,6 @@ jobs:
         env:
           BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
         run: node scripts/check-locked.js "$BASE_SHA"
+
+      - name: 実運用リハーサル（架空の定時更新を data/ のコピーへ適用して検証。data/ は変更しない）
+        run: node scripts/rehearsal.js rehearsals/RMC-20260926-REHEARSAL-01
