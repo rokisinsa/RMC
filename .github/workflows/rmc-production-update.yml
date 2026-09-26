@@ -1,0 +1,163 @@
+# RMC 本番更新：外部（ChatGPT など）が作った更新 payload を受け取り → 検証 → 既存 JSON と比較 → locked 保護
+# → 全テスト → main へコミット → Pages 公開確認 まで行う。
+# この workflow は予測・分析をしない（スポーツの情報収集・推定は外部の分析側が行い、payload として渡す）。
+# 手順の説明: docs/RMC_AUTOMATION.md
+name: rmc-production-update
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "更新回の ID（payload の run_id と同じ。例 rmc-2026-09-27-0600）"
+        required: true
+        type: string
+      source:
+        description: "更新を作った主体（payload の source と同じ。例 ChatGPT Automations 06:00）"
+        required: true
+        type: string
+      payload_path:
+        description: "リポジトリ内の payload ファイル（incoming/ または tmp/ の下の .json）。payload_json と どちらか一方"
+        required: false
+        type: string
+        default: ""
+      payload_json:
+        description: "payload の JSON 本文。payload_path と どちらか一方"
+        required: false
+        type: string
+        default: ""
+      dry_run:
+        description: "true なら検査だけ（data/ も main も変更しない）"
+        required: false
+        type: boolean
+        default: false
+  repository_dispatch:
+    # client_payload: { run_id, source, payload_path | payload, dry_run }
+    types: [rmc-production-update]
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: rmc-production-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # 入力は環境変数で渡す（シェルへ直接埋め込まない）
+      RMC_RUN_ID: ${{ github.event.inputs.run_id || github.event.client_payload.run_id }}
+      RMC_SOURCE: ${{ github.event.inputs.source || github.event.client_payload.source }}
+      RMC_PAYLOAD_PATH: ${{ github.event.inputs.payload_path || github.event.client_payload.payload_path }}
+      RMC_PAYLOAD_JSON: ${{ github.event.inputs.payload_json || (github.event.client_payload.payload && toJSON(github.event.client_payload.payload)) || '' }}
+      RMC_DRY_RUN: ${{ github.event.inputs.dry_run == 'true' || github.event.client_payload.dry_run == true }}
+      WORK: .tmp-tests/production-update
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 1. 受信（run_id・source を payload と照合）
+        run: |
+          echo "START_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          node scripts/rmc-production-update.mjs --receive --out "$WORK/payload.json"
+
+      - name: 2. 検証（dry-run：schema・重複・JST・source・未来情報・locked・損益/ROI/CLV）
+        run: node scripts/rmc-production-update.mjs --payload "$WORK/payload.json" --dry-run --start-sha "$START_SHA" --report "$WORK/dry-run.json"
+
+      - name: 3. 反映（検証をすべて通ったときだけ data/ を変更）
+        if: env.RMC_DRY_RUN != 'true'
+        run: node scripts/rmc-production-update.mjs --payload "$WORK/payload.json" --apply --start-sha "$START_SHA" --report "$WORK/apply.json"
+
+      - name: 4. 変更ファイルの検査（更新してよい data/ のファイルだけ）
+        if: env.RMC_DRY_RUN != 'true'
+        run: node scripts/rmc-production-update.mjs --check-diff
+
+      - name: 5. 全テスト（snapshot 段・live 段：schema/integrity・PRO EDGE・V2・switch gate・本番更新）
+        if: env.RMC_DRY_RUN != 'true'
+        run: npm test
+
+      - name: 6. 移行スナップショットの不変性
+        if: env.RMC_DRY_RUN != 'true'
+        run: node scripts/snapshot-manifest.js verify
+
+      - name: 7. data/*.json のスキーマ・整合性検証
+        if: env.RMC_DRY_RUN != 'true'
+        run: node scripts/validate-data.js
+
+      - name: 8. locked 保護（更新前の main と比較）
+        if: env.RMC_DRY_RUN != 'true'
+        run: node scripts/check-locked.js "$START_SHA"
+
+      - name: 9. 監査（競技偏り・損益/ROI/CLV・データ品質）
+        if: env.RMC_DRY_RUN != 'true'
+        run: node scripts/audit-report.js
+
+      - name: 10. 実運用リハーサル（架空データは data/ のコピーにだけ適用）
+        if: env.RMC_DRY_RUN != 'true'
+        run: |
+          node scripts/rehearsal.js rehearsals/RMC-20260926-REHEARSAL-01
+          git checkout -- rehearsals
+
+      - name: 11. 実行記録に全テスト PASS を記録し、変更ファイルを再検査
+        if: env.RMC_DRY_RUN != 'true'
+        run: |
+          node scripts/rmc-production-update.mjs --finalize --run-id "$RMC_RUN_ID" --actions-result pass
+          node scripts/rmc-production-update.mjs --check-diff
+          node scripts/validate-data.js
+          node scripts/check-locked.js "$START_SHA"
+
+      - name: 12. main へコミット・push（全検証 PASS・全テスト PASS・locked 違反 0 のときだけ）
+        if: env.RMC_DRY_RUN != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "RMC production update: $RMC_RUN_ID"
+          git push origin HEAD:main
+          echo "END_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: 13. Pages の公開確認
+        if: env.RMC_DRY_RUN != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -fsS -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/pages/builds" > /dev/null || echo "Pages のビルド要求に失敗（自動ビルドを待つ）"
+          owner="${GITHUB_REPOSITORY%%/*}"; repo="${GITHUB_REPOSITORY#*/}"
+          base="https://${owner}.github.io/${repo}"
+          for i in $(seq 1 60); do
+            if curl -fsS "$base/data/automation-runs.json?cb=$RANDOM" | grep -q "\"run_id\": \"$RMC_RUN_ID\""; then
+              code=$(curl -s -o /dev/null -w '%{http_code}' "$base/analysis-v2.html?cb=$RANDOM")
+              echo "PAGES_RESULT=published (analysis-v2.html HTTP $code)" >> "$GITHUB_ENV"
+              [ "$code" = "200" ] && exit 0
+              exit 1
+            fi
+            sleep 10
+          done
+          echo "PAGES_RESULT=timeout" >> "$GITHUB_ENV"
+          exit 1
+
+      - name: 実行結果のまとめ
+        if: always()
+        run: |
+          {
+            echo "## RMC production update: ${RMC_RUN_ID}"
+            echo "- source: ${RMC_SOURCE}"
+            echo "- dry_run: ${RMC_DRY_RUN}"
+            echo "- start_sha: ${START_SHA:-—}"
+            echo "- end_sha: ${END_SHA:-（コミットなし）}"
+            echo "- pages_result: ${PAGES_RESULT:-—}"
+            echo '```'
+            for f in "$WORK/dry-run.json" "$WORK/apply.json"; do
+              [ -f "$f" ] && node -e "const r=JSON.parse(require('fs').readFileSync('$f','utf8'));console.log('$f'.split('/').pop(), 'ok='+r.ok, 'errors='+r.errors.length, 'added='+r.items.filter(i=>i.action==='added').length, 'updated='+r.items.filter(i=>i.action==='updated').length, 'unchanged='+r.items.filter(i=>i.action==='unchanged').length, 'rejected='+r.items.filter(i=>i.action==='rejected').length);for(const e of r.errors.slice(0,30))console.log('  ['+e.category+'] '+e.system+' '+(e.id??'')+': '+e.message)"
+            done
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

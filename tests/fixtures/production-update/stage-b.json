@@ -1,0 +1,36 @@
+{
+  "payload_version": 1,
+  "run_id": "fixture-2026-09-27-1800",
+  "source": "テスト用 fixture（架空・本番データには入れない）",
+  "generated_at": "2026-09-27T18:10:00+09:00",
+  "slot": "18:00",
+  "note": "stage-a の後に適用する架空の定時更新（結果更新・締切オッズ・試合後レビュー）",
+  "result_updates": [
+    { "run_id": "mr-2026-09-27-1800-fixture-result", "kind": "result_update", "at": "2026-09-27T18:00:00+09:00", "source": "テスト用 fixture 18:00", "note": null,
+      "changes": [
+        { "match_id": "2026-09-27-fxpa-fxpb",
+          "set": { "status": "final", "result": { "final": { "a": 2, "b": 0 }, "text": "Fixture Player A 2-0（架空）" }, "result_confirmed_at": "2026-09-27T14:30:00+09:00" },
+          "evidence": { "sources": [{ "name": "Fixture Open 公式（架空）", "url": "https://fixture.example/official/fxpa-fxpb", "type": "official" }], "verified_at": "2026-09-27T17:55:00+09:00", "source_confidence": "official", "note": "架空" } }
+      ],
+      "reviews": [] }
+  ],
+  "systems": {
+    "recommendations": { "pick_updates": [{ "pick_id": "rec-fx-00-a", "closing_odds": 1.75 }] },
+    "pro_edge": {
+      "append_snapshots": [
+        { "pick_id": "pe-fx-00-a", "snapshot": { "snapshot_id": "ps-fx-00-a-close-a", "kind": "closing", "bookmaker": "BookA", "market": "match_winner", "outcomes": { "side_a": 1.75, "side_b": 2.10 }, "observed_at": "2026-09-27T11:58:00+09:00", "source": "BookA 公開オッズ（架空）" } }
+      ],
+      "reported": [
+        { "pick_id": "pe-fx-00-a", "market_probability": 0.525974, "final_probability": 0.58, "ev": 0.073, "clv_price": 0.057143, "clv_probability": 0.004914 }
+      ]
+    }
+  },
+  "post_match_reviews": {
+    "recommendations": [
+      { "pick_id": "rec-fx-00-a", "created_at": "2026-09-27T18:05:00+09:00", "update_run": "fixture-2026-09-27-1800", "outcome": "win", "category": "other", "findings": "事前の評価どおり（架空）", "missing_data": [], "action": "none", "proposal": null }
+    ],
+    "pro_edge": [
+      { "pick_id": "pe-fx-00-a", "created_at": "2026-09-27T18:05:00+09:00", "update_run": "fixture-2026-09-27-1800", "outcome": "win", "category": "variance", "findings": "締切で価格が動き CLV プラス（架空）", "missing_data": ["serve_hold_rate"], "action": "monitor", "proposal": null }
+    ]
+  }
+}

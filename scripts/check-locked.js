@@ -3,7 +3,9 @@
 // 使い方: node scripts/check-locked.js <基準コミット>   （例: HEAD~1, origin/main, コミットSHA）
 
 import { execFileSync } from "node:child_process";
-import { loadDatasets, DATA_FILES, ROOT } from "./load-node.js";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { loadDatasets, DATA_FILES, ROOT, DATA_DIR } from "./load-node.js";
 import { checkLockedImmutable, checkMatchHistory, SYSTEMS } from "../lib/integrity.js";
 import { checkMatchUpdatesAppendOnly } from "../lib/match-updates.js";
 
@@ -47,6 +49,17 @@ for (const i of isDraft(matchesBefore) ? [] : checkMatchHistory(matchesBefore, d
 for (const i of checkMatchUpdatesAppendOnly(readAt(base, DATA_FILES.match_updates), datasets.match_updates ?? null)) {
   console.log(`[${i.level}] ${i.code}: ${i.message}`);
   errors++;
+}
+// 本番更新 workflow の実行記録（data/automation-runs.json）も追記のみ
+{
+  const prev = readAt(base, "automation-runs.json");
+  let next = null;
+  try { next = JSON.parse(readFileSync(join(DATA_DIR, "automation-runs.json"), "utf8")); } catch { /* 未作成 */ }
+  const p = prev?.runs ?? [], n = next?.runs ?? [];
+  if (prev && (n.length < p.length || p.some((r, i) => JSON.stringify(r) !== JSON.stringify(n[i])))) {
+    console.log("[error] AUTOMATION_RUNS_REWRITTEN: automation-runs.json は追記のみ（既存の実行記録を変更・削除しない）");
+    errors++;
+  }
 }
 console.log(errors ? `locked 保護違反 ${errors} 件` : "locked 保護: 問題なし");
 process.exit(errors ? 1 : 0);

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "automation-runs.schema.json",
+  "title": "data/automation-runs.json — 本番更新 workflow の実行記録（監査用・追記のみ）",
+  "$comment": "scripts/rmc-production-update.mjs が apply のたびに1件追記する。変更が0件の回も「完全チェックを実施した」記録として残す。分析値・結果はここに入れない（件数と検査結果だけ）。end_sha は、この記録を含むコミット自身の SHA なので記録できない（git 履歴・Actions の実行結果で確認する）。",
+  "type": "object",
+  "required": ["schema_version", "runs"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "meta": { "$ref": "defs.schema.json#/$defs/fileMeta" },
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "run_id", "started_at", "finished_at", "source", "start_sha", "end_sha", "systems_checked", "cards_checked",
+          "results_updated", "metadata_updated", "new_candidates", "accepted", "watch", "rejected",
+          "postmortems_created", "validation_result", "actions_result", "pages_result"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "run_id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{2,80}$" },
+          "started_at": { "$ref": "defs.schema.json#/$defs/dateTime" },
+          "finished_at": { "$ref": "defs.schema.json#/$defs/dateTime" },
+          "source": { "type": "string", "minLength": 1 },
+          "payload_generated_at": { "$ref": "defs.schema.json#/$defs/dateTimeOrNull" },
+          "payload_sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+          "start_sha": { "type": ["string", "null"], "pattern": "^[0-9a-f]{7,40}$" },
+          "end_sha": { "type": "null", "description": "この記録を含むコミットの SHA は自分自身に書けないため常に null" },
+          "systems_checked": { "type": "array", "items": { "enum": ["recommendations", "experience", "value1", "value2", "pro_edge"] } },
+          "cards_checked": { "type": "integer", "minimum": 0 },
+          "results_updated": { "type": "integer", "minimum": 0 },
+          "metadata_updated": { "type": "integer", "minimum": 0 },
+          "new_candidates": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "recommendations": { "type": "integer", "minimum": 0 },
+              "experience": { "type": "integer", "minimum": 0 },
+              "value1": { "type": "integer", "minimum": 0 },
+              "value2": { "type": "integer", "minimum": 0 },
+              "pro_edge": { "type": "integer", "minimum": 0 }
+            }
+          },
+          "accepted": { "type": "integer", "minimum": 0, "description": "新規カードのうち本成績（①全件・② formal/conditional・③ adopted・④ accepted）" },
+          "watch": { "type": "integer", "minimum": 0, "description": "新規カードのうち監視・参考（② watch・③ watch・④ watch）" },
+          "rejected": { "type": "integer", "minimum": 0, "description": "新規カードのうち除外（② excluded・③ excluded・④ rejected）" },
+          "postmortems_created": { "type": "integer", "minimum": 0 },
+          "validation_result": { "enum": ["pass"] },
+          "actions_result": { "enum": ["pending", "pass"], "description": "workflow の全テスト（コミット前）の結果" },
+          "pages_result": { "enum": ["pending"], "description": "Pages の公開確認はコミット後に行うため、ここでは常に pending（結果は Actions の実行記録に出る）" },
+          "note": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+        }
+      }
+    }
+  }
+}

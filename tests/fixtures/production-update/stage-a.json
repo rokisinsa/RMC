@@ -1,0 +1,128 @@
+{
+  "payload_version": 1,
+  "run_id": "fixture-2026-09-27-0600",
+  "source": "テスト用 fixture（架空・本番データには入れない）",
+  "generated_at": "2026-09-27T06:50:00+09:00",
+  "slot": "06:00",
+  "note": "架空の試合・オッズ。tests/live/production-update.test.js が data/ の一時コピーに適用する",
+  "matches": {
+    "update_run": { "run_id": "mr-2026-09-27-0600-fixture-matches", "kind": "result_update", "at": "2026-09-27T06:00:00+09:00", "source": "テスト用 fixture 06:00", "note": "新規試合の登録（架空）" },
+    "new": [
+      { "id": "2026-09-27-fxpa-fxpb", "sport": "男子テニス", "competition": "Fixture Open（架空）", "side_a": "Fixture Player A", "side_b": "Fixture Player B", "home_side": "unknown", "region": null, "start_at": "2026-09-27T12:00:00+09:00", "start_time_status": "recorded", "status": "scheduled", "result": null, "provenance": [{ "update_run_id": "mr-2026-09-27-0600-fixture-matches", "changes": [], "note": "新規登録（架空）" }], "flags": [] },
+      { "id": "2026-09-28-fxfa-fxfb", "sport": "男子サッカー", "competition": "Fixture League（架空）", "side_a": "Fixture FC A", "side_b": "Fixture FC B", "home_side": "unknown", "region": null, "start_at": "2026-09-28T03:00:00+09:00", "start_time_status": "recorded", "status": "scheduled", "result": null, "provenance": [{ "update_run_id": "mr-2026-09-27-0600-fixture-matches", "changes": [], "note": "新規登録（架空）" }], "flags": [] },
+      { "id": "2026-09-28-fxta-fxtb", "sport": "CS2", "competition": "Fixture Cup（架空）", "side_a": "Fixture Team A", "side_b": "Fixture Team B", "home_side": "unknown", "region": null, "start_at": "2026-09-28T04:00:00+09:00", "start_time_status": "recorded", "status": "scheduled", "result": null, "provenance": [{ "update_run_id": "mr-2026-09-27-0600-fixture-matches", "changes": [], "note": "新規登録（架空）" }], "flags": [] },
+      { "id": "2026-09-28-fxva-fxvb", "sport": "男子バレー", "competition": "Fixture V（架空）", "side_a": "Fixture VC A", "side_b": "Fixture VC B", "home_side": "unknown", "region": null, "start_at": "2026-09-28T02:00:00+09:00", "start_time_status": "recorded", "status": "scheduled", "result": null, "provenance": [{ "update_run_id": "mr-2026-09-27-0600-fixture-matches", "changes": [], "note": "新規登録（架空）" }], "flags": [] },
+      { "id": "2026-09-28-fxea-fxeb", "sport": "VALORANT", "competition": "Fixture Masters（架空）", "side_a": "Fixture Esports A", "side_b": "Fixture Esports B", "home_side": "unknown", "region": null, "start_at": "2026-09-28T05:00:00+09:00", "start_time_status": "recorded", "status": "scheduled", "result": null, "provenance": [{ "update_run_id": "mr-2026-09-27-0600-fixture-matches", "changes": [], "note": "新規登録（架空）" }], "flags": [] },
+      { "id": "2026-09-28-fxwa-fxwb", "sport": "女子サッカー", "competition": "Fixture Women（架空）", "side_a": "Fixture Women A", "side_b": "Fixture Women B", "home_side": "unknown", "region": null, "start_at": "2026-09-28T01:00:00+09:00", "start_time_status": "recorded", "status": "scheduled", "result": null, "provenance": [{ "update_run_id": "mr-2026-09-27-0600-fixture-matches", "changes": [], "note": "新規登録（架空）" }], "flags": [] }
+    ]
+  },
+  "systems": {
+    "recommendations": {
+      "discovery_runs": [{ "run_id": "rec-2026-09-27-0600-fx", "started_at": "2026-09-27T06:00:00+09:00", "slot": "06:00", "note": "①独自の探索回（架空）" }],
+      "new_picks": [
+        { "id": "rec-fx-00-a", "system": "recommendations", "match_id": "2026-09-27-fxpa-fxpb", "market": "match_winner", "selection": "side_a", "selection_label": "Fixture Player A",
+          "market_odds": null, "odds_taken": 1.80, "stake": 100, "discovered_at": "2026-09-27T06:10:00+09:00", "run_id": "rec-2026-09-27-0600-fx",
+          "bet_at": "2026-09-27T06:40:00+09:00", "locked_at": "2026-09-27T06:30:00+09:00",
+          "locked": { "prob": null, "gap_score": 81, "confidence": "A-", "model_version": null, "summary": "①独自の分析（架空）" },
+          "settlement_override": null, "flags": [] },
+        { "id": "rec-fx-01", "system": "recommendations", "match_id": "2026-09-28-fxfa-fxfb", "market": "match_1x2", "selection": "side_b", "selection_label": "Fixture FC B",
+          "market_odds": { "text": "1.15〜1.20", "min": 1.15, "max": 1.20, "observed_at": "2026-09-27T06:05:00+09:00", "source": "公開オッズ（架空）" },
+          "odds_taken": null, "stake": 100, "discovered_at": "2026-09-27T06:05:00+09:00", "run_id": "rec-2026-09-27-0600-fx",
+          "bet_at": null, "locked_at": "2026-09-27T06:20:00+09:00",
+          "locked": { "prob": null, "gap_score": 90, "confidence": "A", "model_version": null, "summary": "①独自の分析 FC（架空）" },
+          "settlement_override": null, "flags": [] }
+      ]
+    },
+    "value1": {
+      "discovery_runs": [{ "run_id": "v1-2026-09-27-0600-fx", "started_at": "2026-09-27T06:00:00+09:00", "slot": "06:00", "note": "②独自の探索回（架空）" }],
+      "new_picks": [
+        { "id": "v1-fx-00-a", "system": "value1", "match_id": "2026-09-27-fxpa-fxpb", "market": "match_winner", "selection": "side_a", "selection_label": "Fixture Player A",
+          "market_odds": null, "odds_taken": 1.85, "stake": null, "discovered_at": "2026-09-27T06:15:00+09:00", "run_id": "v1-2026-09-27-0600-fx",
+          "bet_at": null, "locked_at": "2026-09-27T06:35:00+09:00",
+          "locked": { "verdict": "watch", "prob_lo": 0.55, "prob_hi": 0.59, "prob_point": null, "required_prob": 0.5405, "ev_lo": 0.0175, "ev_hi": 0.0915, "gap_score": null, "model_version": null, "summary": "②独自の分析（架空）" },
+          "settlement_override": null, "flags": [] },
+        { "id": "v1-fx-01", "system": "value1", "match_id": "2026-09-28-fxta-fxtb", "market": "match_winner", "selection": "side_a", "selection_label": "Fixture Team A",
+          "market_odds": null, "odds_taken": 1.90, "stake": 100, "discovered_at": "2026-09-27T06:06:00+09:00", "run_id": "v1-2026-09-27-0600-fx",
+          "bet_at": null, "locked_at": "2026-09-27T06:25:00+09:00",
+          "locked": { "verdict": "formal", "prob_lo": 0.56, "prob_hi": 0.60, "prob_point": null, "required_prob": 0.5263, "ev_lo": 0.064, "ev_hi": 0.14, "gap_score": null, "model_version": null, "summary": "②独自の分析 CS2（架空）" },
+          "settlement_override": null, "flags": [] }
+      ]
+    },
+    "value2": {
+      "discovery_runs": [{ "run_id": "v2-2026-09-27-0600-fx", "started_at": "2026-09-27T06:00:00+09:00", "slot": "06:00", "note": "③独自の探索回（架空）" }],
+      "new_picks": [
+        { "id": "v2-fx-01", "system": "value2", "match_id": "2026-09-28-fxva-fxvb", "market": "match_winner", "selection": "side_b", "selection_label": "Fixture VC B",
+          "market_odds": null, "odds_taken": 1.65, "stake": 100, "discovered_at": "2026-09-27T06:07:00+09:00", "run_id": "v2-2026-09-27-0600-fx",
+          "bet_at": null, "locked_at": "2026-09-27T06:28:00+09:00",
+          "locked": { "verdict": "adopted", "prob_lo": 0.64, "prob_hi": 0.67, "prob_point": null, "required_prob": 0.6061, "market_gap_lo": 3.4, "market_gap_hi": 6.4, "upset_risk": "mid", "model_version": null, "summary": "③独自の分析（架空）" },
+          "settlement_override": null, "flags": [] }
+      ]
+    },
+    "pro_edge": {
+      "discovery_runs": [{ "run_id": "pe-2026-09-27-0600-fx", "started_at": "2026-09-27T06:00:00+09:00", "slot": "06:00", "note": "④独自の探索回（架空）" }],
+      "new_picks": [
+        { "id": "pe-fx-00-a", "system": "pro_edge", "match_id": "2026-09-27-fxpa-fxpb", "run_id": "pe-2026-09-27-0600-fx", "analysis_id": "pe-an-fx-00-a",
+          "market": "match_winner", "selection": "side_a", "selection_label": "Fixture Player A",
+          "discovered_at": "2026-09-27T06:20:00+09:00", "locked_at": "2026-09-27T06:38:00+09:00", "bet_at": "2026-09-27T06:45:00+09:00",
+          "price_snapshots": [
+            { "snapshot_id": "ps-fx-00-a-open-a", "kind": "opening", "bookmaker": "BookA", "market": "match_winner", "outcomes": { "side_a": 1.90, "side_b": 1.95 }, "observed_at": "2026-09-26T22:00:00+09:00", "source": "BookA 公開オッズ（架空）" },
+            { "snapshot_id": "ps-fx-00-a-an-a", "kind": "analysis", "bookmaker": "BookA", "market": "match_winner", "outcomes": { "side_a": 1.85, "side_b": 2.00 }, "observed_at": "2026-09-27T06:25:00+09:00", "source": "BookA 公開オッズ（架空）" },
+            { "snapshot_id": "ps-fx-00-a-an-b", "kind": "analysis", "bookmaker": "BookB", "market": "match_winner", "outcomes": { "side_a": 1.80, "side_b": 2.05 }, "observed_at": "2026-09-27T06:26:00+09:00", "source": "BookB 公開オッズ（架空）" }
+          ],
+          "bet_odds": 1.85, "bet_bookmaker": "BookA", "stake": 100,
+          "locked": {
+            "decision": "accepted", "decision_reason": "EV が required_EV 以上", "required_ev": 0.03,
+            "market_reference": { "snapshot_ids": ["ps-fx-00-a-an-a", "ps-fx-00-a-an-b"], "method": "consensus" },
+            "offered_price": { "snapshot_id": "ps-fx-00-a-an-a" },
+            "model": { "model_id": "tennis-elo-logit", "model_version": "0.1.0", "sport_module": "tennis", "method": "elo_logistic", "trained_through": "2026-09-26T23:59:00+09:00" },
+            "base_probability": 0.56,
+            "expert_adjustments": [{ "adjustment_value": 0.02, "category": "condition", "reason": "相手の連戦（架空）", "source": "大会公式日程（架空）", "created_at": "2026-09-27T06:30:00+09:00" }],
+            "features": [
+              { "name": "rating", "status": "present", "value": 1720, "observed_at": "2026-09-26T23:00:00+09:00", "source": "公開レーティング（架空）", "note": null },
+              { "name": "recent6", "status": "present", "value": "4勝2敗", "observed_at": "2026-09-26T23:00:00+09:00", "source": "公開記録（架空）", "note": null },
+              { "name": "serve_hold_rate", "status": "missing", "value": null, "observed_at": null, "source": null, "note": "取得できず" }
+            ],
+            "data_confidence": "medium", "price_gap_factors": ["市場は直近大会の結果を重視（架空）"], "disagreement_reasons": ["相手の連戦の評価差（架空）"], "missing_information": ["serve_hold_rate"], "summary": null
+          },
+          "settlement_override": null, "flags": [] },
+        { "id": "pe-fx-01", "system": "pro_edge", "match_id": "2026-09-28-fxea-fxeb", "run_id": "pe-2026-09-27-0600-fx", "analysis_id": "pe-an-fx-01",
+          "market": "match_winner", "selection": "side_a", "selection_label": "Fixture Esports A",
+          "discovered_at": "2026-09-27T06:08:00+09:00", "locked_at": "2026-09-27T06:32:00+09:00", "bet_at": "2026-09-27T06:42:00+09:00",
+          "price_snapshots": [{ "snapshot_id": "ps-fx-01-an-a", "kind": "analysis", "bookmaker": "BookA", "market": "match_winner", "outcomes": { "side_a": 2.20, "side_b": 1.70 }, "observed_at": "2026-09-27T06:10:00+09:00", "source": "BookA 公開オッズ（架空）" }],
+          "bet_odds": 2.20, "bet_bookmaker": "BookA", "stake": 100,
+          "locked": {
+            "decision": "accepted", "decision_reason": "EV が required_EV 以上", "required_ev": 0.03,
+            "market_reference": { "snapshot_ids": ["ps-fx-01-an-a"], "method": "single_book" },
+            "offered_price": { "snapshot_id": "ps-fx-01-an-a" },
+            "model": { "model_id": "esports-elo-logit", "model_version": "0.1.0", "sport_module": "esports", "method": "elo_logistic", "trained_through": "2026-09-26T23:59:00+09:00" },
+            "base_probability": 0.50, "expert_adjustments": [],
+            "features": [
+              { "name": "map_pool", "status": "present", "value": "Ascent/Bind/Lotus", "observed_at": "2026-09-27T06:00:00+09:00", "source": "公開記録（架空）", "note": null },
+              { "name": "veto", "status": "missing", "value": null, "observed_at": null, "source": null, "note": "試合前に未公開" }
+            ],
+            "data_confidence": "low", "price_gap_factors": ["市場は直近の敗戦を過大評価（架空）"], "disagreement_reasons": ["マップ相性の評価差（架空）"], "missing_information": ["veto"], "summary": null
+          },
+          "settlement_override": null, "flags": [] },
+        { "id": "pe-fx-02", "system": "pro_edge", "match_id": "2026-09-28-fxwa-fxwb", "run_id": "pe-2026-09-27-0600-fx", "analysis_id": "pe-an-fx-02",
+          "market": "match_1x2", "selection": "side_a", "selection_label": "Fixture Women A",
+          "discovered_at": "2026-09-27T06:09:00+09:00", "locked_at": "2026-09-27T06:34:00+09:00", "bet_at": null,
+          "price_snapshots": [{ "snapshot_id": "ps-fx-02-an-a", "kind": "analysis", "bookmaker": "BookA", "market": "match_1x2", "outcomes": { "side_a": 1.30, "draw": 5.00, "side_b": 9.00 }, "observed_at": "2026-09-27T06:12:00+09:00", "source": "BookA 公開オッズ（架空）" }],
+          "bet_odds": null, "bet_bookmaker": null, "stake": null,
+          "locked": {
+            "decision": "rejected", "decision_reason": "価格が適正以下（EV マイナス）", "required_ev": 0.03,
+            "market_reference": { "snapshot_ids": ["ps-fx-02-an-a"], "method": "single_book" },
+            "offered_price": { "snapshot_id": "ps-fx-02-an-a" },
+            "model": { "model_id": "soccer-elo-logit", "model_version": "0.1.0", "sport_module": "soccer", "method": "elo_logistic", "trained_through": "2026-09-26T23:59:00+09:00" },
+            "base_probability": 0.70, "expert_adjustments": [],
+            "features": [{ "name": "rating", "status": "present", "value": 1810, "observed_at": "2026-09-27T06:00:00+09:00", "source": "公開レーティング（架空）", "note": null }],
+            "data_confidence": "medium", "price_gap_factors": [], "disagreement_reasons": [], "missing_information": [], "summary": null
+          },
+          "settlement_override": null, "flags": [] }
+      ],
+      "reported": [
+        { "pick_id": "pe-fx-00-a", "market_probability": 0.525974, "base_probability": 0.56, "expert_adjustment": 0.02, "final_probability": 0.58, "edge": 0.054026, "fair_odds": 1.724138, "ev": 0.073, "required_ev": 0.03, "minimum_entry_odds": 1.775862, "clv_price": null, "clv_probability": null },
+        { "pick_id": "pe-fx-01", "market_probability": 0.435897, "base_probability": 0.50, "expert_adjustment": 0, "final_probability": 0.50, "edge": 0.064103, "fair_odds": 2.0, "ev": 0.10, "required_ev": 0.03, "minimum_entry_odds": 2.06 }
+      ]
+    }
+  }
+}
