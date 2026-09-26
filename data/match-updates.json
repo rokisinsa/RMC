@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "generated_by": "Claude Code（手動確認）",
+    "legacy_source": null,
+    "legacy_commit": null,
+    "as_of": "2026-09-26T19:37:00+09:00",
+    "status": "draft",
+    "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
+  },
+  "runs": [
+    {
+      "run_id": "mr-2026-09-26-1937-result-update",
+      "kind": "result_update",
+      "at": "2026-09-26T19:37:00+09:00",
+      "source": "Claude Code（公開情報で確認）",
+      "note": "基準点以降に開始した試合のうち、信頼できる公開情報で確認できたものだけを反映。その他は reviews に要確認として記録",
+      "changes": [
+        {
+          "match_id": "2026-09-26-fin-fra",
+          "set": {
+            "status": "final",
+            "result": { "final": { "a": 1, "b": 3 }, "text": "France 3-1 Finland（25-17, 18-25, 25-18, 25-15）" }
+          },
+          "evidence": {
+            "sources": [
+              { "name": "Eurosport", "url": "https://www.eurosport.fr/volleyball/championnat-d-europe/2026/euro-les-bleus-en-finale-apres-leur-victoire-contre-la-finlande-3-1_sto23340401/story.shtml" }
+            ],
+            "verified_at": "2026-09-26T19:30:00+09:00",
+            "note": "情報源は1件（Eurosport の試合記事。セットスコアまで記載）。CEV公式・Olympics.com では今回確認できず"
+          }
+        },
+        {
+          "match_id": "2026-09-25-esp-cze",
+          "set": {
+            "status": "final",
+            "result": { "final": { "a": 0, "b": 2 }, "text": "Czechia 2-0 Spain（Muchova 7-5 6-4 Bouzas Maneiro、Noskova 7-6(5) 6-2 Bucsa）" }
+          },
+          "evidence": {
+            "sources": [
+              { "name": "Dawn（AFP配信）", "url": "https://www.dawn.com/news/2032701/noskova-muchova-crush-spain-to-send-czechs-into-billie-jean-king-cup-final" }
+            ],
+            "verified_at": "2026-09-26T19:32:00+09:00",
+            "note": "BJK Cup Finals 準決勝（深圳）。スコアは国別対抗の勝ち数（2-0）"
+          }
+        },
+        {
+          "match_id": "2026-09-26-jpn-nep",
+          "set": {
+            "status": "abandoned",
+            "result": { "text": "No result（雨天中止。Nepal 149/4・15.0オーバー）" }
+          },
+          "evidence": {
+            "sources": [
+              { "name": "ESPNcricinfo（ESPN）", "url": "https://www.espn.com/cricket/series/22547/game/1552770/japan-vs-nepal-5th-match-group-a-asian-games-mens-cricket-competition-2026" }
+            ],
+            "verified_at": "2026-09-26T19:35:00+09:00",
+            "note": "公式結果は No result。勝者なしのため精算上は無効（void）"
+          }
+        }
+      ],
+      "reviews": [
+        { "match_id": "2026-09-25-prz-gri", "status": "review_required", "note": "ATP公式では 9/25 の Prizmic の準々決勝の相手は Daniil Glinka（7-6(4) 7-5 で Prizmic 勝ち）。旧データの相手表記「ダニエル・グリン」と同一人物か確認できないため結果は反映しない" },
+        { "match_id": "2026-09-26-hos-oze", "status": "unknown", "note": "公式な結果を確認できず（検索要約のみで一次情報を確認できない）" },
+        { "match_id": "2026-09-26-kaz-uzb", "status": "unknown", "note": "公式な結果を確認できず" },
+        { "match_id": "2026-09-26-chn-hkg", "status": "unknown", "note": "公式な結果を確認できず" },
+        { "match_id": "2026-09-26-kor-vie", "status": "unknown", "note": "公式な結果を確認できず" },
+        { "match_id": "2026-09-26-ge-vit", "status": "unknown", "note": "開始時刻（18:00）を過ぎているが、公式な結果を確認できず" },
+        { "match_id": "2026-09-26-ag-lgd", "status": "review_required", "note": "開始時刻が未確認のまま。結果も確認できず" },
+        { "match_id": "2026-09-26-fearx-cybme", "status": "review_required", "note": "開始時刻が未確認のまま。結果も確認できず" },
+        { "match_id": "2026-09-26-tmt-rrx", "status": "review_required", "note": "開始時刻が未確認のまま。結果も確認できず" }
+      ]
+    }
+  ]
+}

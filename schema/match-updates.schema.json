@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "match-updates.schema.json",
+  "title": "data/match-updates.json — 移行基準点より後の試合事実の更新ログ（追記のみ）",
+  "$comment": "matches.json（基準点＋人間確認）は書き換えず、その後の結果更新はここへ更新回ごとに追記する。表示・集計は matches.json にこのログを順に適用した「実効の試合事実」を使う。推測で結果を入れない（確認できないものは reviews に要確認として残す）。",
+  "type": "object",
+  "required": ["schema_version", "runs"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "meta": { "$ref": "defs.schema.json#/$defs/fileMeta" },
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["run_id", "kind", "at", "source", "changes", "reviews"],
+        "additionalProperties": false,
+        "properties": {
+          "run_id": { "type": "string", "pattern": "^mr-[a-z0-9._-]+$" },
+          "kind": { "enum": ["result_update", "human_review"] },
+          "at": { "$ref": "defs.schema.json#/$defs/dateTime" },
+          "source": { "type": "string", "minLength": 1, "description": "更新を行った主体（例：GPT定時更新 18:00 / Claude Code / 人間確認）" },
+          "note": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+          "changes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["match_id", "set", "evidence"],
+              "additionalProperties": false,
+              "properties": {
+                "match_id": { "$ref": "defs.schema.json#/$defs/id" },
+                "set": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "description": "変更する試合事実だけ。分析判断は入れられない",
+                  "properties": {
+                    "status": { "enum": ["scheduled", "live", "final", "cancelled", "postponed", "abandoned", "unknown"] },
+                    "result": {
+                      "type": ["object", "null"],
+                      "additionalProperties": false,
+                      "properties": {
+                        "final": { "$ref": "defs.schema.json#/$defs/score" },
+                        "periods": { "type": "object", "additionalProperties": { "$ref": "defs.schema.json#/$defs/score" } },
+                        "winners": { "type": "object", "additionalProperties": { "$ref": "defs.schema.json#/$defs/side" } },
+                        "text": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+                      }
+                    },
+                    "start_at": { "$ref": "defs.schema.json#/$defs/dateTimeOrNull" },
+                    "start_time_status": { "enum": ["recorded", "review_required", "unverified", "unknown"] },
+                    "start_candidates": { "type": "array", "items": { "$ref": "defs.schema.json#/$defs/dateTime" } },
+                    "start_time_note": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+                  }
+                },
+                "evidence": {
+                  "type": "object",
+                  "required": ["sources", "verified_at"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "sources": {
+                      "type": "array", "minItems": 1,
+                      "items": {
+                        "type": "object", "required": ["name", "url"], "additionalProperties": false,
+                        "properties": { "name": { "type": "string", "minLength": 1 }, "url": { "type": "string", "pattern": "^https://" } }
+                      }
+                    },
+                    "verified_at": { "$ref": "defs.schema.json#/$defs/dateTime" },
+                    "note": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+                  }
+                }
+              }
+            }
+          },
+          "reviews": {
+            "type": "array",
+            "description": "確認できず結果を入れなかった試合（要確認として表示する）",
+            "items": {
+              "type": "object",
+              "required": ["match_id", "status", "note"],
+              "additionalProperties": false,
+              "properties": {
+                "match_id": { "$ref": "defs.schema.json#/$defs/id" },
+                "status": { "enum": ["review_required", "unknown"] },
+                "note": { "type": "string", "minLength": 1 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

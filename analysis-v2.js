@@ -1,17 +1,23 @@
 // RMC 分析情報 V2（新データ構造版）。本番 analysis.html / analysis.js とは独立。
-// data/*.json を読み込み、lib/view の表示モデル・描画を呼ぶだけ（数値はすべてデータから自動計算）。
+// data/*.json だけを読み込み、lib/view の表示モデル・描画を呼ぶ（数値はすべてデータから自動計算）。
+// 旧 analysis.html は参照しない（旧分析メモは data/legacy-analysis に移行済み）。
 
 import { buildViewModel } from "./lib/view/model.js";
 import { renderPage } from "./lib/view/render.js";
+import { resolveMode, assertNoDemoInProduction } from "./lib/view/mode.js";
 
-const FILES = {
+export const DATA_PATHS = {
   matches: "data/matches.json",
+  match_updates: "data/match-updates.json",
   recommendations: "data/recommendations.json",
   experience: "data/experience.json",
   value1: "data/value1.json",
   value2: "data/value2.json",
   pro_edge: "data/pro_edge.json",
   legacy_unassigned: "data/legacy-unassigned.json",
+  legacy_analysis_recommendations: "data/legacy-analysis/recommendations.json",
+  legacy_analysis_value1: "data/legacy-analysis/value1.json",
+  legacy_analysis_value2: "data/legacy-analysis/value2.json",
 };
 
 async function getJson(path) {
@@ -20,41 +26,20 @@ async function getJson(path) {
   return res.json();
 }
 
-// ④のデモ表示（?demo=pro_edge）：架空のサンプルを使う。本データには混ぜない
+// ④のデモ（架空データ）。development でしか呼ばれない。本データには混ぜず、__demo 印を付ける
 async function applyDemo(ds) {
   const { makeProEdgeSample } = await import("./tests/fixtures/pro-edge-sample.js");
   const sample = makeProEdgeSample();
   return {
     ...ds,
+    __demo: true,
     matches: { ...ds.matches, update_runs: [...ds.matches.update_runs, ...sample.matches.update_runs], matches: [...ds.matches.matches, ...sample.matches.matches] },
     pro_edge: sample.pro_edge,
   };
 }
 
-// 旧RMCの分析メモ（本文）。data へ未移行のため analysis.html から該当箇所だけを表示する。
-// 旧メモ内の確率表示（事前固定を確認できない値）とスクリプトは取り除く。
-let legacyDoc = null;
-async function legacyDetail(key) {
-  legacyDoc ??= fetch("./analysis.html", { cache: "no-cache" }).then(r => r.text()).then(t => new DOMParser().parseFromString(t, "text/html"));
-  const doc = await legacyDoc;
-  let node = null;
-  if (key.startsWith("id:")) {
-    node = doc.getElementById(key.slice(3))?.querySelector(".detail-cell");
-  } else {
-    const [table, idx] = key.split("#");
-    const mains = [...doc.querySelectorAll(`#${table} tbody > tr`)].filter(tr => tr.querySelector("td.result"));
-    node = mains[Number(idx)]?.nextElementSibling;
-  }
-  if (!node) return null;
-  const clone = node.cloneNode(true);
-  clone.querySelectorAll("script, style, .probability-box, .model-meta").forEach(n => n.remove());
-  clone.querySelectorAll("*").forEach(el => [...el.attributes].forEach(a => { if (/^on/i.test(a.name)) el.removeAttribute(a.name); }));
-  clone.querySelectorAll("details").forEach(d => d.setAttribute("open", ""));
-  return clone.innerHTML;
-}
-
 function wire(root) {
-  root.addEventListener("click", async e => {
+  root.addEventListener("click", e => {
     const tab = e.target.closest(".win-tab");
     if (tab) {
       const g = tab.dataset.windowGroup;
@@ -68,31 +53,22 @@ function wire(root) {
     if (!detail) return;
     detail.hidden = !detail.hidden;
     row.classList.toggle("opened", !detail.hidden);
-    const slot = detail.querySelector(".legacy-detail[data-legacy-key]:not([data-loaded])");
-    if (!detail.hidden && slot) {
-      slot.dataset.loaded = "1";
-      try {
-        const html = await legacyDetail(slot.dataset.legacyKey);
-        slot.innerHTML = html
-          ? `<div class="legacy-title">旧RMCの分析メモ（移行前の原文。確率表示は除外）</div><div class="legacy-body">${html}</div>`
-          : '<div class="sub">旧RMCの分析メモはありません</div>';
-      } catch {
-        slot.innerHTML = '<div class="sub">旧RMCの分析メモを読み込めませんでした</div>';
-      }
-    }
   });
 }
 
 async function main() {
   const root = document.getElementById("app");
+  const mode = resolveMode(location.href);
+  document.documentElement.dataset.mode = mode.mode;
   try {
-    const entries = await Promise.all(Object.entries(FILES).map(async ([k, p]) => [k, await getJson(p)]));
+    const entries = await Promise.all(Object.entries(DATA_PATHS).map(async ([k, p]) => [k, await getJson(p)]));
     let ds = Object.fromEntries(entries);
     const cfg = await getJson("config/pro-edge.config.json");
-    const demo = new URLSearchParams(location.search).get("demo") === "pro_edge";
-    if (demo) ds = await applyDemo(ds);
+    if (mode.demo) ds = await applyDemo(ds);                 // development のときだけ
+    assertNoDemoInProduction(mode, ds);
     const vm = buildViewModel(ds, { proEdgeConfig: cfg });
-    root.innerHTML = renderPage(vm, { demo });
+    root.innerHTML = (mode.mode === "development" ? '<div class="dev-banner">development モード（ローカル確認環境）</div>' : "")
+      + renderPage(vm, { demo: mode.demo });
     wire(root);
     window.__rmcV2 = vm;   // 確認用
   } catch (err) {

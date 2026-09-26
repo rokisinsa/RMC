@@ -9,7 +9,10 @@ import { buildViewModel } from "../lib/view/model.js";
 import { money, amount, RESULT_SYMBOL } from "../lib/view/format.js";
 
 const baseline = JSON.parse(readFileSync(join(ROOT, "baseline/2026-09-26/baseline.json"), "utf8"));
-const vm = buildViewModel(loadDatasets().datasets, { proEdgeConfig: loadProEdgeConfig() });
+// 旧RMC（基準点 06:45 の表示）と条件を揃えるため、基準点後の更新ログは適用せず、基準時刻で表示モデルを作る
+const baselineData = structuredClone(loadDatasets().datasets);
+delete baselineData.match_updates;
+const vm = buildViewModel(baselineData, { proEdgeConfig: loadProEdgeConfig(), now: "2026-09-26T06:45:58+09:00" });
 const matched = [], intended = [], unexplained = [];
 const check = (path, legacy, v2, reasonIfDiff = null) => {
   if (legacy === v2) matched.push(path);
@@ -84,7 +87,7 @@ check("推奨 未確定件数", d.recommendations.allCount, `全${R.rows.length}
 check("推奨 未確定・予想損益", d.recommendations.openProfit, money(R.summary.openProjectedProfit),
   "オッズ不明の未確定20件を −$100 として算入しない（確定仕様4）。オッズ既知の1件（スペイン–チェコ 1.14）だけで +$14.00、残り20件は未計算と表示");
 check("推奨 複利ストック", d.recommendations.compoundStock, amount(R.compound.stock),
-  "Lyon・Italy の開始時刻の人間確認（K1）により並び順が実際の開始時刻順になり、倍額到達が Italy の時点（$214.80）から Lyon→Italy の後（$240.58）へ移った");
+  "V2 は複利を「参考値・順序未確定」として表示し、試合開始時刻順（$140.58）と旧画面と同じ登録時刻順（$114.80）を併記。取引順序（投入時刻・試合終了時刻）を証明できないため、どちらも正式値にしない（scripts/audit-compound.js）");
 check("推奨 複利 現在資金", d.recommendations.compoundNote, `現在資金 ${amount(R.compound.balance)}`);
 check("推奨 1/4ケリー", d.recommendations.quarterKellyProfit, money(R.kelly.profit),
   "現在モデルの再計算確率ではなく、試合前に固定された事前確率（locked）だけを使う（確定ルール）。Lyon 0.922 のみ賭け対象、ODDIK・Italy は期待値マイナスで見送り");

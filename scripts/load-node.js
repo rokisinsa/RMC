@@ -14,6 +14,10 @@ export const DATA_FILES = {
   value2: "value2.json",
   legacy_unassigned: "legacy-unassigned.json",
   pro_edge: "pro_edge.json",
+  match_updates: "match-updates.json",
+  legacy_analysis_recommendations: "legacy-analysis/recommendations.json",
+  legacy_analysis_value1: "legacy-analysis/value1.json",
+  legacy_analysis_value2: "legacy-analysis/value2.json",
 };
 
 export function loadProEdgeConfig(path = join(ROOT, "config", "pro-edge.config.json")) {

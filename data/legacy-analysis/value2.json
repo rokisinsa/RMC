@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "generated_by": "migration/extract-legacy-analysis.js",
+    "legacy_source": "analysis.html",
+    "legacy_commit": "02e5167",
+    "as_of": "2026-09-26T06:45:58+09:00",
+    "status": "draft",
+    "note": "③ VALUE②の旧分析本文（原文と構造化）。書き換え・要約はしていない。事前固定を確認できない確率表示は構造化の対象外（raw_html には原文のまま残る）"
+  },
+  "system": "value2",
+  "entries": [
+    {
+      "pick_id": "v2-legacy-ge-vit",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable2 tbody 行0の直後の分析行"
+      },
+      "raw_html": "<details open><summary>②検証ロジック</summary><p><strong>市場基準：</strong>1.76の単純必要勝率56.8%。<strong>H2H：</strong>確認できる2シリーズはいずれもVitality勝利（2023 LOCK//IN 2-1、Convergence 2-0）。<strong>直近：</strong>GEは直近5シリーズ4勝1敗、Vitalityは3勝2敗でフォームはGE側が強く、これは逆材料。H2Hだけで過大評価せず、BO3/LAN・直近相手強度・情報鮮度を含め60〜63%に抑えた。市場差+3.2〜+6.2ptを初期VALUE②サンプルとして採用。Closing取得後にCLV、結果後にCalibration/均等ROIへ反映する。</p></details>",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "②検証ロジック"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "市場基準：1.76の単純必要勝率56.8%。H2H：確認できる2シリーズはいずれもVitality勝利（2023 LOCK//IN 2-1、Convergence 2-0）。直近：GEは直近5シリーズ4勝1敗、Vitalityは3勝2敗でフォームはGE側が強く、これは逆材料。H2Hだけで過大評価せず、BO3/LAN・直近相手強度・情報鮮度を含め60〜63%に抑えた。市場差+3.2〜+6.2ptを初期VALUE②サンプルとして採用。Closing取得後にCLV、結果後にCalibration/均等ROIへ反映する。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "v2-legacy-loud-edg",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable2 tbody 行1の直後の分析行"
+      },
+      "raw_html": "<details><summary>②検証ロジック</summary><p><strong>H2H：</strong>LOUD 2勝、EDG 1勝。<strong>直近：</strong>LOUDは直近5で3勝2敗、EDGは2勝3敗。LOUDは直近月67%勝率という強材料がある一方、シーズン全体51%で安定性に弱さ。EDGは直近月0%でも長期61%と反発余地がある。1.37では必要73.0%で薄く、1.43なら69.9%。価格依存が大きいため②では監視に落とし、良い価格が取れた場合だけ採用候補にする。</p></details>",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "②検証ロジック"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "H2H：LOUD 2勝、EDG 1勝。直近：LOUDは直近5で3勝2敗、EDGは2勝3敗。LOUDは直近月67%勝率という強材料がある一方、シーズン全体51%で安定性に弱さ。EDGは直近月0%でも長期61%と反発余地がある。1.37では必要73.0%で薄く、1.43なら69.9%。価格依存が大きいため②では監視に落とし、良い価格が取れた場合だけ採用候補にする。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    }
+  ]
+}

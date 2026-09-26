@@ -14,6 +14,8 @@
 | `data/value1.json` | VALUE①の探索回とカード（除外ログ含む） | 入れる |
 | `data/value2.json` | VALUE②の探索回とカード（除外ログ含む） | 入れる |
 | `data/pro_edge.json` | ④ PRO EDGE｜プロ型価格分析（市場価格と独自推定のズレ）。詳細は `docs/pro-edge-spec.md` | 入れる |
+| `data/match-updates.json` | 移行基準点より後の試合事実の更新ログ（追記のみ）。matches.json に順に重ねたものが実効の試合事実。確認できない結果は reviews に要確認として残す | **入れない** |
+| `data/legacy-analysis/<系統>.json` | 旧RMCの分析本文（原文と構造化）。推奨・VALUE①・VALUE②のそれぞれの系統に所属し、系統間で共有しない | 入れる（旧データの原文） |
 | `data/legacy-unassigned.json` | どの系統のものか確定できない旧データ（`system_assignment: "unknown"`）。成績には使わない | — |
 
 ## 2. 4分析系統の独立

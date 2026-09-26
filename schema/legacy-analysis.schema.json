@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "legacy-analysis.schema.json",
+  "title": "data/legacy-analysis/<系統>.json — 旧RMCの分析本文（原文＋構造化）",
+  "$comment": "各系統の分析本文はその系統のファイルにだけ置く（系統間で共有しない）。raw_html は原文のまま、blocks は原文から構造化したもの（書き換え・要約なし）。",
+  "type": "object",
+  "required": ["schema_version", "system", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "meta": { "$ref": "defs.schema.json#/$defs/fileMeta" },
+    "system": { "enum": ["recommendations", "value1", "value2"] },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["pick_id", "source", "raw_html", "blocks", "excluded_from_blocks", "js_summary"],
+        "additionalProperties": false,
+        "properties": {
+          "pick_id": { "$ref": "defs.schema.json#/$defs/id" },
+          "source": {
+            "type": "object", "required": ["file", "commit", "location"], "additionalProperties": false,
+            "properties": {
+              "file": { "const": "analysis.html" },
+              "commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
+              "location": { "type": "string", "minLength": 1 }
+            }
+          },
+          "raw_html": { "type": "string", "minLength": 1 },
+          "blocks": { "type": "array", "items": { "$ref": "#/$defs/block" } },
+          "excluded_from_blocks": {
+            "type": "array",
+            "description": "構造化の対象外にした原文（事前固定を確認できない確率表示など）",
+            "items": {
+              "type": "object", "required": ["class", "text"], "additionalProperties": false,
+              "properties": { "class": { "type": "string" }, "text": { "type": "string" } }
+            }
+          },
+          "js_summary": {
+            "type": ["object", "null"], "additionalProperties": false,
+            "description": "旧 analysis.js の要約文（原文）",
+            "properties": { "market": { "type": "string" }, "reason": { "type": "string" }, "caution": { "type": "string" } }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "block": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": ["title", "subtitle", "section", "heading", "text", "reason", "note", "items", "boxes", "table", "lines"] },
+        "text": { "type": "string" },
+        "title": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": { "type": "object", "required": ["label", "value"], "additionalProperties": false, "properties": { "label": { "type": "string" }, "value": { "type": "string" } } }
+        },
+        "notes": { "type": "array", "items": { "type": "string" } },
+        "boxes": {
+          "type": "array",
+          "items": {
+            "type": "object", "required": ["title", "paragraphs", "list"], "additionalProperties": false,
+            "properties": {
+              "title": { "type": "string" },
+              "paragraphs": { "type": "array", "items": { "type": "string" } },
+              "list": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "headers": { "type": "array", "items": { "type": "string" } },
+        "rows": { "type": "array", "items": { "type": "array", "items": { "type": "string" } } },
+        "lines": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

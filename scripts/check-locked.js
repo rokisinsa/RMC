@@ -5,6 +5,7 @@
 import { execFileSync } from "node:child_process";
 import { loadDatasets, DATA_FILES, ROOT } from "./load-node.js";
 import { checkLockedImmutable, checkMatchHistory, SYSTEMS } from "../lib/integrity.js";
+import { checkMatchUpdatesAppendOnly } from "../lib/match-updates.js";
 
 const base = process.argv[2];
 if (!base) {
@@ -42,6 +43,10 @@ if (isDraft(matchesBefore)) console.log("matches.json: 基準時点は下書き�
 for (const i of isDraft(matchesBefore) ? [] : checkMatchHistory(matchesBefore, datasets.matches ?? null)) {
   console.log(`[${i.level}] ${i.code} ${i.system} ${i.id}: ${i.message}`);
   if (i.level === "error") errors++;
+}
+for (const i of checkMatchUpdatesAppendOnly(readAt(base, DATA_FILES.match_updates), datasets.match_updates ?? null)) {
+  console.log(`[${i.level}] ${i.code}: ${i.message}`);
+  errors++;
 }
 console.log(errors ? `locked 保護違反 ${errors} 件` : "locked 保護: 問題なし");
 process.exit(errors ? 1 : 0);
