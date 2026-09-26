@@ -1,0 +1,116 @@
+name: BET CHANNEL Complete Scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 05:30 / 11:30 / 17:30 / 22:30 JST
+    - cron: '30 20,2,8,13 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/betchannel_full_scan.py'
+      - '.github/workflows/betchannel-complete-scan.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: betchannel-complete-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Selenium
+        run: python -m pip install --disable-pip-version-check selenium==4.35.0
+
+      - name: Verify Chrome
+        run: |
+          command -v google-chrome || command -v chromium || command -v chromium-browser
+          google-chrome --version || chromium --version || chromium-browser --version
+
+      - name: Scan every BET CHANNEL sportsbook category
+        id: scan
+        continue-on-error: true
+        run: |
+          python scripts/betchannel_full_scan.py --out data/betchannel-scan.json
+          cp data/betchannel-scan.json /tmp/betchannel-scan.json
+
+      - name: Upload scan evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: betchannel-scan-${{ github.run_id }}
+          path: |
+            data/betchannel-scan.json
+            /tmp/betchannel-scan.json
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Summarize scan
+        if: always()
+        run: |
+          if [ -f data/betchannel-scan.json ]; then
+            python - <<'PY'
+          import json, os
+          p='data/betchannel-scan.json'
+          d=json.load(open(p,encoding='utf-8'))
+          lines=[
+            '## BET CHANNEL exhaustive scan',
+            f"- complete: {d.get('complete')}",
+            f"- access_status: {d.get('access_status')}",
+            f"- menu_end_verified: {d.get('menu_end_verified')}",
+            f"- category_count: {d.get('category_count')}",
+            f"- failed_category_count: {d.get('failed_category_count')}",
+            f"- event_count: {d.get('event_count')}",
+            f"- started_at: {d.get('started_at')}",
+            f"- finished_at: {d.get('finished_at')}",
+          ]
+          open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8').write('\n'.join(lines)+'\n')
+          print('\n'.join(lines))
+          PY
+          fi
+
+      - name: Reject incomplete scan
+        if: steps.scan.outcome != 'success'
+        run: |
+          echo "BET CHANNEL full scan did not satisfy completeness gate."
+          exit 1
+
+      - name: Validate evidence-backed counts
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/betchannel-scan.json',encoding='utf-8'))
+          assert d['complete'] is True
+          assert d['menu_end_verified'] is True
+          assert d['failed_category_count'] == 0
+          assert d['category_count'] == len(d['categories'])
+          assert d['event_count'] == len(d['event_ids'])
+          assert len(d['event_ids']) == len(set(d['event_ids']))
+          for c in d['categories']:
+              assert len(c['event_ids']) == len(set(c['event_ids']))
+          print('evidence/count validation PASS')
+          PY
+
+      - name: Commit latest complete scan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/betchannel-scan.json
+          if git diff --cached --quiet; then
+            echo "No scan change"
+            exit 0
+          fi
+          git commit -m "Update complete BET CHANNEL scan"
+          git push origin HEAD:main
