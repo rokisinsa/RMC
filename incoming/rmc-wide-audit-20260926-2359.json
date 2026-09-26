@@ -1,0 +1,50 @@
+{
+  "payload_version": 1,
+  "run_id": "rmc-wide-audit-20260926-2359",
+  "source": "ChatGPT complete production trial",
+  "generated_at": "2026-09-26T23:59:00+09:00",
+  "slot": "adhoc",
+  "note": "3 sportsbook category audit + worldwide full-scope trial. No existing logic/locked values changed.",
+  "systems": {
+    "recommendations": {
+      "discovery_runs": [
+        {
+          "run_id": "rec-wide-20260926-2359",
+          "started_at": "2026-09-26T23:59:00+09:00",
+          "slot": "adhoc",
+          "note": "Independent full-scope scan. Master categories built from BET CHANNEL, Casitabi and Yuugado public listings; included mainstream, niche and esports. Checked current/next-day schedules across football, baseball, basketball, tennis, volleyball, handball, hockey, water polo, softball, cricket, table tennis, badminton, squash, darts, snooker, rugby, American football, Aussie rules, cycling, combat sports and esports. Deep-dive disparity examples: China-Kazakhstan W hockey (FIH #4 vs #45; China tournament 13-0,10-0,4-0; Kazakhstan 0-5,0-7,1-4), India-Singapore W hockey (#8 vs #44; India 19-0,17-1,20-1; Singapore lost 0-2 Thailand,0-5 Japan,1-3 Indonesia), Japan-Uzbekistan M volleyball (H2H 1-0 3-0; Japan last5 5-0, Uzbekistan last5 0-5), Qatar-Hong Kong M volleyball (H2H Qatar 2-0; HK last5 0-5). No new formal pick saved because directly verifiable offered odds on the three target sportsbooks were not obtainable from public pages; do not invent odds."
+        }
+      ]
+    },
+    "value1": {
+      "discovery_runs": [
+        {
+          "run_id": "v1-wide-20260926-2359",
+          "started_at": "2026-09-26T23:59:00+09:00",
+          "slot": "adhoc",
+          "note": "Independent full-category scan using the same sportsbook-category master but a separate candidate search. Required win probability/EV cannot be locked without a verified offered price. Strong disparity cards found in Asian Games hockey/volleyball but no fabricated odds; new formal VALUE=0. Existing Shapovalov price analysis remains separate."
+        }
+      ]
+    },
+    "value2": {
+      "discovery_runs": [
+        {
+          "run_id": "v2-wide-20260926-2359",
+          "started_at": "2026-09-26T23:59:00+09:00",
+          "slot": "adhoc",
+          "note": "Independent full-category scan. Reviewed broad current/next-day card universe including niche categories and esports. No new adopted card because calibrated independent probability + verified offered odds + SoS/Upset Risk package was not complete enough for a locked long-run ROI decision. No logic changes."
+        }
+      ]
+    },
+    "pro_edge": {
+      "discovery_runs": [
+        {
+          "run_id": "pe-wide-20260926-2359",
+          "started_at": "2026-09-26T23:59:00+09:00",
+          "slot": "adhoc",
+          "note": "Independent full-category price scan. No accepted/watch card because multiple-book no-vig market snapshot plus reproducible independent base model was not simultaneously available for a new card. Market probability was not copied into base probability. No logic changes."
+        }
+      ]
+    }
+  }
+}
