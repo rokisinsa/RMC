@@ -1,0 +1,50 @@
+{
+  "payload_version": 1,
+  "run_id": "rmc-complete-20260927-0003",
+  "source": "ChatGPT complete production trial",
+  "generated_at": "2026-09-27T00:03:00+09:00",
+  "slot": "adhoc",
+  "note": "3 sportsbook full-category production retest after timestamp audit. Independent worldwide scan; no existing logic or locked values changed.",
+  "systems": {
+    "recommendations": {
+      "discovery_runs": [
+        {
+          "run_id": "rec-complete-20260927-0003",
+          "started_at": "2026-09-27T00:03:00+09:00",
+          "slot": "adhoc",
+          "note": "Independent scan from BET CHANNEL/Casitabi/Yuugado category union. Mainstream+niche+esports, current/next-day. Asian Games disparity deep dives included China-Kazakhstan and India-Singapore women's hockey, Japan-Uzbekistan and Qatar-Hong Kong men's volleyball. No new formal pick because directly verified offered price on target books was unavailable; no invented odds."
+        }
+      ]
+    },
+    "value1": {
+      "discovery_runs": [
+        {
+          "run_id": "v1-complete-20260927-0003",
+          "started_at": "2026-09-27T00:03:00+09:00",
+          "slot": "adhoc",
+          "note": "Independent full-category scan. Strong disparity candidates found, but no new formal VALUE without verified offered odds and complete pre-match probability package. No candidate reuse from recommendation decision."
+        }
+      ]
+    },
+    "value2": {
+      "discovery_runs": [
+        {
+          "run_id": "v2-complete-20260927-0003",
+          "started_at": "2026-09-27T00:03:00+09:00",
+          "slot": "adhoc",
+          "note": "Independent full-category scan. No new adopted card without complete calibrated probability, verified offered price, SoS/freshness/Upset Risk package. Existing logic unchanged."
+        }
+      ]
+    },
+    "pro_edge": {
+      "discovery_runs": [
+        {
+          "run_id": "pe-complete-20260927-0003",
+          "started_at": "2026-09-27T00:03:00+09:00",
+          "slot": "adhoc",
+          "note": "Independent full-category scan. No new accepted card without simultaneous reproducible independent base model and verifiable multi-book market snapshot. Market probability not copied to base probability."
+        }
+      ]
+    }
+  }
+}
