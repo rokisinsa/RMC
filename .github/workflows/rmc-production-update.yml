@@ -51,12 +51,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      # 入力は環境変数で渡す（シェルへ直接埋め込まない）
-      RMC_RUN_ID: ${{ github.event.inputs.run_id || github.event.client_payload.run_id }}
-      RMC_SOURCE: ${{ github.event.inputs.source || github.event.client_payload.source }}
-      RMC_PAYLOAD_PATH: ${{ github.event.inputs.payload_path || github.event.client_payload.payload_path }}
-      RMC_PAYLOAD_JSON: ${{ github.event.inputs.payload_json || (github.event.client_payload.payload && toJSON(github.event.client_payload.payload)) || '' }}
-      RMC_DRY_RUN: ${{ github.event.inputs.dry_run == 'true' || github.event.client_payload.dry_run == true }}
       WORK: .tmp-tests/production-update
     steps:
       - uses: actions/checkout@v4
@@ -68,113 +62,32 @@ jobs:
         with:
           node-version: 22
 
-      - name: 0. incoming payload を自動受信（push 起動時）
-        if: github.event_name == 'push'
+      - name: 0. 起動イベントを安全に入力へ変換
         run: |
-          mapfile -t files < <(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep -E '^incoming/[^/]+\\.json
-        run: |
-          echo "START_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
-          node scripts/rmc-production-update.mjs --receive --out "$WORK/payload.json"
-
-      - name: 2. 検証（dry-run：schema・重複・JST・source・未来情報・locked・損益/ROI/CLV）
-        run: node scripts/rmc-production-update.mjs --payload "$WORK/payload.json" --dry-run --start-sha "$START_SHA" --report "$WORK/dry-run.json"
-
-      - name: 3. 反映（検証をすべて通ったときだけ data/ を変更）
-        if: env.RMC_DRY_RUN != 'true'
-        run: node scripts/rmc-production-update.mjs --payload "$WORK/payload.json" --apply --start-sha "$START_SHA" --report "$WORK/apply.json"
-
-      - name: 4. 変更ファイルの検査（更新してよい data/ のファイルだけ）
-        if: env.RMC_DRY_RUN != 'true'
-        run: node scripts/rmc-production-update.mjs --check-diff
-
-      - name: 5. 全テスト（snapshot 段・live 段：schema/integrity・PRO EDGE・V2・switch gate・本番更新）
-        if: env.RMC_DRY_RUN != 'true'
-        run: npm test
-
-      - name: 6. 移行スナップショットの不変性
-        if: env.RMC_DRY_RUN != 'true'
-        run: node scripts/snapshot-manifest.js verify
-
-      - name: 7. data/*.json のスキーマ・整合性検証
-        if: env.RMC_DRY_RUN != 'true'
-        run: node scripts/validate-data.js
-
-      - name: 8. locked 保護（更新前の main と比較）
-        if: env.RMC_DRY_RUN != 'true'
-        run: node scripts/check-locked.js "$START_SHA"
-
-      - name: 9. 監査（競技偏り・損益/ROI/CLV・データ品質）
-        if: env.RMC_DRY_RUN != 'true'
-        run: node scripts/audit-report.js
-
-      - name: 10. 実運用リハーサル（架空データは data/ のコピーにだけ適用）
-        if: env.RMC_DRY_RUN != 'true'
-        run: |
-          node scripts/rehearsal.js rehearsals/RMC-20260926-REHEARSAL-01
-          git checkout -- rehearsals
-
-      - name: 11. 実行記録に全テスト PASS を記録し、変更ファイルを再検査
-        if: env.RMC_DRY_RUN != 'true'
-        run: |
-          node scripts/rmc-production-update.mjs --finalize --run-id "$RMC_RUN_ID" --actions-result pass
-          node scripts/rmc-production-update.mjs --check-diff
-          node scripts/validate-data.js
-          node scripts/check-locked.js "$START_SHA"
-
-      - name: 12. main へコミット・push（全検証 PASS・全テスト PASS・locked 違反 0 のときだけ）
-        if: env.RMC_DRY_RUN != 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
-          git commit -m "RMC production update: $RMC_RUN_ID"
-          git push origin HEAD:main
-          echo "END_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
-
-      - name: 13. Pages の公開確認
-        if: env.RMC_DRY_RUN != 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          curl -fsS -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$GITHUB_REPOSITORY/pages/builds" > /dev/null || echo "Pages のビルド要求に失敗（自動ビルドを待つ）"
-          owner="${GITHUB_REPOSITORY%%/*}"; repo="${GITHUB_REPOSITORY#*/}"
-          base="https://${owner}.github.io/${repo}"
-          for i in $(seq 1 60); do
-            if curl -fsS "$base/data/automation-runs.json?cb=$RANDOM" | grep -q "\"run_id\": \"$RMC_RUN_ID\""; then
-              code=$(curl -s -o /dev/null -w '%{http_code}' "$base/analysis-v2.html?cb=$RANDOM")
-              echo "PAGES_RESULT=published (analysis-v2.html HTTP $code)" >> "$GITHUB_ENV"
-              [ "$code" = "200" ] && exit 0
-              exit 1
-            fi
-            sleep 10
-          done
-          echo "PAGES_RESULT=timeout" >> "$GITHUB_ENV"
-          exit 1
-
-      - name: 実行結果のまとめ
-        if: always()
-        run: |
-          {
-            echo "## RMC production update: ${RMC_RUN_ID}"
-            echo "- source: ${RMC_SOURCE}"
-            echo "- dry_run: ${RMC_DRY_RUN}"
-            echo "- start_sha: ${START_SHA:-—}"
-            echo "- end_sha: ${END_SHA:-（コミットなし）}"
-            echo "- pages_result: ${PAGES_RESULT:-—}"
-            echo '```'
-            for f in "$WORK/dry-run.json" "$WORK/apply.json"; do
-              [ -f "$f" ] && node -e "const r=JSON.parse(require('fs').readFileSync('$f','utf8'));console.log('$f'.split('/').pop(), 'ok='+r.ok, 'errors='+r.errors.length, 'added='+r.items.filter(i=>i.action==='added').length, 'updated='+r.items.filter(i=>i.action==='updated').length, 'unchanged='+r.items.filter(i=>i.action==='unchanged').length, 'rejected='+r.items.filter(i=>i.action==='rejected').length);for(const e of r.errors.slice(0,30))console.log('  ['+e.category+'] '+e.system+' '+(e.id??'')+': '+e.message)"
-            done
-            echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
- || true)
-          if [ "${#files[@]}" -ne 1 ]; then
-            echo "incoming payload は1コミットにつき1ファイル必須（検出: ${#files[@]}）"
-            exit 2
-          fi
-          payload="${files[0]}"
-          node -e "const fs=require('fs');const p=JSON.parse(fs.readFileSync(process.argv[1],'utf8'));if(!p.run_id||!p.source)process.exit(2);fs.appendFileSync(process.env.GITHUB_ENV,'RMC_RUN_ID='+p.run_id+'\\nRMC_SOURCE='+p.source+'\\nRMC_PAYLOAD_PATH='+process.argv[1]+'\\nRMC_PAYLOAD_JSON=\\nRMC_DRY_RUN=false\\n')" "$payload"
+          node <<'NODE'
+          const fs = require('fs');
+          const cp = require('child_process');
+          const ev = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
+          let runId='', source='', payloadPath='', payloadJson='', dry='false';
+          if (process.env.GITHUB_EVENT_NAME === 'push') {
+            const files = cp.execFileSync('git',['diff-tree','--no-commit-id','--name-only','-r',process.env.GITHUB_SHA],{encoding:'utf8'})
+              .trim().split(/\r?\n/).filter(x=>/^incoming\/[^/]+\.json$/.test(x));
+            if (files.length !== 1) throw new Error('incoming payload は1コミットにつき1ファイル必須（検出: '+files.length+'）');
+            payloadPath=files[0];
+            const p=JSON.parse(fs.readFileSync(payloadPath,'utf8'));
+            runId=p.run_id||''; source=p.source||'';
+          } else if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') {
+            const i=ev.inputs||{};
+            runId=i.run_id||''; source=i.source||''; payloadPath=i.payload_path||''; payloadJson=i.payload_json||''; dry=String(i.dry_run||'false');
+          } else if (process.env.GITHUB_EVENT_NAME === 'repository_dispatch') {
+            const p=ev.client_payload||{};
+            runId=p.run_id||''; source=p.source||''; payloadPath=p.payload_path||''; payloadJson=p.payload ? JSON.stringify(p.payload) : ''; dry=String(p.dry_run||false);
+          } else throw new Error('unsupported event: '+process.env.GITHUB_EVENT_NAME);
+          if(!runId || !source) throw new Error('run_id/source missing');
+          const out={RMC_RUN_ID:runId,RMC_SOURCE:source,RMC_PAYLOAD_PATH:payloadPath,RMC_PAYLOAD_JSON:payloadJson,RMC_DRY_RUN:dry};
+          const esc=s=>String(s).replace(/%/g,'%25').replace(/\r/g,'%0D').replace(/\n/g,'%0A');
+          fs.appendFileSync(process.env.GITHUB_ENV,Object.entries(out).map(([k,v])=>k+'='+esc(v)).join('\n')+'\n');
+          NODE
 
       - name: 1. 受信（run_id・source を payload と照合）
         run: |
