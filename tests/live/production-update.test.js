@@ -35,6 +35,7 @@ function tempData() {
   rmSync(dir, { recursive: true, force: true });
   mkdirSync(dir, { recursive: true });
   cpSync(SNAPSHOT_DATA, dir, { recursive: true });
+  cpSync(join(FIX, "bet-channel-inventory.json"), join(dir, "bet-channel-inventory.json"));
   return dir;
 }
 const mutate = (text, f) => { const p = JSON.parse(text); f(p); return JSON.stringify(p); };
@@ -43,14 +44,16 @@ const cats = r => r.ledger.errors.map(e => e.category);
 function withA() { const dir = tempData(); const r = run(A, dir, NOW_A); assert.ok(r.ok, JSON.stringify(r.ledger.errors)); return dir; }
 
 test("dry-run：本番 data/ を1バイトも変更しない（CLI）", () => {
-  const r = spawnSync(process.execPath, ["scripts/rmc-production-update.mjs", "--payload", "tests/fixtures/production-update/stage-a.json", "--dry-run", "--now", NOW_A], { cwd: ROOT, encoding: "utf8" });
+  const dir = tempData();
+  const r = spawnSync(process.execPath, ["scripts/rmc-production-update.mjs", "--payload", "tests/fixtures/production-update/stage-a.json", "--dry-run", "--now", NOW_A, "--data-dir", dir], { cwd: ROOT, encoding: "utf8" });
   assert.equal(r.status, 0, r.stdout + r.stderr);
   for (const s of ["追加 19件", "更新 0件", "変更なし 0件", "拒否 0件", "locked違反 0件", "schema違反 0件", "重複 0件", "損益差分", "系統別"]) assert.ok(r.stdout.includes(s), s);
   assert.equal(fingerprint(DATA_DIR), liveBefore);
 });
 
 test("dry-run：既存カードの損益は1件も変わらない（新規カードの追加だけ）", () => {
-  const r = runUpdate({ payloadText: A, dataDir: DATA_DIR, now: NOW_A, apply: false });
+  const dir = tempData();
+  const r = runUpdate({ payloadText: A, dataDir: dir, now: NOW_A, apply: false });
   assert.ok(r.ok);
   assert.deepEqual(r.plChanges, []);
   assert.deepEqual(r.written, []);
