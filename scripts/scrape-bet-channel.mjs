@@ -19,9 +19,17 @@ function walk(x, fn, seen=new Set()){
   else for(const v of Object.values(x)) walk(v,fn,seen);
 }
 function eventFrom(o, sourceUrl, category){
-  const id = o.match_id ?? o.matchId ?? o.event_id ?? o.eventId;
+  const hasMeta = ["game_start_date","game_start_time","band_name","graph_choice1","graph_choice2","Choices","match_name","match_title","match_detail"].some(k => Object.prototype.hasOwnProperty.call(o,k));
+  if(!hasMeta) return null;
+  const id = o.match_id ?? o.matchId ?? o.event_id ?? o.eventId ?? o.id;
   if(id == null) return null;
-  const choices = o.Choices ?? o.choices ?? o.choice_list ?? null;
+  const choicesObj = o.Choices ?? o.choices ?? o.choice_list ?? null;
+  const choiceNames=[];
+  if(choicesObj && typeof choicesObj==="object"){
+    walk(choicesObj,x=>{ if(x && typeof x==="object" && x.choice_name) choiceNames.push(clean(x.choice_name)); });
+  }
+  const choice1 = clean(o.graph_choice1 ?? o.choice1_name ?? o.team1_name ?? o.home_name ?? o.home_team ?? choiceNames[0] ?? "") || null;
+  const choice2 = clean(o.graph_choice2 ?? o.choice2_name ?? o.team2_name ?? o.away_name ?? o.away_team ?? choiceNames[1] ?? "") || null;
   return {
     event_id:String(id),
     category:category||null,
@@ -29,14 +37,15 @@ function eventFrom(o, sourceUrl, category){
     game_start_date:o.game_start_date ?? o.start_date ?? o.date ?? null,
     game_start_time:o.game_start_time ?? o.start_time ?? o.time ?? null,
     bet_end_time:o.bet_end_time ?? null,
-    band_name:o.band_name ?? o.league_name ?? o.competition_name ?? null,
+    band_name:clean(o.band_name ?? o.league_name ?? o.competition_name ?? o.match_name ?? o.match_title ?? "") || null,
     status:o.statusString ?? o.status ?? null,
-    choice1:o.graph_choice1 ?? o.choice1_name ?? o.team1_name ?? null,
-    choice2:o.graph_choice2 ?? o.choice2_name ?? o.team2_name ?? null,
-    raw_keys:Object.keys(o).slice(0,40),
-    has_choices:!!choices
+    choice1, choice2,
+    choice_names:[...new Set(choiceNames)].filter(Boolean),
+    raw_keys:Object.keys(o).slice(0,60),
+    has_choices:!!choicesObj
   };
 }
+
 
 const browser = await chromium.launch({headless:true});
 const ctx = await browser.newContext({locale:"ja-JP", timezoneId:"Asia/Tokyo"});
@@ -44,6 +53,7 @@ async function collectPage(url, label){
   const page = await ctx.newPage();
   page.setDefaultTimeout(10000);
   const events = new Map();
+  const oddsByMatch = new Map();
   const jsonUrls = new Set();
   const responseErrors = [];
   const onResponse = async r => {
@@ -51,7 +61,20 @@ async function collectPage(url, label){
     if(!ct.includes("json")) return;
     try{
       const j=await r.json(); jsonUrls.add(r.url());
-      walk(j,o=>{ const e=eventFrom(o,url,label); if(e) events.set(e.event_id,e); });
+      walk(j,o=>{
+        const e=eventFrom(o,url,label);
+        if(e){
+          const prev=events.get(e.event_id);
+          if(!prev) events.set(e.event_id,e);
+          else events.set(e.event_id,{...prev,...Object.fromEntries(Object.entries(e).filter(([,v])=>v!=null && v!=="" && !(Array.isArray(v)&&v.length===0)))});
+        }
+        const mid=o?.match_id ?? o?.matchId;
+        if(mid!=null && (o?.odds!=null || o?.choice_name!=null)){
+          const arr=oddsByMatch.get(String(mid)) ?? [];
+          arr.push({choice_name:clean(o.choice_name)||null,odds:o.odds??null,choice_id:o.choice_id??null,is_valid_bet:o.is_valid_bet??null});
+          oddsByMatch.set(String(mid),arr);
+        }
+      });
     }catch(e){ responseErrors.push({url:r.url(),error:String(e.message||e)}); }
   };
   page.on("response",onResponse);
@@ -86,6 +109,14 @@ async function collectPage(url, label){
       if(id&&!events.has(id)) events.set(id,{event_id:id,category:label||null,source_url:url,game_start_date:null,game_start_time:null,bet_end_time:null,band_name:null,status:null,choice1:null,choice2:null,raw_keys:["dom_fallback"],has_choices:false,dom_text:d.text});
     }
   }catch(e){ responseErrors.push({url,error:String(e.message||e)}); }
+  for(const [mid, odds] of oddsByMatch){
+    const e=events.get(mid);
+    if(e){
+      e.market_choices=odds;
+      if(!e.choice1 && odds[0]?.choice_name) e.choice1=odds[0].choice_name;
+      if(!e.choice2 && odds[1]?.choice_name) e.choice2=odds[1].choice_name;
+    }
+  }
   page.off("response",onResponse);
   await page.close();
   return {url,label,nav_status:navStatus,title,json_urls:[...jsonUrls],event_count:events.size,events:[...events.values()],errors:responseErrors,body_excerpt:bodyText};
@@ -124,6 +155,7 @@ for(const r of [root,...results]) for(const e of r.events||[]){
 }
 const failed=results.filter(r=>!r.nav_status||r.nav_status>=400||r.errors.some(e=>/Timeout|ERR_|Navigation/.test(e.error)));
 const empty=results.filter(r=>r.event_count===0);
+const metadataMissing=[...allEvents.values()].filter(e=>!(e.game_start_date&&e.game_start_time) || !(e.choice1||e.choice2||e.band_name));
 const inventory={
   schema_version:1,
   source:"BET CHANNEL",
@@ -135,11 +167,13 @@ const inventory={
   event_count:allEvents.size,
   failed_category_count:failed.length,
   empty_category_count:empty.length,
-  complete:failed.length===0,
+  metadata_missing_count:metadataMissing.length,
+  complete:failed.length===0 && metadataMissing.length===0 && allEvents.size>0,
   categories:results.map(r=>({ct:r.ct,label:r.label,url:r.url,nav_status:r.nav_status,event_count:r.event_count,json_urls:r.json_urls,errors:r.errors})),
   event_ids:[...allEvents.keys()],
   events:[...allEvents.values()],
   failed_categories:failed.map(r=>({ct:r.ct,label:r.label,url:r.url,errors:r.errors})),
+  metadata_missing_events:metadataMissing.slice(0,200).map(e=>({event_id:e.event_id,category:e.category,game_start_date:e.game_start_date,game_start_time:e.game_start_time,band_name:e.band_name,choice1:e.choice1,choice2:e.choice2,raw_keys:e.raw_keys})),
   integrity:{
     event_count_matches_ids:allEvents.size===new Set(allEvents.keys()).size,
     unique_category_ct:categories.length===new Set(categories.map(c=>c.ct)).size,
@@ -148,5 +182,5 @@ const inventory={
 };
 await fs.mkdir(OUT.split("/").slice(0,-1).join("/")||".",{recursive:true});
 await fs.writeFile(OUT,JSON.stringify(inventory,null,2)+"\n");
-console.log(JSON.stringify({category_count:inventory.category_count,event_count:inventory.event_count,failed_category_count:inventory.failed_category_count,empty_category_count:inventory.empty_category_count,complete:inventory.complete,digest:inventory.integrity.digest},null,2));
+console.log(JSON.stringify({category_count:inventory.category_count,event_count:inventory.event_count,failed_category_count:inventory.failed_category_count,empty_category_count:inventory.empty_category_count,metadata_missing_count:inventory.metadata_missing_count,complete:inventory.complete,digest:inventory.integrity.digest},null,2));
 if(!inventory.menu_end_verified||!inventory.integrity.event_count_matches_ids||failed.length) process.exitCode=2;
