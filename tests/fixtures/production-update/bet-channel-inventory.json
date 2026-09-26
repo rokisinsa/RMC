@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "source": "BET CHANNEL fixture",
+  "source_url": "https://bet-channel.com/matches?lang=ja",
+  "checked_at": "2026-09-27T06:49:00+09:00",
+  "acquisition": "test_fixture",
+  "menu_end_verified": true,
+  "category_count": 4,
+  "category_keys": [
+    "fixture-soccer",
+    "fixture-tennis",
+    "fixture-volleyball",
+    "fixture-esports"
+  ],
+  "event_count": 20,
+  "market_event_count": 20,
+  "failed_category_count": 0,
+  "empty_category_count": 0,
+  "metadata_missing_count": 0,
+  "time_parse_missing_count": 0,
+  "analysis_window": {
+    "start_jst": "2026-09-27T06:49:00+09:00",
+    "end_jst": "2026-09-29T06:49:00+09:00",
+    "hours": 48
+  },
+  "analysis_card_count": 20,
+  "bettable_analysis_card_count": 19,
+  "unavailable_price_card_count": 1,
+  "analysis_card_ids": [
+    "bc-00000000000000000001",
+    "bc-00000000000000000002",
+    "bc-00000000000000000003",
+    "bc-00000000000000000004",
+    "bc-00000000000000000005",
+    "bc-00000000000000000006",
+    "bc-00000000000000000007",
+    "bc-00000000000000000008",
+    "bc-00000000000000000009",
+    "bc-0000000000000000000a",
+    "bc-0000000000000000000b",
+    "bc-0000000000000000000c",
+    "bc-0000000000000000000d",
+    "bc-0000000000000000000e",
+    "bc-0000000000000000000f",
+    "bc-00000000000000000010",
+    "bc-00000000000000000011",
+    "bc-00000000000000000012",
+    "bc-00000000000000000013",
+    "bc-00000000000000000014"
+  ],
+  "analysis_cards": [
+    {
+      "card_id": "bc-00000000000000000001",
+      "start_at_jst": "2026-09-27T08:00:00+09:00",
+      "category": "fixture-soccer",
+      "category_key": "fixture-soccer",
+      "side_a": "A1",
+      "side_b": "B1",
+      "source_event_ids": [
+        "fixture-event-01"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-soccer"
+      ],
+      "seen_in_keys": [
+        "fixture-soccer"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000002",
+      "start_at_jst": "2026-09-27T08:10:00+09:00",
+      "category": "fixture-tennis",
+      "category_key": "fixture-tennis",
+      "side_a": "A2",
+      "side_b": "B2",
+      "source_event_ids": [
+        "fixture-event-02"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-tennis"
+      ],
+      "seen_in_keys": [
+        "fixture-tennis"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000003",
+      "start_at_jst": "2026-09-27T08:20:00+09:00",
+      "category": "fixture-volleyball",
+      "category_key": "fixture-volleyball",
+      "side_a": "A3",
+      "side_b": "B3",
+      "source_event_ids": [
+        "fixture-event-03"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-volleyball"
+      ],
+      "seen_in_keys": [
+        "fixture-volleyball"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000004",
+      "start_at_jst": "2026-09-27T08:30:00+09:00",
+      "category": "fixture-esports",
+      "category_key": "fixture-esports",
+      "side_a": "A4",
+      "side_b": "B4",
+      "source_event_ids": [
+        "fixture-event-04"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-esports"
+      ],
+      "seen_in_keys": [
+        "fixture-esports"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000005",
+      "start_at_jst": "2026-09-27T09:00:00+09:00",
+      "category": "fixture-soccer",
+      "category_key": "fixture-soccer",
+      "side_a": "A5",
+      "side_b": "B5",
+      "source_event_ids": [
+        "fixture-event-05"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-soccer"
+      ],
+      "seen_in_keys": [
+        "fixture-soccer"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000006",
+      "start_at_jst": "2026-09-27T09:10:00+09:00",
+      "category": "fixture-tennis",
+      "category_key": "fixture-tennis",
+      "side_a": "A6",
+      "side_b": "B6",
+      "source_event_ids": [
+        "fixture-event-06"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-tennis"
+      ],
+      "seen_in_keys": [
+        "fixture-tennis"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000007",
+      "start_at_jst": "2026-09-27T09:20:00+09:00",
+      "category": "fixture-volleyball",
+      "category_key": "fixture-volleyball",
+      "side_a": "A7",
+      "side_b": "B7",
+      "source_event_ids": [
+        "fixture-event-07"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-volleyball"
+      ],
+      "seen_in_keys": [
+        "fixture-volleyball"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000008",
+      "start_at_jst": "2026-09-27T09:30:00+09:00",
+      "category": "fixture-esports",
+      "category_key": "fixture-esports",
+      "side_a": "A8",
+      "side_b": "B8",
+      "source_event_ids": [
+        "fixture-event-08"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-esports"
+      ],
+      "seen_in_keys": [
+        "fixture-esports"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000009",
+      "start_at_jst": "2026-09-27T10:00:00+09:00",
+      "category": "fixture-soccer",
+      "category_key": "fixture-soccer",
+      "side_a": "A9",
+      "side_b": "B9",
+      "source_event_ids": [
+        "fixture-event-09"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-soccer"
+      ],
+      "seen_in_keys": [
+        "fixture-soccer"
+      ]
+    },
+    {
+      "card_id": "bc-0000000000000000000a",
+      "start_at_jst": "2026-09-27T10:10:00+09:00",
+      "category": "fixture-tennis",
+      "category_key": "fixture-tennis",
+      "side_a": "A10",
+      "side_b": "B10",
+      "source_event_ids": [
+        "fixture-event-10"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-tennis"
+      ],
+      "seen_in_keys": [
+        "fixture-tennis"
+      ]
+    },
+    {
+      "card_id": "bc-0000000000000000000b",
+      "start_at_jst": "2026-09-27T10:20:00+09:00",
+      "category": "fixture-volleyball",
+      "category_key": "fixture-volleyball",
+      "side_a": "A11",
+      "side_b": "B11",
+      "source_event_ids": [
+        "fixture-event-11"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-volleyball"
+      ],
+      "seen_in_keys": [
+        "fixture-volleyball"
+      ]
+    },
+    {
+      "card_id": "bc-0000000000000000000c",
+      "start_at_jst": "2026-09-27T10:30:00+09:00",
+      "category": "fixture-esports",
+      "category_key": "fixture-esports",
+      "side_a": "A12",
+      "side_b": "B12",
+      "source_event_ids": [
+        "fixture-event-12"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-esports"
+      ],
+      "seen_in_keys": [
+        "fixture-esports"
+      ]
+    },
+    {
+      "card_id": "bc-0000000000000000000d",
+      "start_at_jst": "2026-09-27T11:00:00+09:00",
+      "category": "fixture-soccer",
+      "category_key": "fixture-soccer",
+      "side_a": "A13",
+      "side_b": "B13",
+      "source_event_ids": [
+        "fixture-event-13"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-soccer"
+      ],
+      "seen_in_keys": [
+        "fixture-soccer"
+      ]
+    },
+    {
+      "card_id": "bc-0000000000000000000e",
+      "start_at_jst": "2026-09-27T11:10:00+09:00",
+      "category": "fixture-tennis",
+      "category_key": "fixture-tennis",
+      "side_a": "A14",
+      "side_b": "B14",
+      "source_event_ids": [
+        "fixture-event-14"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-tennis"
+      ],
+      "seen_in_keys": [
+        "fixture-tennis"
+      ]
+    },
+    {
+      "card_id": "bc-0000000000000000000f",
+      "start_at_jst": "2026-09-27T11:20:00+09:00",
+      "category": "fixture-volleyball",
+      "category_key": "fixture-volleyball",
+      "side_a": "A15",
+      "side_b": "B15",
+      "source_event_ids": [
+        "fixture-event-15"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-volleyball"
+      ],
+      "seen_in_keys": [
+        "fixture-volleyball"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000010",
+      "start_at_jst": "2026-09-27T11:30:00+09:00",
+      "category": "fixture-esports",
+      "category_key": "fixture-esports",
+      "side_a": "A16",
+      "side_b": "B16",
+      "source_event_ids": [
+        "fixture-event-16"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-esports"
+      ],
+      "seen_in_keys": [
+        "fixture-esports"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000011",
+      "start_at_jst": "2026-09-27T12:00:00+09:00",
+      "category": "fixture-soccer",
+      "category_key": "fixture-soccer",
+      "side_a": "A17",
+      "side_b": "B17",
+      "source_event_ids": [
+        "fixture-event-17"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-soccer"
+      ],
+      "seen_in_keys": [
+        "fixture-soccer"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000012",
+      "start_at_jst": "2026-09-27T12:10:00+09:00",
+      "category": "fixture-tennis",
+      "category_key": "fixture-tennis",
+      "side_a": "A18",
+      "side_b": "B18",
+      "source_event_ids": [
+        "fixture-event-18"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-tennis"
+      ],
+      "seen_in_keys": [
+        "fixture-tennis"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000013",
+      "start_at_jst": "2026-09-27T12:20:00+09:00",
+      "category": "fixture-volleyball",
+      "category_key": "fixture-volleyball",
+      "side_a": "A19",
+      "side_b": "B19",
+      "source_event_ids": [
+        "fixture-event-19"
+      ],
+      "market_choices": [],
+      "bettable": true,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-volleyball"
+      ],
+      "seen_in_keys": [
+        "fixture-volleyball"
+      ]
+    },
+    {
+      "card_id": "bc-00000000000000000014",
+      "start_at_jst": "2026-09-27T12:30:00+09:00",
+      "category": "fixture-esports",
+      "category_key": "fixture-esports",
+      "side_a": "A20",
+      "side_b": "B20",
+      "source_event_ids": [
+        "fixture-event-20"
+      ],
+      "market_choices": [],
+      "bettable": false,
+      "source_url": "fixture",
+      "seen_in": [
+        "fixture-esports"
+      ],
+      "seen_in_keys": [
+        "fixture-esports"
+      ]
+    }
+  ],
+  "analysis_card_counts_by_category": {
+    "fixture-soccer": 5,
+    "fixture-tennis": 5,
+    "fixture-volleyball": 5,
+    "fixture-esports": 5
+  },
+  "analysis_ready": true,
+  "complete": true,
+  "categories": [
+    {
+      "ct": "1",
+      "label": "fixture-soccer",
+      "url": "fixture",
+      "nav_status": 200,
+      "event_count": 5,
+      "json_urls": [],
+      "errors": []
+    },
+    {
+      "ct": "2",
+      "label": "fixture-tennis",
+      "url": "fixture",
+      "nav_status": 200,
+      "event_count": 5,
+      "json_urls": [],
+      "errors": []
+    },
+    {
+      "ct": "3",
+      "label": "fixture-volleyball",
+      "url": "fixture",
+      "nav_status": 200,
+      "event_count": 5,
+      "json_urls": [],
+      "errors": []
+    },
+    {
+      "ct": "4",
+      "label": "fixture-esports",
+      "url": "fixture",
+      "nav_status": 200,
+      "event_count": 5,
+      "json_urls": [],
+      "errors": []
+    }
+  ],
+  "event_ids": [
+    "fixture-event-01",
+    "fixture-event-02",
+    "fixture-event-03",
+    "fixture-event-04",
+    "fixture-event-05",
+    "fixture-event-06",
+    "fixture-event-07",
+    "fixture-event-08",
+    "fixture-event-09",
+    "fixture-event-10",
+    "fixture-event-11",
+    "fixture-event-12",
+    "fixture-event-13",
+    "fixture-event-14",
+    "fixture-event-15",
+    "fixture-event-16",
+    "fixture-event-17",
+    "fixture-event-18",
+    "fixture-event-19",
+    "fixture-event-20"
+  ],
+  "events": [],
+  "failed_categories": [],
+  "metadata_missing_events": [],
+  "integrity": {
+    "event_count_matches_ids": true,
+    "unique_category_ct": true,
+    "category_keys_complete": true,
+    "category_card_counts_sum": true,
+    "analysis_card_count_matches_ids": true,
+    "digest": "fixture-digest-20260927"
+  }
+}
