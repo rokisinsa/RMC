@@ -149,26 +149,46 @@ jobs:
           git push origin HEAD:main
           echo "END_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
-      - name: 13. Pages の公開確認
+      - name: 13. Pages の公開確認・監査記録を published に確定
         if: env.RMC_DRY_RUN != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          curl -fsS -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$GITHUB_REPOSITORY/pages/builds" > /dev/null || echo "Pages のビルド要求に失敗（自動ビルドを待つ）"
           owner="${GITHUB_REPOSITORY%%/*}"; repo="${GITHUB_REPOSITORY#*/}"
           base="https://${owner}.github.io/${repo}"
+          curl -fsS -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/pages/builds" > /dev/null || echo "Pages build request skipped/failed; waiting for automatic build"
+
+          # まず production commit が公開されたことを実サイトで確認
+          published=0
           for i in $(seq 1 60); do
             if curl -fsS "$base/data/automation-runs.json?cb=$RANDOM" | grep -q "\"run_id\": \"$RMC_RUN_ID\""; then
               code=$(curl -s -o /dev/null -w '%{http_code}' "$base/analysis-v2.html?cb=$RANDOM")
-              echo "PAGES_RESULT=published (analysis-v2.html HTTP $code)" >> "$GITHUB_ENV"
-              [ "$code" = "200" ] && exit 0
-              exit 1
+              if [ "$code" = "200" ]; then published=1; break; fi
             fi
             sleep 10
           done
-          echo "PAGES_RESULT=timeout" >> "$GITHUB_ENV"
-          exit 1
+          [ "$published" = "1" ] || { echo "PAGES_RESULT=timeout" >> "$GITHUB_ENV"; exit 1; }
+
+          # 公開確認できた後だけ audit を pending→published にする
+          node scripts/rmc-production-update.mjs --finalize-pages --run-id "$RMC_RUN_ID"
+          git add data/automation-runs.json
+          git commit -m "RMC Pages verified: $RMC_RUN_ID"
+          git push origin HEAD:main
+          pages_sha=$(git rev-parse HEAD)
+
+          # published 記録そのものも公開サイトへ載ったことを再確認
+          verified=0
+          for i in $(seq 1 60); do
+            body=$(curl -fsS "$base/data/automation-runs.json?cb=$RANDOM" || true)
+            if printf '%s' "$body" | grep -q "\"run_id\": \"$RMC_RUN_ID\"" && printf '%s' "$body" | grep -A35 "\"run_id\": \"$RMC_RUN_ID\"" | grep -q "\"pages_result\": \"published\""; then
+              code=$(curl -s -o /dev/null -w '%{http_code}' "$base/analysis-v2.html?cb=$RANDOM")
+              if [ "$code" = "200" ]; then verified=1; break; fi
+            fi
+            sleep 10
+          done
+          [ "$verified" = "1" ] || { echo "PAGES_RESULT=audit_publish_timeout" >> "$GITHUB_ENV"; exit 1; }
+          echo "PAGES_RESULT=published (analysis-v2.html HTTP 200, audit SHA $pages_sha)" >> "$GITHUB_ENV"
 
       - name: 実行結果のまとめ
         if: always()
