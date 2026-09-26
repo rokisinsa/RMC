@@ -4,7 +4,7 @@
     "generated_by": "scripts/rmc-production-update.mjs",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-09-26T22:50:00+09:00",
+    "as_of": "2026-09-26T22:58:00+09:00",
     "status": "active",
     "note": "本番更新 workflow の実行記録（追記のみ）"
   },
@@ -78,6 +78,41 @@
       "actions_result": "pass",
       "pages_result": "pending",
       "note": "automatic incoming push trigger retest; no card/result/model changes"
+    },
+    {
+      "run_id": "rmc-adhoc-20260926-2258",
+      "started_at": "2026-09-26T22:50:02+09:00",
+      "finished_at": "2026-09-26T22:50:02+09:00",
+      "source": "ChatGPT adhoc production trial 22:58",
+      "payload_generated_at": "2026-09-26T22:58:00+09:00",
+      "payload_sha256": "b7b8cc901e66be1cb56a3186e37d06b55e522d6c2e551215885674500ac6495e",
+      "start_sha": "3a6b414c126ed93978ba9ea95466c28e733211d8",
+      "end_sha": null,
+      "systems_checked": [
+        "recommendations",
+        "experience",
+        "value1",
+        "value2",
+        "pro_edge"
+      ],
+      "cards_checked": 45,
+      "results_updated": 0,
+      "metadata_updated": 0,
+      "new_candidates": {
+        "recommendations": 0,
+        "experience": 0,
+        "value1": 0,
+        "value2": 0,
+        "pro_edge": 0
+      },
+      "accepted": 0,
+      "watch": 0,
+      "rejected": 0,
+      "postmortems_created": 0,
+      "validation_result": "pass",
+      "actions_result": "pass",
+      "pages_result": "pending",
+      "note": "今すぐ本番試走。最新Webで9/26-27の実カード・実オッズを確認。確認例: ATP Chengdu Mannarino-Shapovalov、ATP Hangzhou Gaston-Rublev、Laver Cup Alcaraz-Fritz等。①〜④は独立探索し、H2H/直近6-10/ランキング/当日メンバー等を同一試走で十分に検証できないため新規採用は強制しない。"
     }
   ]
 }
