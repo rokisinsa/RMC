@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "$comment": "④ PRO EDGE の設定。値を変えても locked 済みカードの required_ev は変わらない（カードごとに固定）。",
+  "required_ev": 0.03,
+  "odds": {
+    "min": 1.01,
+    "max": 1000,
+    "overround_min": 1.0,
+    "overround_max": 1.25
+  },
+  "consensus": {
+    "min_bookmakers": 2,
+    "method": "mean_no_vig"
+  },
+  "evaluation": {
+    "windows": [20, 50, 100, "all"],
+    "min_sample_all": 20,
+    "calibration": {
+      "bins": 10,
+      "min_total": 100,
+      "min_per_bin": 10
+    }
+  }
+}

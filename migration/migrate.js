@@ -397,6 +397,12 @@ const out = {
   experience: { schema_version: 1, meta: meta("経験値取引"), system: "experience", picks: expPicks },
   value1: { schema_version: 1, meta: meta("VALUE①"), system: "value1", discovery_runs: [legacyRun("v1-", "VALUE①")], excluded_log: [], picks: valuePicks("value1", "v1-", "oddsTestTable") },
   value2: { schema_version: 1, meta: meta("VALUE②"), system: "value2", discovery_runs: [legacyRun("v2-", "VALUE②")], excluded_log: [], picks: valuePicks("value2", "v2-", "oddsTestTable2") },
+  // ④ PRO EDGE は新設の独立系統。旧RMCに該当データは無いので、空の下書きとして作る（架空のカードは入れない）
+  pro_edge: {
+    schema_version: 1,
+    meta: { ...meta("④ PRO EDGE｜プロ型価格分析"), note: "④ PRO EDGE：新設の独立分析系統。旧RMCに対応するデータは無いため空。候補は④自身の探索回（pe-…）で独立に追加する。analysis.html は未切り替え。" },
+    system: "pro_edge", discovery_runs: [], picks: [],
+  },
   // 旧HTMLの配置だけではどの系統の除外か確定できない記録（どの系統にも帰属させない）
   legacy_unassigned: {
     schema_version: 1, meta: meta("系統未確定の旧データ"),
@@ -414,7 +420,7 @@ const out = {
 mkdirSync(join(ROOT, "data"), { recursive: true });
 const FILES = {
   matches: "matches.json", recommendations: "recommendations.json", experience: "experience.json",
-  value1: "value1.json", value2: "value2.json", legacy_unassigned: "legacy-unassigned.json",
+  value1: "value1.json", value2: "value2.json", legacy_unassigned: "legacy-unassigned.json", pro_edge: "pro_edge.json",
 };
 for (const [k, f] of Object.entries(FILES)) writeFileSync(join(ROOT, "data", f), JSON.stringify(out[k], null, 2) + "\n");
 

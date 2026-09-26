@@ -13,13 +13,15 @@
 | `data/experience.json` | 経験値取引（実際に投入した取引） | 入れる |
 | `data/value1.json` | VALUE①の探索回とカード（除外ログ含む） | 入れる |
 | `data/value2.json` | VALUE②の探索回とカード（除外ログ含む） | 入れる |
+| `data/pro_edge.json` | ④ PRO EDGE｜プロ型価格分析（市場価格と独自推定のズレ）。詳細は `docs/pro-edge-spec.md` | 入れる |
 | `data/legacy-unassigned.json` | どの系統のものか確定できない旧データ（`system_assignment: "unknown"`）。成績には使わない | — |
 
-## 2. 3分析系統の独立
+## 2. 4分析系統の独立
 
-- 新規候補探索は **推奨・VALUE①・VALUE②で3回それぞれ独立** に行う。各ファイルの `discovery_runs` に、その系統自身の探索回だけを記録する。
-- `run_id` の先頭は `rec-` / `v1-` / `v2-`。カードの `run_id` は同じファイル内の探索回だけを参照できる。
-- カードIDの先頭は `rec-` / `exp-` / `v1-` / `v2-` で、全系統を通して一意にする。
+- 新規候補探索は **①推奨・②VALUE①・③VALUE②・④PRO EDGE の4回をそれぞれ独立** に行う。各ファイルの `discovery_runs` に、その系統自身の探索回だけを記録する。
+- `run_id` の先頭は `rec-` / `v1-` / `v2-` / `pe-`。カードの `run_id` は同じファイル内の探索回だけを参照できる。
+- カードIDの先頭は `rec-` / `exp-` / `v1-` / `v2-` / `pe-` で、全系統を通して一意にする。
+- 新規カードは、その系統自身の分析ID `analysis_id`（`rec-an-` / `v1-an-` / `v2-an-` / `pe-an-`）が必須（`ANALYSIS_ID_MISSING` / `ANALYSIS_ID_PREFIX`）。旧データは記録がないため null。
 - 他系統のカードIDや `run_id` を、どの項目の値としても参照してはいけない（`CROSS_SYSTEM_REFERENCE`）。
 - 共通候補を1回取得して3系統へ振り分ける構造は禁止。共通の探索回を置くと、`RUN_ID_PREFIX` と `ID_COLLISION` で検出される。
 - 共有してよいのは `matches.json` の試合事実だけ。複数系統が同じ `match_id` を参照するのは正常。

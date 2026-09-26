@@ -13,7 +13,12 @@ export const DATA_FILES = {
   value1: "value1.json",
   value2: "value2.json",
   legacy_unassigned: "legacy-unassigned.json",
+  pro_edge: "pro_edge.json",
 };
+
+export function loadProEdgeConfig(path = join(ROOT, "config", "pro-edge.config.json")) {
+  return JSON.parse(readFileSync(path, "utf8"));
+}
 
 export function loadSchemas(dir = join(ROOT, "schema")) {
   const schemas = {};

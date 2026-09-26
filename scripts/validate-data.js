@@ -1,7 +1,7 @@
 // data/*.json をスキーマと整合性ルールで検証する。error が1件でもあれば終了コード1。
 // 使い方: node scripts/validate-data.js [データディレクトリ]
 
-import { loadSchemas, loadDatasets } from "./load-node.js";
+import { loadSchemas, loadDatasets, loadProEdgeConfig } from "./load-node.js";
 import { validateDataset } from "../lib/validate.js";
 
 const dir = process.argv[2];
@@ -13,7 +13,7 @@ if (Object.keys(datasets).length === 0) {
 }
 if (missing.length) console.log(`未作成のデータファイル: ${missing.join(", ")}`);
 
-const issues = validateDataset(datasets, loadSchemas());
+const issues = validateDataset(datasets, loadSchemas(), { proEdgeConfig: loadProEdgeConfig() });
 for (const i of issues) {
   console.log(`[${i.level}] ${i.code} ${i.system}${i.id ? ` ${i.id}` : ""}: ${i.message}`);
 }

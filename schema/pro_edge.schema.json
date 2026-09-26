@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pro_edge.schema.json",
+  "title": "data/pro_edge.json — ④ PRO EDGE｜プロ型価格分析 固有データ",
+  "$comment": "市場価格とRMC独自推定勝率のズレを探す独立系統。保存するのは入力（価格スナップショット・基本推定・補正・判断）だけで、市場確率・edge・EV・fair odds・CLV は lib/pro-edge で毎回計算する。",
+  "type": "object",
+  "required": ["schema_version", "system", "discovery_runs", "picks"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "meta": { "$ref": "defs.schema.json#/$defs/fileMeta" },
+    "system": { "const": "pro_edge" },
+    "discovery_runs": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "defs.schema.json#/$defs/discoveryRun" },
+          { "properties": { "run_id": { "pattern": "^pe-" } } }
+        ]
+      }
+    },
+    "picks": { "type": "array", "items": { "$ref": "#/$defs/pick" } }
+  },
+  "$defs": {
+    "odds": { "type": "number", "exclusiveMinimum": 1 },
+    "probabilityOpen": { "type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 1 },
+    "snapshot": {
+      "type": "object",
+      "required": ["snapshot_id", "kind", "bookmaker", "market", "outcomes", "observed_at", "source"],
+      "additionalProperties": false,
+      "description": "ブックメーカー1社・1時点の元オッズ（控除込み）。kind: opening=始値 / analysis=分析時点 / closing=締切（試合開始直前）",
+      "properties": {
+        "snapshot_id": { "type": "string", "pattern": "^ps-[a-z0-9._-]+$" },
+        "kind": { "enum": ["opening", "analysis", "closing"] },
+        "bookmaker": { "type": "string", "minLength": 1 },
+        "market": { "$ref": "defs.schema.json#/$defs/market" },
+        "outcomes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "side_a": { "$ref": "#/$defs/odds" },
+            "side_b": { "$ref": "#/$defs/odds" },
+            "draw": { "$ref": "#/$defs/odds" }
+          }
+        },
+        "observed_at": { "$ref": "defs.schema.json#/$defs/dateTime" },
+        "source": { "type": "string", "minLength": 1 }
+      }
+    },
+    "feature": {
+      "type": "object",
+      "required": ["name", "status", "value", "observed_at", "source"],
+      "additionalProperties": false,
+      "description": "モデル・分析に使った特徴量。取得できないものは status:missing・value:null（推測で埋めない）",
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+        "status": { "enum": ["present", "missing"] },
+        "value": {},
+        "observed_at": { "$ref": "defs.schema.json#/$defs/dateTimeOrNull" },
+        "source": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+        "note": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+      }
+    },
+    "expertAdjustment": {
+      "type": "object",
+      "required": ["adjustment_value", "category", "reason", "source", "created_at"],
+      "additionalProperties": false,
+      "description": "モデル外情報による補正。base_probability は上書きせず、final = base + Σ adjustment_value",
+      "properties": {
+        "adjustment_value": { "type": "number", "minimum": -0.5, "maximum": 0.5 },
+        "category": {
+          "enum": ["roster", "injury", "absence", "substitution", "condition", "surface", "patch", "weather", "motivation", "schedule", "travel", "other"]
+        },
+        "reason": { "type": "string", "minLength": 1 },
+        "source": { "type": "string", "minLength": 1 },
+        "created_at": { "$ref": "defs.schema.json#/$defs/dateTime" }
+      }
+    },
+    "locked": {
+      "type": ["object", "null"],
+      "required": ["decision", "required_ev", "market_reference", "offered_price", "model", "base_probability", "expert_adjustments", "features", "data_confidence"],
+      "additionalProperties": false,
+      "description": "試合開始前に固定した④の分析。locked_at 以降は変更禁止",
+      "properties": {
+        "decision": { "enum": ["accepted", "watch", "rejected"], "description": "accepted=本成績 / watch=参考成績 / rejected=集計外" },
+        "decision_reason": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+        "required_ev": { "type": "number", "minimum": 0, "description": "判断時点の必要EV（設定ファイルの値をカードごとに固定）" },
+        "market_reference": {
+          "type": "object",
+          "required": ["snapshot_ids", "method"],
+          "additionalProperties": false,
+          "properties": {
+            "snapshot_ids": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+            "method": { "enum": ["single_book", "consensus"] }
+          }
+        },
+        "offered_price": {
+          "type": "object",
+          "required": ["snapshot_id"],
+          "additionalProperties": false,
+          "description": "EV 計算に使った提示価格（出典・取得時刻はスナップショットで追跡）",
+          "properties": { "snapshot_id": { "type": "string" } }
+        },
+        "model": {
+          "type": "object",
+          "required": ["model_id", "model_version", "sport_module", "method", "trained_through"],
+          "additionalProperties": false,
+          "properties": {
+            "model_id": { "type": "string", "minLength": 1 },
+            "model_version": { "type": "string", "minLength": 1 },
+            "sport_module": { "enum": ["tennis", "soccer", "basketball", "baseball", "volleyball", "esports", "handball", "cricket", "other"] },
+            "method": { "enum": ["elo", "elo_logistic", "rating_logistic", "logistic"] },
+            "trained_through": { "$ref": "defs.schema.json#/$defs/dateTime", "description": "学習に使ったデータの終端（予測時点より前であること）" }
+          }
+        },
+        "base_probability": { "$ref": "#/$defs/probabilityOpen" },
+        "expert_adjustments": { "type": "array", "items": { "$ref": "#/$defs/expertAdjustment" } },
+        "features": { "type": "array", "items": { "$ref": "#/$defs/feature" } },
+        "data_confidence": { "enum": ["high", "medium", "low"] },
+        "price_gap_factors": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "disagreement_reasons": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "missing_information": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "summary": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+      }
+    },
+    "pick": {
+      "type": "object",
+      "required": [
+        "id", "system", "match_id", "run_id", "analysis_id", "market", "selection",
+        "discovered_at", "locked_at", "bet_at", "price_snapshots", "bet_odds", "stake",
+        "locked", "settlement_override", "flags"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^pe-[a-z0-9._-]+$" },
+        "system": { "const": "pro_edge" },
+        "match_id": { "$ref": "defs.schema.json#/$defs/id" },
+        "run_id": { "type": "string", "pattern": "^pe-[a-z0-9._-]+$" },
+        "analysis_id": { "type": "string", "pattern": "^pe-an-[a-z0-9._-]+$" },
+        "market": { "$ref": "defs.schema.json#/$defs/market", "description": "market_type" },
+        "selection": { "$ref": "defs.schema.json#/$defs/side" },
+        "selection_label": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+        "discovered_at": { "$ref": "defs.schema.json#/$defs/dateTime" },
+        "locked_at": { "$ref": "defs.schema.json#/$defs/dateTimeOrNull" },
+        "bet_at": { "$ref": "defs.schema.json#/$defs/dateTimeOrNull" },
+        "live": { "type": "boolean" },
+        "price_snapshots": { "type": "array", "items": { "$ref": "#/$defs/snapshot" }, "description": "追記のみ（締切オッズは試合開始時に追加）" },
+        "bet_odds": { "type": ["number", "null"], "exclusiveMinimum": 1, "description": "実際の購入価格。無ければ null" },
+        "bet_bookmaker": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+        "stake": { "type": ["number", "null"], "minimum": 0, "description": "accepted は投入額、watch / rejected は null（参考成績は$100仮定）" },
+        "locked": { "$ref": "#/$defs/locked" },
+        "recalculated_reference": { "type": "array", "items": { "$ref": "defs.schema.json#/$defs/recalculatedReference" } },
+        "settlement_override": { "$ref": "defs.schema.json#/$defs/settlementOverride" },
+        "flags": { "$ref": "defs.schema.json#/$defs/flags" },
+        "note": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+      }
+    }
+  }
+}

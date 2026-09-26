@@ -352,6 +352,14 @@
           ],
           "pattern": "^[a-z0-9][a-z0-9._-]*$"
         },
+        "analysis_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(rec|v1|v2)-an-[a-z0-9._-]+$",
+          "description": "その系統自身の分析ID（新規カードは必須。旧データは記録がないため null）"
+        },
         "bet_at": {
           "$ref": "#/$defs/dateTimeOrNull"
         },
