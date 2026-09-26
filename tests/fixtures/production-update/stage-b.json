@@ -174,7 +174,43 @@
         "fixture-volleyball",
         "fixture-esports"
       ],
-      "unavailable_sources": []
+      "unavailable_sources": [],
+      "mode": "bet_channel_only",
+      "source_audit": {
+        "bet_channel": {
+          "checked_at": "2026-09-27T18:10:00+09:00",
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja"
+          ],
+          "menu_end_verified": true,
+          "category_count": 4,
+          "event_count": 20,
+          "access_status": "direct",
+          "event_ids": [
+            "fixture-event-01",
+            "fixture-event-02",
+            "fixture-event-03",
+            "fixture-event-04",
+            "fixture-event-05",
+            "fixture-event-06",
+            "fixture-event-07",
+            "fixture-event-08",
+            "fixture-event-09",
+            "fixture-event-10",
+            "fixture-event-11",
+            "fixture-event-12",
+            "fixture-event-13",
+            "fixture-event-14",
+            "fixture-event-15",
+            "fixture-event-16",
+            "fixture-event-17",
+            "fixture-event-18",
+            "fixture-event-19",
+            "fixture-event-20"
+          ],
+          "note": "test fixture only"
+        }
+      }
     },
     "systems": {
       "recommendations": {
@@ -195,7 +231,35 @@
           "fixture-volleyball",
           "fixture-esports"
         ],
-        "unscanned_sport_names": []
+        "unscanned_sport_names": [],
+        "card_ids": [
+          "fixture-event-01",
+          "fixture-event-02",
+          "fixture-event-03",
+          "fixture-event-04",
+          "fixture-event-05",
+          "fixture-event-06",
+          "fixture-event-07",
+          "fixture-event-08",
+          "fixture-event-09",
+          "fixture-event-10",
+          "fixture-event-11",
+          "fixture-event-12",
+          "fixture-event-13",
+          "fixture-event-14",
+          "fixture-event-15",
+          "fixture-event-16",
+          "fixture-event-17",
+          "fixture-event-18",
+          "fixture-event-19",
+          "fixture-event-20"
+        ],
+        "sport_card_counts": {
+          "fixture-soccer": 5,
+          "fixture-tennis": 5,
+          "fixture-volleyball": 5,
+          "fixture-esports": 5
+        }
       },
       "value1": {
         "target_sports": 4,
@@ -215,7 +279,35 @@
           "fixture-volleyball",
           "fixture-esports"
         ],
-        "unscanned_sport_names": []
+        "unscanned_sport_names": [],
+        "card_ids": [
+          "fixture-event-01",
+          "fixture-event-02",
+          "fixture-event-03",
+          "fixture-event-04",
+          "fixture-event-05",
+          "fixture-event-06",
+          "fixture-event-07",
+          "fixture-event-08",
+          "fixture-event-09",
+          "fixture-event-10",
+          "fixture-event-11",
+          "fixture-event-12",
+          "fixture-event-13",
+          "fixture-event-14",
+          "fixture-event-15",
+          "fixture-event-16",
+          "fixture-event-17",
+          "fixture-event-18",
+          "fixture-event-19",
+          "fixture-event-20"
+        ],
+        "sport_card_counts": {
+          "fixture-soccer": 5,
+          "fixture-tennis": 5,
+          "fixture-volleyball": 5,
+          "fixture-esports": 5
+        }
       },
       "value2": {
         "target_sports": 4,
@@ -235,7 +327,35 @@
           "fixture-volleyball",
           "fixture-esports"
         ],
-        "unscanned_sport_names": []
+        "unscanned_sport_names": [],
+        "card_ids": [
+          "fixture-event-01",
+          "fixture-event-02",
+          "fixture-event-03",
+          "fixture-event-04",
+          "fixture-event-05",
+          "fixture-event-06",
+          "fixture-event-07",
+          "fixture-event-08",
+          "fixture-event-09",
+          "fixture-event-10",
+          "fixture-event-11",
+          "fixture-event-12",
+          "fixture-event-13",
+          "fixture-event-14",
+          "fixture-event-15",
+          "fixture-event-16",
+          "fixture-event-17",
+          "fixture-event-18",
+          "fixture-event-19",
+          "fixture-event-20"
+        ],
+        "sport_card_counts": {
+          "fixture-soccer": 5,
+          "fixture-tennis": 5,
+          "fixture-volleyball": 5,
+          "fixture-esports": 5
+        }
       },
       "pro_edge": {
         "target_sports": 4,
@@ -255,7 +375,35 @@
           "fixture-volleyball",
           "fixture-esports"
         ],
-        "unscanned_sport_names": []
+        "unscanned_sport_names": [],
+        "card_ids": [
+          "fixture-event-01",
+          "fixture-event-02",
+          "fixture-event-03",
+          "fixture-event-04",
+          "fixture-event-05",
+          "fixture-event-06",
+          "fixture-event-07",
+          "fixture-event-08",
+          "fixture-event-09",
+          "fixture-event-10",
+          "fixture-event-11",
+          "fixture-event-12",
+          "fixture-event-13",
+          "fixture-event-14",
+          "fixture-event-15",
+          "fixture-event-16",
+          "fixture-event-17",
+          "fixture-event-18",
+          "fixture-event-19",
+          "fixture-event-20"
+        ],
+        "sport_card_counts": {
+          "fixture-soccer": 5,
+          "fixture-tennis": 5,
+          "fixture-volleyball": 5,
+          "fixture-esports": 5
+        }
       }
     }
   }
