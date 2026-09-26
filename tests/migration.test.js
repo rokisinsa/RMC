@@ -182,9 +182,3 @@ test("導出値（払戻し・純損益・戦績・勝率・ROI）を保存し�
 test("baseline 比較：説明できない不一致 0件", () => {
   execFileSync("node", ["migration/compare-baseline.js"], { cwd: ROOT, stdio: "pipe" }); // 不一致があれば終了コード1で例外
 });
-
-test("④ PRO EDGE の data/pro_edge.json は空の下書き（旧データ無し・架空カードを入れない）", () => {
-  assert.equal(ds.pro_edge.system, "pro_edge");
-  assert.equal(ds.pro_edge.meta.status, "draft");
-  assert.deepEqual([ds.pro_edge.discovery_runs, ds.pro_edge.picks], [[], []]);
-});

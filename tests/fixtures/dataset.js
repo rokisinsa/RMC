@@ -31,8 +31,6 @@ function pick(system, id, fields) {
     stake: fields.stake === undefined ? 100 : fields.stake,
     discovered_at: fields.discovered_at ?? `2026-09-19T23:10:00${JST}`,
     run_id: fields.run_id === undefined ? null : fields.run_id,
-    analysis_id: fields.analysis_id !== undefined ? fields.analysis_id
-      : system === "experience" ? null : `${{ recommendations: "rec-an-", value1: "v1-an-", value2: "v2-an-" }[system]}${id.split("-").slice(1).join("-")}`,
     bet_at: fields.bet_at ?? null,
     locked_at: fields.locked_at === undefined ? `2026-09-19T23:30:00${JST}` : fields.locked_at,
     live: fields.live ?? false,

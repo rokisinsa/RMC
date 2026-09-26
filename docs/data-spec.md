@@ -21,7 +21,7 @@
 - 新規候補探索は **①推奨・②VALUE①・③VALUE②・④PRO EDGE の4回をそれぞれ独立** に行う。各ファイルの `discovery_runs` に、その系統自身の探索回だけを記録する。
 - `run_id` の先頭は `rec-` / `v1-` / `v2-` / `pe-`。カードの `run_id` は同じファイル内の探索回だけを参照できる。
 - カードIDの先頭は `rec-` / `exp-` / `v1-` / `v2-` / `pe-` で、全系統を通して一意にする。
-- 新規カードは、その系統自身の分析ID `analysis_id`（`rec-an-` / `v1-an-` / `v2-an-` / `pe-an-`）が必須（`ANALYSIS_ID_MISSING` / `ANALYSIS_ID_PREFIX`）。旧データは記録がないため null。
+- 分析ID `analysis_id`（`pe-an-`）は ④ PRO EDGE だけの追跡項目で、④のカードには必須（`ANALYSIS_ID_MISSING` / `ANALYSIS_ID_PREFIX`）。①推奨・②VALUE①・③VALUE②には適用しない（④の追加を理由に①②③を変更しない）。
 - 他系統のカードIDや `run_id` を、どの項目の値としても参照してはいけない（`CROSS_SYSTEM_REFERENCE`）。
 - 共通候補を1回取得して3系統へ振り分ける構造は禁止。共通の探索回を置くと、`RUN_ID_PREFIX` と `ID_COLLISION` で検出される。
 - 共有してよいのは `matches.json` の試合事実だけ。複数系統が同じ `match_id` を参照するのは正常。

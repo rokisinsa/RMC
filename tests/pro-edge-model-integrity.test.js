@@ -200,7 +200,6 @@ test("④が①〜③の探索回・分析ID・カードIDを流用したら err
     ds => { ds.pro_edge.picks[0].run_id = "v1-2026-09-19-23"; },
     ds => { ds.pro_edge.picks[0].analysis_id = "v2-an-a"; },
     ds => { ds.pro_edge.picks[0].note = "rec-r1"; },
-    ds => { ds.value1.picks[0].analysis_id = "pe-an-s1"; },
   ];
   for (const mutate of cases) {
     const ds = combined();
@@ -210,10 +209,14 @@ test("④が①〜③の探索回・分析ID・カードIDを流用したら err
   }
 });
 
-test("新規カードは系統ごとの分析IDが必須（①〜③も同じ）", () => {
+test("分析ID（analysis_id）は④だけに必須。①②③には適用しない（④追加で①②③を変えない）", () => {
   const ds = combined();
-  ds.value2.picks[0].analysis_id = null;
-  assert.ok(checkIndependence(ds).some(i => i.code === "ANALYSIS_ID_MISSING" && i.system === "value2"));
+  assert.ok(ds.value2.picks.every(p => !("analysis_id" in p)));      // ①②③の fixture は④追加前のまま
+  assert.ok(!checkIndependence(ds).some(i => i.code === "ANALYSIS_ID_MISSING" && i.system !== "pro_edge"));
+  ds.pro_edge.picks[0].analysis_id = null;
+  assert.ok(checkIndependence(ds).some(i => i.code === "ANALYSIS_ID_MISSING" && i.system === "pro_edge"));
+  ds.pro_edge.picks[0].analysis_id = "v1-an-x";
+  assert.ok(checkIndependence(ds).some(i => i.code === "ANALYSIS_ID_PREFIX" && i.system === "pro_edge"));
 });
 
 test("④の基本推定が他系統の推定値と完全一致したら流用の疑いを warning", () => {
