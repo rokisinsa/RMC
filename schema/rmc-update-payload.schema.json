@@ -293,8 +293,6 @@
           "type": "object",
           "required": [
             "bet_channel",
-            "casitabi",
-            "yuugado",
             "union_sports",
             "source_audit"
           ],
@@ -344,9 +342,7 @@
             "source_audit": {
               "type": "object",
               "required": [
-                "bet_channel",
-                "casitabi",
-                "yuugado"
+                "bet_channel"
               ],
               "additionalProperties": false,
               "properties": {
@@ -537,6 +533,13 @@
                   }
                 }
               }
+            },
+            "mode": {
+              "enum": [
+                "bet_channel_only",
+                "three_site"
+              ],
+              "description": "bet_channel_onlyならBET CHANNELだけを完全性の母表にする。省略時は旧互換のthree_site扱い。"
             }
           }
         },
