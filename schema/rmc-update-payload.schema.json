@@ -358,7 +358,8 @@
                     "menu_end_verified",
                     "category_count",
                     "event_count",
-                    "access_status"
+                    "access_status",
+                    "event_ids"
                   ],
                   "additionalProperties": false,
                   "properties": {
@@ -399,6 +400,15 @@
                         "string",
                         "null"
                       ]
+                    },
+                    "event_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true,
+                      "description": "当該更新窓で実際に確認したサイト掲載イベントの一意ID"
                     }
                   }
                 },
@@ -410,7 +420,8 @@
                     "menu_end_verified",
                     "category_count",
                     "event_count",
-                    "access_status"
+                    "access_status",
+                    "event_ids"
                   ],
                   "additionalProperties": false,
                   "properties": {
@@ -451,6 +462,15 @@
                         "string",
                         "null"
                       ]
+                    },
+                    "event_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true,
+                      "description": "当該更新窓で実際に確認したサイト掲載イベントの一意ID"
                     }
                   }
                 },
@@ -462,7 +482,8 @@
                     "menu_end_verified",
                     "category_count",
                     "event_count",
-                    "access_status"
+                    "access_status",
+                    "event_ids"
                   ],
                   "additionalProperties": false,
                   "properties": {
@@ -503,6 +524,15 @@
                         "string",
                         "null"
                       ]
+                    },
+                    "event_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true,
+                      "description": "当該更新窓で実際に確認したサイト掲載イベントの一意ID"
                     }
                   }
                 }
