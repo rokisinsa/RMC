@@ -91,8 +91,13 @@ async function collectPage(url, label){
   return {url,label,nav_status:navStatus,title,json_urls:[...jsonUrls],event_count:events.size,events:[...events.values()],errors:responseErrors,body_excerpt:bodyText};
 }
 
+const menuPage = await ctx.newPage();
+menuPage.setDefaultTimeout(10000);
+await menuPage.goto(START,{waitUntil:"domcontentloaded",timeout:30000});
+await menuPage.waitForTimeout(1200);
+const anchors = await menuPage.evaluate(() => [...document.querySelectorAll('a[href*="/matches?ct="]')].map(a=>({text:(a.textContent||"").replace(/\s+/g," ").trim(),href:a.getAttribute("href")})));
+await menuPage.close();
 const root = await collectPage(START,"本日のイベント");
-const anchors = await page.evaluate(() => [...document.querySelectorAll('a[href*="/matches?ct="]')].map(a=>({text:(a.textContent||"").replace(/\s+/g," ").trim(),href:a.getAttribute("href")})));
 const catsMap=new Map();
 for(const a of anchors){
   const u=abs(a.href); if(!u) continue;
