@@ -46,6 +46,49 @@ function eventFrom(o, sourceUrl, category){
   };
 }
 
+const NON_SPORT_LABELS = /選挙|M-1|格付けロト|バラエティ|スペシャルオッズ/;
+const SCORE_CHOICE = /\b\d+\s*-\s*\d+\b/;
+const PROP_CHOICE = /^(はい|いいえ|ホームラン|全ての出塁|アウト)$/;
+
+function parseBetChannelJst(dateText,timeText,checkedIso=NOW){
+  const dm=String(dateText??"").match(/(\d{1,2})月(\d{1,2})日/);
+  const tm=String(timeText??"").match(/^(\d{1,2}):(\d{2})$/);
+  if(!dm||!tm) return null;
+  const checked=new Date(checkedIso);
+  const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(checked);
+  const get=t=>Number(parts.find(x=>x.type===t)?.value);
+  let year=get("year"), month=Number(dm[1]), day=Number(dm[2]), hour=Number(tm[1]), minute=Number(tm[2]);
+  const checkedMonth=get("month");
+  if(checkedMonth===12 && month===1) year++;
+  if(checkedMonth===1 && month===12) year--;
+  day += Math.floor(hour/24); hour%=24;
+  return new Date(Date.UTC(year,month-1,day,hour-9,minute,0)).toISOString();
+}
+function jstIso(iso){
+  if(!iso) return null;
+  const d=new Date(iso);
+  const p=new Intl.DateTimeFormat("sv-SE",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).format(d).replace(" ","T");
+  return p+"+09:00";
+}
+function normalizeSide(v){
+  return clean(v).replace(/\s+\d+\s*-\s*\d+.*$/,"").replace(/[　\s]+/g," ").toLowerCase();
+}
+function isPrimaryMarket(e){
+  const choices=(e.market_choices??[]).map(x=>clean(x.choice_name)).filter(Boolean);
+  if(NON_SPORT_LABELS.test(e.category??"")) return false;
+  if(e.band_name && e.band_name!=="最終結果") return false;
+  if(choices.length<2 || choices.length>3) return false;
+  if(choices.slice(0,2).some(x=>SCORE_CHOICE.test(x)||PROP_CHOICE.test(x))) return false;
+  if(choices.length===3 && !/引き分け|draw/i.test(choices[2])) return false;
+  return true;
+}
+function canonicalKey(e){
+  const a=normalizeSide(e.choice1), b=normalizeSide(e.choice2);
+  if(!a||!b||!e.start_at_jst) return null;
+  const pair=[a,b].sort().join("||");
+  return hash(e.start_at_jst+"|"+pair);
+}
+
 
 const browser = await chromium.launch({headless:true});
 const ctx = await browser.newContext({locale:"ja-JP", timezoneId:"Asia/Tokyo"});
@@ -155,7 +198,42 @@ for(const r of [root,...results]) for(const e of r.events||[]){
 }
 const failed=results.filter(r=>!r.nav_status||r.nav_status>=400||r.errors.some(e=>/Timeout|ERR_|Navigation/.test(e.error)));
 const empty=results.filter(r=>r.event_count===0);
+for(const e of allEvents.values()){
+  e.start_at_jst=jstIso(parseBetChannelJst(e.game_start_date,e.game_start_time));
+  e.primary_market=isPrimaryMarket(e);
+  e.canonical_match_key=e.primary_market ? canonicalKey(e) : null;
+}
 const metadataMissing=[...allEvents.values()].filter(e=>!(e.game_start_date&&e.game_start_time) || !(e.choice1||e.choice2||e.band_name));
+const timeParseMissing=[...allEvents.values()].filter(e=>e.game_start_date&&e.game_start_time&&!e.start_at_jst);
+const checkedMs=new Date(NOW).getTime();
+const windowStartMs=checkedMs;
+const windowEndMs=checkedMs+48*3600e3;
+const primaryCurrent=[...allEvents.values()].filter(e=>{
+  if(!e.primary_market||!e.start_at_jst||e.status!==0) return false;
+  const t=new Date(e.start_at_jst).getTime();
+  return t>=windowStartMs && t<=windowEndMs;
+});
+const canonical=new Map();
+for(const e of primaryCurrent){
+  if(!e.canonical_match_key) continue;
+  const old=canonical.get(e.canonical_match_key);
+  if(!old) canonical.set(e.canonical_match_key,{
+    card_id:"bc-"+e.canonical_match_key,
+    start_at_jst:e.start_at_jst,
+    category:e.category,
+    side_a:e.choice1,
+    side_b:e.choice2,
+    source_event_ids:[e.event_id],
+    market_choices:e.market_choices??[],
+    source_url:e.source_url,
+    seen_in:e.seen_in??[]
+  });
+  else{
+    if(!old.source_event_ids.includes(e.event_id)) old.source_event_ids.push(e.event_id);
+    for(const x of e.seen_in??[]) if(!old.seen_in.includes(x)) old.seen_in.push(x);
+  }
+}
+const analysisCards=[...canonical.values()].sort((a,b)=>a.start_at_jst.localeCompare(b.start_at_jst)||a.card_id.localeCompare(b.card_id));
 const inventory={
   schema_version:1,
   source:"BET CHANNEL",
@@ -168,7 +246,14 @@ const inventory={
   failed_category_count:failed.length,
   empty_category_count:empty.length,
   metadata_missing_count:metadataMissing.length,
-  complete:failed.length===0 && metadataMissing.length===0 && allEvents.size>0,
+  time_parse_missing_count:timeParseMissing.length,
+  market_event_count:allEvents.size,
+  analysis_window:{start_jst:jstIso(new Date(windowStartMs).toISOString()),end_jst:jstIso(new Date(windowEndMs).toISOString()),hours:48},
+  analysis_card_count:analysisCards.length,
+  analysis_card_ids:analysisCards.map(x=>x.card_id),
+  analysis_cards:analysisCards,
+  analysis_ready:failed.length===0 && metadataMissing.length===0 && timeParseMissing.length===0 && analysisCards.length>0,
+  complete:failed.length===0 && metadataMissing.length===0 && timeParseMissing.length===0 && allEvents.size>0,
   categories:results.map(r=>({ct:r.ct,label:r.label,url:r.url,nav_status:r.nav_status,event_count:r.event_count,json_urls:r.json_urls,errors:r.errors})),
   event_ids:[...allEvents.keys()],
   events:[...allEvents.values()],
@@ -177,10 +262,11 @@ const inventory={
   integrity:{
     event_count_matches_ids:allEvents.size===new Set(allEvents.keys()).size,
     unique_category_ct:categories.length===new Set(categories.map(c=>c.ct)).size,
-    digest:hash(JSON.stringify([...allEvents.keys()].sort()))
+    digest:hash(JSON.stringify([...allEvents.keys()].sort())),
+    analysis_card_count_matches_ids:analysisCards.length===new Set(analysisCards.map(x=>x.card_id)).size
   }
 };
 await fs.mkdir(OUT.split("/").slice(0,-1).join("/")||".",{recursive:true});
 await fs.writeFile(OUT,JSON.stringify(inventory,null,2)+"\n");
-console.log(JSON.stringify({category_count:inventory.category_count,event_count:inventory.event_count,failed_category_count:inventory.failed_category_count,empty_category_count:inventory.empty_category_count,metadata_missing_count:inventory.metadata_missing_count,complete:inventory.complete,digest:inventory.integrity.digest},null,2));
-if(!inventory.menu_end_verified||!inventory.integrity.event_count_matches_ids||failed.length) process.exitCode=2;
+console.log(JSON.stringify({category_count:inventory.category_count,event_count:inventory.event_count,market_event_count:inventory.market_event_count,analysis_card_count:inventory.analysis_card_count,failed_category_count:inventory.failed_category_count,empty_category_count:inventory.empty_category_count,metadata_missing_count:inventory.metadata_missing_count,time_parse_missing_count:inventory.time_parse_missing_count,analysis_ready:inventory.analysis_ready,complete:inventory.complete,digest:inventory.integrity.digest},null,2));
+if(!inventory.menu_end_verified||!inventory.integrity.event_count_matches_ids||!inventory.integrity.analysis_card_count_matches_ids||!inventory.analysis_ready||failed.length) process.exitCode=2;
