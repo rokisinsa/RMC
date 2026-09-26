@@ -1,0 +1,50 @@
+{
+  "payload_version": 1,
+  "run_id": "rmc-adhoc-20260926-2258",
+  "source": "ChatGPT adhoc production trial 22:58",
+  "generated_at": "2026-09-26T22:58:00+09:00",
+  "slot": "adhoc",
+  "note": "今すぐ本番試走。最新Webで9/26-27の実カード・実オッズを確認。確認例: ATP Chengdu Mannarino-Shapovalov、ATP Hangzhou Gaston-Rublev、Laver Cup Alcaraz-Fritz等。①〜④は独立探索し、H2H/直近6-10/ランキング/当日メンバー等を同一試走で十分に検証できないため新規採用は強制しない。",
+  "systems": {
+    "recommendations": {
+      "discovery_runs": [
+        {
+          "run_id": "rec-20260926-2258",
+          "started_at": "2026-09-26T22:58:00+09:00",
+          "slot": "adhoc",
+          "note": "独立探索。9/26-27の実カード・市場を再検索。強い市場 фав? 候補を確認したが、必要なH2H全件・直近6〜10・ランキング/レーティング・当日情報の検証が不十分なため新規推奨なし。"
+        }
+      ]
+    },
+    "value1": {
+      "discovery_runs": [
+        {
+          "run_id": "v1-20260926-2258",
+          "started_at": "2026-09-26T22:58:00+09:00",
+          "slot": "adhoc",
+          "note": "独立探索。実オッズを確認したが、事前推定勝率と必要勝率・EVを独立根拠で固定できないため新規VALUE①なし。"
+        }
+      ]
+    },
+    "value2": {
+      "discovery_runs": [
+        {
+          "run_id": "v2-20260926-2258",
+          "started_at": "2026-09-26T22:58:00+09:00",
+          "slot": "adhoc",
+          "note": "独立探索。実市場候補を確認したが、calibration/SoS/upset risk等を含む独立評価が不足し、新規acceptedなし。"
+        }
+      ]
+    },
+    "pro_edge": {
+      "discovery_runs": [
+        {
+          "run_id": "pe-20260926-2258",
+          "started_at": "2026-09-26T22:58:00+09:00",
+          "slot": "adhoc",
+          "note": "独立探索。実オッズ（例 Rublev 1.25前後、Shapovalov 1.36-1.39前後、Alcaraz 1.28前後）を確認したが、独立base_probabilityを十分な根拠で固定できないためaccepted/watchなし。市場確率をbaseへコピーしない。"
+        }
+      ]
+    }
+  }
+}
