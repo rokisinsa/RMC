@@ -388,6 +388,16 @@ function checkCoverageAudit(payload, ledger) {
   const c = payload.coverage_audit;
   if (!c) { ledger.error("coverage", "payload", null, "定時更新は coverage_audit 必須。全競技探索を数値で証明できないため拒否"); return; }
   const master = c.sportsbook_master?.union_sports ?? [];
+  const sa = c.sportsbook_master?.source_audit;
+  for (const site of ["bet_channel","casitabi","yuugado"]) {
+    const a = sa?.[site];
+    if (!a) { ledger.error("coverage", site, null, "サイト別source_auditが無い"); continue; }
+    if (!a.menu_end_verified) ledger.error("coverage", site, null, "競技メニュー最下部までの確認証跡が無い");
+    if (a.access_status === "unavailable") ledger.error("coverage", site, null, "サイト競技一覧が未確認のため完全版不可");
+    if (!a.source_urls?.length) ledger.error("coverage", site, null, "競技一覧のsource URLが無い");
+    const listed = c.sportsbook_master?.[site] ?? [];
+    if (a.category_count !== listed.length) ledger.error("coverage", site, null, `category_count ${a.category_count} != 実一覧 ${listed.length}`);
+  }
   if (!master.length) ledger.error("coverage", "payload", null, "3サイト和集合の対象競技マスターが空");
   const uniq = new Set(master.map(x => String(x).trim().toLowerCase()));
   if (uniq.size !== master.length) ledger.error("coverage", "payload", null, "対象競技マスターに重複がある");
@@ -399,6 +409,13 @@ function checkCoverageAudit(payload, ledger) {
     if (x.unscanned_sports !== 0) ledger.error("coverage", system, null, `未走査競技 ${x.unscanned_sports} 件。完全版として本番反映しない`);
     if (x.unscanned_sport_names?.length) ledger.error("coverage", system, null, `未走査競技名が残っている: ${x.unscanned_sport_names.join(", ")}`);
     if (x.scanned_sport_names && x.scanned_sport_names.length !== x.scanned_sports) ledger.error("coverage", system, null, "scanned_sport_names 件数が scanned_sports と一致しない");
+    if (!Array.isArray(x.card_ids) || x.cards_checked !== x.card_ids.length) ledger.error("coverage", system, null, `cards_checked ${x.cards_checked} != card_ids実数 ${x.card_ids?.length ?? 0}`);
+    const countKeys = Object.keys(x.sport_card_counts ?? {});
+    if (countKeys.length !== master.length) ledger.error("coverage", system, null, "sport_card_countsが対象競技マスター全件を持っていない");
+    const normKeys = new Set(countKeys.map(v => v.trim().toLowerCase()));
+    for (const sport of master) if (!normKeys.has(sport.trim().toLowerCase())) ledger.error("coverage", system, null, `sport_card_counts欠落: ${sport}`);
+    const counted = Object.values(x.sport_card_counts ?? {}).reduce((a,b)=>a+b,0);
+    if (counted !== x.cards_checked) ledger.error("coverage", system, null, `競技別カード合計 ${counted} != cards_checked ${x.cards_checked}`);
     if (x.cards_checked < 20 && x.unavailable_sports < x.target_sports) ledger.error("coverage", system, null, `一次確認 ${x.cards_checked} カード。20未満で、全競技取得不能でもないため探索不足`);
     const runs = payload.systems?.[system]?.discovery_runs ?? [];
     if (!runs.length) ledger.error("coverage", system, null, "独立discovery_runが無い");
