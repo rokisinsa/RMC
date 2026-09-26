@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>分析情報 V2（確認用） | RMC</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#05070a;color:#fff;font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
+body{min-height:100svh;background:radial-gradient(circle at 50% 0%,rgba(70,190,255,.16),transparent 32%),linear-gradient(180deg,#03070b,#050505 62%,#000)}
+.wrap{width:min(100%,1180px);margin:0 auto;padding:22px 14px 54px}
+.back{display:inline-block;color:#8edcff;text-decoration:none;font-size:14px;margin-bottom:12px}
+.v2-banner{margin:0 0 14px;padding:10px 12px;border:1px solid rgba(255,212,93,.35);border-radius:12px;background:rgba(58,45,12,.35);font-size:12px;line-height:1.7;color:#ffe9a8}
+.hero{text-align:center;padding:6px 0 18px}
+.hero h1{margin:0;font-size:clamp(32px,9vw,60px);letter-spacing:.08em;background:linear-gradient(180deg,#e9fbff,#75d8ff 50%,#2e8fbd);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{margin:6px 0 0;color:#9fc9da;letter-spacing:.14em;font-size:12px}
+.data-status{font-size:11px;color:#9fb3bd;margin:0 0 10px;line-height:1.7}
+.sys-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.sys-nav a{color:#dff8ff;text-decoration:none;font-size:12px;padding:6px 10px;border:1px solid rgba(110,210,255,.25);border-radius:999px;background:rgba(15,29,40,.6)}
+.system{margin:0 0 30px;padding-top:18px;border-top:1px solid rgba(110,210,255,.18)}
+.system.value{border-top-color:rgba(255,212,93,.22)}
+.system.pro-edge{border-top-color:rgba(105,240,165,.3)}
+.system.actual{border-top-color:rgba(255,212,93,.24)}
+.section-title{font-size:21px;margin:0 2px 8px;color:#dff8ff}
+.panel-title{font-size:14px;margin:16px 2px 8px;color:#bfeeff}
+.panel-title.ref{color:#ffd45d}
+.note,.lead{font-size:11.5px;color:#9aabb4;line-height:1.75;margin:0 2px 12px}
+.lead{font-size:13px;color:#d7f7e6}
+.summary{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin-bottom:12px}
+.summary.four{grid-template-columns:repeat(4,1fr)}
+.summary.three{grid-template-columns:repeat(3,1fr)}
+.card{border:1px solid rgba(110,210,255,.18);background:linear-gradient(180deg,rgba(15,29,40,.92),rgba(5,9,14,.95));border-radius:14px;padding:12px}
+.label{font-size:11px;color:#8fa8b5;margin-bottom:6px}
+.value{font-size:20px;font-weight:800}
+.note-s{margin-top:6px;font-size:10.5px;line-height:1.55;color:#8fa8b5}
+.plus{color:#57e38d}.minus{color:#ff6b78}.gold{color:#ffd45d}.muted{color:#7d8b92}
+.calib,.insufficient{font-size:11px;color:#a8bbb2;margin:6px 2px 12px}
+.insufficient{padding:10px;border:1px dashed rgba(255,212,93,.35);border-radius:10px;color:#ffd45d}
+.table-wrap{overflow-x:auto;border:1px solid rgba(110,210,255,.16);border-radius:14px;background:rgba(7,13,20,.8)}
+table{width:100%;border-collapse:collapse;min-width:1000px}
+th,td{padding:10px 9px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left;vertical-align:top;font-size:12.5px}
+th{font-size:11px;color:#8fa8b5;background:#0d1721}
+tr.row{cursor:pointer}
+tr.row:hover,tr.row.opened{background:rgba(83,199,255,.055)}
+.result{font-size:20px;font-weight:900;text-align:center}
+.result.win{color:#67e38f}.result.loss{color:#ff6674}.result.pending{color:#ffd45d}.result.push,.result.void{color:#9aa8af}
+.match{font-weight:800;color:#f3f7f9}
+.market{font-size:10.5px;color:#91a1ab;margin-top:3px}
+.sub{font-size:10px;color:#86979f;margin-top:3px;line-height:1.5}
+.warn-t{color:#ffd45d}.ok-t{color:#69f0a5}
+.chev{color:#75d9ff}
+.money{text-align:right;white-space:nowrap}
+.positive{color:#58e68e;font-weight:800}.negative{color:#ff6d7a;font-weight:800}.pending{color:#ffd45d;font-weight:700}
+.badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.badge{display:inline-block;padding:2px 6px;border-radius:999px;font-size:9.5px;border:1px solid}
+.badge.ok{color:#69f0a5;border-color:rgba(105,240,165,.3);background:rgba(105,240,165,.07)}
+.badge.warn{color:#ffd45d;border-color:rgba(255,212,93,.35);background:rgba(255,212,93,.08)}
+.badge.info{color:#7edcff;border-color:rgba(126,220,255,.3);background:rgba(126,220,255,.07)}
+.value-badge{display:inline-block;padding:3px 7px;border-radius:999px;font-size:10px;font-weight:900;white-space:nowrap}
+.value-badge.formal{background:rgba(105,240,165,.12);color:#69f0a5}
+.value-badge.watch{background:rgba(255,212,93,.10);color:#ffd45d}
+.value-badge.conditional{background:rgba(126,220,255,.10);color:#7edcff}
+.value-badge.exclude{background:rgba(255,107,120,.10);color:#ff7b87}
+.value-overview{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}
+.value-mini{padding:9px 11px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06);font-size:11px;color:#a9bbc4}
+.value-mini strong{display:block;font-size:16px;color:#f5fbff;margin-top:3px}
+.detail-row td{background:linear-gradient(180deg,rgba(9,19,28,.98),rgba(4,8,12,.98))}
+.detail-cell{padding:14px!important}
+.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.box{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.055);border-radius:12px;padding:11px;font-size:12px;color:#c7d2d8}
+.box h3{font-size:12px;color:#76d9ff;margin:0 0 7px}
+.box ul{margin:4px 0;padding-left:18px}
+table.kv{min-width:0;width:100%}
+table.kv th,table.kv td{padding:5px 6px;font-size:11.5px;background:none}
+table.kv th{width:42%;color:#8eb2c1}
+.recalc{margin-top:9px;padding:8px;border:1px dashed rgba(126,220,255,.35);border-radius:9px;font-size:11px;color:#9fdcf2}
+.recalc-title{font-weight:800;margin-bottom:3px}
+.legacy-detail{margin-top:12px;border-top:1px solid rgba(255,255,255,.07);padding-top:10px}
+.legacy-title{font-size:12px;font-weight:900;color:#dff8ff;margin-bottom:8px}
+.legacy-body{font-size:12px;color:#c7d2d8;line-height:1.7}
+.legacy-body table{min-width:0}
+.legacy-body .easy-grid,.legacy-body .h2h-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.legacy-body .reason{margin-top:8px;border-left:3px solid #69d9ff;padding:8px 10px;background:rgba(72,184,235,.07)}
+.excluded-log{padding:12px;border-radius:12px;border:1px solid rgba(255,107,120,.14);background:rgba(255,107,120,.035);font-size:12px;line-height:1.9;color:#b9c5ca}
+.win-tabs{display:flex;gap:6px;margin:6px 0}
+.win-tab{font:inherit;font-size:11px;color:#dff8ff;background:rgba(15,29,40,.8);border:1px solid rgba(110,210,255,.25);border-radius:999px;padding:5px 10px;cursor:pointer}
+.win-tab.active{background:rgba(105,240,165,.18);border-color:rgba(105,240,165,.5)}
+.eval{padding:8px 10px;border:1px solid rgba(105,240,165,.18);border-radius:12px;margin-bottom:12px}
+.metrics th{width:55%}
+.empty{padding:18px;text-align:center;color:#8497a1;font-size:12px;border:1px dashed rgba(110,210,255,.16);border-radius:14px}
+.demo-banner{margin:0 0 10px;padding:8px 10px;border-radius:10px;background:rgba(255,107,120,.12);border:1px solid rgba(255,107,120,.4);color:#ffb3ba;font-size:12px;font-weight:800}
+.load-error{padding:14px;border-radius:12px;background:rgba(255,107,120,.12);border:1px solid rgba(255,107,120,.4);color:#ffb3ba}
+@media(max-width:760px){
+  .summary,.summary.four,.summary.three{grid-template-columns:1fr 1fr}
+  .detail-grid{grid-template-columns:1fr}
+  .value{font-size:17px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">← RMCトップへ戻る</a>
+<div class="v2-banner"><strong>V2（確認用）</strong>：新しいデータ構造（data/*.json）から表示しています。本番の分析情報ページ（analysis.html）はまだ切り替えていません。</div>
+<section class="hero"><h1>分析情報 V2</h1><p>RESULT LOG / 4 INDEPENDENT SYSTEMS</p></section>
+<div id="app"><div class="note">読み込み中…</div></div>
+</div>
+<script type="module" src="./analysis-v2.js"></script>
+</body>
+</html>

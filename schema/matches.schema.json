@@ -103,6 +103,10 @@
             ],
             "description": "ホームがどちらか。記録で確認できない場合は unknown（表示順からホーム/アウェーを断定しない）"
           },
+          "region": {
+            "$ref": "defs.schema.json#/$defs/stringOrNull",
+            "description": "国 / 地域（任意。未登録なら表示は —）"
+          },
           "venue": {
             "$ref": "defs.schema.json#/$defs/stringOrNull"
           },
