@@ -1,0 +1,90 @@
+name: BET CHANNEL complete inventory
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/scrape-bet-channel.mjs"
+      - ".github/workflows/bet-channel-inventory.yml"
+  workflow_dispatch:
+  schedule:
+    # JST 05:30 / 11:30 / 17:30 / 22:30
+    - cron: "30 20,2,8,13 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bet-channel-inventory
+  cancel-in-progress: true
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Scrape BET CHANNEL all categories and events
+        id: scrape
+        shell: bash
+        run: |
+          set +e
+          node scripts/scrape-bet-channel.mjs data/bet-channel-inventory.json | tee /tmp/bc-summary.txt
+          code=${PIPESTATUS[0]}
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          cat /tmp/bc-summary.txt >> "$GITHUB_STEP_SUMMARY"
+          exit 0
+
+      - name: Validate inventory structure
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs=require("fs");
+          const x=JSON.parse(fs.readFileSync("data/bet-channel-inventory.json","utf8"));
+          const errors=[];
+          if(!x.menu_end_verified) errors.push("menu_end_verified=false");
+          if(x.category_count!==x.categories.length) errors.push("category_count mismatch");
+          if(x.event_count!==x.event_ids.length) errors.push("event_count mismatch");
+          if(new Set(x.event_ids).size!==x.event_ids.length) errors.push("duplicate event_ids");
+          if(new Set(x.categories.map(c=>c.ct)).size!==x.categories.length) errors.push("duplicate category ct");
+          console.log(JSON.stringify({checked_at:x.checked_at,category_count:x.category_count,event_count:x.event_count,failed:x.failed_category_count,empty:x.empty_category_count,complete:x.complete,errors},null,2));
+          if(errors.length) process.exit(1);
+          NODE
+
+      - name: Commit measured inventory
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/bet-channel-inventory.json
+          if git diff --cached --quiet; then
+            echo "No inventory diff"
+          else
+            git commit -m "Update BET CHANNEL inventory"
+            git push origin HEAD:main
+          fi
+
+      - name: Enforce complete scrape
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs=require("fs");
+          const x=JSON.parse(fs.readFileSync("data/bet-channel-inventory.json","utf8"));
+          if(!x.complete || x.failed_category_count!==0){
+            console.error(`Incomplete BET CHANNEL scrape: failed_category_count=${x.failed_category_count}`);
+            process.exit(1);
+          }
+          console.log(`COMPLETE: ${x.category_count} categories / ${x.event_count} unique events`);
+          NODE
