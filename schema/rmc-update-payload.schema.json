@@ -283,6 +283,7 @@
     "coverage_audit": {
       "type": "object",
       "required": [
+        "coverage_scope",
         "scope",
         "sportsbook_master",
         "systems"
@@ -574,6 +575,13 @@
             "all_three"
           ],
           "description": "今回の完全探索対象。bet_channel_only はBET CHANNELだけを完全母表にする。"
+        },
+        "coverage_scope": {
+          "enum": [
+            "bet_channel_only",
+            "three_site_union"
+          ],
+          "description": "定時更新の探索母表。現在はBET CHANNEL完全取得を主運用とする。"
         }
       }
     }
