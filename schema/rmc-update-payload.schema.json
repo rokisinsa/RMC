@@ -357,7 +357,13 @@
                     "category_count",
                     "event_count",
                     "access_status",
-                    "event_ids"
+                    "event_ids",
+                    "inventory_digest",
+                    "analysis_ready",
+                    "analysis_card_count",
+                    "analysis_card_ids",
+                    "bettable_analysis_card_count",
+                    "unavailable_price_card_count"
                   ],
                   "additionalProperties": false,
                   "properties": {
@@ -407,6 +413,34 @@
                       },
                       "uniqueItems": true,
                       "description": "当該更新窓で実際に確認したサイト掲載イベントの一意ID"
+                    },
+                    "inventory_digest": {
+                      "type": "string",
+                      "minLength": 8
+                    },
+                    "analysis_ready": {
+                      "const": true
+                    },
+                    "analysis_card_count": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "analysis_card_ids": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "pattern": "^bc-[a-f0-9]{20}$"
+                      },
+                      "uniqueItems": true
+                    },
+                    "bettable_analysis_card_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "unavailable_price_card_count": {
+                      "type": "integer",
+                      "minimum": 0
                     }
                   }
                 },
