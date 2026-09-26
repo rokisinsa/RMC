@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "generated_by": "migration/migrate.js",
+    "legacy_source": "analysis.html",
+    "legacy_commit": "02e5167",
+    "as_of": "2026-09-26T06:45:58+09:00",
+    "status": "draft",
+    "note": "系統未確定の旧データ：旧RMC（baseline-2026-09-26）からの移行用下書き。analysis.html は未切り替え。"
+  },
+  "excluded_log": [
+    {
+      "id": "legacy-unassigned-afghanistan-vs-nepal",
+      "label": "Afghanistan vs Nepal",
+      "system_assignment": "unknown",
+      "candidate_systems": [
+        "value1",
+        "value2"
+      ],
+      "reason": "旧HTMLでは VALUE② 欄の「深掘りで除外」に記載。配置だけでは VALUE①・VALUE② のどちらの除外か確定できないため要確認",
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestArea2 .excluded-log（深掘りで除外）",
+        "text": "Afghanistan vs Nepal / NAVI vs Nemesis / Tunisia vs Cameroon"
+      }
+    },
+    {
+      "id": "legacy-unassigned-navi-vs-nemesis",
+      "label": "NAVI vs Nemesis",
+      "system_assignment": "unknown",
+      "candidate_systems": [
+        "value1",
+        "value2"
+      ],
+      "reason": "旧HTMLでは VALUE② 欄の「深掘りで除外」に記載。配置だけでは VALUE①・VALUE② のどちらの除外か確定できないため要確認",
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestArea2 .excluded-log（深掘りで除外）",
+        "text": "Afghanistan vs Nepal / NAVI vs Nemesis / Tunisia vs Cameroon"
+      }
+    },
+    {
+      "id": "legacy-unassigned-tunisia-vs-cameroon",
+      "label": "Tunisia vs Cameroon",
+      "system_assignment": "unknown",
+      "candidate_systems": [
+        "value1",
+        "value2"
+      ],
+      "reason": "旧HTMLでは VALUE② 欄の「深掘りで除外」に記載。配置だけでは VALUE①・VALUE② のどちらの除外か確定できないため要確認",
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestArea2 .excluded-log（深掘りで除外）",
+        "text": "Afghanistan vs Nepal / NAVI vs Nemesis / Tunisia vs Cameroon"
+      }
+    }
+  ]
+}

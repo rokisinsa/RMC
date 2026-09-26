@@ -21,8 +21,14 @@ jobs:
         with:
           node-version: 22
 
-      - name: 単体テスト（精算・集計・重複・独立性・locked・時刻・オッズ・VALUE区分・baseline）
+      - name: テスト（snapshot 段＝移行時点の検証 / live 段＝現在データの検証）
         run: npm test
+
+      - name: 移行スナップショットの不変性
+        run: node scripts/snapshot-manifest.js verify
+
+      - name: 監査レポート（競技偏り・損益/ROI/CLV・データ品質）
+        run: node scripts/audit-report.js
 
       - name: data/*.json のスキーマ・整合性検証（未作成ならスキップ）
         run: node scripts/validate-data.js

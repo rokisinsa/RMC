@@ -1,0 +1,17 @@
+{
+  "source_commit": "fa22aa6",
+  "description": "本番切替前の移行スナップショット（不変）。06:45 基準点（baseline-2026-09-26）から移行したデータ＋人間確認＋最初の結果更新（mr-2026-09-26-1937-result-update）。これ以降の更新は data/ 側にだけ追加する",
+  "files": {
+    "data/experience.json": "f757140ebdb014624371bd9b66b76f46c528d0f153968d9ce85ecace190d1a20",
+    "data/legacy-analysis/recommendations.json": "2355f57277817cd5a2c2b49452fcd019029ae36f5fa64e59224bec19b63313e4",
+    "data/legacy-analysis/value1.json": "e877f2e838cc1c290f15ba963719b361a6a64e72ef344560b3c023ee14f52a48",
+    "data/legacy-analysis/value2.json": "329d9285d48df81150eb1f0e4840af9889f597929bf6e1103ead021e17a8a6b4",
+    "data/legacy-unassigned.json": "26e3c9a9bd97c1ec2acd1f56b82ed9b693141609a3ab18d4480b96f99356641f",
+    "data/match-updates.json": "965056b63e03594e7af7a5d29142ea8c360ab8a91ea3192216047c7bdbc60711",
+    "data/matches.json": "32eeef5b71c5090e8199bcb3cf431e459fa7efe200f006a156fa25277219d0c5",
+    "data/pro_edge.json": "4cb196820adc4e3bbf0c420c7da06c64b7b0d954d38bacfdb95cd242b5425b71",
+    "data/recommendations.json": "3540b337771fa6ab94fce7d556ccdeb0006606478fa4eaa3bfdd44b625de29e4",
+    "data/value1.json": "2759bb9c14231710b7697a3cc5e587412fb7f3b3adc686a200d2c129eccecae1",
+    "data/value2.json": "ebd781bc406750a7dddc0609f60a0f15ac085289e3f245393dae3db54f2c580e"
+  }
+}

@@ -70,45 +70,6 @@
         { "match_id": "2026-09-26-fearx-cybme", "status": "review_required", "note": "開始時刻が未確認のまま。結果も確認できず" },
         { "match_id": "2026-09-26-tmt-rrx", "status": "review_required", "note": "開始時刻が未確認のまま。結果も確認できず" }
       ]
-    },
-    {
-      "run_id": "mr-2026-09-26-2005-result-update",
-      "kind": "result_update",
-      "at": "2026-09-26T20:05:00+09:00",
-      "source": "Claude Code（公開情報で再確認）",
-      "note": "要確認カードの再確認。試合の同一性は日付・大会・対戦相手・ラウンド・開始時刻を組み合わせて確認し、名前だけで同一と断定しない",
-      "changes": [
-        {
-          "match_id": "2026-09-26-ge-vit",
-          "set": {
-            "status": "final",
-            "result": {
-              "final": { "a": 1, "b": 2 },
-              "periods": { "map1": { "a": 10, "b": 13 } },
-              "text": "Team Vitality 2-1 Global Esports（Abyss 10-13 / Ascent 13-9 / Summit 5-13）"
-            },
-            "result_confirmed_at": "2026-09-26T20:00:00+09:00"
-          },
-          "evidence": {
-            "sources": [
-              { "name": "VLR.gg 試合ページ", "url": "https://www.vlr.gg/753449/global-esports-vs-team-vitality-valorant-champions-2026-opening-b", "type": "specialist_db" }
-            ],
-            "verified_at": "2026-09-26T20:00:00+09:00",
-            "source_confidence": "specialist_db",
-            "note": "同一性：2026/9/26 18:00 JST・VALORANT Champions 2026 Group Stage Opening B・Global Esports vs Team Vitality がすべて一致。2つ目の情報源（GosuGamers）は未更新、Liquipedia は取得不可。結果確定時刻は確認時刻で記録"
-          }
-        }
-      ],
-      "reviews": [
-        { "match_id": "2026-09-25-prz-gri", "status": "review_required", "note": "ATP公式（Saint-Tropez 結果ページ）では 9/25 の Prizmic のシングルスは準々決勝の1試合のみで、相手は Daniil Glinka（Prizmic 7-6(4) 7-5）。日付・大会は一致するが、旧データの相手表記「ダニエル・グリン」・ラウンド・開始時刻 23:40 JST を公式側で照合できていないため、同一試合と断定しない" },
-        { "match_id": "2026-09-26-hos-oze", "status": "unknown", "note": "ITF公式の大会ページに結果の掲載なし。検索要約（出典不明）の結果は採用しない" },
-        { "match_id": "2026-09-26-kaz-uzb", "status": "unknown", "note": "大会公式・報道で結果を確認できず" },
-        { "match_id": "2026-09-26-chn-hkg", "status": "unknown", "note": "大会公式・報道で結果を確認できず" },
-        { "match_id": "2026-09-26-kor-vie", "status": "unknown", "note": "大会公式・報道で結果を確認できず（韓国の報道では 9/26 にベトナム戦の予定のみ）" },
-        { "match_id": "2026-09-26-ag-lgd", "status": "review_required", "note": "開始時刻が未確認のまま。Liquipedia は取得不可、結果を確認できず" },
-        { "match_id": "2026-09-26-fearx-cybme", "status": "review_required", "note": "SiegeGG では 9/26 の試合として掲載されているが「Awaiting match results」で結果未掲載。開始時刻も未確認のまま" },
-        { "match_id": "2026-09-26-tmt-rrx", "status": "review_required", "note": "SiegeGG では 9/26 の試合として掲載されているが「Awaiting match results」で結果未掲載。開始時刻も未確認のまま" }
-      ]
     }
   ]
 }

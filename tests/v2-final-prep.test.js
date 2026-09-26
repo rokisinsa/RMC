@@ -10,7 +10,7 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
-import { ROOT, loadDatasets, loadSchemas, loadProEdgeConfig, DATA_FILES } from "../scripts/load-node.js";
+import { ROOT, DATA_DIR, loadDatasets, loadSchemas, loadProEdgeConfig, DATA_FILES } from "../scripts/load-node.js";
 import { validateDataset } from "../lib/validate.js";
 import { applyMatchUpdates, checkMatchUpdates, checkMatchUpdatesAppendOnly, pendingReviews } from "../lib/match-updates.js";
 import { buildViewModel } from "../lib/view/model.js";
@@ -66,7 +66,7 @@ test("結果更新の自動連動：試合事実 → ①②③④・経験値 �
   ds.match_updates.runs.push({
     run_id: "mr-2026-09-26-2200-test", kind: "result_update", at: "2026-09-26T23:59:00+09:00", source: "テスト", note: null,
     changes: [{ match_id: "2026-09-26-loud-edg", set: { status: "final", result: { final: { a: 2, b: 1 }, text: "LOUD 2-1 EDG" } },
-      evidence: { sources: [{ name: "テスト", url: "https://example.com/" }], verified_at: "2026-09-26T23:58:00+09:00", note: null } }],
+      evidence: { sources: [{ name: "テスト公式", url: "https://example.com/", type: "official" }], verified_at: "2026-09-26T23:58:00+09:00", source_confidence: "official", note: null } }],
     reviews: [],
   });
   assert.deepEqual(checkMatchUpdates(ds.matches, ds.match_updates), []);
@@ -132,7 +132,7 @@ test("最新の集計（基準点＋結果更新）", () => {
 });
 
 // ── 2. 旧分析メモの移行 ────────────────────────────────────
-const la = s => JSON.parse(readFileSync(join(ROOT, "data", "legacy-analysis", `${s}.json`), "utf8"));
+const la = s => JSON.parse(readFileSync(join(DATA_DIR, "legacy-analysis", `${s}.json`), "utf8"));
 
 test("旧分析メモ：原文を保持し、構造化で文章を欠落させていない（確率表示の除外分を除く）", () => {
   let n = 0;
@@ -242,7 +242,7 @@ test("複利：取引順序を証明できないので参考値・順序未確�
   assert.equal(vm.recommendations.compound.stock, 140.58);                                 // 試合開始時刻順
   assert.equal(a.alternative_by_registration.stock, 114.8);                               // 旧画面と同じ登録時刻順
   const html = renderPage(vm);
-  assert.ok(html.includes("複利（参考値・順序未確定）"));
+  assert.ok(html.includes("複利（参考値・取引順序未確定）"));
   assert.equal(vm.value2.compound_audit.status, "no_settled");
   // 重複カードは確定済みに含まれない（二重算入なし）
   assert.ok(vm.recommendations.rows.filter(r => r.flags.includes("duplicate_review")).every(r => r.settlement.state === "pending"));

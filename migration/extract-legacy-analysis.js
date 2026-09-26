@@ -13,6 +13,14 @@ import vm from "node:vm";
 import { ROOT } from "../scripts/load-node.js";
 import { parse, toBlocks } from "./legacy-html.js";
 
+
+// 安全装置：本番切替後に誤って再実行すると、GPT 定時更新で追加されたデータを旧データで上書きしてしまう。
+// 移行用下書きを作り直すときだけ、RMC_ALLOW_MIGRATION_REGENERATE=1 を付けて実行する。
+if (process.env.RMC_ALLOW_MIGRATION_REGENERATE !== "1") {
+  console.error("このスクリプトは移行用下書きの再生成専用です。data/ を上書きするため、通常は実行しません（RMC_ALLOW_MIGRATION_REGENERATE=1 が必要）。");
+  process.exit(1);
+}
+
 const REF = "baseline-2026-09-26";
 const git = (...a) => execFileSync("git", a, { cwd: ROOT, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
 const COMMIT = git("rev-parse", "--short=7", `${REF}^{commit}`).trim();

@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "generated_by": "migration/extract-legacy-analysis.js",
+    "legacy_source": "analysis.html",
+    "legacy_commit": "02e5167",
+    "as_of": "2026-09-26T06:45:58+09:00",
+    "status": "draft",
+    "note": "② VALUE①の旧分析本文（原文と構造化）。書き換え・要約はしていない。事前固定を確認できない確率表示は構造化の対象外（raw_html には原文のまま残る）"
+  },
+  "system": "value1",
+  "entries": [
+    {
+      "pick_id": "v1-legacy-bul-por-u21",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable tbody 行0の直後の分析行"
+      },
+      "raw_html": "\n    <details class=\"value-detail\" open><summary>分析を表示</summary><div class=\"value-detail-body\">\n      <strong>格差スコア：</strong>89〜92 / 100（勝率ではない）<br>\n      <strong>暫定推定勝率：</strong>Portugal U21 82〜86%<br>\n      <strong>注目ライン：</strong>Portugal 1.25以上。1.25なら必要勝率80.0%。1.20まで下がると必要勝率83.33%となり、VALUE余地は小さくなる。<br><br>\n\n      <strong>① 現サイクルH2H：</strong>Portugal U21 3-0 Bulgaria U21。U21は世代交代が大きいため、古いH2Hより現在世代に近い直接対決を重視。<br>\n      <strong>② Portugal直近10試合：</strong>8勝1分1敗、36得点1失点、平均3.60得点・0.10失点。主な結果はNorthern Ireland 4-0、Scotland 3-0、Azerbaijan 4-0、Czechia 0-0、Gibraltar 11-0、Bulgaria 3-0、Scotland 2-0、Azerbaijan 5-0など。予選部分は7勝1分0敗・28得点0失点。<br>\n      <strong>③ Bulgaria直近10試合：</strong>5勝2分3敗、10得点10失点、平均1.00得点・1.00失点。Portugalに0-3、Scotlandに0-1。Gibraltarには1-0、3-0、Azerbaijanとは0-0、1-1。<br>\n      <strong>④ 共通対戦相手：</strong>Azerbaijan戦はPortugal 5-0 / 4-0、Bulgaria 1-1 / 0-0。Gibraltar戦はPortugal 11-0、Bulgaria 3-0 / 1-0。Scotland戦はPortugal 2-0 / 3-0、Bulgaria 0-1。複数の共通相手比較でPortugal側が上。<br>\n      <strong>⑤ 現在の予選成績：</strong>Portugalは7勝1分0敗・28得点0失点。勝っているだけでなく、失点を抑えながら格下相手に複数得点する傾向を重視。<br>\n      <strong>⑥ ホーム / アウェイ：</strong>今回Portugalはアウェー。Tiago Tomás、Youssef Chermitiなどの欠場情報も事前リスクとして保存。<br>\n      <strong>⑦ オッズと必要勝率：</strong>1.25なら必要勝率80.0%。推定82%ならEV約+2.5%、84%なら約+5.0%、86%なら約+7.5%。1.20なら必要勝率83.33%で、84%評価でもEV約+0.8%に縮小。<br><br>\n\n      <strong>最終判断：</strong>「Portugalが強い」ことだけではなく、H2H、直近10試合、得失点、共通相手、予選成績、開催条件、必要勝率の複数要素が同方向。したがって1.25以上をVALUE候補の条件として事前固定する。<br>\n      <strong>試合後に追記：</strong>実際の結果、Closing Odds、CLV、$100固定損益、累計損益、ROI。\n    </div></details>\n  ",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "分析を表示"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "格差スコア：89〜92 / 100（勝率ではない）",
+            "暫定推定勝率：Portugal U21 82〜86%",
+            "注目ライン：Portugal 1.25以上。1.25なら必要勝率80.0%。1.20まで下がると必要勝率83.33%となり、VALUE余地は小さくなる。",
+            "① 現サイクルH2H：Portugal U21 3-0 Bulgaria U21。U21は世代交代が大きいため、古いH2Hより現在世代に近い直接対決を重視。",
+            "② Portugal直近10試合：8勝1分1敗、36得点1失点、平均3.60得点・0.10失点。主な結果はNorthern Ireland 4-0、Scotland 3-0、Azerbaijan 4-0、Czechia 0-0、Gibraltar 11-0、Bulgaria 3-0、Scotland 2-0、Azerbaijan 5-0など。予選部分は7勝1分0敗・28得点0失点。",
+            "③ Bulgaria直近10試合：5勝2分3敗、10得点10失点、平均1.00得点・1.00失点。Portugalに0-3、Scotlandに0-1。Gibraltarには1-0、3-0、Azerbaijanとは0-0、1-1。",
+            "④ 共通対戦相手：Azerbaijan戦はPortugal 5-0 / 4-0、Bulgaria 1-1 / 0-0。Gibraltar戦はPortugal 11-0、Bulgaria 3-0 / 1-0。Scotland戦はPortugal 2-0 / 3-0、Bulgaria 0-1。複数の共通相手比較でPortugal側が上。",
+            "⑤ 現在の予選成績：Portugalは7勝1分0敗・28得点0失点。勝っているだけでなく、失点を抑えながら格下相手に複数得点する傾向を重視。",
+            "⑥ ホーム / アウェイ：今回Portugalはアウェー。Tiago Tomás、Youssef Chermitiなどの欠場情報も事前リスクとして保存。",
+            "⑦ オッズと必要勝率：1.25なら必要勝率80.0%。推定82%ならEV約+2.5%、84%なら約+5.0%、86%なら約+7.5%。1.20なら必要勝率83.33%で、84%評価でもEV約+0.8%に縮小。",
+            "最終判断：「Portugalが強い」ことだけではなく、H2H、直近10試合、得失点、共通相手、予選成績、開催条件、必要勝率の複数要素が同方向。したがって1.25以上をVALUE候補の条件として事前固定する。",
+            "試合後に追記：実際の結果、Closing Odds、CLV、$100固定損益、累計損益、ROI。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "v1-legacy-nip-3dmax",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable tbody 行1の直後の分析行"
+      },
+      "raw_html": "\n    <details class=\"value-detail\"><summary>分析を表示</summary><div class=\"value-detail-body\">\n      <strong>選定理由：</strong>3DMAXが圧倒的に強いからではなく、市場がほぼ五分と見ている価格に対し、戦力・ランキング・直近成績などから3DMAXを56〜58%程度まで評価できる可能性があるという「市場評価とのズレ」を検証する。<br>\n      <strong>保存判定：</strong>正式VALUE対象。仮想投資$100。勝敗判明後にClosing Odds、CLV、固定$100損益、累計損益、ROIを追記する。\n    </div></details>\n  ",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "分析を表示"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "選定理由：3DMAXが圧倒的に強いからではなく、市場がほぼ五分と見ている価格に対し、戦力・ランキング・直近成績などから3DMAXを56〜58%程度まで評価できる可能性があるという「市場評価とのズレ」を検証する。",
+            "保存判定：正式VALUE対象。仮想投資$100。勝敗判明後にClosing Odds、CLV、固定$100損益、累計損益、ROIを追記する。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "v1-legacy-slo-pol",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable tbody 行2の直後の分析行"
+      },
+      "raw_html": "\n    <details class=\"value-detail\"><summary>分析を表示</summary><div class=\"value-detail-body\">\n      <strong>選定理由：</strong>現在のチーム力・大会実績・直接対決・直近内容を複合して、1.25で必要な80%を上回る84〜87%程度と暫定評価。単に強豪だからではなく、価格1.25でも余白があるかを検証する。<br>\n      <strong>保存条件：</strong>1.25以上なら正式VALUE対象。今回は1.25として$100固定で保存。\n    </div></details>\n  ",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "分析を表示"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "選定理由：現在のチーム力・大会実績・直接対決・直近内容を複合して、1.25で必要な80%を上回る84〜87%程度と暫定評価。単に強豪だからではなく、価格1.25でも余白があるかを検証する。",
+            "保存条件：1.25以上なら正式VALUE対象。今回は1.25として$100固定で保存。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "v1-legacy-heroic-fnatic",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable tbody 行3の直後の分析行"
+      },
+      "raw_html": "\n    <details class=\"value-detail\"><summary>分析を表示</summary><div class=\"value-detail-body\">\n      HEROIC 1.35では必要勝率74.1%。保存時点は監視候補。最新確認ではHLTV #34 / VRS #25、fnaticはHLTV #42 / VRS #34。Vetoはfnatic Nuke除外→HEROIC Anubis除外→fnatic Cache選択→HEROIC Mirage選択→Inferno決定戦。HLTV掲載の直近同カード履歴では2026/8/9にfnaticがInferno 13-11、Ancient 13-9。事前の「HEROIC優勢」だけでなく、相手側のH2H・Cache適性という逆材料も残してVALUE判定を検証する。\n    </div></details>\n  ",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "分析を表示"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "HEROIC 1.35では必要勝率74.1%。保存時点は監視候補。最新確認ではHLTV #34 / VRS #25、fnaticはHLTV #42 / VRS #34。Vetoはfnatic Nuke除外→HEROIC Anubis除外→fnatic Cache選択→HEROIC Mirage選択→Inferno決定戦。HLTV掲載の直近同カード履歴では2026/8/9にfnaticがInferno 13-11、Ancient 13-9。事前の「HEROIC優勢」だけでなく、相手側のH2H・Cache適性という逆材料も残してVALUE判定を検証する。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "v1-legacy-fin-fra",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable tbody 行4の直後の分析行"
+      },
+      "raw_html": "\n    <details class=\"value-detail\"><summary>分析を表示</summary><div class=\"value-detail-body\">\n      Franceは今大会6勝1敗で、決勝トーナメントでもPortugal、Romaniaに3-0。一方Finlandもグループ4勝1敗からItalyを3-2で破っており、単純な格下扱いはしない。1.20では83.3%以上必要なので余白が小さく、価格上昇時に再評価する監視候補。\n    </div></details>\n  ",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "分析を表示"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "Franceは今大会6勝1敗で、決勝トーナメントでもPortugal、Romaniaに3-0。一方Finlandもグループ4勝1敗からItalyを3-2で破っており、単純な格下扱いはしない。1.20では83.3%以上必要なので余白が小さく、価格上昇時に再評価する監視候補。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "v1-legacy-kc-xlg",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable tbody 行5の直後の分析行"
+      },
+      "raw_html": "\n    <details class=\"value-detail\"><summary>分析を表示</summary><div class=\"value-detail-body\">\n      H2Hは過去対戦なし。直近5シリーズはKC 5勝0敗、XLG 2勝3敗で方向はKC側。ただし1.17〜1.20では83.3〜85.5%の勝率が必要。「KCが強い」と「この価格にVALUEがある」は別問題として、正式$100対象には入れず監視候補で固定。\n    </div></details>\n  ",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "分析を表示"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "H2Hは過去対戦なし。直近5シリーズはKC 5勝0敗、XLG 2勝3敗で方向はKC側。ただし1.17〜1.20では83.3〜85.5%の勝率が必要。「KCが強い」と「この価格にVALUEがある」は別問題として、正式$100対象には入れず監視候補で固定。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "v1-legacy-gl-k27",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable tbody 行6の直後の分析行"
+      },
+      "raw_html": "<details><summary>VALUE分析</summary><p>HLTV #20 / VRS #36。K27は直近フォームと9/2の直接対戦2-1勝利が逆材料。GamerLegionのランキング優位を評価しつつ、H2HとMirage相性リスクを減点して64〜67%で固定。1.67なら必要59.9%。</p></details>",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "VALUE分析"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "HLTV #20 / VRS #36。K27は直近フォームと9/2の直接対戦2-1勝利が逆材料。GamerLegionのランキング優位を評価しつつ、H2HとMirage相性リスクを減点して64〜67%で固定。1.67なら必要59.9%。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "v1-legacy-jsk-barca",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable tbody 行7の直後の分析行"
+      },
+      "raw_html": "<details><summary>VALUE分析</summary><p>直接対戦なし。BarçaはEMEA MastersでGSMC 2-0、Bubliki 2-1。直近確認10シリーズ7勝3敗。BO1の分散と1.12の高い必要勝率89.3%を減点し、91〜93%で低エッジVALUEとして固定。</p></details>",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "VALUE分析"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "直接対戦なし。BarçaはEMEA MastersでGSMC 2-0、Bubliki 2-1。直近確認10シリーズ7勝3敗。BO1の分散と1.12の高い必要勝率89.3%を減点し、91〜93%で低エッジVALUEとして固定。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "v1-legacy-loud-edg",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#oddsTestTable tbody 行8の直後の分析行"
+      },
+      "raw_html": "<details><summary>VALUE分析</summary><p>H2HはLOUD 2勝、EDG 1勝。LOUD直近5は3勝2敗、EDGは2勝3敗。1.37では必要73.0%で薄く、1.43なら必要69.9%。価格でVALUEが変わるため監視。</p></details>",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "VALUE分析"
+        },
+        {
+          "type": "lines",
+          "lines": [
+            "H2HはLOUD 2勝、EDG 1勝。LOUD直近5は3勝2敗、EDGは2勝3敗。1.37では必要73.0%で薄く、1.43なら必要69.9%。価格でVALUEが変わるため監視。"
+          ]
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    }
+  ]
+}

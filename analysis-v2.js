@@ -18,10 +18,18 @@ export const DATA_PATHS = {
   legacy_analysis_recommendations: "data/legacy-analysis/recommendations.json",
   legacy_analysis_value1: "data/legacy-analysis/value1.json",
   legacy_analysis_value2: "data/legacy-analysis/value2.json",
+  post_match_recommendations: "data/post-match-reviews/recommendations.json",
+  post_match_experience: "data/post-match-reviews/experience.json",
+  post_match_value1: "data/post-match-reviews/value1.json",
+  post_match_value2: "data/post-match-reviews/value2.json",
+  post_match_pro_edge: "data/post-match-reviews/pro_edge.json",
 };
 
-async function getJson(path) {
+const OPTIONAL = new Set(["post_match_recommendations", "post_match_experience", "post_match_value1", "post_match_value2", "post_match_pro_edge"]);
+
+async function getJson(path, optional = false) {
   const res = await fetch(path, { cache: "no-cache" });
+  if (optional && res.status === 404) return null;
   if (!res.ok) throw new Error(`${path} を読み込めません（${res.status}）`);
   return res.json();
 }
@@ -61,8 +69,8 @@ async function main() {
   const mode = resolveMode(location.href);
   document.documentElement.dataset.mode = mode.mode;
   try {
-    const entries = await Promise.all(Object.entries(DATA_PATHS).map(async ([k, p]) => [k, await getJson(p)]));
-    let ds = Object.fromEntries(entries);
+    const entries = await Promise.all(Object.entries(DATA_PATHS).map(async ([k, p]) => [k, await getJson(p, OPTIONAL.has(k))]));
+    let ds = Object.fromEntries(entries.filter(([, v]) => v != null));
     const cfg = await getJson("config/pro-edge.config.json");
     if (mode.demo) ds = await applyDemo(ds);                 // development のときだけ
     assertNoDemoInProduction(mode, ds);

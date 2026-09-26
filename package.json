@@ -7,9 +7,12 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test \"tests/**/*.test.js\"",
+    "test": "node scripts/run-tests.js",
+    "test:snapshot": "node scripts/run-tests.js snapshot",
+    "test:live": "node scripts/run-tests.js live",
     "validate": "node scripts/validate-data.js",
     "check-locked": "node scripts/check-locked.js",
+    "audit": "node scripts/audit-report.js",
     "baseline": "node baseline/capture-baseline.js"
   }
 }

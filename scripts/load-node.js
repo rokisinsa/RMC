@@ -1,10 +1,14 @@
 // Node 専用の読み込み補助（lib/ はブラウザでも使えるよう fs に依存させない）。
 
 import { readFileSync, readdirSync, existsSync } from "node:fs";
-import { join, dirname } from "node:path";
+import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+// データの読み込み先。既定は data/（現在のデータ）。RMC_DATA_DIR を指定すると、そのディレクトリ
+// （例：移行スナップショット snapshots/2026-09-26-migration/data）を読む。
+export const DATA_DIR = process.env.RMC_DATA_DIR ? resolve(ROOT, process.env.RMC_DATA_DIR) : join(ROOT, "data");
 
 export const DATA_FILES = {
   matches: "matches.json",
@@ -18,6 +22,11 @@ export const DATA_FILES = {
   legacy_analysis_recommendations: "legacy-analysis/recommendations.json",
   legacy_analysis_value1: "legacy-analysis/value1.json",
   legacy_analysis_value2: "legacy-analysis/value2.json",
+  post_match_recommendations: "post-match-reviews/recommendations.json",
+  post_match_experience: "post-match-reviews/experience.json",
+  post_match_value1: "post-match-reviews/value1.json",
+  post_match_value2: "post-match-reviews/value2.json",
+  post_match_pro_edge: "post-match-reviews/pro_edge.json",
 };
 
 export function loadProEdgeConfig(path = join(ROOT, "config", "pro-edge.config.json")) {
@@ -34,12 +43,15 @@ export function loadSchemas(dir = join(ROOT, "schema")) {
 }
 
 // 存在するデータファイルだけを読み込む。{ datasets, missing }
-export function loadDatasets(dir = join(ROOT, "data")) {
+// 任意ファイル（移行スナップショットより後に追加されたもの。無くても欠けとして扱わない）
+export const OPTIONAL_DATA_FILES = new Set(["post_match_recommendations", "post_match_experience", "post_match_value1", "post_match_value2", "post_match_pro_edge"]);
+
+export function loadDatasets(dir = DATA_DIR) {
   const datasets = {}, missing = [];
   for (const [name, file] of Object.entries(DATA_FILES)) {
     const path = join(dir, file);
     if (existsSync(path)) datasets[name] = JSON.parse(readFileSync(path, "utf8"));
-    else missing.push(file);
+    else if (!OPTIONAL_DATA_FILES.has(name)) missing.push(file);
   }
   return { datasets, missing };
 }

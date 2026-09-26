@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "post-match-review.schema.json",
+  "title": "data/post-match-reviews/<系統>.json — 試合後レビュー（敗因分析・成功要因）",
+  "$comment": "各系統のカードの試合後レビューを、その系統のファイルにだけ記録する（系統間で共有しない）。記録だけで、判定ロジックや locked の事前値は変更しない。ロジック変更の提案は proposal に書き、人間の承認なしに適用しない。",
+  "type": "object",
+  "required": ["schema_version", "system", "reviews"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "meta": { "$ref": "defs.schema.json#/$defs/fileMeta" },
+    "system": { "enum": ["recommendations", "experience", "value1", "value2", "pro_edge"] },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["pick_id", "created_at", "update_run", "outcome", "category", "findings", "missing_data", "action"],
+        "additionalProperties": false,
+        "properties": {
+          "pick_id": { "$ref": "defs.schema.json#/$defs/id" },
+          "created_at": { "$ref": "defs.schema.json#/$defs/dateTime" },
+          "update_run": { "type": "string", "minLength": 1, "description": "レビューを書いた定時更新（例 2026-09-27 06:00）" },
+          "outcome": { "enum": ["win", "loss", "push", "void"] },
+          "category": {
+            "enum": ["variance", "model_error", "information_missing", "late_news", "market_moved", "data_error", "execution", "other"],
+            "description": "variance=想定内の外れ / model_error=推定の誤り / information_missing=事前に取得できなかった情報 / late_news=直前情報 / market_moved=市場の変化 / data_error=データの誤り / execution=価格・投入の問題"
+          },
+          "findings": { "type": "string", "minLength": 1 },
+          "missing_data": { "type": "array", "items": { "type": "string" } },
+          "action": { "enum": ["none", "monitor", "propose_change"] },
+          "proposal": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+        }
+      }
+    }
+  }
+}

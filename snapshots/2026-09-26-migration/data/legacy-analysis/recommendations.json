@@ -1,0 +1,2319 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "generated_by": "migration/extract-legacy-analysis.js",
+    "legacy_source": "analysis.html",
+    "legacy_commit": "02e5167",
+    "as_of": "2026-09-26T06:45:58+09:00",
+    "status": "draft",
+    "note": "① 推奨取引の旧分析本文（原文と構造化）。書き換え・要約はしていない。事前固定を確認できない確率表示は構造化の対象外（raw_html には原文のまま残る）"
+  },
+  "system": "recommendations",
+  "entries": [
+    {
+      "pick_id": "rec-legacy-log-barca-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-log-barca-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">Logroño United vs FC Barcelona</div><div class=\"detail-sub\">2026/9/26 23:30 JST / プリメーラディビシオン女子 / Las Gaunas</div><div class=\"easy-summary\"><div class=\"easy-title\">徹底深掘り要点</div><div class=\"easy-grid\"><div class=\"easy-item\"><span>格差スコア</span><strong>94/100（勝率ではない）</strong></div><div class=\"easy-item\"><span>信頼度</span><strong>A</strong></div><div class=\"easy-item\"><span>今季</span><strong>Logroño 2勝0分2敗 4-3 / Barça 4勝0分0敗 19-2</strong></div><div class=\"easy-item\"><span>シュート / パス</span><strong>42 vs 83 / 1458 vs 2629</strong></div></div></div><div class=\"h2h-analysis\"><div class=\"h2h-analysis-title\">確認できたH2H全9試合</div><div class=\"h2h-stats\"><div class=\"h2h-stat\"><span>Barcelona</span><strong>9勝0分0敗</strong></div><div class=\"h2h-stat\"><span>総得点</span><strong>Barcelona 35-0</strong></div><div class=\"h2h-stat\"><span>平均</span><strong>3.89-0.00</strong></div></div></div><div class=\"table-wrap\"><table class=\"h2h-table\"><tr><th>日付</th><th>結果</th></tr><tr><td>2026/2/8</td><td>Logroño 0-3 Barcelona</td></tr><tr><td>2025/9/12</td><td>Barcelona 4-0 Logroño</td></tr><tr><td>2021/2/13</td><td>Barcelona 3-0 Logroño</td></tr><tr><td>2021/2/6</td><td>Logroño 0-2 Barcelona</td></tr><tr><td>2020/10/11</td><td>Barcelona 6-0 Logroño</td></tr><tr><td>2020/2/23</td><td>Logroño 0-6 Barcelona</td></tr><tr><td>2019/10/20</td><td>Barcelona 5-0 Logroño</td></tr><tr><td>2019/3/31</td><td>Logroño 0-4 Barcelona</td></tr><tr><td>2018/12/15</td><td>Barcelona 2-0 Logroño</td></tr></table>\n\n</div><div class=\"reason\"><strong>判定：</strong>H2H全9戦がBarcelona勝利かつ35-0。今季も4戦19得点2失点、首位。順位・得失点・シュート・パス・H2Hがすべて同方向。直近10戦は複数ソースで完全10件を照合できていないため、未確認分は補完しない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Logroño United vs FC Barcelona"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 23:30 JST / プリメーラディビシオン女子 / Las Gaunas"
+        },
+        {
+          "type": "items",
+          "title": "徹底深掘り要点",
+          "items": [
+            {
+              "label": "格差スコア",
+              "value": "94/100（勝率ではない）"
+            },
+            {
+              "label": "信頼度",
+              "value": "A"
+            },
+            {
+              "label": "今季",
+              "value": "Logroño 2勝0分2敗 4-3 / Barça 4勝0分0敗 19-2"
+            },
+            {
+              "label": "シュート / パス",
+              "value": "42 vs 83 / 1458 vs 2629"
+            }
+          ]
+        },
+        {
+          "type": "items",
+          "title": "確認できたH2H全9試合",
+          "items": [
+            {
+              "label": "Barcelona",
+              "value": "9勝0分0敗"
+            },
+            {
+              "label": "総得点",
+              "value": "Barcelona 35-0"
+            },
+            {
+              "label": "平均",
+              "value": "3.89-0.00"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "結果"
+          ],
+          "rows": [
+            [
+              "2026/2/8",
+              "Logroño 0-3 Barcelona"
+            ],
+            [
+              "2025/9/12",
+              "Barcelona 4-0 Logroño"
+            ],
+            [
+              "2021/2/13",
+              "Barcelona 3-0 Logroño"
+            ],
+            [
+              "2021/2/6",
+              "Logroño 0-2 Barcelona"
+            ],
+            [
+              "2020/10/11",
+              "Barcelona 6-0 Logroño"
+            ],
+            [
+              "2020/2/23",
+              "Logroño 0-6 Barcelona"
+            ],
+            [
+              "2019/10/20",
+              "Barcelona 5-0 Logroño"
+            ],
+            [
+              "2019/3/31",
+              "Logroño 0-4 Barcelona"
+            ],
+            [
+              "2018/12/15",
+              "Barcelona 2-0 Logroño"
+            ]
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "判定：H2H全9戦がBarcelona勝利かつ35-0。今季も4戦19得点2失点、首位。順位・得失点・シュート・パス・H2Hがすべて同方向。直近10戦は複数ソースで完全10件を照合できていないため、未確認分は補完しない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-charlton-city-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-charlton-city-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">Charlton Athletic Women vs Manchester City Women</div><div class=\"detail-sub\">2026/9/26 21:30 JST / Barclays WSL / The Valley</div><div class=\"easy-summary\"><div class=\"easy-title\">直近確認分</div><div class=\"easy-grid\"><div class=\"easy-item\"><span>Charlton</span><strong>直近6確認分：0-4, 1-4, 0-1, 0-4, 0-0, 0-2</strong></div><div class=\"easy-item\"><span>Man City</span><strong>直近6確認分：2-2, 4-2, 4-1, 3-1, 4-0, 4-1</strong></div><div class=\"easy-item\"><span>市場</span><strong>Charlton 23〜35級 / Draw 14〜15級 / City 1.03〜1.06</strong></div><div class=\"easy-item\"><span>信頼度</span><strong>A- / 格差93</strong></div></div></div><div class=\"reason\"><strong>H2H：</strong>今回の公開検索で完全な直接対戦全件表を確認できなかったため「未確認」。直近10戦も現時点で確実に照合できた6戦を表示し、残りを推測で埋めない。市場と直近フォームは強くCity方向だが、この欠損のためAではなくA-。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Charlton Athletic Women vs Manchester City Women"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 21:30 JST / Barclays WSL / The Valley"
+        },
+        {
+          "type": "items",
+          "title": "直近確認分",
+          "items": [
+            {
+              "label": "Charlton",
+              "value": "直近6確認分：0-4, 1-4, 0-1, 0-4, 0-0, 0-2"
+            },
+            {
+              "label": "Man City",
+              "value": "直近6確認分：2-2, 4-2, 4-1, 3-1, 4-0, 4-1"
+            },
+            {
+              "label": "市場",
+              "value": "Charlton 23〜35級 / Draw 14〜15級 / City 1.03〜1.06"
+            },
+            {
+              "label": "信頼度",
+              "value": "A- / 格差93"
+            }
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "H2H：今回の公開検索で完全な直接対戦全件表を確認できなかったため「未確認」。直近10戦も現時点で確実に照合できた6戦を表示し、残りを推測で埋めない。市場と直近フォームは強くCity方向だが、この欠損のためAではなくA-。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-lat-ger-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-lat-ger-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">Latvia U21 vs Germany U21</div><div class=\"detail-sub\">2026/9/27 01:00 JST / UEFA U21 EURO 2027予選 Group F / Daugava</div><div class=\"h2h-analysis\"><div class=\"h2h-analysis-title\">確認できたH2H全3試合</div><div class=\"h2h-stats\"><div class=\"h2h-stat\"><span>Germany</span><strong>3勝0分0敗</strong></div><div class=\"h2h-stat\"><span>総得点</span><strong>Germany 12-1</strong></div><div class=\"h2h-stat\"><span>公開市場</span><strong>Germany 1.05〜1.08</strong></div></div></div><div class=\"table-wrap\"><table class=\"h2h-table\"><tr><th>日付</th><th>結果</th></tr><tr><td>2025/9/9</td><td>Germany 5-0 Latvia</td></tr><tr><td>2022/3/25</td><td>Germany 4-0 Latvia</td></tr><tr><td>2021/9/7</td><td>Latvia 1-3 Germany</td></tr></table></div><div class=\"reason\"><strong>格差スコア92 / 信頼度A。</strong> H2Hは確認できた全3戦でGermany全勝・12-1。公開市場もGermany 1.05〜1.08、前半Germany 1.27〜1.35。直近10戦の完全照合は未完了のため、未確認データを追加していない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Latvia U21 vs Germany U21"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/27 01:00 JST / UEFA U21 EURO 2027予選 Group F / Daugava"
+        },
+        {
+          "type": "items",
+          "title": "確認できたH2H全3試合",
+          "items": [
+            {
+              "label": "Germany",
+              "value": "3勝0分0敗"
+            },
+            {
+              "label": "総得点",
+              "value": "Germany 12-1"
+            },
+            {
+              "label": "公開市場",
+              "value": "Germany 1.05〜1.08"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "結果"
+          ],
+          "rows": [
+            [
+              "2025/9/9",
+              "Germany 5-0 Latvia"
+            ],
+            [
+              "2022/3/25",
+              "Germany 4-0 Latvia"
+            ],
+            [
+              "2021/9/7",
+              "Latvia 1-3 Germany"
+            ]
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア92 / 信頼度A。 H2Hは確認できた全3戦でGermany全勝・12-1。公開市場もGermany 1.05〜1.08、前半Germany 1.27〜1.35。直近10戦の完全照合は未完了のため、未確認データを追加していない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-smr-fin-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-smr-fin-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">San Marino vs Finland</div><div class=\"detail-sub\">2026/9/27 01:00 JST / UEFA Nations League C / Serravalle</div><div class=\"h2h-analysis\"><div class=\"h2h-analysis-title\">確認できたH2H全4試合</div><div class=\"h2h-stats\"><div class=\"h2h-stat\"><span>Finland</span><strong>4勝0分0敗</strong></div><div class=\"h2h-stat\"><span>総得点</span><strong>Finland 17-1</strong></div><div class=\"h2h-stat\"><span>San Marino</span><strong>14戦未勝利</strong></div></div></div><div class=\"table-wrap\"><table class=\"h2h-table\"><tr><th>日付</th><th>結果</th></tr><tr><td>2023/11/20</td><td>San Marino 1-2 Finland</td></tr><tr><td>2023/6/19</td><td>Finland 6-0 San Marino</td></tr><tr><td>2011/6/3</td><td>San Marino 0-1 Finland</td></tr><tr><td>2010/11/17</td><td>Finland 8-0 San Marino</td></tr></table></div><div class=\"reason\"><strong>直近10戦 Finland：</strong>3勝1分6敗（確認済み）。San Marinoは直近5確認分が0勝1分4敗、かつ14戦未勝利。FinlandはPyyhtiä、Skyttä、Joronenが負傷でUnavailable表示。格差90 / 信頼度A。市場はFinland 1.07〜1.11級。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "San Marino vs Finland"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/27 01:00 JST / UEFA Nations League C / Serravalle"
+        },
+        {
+          "type": "items",
+          "title": "確認できたH2H全4試合",
+          "items": [
+            {
+              "label": "Finland",
+              "value": "4勝0分0敗"
+            },
+            {
+              "label": "総得点",
+              "value": "Finland 17-1"
+            },
+            {
+              "label": "San Marino",
+              "value": "14戦未勝利"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "結果"
+          ],
+          "rows": [
+            [
+              "2023/11/20",
+              "San Marino 1-2 Finland"
+            ],
+            [
+              "2023/6/19",
+              "Finland 6-0 San Marino"
+            ],
+            [
+              "2011/6/3",
+              "San Marino 0-1 Finland"
+            ],
+            [
+              "2010/11/17",
+              "Finland 8-0 San Marino"
+            ]
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "直近10戦 Finland：3勝1分6敗（確認済み）。San Marinoは直近5確認分が0勝1分4敗、かつ14戦未勝利。FinlandはPyyhtiä、Skyttä、Joronenが負傷でUnavailable表示。格差90 / 信頼度A。市場はFinland 1.07〜1.11級。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-ag-lgd-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-ag-lgd-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">All Gamers vs LGD Gaming</div><div class=\"h2h-analysis\"><div class=\"h2h-analysis-title\">Ubisoft公式H2H全2試合</div><div class=\"h2h-stats\"><div class=\"h2h-stat\"><span>H2H</span><strong>All Gamers 2-0</strong></div><div class=\"h2h-stat\"><span>H2Hラウンド</span><strong>21-3</strong></div><div class=\"h2h-stat\"><span>ESI Rating</span><strong>1701 vs 1517</strong></div></div></div><div class=\"table-wrap\"><table class=\"h2h-table\"><tr><th>日付</th><th>結果</th><th>形式</th></tr><tr><td>2026/6/5</td><td>All Gamers 2-0 LGD</td><td>BO3</td></tr><tr><td>2026/4/13</td><td>All Gamers 7-0 LGD</td><td>BO1</td></tr></table></div><div class=\"reason\"><strong>格差86 / 信頼度A-。</strong> All GamersはESI集計9勝4敗（69%）、LGDは3勝2敗（60%）。モデル参考74%だが格差スコアとは別物。公開ブック価格は未掲載。BAN履歴はKafe/Consulate/Fortress/Chalet/Border/Bank/Nighthaven/Clubhouseまで公式表示あり。今回のVetoは未確定。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "All Gamers vs LGD Gaming"
+        },
+        {
+          "type": "items",
+          "title": "Ubisoft公式H2H全2試合",
+          "items": [
+            {
+              "label": "H2H",
+              "value": "All Gamers 2-0"
+            },
+            {
+              "label": "H2Hラウンド",
+              "value": "21-3"
+            },
+            {
+              "label": "ESI Rating",
+              "value": "1701 vs 1517"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "結果",
+            "形式"
+          ],
+          "rows": [
+            [
+              "2026/6/5",
+              "All Gamers 2-0 LGD",
+              "BO3"
+            ],
+            [
+              "2026/4/13",
+              "All Gamers 7-0 LGD",
+              "BO1"
+            ]
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "格差86 / 信頼度A-。 All GamersはESI集計9勝4敗（69%）、LGDは3勝2敗（60%）。モデル参考74%だが格差スコアとは別物。公開ブック価格は未掲載。BAN履歴はKafe/Consulate/Fortress/Chalet/Border/Bank/Nighthaven/Clubhouseまで公式表示あり。今回のVetoは未確定。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-fearx-cyb-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-fearx-cyb-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">FearX vs Can You Be My Enemy</div><div class=\"h2h-analysis\"><div class=\"h2h-analysis-title\">Ubisoft公式H2H全2試合</div><div class=\"h2h-stats\"><div class=\"h2h-stat\"><span>H2H</span><strong>FearX 2-0</strong></div><div class=\"h2h-stat\"><span>直接ラウンド</span><strong>21-8</strong></div><div class=\"h2h-stat\"><span>Tips rating</span><strong>#14 vs #199</strong></div></div></div><div class=\"table-wrap\"><table class=\"h2h-table\"><tr><th>日付</th><th>結果</th></tr><tr><td>2026/6/20</td><td>FearX 7-3 CYBME</td></tr><tr><td>2026/4/27</td><td>FearX 2-0 CYBME</td></tr></table></div><div class=\"reason\"><strong>格差84 / 信頼度A-。</strong> ESI直近集計FearX 4勝2敗、CYBME 0勝5敗。CYBMEはTips.ggで13連敗表示。ESI Rating 1594 vs 1386。公開ブック価格なし。今回Map/Veto未確定。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "FearX vs Can You Be My Enemy"
+        },
+        {
+          "type": "items",
+          "title": "Ubisoft公式H2H全2試合",
+          "items": [
+            {
+              "label": "H2H",
+              "value": "FearX 2-0"
+            },
+            {
+              "label": "直接ラウンド",
+              "value": "21-8"
+            },
+            {
+              "label": "Tips rating",
+              "value": "#14 vs #199"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "結果"
+          ],
+          "rows": [
+            [
+              "2026/6/20",
+              "FearX 7-3 CYBME"
+            ],
+            [
+              "2026/4/27",
+              "FearX 2-0 CYBME"
+            ]
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "格差84 / 信頼度A-。 ESI直近集計FearX 4勝2敗、CYBME 0勝5敗。CYBMEはTips.ggで13連敗表示。ESI Rating 1594 vs 1386。公開ブック価格なし。今回Map/Veto未確定。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-tmt-rrx-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-tmt-rrx-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">Trippy Main Telecom vs RRX</div><div class=\"h2h-analysis\"><div class=\"h2h-analysis-title\">確認できたH2H全1試合</div><div class=\"h2h-stats\"><div class=\"h2h-stat\"><span>H2H</span><strong>RRX 1-0</strong></div><div class=\"h2h-stat\"><span>直近10</span><strong>TMT 0勝10敗 / RRX 3勝7敗</strong></div><div class=\"h2h-stat\"><span>ESI Rating</span><strong>1368 vs 1450</strong></div></div></div><div class=\"table-wrap\"><table class=\"h2h-table\"><tr><th>日付</th><th>結果</th></tr><tr><td>2026/6/19</td><td>TMT 0-1 RRX（ラウンド7-8）</td></tr></table></div><div class=\"reason\"><strong>格差65 / 信頼度B。</strong> TMTは10連敗、RRXも直近10で3勝7敗のため、上位格差カードほど指標が揃っていない。ESIモデル参考62%。公開ブック価格なし。高信頼候補には格上げしない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Trippy Main Telecom vs RRX"
+        },
+        {
+          "type": "items",
+          "title": "確認できたH2H全1試合",
+          "items": [
+            {
+              "label": "H2H",
+              "value": "RRX 1-0"
+            },
+            {
+              "label": "直近10",
+              "value": "TMT 0勝10敗 / RRX 3勝7敗"
+            },
+            {
+              "label": "ESI Rating",
+              "value": "1368 vs 1450"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "結果"
+          ],
+          "rows": [
+            [
+              "2026/6/19",
+              "TMT 0-1 RRX（ラウンド7-8）"
+            ]
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "格差65 / 信頼度B。 TMTは10連敗、RRXも直近10で3勝7敗のため、上位格差カードほど指標が揃っていない。ESIモデル参考62%。公開ブック価格なし。高信頼候補には格上げしない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-kaz-uzb-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-kaz-uzb-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">カザフスタン vs ウズベキスタン</div><div class=\"detail-sub\">2026/9/26 12:30 JST / アジア大会 女子ハンドボール</div><div class=\"reason\"><strong>格差スコア：</strong>82/100（勝率ではない）／<strong>信頼度：</strong>B。公式日程で開始時刻を確認。H2Hは今後、確認できる過去対戦を10試合で打ち切らず全件追跡。現時点で完全な全件表を確認できないため未確認分を推測で補完しない。公開Web上で対象4サービスの現在オッズを確認できなかったためオッズは未確認。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "カザフスタン vs ウズベキスタン"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 12:30 JST / アジア大会 女子ハンドボール"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：82/100（勝率ではない）／信頼度：B。公式日程で開始時刻を確認。H2Hは今後、確認できる過去対戦を10試合で打ち切らず全件追跡。現時点で完全な全件表を確認できないため未確認分を推測で補完しない。公開Web上で対象4サービスの現在オッズを確認できなかったためオッズは未確認。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-china-hk-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-china-hk-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">中国 vs 香港</div><div class=\"detail-sub\">2026/9/26 15:00 JST / アジア大会 女子ハンドボール</div><div class=\"reason\"><strong>格差スコア：</strong>91/100（勝率ではない）／<strong>信頼度：</strong>A-。公式日程で開始時刻を確認。H2H・直近10試合・得失点を継続取得し、確認できるH2Hは全件を分析対象にする。現時点で全H2Hの完全な日付・スコア一覧を取得できていないため、未確認部分は記載しない。オッズも公開Webでは未確認。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "中国 vs 香港"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 15:00 JST / アジア大会 女子ハンドボール"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：91/100（勝率ではない）／信頼度：A-。公式日程で開始時刻を確認。H2H・直近10試合・得失点を継続取得し、確認できるH2Hは全件を分析対象にする。現時点で全H2Hの完全な日付・スコア一覧を取得できていないため、未確認部分は記載しない。オッズも公開Webでは未確認。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-kor-vie-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-kor-vie-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">韓国 vs ベトナム</div><div class=\"detail-sub\">2026/9/26 17:30 JST / アジア大会 女子ハンドボール</div><div class=\"easy-summary\"><div class=\"easy-title\">確認済み材料</div><div class=\"easy-grid\"><div class=\"easy-item\"><span>格差スコア</span><strong>93/100（勝率ではない）</strong></div><div class=\"easy-item\"><span>信頼度</span><strong>A-</strong></div><div class=\"easy-item\"><span>今大会の韓国</span><strong>香港に48-16、ウズベキスタンに43-13</strong></div><div class=\"easy-item\"><span>オッズ</span><strong>公開Webで未確認</strong></div></div></div><div class=\"reason\"><strong>H2H方針：</strong>直接対戦は10試合で打ち切らず、存在確認できる全件を日付・スコア付きで追跡する。現時点で完全な全件一覧を確認できていないため、架空補完はしない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "韓国 vs ベトナム"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 17:30 JST / アジア大会 女子ハンドボール"
+        },
+        {
+          "type": "items",
+          "title": "確認済み材料",
+          "items": [
+            {
+              "label": "格差スコア",
+              "value": "93/100（勝率ではない）"
+            },
+            {
+              "label": "信頼度",
+              "value": "A-"
+            },
+            {
+              "label": "今大会の韓国",
+              "value": "香港に48-16、ウズベキスタンに43-13"
+            },
+            {
+              "label": "オッズ",
+              "value": "公開Webで未確認"
+            }
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "H2H方針：直接対戦は10試合で打ち切らず、存在確認できる全件を日付・スコア付きで追跡する。現時点で完全な全件一覧を確認できていないため、架空補完はしない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-jpn-nep-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-jpn-nep-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">日本 vs ネパール</div><div class=\"detail-sub\">2026/9/26 09:00 JST / Korogi Athletic Park / 男子T20</div><div class=\"easy-summary\"><div class=\"easy-title\">確認済み材料</div><div class=\"easy-grid\"><div class=\"easy-item\"><span>格差スコア</span><strong>87/100（勝率ではない）</strong></div><div class=\"easy-item\"><span>信頼度</span><strong>B+</strong></div><div class=\"easy-item\"><span>直前結果</span><strong>ネパールはアフガニスタンに5 wickets勝利</strong></div><div class=\"easy-item\"><span>日本の直前結果</span><strong>アフガニスタンに48 runs敗戦</strong></div></div></div><div class=\"reason\"><strong>H2H：</strong>確認できる代表直接対戦を全件対象にする。完全な全件履歴を現時点で確認できていないため不明扱い。公式大会日程では9/26 09:00開始。オッズは対象4サービスの公開Webでは未確認。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "日本 vs ネパール"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 09:00 JST / Korogi Athletic Park / 男子T20"
+        },
+        {
+          "type": "items",
+          "title": "確認済み材料",
+          "items": [
+            {
+              "label": "格差スコア",
+              "value": "87/100（勝率ではない）"
+            },
+            {
+              "label": "信頼度",
+              "value": "B+"
+            },
+            {
+              "label": "直前結果",
+              "value": "ネパールはアフガニスタンに5 wickets勝利"
+            },
+            {
+              "label": "日本の直前結果",
+              "value": "アフガニスタンに48 runs敗戦"
+            }
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "H2H：確認できる代表直接対戦を全件対象にする。完全な全件履歴を現時点で確認できていないため不明扱い。公式大会日程では9/26 09:00開始。オッズは対象4サービスの公開Webでは未確認。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-log-barca",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-log-barca .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">Logroño vs Barcelona</div><div class=\"detail-sub\">2026/9/26 23:30 JST</div><div class=\"reason\"><strong>格差スコア：</strong>94/100（勝率ではない）／<strong>信頼度：</strong>A。H2Hは収録元により件数差があるため確認できた全件を追跡。確認分はBarcelona全勝方向。今季4試合時点でBarcelonaは4勝0敗、19得点2失点、Logroñoは2勝2敗、4得点3失点。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Logroño vs Barcelona"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 23:30 JST"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：94/100（勝率ではない）／信頼度：A。H2Hは収録元により件数差があるため確認できた全件を追跡。確認分はBarcelona全勝方向。今季4試合時点でBarcelonaは4勝0敗、19得点2失点、Logroñoは2勝2敗、4得点3失点。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-lat-ger",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-lat-ger .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">Latvia U21 vs Germany U21</div><div class=\"detail-sub\">2026/9/27 01:00 JST</div><div class=\"reason\"><strong>格差スコア：</strong>93/100（勝率ではない）／<strong>信頼度：</strong>A。確認H2Hは3戦すべてGermany勝利、合計12-1。公開市場でもGermanyが大幅優勢。欠場情報を含めて評価。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Latvia U21 vs Germany U21"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/27 01:00 JST"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：93/100（勝率ではない）／信頼度：A。確認H2Hは3戦すべてGermany勝利、合計12-1。公開市場でもGermanyが大幅優勢。欠場情報を含めて評価。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-cha-mci",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-cha-mci .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">Charlton vs Manchester City</div><div class=\"detail-sub\">2026/9/26 21:30 JST</div><div class=\"reason\"><strong>格差スコア：</strong>91/100（勝率ではない）／<strong>信頼度：</strong>A-。古いH2Hは現在戦力との関連が弱いため低ウェイト。直近得失点、現在戦力、リーグ成績を中心に評価。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Charlton vs Manchester City"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 21:30 JST"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：91/100（勝率ではない）／信頼度：A-。古いH2Hは現在戦力との関連が弱いため低ウェイト。直近得失点、現在戦力、リーグ成績を中心に評価。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-smr-fin",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-smr-fin .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">San Marino vs Finland</div><div class=\"detail-sub\">2026/9/27 01:00 JST</div><div class=\"reason\"><strong>格差スコア：</strong>90/100（勝率ではない）／<strong>信頼度：</strong>A。確認H2H全6戦をFinlandが全勝、合計23-2。San Marino直近10戦0勝1分9敗。Finland側の欠場も考慮。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "San Marino vs Finland"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/27 01:00 JST"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：90/100（勝率ではない）／信頼度：A。確認H2H全6戦をFinlandが全勝、合計23-2。San Marino直近10戦0勝1分9敗。Finland側の欠場も考慮。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-faze-furia-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-faze-furia-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">FaZe Clan vs FURIA</div><div class=\"detail-sub\">2026/9/27 04:45 JST</div><div class=\"reason\"><strong>格差スコア：</strong>84/100（勝率ではない）／<strong>信頼度：</strong>A。Ubisoft公式集計でFaZe 20勝、FURIA 8勝、直接ラウンド303-261。直近10H2HはFaZe 6勝、FURIA 4勝。直近4H2HはFaZe連勝。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "FaZe Clan vs FURIA"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/27 04:45 JST"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：84/100（勝率ではない）／信頼度：A。Ubisoft公式集計でFaZe 20勝、FURIA 8勝、直接ラウンド303-261。直近10H2HはFaZe 6勝、FURIA 4勝。直近4H2HはFaZe連勝。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-fearx",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-fearx .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">FearX vs Can You Be My Enemy</div><div class=\"detail-sub\">2026/9/26 時刻照合中 JST</div><div class=\"reason\"><strong>格差スコア：</strong>83/100（勝率ではない）／<strong>信頼度：</strong>A-。公式確認H2HはFearX 2勝0敗、直接ラウンド21-8。CYBMEの直近不振も含めて評価。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "FearX vs Can You Be My Enemy"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 時刻照合中 JST"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：83/100（勝率ではない）／信頼度：A-。公式確認H2HはFearX 2勝0敗、直接ラウンド21-8。CYBMEの直近不振も含めて評価。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-loud-edg-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-loud-edg-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">LOUD vs EDward Gaming</div><div class=\"detail-sub\">2026/9/26 21:00 JST</div><div class=\"reason\"><strong>格差スコア：</strong>77/100（勝率ではない）／<strong>信頼度：</strong>A-。確認H2H全3シリーズはLOUD 2勝、EDG 1勝。直近5シリーズはLOUD 3勝2敗、EDG 2勝3敗。Map/Vetoは確定後のみ反映。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "LOUD vs EDward Gaming"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 21:00 JST"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：77/100（勝率ではない）／信頼度：A-。確認H2H全3シリーズはLOUD 2勝、EDG 1勝。直近5シリーズはLOUD 3勝2敗、EDG 2勝3敗。Map/Vetoは確定後のみ反映。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-ge-vit-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-ge-vit-rec .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">Global Esports vs Team Vitality</div><div class=\"detail-sub\">2026/9/26 18:00 JST</div><div class=\"reason\"><strong>格差スコア：</strong>68/100（勝率ではない）／<strong>信頼度：</strong>B+。H2Hは確認全2シリーズをVitalityが勝利。一方、直近5はGlobal 4勝1敗、Vitality 3勝2敗のため速報評価から格下げ。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "Global Esports vs Team Vitality"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 18:00 JST"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：68/100（勝率ではない）／信頼度：B+。H2Hは確認全2シリーズをVitalityが勝利。一方、直近5はGlobal 4勝1敗、Vitality 3勝2敗のため速報評価から格下げ。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-ag-lgd",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-ag-lgd .detail-cell"
+      },
+      "raw_html": "<div class=\"detail-title\">All Gamers vs LGD</div><div class=\"detail-sub\">2026/9/26 時刻照合中 JST</div><div class=\"reason\"><strong>格差スコア：</strong>68/100（勝率ではない）／<strong>信頼度：</strong>B+。確認データではAll Gamers優勢だが、速報時ほどの大差を裏付けないため格下げ。H2H全件と市場価格は確認後のみ追記。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。</div>",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "All Gamers vs LGD"
+        },
+        {
+          "type": "subtitle",
+          "text": "2026/9/26 時刻照合中 JST"
+        },
+        {
+          "type": "reason",
+          "text": "格差スコア：68/100（勝率ではない）／信頼度：B+。確認データではAll Gamers優勢だが、速報時ほどの大差を裏付けないため格下げ。H2H全件と市場価格は確認後のみ追記。 投入額は$100で統一。オッズ・時刻・H2H等は確認できた情報のみ掲載し、未確認は推測しない。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-spain-czech-rec",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-spain-czech-rec .detail-cell"
+      },
+      "raw_html": "\n<div class=\"detail-title\">推奨取引メモ</div>\n<div class=\"detail-sub\">スペイン vs チェコ / フェドカップ / チェコ勝者</div>\n<div class=\"reason\"><strong>登録内容：</strong>チェコ勝者、オッズ1.14、投入額$300。予定払戻し$342、予定利益+$42。</div>\n",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "推奨取引メモ"
+        },
+        {
+          "type": "subtitle",
+          "text": "スペイン vs チェコ / フェドカップ / チェコ勝者"
+        },
+        {
+          "type": "reason",
+          "text": "登録内容：チェコ勝者、オッズ1.14、投入額$300。予定払戻し$342、予定利益+$42。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-china-maldives",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-china-maldives .detail-cell"
+      },
+      "raw_html": "\n<div class=\"detail-title\">なぜこの組み合わせを選んだのか</div>\n<div class=\"detail-sub\">中国 vs モルディブ / 男子サッカー・国際親善試合 / 2026/9/24 20:35 JST / 北京</div>\n<div class=\"reason\" style=\"border-left-color:#ff6b78;background:rgba(255,107,120,.07)\"><strong>ベット結果：×</strong> 前半17分頃、0-0の時点で前半1X2の中国をオッズ1.27・$300でベット。前半は0-0のまま終了したため不的中。試合全体は中国が3-0で勝利。</div>\n\n<div class=\"easy-summary\">\n  <div class=\"easy-title\">まずここだけ見ればOK</div>\n  <div class=\"easy-grid\">\n    <div class=\"easy-item\"><span>カードのタイプ</span><strong>H2H＋ランキング＋開催地が同方向の格差型</strong></div>\n    <div class=\"easy-item\"><span>H2H</span><strong class=\"green\">中国 6勝0分0敗 / 総得点28-1</strong></div>\n    <div class=\"easy-item\"><span>直近4H2H</span><strong>中国 4勝 / 17得点0失点</strong></div>\n    <div class=\"easy-item\"><span>ランキング</span><strong>中国 91位 / モルディブ 173位 / 82位差</strong></div>\n    <div class=\"easy-item\"><span>開催地</span><strong>北京 / 中国ホーム</strong></div>\n    <div class=\"easy-item\"><span>市場参考</span><strong>中国勝利 1.01〜1.02級 / モルディブ 50〜75倍級</strong></div>\n  </div>\n</div>\n\n<div class=\"detail-section-label\">① H2H＋直近成績</div>\n<div class=\"detail-grid\">\n  <div class=\"box\"><h3>直接対戦</h3><p>公開情報から確認できた6試合は中国が6勝0分0敗。総得点は中国28-1モルディブ。</p></div>\n  <div class=\"box\"><h3>平均得点</h3><p>6試合平均で中国4.67得点、モルディブ0.17得点。平均得点差は中国+4.50。</p></div>\n  <div class=\"box\"><h3>直近4H2H</h3><p>3-0、4-0、5-0、5-0。中国4勝、17得点0失点。2001年の10-1を除外しても一方的な記録。</p></div>\n  <div class=\"box\"><h3>中国の2026年直近代表戦</h3><p>キュラソーに2-0、カメルーンに0-2、シンガポールに2-1、タイに0-0。中国自体が世界トップ級というより、モルディブとの直接対戦で差が大きく出ているタイプとして記録。</p></div>\n</div>\n\n<div class=\"detail-section-label\">② 総合戦力分析</div>\n<div class=\"detail-grid\">\n  <div class=\"box\"><h3>当時のFIFA順位</h3><p>中国91位、モルディブ173位。順位差は82位。</p></div>\n  <div class=\"box\"><h3>ホーム / アウェイ</h3><p>今回は北京開催で中国ホーム。ランキング差とH2Hに加えて開催地も中国側。</p></div>\n  <div class=\"box\"><h3>市場参考</h3><p>比較サイトでは中国勝利が概ね1.01〜1.02、モルディブ勝利が50〜75倍級という参考値。</p></div>\n  <div class=\"box\"><h3>①と②の照合</h3><p>H2H：中国6戦6勝・28-1。ランキング：中国91位・モルディブ173位。さらに中国ホームで、複数の比較軸が同じ方向。</p></div>\n</div>\n\n<div class=\"reason\"><strong>このカードの分析ポイント：</strong>「中国が世界的な強豪だから」ではなく、両国の直接対戦になると差が極端に拡大してきた点が重要。直近4H2Hで中国17得点0失点、全6試合で28-1という直接対戦差に、82位のランキング差と北京開催が重なっている。</div>\n\n<div class=\"detail-section-label\">③ H2H 全6試合</div>\n<div class=\"h2h-analysis\">\n  <div class=\"h2h-analysis-title\">直接対戦の集計</div>\n  <div class=\"h2h-stats\">\n    <div class=\"h2h-stat\"><span>対戦数</span><strong>6試合</strong></div>\n    <div class=\"h2h-stat\"><span>中国戦績</span><strong>6勝0分0敗</strong></div>\n    <div class=\"h2h-stat\"><span>総得点</span><strong>28 - 1</strong></div>\n    <div class=\"h2h-stat\"><span>得失点差</span><strong>中国 +27</strong></div>\n    <div class=\"h2h-stat\"><span>中国平均得点</span><strong>4.67</strong></div>\n    <div class=\"h2h-stat\"><span>モルディブ平均得点</span><strong>0.17</strong></div>\n  </div>\n  <div class=\"h2h-read\"><strong>直近4H2H：</strong>中国が4勝、17得点0失点。2001年の10-1という大差試合を外しても、近年の直接対戦で差が縮まっていない点を重視。</div>\n</div>\n<div class=\"table-wrap\"><table class=\"h2h-table\">\n<tr><th>日付</th><th>ホーム</th><th>アウェイ</th><th>スコア</th><th>勝者</th><th>先制点</th></tr>\n<tr><td>2021/6/11</td><td>中国</td><td>モルディブ</td><td>5-0</td><td>中国</td><td>未確認</td></tr>\n<tr><td>2019/9/10</td><td>モルディブ</td><td>中国</td><td>0-5</td><td>中国</td><td>未確認</td></tr>\n<tr><td>2016/3/24</td><td>中国</td><td>モルディブ</td><td>4-0</td><td>中国</td><td>未確認</td></tr>\n<tr><td>2015/9/8</td><td>モルディブ</td><td>中国</td><td>0-3</td><td>中国</td><td>未確認</td></tr>\n<tr><td>2001/4/28</td><td>モルディブ</td><td>中国</td><td>0-1</td><td>中国</td><td>未確認</td></tr>\n<tr><td>2001/4/22</td><td>中国</td><td>モルディブ</td><td>10-1</td><td>中国</td><td>未確認</td></tr>\n</table></div>\n\n<div class=\"source-note\">この分析は、ユーザーが当時の別チャットでまとめたH2H・直近成績・ランキング・市場参考値を、今回の取引メモに紐づけて保存したものです。先制点など未確認の項目は推測せず未確認のまま残しています。</div>\n",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "なぜこの組み合わせを選んだのか"
+        },
+        {
+          "type": "subtitle",
+          "text": "中国 vs モルディブ / 男子サッカー・国際親善試合 / 2026/9/24 20:35 JST / 北京"
+        },
+        {
+          "type": "reason",
+          "text": "ベット結果：× 前半17分頃、0-0の時点で前半1X2の中国をオッズ1.27・$300でベット。前半は0-0のまま終了したため不的中。試合全体は中国が3-0で勝利。"
+        },
+        {
+          "type": "items",
+          "title": "まずここだけ見ればOK",
+          "items": [
+            {
+              "label": "カードのタイプ",
+              "value": "H2H＋ランキング＋開催地が同方向の格差型"
+            },
+            {
+              "label": "H2H",
+              "value": "中国 6勝0分0敗 / 総得点28-1"
+            },
+            {
+              "label": "直近4H2H",
+              "value": "中国 4勝 / 17得点0失点"
+            },
+            {
+              "label": "ランキング",
+              "value": "中国 91位 / モルディブ 173位 / 82位差"
+            },
+            {
+              "label": "開催地",
+              "value": "北京 / 中国ホーム"
+            },
+            {
+              "label": "市場参考",
+              "value": "中国勝利 1.01〜1.02級 / モルディブ 50〜75倍級"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "text": "① H2H＋直近成績"
+        },
+        {
+          "type": "boxes",
+          "boxes": [
+            {
+              "title": "直接対戦",
+              "paragraphs": [
+                "公開情報から確認できた6試合は中国が6勝0分0敗。総得点は中国28-1モルディブ。"
+              ],
+              "list": []
+            },
+            {
+              "title": "平均得点",
+              "paragraphs": [
+                "6試合平均で中国4.67得点、モルディブ0.17得点。平均得点差は中国+4.50。"
+              ],
+              "list": []
+            },
+            {
+              "title": "直近4H2H",
+              "paragraphs": [
+                "3-0、4-0、5-0、5-0。中国4勝、17得点0失点。2001年の10-1を除外しても一方的な記録。"
+              ],
+              "list": []
+            },
+            {
+              "title": "中国の2026年直近代表戦",
+              "paragraphs": [
+                "キュラソーに2-0、カメルーンに0-2、シンガポールに2-1、タイに0-0。中国自体が世界トップ級というより、モルディブとの直接対戦で差が大きく出ているタイプとして記録。"
+              ],
+              "list": []
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "text": "② 総合戦力分析"
+        },
+        {
+          "type": "boxes",
+          "boxes": [
+            {
+              "title": "当時のFIFA順位",
+              "paragraphs": [
+                "中国91位、モルディブ173位。順位差は82位。"
+              ],
+              "list": []
+            },
+            {
+              "title": "ホーム / アウェイ",
+              "paragraphs": [
+                "今回は北京開催で中国ホーム。ランキング差とH2Hに加えて開催地も中国側。"
+              ],
+              "list": []
+            },
+            {
+              "title": "市場参考",
+              "paragraphs": [
+                "比較サイトでは中国勝利が概ね1.01〜1.02、モルディブ勝利が50〜75倍級という参考値。"
+              ],
+              "list": []
+            },
+            {
+              "title": "①と②の照合",
+              "paragraphs": [
+                "H2H：中国6戦6勝・28-1。ランキング：中国91位・モルディブ173位。さらに中国ホームで、複数の比較軸が同じ方向。"
+              ],
+              "list": []
+            }
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "このカードの分析ポイント：「中国が世界的な強豪だから」ではなく、両国の直接対戦になると差が極端に拡大してきた点が重要。直近4H2Hで中国17得点0失点、全6試合で28-1という直接対戦差に、82位のランキング差と北京開催が重なっている。"
+        },
+        {
+          "type": "section",
+          "text": "③ H2H 全6試合"
+        },
+        {
+          "type": "items",
+          "title": "直接対戦の集計",
+          "items": [
+            {
+              "label": "対戦数",
+              "value": "6試合"
+            },
+            {
+              "label": "中国戦績",
+              "value": "6勝0分0敗"
+            },
+            {
+              "label": "総得点",
+              "value": "28 - 1"
+            },
+            {
+              "label": "得失点差",
+              "value": "中国 +27"
+            },
+            {
+              "label": "中国平均得点",
+              "value": "4.67"
+            },
+            {
+              "label": "モルディブ平均得点",
+              "value": "0.17"
+            }
+          ],
+          "notes": [
+            "直近4H2H：中国が4勝、17得点0失点。2001年の10-1という大差試合を外しても、近年の直接対戦で差が縮まっていない点を重視。"
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "ホーム",
+            "アウェイ",
+            "スコア",
+            "勝者",
+            "先制点"
+          ],
+          "rows": [
+            [
+              "2021/6/11",
+              "中国",
+              "モルディブ",
+              "5-0",
+              "中国",
+              "未確認"
+            ],
+            [
+              "2019/9/10",
+              "モルディブ",
+              "中国",
+              "0-5",
+              "中国",
+              "未確認"
+            ],
+            [
+              "2016/3/24",
+              "中国",
+              "モルディブ",
+              "4-0",
+              "中国",
+              "未確認"
+            ],
+            [
+              "2015/9/8",
+              "モルディブ",
+              "中国",
+              "0-3",
+              "中国",
+              "未確認"
+            ],
+            [
+              "2001/4/28",
+              "モルディブ",
+              "中国",
+              "0-1",
+              "中国",
+              "未確認"
+            ],
+            [
+              "2001/4/22",
+              "中国",
+              "モルディブ",
+              "10-1",
+              "中国",
+              "未確認"
+            ]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "この分析は、ユーザーが当時の別チャットでまとめたH2H・直近成績・ランキング・市場参考値を、今回の取引メモに紐づけて保存したものです。先制点など未確認の項目は推測せず未確認のまま残しています。"
+        }
+      ],
+      "excluded_from_blocks": [],
+      "js_summary": null
+    },
+    {
+      "pick_id": "rec-legacy-oddik-procyon",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-oddik-procyon .detail-cell"
+      },
+      "raw_html": "\n<div class=\"detail-title\">なぜこのカードなのか</div>\n<div class=\"detail-sub\">ODDIK vs Procyon / ESL Challenger League Season 52 South America Cup #2 / BO3 / Online / Upper Bracket Quarter-final</div>\n<div class=\"reason\" style=\"border-left-color:#ff6b78;background:rgba(255,107,120,.07)\"><strong>最終結果：</strong>Procyon 2-0 ODDIK。Map1 Dust2 13-4、Map2 Anubis 13-3でProcyonが勝利。登録していたODDIK勝者は不的中。</div>\n\n<div class=\"easy-summary\">\n  <div class=\"easy-title\">まずここだけ見ればOK</div>\n  <div class=\"easy-grid\">\n    <div class=\"easy-item\"><span>カードのタイプ</span><strong>ランキング＋中期勝率＋H2H＋マップ相性の複合型</strong></div>\n    <div class=\"easy-item\"><span>ランキング差</span><strong class=\"green\">HLTV #140 vs #173 / VRS #128 vs #237</strong></div>\n    <div class=\"easy-item\"><span>3か月勝率</span><strong>ODDIK 72.2% / Procyon 42.1%</strong></div>\n    <div class=\"easy-item\"><span>H2H</span><strong>1シリーズ：ODDIK 2-0 / マップ2勝0敗 / ラウンド26-16</strong></div>\n    <div class=\"easy-item\"><span>最大の注意点</span><strong class=\"yellow\">Procyon直近5戦4勝1敗・Veto未確定・前回H2Hからロスター変更あり</strong></div>\n    <div class=\"easy-item\"><span>市場</span><strong>ODDIK 1.24 / Procyon 3.80 → no-vig約75.4%</strong></div>\n  </div>\n</div>\n\n<div class=\"detail-section-label\">① 勝敗との結び付きを検証する要素</div>\n<div class=\"detail-grid\">\n  <div class=\"box\"><h3>VRS差</h3><p>ODDIK #128・826pt、Procyon #237・640pt。109順位差・186pt差。今後「VRS順位差」「VRSポイント差」を別々に蓄積。</p></div>\n  <div class=\"box\"><h3>HLTV順位差</h3><p>ODDIK #140、Procyon #173。33順位差。VRSとどちらが勝敗との結び付きが強いか後で比較。</p></div>\n  <div class=\"box\"><h3>3か月チーム勝率</h3><p>ODDIK 72.2%、Procyon 42.1%。差は30.1pt。中期フォームの差として保存。</p></div>\n  <div class=\"box\"><h3>直近成績</h3><p>ODDIK直近10シリーズ7勝3敗、Procyon6勝4敗。Procyonは直近5戦4勝1敗で、ここはODDIK側の注意材料。</p></div>\n  <div class=\"box\"><h3>H2H</h3><p>公式シリーズ1回。ODDIK 1勝0敗、マップ2勝0敗、ラウンド26-16。サンプルは少ないため単独では過大評価しない。</p></div>\n  <div class=\"box\"><h3>ロスター差</h3><p>7/17のH2Hから現在までメンバー構成が完全同一ではない。前回2-0をそのまま今回へ転写しない。</p></div>\n  <div class=\"box\"><h3>Veto前 / Veto後</h3><p>事前時点ではマップ順TBA。Veto後は誰のPickか、マップ勝率、マップH2H、CT/T、First Kill後勝率、Pistol、現ロスター成績を再評価。</p></div>\n  <div class=\"box\"><h3>市場</h3><p>ODDIK 1.24 / Procyon 3.80。両側オッズから控除を除くとODDIK約75.4%。</p></div>\n</div>\n\n<div class=\"detail-section-label\">② H2H集計</div>\n<div class=\"h2h-analysis\">\n  <div class=\"h2h-analysis-title\">H2H 1シリーズ・2マップ</div>\n  <div class=\"h2h-stats\">\n    <div class=\"h2h-stat\"><span>シリーズ</span><strong>ODDIK 1勝0敗</strong></div>\n    <div class=\"h2h-stat\"><span>マップ</span><strong>ODDIK 2勝0敗</strong></div>\n    <div class=\"h2h-stat\"><span>合計ラウンド</span><strong>26 - 16</strong></div>\n    <div class=\"h2h-stat\"><span>ラウンド差</span><strong>ODDIK +10</strong></div>\n    <div class=\"h2h-stat\"><span>Dust2</span><strong>13 - 5</strong></div>\n    <div class=\"h2h-stat\"><span>Anubis</span><strong>13 - 11</strong></div>\n  </div>\n  <div class=\"h2h-read\"><strong>ここから言えること：</strong>唯一の直接対戦はODDIKが2-0。特にProcyonが選んだDust2を13-5で取った点は強い材料。ただしH2Hは1シリーズだけで、ロスターも完全同一ではないため、H2Hだけで今回を決め打ちしない。</div>\n</div>\n<div class=\"table-wrap\"><table class=\"h2h-table\">\n<tr><th>日付</th><th>シリーズ</th><th>Map1</th><th>Map2</th><th>マップ通算</th><th>ラウンド通算</th></tr>\n<tr><td>2026/7/17</td><td>ODDIK 2-0 Procyon</td><td>Dust2 13-5</td><td>Anubis 13-11</td><td>2-0</td><td>26-16</td></tr>\n</table></div>\n\n<div class=\"detail-section-label\">③ マップ別比較（過去3か月）</div>\n<div class=\"table-wrap\"><table class=\"h2h-table\">\n<tr><th>マップ</th><th>ODDIK</th><th>Procyon</th><th>見方</th></tr>\n<tr><td>Cache</td><td>66.7%（4勝2敗）</td><td>データなし</td><td>比較不能</td></tr>\n<tr><td>Dust2</td><td>44.4%（4勝5敗）</td><td>25.0%（3勝9敗）</td><td>ODDIK +19.4pt / H2H 13-5</td></tr>\n<tr><td>Mirage</td><td>80.0%（8勝2敗）</td><td>80.0%（4勝1敗）</td><td>同率・慎重</td></tr>\n<tr><td>Inferno</td><td>データなし</td><td>60.0%（6勝4敗）</td><td>比較不能</td></tr>\n<tr><td>Nuke</td><td>100%（4勝0敗）</td><td>40.0%（2勝3敗）</td><td>ODDIK +60pt ※小標本</td></tr>\n<tr><td>Ancient</td><td>57.1%（4勝3敗）</td><td>57.1%（4勝3敗）</td><td>同率</td></tr>\n<tr><td>Anubis</td><td>75.0%（3勝1敗）</td><td>50.0%（2勝2敗）</td><td>ODDIK +25pt / H2H 13-11</td></tr>\n</table></div>\n\n<div class=\"detail-section-label\">④ 今回の確率</div>\n<div class=\"probability-box\" id=\"prob-oddik\" data-model=\"oddik\">\n  <div class=\"probability-head\"><span>今回のBO3シリーズ取得確率（事前基準）</span><strong>ODDIK 75.4%</strong></div>\n  <div class=\"probability-grid\">\n    <div><b>市場：</b>ODDIK 1.24 / Procyon 3.80</div>\n    <div><b>no-vig：</b>ODDIK 約75.4%</div>\n    <div><b>VRS：</b>#128 vs #237・186pt差</div>\n    <div><b>3か月勝率：</b>72.2% vs 42.1%</div>\n  </div>\n  <div class=\"probability-note\">現段階ではCS2シリーズ勝者モデルの係数が十分に校正されていないため、ランキング差・H2H・マップ差を恣意的に確率へ上乗せせず、両側市場のno-vig確率を基準値として固定。結果が増えたら各要素の寄与度を検証して更新する。</div>\n</div>\n\n<div class=\"detail-section-label\">⑤ 後から精度向上のために検証すること</div>\n<div class=\"reason\"><strong>蓄積対象：</strong>VRS順位差、VRSポイント差、HLTV順位差、3か月勝率差、直近10シリーズ差、直近5シリーズ、H2Hシリーズ勝率、H2Hマップ差、H2Hラウンド差、各マップ勝率差、Pick/Ban、CT/T、First Kill後ラウンド取得率、Pistol勝率、ロスター変更、市場no-vig確率。結果が増えたら、各要素単独・組み合わせ別で的中率、Brier Score、Log Lossを比較して、CS2で何を最重視すべきかを判定する。</div>\n",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "なぜこのカードなのか"
+        },
+        {
+          "type": "subtitle",
+          "text": "ODDIK vs Procyon / ESL Challenger League Season 52 South America Cup #2 / BO3 / Online / Upper Bracket Quarter-final"
+        },
+        {
+          "type": "reason",
+          "text": "最終結果：Procyon 2-0 ODDIK。Map1 Dust2 13-4、Map2 Anubis 13-3でProcyonが勝利。登録していたODDIK勝者は不的中。"
+        },
+        {
+          "type": "items",
+          "title": "まずここだけ見ればOK",
+          "items": [
+            {
+              "label": "カードのタイプ",
+              "value": "ランキング＋中期勝率＋H2H＋マップ相性の複合型"
+            },
+            {
+              "label": "ランキング差",
+              "value": "HLTV #140 vs #173 / VRS #128 vs #237"
+            },
+            {
+              "label": "3か月勝率",
+              "value": "ODDIK 72.2% / Procyon 42.1%"
+            },
+            {
+              "label": "H2H",
+              "value": "1シリーズ：ODDIK 2-0 / マップ2勝0敗 / ラウンド26-16"
+            },
+            {
+              "label": "最大の注意点",
+              "value": "Procyon直近5戦4勝1敗・Veto未確定・前回H2Hからロスター変更あり"
+            },
+            {
+              "label": "市場",
+              "value": "ODDIK 1.24 / Procyon 3.80 → no-vig約75.4%"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "text": "① 勝敗との結び付きを検証する要素"
+        },
+        {
+          "type": "boxes",
+          "boxes": [
+            {
+              "title": "VRS差",
+              "paragraphs": [
+                "ODDIK #128・826pt、Procyon #237・640pt。109順位差・186pt差。今後「VRS順位差」「VRSポイント差」を別々に蓄積。"
+              ],
+              "list": []
+            },
+            {
+              "title": "HLTV順位差",
+              "paragraphs": [
+                "ODDIK #140、Procyon #173。33順位差。VRSとどちらが勝敗との結び付きが強いか後で比較。"
+              ],
+              "list": []
+            },
+            {
+              "title": "3か月チーム勝率",
+              "paragraphs": [
+                "ODDIK 72.2%、Procyon 42.1%。差は30.1pt。中期フォームの差として保存。"
+              ],
+              "list": []
+            },
+            {
+              "title": "直近成績",
+              "paragraphs": [
+                "ODDIK直近10シリーズ7勝3敗、Procyon6勝4敗。Procyonは直近5戦4勝1敗で、ここはODDIK側の注意材料。"
+              ],
+              "list": []
+            },
+            {
+              "title": "H2H",
+              "paragraphs": [
+                "公式シリーズ1回。ODDIK 1勝0敗、マップ2勝0敗、ラウンド26-16。サンプルは少ないため単独では過大評価しない。"
+              ],
+              "list": []
+            },
+            {
+              "title": "ロスター差",
+              "paragraphs": [
+                "7/17のH2Hから現在までメンバー構成が完全同一ではない。前回2-0をそのまま今回へ転写しない。"
+              ],
+              "list": []
+            },
+            {
+              "title": "Veto前 / Veto後",
+              "paragraphs": [
+                "事前時点ではマップ順TBA。Veto後は誰のPickか、マップ勝率、マップH2H、CT/T、First Kill後勝率、Pistol、現ロスター成績を再評価。"
+              ],
+              "list": []
+            },
+            {
+              "title": "市場",
+              "paragraphs": [
+                "ODDIK 1.24 / Procyon 3.80。両側オッズから控除を除くとODDIK約75.4%。"
+              ],
+              "list": []
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "text": "② H2H集計"
+        },
+        {
+          "type": "items",
+          "title": "H2H 1シリーズ・2マップ",
+          "items": [
+            {
+              "label": "シリーズ",
+              "value": "ODDIK 1勝0敗"
+            },
+            {
+              "label": "マップ",
+              "value": "ODDIK 2勝0敗"
+            },
+            {
+              "label": "合計ラウンド",
+              "value": "26 - 16"
+            },
+            {
+              "label": "ラウンド差",
+              "value": "ODDIK +10"
+            },
+            {
+              "label": "Dust2",
+              "value": "13 - 5"
+            },
+            {
+              "label": "Anubis",
+              "value": "13 - 11"
+            }
+          ],
+          "notes": [
+            "ここから言えること：唯一の直接対戦はODDIKが2-0。特にProcyonが選んだDust2を13-5で取った点は強い材料。ただしH2Hは1シリーズだけで、ロスターも完全同一ではないため、H2Hだけで今回を決め打ちしない。"
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "シリーズ",
+            "Map1",
+            "Map2",
+            "マップ通算",
+            "ラウンド通算"
+          ],
+          "rows": [
+            [
+              "2026/7/17",
+              "ODDIK 2-0 Procyon",
+              "Dust2 13-5",
+              "Anubis 13-11",
+              "2-0",
+              "26-16"
+            ]
+          ]
+        },
+        {
+          "type": "section",
+          "text": "③ マップ別比較（過去3か月）"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "マップ",
+            "ODDIK",
+            "Procyon",
+            "見方"
+          ],
+          "rows": [
+            [
+              "Cache",
+              "66.7%（4勝2敗）",
+              "データなし",
+              "比較不能"
+            ],
+            [
+              "Dust2",
+              "44.4%（4勝5敗）",
+              "25.0%（3勝9敗）",
+              "ODDIK +19.4pt / H2H 13-5"
+            ],
+            [
+              "Mirage",
+              "80.0%（8勝2敗）",
+              "80.0%（4勝1敗）",
+              "同率・慎重"
+            ],
+            [
+              "Inferno",
+              "データなし",
+              "60.0%（6勝4敗）",
+              "比較不能"
+            ],
+            [
+              "Nuke",
+              "100%（4勝0敗）",
+              "40.0%（2勝3敗）",
+              "ODDIK +60pt ※小標本"
+            ],
+            [
+              "Ancient",
+              "57.1%（4勝3敗）",
+              "57.1%（4勝3敗）",
+              "同率"
+            ],
+            [
+              "Anubis",
+              "75.0%（3勝1敗）",
+              "50.0%（2勝2敗）",
+              "ODDIK +25pt / H2H 13-11"
+            ]
+          ]
+        },
+        {
+          "type": "section",
+          "text": "④ 今回の確率"
+        },
+        {
+          "type": "section",
+          "text": "⑤ 後から精度向上のために検証すること"
+        },
+        {
+          "type": "reason",
+          "text": "蓄積対象：VRS順位差、VRSポイント差、HLTV順位差、3か月勝率差、直近10シリーズ差、直近5シリーズ、H2Hシリーズ勝率、H2Hマップ差、H2Hラウンド差、各マップ勝率差、Pick/Ban、CT/T、First Kill後ラウンド取得率、Pistol勝率、ロスター変更、市場no-vig確率。結果が増えたら、各要素単独・組み合わせ別で的中率、Brier Score、Log Lossを比較して、CS2で何を最重視すべきかを判定する。"
+        }
+      ],
+      "excluded_from_blocks": [
+        {
+          "class": "probability-box",
+          "text": "今回のBO3シリーズ取得確率（事前基準）ODDIK 75.4%\n市場：ODDIK 1.24 / Procyon 3.80\nno-vig：ODDIK 約75.4%\nVRS：#128 vs #237・186pt差\n3か月勝率：72.2% vs 42.1%\n現段階ではCS2シリーズ勝者モデルの係数が十分に校正されていないため、ランキング差・H2H・マップ差を恣意的に確率へ上乗せせず、両側市場のno-vig確率を基準値として固定。結果が増えたら各要素の寄与度を検証して更新する。"
+        }
+      ],
+      "js_summary": {
+        "market": "BO3勝者：ODDIK",
+        "reason": "VRS 109順位差・186pt差、3か月勝率72.2% vs 42.1%、唯一のH2Hを2-0・26-16で勝利。",
+        "caution": "Procyonは直近5戦4勝1敗。H2Hは1シリーズのみで、Veto未確定・ロスター変更もある。"
+      }
+    },
+    {
+      "pick_id": "rec-legacy-lyon",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-lyon .detail-cell"
+      },
+      "raw_html": "\n<div class=\"detail-title\">なぜこの組み合わせを選んだか</div>\n<div class=\"detail-sub\">セルヴェットFC Chênois Féminin vs OL Lyonnes / 前半リヨン</div>\n<div class=\"detail-grid\">\n<div class=\"box\"><h3>当時の比較</h3><p>過去チャットでは「前半から差が出やすいカード」として整理。リヨンの直近公式3試合は7-1、7-1、8-1で合計22得点3失点。前半だけで6-1、2-0、4-0、計12得点1失点。</p></div>\n<div class=\"box\"><h3>現在確認できる指標</h3><p>OL LyonnesはUEFA女子クラブ係数2026/27で2位・98.750。セルヴェットはスイス女子リーグで7試合5勝1分1敗、15得点8失点、勝点16で1位。</p></div>\n<div class=\"box\"><h3>セルヴェットの直近</h3><p>0-0 FC Zürich、2-1 Rapperswil-Jona、3-2 Yverdon、3-1 GC Zürich、3-0 Sparta Praha。5試合で11得点4失点。</p></div>\n<div class=\"box\"><h3>ホーム / アウェイ</h3><p>今回の試合はセルヴェットのホーム（ジュネーブ）。過去チャットではセルヴェットの前半直近5試合が2勝2分1敗、5得点3失点。一方リヨンは直近公式3試合すべて前半リード。</p></div>\n<div class=\"box\"><h3>直接対戦の扱い</h3><p>過去チャットでは、UEFA公式対戦としては初対戦という記録と、親善試合を含めた2試合の記録が両方ありました。矛盾を消さず、そのまま下に残しています。</p></div>\n<div class=\"box\"><h3>ファーストゴール</h3><p>過去チャットで確認できた2025/8/9の試合は前半2-0まで確認。先制点の得点者・時刻は履歴内では未確認のため、推測せず空欄扱い。</p></div>\n</div>\n<div class=\"reason\"><strong>主な分析要素：</strong>前半得点力、直近の大量得点、欧州係数、ホーム/アウェイ、直近5試合の得失点、対スイス勢実績を総合して比較。</div><div class=\"probability-box\" id=\"prob-lyon\" data-model=\"lyon\">\n  <div class=\"probability-head\"><span>今回の前半勝利確率（オリンピック・リヨン）</span><strong>87.0%</strong></div>\n  <div class=\"probability-grid\"><div><b>当時オッズ1.12：</b>単純逆算89.3%（控除前）</div><div><b>直近公式3試合の前半：</b>3勝0敗・12得点1失点</div><div><b>セルヴェット前半直近5試合：</b>2勝2分1敗</div><div><b>会場：</b>セルヴェットHOME／リヨンAWAY</div></div>\n  <div class=\"probability-note\">試合前データ限定。片側市場オッズを弱い事前分布にし、リヨン直近3試合の前半3勝0敗は「同一対戦ではない」ため1試合あたり0.5相当の証拠量に縮小して更新しています。</div>\n</div>\n<div class=\"h2h\"><h3>直接対戦・関連記録</h3>\n<div class=\"h2h-analysis\">\n  <div class=\"h2h-analysis-title\">H2H集計・分析</div>\n  <div class=\"h2h-stats\">\n    <div class=\"h2h-stat\"><span>確認試合数</span><strong>2試合</strong></div>\n    <div class=\"h2h-stat\"><span>リヨン戦績</span><strong>1勝0分1敗</strong></div>\n    <div class=\"h2h-stat\"><span>総得点</span><strong>リヨン 5 - 3 セルヴェット</strong></div>\n    <div class=\"h2h-stat\"><span>1試合平均得点</span><strong>2.50 - 1.50</strong></div>\n    <div class=\"h2h-stat\"><span>前半確認分</span><strong>1試合：2-0</strong></div>\n    <div class=\"h2h-stat\"><span>公式競技H2H</span><strong>0試合</strong></div>\n  </div>\n  <div class=\"h2h-homeaway\">\n    <div class=\"h2h-ha\"><b>リヨン表記HOME：</b>1試合 1勝0敗、得点5-0。</div>\n    <div class=\"h2h-ha\"><b>リヨン表記AWAY：</b>1試合 0勝1敗、得点0-3。</div>\n  </div>\n  <div class=\"h2h-read\"><strong>ここから言えること：</strong>親善試合ベースでは得失点はリヨン優位ですが、2試合しかなく1勝1敗なのでH2H単独では強い根拠にしにくいです。今回の判断ではH2Hより、リヨンの直近得点力・前半成績・欧州係数を重く見るのが妥当です。</div>\n</div>\n<div class=\"table-wrap\"><table class=\"h2h-table\">\n<tr><th>日付</th><th>ホーム</th><th>アウェイ</th><th>スコア</th><th>前半</th><th>先制点</th><th>備考</th></tr>\n<tr><td>2025/8/9</td><td>OL Lyonnes</td><td>Servette</td><td>5-0</td><td>2-0</td><td>未確認</td><td>親善試合として過去チャットに記録</td></tr>\n<tr><td>2022/8/3</td><td>Servette</td><td>OL Lyonnes</td><td>3-0</td><td>未確認</td><td>未確認</td><td>親善試合として過去チャットに記録</td></tr>\n</table></div><div class=\"source-note\">UEFA公式競技での直接対戦は初対戦として過去チャットに記録。</div></div>\n",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "なぜこの組み合わせを選んだか"
+        },
+        {
+          "type": "subtitle",
+          "text": "セルヴェットFC Chênois Féminin vs OL Lyonnes / 前半リヨン"
+        },
+        {
+          "type": "boxes",
+          "boxes": [
+            {
+              "title": "当時の比較",
+              "paragraphs": [
+                "過去チャットでは「前半から差が出やすいカード」として整理。リヨンの直近公式3試合は7-1、7-1、8-1で合計22得点3失点。前半だけで6-1、2-0、4-0、計12得点1失点。"
+              ],
+              "list": []
+            },
+            {
+              "title": "現在確認できる指標",
+              "paragraphs": [
+                "OL LyonnesはUEFA女子クラブ係数2026/27で2位・98.750。セルヴェットはスイス女子リーグで7試合5勝1分1敗、15得点8失点、勝点16で1位。"
+              ],
+              "list": []
+            },
+            {
+              "title": "セルヴェットの直近",
+              "paragraphs": [
+                "0-0 FC Zürich、2-1 Rapperswil-Jona、3-2 Yverdon、3-1 GC Zürich、3-0 Sparta Praha。5試合で11得点4失点。"
+              ],
+              "list": []
+            },
+            {
+              "title": "ホーム / アウェイ",
+              "paragraphs": [
+                "今回の試合はセルヴェットのホーム（ジュネーブ）。過去チャットではセルヴェットの前半直近5試合が2勝2分1敗、5得点3失点。一方リヨンは直近公式3試合すべて前半リード。"
+              ],
+              "list": []
+            },
+            {
+              "title": "直接対戦の扱い",
+              "paragraphs": [
+                "過去チャットでは、UEFA公式対戦としては初対戦という記録と、親善試合を含めた2試合の記録が両方ありました。矛盾を消さず、そのまま下に残しています。"
+              ],
+              "list": []
+            },
+            {
+              "title": "ファーストゴール",
+              "paragraphs": [
+                "過去チャットで確認できた2025/8/9の試合は前半2-0まで確認。先制点の得点者・時刻は履歴内では未確認のため、推測せず空欄扱い。"
+              ],
+              "list": []
+            }
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "主な分析要素：前半得点力、直近の大量得点、欧州係数、ホーム/アウェイ、直近5試合の得失点、対スイス勢実績を総合して比較。"
+        },
+        {
+          "type": "heading",
+          "text": "直接対戦・関連記録"
+        },
+        {
+          "type": "items",
+          "title": "H2H集計・分析",
+          "items": [
+            {
+              "label": "確認試合数",
+              "value": "2試合"
+            },
+            {
+              "label": "リヨン戦績",
+              "value": "1勝0分1敗"
+            },
+            {
+              "label": "総得点",
+              "value": "リヨン 5 - 3 セルヴェット"
+            },
+            {
+              "label": "1試合平均得点",
+              "value": "2.50 - 1.50"
+            },
+            {
+              "label": "前半確認分",
+              "value": "1試合：2-0"
+            },
+            {
+              "label": "公式競技H2H",
+              "value": "0試合"
+            }
+          ],
+          "notes": [
+            "リヨン表記HOME：1試合 1勝0敗、得点5-0。",
+            "リヨン表記AWAY：1試合 0勝1敗、得点0-3。",
+            "ここから言えること：親善試合ベースでは得失点はリヨン優位ですが、2試合しかなく1勝1敗なのでH2H単独では強い根拠にしにくいです。今回の判断ではH2Hより、リヨンの直近得点力・前半成績・欧州係数を重く見るのが妥当です。"
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "ホーム",
+            "アウェイ",
+            "スコア",
+            "前半",
+            "先制点",
+            "備考"
+          ],
+          "rows": [
+            [
+              "2025/8/9",
+              "OL Lyonnes",
+              "Servette",
+              "5-0",
+              "2-0",
+              "未確認",
+              "親善試合として過去チャットに記録"
+            ],
+            [
+              "2022/8/3",
+              "Servette",
+              "OL Lyonnes",
+              "3-0",
+              "未確認",
+              "未確認",
+              "親善試合として過去チャットに記録"
+            ]
+          ]
+        },
+        {
+          "type": "note",
+          "text": "UEFA公式競技での直接対戦は初対戦として過去チャットに記録。"
+        }
+      ],
+      "excluded_from_blocks": [
+        {
+          "class": "probability-box",
+          "text": "今回の前半勝利確率（オリンピック・リヨン）87.0%\n当時オッズ1.12：単純逆算89.3%（控除前）直近公式3試合の前半：3勝0敗・12得点1失点セルヴェット前半直近5試合：2勝2分1敗会場：セルヴェットHOME／リヨンAWAY\n試合前データ限定。片側市場オッズを弱い事前分布にし、リヨン直近3試合の前半3勝0敗は「同一対戦ではない」ため1試合あたり0.5相当の証拠量に縮小して更新しています。"
+        }
+      ],
+      "js_summary": {
+        "market": "前半1X2：リヨン",
+        "reason": "リヨンの直近3試合は前半3勝0敗・前半12得点1失点。前半の強さが最も直接的な根拠。",
+        "caution": "公式H2Hがなく、直接対戦サンプルが弱い。市場と直近前半データ中心。"
+      }
+    },
+    {
+      "pick_id": "rec-legacy-italy",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-italy .detail-cell"
+      },
+      "raw_html": "\n<div class=\"detail-title\">なぜこの組み合わせを選んだか</div>\n<div class=\"detail-sub\">イタリア vs フィンランド / 第1セット勝者 イタリア</div>\n<div class=\"detail-grid\">\n<div class=\"box\"><h3>当時 / 最新確認ランキング</h3><p>2026/9/9更新のFIVB男子世界ランキングで、イタリア2位・355.84pt、フィンランド16位・218.01pt。14位差、137.83pt差。</p></div>\n<div class=\"box\"><h3>H2Hの正確な区分</h3><p>イタリア代表の全公式記録アーカイブでは対フィンランド通算39試合でイタリア34勝5敗。下にセット詳細まで確認できた主要大会19試合を別集計し、その19試合ではイタリア19勝0敗、セット57-14、第1セット17勝2敗です。</p></div>\n<div class=\"box\"><h3>直近10試合</h3><p>過去チャット時点では両国とも9勝1敗。ただし相手強度、H2H、ランキング差はイタリア側が大きく上。</p></div>\n<div class=\"box\"><h3>大会成績</h3><p>過去チャットではイタリア5勝0敗・セット15-4、フィンランド4勝1敗・セット14-9。VNL 2026のイタリアは4位、12試合8勝4敗、セット30-18。</p></div>\n<div class=\"box\"><h3>第1セットに絞った理由</h3><p>H2Hの最終勝敗だけでなく、過去19試合の第1セット取得も確認するとイタリア17勝2敗。今回の市場が「第1セット勝者」だったため、ここを最重視。</p></div>\n<div class=\"box\"><h3>今回のホーム / アウェイ</h3><p>今回の準々決勝はPalaVela（トリノ・イタリア）開催。イタリアは開催国側で、実質的にホーム環境。過去H2Hの多くは中立地なので、単純なHOME/AWAY表記だけではなく実開催地も分けて考える必要があります。</p></div>\n</div>\n<div class=\"reason\"><strong>主な分析要素：</strong>世界ランキング差、19戦無敗、セット通算57-14、第1セット17勝2敗、直近成績、大会セット差。</div>\n<div class=\"probability-box\" id=\"prob-italy\" data-model=\"italy\">\n  <div class=\"probability-head\">\n    <span>今回の第1セット取得確率（事前モデル推定）</span>\n    <strong>イタリア 85.5%</strong>\n  </div>\n  <div class=\"probability-grid\">\n    <div><b>H2H全19試合：</b>第1セット17勝2敗＝89.5%</div>\n    <div><b>近年H2H（2007年以降8試合）：</b>第1セット7勝1敗＝87.5%</div>\n    <div><b>今大会イタリア：</b>準々決勝前まで第1セット6勝0敗＝100%</div>\n    <div><b>今大会フィンランド：</b>第1セット3勝3敗＝50.0%</div>\n    <div><b>当時オッズ1.23：</b>単純逆算の市場確率81.3%（控除前）</div>\n    <div><b>開催地：</b>PalaVela・トリノ。イタリア国内開催でホーム環境</div>\n  </div>\n  <div class=\"probability-note\">\n    v4.1では単純な加重平均を廃止。片側オッズを弱い市場事前分布にし、古いH2Hは6年半減期で減衰、今大会の第1セット成績を追加してベイズ更新します。フィンランドは準々決勝前6試合で第1セット3勝3敗。開催地・ランキングは市場オッズへの二重計上を避け、数値調整には直接足していません。\n  </div>\n</div>\n<div class=\"h2h\"><h3>H2H：全公式39試合 / セット詳細確認19試合</h3>\n<div class=\"h2h-analysis\">\n  <div class=\"h2h-analysis-title\">H2H集計・分析</div>\n  <div class=\"h2h-stats\">\n    <div class=\"h2h-stat\"><span>対戦数</span><strong>19試合</strong></div>\n    <div class=\"h2h-stat\"><span>勝敗</span><strong>イタリア 19勝0敗</strong></div>\n    <div class=\"h2h-stat\"><span>セット通算</span><strong>57 - 14</strong></div>\n    <div class=\"h2h-stat\"><span>総得点</span><strong>1304 - 1055</strong></div>\n    <div class=\"h2h-stat\"><span>得点差</span><strong>+249 イタリア</strong></div>\n    <div class=\"h2h-stat\"><span>第1セット</span><strong>17勝2敗</strong></div>\n  </div>\n  <div class=\"h2h-homeaway\">\n    <div class=\"h2h-ha\"><b>イタリア表記HOME：</b>14試合14勝0敗、セット41-10、第1セット13勝1敗。</div>\n    <div class=\"h2h-ha\"><b>イタリア表記AWAY：</b>5試合5勝0敗、セット16-4、第1セット4勝1敗。</div>\n  </div>\n  <div class=\"h2h-read\"><strong>ここから言えること：</strong>全公式39試合では34勝5敗。さらにセット詳細を確認できた主要大会19試合では19勝0敗・セット57-14・第1セット17勝2敗です。長期H2Hはイタリア優位ですが、古い試合も多いので今回の確率計算では近年データ・現ランキング・今大会フォーム・開催地をより強く重み付けします。</div>\n</div>\n<div class=\"table-wrap\"><table class=\"h2h-table\">\n<tr><th>日付</th><th>大会</th><th>ホーム</th><th>アウェイ</th><th>最終</th><th>セットスコア</th><th>第1セット</th></tr>\n<tr><td>2018/9/21</td><td>世界選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>25-20 / 25-18 / 25-16</td><td>イタリア</td></tr>\n<tr><td>2015/10/13</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>25-19 / 25-16 / 25-22</td><td>イタリア</td></tr>\n<tr><td>2013/9/25</td><td>欧州選手権</td><td>フィンランド</td><td>イタリア</td><td>1-3</td><td>25-23 / 20-25 / 22-25 / 22-25</td><td>フィンランド</td></tr>\n<tr><td>2012/5/8</td><td>五輪欧州予選</td><td>フィンランド</td><td>イタリア</td><td>2-3</td><td>21-25 / 25-16 / 28-30 / 25-16 / 14-16</td><td>イタリア</td></tr>\n<tr><td>2011/9/15</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>25-18 / 25-20 / 29-31 / 25-21</td><td>イタリア</td></tr>\n<tr><td>2011/9/11</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>25-23 / 27-25 / 25-21</td><td>イタリア</td></tr>\n<tr><td>2009/9/10</td><td>欧州選手権</td><td>フィンランド</td><td>イタリア</td><td>0-3</td><td>25-27 / 19-25 / 25-27</td><td>イタリア</td></tr>\n<tr><td>2007/9/6</td><td>欧州選手権</td><td>フィンランド</td><td>イタリア</td><td>2-3</td><td>21-25 / 18-25 / 25-21 / 22-25 / 13-15</td><td>イタリア</td></tr>\n<tr><td>1993</td><td>World League</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>15-9 / 15-2 / 15-0</td><td>イタリア</td></tr>\n<tr><td>1993</td><td>World League</td><td>フィンランド</td><td>イタリア</td><td>0-3</td><td>4-15 / 6-15 / 6-15</td><td>イタリア</td></tr>\n<tr><td>1982/10/7</td><td>世界選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>15-13 / 15-10 / 15-11</td><td>イタリア</td></tr>\n<tr><td>1981/9/26</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>15-13 / 15-4 / 9-15 / 15-8</td><td>イタリア</td></tr>\n<tr><td>1977/9/26</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-2</td><td>15-13 / 10-15 / 15-13 / 9-15 / 15-8</td><td>イタリア</td></tr>\n<tr><td>1971/9/24</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-0</td><td>15-6 / 15-8 / 15-13</td><td>イタリア</td></tr>\n<tr><td>1967/10/26</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>15-8 / 8-15 / 15-10 / 19-17</td><td>イタリア</td></tr>\n<tr><td>1963/11/2</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>15-3 / 15-13 / 7-15 / 15-7</td><td>イタリア</td></tr>\n<tr><td>1962/10/18</td><td>世界選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>12-15 / 15-5 / 15-7 / 15-11</td><td>フィンランド</td></tr>\n<tr><td>1958/9/5</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>15-13 / 10-15 / 18-16 / 15-9</td><td>イタリア</td></tr>\n<tr><td>1955/6/24</td><td>欧州選手権</td><td>イタリア</td><td>フィンランド</td><td>3-1</td><td>15-11 / 15-7 / 15-17 / 15-9</td><td>イタリア</td></tr>\n</table></div></div>\n",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "なぜこの組み合わせを選んだか"
+        },
+        {
+          "type": "subtitle",
+          "text": "イタリア vs フィンランド / 第1セット勝者 イタリア"
+        },
+        {
+          "type": "boxes",
+          "boxes": [
+            {
+              "title": "当時 / 最新確認ランキング",
+              "paragraphs": [
+                "2026/9/9更新のFIVB男子世界ランキングで、イタリア2位・355.84pt、フィンランド16位・218.01pt。14位差、137.83pt差。"
+              ],
+              "list": []
+            },
+            {
+              "title": "H2Hの正確な区分",
+              "paragraphs": [
+                "イタリア代表の全公式記録アーカイブでは対フィンランド通算39試合でイタリア34勝5敗。下にセット詳細まで確認できた主要大会19試合を別集計し、その19試合ではイタリア19勝0敗、セット57-14、第1セット17勝2敗です。"
+              ],
+              "list": []
+            },
+            {
+              "title": "直近10試合",
+              "paragraphs": [
+                "過去チャット時点では両国とも9勝1敗。ただし相手強度、H2H、ランキング差はイタリア側が大きく上。"
+              ],
+              "list": []
+            },
+            {
+              "title": "大会成績",
+              "paragraphs": [
+                "過去チャットではイタリア5勝0敗・セット15-4、フィンランド4勝1敗・セット14-9。VNL 2026のイタリアは4位、12試合8勝4敗、セット30-18。"
+              ],
+              "list": []
+            },
+            {
+              "title": "第1セットに絞った理由",
+              "paragraphs": [
+                "H2Hの最終勝敗だけでなく、過去19試合の第1セット取得も確認するとイタリア17勝2敗。今回の市場が「第1セット勝者」だったため、ここを最重視。"
+              ],
+              "list": []
+            },
+            {
+              "title": "今回のホーム / アウェイ",
+              "paragraphs": [
+                "今回の準々決勝はPalaVela（トリノ・イタリア）開催。イタリアは開催国側で、実質的にホーム環境。過去H2Hの多くは中立地なので、単純なHOME/AWAY表記だけではなく実開催地も分けて考える必要があります。"
+              ],
+              "list": []
+            }
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "主な分析要素：世界ランキング差、19戦無敗、セット通算57-14、第1セット17勝2敗、直近成績、大会セット差。"
+        },
+        {
+          "type": "heading",
+          "text": "H2H：全公式39試合 / セット詳細確認19試合"
+        },
+        {
+          "type": "items",
+          "title": "H2H集計・分析",
+          "items": [
+            {
+              "label": "対戦数",
+              "value": "19試合"
+            },
+            {
+              "label": "勝敗",
+              "value": "イタリア 19勝0敗"
+            },
+            {
+              "label": "セット通算",
+              "value": "57 - 14"
+            },
+            {
+              "label": "総得点",
+              "value": "1304 - 1055"
+            },
+            {
+              "label": "得点差",
+              "value": "+249 イタリア"
+            },
+            {
+              "label": "第1セット",
+              "value": "17勝2敗"
+            }
+          ],
+          "notes": [
+            "イタリア表記HOME：14試合14勝0敗、セット41-10、第1セット13勝1敗。",
+            "イタリア表記AWAY：5試合5勝0敗、セット16-4、第1セット4勝1敗。",
+            "ここから言えること：全公式39試合では34勝5敗。さらにセット詳細を確認できた主要大会19試合では19勝0敗・セット57-14・第1セット17勝2敗です。長期H2Hはイタリア優位ですが、古い試合も多いので今回の確率計算では近年データ・現ランキング・今大会フォーム・開催地をより強く重み付けします。"
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "大会",
+            "ホーム",
+            "アウェイ",
+            "最終",
+            "セットスコア",
+            "第1セット"
+          ],
+          "rows": [
+            [
+              "2018/9/21",
+              "世界選手権",
+              "イタリア",
+              "フィンランド",
+              "3-0",
+              "25-20 / 25-18 / 25-16",
+              "イタリア"
+            ],
+            [
+              "2015/10/13",
+              "欧州選手権",
+              "イタリア",
+              "フィンランド",
+              "3-0",
+              "25-19 / 25-16 / 25-22",
+              "イタリア"
+            ],
+            [
+              "2013/9/25",
+              "欧州選手権",
+              "フィンランド",
+              "イタリア",
+              "1-3",
+              "25-23 / 20-25 / 22-25 / 22-25",
+              "フィンランド"
+            ],
+            [
+              "2012/5/8",
+              "五輪欧州予選",
+              "フィンランド",
+              "イタリア",
+              "2-3",
+              "21-25 / 25-16 / 28-30 / 25-16 / 14-16",
+              "イタリア"
+            ],
+            [
+              "2011/9/15",
+              "欧州選手権",
+              "イタリア",
+              "フィンランド",
+              "3-1",
+              "25-18 / 25-20 / 29-31 / 25-21",
+              "イタリア"
+            ],
+            [
+              "2011/9/11",
+              "欧州選手権",
+              "イタリア",
+              "フィンランド",
+              "3-0",
+              "25-23 / 27-25 / 25-21",
+              "イタリア"
+            ],
+            [
+              "2009/9/10",
+              "欧州選手権",
+              "フィンランド",
+              "イタリア",
+              "0-3",
+              "25-27 / 19-25 / 25-27",
+              "イタリア"
+            ],
+            [
+              "2007/9/6",
+              "欧州選手権",
+              "フィンランド",
+              "イタリア",
+              "2-3",
+              "21-25 / 18-25 / 25-21 / 22-25 / 13-15",
+              "イタリア"
+            ],
+            [
+              "1993",
+              "World League",
+              "イタリア",
+              "フィンランド",
+              "3-0",
+              "15-9 / 15-2 / 15-0",
+              "イタリア"
+            ],
+            [
+              "1993",
+              "World League",
+              "フィンランド",
+              "イタリア",
+              "0-3",
+              "4-15 / 6-15 / 6-15",
+              "イタリア"
+            ],
+            [
+              "1982/10/7",
+              "世界選手権",
+              "イタリア",
+              "フィンランド",
+              "3-0",
+              "15-13 / 15-10 / 15-11",
+              "イタリア"
+            ],
+            [
+              "1981/9/26",
+              "欧州選手権",
+              "イタリア",
+              "フィンランド",
+              "3-1",
+              "15-13 / 15-4 / 9-15 / 15-8",
+              "イタリア"
+            ],
+            [
+              "1977/9/26",
+              "欧州選手権",
+              "イタリア",
+              "フィンランド",
+              "3-2",
+              "15-13 / 10-15 / 15-13 / 9-15 / 15-8",
+              "イタリア"
+            ],
+            [
+              "1971/9/24",
+              "欧州選手権",
+              "イタリア",
+              "フィンランド",
+              "3-0",
+              "15-6 / 15-8 / 15-13",
+              "イタリア"
+            ],
+            [
+              "1967/10/26",
+              "欧州選手権",
+              "イタリア",
+              "フィンランド",
+              "3-1",
+              "15-8 / 8-15 / 15-10 / 19-17",
+              "イタリア"
+            ],
+            [
+              "1963/11/2",
+              "欧州選手権",
+              "イタリア",
+              "フィンランド",
+              "3-1",
+              "15-3 / 15-13 / 7-15 / 15-7",
+              "イタリア"
+            ],
+            [
+              "1962/10/18",
+              "世界選手権",
+              "イタリア",
+              "フィンランド",
+              "3-1",
+              "12-15 / 15-5 / 15-7 / 15-11",
+              "フィンランド"
+            ],
+            [
+              "1958/9/5",
+              "欧州選手権",
+              "イタリア",
+              "フィンランド",
+              "3-1",
+              "15-13 / 10-15 / 18-16 / 15-9",
+              "イタリア"
+            ],
+            [
+              "1955/6/24",
+              "欧州選手権",
+              "イタリア",
+              "フィンランド",
+              "3-1",
+              "15-11 / 15-7 / 15-17 / 15-9",
+              "イタリア"
+            ]
+          ]
+        }
+      ],
+      "excluded_from_blocks": [
+        {
+          "class": "probability-box",
+          "text": "今回の第1セット取得確率（事前モデル推定）\nイタリア 85.5%\nH2H全19試合：第1セット17勝2敗＝89.5%\n近年H2H（2007年以降8試合）：第1セット7勝1敗＝87.5%\n今大会イタリア：準々決勝前まで第1セット6勝0敗＝100%\n今大会フィンランド：第1セット3勝3敗＝50.0%\n当時オッズ1.23：単純逆算の市場確率81.3%（控除前）\n開催地：PalaVela・トリノ。イタリア国内開催でホーム環境\nv4.1では単純な加重平均を廃止。片側オッズを弱い市場事前分布にし、古いH2Hは6年半減期で減衰、今大会の第1セット成績を追加してベイズ更新します。フィンランドは準々決勝前6試合で第1セット3勝3敗。開催地・ランキングは市場オッズへの二重計上を避け、数値調整には直接足していません。"
+        }
+      ],
+      "js_summary": {
+        "market": "第1セット：イタリア",
+        "reason": "詳細確認H2Hで第1セット17勝2敗。今大会も準々決勝前までイタリア第1セット6勝0敗。",
+        "caution": "古いH2Hが多いので、そのまま89.5%とはせず時系列減衰して計算。"
+      }
+    },
+    {
+      "pick_id": "rec-legacy-cs2",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-cs2 .detail-cell"
+      },
+      "raw_html": "\n<div class=\"detail-title\">なぜこの組み合わせを選んだか</div>\n<div class=\"detail-sub\">DAMAJUANA vs Bounty Hunters / 第1マップ Bounty Hunters</div>\n<div class=\"detail-grid\">\n<div class=\"box\"><h3>当時のランキング</h3><p>過去チャットにはVRS #389 vs #88、HLTV #227 vs #95という記録。さらに少し前のスナップショットではVRS #375 vs #98、HLTV #220 vs #138。</p></div>\n<div class=\"box\"><h3>現在確認ランキング</h3><p>DAMAJUANAはHLTV #227・Valve #393。Bounty HuntersはHLTV #95・VRS #87。</p></div>\n<div class=\"box\"><h3>直近フォーム</h3><p>過去チャット時点：DAMAJUANA 1勝3敗〜直近5戦1勝4敗、Bounty Hunters 7勝3敗・2連勝。現在の3か月勝率はDAMAJUANA 20%、Bounty Hunters 50%。</p></div>\n<div class=\"box\"><h3>選手Rating</h3><p>過去チャット：DAMAJUANA 1.00 / 0.94 / 0.93 / 0.84 / 0.66。Bounty Hunters 1.07 / 1.06 / 1.03 / 1.03 / 0.95。</p></div>\n<div class=\"box\"><h3>マップ・Veto</h3><p>実際のVeto：DAMAJUANA Ancient除外 → Bounty Hunters Inferno除外 → DAMAJUANA Mirage選択 → Bounty Hunters Cache選択。第1マップMirageはBounty Huntersが13-6で勝利。</p></div>\n<div class=\"box\"><h3>ファーストキル系指標</h3><p>Bounty HuntersのCache現行データでは、先にキルを取ったラウンドの勝率71.6%、先にデスしたラウンドの勝率33.0%。ピストルラウンド勝率57.5%。</p></div>\n</div>\n<div class=\"reason\"><strong>主な分析要素：</strong>ランキング差、直近フォーム、選手Rating、マップ勝率、Veto、ロスター継続性。シリーズ2-0ではなく、第1マップに絞っていた。</div><div class=\"probability-box\" id=\"prob-cs2\" data-model=\"cs2\">\n  <div class=\"probability-head\"><span>今回の第1マップ取得確率（Bounty Hunters）</span><strong>86.5%</strong></div>\n  <div class=\"probability-grid\"><div><b>当時オッズ1.13：</b>単純逆算88.5%（控除前）</div><div><b>直近フォーム：</b>Bounty Hunters 7勝3敗／DAMAJUANAは低調</div><div><b>ランキング差：</b>VRS・HLTVともBounty Huntersが上位</div><div><b>事前H2H：</b>0試合のため直接対戦は重みに入れず</div></div>\n  <div class=\"probability-note\">事前H2Hが0件で、第1マップ専用の独立サンプルも不足しているため、v4.1ではランキング差や一般勝率を無理に確率へ変換せず、市場確率を暫定中心値として残します。Veto・Ratingは説明変数として表示し、係数がバックテストで校正されるまで数値へ直接加算しません。</div>\n</div>\n<div class=\"h2h\"><h3>直接対戦</h3>\n<div class=\"h2h-analysis\">\n  <div class=\"h2h-analysis-title\">H2H集計・分析</div>\n  <div class=\"h2h-stats\">\n    <div class=\"h2h-stat\"><span>確認シリーズ</span><strong>1試合</strong></div>\n    <div class=\"h2h-stat\"><span>シリーズ勝敗</span><strong>Bounty 1勝0敗</strong></div>\n    <div class=\"h2h-stat\"><span>マップ通算</span><strong>2 - 0</strong></div>\n    <div class=\"h2h-stat\"><span>ラウンド通算</span><strong>26 - 16</strong></div>\n    <div class=\"h2h-stat\"><span>ラウンド差</span><strong>+10 Bounty</strong></div>\n    <div class=\"h2h-stat\"><span>第1マップ</span><strong>13 - 6</strong></div>\n  </div>\n  <div class=\"h2h-homeaway\">\n    <div class=\"h2h-ha\"><b>HOME/AWAY：</b>オンラインCS2のため通常のホーム/アウェイ分析は適用しません。</div>\n    <div class=\"h2h-ha\"><b>Map別：</b>Mirage 13-6、Cache 13-10でBounty Huntersが両方取得。</div>\n  </div>\n  <div class=\"h2h-read\"><strong>ここから言えること：</strong>現在確認できる直接対戦は1シリーズだけなのでH2H単独の信頼度は低めです。ただし、その1戦では2-0・ラウンド26-16で、特に第1マップを7ラウンド差で取っています。事前判断ではH2Hよりランキング差・直近フォーム・選手Rating・Vetoを主材料にするのが適切です。</div>\n</div>\n<div class=\"table-wrap\"><table class=\"h2h-table\">\n<tr><th>日付</th><th>大会</th><th>カード</th><th>Map1</th><th>Map2</th><th>シリーズ</th><th>備考</th></tr>\n<tr><td>2026/9/22</td><td>ECL S52 SA Cup 2</td><td>DAMAJUANA vs Bounty Hunters</td><td>Mirage 6-13</td><td>Cache 10-13</td><td>0-2</td><td>事前H2Hは0件。今回が確認できた直接対戦。</td></tr>\n</table></div></div>\n",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "なぜこの組み合わせを選んだか"
+        },
+        {
+          "type": "subtitle",
+          "text": "DAMAJUANA vs Bounty Hunters / 第1マップ Bounty Hunters"
+        },
+        {
+          "type": "boxes",
+          "boxes": [
+            {
+              "title": "当時のランキング",
+              "paragraphs": [
+                "過去チャットにはVRS #389 vs #88、HLTV #227 vs #95という記録。さらに少し前のスナップショットではVRS #375 vs #98、HLTV #220 vs #138。"
+              ],
+              "list": []
+            },
+            {
+              "title": "現在確認ランキング",
+              "paragraphs": [
+                "DAMAJUANAはHLTV #227・Valve #393。Bounty HuntersはHLTV #95・VRS #87。"
+              ],
+              "list": []
+            },
+            {
+              "title": "直近フォーム",
+              "paragraphs": [
+                "過去チャット時点：DAMAJUANA 1勝3敗〜直近5戦1勝4敗、Bounty Hunters 7勝3敗・2連勝。現在の3か月勝率はDAMAJUANA 20%、Bounty Hunters 50%。"
+              ],
+              "list": []
+            },
+            {
+              "title": "選手Rating",
+              "paragraphs": [
+                "過去チャット：DAMAJUANA 1.00 / 0.94 / 0.93 / 0.84 / 0.66。Bounty Hunters 1.07 / 1.06 / 1.03 / 1.03 / 0.95。"
+              ],
+              "list": []
+            },
+            {
+              "title": "マップ・Veto",
+              "paragraphs": [
+                "実際のVeto：DAMAJUANA Ancient除外 → Bounty Hunters Inferno除外 → DAMAJUANA Mirage選択 → Bounty Hunters Cache選択。第1マップMirageはBounty Huntersが13-6で勝利。"
+              ],
+              "list": []
+            },
+            {
+              "title": "ファーストキル系指標",
+              "paragraphs": [
+                "Bounty HuntersのCache現行データでは、先にキルを取ったラウンドの勝率71.6%、先にデスしたラウンドの勝率33.0%。ピストルラウンド勝率57.5%。"
+              ],
+              "list": []
+            }
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "主な分析要素：ランキング差、直近フォーム、選手Rating、マップ勝率、Veto、ロスター継続性。シリーズ2-0ではなく、第1マップに絞っていた。"
+        },
+        {
+          "type": "heading",
+          "text": "直接対戦"
+        },
+        {
+          "type": "items",
+          "title": "H2H集計・分析",
+          "items": [
+            {
+              "label": "確認シリーズ",
+              "value": "1試合"
+            },
+            {
+              "label": "シリーズ勝敗",
+              "value": "Bounty 1勝0敗"
+            },
+            {
+              "label": "マップ通算",
+              "value": "2 - 0"
+            },
+            {
+              "label": "ラウンド通算",
+              "value": "26 - 16"
+            },
+            {
+              "label": "ラウンド差",
+              "value": "+10 Bounty"
+            },
+            {
+              "label": "第1マップ",
+              "value": "13 - 6"
+            }
+          ],
+          "notes": [
+            "HOME/AWAY：オンラインCS2のため通常のホーム/アウェイ分析は適用しません。",
+            "Map別：Mirage 13-6、Cache 13-10でBounty Huntersが両方取得。",
+            "ここから言えること：現在確認できる直接対戦は1シリーズだけなのでH2H単独の信頼度は低めです。ただし、その1戦では2-0・ラウンド26-16で、特に第1マップを7ラウンド差で取っています。事前判断ではH2Hよりランキング差・直近フォーム・選手Rating・Vetoを主材料にするのが適切です。"
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "大会",
+            "カード",
+            "Map1",
+            "Map2",
+            "シリーズ",
+            "備考"
+          ],
+          "rows": [
+            [
+              "2026/9/22",
+              "ECL S52 SA Cup 2",
+              "DAMAJUANA vs Bounty Hunters",
+              "Mirage 6-13",
+              "Cache 10-13",
+              "0-2",
+              "事前H2Hは0件。今回が確認できた直接対戦。"
+            ]
+          ]
+        }
+      ],
+      "excluded_from_blocks": [
+        {
+          "class": "probability-box",
+          "text": "今回の第1マップ取得確率（Bounty Hunters）86.5%\n当時オッズ1.13：単純逆算88.5%（控除前）直近フォーム：Bounty Hunters 7勝3敗／DAMAJUANAは低調ランキング差：VRS・HLTVともBounty Huntersが上位事前H2H：0試合のため直接対戦は重みに入れず\n事前H2Hが0件で、第1マップ専用の独立サンプルも不足しているため、v4.1ではランキング差や一般勝率を無理に確率へ変換せず、市場確率を暫定中心値として残します。Veto・Ratingは説明変数として表示し、係数がバックテストで校正されるまで数値へ直接加算しません。"
+        }
+      ],
+      "js_summary": {
+        "market": "第1マップ：Bounty Hunters",
+        "reason": "ランキング・直近フォーム・RatingがBounty側優位。Map1専用H2Hは事前0件。",
+        "caution": "CS2はVetoとロスター変動が大きいので、市場確率を強めに残す。"
+      }
+    },
+    {
+      "pick_id": "rec-legacy-cor",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-cor .detail-cell"
+      },
+      "raw_html": "\n<div class=\"detail-title\">なぜこの組み合わせを選んだか</div>\n<div class=\"detail-sub\">Corinthians Women vs Bahia Women / DNB Corinthians</div>\n<div class=\"detail-grid\">\n<div class=\"box\"><h3>当時の順位・得失点</h3><p>2026ブラジル女子A1第1フェーズ：コリンチャンス2位、17試合12勝2分3敗、42得点18失点、得失点差+24、勝点38。バイーア6位、17試合8勝5分4敗、30得点21失点、得失点差+9、勝点29。</p></div>\n<div class=\"box\"><h3>H2H</h3><p>今回の準決勝第2戦を含めると、確認8試合でコリンチャンス7勝1分0敗。過去7試合時点の総得点は18-4で、今回の1-0を加えると19-4。</p></div>\n<div class=\"box\"><h3>ホーム / アウェイ</h3><p>第1戦はバイーアのホーム（Arena Fonte Nova）でコリンチャンスが1-0勝利。第2戦はコリンチャンスのホーム（Neo Química Arena）で1-0勝利。</p></div>\n<div class=\"box\"><h3>ファーストゴール</h3><p>2026準決勝の第1戦・第2戦はいずれもJhonsonが決勝点。つまり両試合とも最初の得点者もJhonson。</p></div>\n<div class=\"box\"><h3>大会状況</h3><p>コリンチャンスは準決勝を2戦合計2-0で勝ち上がり、10大会連続の決勝進出を決めた。</p></div>\n<div class=\"box\"><h3>市場をDNBにした理由</h3><p>1X2よりも引分時の返金を残しながら、H2H無敗・第1戦勝利・第2戦ホームという優位条件を取りにいく形。</p></div>\n</div>\n<div class=\"reason\"><strong>主な分析要素：</strong>H2H無敗、19-4の直接対戦得失点、リーグ順位、シーズン得失点差、準決勝第1戦結果、ホーム開催、先制点傾向。</div><div class=\"probability-box\" id=\"prob-cor\" data-model=\"cor\">\n  <div class=\"probability-head\"><span>今回のDNB非敗戦確率（コリンチャンス）</span><strong>92.0%</strong></div>\n  <div class=\"probability-grid\"><div><b>当時オッズ1.11：</b>単純逆算90.1%（控除前）</div><div><b>H2H：</b>8試合 7勝1分0敗＝非敗戦100%</div><div><b>HOME H2H：</b>4戦4勝・得点10-1</div><div><b>リーグ比較：</b>2位・得失点+24 vs 6位・+9</div></div>\n  <div class=\"probability-note\">DNBは引分なら返金なので「負けない確率」を表示。今回の結果を除外した事前H2H 7試合を2年半減期で時系列減衰し、片側市場オッズの事前分布を更新しています。</div>\n</div>\n<div class=\"h2h\"><h3>H2H（確認8試合）</h3>\n<div class=\"h2h-analysis\">\n  <div class=\"h2h-analysis-title\">H2H集計・分析</div>\n  <div class=\"h2h-stats\">\n    <div class=\"h2h-stat\"><span>対戦数</span><strong>8試合</strong></div>\n    <div class=\"h2h-stat\"><span>コリンチャンス戦績</span><strong>7勝1分0敗</strong></div>\n    <div class=\"h2h-stat\"><span>総得点</span><strong>19 - 4</strong></div>\n    <div class=\"h2h-stat\"><span>得失点差</span><strong>+15</strong></div>\n    <div class=\"h2h-stat\"><span>平均得点</span><strong>2.38 - 0.50</strong></div>\n    <div class=\"h2h-stat\"><span>先制点確認分</span><strong>2/2 コリンチャンス</strong></div>\n  </div>\n  <div class=\"h2h-homeaway\">\n    <div class=\"h2h-ha\"><b>コリンチャンスHOME：</b>4試合4勝0分0敗、総得点10-1。</div>\n    <div class=\"h2h-ha\"><b>コリンチャンスAWAY：</b>4試合3勝1分0敗、総得点9-3。</div>\n  </div>\n  <div class=\"h2h-read\"><strong>ここから言えること：</strong>8試合で無敗、ホームでは4戦全勝・10-1、アウェイでも3勝1分・9-3です。開催地に左右されにくく、H2Hでは得点力と守備力の両方に一貫した差があります。先制点を確認できた直近2試合も両方コリンチャンスで、DNBを選ぶ根拠と整合します。</div>\n</div>\n<div class=\"table-wrap\"><table class=\"h2h-table\">\n<tr><th>日付</th><th>ホーム</th><th>アウェイ</th><th>スコア</th><th>先制点</th><th>ホーム/アウェイ</th></tr>\n<tr><td>2026/9/21</td><td>コリンチャンス</td><td>バイーア</td><td>1-0</td><td>Jhonson</td><td>コリンチャンスHOME</td></tr>\n<tr><td>2026/9/15</td><td>バイーア</td><td>コリンチャンス</td><td>0-1</td><td>Jhonson</td><td>コリンチャンスAWAY</td></tr>\n<tr><td>2026/8/15</td><td>バイーア</td><td>コリンチャンス</td><td>1-1</td><td>未確認</td><td>コリンチャンスAWAY</td></tr>\n<tr><td>2025/8/16</td><td>コリンチャンス</td><td>バイーア</td><td>2-0</td><td>未確認</td><td>コリンチャンスHOME</td></tr>\n<tr><td>2025/8/9</td><td>バイーア</td><td>コリンチャンス</td><td>1-2</td><td>未確認</td><td>コリンチャンスAWAY</td></tr>\n<tr><td>2025/5/4</td><td>コリンチャンス</td><td>バイーア</td><td>5-1</td><td>未確認</td><td>コリンチャンスHOME</td></tr>\n<tr><td>2023/6/12</td><td>バイーア</td><td>コリンチャンス</td><td>1-5</td><td>未確認</td><td>コリンチャンスAWAY</td></tr>\n<tr><td>2021/5/30</td><td>コリンチャンス</td><td>バイーア</td><td>2-0</td><td>未確認</td><td>コリンチャンスHOME</td></tr>\n</table></div></div>\n",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "なぜこの組み合わせを選んだか"
+        },
+        {
+          "type": "subtitle",
+          "text": "Corinthians Women vs Bahia Women / DNB Corinthians"
+        },
+        {
+          "type": "boxes",
+          "boxes": [
+            {
+              "title": "当時の順位・得失点",
+              "paragraphs": [
+                "2026ブラジル女子A1第1フェーズ：コリンチャンス2位、17試合12勝2分3敗、42得点18失点、得失点差+24、勝点38。バイーア6位、17試合8勝5分4敗、30得点21失点、得失点差+9、勝点29。"
+              ],
+              "list": []
+            },
+            {
+              "title": "H2H",
+              "paragraphs": [
+                "今回の準決勝第2戦を含めると、確認8試合でコリンチャンス7勝1分0敗。過去7試合時点の総得点は18-4で、今回の1-0を加えると19-4。"
+              ],
+              "list": []
+            },
+            {
+              "title": "ホーム / アウェイ",
+              "paragraphs": [
+                "第1戦はバイーアのホーム（Arena Fonte Nova）でコリンチャンスが1-0勝利。第2戦はコリンチャンスのホーム（Neo Química Arena）で1-0勝利。"
+              ],
+              "list": []
+            },
+            {
+              "title": "ファーストゴール",
+              "paragraphs": [
+                "2026準決勝の第1戦・第2戦はいずれもJhonsonが決勝点。つまり両試合とも最初の得点者もJhonson。"
+              ],
+              "list": []
+            },
+            {
+              "title": "大会状況",
+              "paragraphs": [
+                "コリンチャンスは準決勝を2戦合計2-0で勝ち上がり、10大会連続の決勝進出を決めた。"
+              ],
+              "list": []
+            },
+            {
+              "title": "市場をDNBにした理由",
+              "paragraphs": [
+                "1X2よりも引分時の返金を残しながら、H2H無敗・第1戦勝利・第2戦ホームという優位条件を取りにいく形。"
+              ],
+              "list": []
+            }
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "主な分析要素：H2H無敗、19-4の直接対戦得失点、リーグ順位、シーズン得失点差、準決勝第1戦結果、ホーム開催、先制点傾向。"
+        },
+        {
+          "type": "heading",
+          "text": "H2H（確認8試合）"
+        },
+        {
+          "type": "items",
+          "title": "H2H集計・分析",
+          "items": [
+            {
+              "label": "対戦数",
+              "value": "8試合"
+            },
+            {
+              "label": "コリンチャンス戦績",
+              "value": "7勝1分0敗"
+            },
+            {
+              "label": "総得点",
+              "value": "19 - 4"
+            },
+            {
+              "label": "得失点差",
+              "value": "+15"
+            },
+            {
+              "label": "平均得点",
+              "value": "2.38 - 0.50"
+            },
+            {
+              "label": "先制点確認分",
+              "value": "2/2 コリンチャンス"
+            }
+          ],
+          "notes": [
+            "コリンチャンスHOME：4試合4勝0分0敗、総得点10-1。",
+            "コリンチャンスAWAY：4試合3勝1分0敗、総得点9-3。",
+            "ここから言えること：8試合で無敗、ホームでは4戦全勝・10-1、アウェイでも3勝1分・9-3です。開催地に左右されにくく、H2Hでは得点力と守備力の両方に一貫した差があります。先制点を確認できた直近2試合も両方コリンチャンスで、DNBを選ぶ根拠と整合します。"
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "ホーム",
+            "アウェイ",
+            "スコア",
+            "先制点",
+            "ホーム/アウェイ"
+          ],
+          "rows": [
+            [
+              "2026/9/21",
+              "コリンチャンス",
+              "バイーア",
+              "1-0",
+              "Jhonson",
+              "コリンチャンスHOME"
+            ],
+            [
+              "2026/9/15",
+              "バイーア",
+              "コリンチャンス",
+              "0-1",
+              "Jhonson",
+              "コリンチャンスAWAY"
+            ],
+            [
+              "2026/8/15",
+              "バイーア",
+              "コリンチャンス",
+              "1-1",
+              "未確認",
+              "コリンチャンスAWAY"
+            ],
+            [
+              "2025/8/16",
+              "コリンチャンス",
+              "バイーア",
+              "2-0",
+              "未確認",
+              "コリンチャンスHOME"
+            ],
+            [
+              "2025/8/9",
+              "バイーア",
+              "コリンチャンス",
+              "1-2",
+              "未確認",
+              "コリンチャンスAWAY"
+            ],
+            [
+              "2025/5/4",
+              "コリンチャンス",
+              "バイーア",
+              "5-1",
+              "未確認",
+              "コリンチャンスHOME"
+            ],
+            [
+              "2023/6/12",
+              "バイーア",
+              "コリンチャンス",
+              "1-5",
+              "未確認",
+              "コリンチャンスAWAY"
+            ],
+            [
+              "2021/5/30",
+              "コリンチャンス",
+              "バイーア",
+              "2-0",
+              "未確認",
+              "コリンチャンスHOME"
+            ]
+          ]
+        }
+      ],
+      "excluded_from_blocks": [
+        {
+          "class": "probability-box",
+          "text": "今回のDNB非敗戦確率（コリンチャンス）92.0%\n当時オッズ1.11：単純逆算90.1%（控除前）H2H：8試合 7勝1分0敗＝非敗戦100%HOME H2H：4戦4勝・得点10-1リーグ比較：2位・得失点+24 vs 6位・+9\nDNBは引分なら返金なので「負けない確率」を表示。今回の結果を除外した事前H2H 7試合を2年半減期で時系列減衰し、片側市場オッズの事前分布を更新しています。"
+        }
+      ],
+      "js_summary": {
+        "market": "DNB：コリンチャンス",
+        "reason": "事前H2H7試合で無敗。HOME/AWAYどちらでも優勢で、得失点差も大きい。",
+        "caution": "DNBは勝率ではなく『負けない確率』。引分は返金として扱う。"
+      }
+    },
+    {
+      "pick_id": "rec-legacy-tun",
+      "source": {
+        "file": "analysis.html",
+        "commit": "02e5167",
+        "location": "#detail-tun .detail-cell"
+      },
+      "raw_html": "\n<div class=\"detail-title\">なぜこの組み合わせを選んだか</div>\n<div class=\"detail-sub\">チュニジア vs ルワンダ / 第1セット勝者 チュニジア</div>\n<div class=\"detail-grid\">\n<div class=\"box\"><h3>当時 / 現在ランキング</h3><p>2026/9/9時点でチュニジアはFIVB 43位・108.93pt。大会直前のFIVB記事では44位、アフリカ2番手。ルワンダの正確な最新FIVB順位は今回確認できた資料では数値未掲載のため、推測していません。</p></div>\n<div class=\"box\"><h3>H2H</h3><p>2026年の準々決勝を加えると確認3試合。チュニジア3勝0敗、セット9-0。第1セットも3試合すべてチュニジア。</p></div>\n<div class=\"box\"><h3>2026大会前の流れ</h3><p>過去チャットではチュニジアがガーナ3-0、ケニア3-0。ルワンダは中央アフリカ3-0、DRコンゴ3-1、カメルーン1-3、ガンビア3-0。</p></div>\n<div class=\"box\"><h3>今回の実際の結果</h3><p>2026/9/21、開催国チュニジアが3-0勝利。セットは25-13 / 25-18 / 25-18。第1セットもチュニジアが12点差で取得。</p></div>\n<div class=\"box\"><h3>ホーム / アウェイ</h3><p>2026アフリカ選手権はチュニジア開催。代表戦なので通常のクラブHOME/AWAYとは違うが、今回チュニジアは開催国。</p></div>\n<div class=\"box\"><h3>セット差・得点差</h3><p>確認3試合のセットは9-0。2026年対戦の総得点は75-49、得点差+26。過去2試合もストレート勝ち。</p></div>\n</div>\n<div class=\"reason\"><strong>主な分析要素：</strong>H2H全勝・全ストレート、第1セット全勝、開催国、アフリカ上位のランキング、セット得点差。</div><div class=\"probability-box\" id=\"prob-tun\" data-model=\"tun\">\n  <div class=\"probability-head\"><span>今回の第1セット取得確率（チュニジア）</span><strong>86.0%</strong></div>\n  <div class=\"probability-grid\"><div><b>当時オッズ1.17：</b>単純逆算85.5%（控除前）</div><div><b>H2H第1セット：</b>確認3試合すべてチュニジア</div><div><b>H2Hセット通算：</b>9-0</div><div><b>開催条件：</b>2026大会はチュニジア開催</div></div>\n  <div class=\"probability-note\">今回の結果は確率計算から除外し、試合前に存在したH2H 2試合だけを6年半減期で減衰。片側市場オッズの事前分布へベイズ更新しています。開催地は市場に織り込まれている可能性があるため二重加算していません。</div>\n</div>\n<div class=\"h2h\"><h3>H2H（確認3試合）</h3>\n<div class=\"h2h-analysis\">\n  <div class=\"h2h-analysis-title\">H2H集計・分析</div>\n  <div class=\"h2h-stats\">\n    <div class=\"h2h-stat\"><span>対戦数</span><strong>3試合</strong></div>\n    <div class=\"h2h-stat\"><span>勝敗</span><strong>チュニジア 3勝0敗</strong></div>\n    <div class=\"h2h-stat\"><span>セット通算</span><strong>9 - 0</strong></div>\n    <div class=\"h2h-stat\"><span>総得点</span><strong>225 - 147</strong></div>\n    <div class=\"h2h-stat\"><span>得点差</span><strong>+78</strong></div>\n    <div class=\"h2h-stat\"><span>第1セット</span><strong>3勝0敗 / 75-49</strong></div>\n  </div>\n  <div class=\"h2h-homeaway\">\n    <div class=\"h2h-ha\"><b>開催国として確認できる試合：</b>2026年チュニジア開催で1勝0敗、セット3-0、得点75-49。</div>\n    <div class=\"h2h-ha\"><b>その他2試合：</b>過去履歴では会場・HOME/AWAYの確定情報が不足しているため、無理に分類していません。</div>\n  </div>\n  <div class=\"h2h-read\"><strong>ここから言えること：</strong>3試合すべてストレート勝ちで、セット9-0、総得点差+78。さらに第1セットも3戦全勝・75-49で、今回の「第1セット勝者」という市場に直接つながるH2H傾向です。対戦数は3試合なので、ランキングや大会直近成績と合わせて見るのが妥当です。</div>\n</div>\n<div class=\"table-wrap\"><table class=\"h2h-table\">\n<tr><th>日付</th><th>大会</th><th>表記順</th><th>最終</th><th>セットスコア</th><th>第1セット</th></tr>\n<tr><td>2026/9/21</td><td>アフリカ選手権</td><td>チュニジア vs ルワンダ</td><td>3-0</td><td>25-13 / 25-18 / 25-18</td><td>チュニジア</td></tr>\n<tr><td>2023/9/12</td><td>過去対戦</td><td>チュニジア vs ルワンダ</td><td>3-0</td><td>25-17 / 25-18 / 25-21</td><td>チュニジア</td></tr>\n<tr><td>2015/7/25</td><td>過去対戦</td><td>チュニジア vs ルワンダ</td><td>3-0</td><td>25-19 / 25-11 / 25-12</td><td>チュニジア</td></tr>\n</table></div></div>\n",
+      "blocks": [
+        {
+          "type": "title",
+          "text": "なぜこの組み合わせを選んだか"
+        },
+        {
+          "type": "subtitle",
+          "text": "チュニジア vs ルワンダ / 第1セット勝者 チュニジア"
+        },
+        {
+          "type": "boxes",
+          "boxes": [
+            {
+              "title": "当時 / 現在ランキング",
+              "paragraphs": [
+                "2026/9/9時点でチュニジアはFIVB 43位・108.93pt。大会直前のFIVB記事では44位、アフリカ2番手。ルワンダの正確な最新FIVB順位は今回確認できた資料では数値未掲載のため、推測していません。"
+              ],
+              "list": []
+            },
+            {
+              "title": "H2H",
+              "paragraphs": [
+                "2026年の準々決勝を加えると確認3試合。チュニジア3勝0敗、セット9-0。第1セットも3試合すべてチュニジア。"
+              ],
+              "list": []
+            },
+            {
+              "title": "2026大会前の流れ",
+              "paragraphs": [
+                "過去チャットではチュニジアがガーナ3-0、ケニア3-0。ルワンダは中央アフリカ3-0、DRコンゴ3-1、カメルーン1-3、ガンビア3-0。"
+              ],
+              "list": []
+            },
+            {
+              "title": "今回の実際の結果",
+              "paragraphs": [
+                "2026/9/21、開催国チュニジアが3-0勝利。セットは25-13 / 25-18 / 25-18。第1セットもチュニジアが12点差で取得。"
+              ],
+              "list": []
+            },
+            {
+              "title": "ホーム / アウェイ",
+              "paragraphs": [
+                "2026アフリカ選手権はチュニジア開催。代表戦なので通常のクラブHOME/AWAYとは違うが、今回チュニジアは開催国。"
+              ],
+              "list": []
+            },
+            {
+              "title": "セット差・得点差",
+              "paragraphs": [
+                "確認3試合のセットは9-0。2026年対戦の総得点は75-49、得点差+26。過去2試合もストレート勝ち。"
+              ],
+              "list": []
+            }
+          ]
+        },
+        {
+          "type": "reason",
+          "text": "主な分析要素：H2H全勝・全ストレート、第1セット全勝、開催国、アフリカ上位のランキング、セット得点差。"
+        },
+        {
+          "type": "heading",
+          "text": "H2H（確認3試合）"
+        },
+        {
+          "type": "items",
+          "title": "H2H集計・分析",
+          "items": [
+            {
+              "label": "対戦数",
+              "value": "3試合"
+            },
+            {
+              "label": "勝敗",
+              "value": "チュニジア 3勝0敗"
+            },
+            {
+              "label": "セット通算",
+              "value": "9 - 0"
+            },
+            {
+              "label": "総得点",
+              "value": "225 - 147"
+            },
+            {
+              "label": "得点差",
+              "value": "+78"
+            },
+            {
+              "label": "第1セット",
+              "value": "3勝0敗 / 75-49"
+            }
+          ],
+          "notes": [
+            "開催国として確認できる試合：2026年チュニジア開催で1勝0敗、セット3-0、得点75-49。",
+            "その他2試合：過去履歴では会場・HOME/AWAYの確定情報が不足しているため、無理に分類していません。",
+            "ここから言えること：3試合すべてストレート勝ちで、セット9-0、総得点差+78。さらに第1セットも3戦全勝・75-49で、今回の「第1セット勝者」という市場に直接つながるH2H傾向です。対戦数は3試合なので、ランキングや大会直近成績と合わせて見るのが妥当です。"
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "日付",
+            "大会",
+            "表記順",
+            "最終",
+            "セットスコア",
+            "第1セット"
+          ],
+          "rows": [
+            [
+              "2026/9/21",
+              "アフリカ選手権",
+              "チュニジア vs ルワンダ",
+              "3-0",
+              "25-13 / 25-18 / 25-18",
+              "チュニジア"
+            ],
+            [
+              "2023/9/12",
+              "過去対戦",
+              "チュニジア vs ルワンダ",
+              "3-0",
+              "25-17 / 25-18 / 25-21",
+              "チュニジア"
+            ],
+            [
+              "2015/7/25",
+              "過去対戦",
+              "チュニジア vs ルワンダ",
+              "3-0",
+              "25-19 / 25-11 / 25-12",
+              "チュニジア"
+            ]
+          ]
+        }
+      ],
+      "excluded_from_blocks": [
+        {
+          "class": "probability-box",
+          "text": "今回の第1セット取得確率（チュニジア）86.0%\n当時オッズ1.17：単純逆算85.5%（控除前）H2H第1セット：確認3試合すべてチュニジアH2Hセット通算：9-0開催条件：2026大会はチュニジア開催\n今回の結果は確率計算から除外し、試合前に存在したH2H 2試合だけを6年半減期で減衰。片側市場オッズの事前分布へベイズ更新しています。開催地は市場に織り込まれている可能性があるため二重加算していません。"
+        }
+      ],
+      "js_summary": {
+        "market": "第1セット：チュニジア",
+        "reason": "事前H2H2試合とも3-0。第1セットも2戦2勝で、開催国条件もプラス。",
+        "caution": "H2Hが2試合と少ないため、100%をそのまま今回確率にはしない。"
+      }
+    }
+  ]
+}

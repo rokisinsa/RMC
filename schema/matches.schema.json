@@ -173,6 +173,10 @@
               }
             }
           },
+          "result_confirmed_at": {
+            "$ref": "defs.schema.json#/$defs/dateTimeOrNull",
+            "description": "結果が確定した時刻（任意）"
+          },
           "provenance": {
             "type": "array",
             "minItems": 1,
@@ -211,6 +215,14 @@
                 },
                 "note": {
                   "$ref": "defs.schema.json#/$defs/stringOrNull"
+                },
+                "evidence": {
+                  "type": "object",
+                  "description": "この変更の根拠（情報源・確認時刻・確度）"
+                },
+                "correction": {
+                  "type": "object",
+                  "description": "結果訂正の理由"
                 }
               }
             }
