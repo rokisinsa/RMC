@@ -407,6 +407,23 @@ function checkCoverageAudit(payload, ledger) {
     const bc = c.sportsbook_master?.bet_channel ?? [];
     const norm = xs => [...new Set(xs.map(x => String(x).trim().toLowerCase()))].sort();
     if (JSON.stringify(norm(master)) !== JSON.stringify(norm(bc))) ledger.error("coverage", "bet_channel", null, "BET CHANNEL完全版では union_sports が bet_channel実一覧と一致していない");
+
+    const invPath = join(ROOT, "data/bet-channel-inventory.json");
+    if (!existsSync(invPath)) ledger.error("coverage","bet_channel",null,"実測 bet-channel-inventory.json が無い");
+    else {
+      const inv = JSON.parse(readFileSync(invPath,"utf8"));
+      const a = c.sportsbook_master?.source_audit?.bet_channel;
+      const sameIds = (u,v) => JSON.stringify([...(u??[])].sort()) === JSON.stringify([...(v??[])].sort());
+      if (!inv.complete || !inv.analysis_ready || inv.failed_category_count !== 0 || inv.metadata_missing_count !== 0 || inv.time_parse_missing_count !== 0) ledger.error("coverage","bet_channel",null,"最新BET CHANNELインベントリが完全取得・analysis_readyではない");
+      if (a?.inventory_digest !== inv.integrity?.digest) ledger.error("coverage","bet_channel",null,"payloadのinventory_digestが実インベントリと一致しない");
+      if (a?.event_count !== inv.event_count || !sameIds(a?.event_ids,inv.event_ids)) ledger.error("coverage","bet_channel",null,"payloadの市場event一覧が実インベントリと一致しない");
+      if (a?.analysis_card_count !== inv.analysis_card_count || !sameIds(a?.analysis_card_ids,inv.analysis_card_ids)) ledger.error("coverage","bet_channel",null,"payloadのcanonical card一覧が実インベントリと一致しない");
+      if (a?.bettable_analysis_card_count !== inv.bettable_analysis_card_count || a?.unavailable_price_card_count !== inv.unavailable_price_card_count) ledger.error("coverage","bet_channel",null,"価格公開/未公開カード件数が実インベントリと一致しない");
+      for (const system of DISCOVERY) {
+        const ids=c.systems?.[system]?.card_ids ?? [];
+        if (!sameIds(ids,inv.analysis_card_ids)) ledger.error("coverage",system,null,`card_idsがBET CHANNELの48h canonical全カードと完全一致していない（${ids.length}/${inv.analysis_card_ids?.length??0}）`);
+      }
+    }
   }
 
   if (!master.length) ledger.error("coverage", "payload", null, "対象競技マスターが空");
