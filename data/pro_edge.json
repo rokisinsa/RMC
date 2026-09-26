@@ -33,6 +33,12 @@
       "started_at": "2026-09-26T23:59:00+09:00",
       "slot": "adhoc",
       "note": "Independent full-category price scan. No accepted/watch card because multiple-book no-vig market snapshot plus reproducible independent base model was not simultaneously available for a new card. Market probability was not copied into base probability. No logic changes."
+    },
+    {
+      "run_id": "pe-complete-20260927-0003",
+      "started_at": "2026-09-27T00:03:00+09:00",
+      "slot": "adhoc",
+      "note": "Independent full-category scan. No new accepted card without simultaneous reproducible independent base model and verifiable multi-book market snapshot. Market probability not copied to base probability."
     }
   ],
   "picks": []
