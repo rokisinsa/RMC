@@ -1,0 +1,353 @@
+{
+  "payload_version": 1,
+  "run_id": "rmc-bc-real-audit-20260927-0108",
+  "source": "ChatGPT BET CHANNEL real complete trial",
+  "generated_at": "2026-09-27T01:08:00+09:00",
+  "slot": "23:00",
+  "note": "実サイト取得能力の完全性試走。カテゴリは公式公開ページから取得。動的イベント本文が未展開のためpartialとして正しくFAILさせる。",
+  "coverage_audit": {
+    "scope": "bet_channel_only",
+    "sportsbook_master": {
+      "bet_channel": [
+        "格闘技",
+        "野球",
+        "サッカー",
+        "大相撲",
+        "競馬 世界TOP100",
+        "麻雀(マージャン)",
+        "バスケットボール",
+        "ゴルフ",
+        "アイスホッケー (NHL)",
+        "アメフト (NFL)",
+        "陸上競技・マラソン",
+        "バレーボール",
+        "卓球",
+        "ラグビー",
+        "ハンドボール",
+        "バドミントン",
+        "冬季スポーツ",
+        "格付けロト",
+        "2026年冬季オリンピック",
+        "その他スポーツ"
+      ],
+      "union_sports": [
+        "格闘技",
+        "野球",
+        "サッカー",
+        "大相撲",
+        "競馬 世界TOP100",
+        "麻雀(マージャン)",
+        "バスケットボール",
+        "ゴルフ",
+        "アイスホッケー (NHL)",
+        "アメフト (NFL)",
+        "陸上競技・マラソン",
+        "バレーボール",
+        "卓球",
+        "ラグビー",
+        "ハンドボール",
+        "バドミントン",
+        "冬季スポーツ",
+        "格付けロト",
+        "2026年冬季オリンピック",
+        "その他スポーツ"
+      ],
+      "source_audit": {
+        "bet_channel": {
+          "checked_at": "2026-09-27T01:08:00+09:00",
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja",
+            "https://bet-channel.com/sports?lang=ja",
+            "https://bet-channel.com/matches?ct=10207&lang=ja"
+          ],
+          "menu_end_verified": true,
+          "category_count": 20,
+          "event_count": 0,
+          "event_ids": [],
+          "access_status": "partial",
+          "note": "カテゴリとサブカテゴリは公式公開HTMLで確認。24時間イベント本文はAngular風テンプレートのまま取得され、全イベント実体を列挙できない。"
+        }
+      }
+    },
+    "systems": {
+      "recommendations": {
+        "target_sports": 20,
+        "scanned_sports": 20,
+        "unscanned_sports": 0,
+        "zero_card_sports": 20,
+        "unavailable_sports": 20,
+        "cards_checked": 0,
+        "competitions_checked": 0,
+        "deep_dived": 0,
+        "accepted": 0,
+        "watch": 0,
+        "rejected": 0,
+        "scanned_sport_names": [
+          "格闘技",
+          "野球",
+          "サッカー",
+          "大相撲",
+          "競馬 世界TOP100",
+          "麻雀(マージャン)",
+          "バスケットボール",
+          "ゴルフ",
+          "アイスホッケー (NHL)",
+          "アメフト (NFL)",
+          "陸上競技・マラソン",
+          "バレーボール",
+          "卓球",
+          "ラグビー",
+          "ハンドボール",
+          "バドミントン",
+          "冬季スポーツ",
+          "格付けロト",
+          "2026年冬季オリンピック",
+          "その他スポーツ"
+        ],
+        "unscanned_sport_names": [],
+        "card_ids": [],
+        "sport_card_counts": {
+          "格闘技": 0,
+          "野球": 0,
+          "サッカー": 0,
+          "大相撲": 0,
+          "競馬 世界TOP100": 0,
+          "麻雀(マージャン)": 0,
+          "バスケットボール": 0,
+          "ゴルフ": 0,
+          "アイスホッケー (NHL)": 0,
+          "アメフト (NFL)": 0,
+          "陸上競技・マラソン": 0,
+          "バレーボール": 0,
+          "卓球": 0,
+          "ラグビー": 0,
+          "ハンドボール": 0,
+          "バドミントン": 0,
+          "冬季スポーツ": 0,
+          "格付けロト": 0,
+          "2026年冬季オリンピック": 0,
+          "その他スポーツ": 0
+        }
+      },
+      "value1": {
+        "target_sports": 20,
+        "scanned_sports": 20,
+        "unscanned_sports": 0,
+        "zero_card_sports": 20,
+        "unavailable_sports": 20,
+        "cards_checked": 0,
+        "competitions_checked": 0,
+        "deep_dived": 0,
+        "accepted": 0,
+        "watch": 0,
+        "rejected": 0,
+        "scanned_sport_names": [
+          "格闘技",
+          "野球",
+          "サッカー",
+          "大相撲",
+          "競馬 世界TOP100",
+          "麻雀(マージャン)",
+          "バスケットボール",
+          "ゴルフ",
+          "アイスホッケー (NHL)",
+          "アメフト (NFL)",
+          "陸上競技・マラソン",
+          "バレーボール",
+          "卓球",
+          "ラグビー",
+          "ハンドボール",
+          "バドミントン",
+          "冬季スポーツ",
+          "格付けロト",
+          "2026年冬季オリンピック",
+          "その他スポーツ"
+        ],
+        "unscanned_sport_names": [],
+        "card_ids": [],
+        "sport_card_counts": {
+          "格闘技": 0,
+          "野球": 0,
+          "サッカー": 0,
+          "大相撲": 0,
+          "競馬 世界TOP100": 0,
+          "麻雀(マージャン)": 0,
+          "バスケットボール": 0,
+          "ゴルフ": 0,
+          "アイスホッケー (NHL)": 0,
+          "アメフト (NFL)": 0,
+          "陸上競技・マラソン": 0,
+          "バレーボール": 0,
+          "卓球": 0,
+          "ラグビー": 0,
+          "ハンドボール": 0,
+          "バドミントン": 0,
+          "冬季スポーツ": 0,
+          "格付けロト": 0,
+          "2026年冬季オリンピック": 0,
+          "その他スポーツ": 0
+        }
+      },
+      "value2": {
+        "target_sports": 20,
+        "scanned_sports": 20,
+        "unscanned_sports": 0,
+        "zero_card_sports": 20,
+        "unavailable_sports": 20,
+        "cards_checked": 0,
+        "competitions_checked": 0,
+        "deep_dived": 0,
+        "accepted": 0,
+        "watch": 0,
+        "rejected": 0,
+        "scanned_sport_names": [
+          "格闘技",
+          "野球",
+          "サッカー",
+          "大相撲",
+          "競馬 世界TOP100",
+          "麻雀(マージャン)",
+          "バスケットボール",
+          "ゴルフ",
+          "アイスホッケー (NHL)",
+          "アメフト (NFL)",
+          "陸上競技・マラソン",
+          "バレーボール",
+          "卓球",
+          "ラグビー",
+          "ハンドボール",
+          "バドミントン",
+          "冬季スポーツ",
+          "格付けロト",
+          "2026年冬季オリンピック",
+          "その他スポーツ"
+        ],
+        "unscanned_sport_names": [],
+        "card_ids": [],
+        "sport_card_counts": {
+          "格闘技": 0,
+          "野球": 0,
+          "サッカー": 0,
+          "大相撲": 0,
+          "競馬 世界TOP100": 0,
+          "麻雀(マージャン)": 0,
+          "バスケットボール": 0,
+          "ゴルフ": 0,
+          "アイスホッケー (NHL)": 0,
+          "アメフト (NFL)": 0,
+          "陸上競技・マラソン": 0,
+          "バレーボール": 0,
+          "卓球": 0,
+          "ラグビー": 0,
+          "ハンドボール": 0,
+          "バドミントン": 0,
+          "冬季スポーツ": 0,
+          "格付けロト": 0,
+          "2026年冬季オリンピック": 0,
+          "その他スポーツ": 0
+        }
+      },
+      "pro_edge": {
+        "target_sports": 20,
+        "scanned_sports": 20,
+        "unscanned_sports": 0,
+        "zero_card_sports": 20,
+        "unavailable_sports": 20,
+        "cards_checked": 0,
+        "competitions_checked": 0,
+        "deep_dived": 0,
+        "accepted": 0,
+        "watch": 0,
+        "rejected": 0,
+        "scanned_sport_names": [
+          "格闘技",
+          "野球",
+          "サッカー",
+          "大相撲",
+          "競馬 世界TOP100",
+          "麻雀(マージャン)",
+          "バスケットボール",
+          "ゴルフ",
+          "アイスホッケー (NHL)",
+          "アメフト (NFL)",
+          "陸上競技・マラソン",
+          "バレーボール",
+          "卓球",
+          "ラグビー",
+          "ハンドボール",
+          "バドミントン",
+          "冬季スポーツ",
+          "格付けロト",
+          "2026年冬季オリンピック",
+          "その他スポーツ"
+        ],
+        "unscanned_sport_names": [],
+        "card_ids": [],
+        "sport_card_counts": {
+          "格闘技": 0,
+          "野球": 0,
+          "サッカー": 0,
+          "大相撲": 0,
+          "競馬 世界TOP100": 0,
+          "麻雀(マージャン)": 0,
+          "バスケットボール": 0,
+          "ゴルフ": 0,
+          "アイスホッケー (NHL)": 0,
+          "アメフト (NFL)": 0,
+          "陸上競技・マラソン": 0,
+          "バレーボール": 0,
+          "卓球": 0,
+          "ラグビー": 0,
+          "ハンドボール": 0,
+          "バドミントン": 0,
+          "冬季スポーツ": 0,
+          "格付けロト": 0,
+          "2026年冬季オリンピック": 0,
+          "その他スポーツ": 0
+        }
+      }
+    }
+  },
+  "systems": {
+    "recommendations": {
+      "discovery_runs": [
+        {
+          "run_id": "rec-bc-real-audit-20260927-0108",
+          "started_at": "2026-09-27T01:08:00+09:00",
+          "slot": "23:00",
+          "note": "BET CHANNEL実サイト完全取得テスト。カテゴリ階層は取得できたが動的イベント本文は公開Web取得で展開されず、完全イベントID作成不可。"
+        }
+      ]
+    },
+    "value1": {
+      "discovery_runs": [
+        {
+          "run_id": "v1-bc-real-audit-20260927-0108",
+          "started_at": "2026-09-27T01:08:00+09:00",
+          "slot": "23:00",
+          "note": "BET CHANNEL実サイト完全取得テスト。カテゴリ階層は取得できたが動的イベント本文は公開Web取得で展開されず、完全イベントID作成不可。"
+        }
+      ]
+    },
+    "value2": {
+      "discovery_runs": [
+        {
+          "run_id": "v2-bc-real-audit-20260927-0108",
+          "started_at": "2026-09-27T01:08:00+09:00",
+          "slot": "23:00",
+          "note": "BET CHANNEL実サイト完全取得テスト。カテゴリ階層は取得できたが動的イベント本文は公開Web取得で展開されず、完全イベントID作成不可。"
+        }
+      ]
+    },
+    "pro_edge": {
+      "discovery_runs": [
+        {
+          "run_id": "pe-bc-real-audit-20260927-0108",
+          "started_at": "2026-09-27T01:08:00+09:00",
+          "slot": "23:00",
+          "note": "BET CHANNEL実サイト完全取得テスト。カテゴリ階層は取得できたが動的イベント本文は公開Web取得で展開されず、完全イベントID作成不可。"
+        }
+      ]
+    }
+  }
+}
