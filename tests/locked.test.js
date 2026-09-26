@@ -31,7 +31,7 @@ test("locked 後に odds_taken・stake・選択・市場・market_odds を変え
   for (const mutate of [
     p => { p.odds_taken = 1.3; },
     p => { p.stake = 300; },
-    p => { p.selection = "away"; },
+    p => { p.selection = "side_b"; },
     p => { p.market = "dnb"; },
     p => { p.market_odds = { text: "1.20〜1.25", min: 1.2, max: 1.25, observed_at: null, source: null }; },
     p => { p.locked_at = "2026-09-19T23:40:00+09:00"; },

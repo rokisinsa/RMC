@@ -2,58 +2,231 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "matches.schema.json",
   "title": "data/matches.json — 客観的な試合事実",
-  "$comment": "推奨/VALUE判定・推定勝率・EV・オッズ・選択など分析判断は入れない（additionalProperties:false と integrity の禁止キー検査で二重に防ぐ）。",
+  "$comment": "推奨/VALUE判定・推定勝率・EV・オッズ・選択など分析判断は入れない（additionalProperties:false と integrity の禁止キー検査で二重に防ぐ）。変更は必ず update_runs の更新回として provenance に記録する。",
   "type": "object",
-  "required": ["schema_version", "matches"],
+  "required": [
+    "schema_version",
+    "update_runs",
+    "matches"
+  ],
   "additionalProperties": false,
   "properties": {
-    "schema_version": { "const": 1 },
-    "meta": { "$ref": "defs.schema.json#/$defs/fileMeta" },
+    "schema_version": {
+      "const": 1
+    },
+    "meta": {
+      "$ref": "defs.schema.json#/$defs/fileMeta"
+    },
+    "update_runs": {
+      "type": "array",
+      "minItems": 1,
+      "description": "試合事実の更新回。baseline_migration（移行基準点）→ human_review / result_update（その後の更新）を区別する。",
+      "items": {
+        "type": "object",
+        "required": [
+          "run_id",
+          "kind",
+          "at",
+          "source"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "pattern": "^mr-[a-z0-9._-]+$"
+          },
+          "kind": {
+            "enum": [
+              "baseline_migration",
+              "human_review",
+              "result_update"
+            ]
+          },
+          "at": {
+            "$ref": "defs.schema.json#/$defs/dateTime"
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "note": {
+            "$ref": "defs.schema.json#/$defs/stringOrNull"
+          }
+        }
+      }
+    },
     "matches": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "sport", "competition", "home", "away", "start_at", "start_time_status", "status", "result"],
+        "required": [
+          "id",
+          "sport",
+          "competition",
+          "side_a",
+          "side_b",
+          "home_side",
+          "start_at",
+          "start_time_status",
+          "status",
+          "result",
+          "provenance"
+        ],
         "additionalProperties": false,
         "properties": {
-          "id": { "$ref": "defs.schema.json#/$defs/id" },
-          "sport": { "type": "string", "minLength": 1 },
-          "competition": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
-          "home": { "type": "string", "minLength": 1 },
-          "away": { "type": "string", "minLength": 1 },
-          "venue": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
-          "start_at": { "$ref": "defs.schema.json#/$defs/dateTimeOrNull" },
-          "start_time_status": {
-            "enum": ["recorded", "unverified", "unknown"],
-            "description": "recorded=記録どおりの開始時刻 / unverified=候補はあるが未確認（start_at は null） / unknown=不明（start_at は null）"
+          "id": {
+            "$ref": "defs.schema.json#/$defs/id"
           },
-          "start_time_note": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+          "sport": {
+            "type": "string",
+            "minLength": 1
+          },
+          "competition": {
+            "$ref": "defs.schema.json#/$defs/stringOrNull"
+          },
+          "side_a": {
+            "type": "string",
+            "minLength": 1,
+            "description": "表記「A vs B」の A"
+          },
+          "side_b": {
+            "type": "string",
+            "minLength": 1,
+            "description": "表記「A vs B」の B"
+          },
+          "home_side": {
+            "enum": [
+              "side_a",
+              "side_b",
+              "neutral",
+              "unknown"
+            ],
+            "description": "ホームがどちらか。記録で確認できない場合は unknown（表示順からホーム/アウェーを断定しない）"
+          },
+          "venue": {
+            "$ref": "defs.schema.json#/$defs/stringOrNull"
+          },
+          "start_at": {
+            "$ref": "defs.schema.json#/$defs/dateTimeOrNull"
+          },
+          "start_time_status": {
+            "enum": [
+              "recorded",
+              "review_required",
+              "unverified",
+              "unknown"
+            ],
+            "description": "recorded=確定した開始時刻 / review_required=候補が複数あり人間の確認待ち（start_at は null、start_candidates に候補） / unverified=未確認（start_at は null） / unknown=不明"
+          },
+          "start_candidates": {
+            "type": "array",
+            "items": {
+              "$ref": "defs.schema.json#/$defs/dateTime"
+            },
+            "description": "開始時刻の候補（確定ではない）。事前値の確認はすべての候補より前である場合だけ有効"
+          },
+          "start_time_note": {
+            "$ref": "defs.schema.json#/$defs/stringOrNull"
+          },
           "status": {
-            "enum": ["scheduled", "live", "final", "cancelled", "postponed", "abandoned", "unknown"],
+            "enum": [
+              "scheduled",
+              "live",
+              "final",
+              "cancelled",
+              "postponed",
+              "abandoned",
+              "unknown"
+            ],
             "description": "unknown=開始時刻を過ぎた、または開始時刻不明で結果が未記録"
           },
           "result": {
-            "type": ["object", "null"],
+            "type": [
+              "object",
+              "null"
+            ],
             "additionalProperties": false,
             "properties": {
-              "final": { "$ref": "defs.schema.json#/$defs/score" },
+              "final": {
+                "$ref": "defs.schema.json#/$defs/score"
+              },
               "periods": {
                 "type": "object",
                 "description": "ht=前半, set1=第1セット, map1=第1マップ など",
-                "additionalProperties": { "$ref": "defs.schema.json#/$defs/score" }
+                "additionalProperties": {
+                  "$ref": "defs.schema.json#/$defs/score"
+                }
               },
               "winners": {
                 "type": "object",
                 "description": "スコアは不明だが勝者だけ記録がある場合（キーは final / ht / set1 / map1 など）",
-                "additionalProperties": { "$ref": "defs.schema.json#/$defs/side" }
+                "additionalProperties": {
+                  "$ref": "defs.schema.json#/$defs/side"
+                }
               },
-              "text": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+              "text": {
+                "$ref": "defs.schema.json#/$defs/stringOrNull"
+              }
             }
           },
-          "sources": { "type": "array", "items": { "type": "string", "minLength": 1 } },
-          "verified_at": { "$ref": "defs.schema.json#/$defs/dateTimeOrNull" },
-          "flags": { "$ref": "defs.schema.json#/$defs/flags" },
-          "note": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
+          "provenance": {
+            "type": "array",
+            "minItems": 1,
+            "description": "この試合事実を作成・変更した更新回の履歴（追記のみ）。変更時は before/after を残し、基準点の状態を復元できるようにする。",
+            "items": {
+              "type": "object",
+              "required": [
+                "update_run_id",
+                "changes"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "update_run_id": {
+                  "type": "string",
+                  "pattern": "^mr-[a-z0-9._-]+$"
+                },
+                "changes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "field",
+                      "before",
+                      "after"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "field": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "before": {},
+                      "after": {}
+                    }
+                  }
+                },
+                "note": {
+                  "$ref": "defs.schema.json#/$defs/stringOrNull"
+                }
+              }
+            }
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "verified_at": {
+            "$ref": "defs.schema.json#/$defs/dateTimeOrNull"
+          },
+          "flags": {
+            "$ref": "defs.schema.json#/$defs/flags"
+          },
+          "note": {
+            "$ref": "defs.schema.json#/$defs/stringOrNull"
+          }
         }
       }
     }

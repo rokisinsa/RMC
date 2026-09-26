@@ -9,7 +9,7 @@ const recPick = id => ds.recommendations.picks.find(p => p.id === id);
 const settle = (id, opts) => { const p = recPick(id); return settlePick(p, M.get(p.match_id), opts); };
 
 test("1X2・前半・第1セット・第1マップを試合事実から自動判定", () => {
-  assert.equal(settle("rec-r1").state, "win");   // 2-0 home
+  assert.equal(settle("rec-r1").state, "win");   // 2-0 で side_a の勝ち
   assert.equal(settle("rec-r3").state, "loss");  // 前半 0-1
   assert.equal(settle("rec-r4").state, "win");   // 第1セット 25-20
   assert.equal(settle("rec-r5").state, "win");   // 第1マップ 13-10（シリーズは 0-2 で負けでも第1マップは勝ち）
@@ -64,7 +64,7 @@ test("中止・延期・没収は void：損益0", () => {
 test("試合前・進行中・スコア未入力・試合未登録は pending", () => {
   assert.equal(settle("rec-r7").state, "pending");
   assert.equal(settlePick(recPick("rec-r1"), { ...M.get("m1"), status: "live" }).state, "pending");
-  assert.equal(settlePick(recPick("rec-r3"), { ...M.get("m2"), result: { final: { home: 1, away: 1 } } }).state, "pending");
+  assert.equal(settlePick(recPick("rec-r3"), { ...M.get("m2"), result: { final: { a: 1, b: 1 } } }).state, "pending");
   assert.equal(settlePick(recPick("rec-r1"), undefined).state, "pending");
 });
 

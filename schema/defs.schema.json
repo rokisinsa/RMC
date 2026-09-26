@@ -15,96 +15,214 @@
       "description": "タイムゾーン付きISO 8601（例: 2026-09-26T21:00:00+09:00）"
     },
     "dateTimeOrNull": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
     "oddsOrNull": {
-      "type": ["number", "null"],
+      "type": [
+        "number",
+        "null"
+      ],
       "exclusiveMinimum": 1,
       "description": "10進オッズ。1より大きい一点の値。"
     },
     "probOrNull": {
-      "type": ["number", "null"],
+      "type": [
+        "number",
+        "null"
+      ],
       "minimum": 0,
       "maximum": 1
     },
     "numberOrNull": {
-      "type": ["number", "null"]
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "stringOrNull": {
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "side": {
-      "enum": ["home", "away", "draw"],
-      "description": "matches.json の home/away を基準にした選択側。"
+      "enum": [
+        "side_a",
+        "side_b",
+        "draw"
+      ],
+      "description": "matches.json の side_a / side_b（旧表記「A vs B」の A と B）を基準にした選択側。ホーム/アウェーは意味しない（matches.home_side を参照）。"
     },
     "market": {
-      "enum": ["match_winner", "match_1x2", "dnb", "first_half_1x2", "set1_winner", "map1_winner", "other"],
-      "description": "match_winner=引分なしの勝者 / match_1x2=90分1X2 / dnb=ドローノーベット / first_half_1x2=前半1X2 / set1_winner=第1セット / map1_winner=第1マップ / other=自動精算不可（settlement_overrideで精算）"
+      "enum": [
+        "match_winner",
+        "match_1x2",
+        "dnb",
+        "first_half_1x2",
+        "set1_winner",
+        "map1_winner",
+        "double_chance",
+        "to_qualify",
+        "winner_incl_extra_time",
+        "other"
+      ],
+      "description": "match_winner=引分のない競技の勝者 / match_1x2=通常の勝者市場（規定時間。選択側が勝たなければ負け） / dnb=ドローノーベット / first_half_1x2=前半1X2 / set1_winner=第1セット / map1_winner=第1マップ / double_chance=ダブルチャンス / to_qualify=勝ち抜け / winner_incl_extra_time=延長・PK込みの勝者 / other=その他。double_chance・to_qualify・winner_incl_extra_time・other は現時点で自動精算しない（settlement_override で精算）"
     },
     "score": {
       "type": "object",
-      "required": ["home", "away"],
+      "required": [
+        "a",
+        "b"
+      ],
       "additionalProperties": false,
       "properties": {
-        "home": { "type": "integer", "minimum": 0 },
-        "away": { "type": "integer", "minimum": 0 }
+        "a": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "side_a の得点・セット・マップ・ラウンド"
+        },
+        "b": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "side_b の得点・セット・マップ・ラウンド"
+        }
       }
     },
     "marketOdds": {
-      "type": ["object", "null"],
-      "required": ["text"],
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "text"
+      ],
       "additionalProperties": false,
       "description": "確認できた市場オッズ。レンジしか分からない場合は min/max に入れ、一点へ固定しない。精算には使わない。",
       "properties": {
-        "text": { "type": "string", "minLength": 1 },
-        "min": { "$ref": "#/$defs/oddsOrNull" },
-        "max": { "$ref": "#/$defs/oddsOrNull" },
-        "observed_at": { "$ref": "#/$defs/dateTimeOrNull" },
-        "source": { "$ref": "#/$defs/stringOrNull" }
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "min": {
+          "$ref": "#/$defs/oddsOrNull"
+        },
+        "max": {
+          "$ref": "#/$defs/oddsOrNull"
+        },
+        "observed_at": {
+          "$ref": "#/$defs/dateTimeOrNull"
+        },
+        "source": {
+          "$ref": "#/$defs/stringOrNull"
+        }
       }
     },
     "settlementOverride": {
-      "type": ["object", "null"],
-      "required": ["state", "reason", "set_at"],
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "state",
+        "reason",
+        "set_at"
+      ],
       "additionalProperties": false,
       "description": "試合事実から自動判定できない場合（ライブ市場・特殊市場・旧データ移行）だけ使う明示的な精算状態。",
       "properties": {
-        "state": { "enum": ["win", "loss", "push", "void"] },
-        "reason": { "type": "string", "minLength": 1 },
-        "set_at": { "$ref": "#/$defs/dateTime" },
-        "source": { "$ref": "#/$defs/stringOrNull" }
+        "state": {
+          "enum": [
+            "win",
+            "loss",
+            "push",
+            "void"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "set_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "source": {
+          "$ref": "#/$defs/stringOrNull"
+        }
       }
     },
     "flags": {
       "type": "array",
       "uniqueItems": true,
       "items": {
-        "enum": ["duplicate_review", "needs_review", "legacy_import", "time_unverified", "odds_unverified", "result_unverified", "lock_unverified"]
+        "enum": [
+          "duplicate_review",
+          "needs_review",
+          "legacy_import",
+          "time_unverified",
+          "odds_unverified",
+          "result_unverified",
+          "lock_unverified",
+          "analysis_independence_review"
+        ]
       }
     },
     "recalculatedReference": {
       "type": "object",
-      "required": ["at", "model_version"],
+      "required": [
+        "at",
+        "model_version"
+      ],
       "additionalProperties": false,
       "description": "後から別モデルで再計算した参考値。事前確率（locked）ではない。locked は変更せず、ここへ追記だけする。",
       "properties": {
-        "at": { "$ref": "#/$defs/dateTime" },
-        "model_version": { "type": "string", "minLength": 1 },
-        "prob": { "$ref": "#/$defs/probOrNull" },
-        "note": { "$ref": "#/$defs/stringOrNull" }
+        "at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "model_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prob": {
+          "$ref": "#/$defs/probOrNull"
+        },
+        "note": {
+          "$ref": "#/$defs/stringOrNull"
+        }
       }
     },
     "condition": {
-      "type": ["object", "null"],
-      "required": ["text", "met", "checked_at"],
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "text",
+        "met",
+        "checked_at"
+      ],
       "additionalProperties": false,
       "description": "VALUE①の条件付きVALUE専用。met=true かつ checked_at が試合開始前の場合だけ本成績へ算入。",
       "properties": {
-        "text": { "type": "string", "minLength": 1 },
-        "min_odds": { "$ref": "#/$defs/oddsOrNull" },
-        "met": { "type": ["boolean", "null"] },
-        "checked_at": { "$ref": "#/$defs/dateTimeOrNull" }
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "min_odds": {
+          "$ref": "#/$defs/oddsOrNull"
+        },
+        "met": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "checked_at": {
+          "$ref": "#/$defs/dateTimeOrNull"
+        }
       }
     },
     "fileMeta": {
@@ -112,79 +230,219 @@
       "additionalProperties": false,
       "description": "ファイルの生成情報（移行元・時点）。",
       "properties": {
-        "generated_by": { "$ref": "#/$defs/stringOrNull" },
-        "legacy_source": { "$ref": "#/$defs/stringOrNull" },
-        "legacy_commit": { "$ref": "#/$defs/stringOrNull" },
-        "as_of": { "$ref": "#/$defs/dateTimeOrNull" },
-        "status": { "enum": ["draft", "active"] },
-        "note": { "$ref": "#/$defs/stringOrNull" }
+        "generated_by": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "legacy_source": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "legacy_commit": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "as_of": {
+          "$ref": "#/$defs/dateTimeOrNull"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "active"
+          ]
+        },
+        "note": {
+          "$ref": "#/$defs/stringOrNull"
+        }
       }
     },
     "discoveryRun": {
       "type": "object",
-      "required": ["run_id", "started_at", "slot"],
+      "required": [
+        "run_id",
+        "started_at",
+        "slot"
+      ],
       "additionalProperties": false,
       "description": "その系統が単独で行った新規候補探索1回分。系統をまたいで共有しない。",
       "properties": {
-        "run_id": { "$ref": "#/$defs/id" },
-        "started_at": { "$ref": "#/$defs/dateTime" },
-        "slot": { "enum": ["06:00", "12:00", "18:00", "23:00", "adhoc"] },
-        "note": { "$ref": "#/$defs/stringOrNull" }
+        "run_id": {
+          "$ref": "#/$defs/id"
+        },
+        "started_at": {
+          "$ref": "#/$defs/dateTime"
+        },
+        "slot": {
+          "enum": [
+            "06:00",
+            "12:00",
+            "18:00",
+            "23:00",
+            "adhoc"
+          ]
+        },
+        "note": {
+          "$ref": "#/$defs/stringOrNull"
+        }
       }
     },
     "pickBase": {
       "type": "object",
       "required": [
-        "id", "system", "match_id", "market", "selection",
-        "market_odds", "odds_taken", "stake",
-        "discovered_at", "bet_at", "locked_at",
-        "locked", "settlement_override", "flags"
+        "id",
+        "system",
+        "match_id",
+        "market",
+        "selection",
+        "market_odds",
+        "odds_taken",
+        "stake",
+        "discovered_at",
+        "bet_at",
+        "locked_at",
+        "locked",
+        "settlement_override",
+        "flags"
       ],
       "additionalProperties": false,
       "properties": {
-        "id": { "$ref": "#/$defs/id" },
-        "system": { "enum": ["recommendations", "experience", "value1", "value2"] },
-        "match_id": { "$ref": "#/$defs/id" },
-        "market": { "$ref": "#/$defs/market" },
-        "market_label": { "$ref": "#/$defs/stringOrNull" },
-        "selection": { "$ref": "#/$defs/side" },
-        "selection_label": { "$ref": "#/$defs/stringOrNull" },
-        "market_odds": { "$ref": "#/$defs/marketOdds" },
-        "odds_taken": { "$ref": "#/$defs/oddsOrNull" },
-        "stake": { "type": ["number", "null"], "minimum": 0 },
-        "discovered_at": { "$ref": "#/$defs/dateTimeOrNull" },
-        "run_id": { "type": ["string", "null"], "pattern": "^[a-z0-9][a-z0-9._-]*$" },
-        "bet_at": { "$ref": "#/$defs/dateTimeOrNull" },
-        "locked_at": { "$ref": "#/$defs/dateTimeOrNull" },
-        "live": { "type": "boolean" },
-        "locked": { "type": ["object", "null"] },
-        "condition": { "$ref": "#/$defs/condition" },
-        "closing_odds": { "$ref": "#/$defs/oddsOrNull" },
-        "recalculated_reference": { "type": "array", "items": { "$ref": "#/$defs/recalculatedReference" } },
-        "settlement_override": { "$ref": "#/$defs/settlementOverride" },
-        "flags": { "$ref": "#/$defs/flags" },
-        "detail_ref": { "$ref": "#/$defs/stringOrNull" },
-        "note": { "$ref": "#/$defs/stringOrNull" },
-        "legacy": { "$ref": "#/$defs/legacy" }
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "system": {
+          "enum": [
+            "recommendations",
+            "experience",
+            "value1",
+            "value2"
+          ]
+        },
+        "match_id": {
+          "$ref": "#/$defs/id"
+        },
+        "market": {
+          "$ref": "#/$defs/market"
+        },
+        "market_label": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "selection": {
+          "$ref": "#/$defs/side"
+        },
+        "selection_label": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "market_odds": {
+          "$ref": "#/$defs/marketOdds"
+        },
+        "odds_taken": {
+          "$ref": "#/$defs/oddsOrNull"
+        },
+        "stake": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "discovered_at": {
+          "$ref": "#/$defs/dateTimeOrNull"
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "bet_at": {
+          "$ref": "#/$defs/dateTimeOrNull"
+        },
+        "locked_at": {
+          "$ref": "#/$defs/dateTimeOrNull"
+        },
+        "live": {
+          "type": "boolean"
+        },
+        "locked": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "condition": {
+          "$ref": "#/$defs/condition"
+        },
+        "closing_odds": {
+          "$ref": "#/$defs/oddsOrNull"
+        },
+        "recalculated_reference": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recalculatedReference"
+          }
+        },
+        "settlement_override": {
+          "$ref": "#/$defs/settlementOverride"
+        },
+        "flags": {
+          "$ref": "#/$defs/flags"
+        },
+        "detail_ref": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "note": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "legacy": {
+          "$ref": "#/$defs/legacy"
+        }
       }
     },
     "legacy": {
       "type": "object",
-      "required": ["source", "commit", "table", "row_index"],
+      "required": [
+        "source",
+        "commit",
+        "table",
+        "row_index"
+      ],
       "additionalProperties": false,
       "description": "旧 analysis.html から移行したカードの出典。flags に legacy_import を必ず付ける。raw は旧表示の原文で、計算には使わない。",
       "properties": {
-        "source": { "const": "analysis.html" },
-        "commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
-        "table": { "type": "string", "minLength": 1 },
-        "row_index": { "type": "integer", "minimum": 0 },
-        "detail_id": { "$ref": "#/$defs/stringOrNull" },
-        "data_ts": { "$ref": "#/$defs/stringOrNull" },
-        "sort_at": { "$ref": "#/$defs/dateTimeOrNull" },
-        "first_seen_at": { "$ref": "#/$defs/dateTimeOrNull" },
-        "first_seen_commit": { "$ref": "#/$defs/stringOrNull" },
-        "lock_evidence": { "$ref": "#/$defs/stringOrNull" },
-        "raw": { "type": "object" }
+        "source": {
+          "const": "analysis.html"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{7,40}$"
+        },
+        "table": {
+          "type": "string",
+          "minLength": 1
+        },
+        "row_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "detail_id": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "data_ts": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "sort_at": {
+          "$ref": "#/$defs/dateTimeOrNull"
+        },
+        "first_seen_at": {
+          "$ref": "#/$defs/dateTimeOrNull"
+        },
+        "first_seen_commit": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "lock_evidence": {
+          "$ref": "#/$defs/stringOrNull"
+        },
+        "raw": {
+          "type": "object"
+        }
       }
     }
   }

@@ -82,8 +82,8 @@ test("1試合の結果を1か所変えると、その試合を参照する全系
     rec: summarizeSystem(d.recommendations, matchesById(d)).official.netProfit,
     v1: summarizeSystem(d.value1, matchesById(d)).official.netProfit,
   };
-  // m1 を 2-0 → 0-1（ホーム敗戦）へ訂正
-  d.matches.matches.find(m => m.id === "m1").result.final = { home: 0, away: 1 };
+  // m1 を 2-0 → 0-1（side_a の敗戦）へ訂正
+  d.matches.matches.find(m => m.id === "m1").result.final = { a: 0, b: 1 };
   const after = {
     rec: summarizeSystem(d.recommendations, matchesById(d)).official.netProfit,
     v1: summarizeSystem(d.value1, matchesById(d)).official.netProfit,

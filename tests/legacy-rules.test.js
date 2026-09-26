@@ -2,7 +2,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { settlePick } from "../lib/settlement.js";
-import { checkLegacyAndLock, checkMatches, checkLockedImmutable, checkOdds, checkTimes } from "../lib/integrity.js";
+import { checkLegacyAndLock, checkMatches, checkLockedImmutable, checkOdds, checkTimes, checkMatchHistory, effectiveStart } from "../lib/integrity.js";
 import { makeDataset, matchesById } from "./fixtures/dataset.js";
 
 const codes = issues => issues.map(i => i.code);
@@ -13,17 +13,17 @@ const legacyOf = (p, extra = {}) => ({
 
 test("スコア不明で勝者だけ記録された結果（例：第1セット勝利・スコア未確認）でも精算できる", () => {
   const ds = makeDataset();
-  const p = ds.recommendations.picks.find(x => x.id === "rec-r4");       // set1_winner / home
-  const m = { ...matchesById(ds).get("m3"), result: { winners: { set1: "home" }, text: "第1S 勝利（スコア未確認）" } };
+  const p = ds.recommendations.picks.find(x => x.id === "rec-r4");       // set1_winner / side_a
+  const m = { ...matchesById(ds).get("m3"), result: { winners: { set1: "side_a" }, text: "第1S 勝利（スコア未確認）" } };
   const r = settlePick(p, m);
   assert.equal(r.state, "win");
   assert.match(r.reason, /スコア未記録/);
-  assert.equal(settlePick({ ...p, selection: "away" }, m).state, "loss");
+  assert.equal(settlePick({ ...p, selection: "side_b" }, m).state, "loss");
 });
 
 test("勝者とスコアが矛盾したら error", () => {
   const ds = makeDataset();
-  ds.matches.matches[0].result.winners = { final: "away" };             // スコアは 2-0 home
+  ds.matches.matches[0].result.winners = { final: "side_b" };           // スコアは 2-0 で side_a の勝ち
   assert.ok(codes(checkMatches(ds.matches)).includes("WINNER_SCORE_CONFLICT"));
 });
 
@@ -110,4 +110,74 @@ test("並び順：試合開始時刻が無い旧データは legacy.sort_at を�
   const ds = makeDataset();
   const p = legacyOf({ ...ds.recommendations.picks[0], locked_at: null, discovered_at: null }, { sort_at: "2026-09-22T21:56:00+09:00" });
   assert.equal(settlePick(p, { ...matchesById(ds).get("m1"), start_at: null }).orderKey, "2026-09-22T21:56:00+09:00");
+});
+
+// ── 手順2確定事項（K1〜K10）で追加したルール ──
+
+test("開始時刻の要確認：review_required は start_at=null・候補2つ以上。事前固定は最も早い候補で判定", () => {
+  const ds = makeDataset();
+  const m = ds.matches.matches[0];                      // m1 開始 2026-09-20T20:00+09:00
+  Object.assign(m, { start_at: null, start_time_status: "review_required", start_candidates: ["2026-09-20T20:00:00+09:00"] });
+  assert.ok(codes(checkMatches(ds.matches)).includes("START_CANDIDATES_MISSING"));
+  m.start_candidates.push("2026-09-20T20:00:00-03:00");
+  assert.deepEqual(checkMatches(ds.matches), []);
+  assert.equal(effectiveStart(m), "2026-09-20T20:00:00+09:00");
+  const p = ds.recommendations.picks[0];
+  p.locked_at = "2026-09-20T21:00:00+09:00";           // 早い候補より後、遅い候補より前 → 試合前とは言えない
+  assert.ok(codes(checkTimes(ds.recommendations, matchesById(ds))).includes("TIME_LOCKED_AFTER_START"));
+});
+
+test("start_candidates は review_required / unverified のときだけ", () => {
+  const ds = makeDataset();
+  ds.matches.matches[0].start_candidates = ["2026-09-20T20:00:00+09:00"];
+  assert.ok(codes(checkMatches(ds.matches)).includes("START_CANDIDATES_NOT_ALLOWED"));
+});
+
+test("試合事実の変更履歴：provenance の更新回は update_runs に存在し、旧データは baseline_migration から始まる", () => {
+  const ds = makeDataset();
+  ds.matches.matches[0].provenance[0].update_run_id = "mr-unknown";
+  assert.ok(codes(checkMatches(ds.matches)).includes("PROVENANCE_RUN_UNKNOWN"));
+
+  const ds2 = makeDataset();
+  ds2.matches.matches[0].flags = ["legacy_import"];
+  assert.ok(codes(checkMatches(ds2.matches)).includes("PROVENANCE_BASELINE_MISSING"));
+});
+
+test("基準点の後の結果変更は、新しい更新回として before/after を残さないと error", () => {
+  const before = makeDataset().matches;
+  const silent = structuredClone(before);
+  silent.matches[0].result.final = { a: 0, b: 1 };                         // 黙って書き換え
+  assert.ok(codes(checkMatchHistory(before, silent)).includes("MATCH_CHANGE_UNRECORDED"));
+
+  const recorded = structuredClone(before);
+  recorded.update_runs.push({ run_id: "mr-2026-09-27-06", kind: "result_update", at: "2026-09-27T06:00:00+09:00", source: "公式", note: null });
+  recorded.matches[0].result.final = { a: 0, b: 1 };
+  recorded.matches[0].provenance.push({ update_run_id: "mr-2026-09-27-06",
+    changes: [{ field: "result", before: before.matches[0].result, after: recorded.matches[0].result }], note: "訂正" });
+  assert.deepEqual(checkMatchHistory(before, recorded), []);
+
+  const rewritten = structuredClone(recorded);
+  rewritten.matches[0].provenance[0].note = "書き換え";
+  assert.ok(codes(checkMatchHistory(recorded, rewritten)).includes("PROVENANCE_REWRITTEN"));
+
+  const deleted = structuredClone(before);
+  deleted.matches.shift();
+  assert.ok(codes(checkMatchHistory(before, deleted)).includes("MATCH_DELETED"));
+});
+
+test("新規カードは移行用の探索回（*-legacy-import）を使えない（VALUE①・②とも独立の run_id が必須）", () => {
+  const ds = makeDataset();
+  ds.value2.discovery_runs.push({ run_id: "v2-legacy-import", started_at: "2026-09-19T23:00:00+09:00", slot: "adhoc", note: null });
+  ds.value2.picks[0].run_id = "v2-legacy-import";
+  assert.ok(codes(checkTimes(ds.value2, matchesById(ds))).includes("NEW_PICK_ON_LEGACY_RUN"));
+});
+
+test("ダブルチャンス・勝ち抜け・延長込みの勝者は別の市場として扱い、自動精算しない", () => {
+  const ds = makeDataset();
+  const base = ds.recommendations.picks[0];
+  for (const market of ["double_chance", "to_qualify", "winner_incl_extra_time"]) {
+    const r = settlePick({ ...base, market }, matchesById(ds).get("m1"));
+    assert.equal(r.state, "pending", market);
+    assert.match(r.reason, /自動精算対象外/);
+  }
 });

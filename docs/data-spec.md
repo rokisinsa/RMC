@@ -13,6 +13,7 @@
 | `data/experience.json` | 経験値取引（実際に投入した取引） | 入れる |
 | `data/value1.json` | VALUE①の探索回とカード（除外ログ含む） | 入れる |
 | `data/value2.json` | VALUE②の探索回とカード（除外ログ含む） | 入れる |
+| `data/legacy-unassigned.json` | どの系統のものか確定できない旧データ（`system_assignment: "unknown"`）。成績には使わない | — |
 
 ## 2. 3分析系統の独立
 
@@ -30,8 +31,8 @@
 | 項目 | 意味 |
 |---|---|
 | `match_id` | `matches.json` の試合 |
-| `market` | `match_winner` / `match_1x2` / `dnb` / `first_half_1x2` / `set1_winner` / `map1_winner` / `other` |
-| `selection` | `home` / `away` / `draw`（`selection_label` は表示用） |
+| `market` | `match_winner` / `match_1x2`（通常の勝者市場。選択側が勝たなければ負け） / `dnb` / `first_half_1x2` / `set1_winner` / `map1_winner` / `double_chance` / `to_qualify` / `winner_incl_extra_time` / `other`。後ろの4つは現時点で自動精算しない |
+| `selection` | `side_a` / `side_b` / `draw`（試合の表記「A vs B」の A・B。ホーム/アウェーは意味しない。`selection_label` は表示用） |
 | `market_odds` | 確認できた市場オッズ。`{text, min, max, observed_at, source}`。**レンジのまま保持し、精算には使わない** |
 | `odds_taken` | 実際に取得したオッズ（一点）。不明なら `null`。**勝手にレンジから一点へ固定しない** |
 | `stake` | 投入額。監視カードなど実投入しないものは `null` |
@@ -44,7 +45,7 @@
 | `closing_odds` | 試合後に追記してよい |
 | `recalculated_reference` | 後から別モデルで再計算した**参考値**（事前確率ではない）。**追記のみ** |
 | `settlement_override` | 自動判定できない場合だけ使う明示的な精算：`{state: win/loss/push/void, reason, set_at, source}` |
-| `flags` | `duplicate_review` / `needs_review` / `legacy_import` / `time_unverified` / `odds_unverified` / `result_unverified` / `lock_unverified` |
+| `flags` | `duplicate_review` / `needs_review` / `legacy_import` / `time_unverified` / `odds_unverified` / `result_unverified` / `lock_unverified` / `analysis_independence_review`（別系統と分析値が一致し、独立分析と断定できない） |
 | `legacy` | 旧 analysis.html から移行したカードの出典：`{source, commit, table, row_index, detail_id, data_ts, sort_at, first_seen_at, first_seen_commit, lock_evidence, raw}`。`legacy_import` フラグと必ず対にする。`raw` は旧表示の原文で、計算には使わない |
 
 ### 事前値（locked）と確認状態
@@ -61,7 +62,11 @@
 
 `matches.json` の試合事実に関するルール：
 
-- `start_time_status` は `recorded` / `unverified` / `unknown` のいずれか。`start_at` を持てるのは `recorded` のときだけ（`START_STATUS_MISMATCH`）。仮時刻や未確認の候補は、`start_at` ではなく `start_time_note` に書く。
+- 両チームは `side_a` / `side_b`（表記順）で持ち、スコアも `{a, b}` で持つ。ホームがどちらかは `home_side`（`side_a` / `side_b` / `neutral` / `unknown`）に分けて持ち、記録で確認できない場合は `unknown` にする。
+- 開始時刻の候補が食い違う場合は `start_time_status: "review_required"`、`start_at: null` とし、候補を `start_candidates` に入れる。事前固定の判定は、最も早い候補より前であることを条件にする。
+- 試合事実の変更は、すべて `update_runs`（`baseline_migration` → `human_review` / `result_update`）の更新回として、各試合の `provenance` に `before` / `after` 付きで追記する。移行基準点の値を後から書き換えない（`MATCH_CHANGE_UNRECORDED`）。
+
+- `start_time_status` は `recorded` / `review_required` / `unverified` / `unknown` のいずれか。`start_at` を持てるのは `recorded` のときだけ（`START_STATUS_MISMATCH`）。仮時刻や未確認の候補は、`start_at` ではなく `start_time_note` に書く。
 - `status` の `unknown` は、開始時刻を過ぎた（または開始時刻不明の）まま結果が記録されていない状態を表す。
 - `result.winners` は、スコアが残っておらず勝者だけ分かる場合（例：第1セット勝利・スコア未確認）に使う。スコアと矛盾すると error（`WINNER_SCORE_CONFLICT`）。
 
@@ -128,7 +133,9 @@
 | 条件付き | `CONDITION_CHECKED_AFTER_START` | warning |
 | locked | `LOCKED_FIELD_CHANGED` `LOCKED_PICK_DELETED` `RECALCULATED_REFERENCE_REWRITTEN` `CONDITION_CHANGED` `LEGACY_RECORD_CHANGED`（旧データ由来のカードは `locked_at` が無くても保護） | error |
 | 事前値 | `ESTIMATE_WITHOUT_LOCK` `LOCK_UNVERIFIED_UNFLAGGED` `LEGACY_FLAG_MISMATCH` | error |
-| 試合事実 | `START_STATUS_MISMATCH` `FINAL_WITHOUT_RESULT` `WINNER_SCORE_CONFLICT` | error |
+| 試合事実 | `START_STATUS_MISMATCH` `START_CANDIDATES_MISSING` `START_CANDIDATES_NOT_ALLOWED` `FINAL_WITHOUT_RESULT` `WINNER_SCORE_CONFLICT` `PROVENANCE_RUN_UNKNOWN` `PROVENANCE_BASELINE_MISSING` `PROVENANCE_ORDER` | error |
+| 試合事実の履歴 | `MATCH_DELETED` `PROVENANCE_REWRITTEN` `MATCH_CHANGE_UNRECORDED`（`check-locked.js` で前バージョンと比較） | error |
+| 独立性 | `NEW_PICK_ON_LEGACY_RUN`：新規カードは移行用の探索回を使えず、その系統自身の独立した探索回 `run_id` が必要 | error |
 | 旧データ | `ODDS_TAKEN_WITHOUT_TIME` と `TIME_LIVE_WITHOUT_BET_AT` は、`legacy_import` の場合だけ warning（記録が無いものを推測で埋めないため） | warning |
 
 ## 9. コマンド
@@ -138,6 +145,6 @@
 ```
 npm test                              # 全テスト
 node scripts/validate-data.js         # data/*.json の検証（未作成ならスキップ）
-node scripts/check-locked.js HEAD~1   # locked 保護（基準コミットと比較）
+node scripts/check-locked.js HEAD~1   # locked 保護と試合事実の履歴（基準コミットと比較。下書き（draft）の版は比較しない）
 node baseline/capture-baseline.js     # baseline の再取得（基準タグから）
 ```

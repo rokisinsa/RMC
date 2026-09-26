@@ -20,6 +20,7 @@ import { join } from "node:path";
 import vm from "node:vm";
 import { ROOT } from "../scripts/load-node.js";
 import { MATCHES, PICKS, VALUE2_EXCLUDED_LOG_TEXT } from "./legacy-map.js";
+import { HUMAN_REVIEW_RUN, HUMAN_REVIEW_CHANGES } from "./human-review-2026-09-26.js";
 
 const REF = "baseline-2026-09-26";
 const git = (...a) => execFileSync("git", a, { cwd: ROOT, encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
@@ -97,7 +98,10 @@ const valueSig = system => e => {
     : { ...pre, gap: t[7 + off], risk: t[8 + off], stake: t[9 + off] });
 };
 // 今の値が導入されたコミット（それ以降、基準点まで不変）と、それが試合開始前かどうか
-function lockFromHistory(key, sigFn, startAt) {
+function lockFromHistory(key, sigFn, match) {
+  const startAt = lockStart(match);
+  const startNote = reviewedStart.has(match.id) ? `（開始時刻は人間確認 ${HUMAN_REVIEW_RUN.run_id} で確定）`
+    : match.start_time_status === "review_required" ? `（開始時刻は要確認。候補 ${match.start_candidates.join(" / ")} のいずれよりも前かで判定）` : "";
   const entries = history.rows[key];
   if (!entries?.length) return { first_seen_at: null, first_seen_commit: null, locked_at: null, verified: false, evidence: `履歴キー ${key} が見つからない` };
   const sigs = entries.map(sigFn);
@@ -111,10 +115,10 @@ function lockFromHistory(key, sigFn, startAt) {
   }
   if (ms(since.time) < ms(startAt)) {
     return { ...base, locked_at: since.time, verified: true,
-      evidence: `現在の事前値は ${since.sha}（${since.time}）から基準点まで不変。試合開始 ${startAt} より前` };
+      evidence: `現在の事前値は ${since.sha}（${since.time}）から基準点まで不変。試合開始 ${startAt} より前${startNote}` };
   }
   return { ...base, locked_at: null, verified: false,
-    evidence: `現在の事前値の保存は ${since.sha}（${since.time}）で、試合開始 ${startAt} より後` };
+    evidence: `現在の事前値の保存は ${since.sha}（${since.time}）で、試合開始 ${startAt} より後${startNote}` };
 }
 
 // ── 値の解析 ─────────────────────────────────────────────
@@ -139,14 +143,23 @@ const round4 = x => (x == null ? null : Math.round(x * 10000) / 10000);
 const withJst = ts => (/(Z|[+-]\d{2}:\d{2})$/.test(ts) ? ts : `${ts}+09:00`);
 
 // ── matches.json ─────────────────────────────────────────
+// 1) 基準点（06:45）の状態をそのまま作る → provenance の最初は baseline_migration
+const BASELINE_RUN = {
+  run_id: "mr-baseline-2026-09-26", kind: "baseline_migration", at: AS_OF,
+  source: `analysis.html@${COMMIT}（${REF}）`,
+  note: "旧RMCからの移行基準点。06:45 以降に判明した結果はここへ後付けしない",
+};
 const matchById = new Map();
 const matches = MATCHES.map(m => {
   const out = {
-    id: m.id, sport: m.sport, competition: m.competition, home: m.home, away: m.away, venue: m.venue ?? null,
+    id: m.id, sport: m.sport, competition: m.competition,
+    side_a: m.side_a, side_b: m.side_b, home_side: m.home_side ?? "unknown", venue: m.venue ?? null,
     start_at: m.start ?? null,
     start_time_status: m.start ? "recorded" : m.start_time_status,
+    ...(m.start_candidates ? { start_candidates: m.start_candidates } : {}),
     start_time_note: m.start_time_note ?? null,
     status: m.status, result: m.result,
+    provenance: [{ update_run_id: BASELINE_RUN.run_id, changes: [], note: "基準点の状態" }],
     sources: [`analysis.html@${COMMIT}`],
     verified_at: null,
     flags: ["legacy_import", ...(m.flags ?? []), ...(m.start ? [] : ["time_unverified"])],
@@ -155,6 +168,33 @@ const matches = MATCHES.map(m => {
   matchById.set(m.id, out);
   return out;
 });
+
+// 2) 基準点の後の人間確認を、別の更新回として before/after 付きで重ねる
+const reviewedStart = new Set();
+for (const [id, { set, note }] of Object.entries(HUMAN_REVIEW_CHANGES)) {
+  const m = matchById.get(id);
+  if (!m) throw new Error(`人間確認の対象 ${id} が matches にない`);
+  const changes = [];
+  const after = { ...set };
+  if (after.start_at) after.flags = (after.flags ?? m.flags).filter(f => f !== "time_unverified");
+  for (const [field, value] of Object.entries(after)) {
+    changes.push({ field, before: m[field] ?? null, after: value });
+    m[field] = value;
+  }
+  if (set.start_at) { delete m.start_candidates; reviewedStart.add(id); }
+  m.verified_at = HUMAN_REVIEW_RUN.at;
+  m.sources.push(HUMAN_REVIEW_RUN.source);
+  m.provenance.push({ update_run_id: HUMAN_REVIEW_RUN.run_id, changes, note });
+}
+
+// 事前固定の判定に使う開始時刻：確定していれば start_at、要確認なら最も早い候補（どの候補より前かを保守的に判定）
+function lockStart(match) {
+  if (match.start_at) return match.start_at;
+  if (match.start_time_status === "review_required") {
+    return match.start_candidates.reduce((a, b) => (ms(a) <= ms(b) ? a : b));
+  }
+  return null;
+}
 
 // ── カード共通 ──────────────────────────────────────────
 function basePick(system, prefix, idx, map, fields) {
@@ -218,7 +258,7 @@ const recPicks = baseline.legacy_rows.recommendations.map(r => {
   const x = extra.recommendations[r.legacy_index];
   const match = matchById.get(map.match);
   const key = r.detail_id ? `target:${r.detail_id}` : `match:resultTable:${r.match}`;
-  const lock = lockFromHistory(key, recSig, match.start_at);
+  const lock = lockFromHistory(key, recSig, match);
   const lockedProb = r.locked_prob;
   const dup = DUPLICATE_SLUGS.some(g => g.includes(map.slug));
   const raw = {
@@ -267,7 +307,7 @@ const expPicks = baseline.legacy_rows.experience.map(r => {
   const x = extra.experience[r.legacy_index];
   const match = matchById.get(map.match);
   const key = `match:actualBetTable:${r.match}`;
-  const lock = lockFromHistory(key, expSig, match.start_at);
+  const lock = lockFromHistory(key, expSig, match);
   return basePick("experience", "exp-", r.legacy_index, map, {
     table: "actualBetTable",
     run_id: null,
@@ -289,7 +329,7 @@ function valuePicks(system, prefix, table) {
     const map = PICKS[system][r.legacy_index];
     const x = extra[system][r.legacy_index];
     const match = matchById.get(map.match);
-    const lock = lockFromHistory(`match:${table}:${r.match}`, valueSig(system), match.start_at);
+    const lock = lockFromHistory(`match:${table}:${r.match}`, valueSig(system), match);
     const [probLo, probHi] = pctRange(r.estimated_prob_text);
     const lockedValues = system === "value1" ? (() => {
       const [evLo, evHi] = pctRange(history.rows[`match:${table}:${r.match}`].at(-1).row.tds[8]);
@@ -325,7 +365,7 @@ function valuePicks(system, prefix, table) {
       lock,
       locked: lockedValues,
       condition: map.condition ? { text: map.condition.text, min_odds: map.condition.min_odds, met: null, checked_at: null } : null,
-      flags: map.condition ? ["needs_review"] : [],
+      flags: [...(map.condition ? ["needs_review"] : []), ...(map.flags ?? [])],
       note: map.condition ? "条件成立（1.25以上で取得できたか）の記録がないため met=null。本成績に算入しない" : null,
       data_ts: null,
       sort_at: null,
@@ -349,23 +389,52 @@ const meta = label => ({
   note: `${label}：旧RMC（${REF}）からの移行用下書き。analysis.html は未切り替え。`,
 });
 
+const slugOf = label => label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
 const out = {
-  matches: { schema_version: 1, meta: meta("試合事実"), matches },
+  matches: { schema_version: 1, meta: meta("試合事実"), update_runs: [BASELINE_RUN, HUMAN_REVIEW_RUN], matches },
   recommendations: { schema_version: 1, meta: meta("推奨取引"), system: "recommendations", discovery_runs: [legacyRun("rec-", "推奨取引")], picks: recPicks },
   experience: { schema_version: 1, meta: meta("経験値取引"), system: "experience", picks: expPicks },
   value1: { schema_version: 1, meta: meta("VALUE①"), system: "value1", discovery_runs: [legacyRun("v1-", "VALUE①")], excluded_log: [], picks: valuePicks("value1", "v1-", "oddsTestTable") },
-  value2: {
-    schema_version: 1, meta: meta("VALUE②"), system: "value2", discovery_runs: [legacyRun("v2-", "VALUE②")],
+  value2: { schema_version: 1, meta: meta("VALUE②"), system: "value2", discovery_runs: [legacyRun("v2-", "VALUE②")], excluded_log: [], picks: valuePicks("value2", "v2-", "oddsTestTable2") },
+  // 旧HTMLの配置だけではどの系統の除外か確定できない記録（どの系統にも帰属させない）
+  legacy_unassigned: {
+    schema_version: 1, meta: meta("系統未確定の旧データ"),
     excluded_log: VALUE2_EXCLUDED_LOG_TEXT.split(" / ").map(label => ({
-      label, run_id: null, match_id: null,
-      reason: "旧HTMLの VALUE② 欄「深掘りで除外」に記載。VALUE①・VALUE② のどちらの除外かは記録がなく要確認",
+      id: `legacy-unassigned-${slugOf(label)}`,
+      label,
+      system_assignment: "unknown",
+      candidate_systems: ["value1", "value2"],
+      reason: "旧HTMLでは VALUE② 欄の「深掘りで除外」に記載。配置だけでは VALUE①・VALUE② のどちらの除外か確定できないため要確認",
+      legacy: { source: "analysis.html", commit: COMMIT, location: "#oddsTestArea2 .excluded-log（深掘りで除外）", text: VALUE2_EXCLUDED_LOG_TEXT },
     })),
-    picks: valuePicks("value2", "v2-", "oddsTestTable2"),
   },
 };
 
 mkdirSync(join(ROOT, "data"), { recursive: true });
-const FILES = { matches: "matches.json", recommendations: "recommendations.json", experience: "experience.json", value1: "value1.json", value2: "value2.json" };
+const FILES = {
+  matches: "matches.json", recommendations: "recommendations.json", experience: "experience.json",
+  value1: "value1.json", value2: "value2.json", legacy_unassigned: "legacy-unassigned.json",
+};
 for (const [k, f] of Object.entries(FILES)) writeFileSync(join(ROOT, "data", f), JSON.stringify(out[k], null, 2) + "\n");
+
+// 基準点より前に旧HTMLから削除されていた行（本データへは復元しない。参照用の記録のみ）
+const removed = Object.entries(history.rows)
+  .filter(([, list]) => (list.at(-1).last_seen ?? list.at(-1).time) !== AS_OF)
+  .map(([key, list]) => {
+    const last = list.at(-1);
+    return {
+      key, match: last.row.match, table: last.row.table,
+      first_seen_at: list[0].time, last_seen_at: last.last_seen ?? last.time,
+      last_status_symbol: last.row.symbol, last_cells: last.row.tds,
+    };
+  });
+mkdirSync(join(ROOT, "migration", "archive"), { recursive: true });
+writeFileSync(join(ROOT, "migration", "archive", "removed-before-baseline.json"), JSON.stringify({
+  note: "基準点（baseline-2026-09-26）の時点で旧HTMLに存在しなかった行。行の組み替え（列追加・ID付与）で消えた旧表記も含む。本データ（data/*.json）へは復元しない",
+  rows: removed,
+}, null, 2) + "\n");
+
 console.log(`data/*.json を生成しました（${REF} = ${COMMIT}）`);
-for (const [k, v] of Object.entries(out)) console.log(`  ${k}: ${(v.picks ?? v.matches).length} 件`);
+for (const [k, v] of Object.entries(out)) console.log(`  ${k}: ${(v.picks ?? v.matches ?? v.excluded_log).length} 件`);
+console.log(`  基準点前に削除済みの行（archive のみ）: ${removed.length} 件`);

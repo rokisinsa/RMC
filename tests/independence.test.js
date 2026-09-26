@@ -78,9 +78,9 @@ test("試合事実は共有してよい（同じ match_id を複数系統が参�
 
 test("別系統で同じ試合・選択の事前分析が完全一致したら共通分析の流用を警告", () => {
   const ds = makeDataset();
-  const v2 = ds.value2.picks[0];                                  // m3 / home
+  const v2 = ds.value2.picks[0];                                  // m3 / side_a
   const v1 = structuredClone(ds.value1.picks[0]);
-  v1.id = "v1-copy"; v1.match_id = "m3"; v1.market = "match_winner"; v1.selection = "home";
+  v1.id = "v1-copy"; v1.match_id = "m3"; v1.market = "match_winner"; v1.selection = "side_a";
   v1.locked.summary = v2.locked.summary;
   ds.value1.picks.push(v1);
   const w = checkIndependence(ds).filter(i => i.code === "POSSIBLY_SHARED_ANALYSIS");

@@ -8,13 +8,30 @@
     "status": "draft",
     "note": "試合事実：旧RMC（baseline-2026-09-26）からの移行用下書き。analysis.html は未切り替え。"
   },
+  "update_runs": [
+    {
+      "run_id": "mr-baseline-2026-09-26",
+      "kind": "baseline_migration",
+      "at": "2026-09-26T06:45:58+09:00",
+      "source": "analysis.html@02e5167（baseline-2026-09-26）",
+      "note": "旧RMCからの移行基準点。06:45 以降に判明した結果はここへ後付けしない"
+    },
+    {
+      "run_id": "mr-2026-09-26-human-review",
+      "kind": "human_review",
+      "at": "2026-09-26T18:51:47+09:00",
+      "source": "ユーザー確認（外部の公式情報：Servette FC Chênois Féminin vs OL Lyonnes、Italy vs Finland、UEFA公式）",
+      "note": "手順2の要確認事項 K1・K2 への回答。基準点時点で既に終了していた試合の開始時刻・結果の確定"
+    }
+  ],
   "matches": [
     {
       "id": "2026-09-21-tun-rwa",
       "sport": "男子バレー",
       "competition": null,
-      "home": "チュニジア",
-      "away": "ルワンダ",
+      "side_a": "チュニジア",
+      "side_b": "ルワンダ",
+      "home_side": "unknown",
       "venue": null,
       "start_at": null,
       "start_time_status": "unverified",
@@ -23,12 +40,19 @@
       "result": {
         "periods": {
           "set1": {
-            "home": 25,
-            "away": 13
+            "a": 25,
+            "b": 13
           }
         },
         "text": "第1S 25-13"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -43,8 +67,9 @@
       "id": "2026-09-22-cor-bah",
       "sport": "女子サッカー",
       "competition": "ブラジル女子A1",
-      "home": "SCコリンチャンスSP",
-      "away": "ECバイーアBA",
+      "side_a": "SCコリンチャンスSP",
+      "side_b": "ECバイーアBA",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-22T09:30:00+09:00",
       "start_time_status": "recorded",
@@ -52,11 +77,18 @@
       "status": "final",
       "result": {
         "final": {
-          "home": 1,
-          "away": 0
+          "a": 1,
+          "b": 0
         },
         "text": "1-0"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -70,8 +102,9 @@
       "id": "2026-09-22-prz-rin",
       "sport": "男子テニス",
       "competition": "ATP Challenger Saint-Tropez 2026",
-      "home": "プリズミッチ、ディノ",
-      "away": "リンコン、ダニエル",
+      "side_a": "プリズミッチ、ディノ",
+      "side_b": "リンコン、ダニエル",
+      "home_side": "unknown",
       "venue": null,
       "start_at": null,
       "start_time_status": "unverified",
@@ -79,11 +112,18 @@
       "status": "final",
       "result": {
         "final": {
-          "home": 2,
-          "away": 0
+          "a": 2,
+          "b": 0
         },
         "text": "プリズミッチ 2-0（6-4 / 6-3）"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -98,8 +138,9 @@
       "id": "2026-09-23-dam-bh",
       "sport": "CS2",
       "competition": null,
-      "home": "DAMAJUANA",
-      "away": "Bounty Hunters Esports",
+      "side_a": "DAMAJUANA",
+      "side_b": "Bounty Hunters Esports",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-23T05:55:00+09:00",
       "start_time_status": "recorded",
@@ -108,12 +149,19 @@
       "result": {
         "periods": {
           "map1": {
-            "home": 6,
-            "away": 13
+            "a": 6,
+            "b": 13
           }
         },
         "text": "Map1 6-13"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -127,26 +175,88 @@
       "id": "2026-09-23-ita-fin",
       "sport": "男子バレー",
       "competition": null,
-      "home": "イタリア",
-      "away": "フィンランド",
+      "side_a": "イタリア",
+      "side_b": "フィンランド",
+      "home_side": "unknown",
       "venue": null,
-      "start_at": null,
-      "start_time_status": "unverified",
-      "start_time_note": "旧HTMLは「試合開始時刻 未確認」。候補：9/25 20:49 の一時記録「9/24 04:05 JST」（2分後に取り消し）、analysis.js の eventDate 2026-09-23T21:05:00+02:00",
+      "start_at": "2026-09-24T04:05:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "現地 2026/09/23 21:05（公式情報でユーザー確認）",
       "status": "final",
       "result": {
-        "winners": {
-          "set1": "home"
+        "final": {
+          "a": 2,
+          "b": 3
         },
-        "text": "第1S 勝利（スコア未確認）"
+        "winners": {
+          "set1": "side_a"
+        },
+        "text": "Italy 2-3 Finland（第1セットはイタリア。スコア未記録）"
       },
-      "sources": [
-        "analysis.html@02e5167"
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        },
+        {
+          "update_run_id": "mr-2026-09-26-human-review",
+          "changes": [
+            {
+              "field": "start_at",
+              "before": null,
+              "after": "2026-09-24T04:05:00+09:00"
+            },
+            {
+              "field": "start_time_status",
+              "before": "unverified",
+              "after": "recorded"
+            },
+            {
+              "field": "start_time_note",
+              "before": "旧HTMLは「試合開始時刻 未確認」。候補：9/25 20:49 の一時記録「9/24 04:05 JST」（2分後に取り消し）、analysis.js の eventDate 2026-09-23T21:05:00+02:00",
+              "after": "現地 2026/09/23 21:05（公式情報でユーザー確認）"
+            },
+            {
+              "field": "result",
+              "before": {
+                "winners": {
+                  "set1": "side_a"
+                },
+                "text": "第1S 勝利（スコア未確認）"
+              },
+              "after": {
+                "final": {
+                  "a": 2,
+                  "b": 3
+                },
+                "winners": {
+                  "set1": "side_a"
+                },
+                "text": "Italy 2-3 Finland（第1セットはイタリア。スコア未記録）"
+              }
+            },
+            {
+              "field": "flags",
+              "before": [
+                "legacy_import",
+                "time_unverified"
+              ],
+              "after": [
+                "legacy_import"
+              ]
+            }
+          ],
+          "note": "開始時刻と最終結果を公式情報で確認。第1セットの勝者は旧記録どおり"
+        }
       ],
-      "verified_at": null,
+      "sources": [
+        "analysis.html@02e5167",
+        "ユーザー確認（外部の公式情報：Servette FC Chênois Féminin vs OL Lyonnes、Italy vs Finland、UEFA公式）"
+      ],
+      "verified_at": "2026-09-26T18:51:47+09:00",
       "flags": [
-        "legacy_import",
-        "time_unverified"
+        "legacy_import"
       ],
       "note": null
     },
@@ -154,29 +264,97 @@
       "id": "2026-09-23-ser-lyo",
       "sport": "女子サッカー",
       "competition": null,
-      "home": "セルヴェットFC",
-      "away": "オリンピック・リヨン",
-      "venue": null,
-      "start_at": null,
-      "start_time_status": "unverified",
-      "start_time_note": "旧HTMLは「試合開始時刻 未確認」。候補：9/25 20:49 の一時記録「9/24 01:45 JST」（2分後に取り消し）",
+      "side_a": "セルヴェットFC",
+      "side_b": "オリンピック・リヨン",
+      "home_side": "side_a",
+      "venue": "ジュネーブ（旧分析「セルヴェットのホーム」）",
+      "start_at": "2026-09-24T01:45:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "現地 2026/09/23 18:45（公式情報でユーザー確認）",
       "status": "final",
       "result": {
+        "final": {
+          "a": 0,
+          "b": 8
+        },
         "periods": {
           "ht": {
-            "home": 0,
-            "away": 4
+            "a": 0,
+            "b": 4
           }
         },
-        "text": "前半 0-4"
+        "text": "Servette 0-8 Lyon（前半 0-4）"
       },
-      "sources": [
-        "analysis.html@02e5167"
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        },
+        {
+          "update_run_id": "mr-2026-09-26-human-review",
+          "changes": [
+            {
+              "field": "start_at",
+              "before": null,
+              "after": "2026-09-24T01:45:00+09:00"
+            },
+            {
+              "field": "start_time_status",
+              "before": "unverified",
+              "after": "recorded"
+            },
+            {
+              "field": "start_time_note",
+              "before": "旧HTMLは「試合開始時刻 未確認」。候補：9/25 20:49 の一時記録「9/24 01:45 JST」（2分後に取り消し）",
+              "after": "現地 2026/09/23 18:45（公式情報でユーザー確認）"
+            },
+            {
+              "field": "result",
+              "before": {
+                "periods": {
+                  "ht": {
+                    "a": 0,
+                    "b": 4
+                  }
+                },
+                "text": "前半 0-4"
+              },
+              "after": {
+                "final": {
+                  "a": 0,
+                  "b": 8
+                },
+                "periods": {
+                  "ht": {
+                    "a": 0,
+                    "b": 4
+                  }
+                },
+                "text": "Servette 0-8 Lyon（前半 0-4）"
+              }
+            },
+            {
+              "field": "flags",
+              "before": [
+                "legacy_import",
+                "time_unverified"
+              ],
+              "after": [
+                "legacy_import"
+              ]
+            }
+          ],
+          "note": "開始時刻と最終結果を公式情報で確認"
+        }
       ],
-      "verified_at": null,
+      "sources": [
+        "analysis.html@02e5167",
+        "ユーザー確認（外部の公式情報：Servette FC Chênois Féminin vs OL Lyonnes、Italy vs Finland、UEFA公式）"
+      ],
+      "verified_at": "2026-09-26T18:51:47+09:00",
       "flags": [
-        "legacy_import",
-        "time_unverified"
+        "legacy_import"
       ],
       "note": null
     },
@@ -184,33 +362,46 @@
       "id": "2026-09-24-oddik-procyon",
       "sport": "CS2",
       "competition": "ESL Challenger League Season 52 South America Cup #2",
-      "home": "ODDIK",
-      "away": "Procyon",
+      "side_a": "ODDIK",
+      "side_b": "Procyon",
+      "home_side": "unknown",
       "venue": null,
-      "start_at": "2026-09-24T06:00:00+09:00",
-      "start_time_status": "recorded",
-      "start_time_note": "旧HTMLは「試合開始 9/24 06:00 JST」（9/25 20:49 に 06:15 と記録後、2分後に修正）。analysis.js の eventDate は 2026-09-24T06:00:00-03:00 で矛盾",
+      "start_at": null,
+      "start_time_status": "review_required",
+      "start_candidates": [
+        "2026-09-24T06:00:00+09:00",
+        "2026-09-24T06:00:00-03:00"
+      ],
+      "start_time_note": "候補が食い違うため要確認：旧HTMLは「試合開始 9/24 06:00 JST」（9/25 20:49 に 06:15 と記録後、2分後に修正）、analysis.js の eventDate は 2026-09-24T06:00:00-03:00（＝9/24 18:00 JST）",
       "status": "final",
       "result": {
         "final": {
-          "home": 0,
-          "away": 2
+          "a": 0,
+          "b": 2
         },
         "periods": {
           "map1": {
-            "home": 4,
-            "away": 13
+            "a": 4,
+            "b": 13
           }
         },
         "text": "Procyon 2-0 ODDIK（Dust2 13-4 / Anubis 13-3）"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
       "verified_at": null,
       "flags": [
         "legacy_import",
-        "needs_review"
+        "needs_review",
+        "time_unverified"
       ],
       "note": null
     },
@@ -218,8 +409,9 @@
       "id": "2026-09-24-sak-hib",
       "sport": "女子テニス",
       "competition": null,
-      "home": "サッカリ、マリア",
-      "away": "日比野、菜緒",
+      "side_a": "サッカリ、マリア",
+      "side_b": "日比野、菜緒",
+      "home_side": "unknown",
       "venue": null,
       "start_at": null,
       "start_time_status": "unverified",
@@ -227,11 +419,18 @@
       "status": "final",
       "result": {
         "final": {
-          "home": 2,
-          "away": 0
+          "a": 2,
+          "b": 0
         },
         "text": "サッカリ 2-0（日比野 7-5 / 6-1）"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -246,26 +445,34 @@
       "id": "2026-09-24-chn-mdv",
       "sport": "男子サッカー",
       "competition": "国際親善試合",
-      "home": "中国",
-      "away": "モルディブ",
-      "venue": null,
+      "side_a": "中国",
+      "side_b": "モルディブ",
+      "home_side": "side_a",
+      "venue": "北京（旧分析「中国ホーム」）",
       "start_at": "2026-09-24T20:35:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "final",
       "result": {
         "final": {
-          "home": 3,
-          "away": 0
+          "a": 3,
+          "b": 0
         },
         "periods": {
           "ht": {
-            "home": 0,
-            "away": 0
+            "a": 0,
+            "b": 0
           }
         },
         "text": "前半 0-0 / 試合 3-0（分析メモ記載）"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -279,14 +486,22 @@
       "id": "2026-09-25-esp-cze",
       "sport": "女子テニス",
       "competition": "2026 Billie Jean King Cup Finals",
-      "home": "スペイン",
-      "away": "チェコ",
+      "side_a": "スペイン",
+      "side_b": "チェコ",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-25T18:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "unknown",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -300,8 +515,9 @@
       "id": "2026-09-25-ish-ita",
       "sport": "女子テニス",
       "competition": "ITF W50 七尾",
-      "home": "石井さやか",
-      "away": "板谷莉央",
+      "side_a": "石井さやか",
+      "side_b": "板谷莉央",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-25T11:00:00+09:00",
       "start_time_status": "recorded",
@@ -309,11 +525,18 @@
       "status": "final",
       "result": {
         "final": {
-          "home": 2,
-          "away": 0
+          "a": 2,
+          "b": 0
         },
         "text": "石井さやか 2-0（6-2 / 6-0）"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -327,14 +550,22 @@
       "id": "2026-09-25-prz-gri",
       "sport": "男子テニス",
       "competition": "ATP Challenger Saint-Tropez",
-      "home": "ディノ・プリズミッチ",
-      "away": "ダニエル・グリン",
+      "side_a": "ディノ・プリズミッチ",
+      "side_b": "ダニエル・グリン",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-25T23:40:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "unknown",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -348,14 +579,22 @@
       "id": "2026-09-26-hos-oze",
       "sport": "女子テニス",
       "competition": "W50 Nanao, Japan",
-      "home": "サクラ・ホソギ",
-      "away": "ミチカ・オゼキ",
+      "side_a": "サクラ・ホソギ",
+      "side_b": "ミチカ・オゼキ",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-26T11:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -369,8 +608,9 @@
       "id": "2026-09-26-bul-por-u21",
       "sport": "男子U21サッカー",
       "competition": "UEFA European Under-21 Championship 2027 Qualifying・Group B",
-      "home": "Bulgaria U21",
-      "away": "Portugal U21",
+      "side_a": "Bulgaria U21",
+      "side_b": "Portugal U21",
+      "home_side": "side_a",
       "venue": null,
       "start_at": "2026-09-26T00:00:00+09:00",
       "start_time_status": "recorded",
@@ -378,18 +618,41 @@
       "status": "final",
       "result": {
         "final": {
-          "home": 2,
-          "away": 1
+          "a": 2,
+          "b": 1
         },
         "text": "Bulgaria U21 2-1 Portugal U21"
       },
-      "sources": [
-        "analysis.html@02e5167"
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        },
+        {
+          "update_run_id": "mr-2026-09-26-human-review",
+          "changes": [
+            {
+              "field": "flags",
+              "before": [
+                "legacy_import",
+                "result_unverified"
+              ],
+              "after": [
+                "legacy_import"
+              ]
+            }
+          ],
+          "note": "正式結果 Bulgaria U21 2-1 Portugal U21 を UEFA 公式で確認。旧データにあった「Portugal 4-0」は採用しない"
+        }
       ],
-      "verified_at": null,
+      "sources": [
+        "analysis.html@02e5167",
+        "ユーザー確認（外部の公式情報：Servette FC Chênois Féminin vs OL Lyonnes、Italy vs Finland、UEFA公式）"
+      ],
+      "verified_at": "2026-09-26T18:51:47+09:00",
       "flags": [
-        "legacy_import",
-        "result_unverified"
+        "legacy_import"
       ],
       "note": "結果の記録が変遷：9/26 01:14「Portugal U21 4-0 Bulgaria U21」→ 02:55「結果確認中」→ 06:41「Bulgaria U21 2-1 Portugal U21」。最終記録を採用し要確認"
     },
@@ -397,8 +660,9 @@
       "id": "2026-09-25-nip-3dmax",
       "sport": "CS2",
       "competition": "1win Private Club Season 1",
-      "home": "NiP",
-      "away": "3DMAX",
+      "side_a": "NiP",
+      "side_b": "3DMAX",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-25T21:00:00+09:00",
       "start_time_status": "recorded",
@@ -406,17 +670,24 @@
       "status": "final",
       "result": {
         "final": {
-          "home": 2,
-          "away": 0
+          "a": 2,
+          "b": 0
         },
         "periods": {
           "map1": {
-            "home": 16,
-            "away": 14
+            "a": 16,
+            "b": 14
           }
         },
         "text": "NiP 2-0 3DMAX（Nuke 16-14 / Cache 13-4）"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -430,8 +701,9 @@
       "id": "2026-09-26-slo-pol",
       "sport": "男子バレー",
       "competition": "CEV EuroVolley 2026 Men・準決勝",
-      "home": "Slovenia",
-      "away": "Poland",
+      "side_a": "Slovenia",
+      "side_b": "Poland",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-26T00:00:00+09:00",
       "start_time_status": "recorded",
@@ -439,11 +711,18 @@
       "status": "final",
       "result": {
         "final": {
-          "home": 0,
-          "away": 3
+          "a": 0,
+          "b": 3
         },
         "text": "Slovenia 0-3 Poland（CEV公式）"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -457,8 +736,9 @@
       "id": "2026-09-25-heroic-fnatic",
       "sport": "CS2",
       "competition": "Stake Pulse Beat II・準々決勝",
-      "home": "HEROIC",
-      "away": "fnatic",
+      "side_a": "HEROIC",
+      "side_b": "fnatic",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-25T17:00:00+09:00",
       "start_time_status": "recorded",
@@ -466,11 +746,18 @@
       "status": "final",
       "result": {
         "final": {
-          "home": 2,
-          "away": 1
+          "a": 2,
+          "b": 1
         },
         "text": "HEROIC 2-1 fnatic"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -484,14 +771,22 @@
       "id": "2026-09-26-fin-fra",
       "sport": "男子バレー",
       "competition": "CEV EuroVolley 2026 Men・準決勝",
-      "home": "Finland",
-      "away": "France",
+      "side_a": "Finland",
+      "side_b": "France",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-26T04:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": "履歴上 04:05 → 04:00",
       "status": "unknown",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -505,8 +800,9 @@
       "id": "2026-09-25-kc-xlg",
       "sport": "VALORANT",
       "competition": "VALORANT Champions 2026・Group Stage",
-      "home": "Karmine Corp",
-      "away": "Xi Lai Gaming",
+      "side_a": "Karmine Corp",
+      "side_b": "Xi Lai Gaming",
+      "home_side": "unknown",
       "venue": null,
       "start_at": null,
       "start_time_status": "unknown",
@@ -514,17 +810,24 @@
       "status": "final",
       "result": {
         "final": {
-          "home": 2,
-          "away": 0
+          "a": 2,
+          "b": 0
         },
         "periods": {
           "map1": {
-            "home": 13,
-            "away": 3
+            "a": 13,
+            "b": 3
           }
         },
         "text": "Karmine Corp 2-0（13-3 / 13-6）"
       },
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -539,14 +842,22 @@
       "id": "2026-09-27-gl-k27",
       "sport": "CS2",
       "competition": "1win Private Club Season 1 Playoffs",
-      "home": "GamerLegion",
-      "away": "K27",
+      "side_a": "GamerLegion",
+      "side_b": "K27",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-27T01:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -560,14 +871,22 @@
       "id": "2026-09-27-jsk-barca",
       "sport": "LoL",
       "competition": "EMEA Masters 2026 Summer Swiss",
-      "home": "JSK Esports",
-      "away": "Barça eSports",
+      "side_a": "JSK Esports",
+      "side_b": "Barça eSports",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-27T01:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -581,14 +900,22 @@
       "id": "2026-09-26-loud-edg",
       "sport": "VALORANT",
       "competition": "VALORANT Champions 2026・Group Stage Opening B",
-      "home": "LOUD",
-      "away": "EDward Gaming",
+      "side_a": "LOUD",
+      "side_b": "EDward Gaming",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-26T21:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -602,14 +929,22 @@
       "id": "2026-09-26-ge-vit",
       "sport": "VALORANT",
       "competition": "VALORANT Champions 2026・Group Stage Opening B",
-      "home": "Global Esports",
-      "away": "Team Vitality",
+      "side_a": "Global Esports",
+      "side_b": "Team Vitality",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-26T18:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -623,14 +958,22 @@
       "id": "2026-09-26-log-barca",
       "sport": "女子サッカー",
       "competition": "プリメーラディビシオン女子・第5節",
-      "home": "Logroño United",
-      "away": "FC Barcelona",
+      "side_a": "Logroño United",
+      "side_b": "FC Barcelona",
+      "home_side": "unknown",
       "venue": "Las Gaunas",
       "start_at": "2026-09-26T23:30:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -644,14 +987,22 @@
       "id": "2026-09-26-cha-mci",
       "sport": "女子サッカー",
       "competition": "Barclays Women's Super League 2026/27",
-      "home": "Charlton Athletic Women",
-      "away": "Manchester City Women",
+      "side_a": "Charlton Athletic Women",
+      "side_b": "Manchester City Women",
+      "home_side": "unknown",
       "venue": "The Valley",
       "start_at": "2026-09-26T21:30:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -665,14 +1016,22 @@
       "id": "2026-09-27-lat-ger-u21",
       "sport": "男子U21サッカー",
       "competition": "UEFA European Under-21 Championship 2027 Qualifying・Group F",
-      "home": "Latvia U21",
-      "away": "Germany U21",
+      "side_a": "Latvia U21",
+      "side_b": "Germany U21",
+      "home_side": "unknown",
       "venue": "Daugava",
       "start_at": "2026-09-27T01:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -686,14 +1045,22 @@
       "id": "2026-09-27-smr-fin",
       "sport": "男子サッカー",
       "competition": "UEFA Nations League 2026/27・League C",
-      "home": "San Marino",
-      "away": "Finland",
+      "side_a": "San Marino",
+      "side_b": "Finland",
+      "home_side": "unknown",
       "venue": "Serravalle",
       "start_at": "2026-09-27T01:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -707,14 +1074,22 @@
       "id": "2026-09-26-ag-lgd",
       "sport": "Rainbow Six",
       "competition": "Rainbow Six CNL 2026 Stage 2・Group Stage",
-      "home": "All Gamers",
-      "away": "LGD Gaming",
+      "side_a": "All Gamers",
+      "side_b": "LGD Gaming",
+      "home_side": "unknown",
       "venue": null,
       "start_at": null,
       "start_time_status": "unverified",
       "start_time_note": "旧HTMLは「公式ページ表示 09:00（JST換算は再確認中）」。重複行の data-ts 00:01 は仮時刻のため不採用",
       "status": "unknown",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -729,14 +1104,22 @@
       "id": "2026-09-26-fearx-cybme",
       "sport": "Rainbow Six",
       "competition": "Rainbow Six APAC North 2026 Stage 2",
-      "home": "FearX",
-      "away": "Can You Be My Enemy",
+      "side_a": "FearX",
+      "side_b": "Can You Be My Enemy",
+      "home_side": "unknown",
       "venue": null,
       "start_at": null,
       "start_time_status": "unverified",
       "start_time_note": "旧HTMLは「開始時刻：公開ソース間差異あり・再確認中」「試合開始 時刻照合中」。data-ts 15:00 / 00:00（仮時刻）は不採用",
       "status": "unknown",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -751,14 +1134,22 @@
       "id": "2026-09-26-tmt-rrx",
       "sport": "Rainbow Six",
       "competition": "Rainbow Six APAC North 2026 Stage 2",
-      "home": "Trippy Main Telecom",
-      "away": "RRX",
+      "side_a": "Trippy Main Telecom",
+      "side_b": "RRX",
+      "home_side": "unknown",
       "venue": null,
       "start_at": null,
       "start_time_status": "unverified",
       "start_time_note": "旧HTMLは「開始時刻：公開ソース間差異あり・再確認中」。data-ts 18:00 は不採用",
       "status": "unknown",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -773,14 +1164,22 @@
       "id": "2026-09-26-kaz-uzb",
       "sport": "女子ハンドボール",
       "competition": "愛知・名古屋2026アジア競技大会",
-      "home": "カザフスタン",
-      "away": "ウズベキスタン",
+      "side_a": "カザフスタン",
+      "side_b": "ウズベキスタン",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-26T12:30:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -794,14 +1193,22 @@
       "id": "2026-09-26-chn-hkg",
       "sport": "女子ハンドボール",
       "competition": "愛知・名古屋2026アジア競技大会",
-      "home": "中国",
-      "away": "香港",
+      "side_a": "中国",
+      "side_b": "香港",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-26T15:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -815,14 +1222,22 @@
       "id": "2026-09-26-kor-vie",
       "sport": "女子ハンドボール",
       "competition": "愛知・名古屋2026アジア競技大会",
-      "home": "韓国",
-      "away": "ベトナム",
+      "side_a": "韓国",
+      "side_b": "ベトナム",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-26T17:30:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -836,14 +1251,22 @@
       "id": "2026-09-26-jpn-nep",
       "sport": "男子クリケット",
       "competition": "愛知・名古屋2026アジア競技大会・男子クリケットT20",
-      "home": "日本",
-      "away": "ネパール",
+      "side_a": "日本",
+      "side_b": "ネパール",
+      "home_side": "unknown",
       "venue": "Korogi Athletic Park",
       "start_at": "2026-09-26T09:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],
@@ -857,14 +1280,22 @@
       "id": "2026-09-27-faze-furia",
       "sport": "Rainbow Six",
       "competition": "Rainbow Six South America League 2026 Stage 2",
-      "home": "FaZe Clan",
-      "away": "FURIA",
+      "side_a": "FaZe Clan",
+      "side_b": "FURIA",
+      "home_side": "unknown",
       "venue": null,
       "start_at": "2026-09-27T04:45:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": null,
       "status": "scheduled",
       "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-baseline-2026-09-26",
+          "changes": [],
+          "note": "基準点の状態"
+        }
+      ],
       "sources": [
         "analysis.html@02e5167"
       ],

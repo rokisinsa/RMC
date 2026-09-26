@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "legacy-unassigned.schema.json",
+  "title": "data/legacy-unassigned.json — どの系統のものか確定できない旧データ",
+  "$comment": "旧HTMLの配置だけでは系統を確定できない記録を、どの系統にも帰属させずに保持する。成績・集計には使わない。",
+  "type": "object",
+  "required": ["schema_version", "excluded_log"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "meta": { "$ref": "defs.schema.json#/$defs/fileMeta" },
+    "excluded_log": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "system_assignment", "candidate_systems", "legacy"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^legacy-unassigned-[a-z0-9._-]+$" },
+          "label": { "type": "string", "minLength": 1 },
+          "system_assignment": { "const": "unknown" },
+          "candidate_systems": { "type": "array", "items": { "enum": ["value1", "value2"] } },
+          "reason": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+          "legacy": {
+            "type": "object",
+            "required": ["source", "commit", "location", "text"],
+            "additionalProperties": false,
+            "properties": {
+              "source": { "const": "analysis.html" },
+              "commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
+              "location": { "type": "string", "minLength": 1 },
+              "text": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

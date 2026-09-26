@@ -20,7 +20,7 @@
         "openProjectedProfit": 14,
         "openProjectedCount": 1,
         "openUncomputed": 20,
-        "maxLosingStreak": 2
+        "maxLosingStreak": 1
       },
       "duplicates_counted_once_reference": {
         "count": 24,
@@ -41,21 +41,21 @@
         "openProjectedProfit": 14,
         "openProjectedCount": 1,
         "openUncomputed": 14,
-        "maxLosingStreak": 2
+        "maxLosingStreak": 1
       },
       "compound": {
         "balance": 100,
-        "stock": 114.8,
+        "stock": 140.58,
         "cycles": 1,
         "failures": 2,
         "incomplete": 0,
         "profit": 0
       },
       "quarter_kelly_locked_prob_only": {
-        "balance": 100,
-        "profit": 0,
-        "bets": 0,
-        "skipped": 9
+        "balance": 100.82,
+        "profit": 0.82,
+        "bets": 1,
+        "skipped": 8
       }
     },
     "experience": {
@@ -200,50 +200,22 @@
     }
   },
   "calibration": {
-    "count": 1,
-    "brier": 0.56881764,
-    "log_loss": 1.4032370818502025,
+    "count": 3,
+    "brier": 0.20470188,
+    "log_loss": 0.5683646027971228,
     "ids": [
-      "rec-legacy-oddik-procyon"
+      "rec-legacy-oddik-procyon",
+      "rec-legacy-lyon",
+      "rec-legacy-italy"
     ]
   },
-  "matched_count": 156,
+  "matched_count": 161,
   "intended": [
     {
-      "path": "recommendations.all_rows.maxLosingStreak",
-      "expected": 1,
-      "computed": 2,
-      "reason": "並び順を旧 data-ts（投入/登録時刻が混在）から試合開始時刻優先に変更。ODDIK（開始 9/24 06:00）が Sakkari（旧 data-ts 9/24 04:40、開始時刻未確認）の後ろになり、ODDIK×→中国×が連続するため"
-    },
-    {
-      "path": "recommendations.duplicates_counted_once_reference.maxLosingStreak",
-      "expected": 1,
-      "computed": 2,
-      "reason": "重複を1件と数える参考集計でも、並び順変更（試合開始時刻優先）の影響は同じ。重複6組はすべて未確定のため連敗には影響しない"
-    },
-    {
-      "path": "recommendations.quarter_kelly_locked_prob_only.balance",
-      "expected": 100.82,
-      "computed": 100,
-      "reason": "同上（Kelly）"
-    },
-    {
-      "path": "recommendations.quarter_kelly_locked_prob_only.profit",
-      "expected": 0.82,
-      "computed": 0,
-      "reason": "過去の事前確率の確定ルール（第1優先：試合前保存を確認できる locked 値）。Lyon 0.922 は開始時刻未確認のため null になり、賭け対象外。残る ODDIK 0.7542 はオッズ1.24で期待値マイナスのため見送り"
-    },
-    {
-      "path": "recommendations.quarter_kelly_locked_prob_only.bets",
-      "expected": 1,
-      "computed": 0,
-      "reason": "同上（Kelly）"
-    },
-    {
-      "path": "recommendations.quarter_kelly_locked_prob_only.skipped",
-      "expected": 8,
-      "computed": 9,
-      "reason": "Kelly の賭けが1件→0件になった分、見送りが1件増える（確定9件＝賭け0＋見送り9）"
+      "path": "recommendations.compound.stock",
+      "expected": 114.8,
+      "computed": 140.58,
+      "reason": "Lyon・Italy の開始時刻を人間確認で確定（9/24 01:45 / 04:05 JST、mr-2026-09-26-human-review）したことで、並び順が旧 data-ts（9/23 12:13 / 9/22 21:56）から実際の開始時刻に変わった。Tunisia→Corinthians→Prizmic→Bounty→Lyon→Italy の6連勝で初めて倍額に到達（1.17×1.11×1.19×1.13×1.12×1.23＝2.4058 → ストック $140.58）。旧順では Italy の時点で $214.80 に到達していた。確保回数1回・失敗2回・現在資金$100は同じ"
     }
   ],
   "unexplained": [],
@@ -460,7 +432,7 @@
       "id": "rec-legacy-italy",
       "bucket": "official",
       "state": "win",
-      "reason": "set1 勝者 home（スコア未記録）",
+      "reason": "set1 勝者 side_a（スコア未記録）",
       "profit": 23,
       "projected": null
     },

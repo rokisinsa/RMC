@@ -17,26 +17,7 @@
       "note": "VALUE②：旧RMC（02e5167）からの一括移行用。実際の探索回・探索時刻は記録がない。系統ごとに別の移行用探索回として扱う（他系統と共有しない）"
     }
   ],
-  "excluded_log": [
-    {
-      "label": "Afghanistan vs Nepal",
-      "run_id": null,
-      "match_id": null,
-      "reason": "旧HTMLの VALUE② 欄「深掘りで除外」に記載。VALUE①・VALUE② のどちらの除外かは記録がなく要確認"
-    },
-    {
-      "label": "NAVI vs Nemesis",
-      "run_id": null,
-      "match_id": null,
-      "reason": "旧HTMLの VALUE② 欄「深掘りで除外」に記載。VALUE①・VALUE② のどちらの除外かは記録がなく要確認"
-    },
-    {
-      "label": "Tunisia vs Cameroon",
-      "run_id": null,
-      "match_id": null,
-      "reason": "旧HTMLの VALUE② 欄「深掘りで除外」に記載。VALUE①・VALUE② のどちらの除外かは記録がなく要確認"
-    }
-  ],
+  "excluded_log": [],
   "picks": [
     {
       "id": "v2-legacy-ge-vit",
@@ -44,7 +25,7 @@
       "match_id": "2026-09-26-ge-vit",
       "market": "match_winner",
       "market_label": "VALORANT Champions 2026 Group Stage Opening B / 選択：Team Vitality / BO3 LAN",
-      "selection": "away",
+      "selection": "side_b",
       "selection_label": "Team Vitality",
       "market_odds": null,
       "odds_taken": 1.76,
@@ -105,7 +86,7 @@
       "match_id": "2026-09-26-loud-edg",
       "market": "match_winner",
       "market_label": "VALORANT Champions 2026 Group Stage Opening B / 選択候補：LOUD / BO3 LAN",
-      "selection": "home",
+      "selection": "side_a",
       "selection_label": "LOUD",
       "market_odds": {
         "text": "1.37〜1.43",
@@ -137,7 +118,8 @@
       "settlement_override": null,
       "flags": [
         "legacy_import",
-        "odds_unverified"
+        "odds_unverified",
+        "analysis_independence_review"
       ],
       "detail_ref": null,
       "note": null,

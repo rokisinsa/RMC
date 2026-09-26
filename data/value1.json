@@ -25,7 +25,7 @@
       "match_id": "2026-09-26-bul-por-u21",
       "market": "match_1x2",
       "market_label": "大会：UEFA European Under-21 Championship 2027 Qualifying・Group B / 選択：Portugal U21 / 注目価格 1.25以上",
-      "selection": "away",
+      "selection": "side_b",
       "selection_label": "Portugal U21",
       "market_odds": {
         "text": "1.25以上",
@@ -64,7 +64,6 @@
       "flags": [
         "legacy_import",
         "odds_unverified",
-        "result_unverified",
         "needs_review"
       ],
       "detail_ref": null,
@@ -101,7 +100,7 @@
       "match_id": "2026-09-25-nip-3dmax",
       "market": "match_winner",
       "market_label": "大会：1win Private Club Season 1 / 選択：3DMAX / BO3",
-      "selection": "away",
+      "selection": "side_b",
       "selection_label": "3DMAX",
       "market_odds": {
         "text": "1.95〜2.00",
@@ -169,7 +168,7 @@
       "match_id": "2026-09-26-slo-pol",
       "market": "match_winner",
       "market_label": "大会：CEV EuroVolley 2026 Men・準決勝 / 選択：Poland",
-      "selection": "away",
+      "selection": "side_b",
       "selection_label": "Poland",
       "market_odds": null,
       "odds_taken": 1.25,
@@ -230,7 +229,7 @@
       "match_id": "2026-09-25-heroic-fnatic",
       "market": "match_winner",
       "market_label": "大会：Stake Pulse Beat II・準々決勝 / 選択候補：HEROIC / BO3・LAN",
-      "selection": "home",
+      "selection": "side_a",
       "selection_label": "HEROIC",
       "market_odds": null,
       "odds_taken": 1.35,
@@ -290,7 +289,7 @@
       "match_id": "2026-09-26-fin-fra",
       "market": "match_winner",
       "market_label": "大会：CEV EuroVolley 2026 Men・準決勝 / 選択候補：France",
-      "selection": "away",
+      "selection": "side_b",
       "selection_label": "France",
       "market_odds": {
         "text": "約1.20",
@@ -357,7 +356,7 @@
       "match_id": "2026-09-25-kc-xlg",
       "market": "match_winner",
       "market_label": "大会：VALORANT Champions 2026・Group Stage / 選択候補：Karmine Corp / BO3",
-      "selection": "home",
+      "selection": "side_a",
       "selection_label": "Karmine Corp",
       "market_odds": {
         "text": "1.17〜1.20",
@@ -426,7 +425,7 @@
       "match_id": "2026-09-27-gl-k27",
       "market": "match_winner",
       "market_label": "1win Private Club Season 1 Playoffs / 選択：GamerLegion / BO3 LAN",
-      "selection": "home",
+      "selection": "side_a",
       "selection_label": "GamerLegion",
       "market_odds": null,
       "odds_taken": 1.67,
@@ -486,7 +485,7 @@
       "match_id": "2026-09-27-jsk-barca",
       "market": "match_winner",
       "market_label": "EMEA Masters 2026 Summer Swiss / 選択：Barça eSports / BO1",
-      "selection": "away",
+      "selection": "side_b",
       "selection_label": "Barça eSports",
       "market_odds": null,
       "odds_taken": 1.12,
@@ -546,7 +545,7 @@
       "match_id": "2026-09-26-loud-edg",
       "market": "match_winner",
       "market_label": "VALORANT Champions 2026 Group Stage Opening B / 選択候補：LOUD / BO3",
-      "selection": "home",
+      "selection": "side_a",
       "selection_label": "LOUD",
       "market_odds": {
         "text": "1.37〜1.43",
@@ -578,7 +577,8 @@
       "settlement_override": null,
       "flags": [
         "legacy_import",
-        "odds_unverified"
+        "odds_unverified",
+        "analysis_independence_review"
       ],
       "detail_ref": null,
       "note": null,

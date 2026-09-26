@@ -11,9 +11,10 @@ const JST = "+09:00";
 
 function match(id, sport, start, status, result = null) {
   return {
-    id, sport, competition: "Fixture League", home: `${id}-home`, away: `${id}-away`,
+    id, sport, competition: "Fixture League", side_a: `${id}-a`, side_b: `${id}-b`, home_side: "unknown",
     venue: null, start_at: `${start}${JST}`, start_time_status: "recorded", status, result,
     sources: ["fixture"], verified_at: status === "final" ? `2026-09-25T12:00:00${JST}` : null, note: null,
+    provenance: [{ update_run_id: "mr-fixture", changes: [], note: null }],
   };
 }
 
@@ -23,7 +24,7 @@ function pick(system, id, fields) {
     match_id: fields.match_id,
     market: fields.market ?? "match_1x2",
     market_label: null,
-    selection: fields.selection ?? "home",
+    selection: fields.selection ?? "side_a",
     selection_label: null,
     market_odds: fields.market_odds ?? null,
     odds_taken: fields.odds_taken ?? null,
@@ -47,11 +48,12 @@ function pick(system, id, fields) {
 export function makeDataset() {
   const matches = {
     schema_version: 1,
+    update_runs: [{ run_id: "mr-fixture", kind: "result_update", at: `2026-09-25T12:00:00${JST}`, source: "fixture", note: null }],
     matches: [
-      match("m1", "サッカー", "2026-09-20T20:00:00", "final", { final: { home: 2, away: 0 }, periods: { ht: { home: 1, away: 0 } }, text: null }),
-      match("m2", "サッカー", "2026-09-21T20:00:00", "final", { final: { home: 1, away: 1 }, periods: { ht: { home: 0, away: 1 } }, text: null }),
-      match("m3", "バレー", "2026-09-22T19:00:00", "final", { final: { home: 3, away: 1 }, periods: { set1: { home: 25, away: 20 } }, text: null }),
-      match("m4", "CS2", "2026-09-23T05:00:00", "final", { final: { home: 0, away: 2 }, periods: { map1: { home: 13, away: 10 } }, text: null }),
+      match("m1", "サッカー", "2026-09-20T20:00:00", "final", { final: { a: 2, b: 0 }, periods: { ht: { a: 1, b: 0 } }, text: null }),
+      match("m2", "サッカー", "2026-09-21T20:00:00", "final", { final: { a: 1, b: 1 }, periods: { ht: { a: 0, b: 1 } }, text: null }),
+      match("m3", "バレー", "2026-09-22T19:00:00", "final", { final: { a: 3, b: 1 }, periods: { set1: { a: 25, b: 20 } }, text: null }),
+      match("m4", "CS2", "2026-09-23T05:00:00", "final", { final: { a: 0, b: 2 }, periods: { map1: { a: 13, b: 10 } }, text: null }),
       match("m5", "サッカー", "2026-09-24T18:00:00", "cancelled"),
       match("m6", "サッカー", "2026-09-30T18:00:00", "scheduled"),
     ],
@@ -64,15 +66,15 @@ export function makeDataset() {
   const recommendations = {
     schema_version: 1, system: "recommendations", discovery_runs: [run("rec-")],
     picks: [
-      rec("rec-r1", { match_id: "m1", market: "match_1x2", selection: "home", odds_taken: 1.2 }),       // win +20
-      rec("rec-r2", { match_id: "m2", market: "dnb", selection: "home", odds_taken: 1.3 }),              // push
-      rec("rec-r3", { match_id: "m2", market: "first_half_1x2", selection: "home", odds_taken: 1.5 }),   // loss -100
-      rec("rec-r4", { match_id: "m3", market: "set1_winner", selection: "home", odds_taken: 1.25 }),     // win +25
-      rec("rec-r5", { match_id: "m4", market: "map1_winner", selection: "home", odds_taken: 1.4 }),      // win +40
-      rec("rec-r6", { match_id: "m5", market: "match_winner", selection: "home", odds_taken: 1.1 }),     // void
-      rec("rec-r7", { match_id: "m6", market: "match_winner", selection: "away", odds_taken: 1.15,
+      rec("rec-r1", { match_id: "m1", market: "match_1x2", selection: "side_a", odds_taken: 1.2 }),       // win +20
+      rec("rec-r2", { match_id: "m2", market: "dnb", selection: "side_a", odds_taken: 1.3 }),              // push
+      rec("rec-r3", { match_id: "m2", market: "first_half_1x2", selection: "side_a", odds_taken: 1.5 }),   // loss -100
+      rec("rec-r4", { match_id: "m3", market: "set1_winner", selection: "side_a", odds_taken: 1.25 }),     // win +25
+      rec("rec-r5", { match_id: "m4", market: "map1_winner", selection: "side_a", odds_taken: 1.4 }),      // win +40
+      rec("rec-r6", { match_id: "m5", market: "match_winner", selection: "side_a", odds_taken: 1.1 }),     // void
+      rec("rec-r7", { match_id: "m6", market: "match_winner", selection: "side_b", odds_taken: 1.15,
         discovered_at: `2026-09-26T06:10:00${JST}`, locked_at: `2026-09-26T06:30:00${JST}` }),         // pending +15予定
-      rec("rec-r8", { match_id: "m6", market: "match_1x2", selection: "home", odds_taken: null,
+      rec("rec-r8", { match_id: "m6", market: "match_1x2", selection: "side_a", odds_taken: null,
         market_odds: { text: "1.03〜1.06", min: 1.03, max: 1.06, observed_at: null, source: null },
         discovered_at: `2026-09-26T06:10:00${JST}`, locked_at: `2026-09-26T06:30:00${JST}` }),         // pending 未計算
     ],
@@ -83,7 +85,7 @@ export function makeDataset() {
     picks: [
       pick("experience", "exp-e1", { match_id: "m1", locked: { summary: null }, stake: 300, odds_taken: 1.05,
         bet_at: `2026-09-20T12:00:00${JST}`, discovered_at: null, locked_at: `2026-09-20T12:00:00${JST}` }), // win +15
-      pick("experience", "exp-e2", { match_id: "m6", locked: { summary: null }, market: "match_winner", selection: "away", stake: 350, odds_taken: 1.09,
+      pick("experience", "exp-e2", { match_id: "m6", locked: { summary: null }, market: "match_winner", selection: "side_b", stake: 350, odds_taken: 1.09,
         bet_at: `2026-09-26T08:00:00${JST}`, discovered_at: null, locked_at: `2026-09-26T08:00:00${JST}` }), // pending +31.5予定
     ],
   };
@@ -99,9 +101,9 @@ export function makeDataset() {
     schema_version: 1, system: "value1", discovery_runs: [run("v1-")], excluded_log: [],
     picks: [
       v1("v1-a", "formal", { match_id: "m1", odds_taken: 1.25 }),                                        // official win +25
-      v1("v1-b", "formal", { match_id: "m3", market: "match_winner", selection: "away", odds_taken: 2.0 }), // official loss -100
+      v1("v1-b", "formal", { match_id: "m3", market: "match_winner", selection: "side_b", odds_taken: 2.0 }), // official loss -100
       v1("v1-c", "watch", { match_id: "m4", market: "map1_winner", stake: null, odds_taken: 1.35 }),     // reference win +35
-      v1("v1-d", "conditional", { match_id: "m2", selection: "away", odds_taken: 3.0,
+      v1("v1-d", "conditional", { match_id: "m2", selection: "side_b", odds_taken: 3.0,
         condition: { text: "3.0以上", min_odds: 3.0, met: true, checked_at: `2026-09-21T19:00:00${JST}` } }), // official loss -100
       v1("v1-e", "conditional", { match_id: "m1", market: "first_half_1x2", odds_taken: 1.8,
         condition: { text: "1.8以上", min_odds: 1.8, met: null, checked_at: null } }),                   // 集計外（未確認）
@@ -109,9 +111,9 @@ export function makeDataset() {
         condition: { text: "1.5以上", min_odds: 1.5, met: true, checked_at: `2026-09-22T20:00:00${JST}` } }), // 集計外（開始後に確認）
       v1("v1-g", "excluded", { match_id: "m6", market: "match_winner", stake: null, odds_taken: null,
         discovered_at: `2026-09-26T06:10:00${JST}`, locked_at: `2026-09-26T06:30:00${JST}` }),
-      v1("v1-h", "watch", { match_id: "m6", market: "match_winner", selection: "away", stake: null, odds_taken: null,
+      v1("v1-h", "watch", { match_id: "m6", market: "match_winner", selection: "side_b", stake: null, odds_taken: null,
         market_odds: range(1.17, 1.2), discovered_at: `2026-09-26T06:10:00${JST}`, locked_at: `2026-09-26T06:30:00${JST}` }), // reference pending 未計算
-      v1("v1-i", "watch", { match_id: "m4", market: "match_winner", selection: "away", stake: null, odds_taken: null,
+      v1("v1-i", "watch", { match_id: "m4", market: "match_winner", selection: "side_b", stake: null, odds_taken: null,
         market_odds: range(1.17, 1.2) }),                                                               // reference win 金額未計算
     ],
   };

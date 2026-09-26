@@ -22,22 +22,12 @@ const matchesById = new Map(datasets.matches.matches.map(m => [m.id, m]));
 // ── 手順2で意図して変わる項目（理由を明記） ─────────────────────────
 const INTENDED_CHANGES = [
   {
-    path: "recommendations.all_rows.maxLosingStreak", from: 1, to: 2,
-    reason: "並び順を旧 data-ts（投入/登録時刻が混在）から試合開始時刻優先に変更。ODDIK（開始 9/24 06:00）が Sakkari（旧 data-ts 9/24 04:40、開始時刻未確認）の後ろになり、ODDIK×→中国×が連続するため",
-  },
-  {
-    path: "recommendations.quarter_kelly_locked_prob_only.profit", from: 0.82, to: 0,
-    reason: "過去の事前確率の確定ルール（第1優先：試合前保存を確認できる locked 値）。Lyon 0.922 は開始時刻未確認のため null になり、賭け対象外。残る ODDIK 0.7542 はオッズ1.24で期待値マイナスのため見送り",
-  },
-  { path: "recommendations.quarter_kelly_locked_prob_only.balance", from: 100.82, to: 100, reason: "同上（Kelly）" },
-  { path: "recommendations.quarter_kelly_locked_prob_only.bets", from: 1, to: 0, reason: "同上（Kelly）" },
-  // 以下2件は初回比較で「説明できない不一致」として検出され、原因を確認したうえで登録したもの（データは変更していない）
-  { path: "recommendations.quarter_kelly_locked_prob_only.skipped", from: 8, to: 9, reason: "Kelly の賭けが1件→0件になった分、見送りが1件増える（確定9件＝賭け0＋見送り9）" },
-  {
-    path: "recommendations.duplicates_counted_once_reference.maxLosingStreak", from: 1, to: 2,
-    reason: "重複を1件と数える参考集計でも、並び順変更（試合開始時刻優先）の影響は同じ。重複6組はすべて未確定のため連敗には影響しない",
+    path: "recommendations.compound.stock", from: 114.8, to: 140.58,
+    reason: "Lyon・Italy の開始時刻を人間確認で確定（9/24 01:45 / 04:05 JST、mr-2026-09-26-human-review）したことで、並び順が旧 data-ts（9/23 12:13 / 9/22 21:56）から実際の開始時刻に変わった。Tunisia→Corinthians→Prizmic→Bounty→Lyon→Italy の6連勝で初めて倍額に到達（1.17×1.11×1.19×1.13×1.12×1.23＝2.4058 → ストック $140.58）。旧順では Italy の時点で $214.80 に到達していた。確保回数1回・失敗2回・現在資金$100は同じ",
   },
 ];
+// 参考：前回（手順2初回）登録していた最大連敗 1→2 と 1/4ケリー +$0.82→$0 の変更は、今回の確定事項
+// （Lyon 0.922 の locked 採用、ODDIK の開始時刻を要確認として並び順にロック時刻を使用）により解消し、手順0の期待値と一致した。
 
 // ── 新ロジックでの集計 ──────────────────────────────────────
 const sys = name => summarizeSystem(datasets[name], matchesById);

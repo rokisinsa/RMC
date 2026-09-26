@@ -33,7 +33,7 @@ test("現行JSの再現値が本番ページの実表示と一致する", () => 
 });
 
 const legacySettle = (status, stake, odds, notional = null) => settlePick({
-  id: "x", stake, odds_taken: odds, market: "other", selection: "home",
+  id: "x", stake, odds_taken: odds, market: "other", selection: "side_a",
   settlement_override: status === "open" ? null : { state: status, reason: "legacy", set_at: "2026-09-26T06:45:58+09:00", source: null },
 }, undefined, { notionalStake: notional });
 
