@@ -382,7 +382,7 @@ function gitHead() {
 }
 
 // ── 完全版の探索網羅性ゲート ──────────────────────────────────────
-function checkCoverageAudit(payload, ledger) {
+function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
   const scheduled = new Set(["06:00", "12:00", "18:00", "23:00"]);
   if (!scheduled.has(payload.slot)) return;
   const c = payload.coverage_audit;
@@ -408,7 +408,7 @@ function checkCoverageAudit(payload, ledger) {
     const norm = xs => [...new Set(xs.map(x => String(x).trim().toLowerCase()))].sort();
     if (JSON.stringify(norm(master)) !== JSON.stringify(norm(bc))) ledger.error("coverage", "bet_channel", null, "BET CHANNEL完全版では union_sports が bet_channel実一覧と一致していない");
 
-    const invPath = join(ROOT, "data/bet-channel-inventory.json");
+    const invPath = join(dataDir, "bet-channel-inventory.json");
     if (!existsSync(invPath)) ledger.error("coverage","bet_channel",null,"実測 bet-channel-inventory.json が無い");
     else {
       const inv = JSON.parse(readFileSync(invPath,"utf8"));
@@ -470,7 +470,7 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
   if (audit.runs.some(r => r.run_id === payload.run_id)) ledger.error("duplicate", "automation_runs", payload.run_id, "この run_id は適用済み（同じ更新を二重に適用しない）");
 
   checkPayloadShape(payload, ledger, { now });
-  checkCoverageAudit(payload, ledger);
+  checkCoverageAudit(payload, ledger, { dataDir });
   const { next, stats } = applyPayload(current, payload, ledger);
   const { vmBefore, vmAfter, plChanges } = checkNext(current, next, payload, ledger, { schemas, cfg, now });
 
