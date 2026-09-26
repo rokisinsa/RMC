@@ -59,6 +59,11 @@ jobs:
           if(x.event_count!==x.event_ids.length) errors.push("event_count mismatch");
           if(new Set(x.event_ids).size!==x.event_ids.length) errors.push("duplicate event_ids");
           if(new Set(x.categories.map(c=>c.ct)).size!==x.categories.length) errors.push("duplicate category ct");
+          if(x.metadata_missing_count!==0) errors.push("metadata missing");
+          if(x.time_parse_missing_count!==0) errors.push("time parse missing");
+          if(!x.analysis_ready) errors.push("analysis_ready=false");
+          if(x.analysis_card_count!==x.analysis_card_ids.length) errors.push("analysis_card_count mismatch");
+          if(new Set(x.analysis_card_ids).size!==x.analysis_card_ids.length) errors.push("duplicate analysis card ids");
           console.log(JSON.stringify({checked_at:x.checked_at,category_count:x.category_count,event_count:x.event_count,failed:x.failed_category_count,empty:x.empty_category_count,complete:x.complete,errors},null,2));
           if(errors.length) process.exit(1);
           NODE
@@ -82,9 +87,9 @@ jobs:
           node - <<'NODE'
           const fs=require("fs");
           const x=JSON.parse(fs.readFileSync("data/bet-channel-inventory.json","utf8"));
-          if(!x.complete || x.failed_category_count!==0){
-            console.error(`Incomplete BET CHANNEL scrape: failed_category_count=${x.failed_category_count}`);
+          if(!x.complete || !x.analysis_ready || x.failed_category_count!==0 || x.metadata_missing_count!==0 || x.time_parse_missing_count!==0){
+            console.error(`Incomplete BET CHANNEL scrape: failed=${x.failed_category_count} metadata=${x.metadata_missing_count} time_parse=${x.time_parse_missing_count} analysis_ready=${x.analysis_ready}`);
             process.exit(1);
           }
-          console.log(`COMPLETE: ${x.category_count} categories / ${x.event_count} unique events`);
+          console.log(`COMPLETE: ${x.category_count} categories / ${x.event_count} market events / ${x.analysis_card_count} canonical 48h cards / ${x.bettable_analysis_card_count} priced`);
           NODE
