@@ -1,0 +1,612 @@
+{
+  "computed": {
+    "recommendations": {
+      "all_rows": {
+        "count": 30,
+        "wins": 7,
+        "losses": 2,
+        "pushes": 0,
+        "voids": 0,
+        "pending": 21,
+        "settledGames": 9,
+        "winRate": 77.77777777777779,
+        "plannedStake": 3000,
+        "settledStake": 900,
+        "refundedStake": 0,
+        "netProfit": -87,
+        "roi": -9.666666666666666,
+        "amountMissing": 0,
+        "openStake": 2100,
+        "openProjectedProfit": 14,
+        "openProjectedCount": 1,
+        "openUncomputed": 20,
+        "maxLosingStreak": 2
+      },
+      "duplicates_counted_once_reference": {
+        "count": 24,
+        "wins": 7,
+        "losses": 2,
+        "pushes": 0,
+        "voids": 0,
+        "pending": 15,
+        "settledGames": 9,
+        "winRate": 77.77777777777779,
+        "plannedStake": 2400,
+        "settledStake": 900,
+        "refundedStake": 0,
+        "netProfit": -87,
+        "roi": -9.666666666666666,
+        "amountMissing": 0,
+        "openStake": 1500,
+        "openProjectedProfit": 14,
+        "openProjectedCount": 1,
+        "openUncomputed": 14,
+        "maxLosingStreak": 2
+      },
+      "compound": {
+        "balance": 100,
+        "stock": 114.8,
+        "cycles": 1,
+        "failures": 2,
+        "incomplete": 0,
+        "profit": 0
+      },
+      "quarter_kelly_locked_prob_only": {
+        "balance": 100,
+        "profit": 0,
+        "bets": 0,
+        "skipped": 9
+      }
+    },
+    "experience": {
+      "all_rows": {
+        "count": 4,
+        "wins": 1,
+        "losses": 0,
+        "pushes": 0,
+        "voids": 0,
+        "pending": 3,
+        "settledGames": 1,
+        "winRate": 100,
+        "plannedStake": 1250,
+        "settledStake": 300,
+        "refundedStake": 0,
+        "netProfit": 15,
+        "roi": 5,
+        "amountMissing": 0,
+        "openStake": 950,
+        "openProjectedProfit": 124.5,
+        "openProjectedCount": 3,
+        "openUncomputed": 0,
+        "maxLosingStreak": 0
+      }
+    },
+    "value1": {
+      "verdict_counts": {
+        "conditional": 1,
+        "formal": 4,
+        "watch": 4
+      },
+      "official": {
+        "count": 4,
+        "wins": 1,
+        "losses": 1,
+        "pushes": 0,
+        "voids": 0,
+        "pending": 2,
+        "settledGames": 2,
+        "winRate": 50,
+        "plannedStake": 400,
+        "settledStake": 200,
+        "refundedStake": 0,
+        "netProfit": -75,
+        "roi": -37.5,
+        "amountMissing": 0,
+        "openStake": 200,
+        "openProjectedProfit": 79,
+        "openProjectedCount": 2,
+        "openUncomputed": 0,
+        "maxLosingStreak": 1
+      },
+      "official_compound": {
+        "balance": 125,
+        "stock": 0,
+        "cycles": 0,
+        "failures": 1,
+        "incomplete": 0,
+        "profit": 25
+      },
+      "reference": {
+        "count": 4,
+        "wins": 2,
+        "losses": 0,
+        "pushes": 0,
+        "voids": 0,
+        "pending": 2,
+        "settledGames": 2,
+        "winRate": 100,
+        "plannedStake": 400,
+        "settledStake": 100,
+        "refundedStake": 0,
+        "netProfit": 35,
+        "roi": 35,
+        "amountMissing": 1,
+        "openStake": 200,
+        "openProjectedProfit": 0,
+        "openProjectedCount": 0,
+        "openUncomputed": 2,
+        "maxLosingStreak": 0
+      },
+      "not_counted": [
+        "v1-legacy-bul-por-u21"
+      ]
+    },
+    "value2": {
+      "verdict_counts": {
+        "adopted": 1,
+        "watch": 1
+      },
+      "official": {
+        "count": 1,
+        "wins": 0,
+        "losses": 0,
+        "pushes": 0,
+        "voids": 0,
+        "pending": 1,
+        "settledGames": 0,
+        "winRate": null,
+        "plannedStake": 100,
+        "settledStake": 0,
+        "refundedStake": 0,
+        "netProfit": 0,
+        "roi": null,
+        "amountMissing": 0,
+        "openStake": 100,
+        "openProjectedProfit": 76,
+        "openProjectedCount": 1,
+        "openUncomputed": 0,
+        "maxLosingStreak": 0
+      },
+      "official_compound": {
+        "balance": 100,
+        "stock": 0,
+        "cycles": 0,
+        "failures": 0,
+        "incomplete": 0,
+        "profit": 0
+      },
+      "reference": {
+        "count": 1,
+        "wins": 0,
+        "losses": 0,
+        "pushes": 0,
+        "voids": 0,
+        "pending": 1,
+        "settledGames": 0,
+        "winRate": null,
+        "plannedStake": 100,
+        "settledStake": 0,
+        "refundedStake": 0,
+        "netProfit": 0,
+        "roi": null,
+        "amountMissing": 0,
+        "openStake": 100,
+        "openProjectedProfit": 0,
+        "openProjectedCount": 0,
+        "openUncomputed": 1,
+        "maxLosingStreak": 0
+      },
+      "not_counted": []
+    }
+  },
+  "calibration": {
+    "count": 1,
+    "brier": 0.56881764,
+    "log_loss": 1.4032370818502025,
+    "ids": [
+      "rec-legacy-oddik-procyon"
+    ]
+  },
+  "matched_count": 156,
+  "intended": [
+    {
+      "path": "recommendations.all_rows.maxLosingStreak",
+      "expected": 1,
+      "computed": 2,
+      "reason": "並び順を旧 data-ts（投入/登録時刻が混在）から試合開始時刻優先に変更。ODDIK（開始 9/24 06:00）が Sakkari（旧 data-ts 9/24 04:40、開始時刻未確認）の後ろになり、ODDIK×→中国×が連続するため"
+    },
+    {
+      "path": "recommendations.duplicates_counted_once_reference.maxLosingStreak",
+      "expected": 1,
+      "computed": 2,
+      "reason": "重複を1件と数える参考集計でも、並び順変更（試合開始時刻優先）の影響は同じ。重複6組はすべて未確定のため連敗には影響しない"
+    },
+    {
+      "path": "recommendations.quarter_kelly_locked_prob_only.balance",
+      "expected": 100.82,
+      "computed": 100,
+      "reason": "同上（Kelly）"
+    },
+    {
+      "path": "recommendations.quarter_kelly_locked_prob_only.profit",
+      "expected": 0.82,
+      "computed": 0,
+      "reason": "過去の事前確率の確定ルール（第1優先：試合前保存を確認できる locked 値）。Lyon 0.922 は開始時刻未確認のため null になり、賭け対象外。残る ODDIK 0.7542 はオッズ1.24で期待値マイナスのため見送り"
+    },
+    {
+      "path": "recommendations.quarter_kelly_locked_prob_only.bets",
+      "expected": 1,
+      "computed": 0,
+      "reason": "同上（Kelly）"
+    },
+    {
+      "path": "recommendations.quarter_kelly_locked_prob_only.skipped",
+      "expected": 8,
+      "computed": 9,
+      "reason": "Kelly の賭けが1件→0件になった分、見送りが1件増える（確定9件＝賭け0＋見送り9）"
+    }
+  ],
+  "unexplained": [],
+  "per_pick": [
+    {
+      "id": "rec-legacy-log-barca-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-charlton-city-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-lat-ger-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-smr-fin-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-ag-lgd-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 unknown",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-fearx-cyb-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 unknown",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-tmt-rrx-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 unknown",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-kaz-uzb-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-china-hk-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-kor-vie-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-jpn-nep-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-log-barca",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-lat-ger",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-cha-mci",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-smr-fin",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-faze-furia-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-fearx",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 unknown",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-loud-edg-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-ge-vit-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-ag-lgd",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 unknown",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-prz-rin",
+      "bucket": "official",
+      "state": "win",
+      "reason": "final 2-0",
+      "profit": 19,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-spain-czech-rec",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 unknown",
+      "profit": null,
+      "projected": 14
+    },
+    {
+      "id": "rec-legacy-china-maldives",
+      "bucket": "official",
+      "state": "loss",
+      "reason": "ht 0-0",
+      "profit": -100,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-sak-hib",
+      "bucket": "official",
+      "state": "win",
+      "reason": "final 2-0",
+      "profit": 18,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-oddik-procyon",
+      "bucket": "official",
+      "state": "loss",
+      "reason": "final 0-2",
+      "profit": -100,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-lyon",
+      "bucket": "official",
+      "state": "win",
+      "reason": "ht 0-4",
+      "profit": 12,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-italy",
+      "bucket": "official",
+      "state": "win",
+      "reason": "set1 勝者 home（スコア未記録）",
+      "profit": 23,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-cs2",
+      "bucket": "official",
+      "state": "win",
+      "reason": "map1 6-13",
+      "profit": 13,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-cor",
+      "bucket": "official",
+      "state": "win",
+      "reason": "final 1-0",
+      "profit": 11,
+      "projected": null
+    },
+    {
+      "id": "rec-legacy-tun",
+      "bucket": "official",
+      "state": "win",
+      "reason": "set1 25-13",
+      "profit": 17,
+      "projected": null
+    },
+    {
+      "id": "exp-legacy-hos-oze",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": 31.5
+    },
+    {
+      "id": "exp-legacy-prz-gri",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 unknown",
+      "profit": null,
+      "projected": 51
+    },
+    {
+      "id": "exp-legacy-esp-cze",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 unknown",
+      "profit": null,
+      "projected": 42
+    },
+    {
+      "id": "exp-legacy-ish-ita",
+      "bucket": "official",
+      "state": "win",
+      "reason": "final 2-0",
+      "profit": 15,
+      "projected": null
+    },
+    {
+      "id": "v1-legacy-bul-por-u21",
+      "bucket": "conditional_unmet",
+      "state": "loss",
+      "reason": "final 2-1",
+      "profit": -100,
+      "projected": null
+    },
+    {
+      "id": "v1-legacy-nip-3dmax",
+      "bucket": "official",
+      "state": "loss",
+      "reason": "final 2-0",
+      "profit": -100,
+      "projected": null
+    },
+    {
+      "id": "v1-legacy-slo-pol",
+      "bucket": "official",
+      "state": "win",
+      "reason": "final 0-3",
+      "profit": 25,
+      "projected": null
+    },
+    {
+      "id": "v1-legacy-heroic-fnatic",
+      "bucket": "reference",
+      "state": "win",
+      "reason": "final 2-1",
+      "profit": 35,
+      "projected": null
+    },
+    {
+      "id": "v1-legacy-fin-fra",
+      "bucket": "reference",
+      "state": "pending",
+      "reason": "試合状態 unknown",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "v1-legacy-kc-xlg",
+      "bucket": "reference",
+      "state": "win",
+      "reason": "final 2-0",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "v1-legacy-gl-k27",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": 67
+    },
+    {
+      "id": "v1-legacy-jsk-barca",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": 12
+    },
+    {
+      "id": "v1-legacy-loud-edg",
+      "bucket": "reference",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    },
+    {
+      "id": "v2-legacy-ge-vit",
+      "bucket": "official",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": 76
+    },
+    {
+      "id": "v2-legacy-loud-edg",
+      "bucket": "reference",
+      "state": "pending",
+      "reason": "試合状態 scheduled",
+      "profit": null,
+      "projected": null
+    }
+  ]
+}

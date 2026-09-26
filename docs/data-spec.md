@@ -1,6 +1,6 @@
 # RMC データ仕様（新構造 v1）
 
-状態：**手順1（仕様とテスト）まで作成済み。** `analysis.html` はまだこの構造を使っていません（手順2以降で並行開発）。
+状態：**手順2（旧データの移行用下書き）まで作成済み。** `data/*.json` は `meta.status = "draft"` で、`analysis.html` はまだこの構造を使っていません。移行の詳細は `migration/README.md` を参照してください。
 
 機械検証できる正式な定義は `schema/*.schema.json` にあり、スキーマで表せないルールは `lib/integrity.js` にあります。この文書はその説明です。
 
@@ -42,11 +42,28 @@
 | `locked` | 事前分析（系統ごとに項目が違う。VALUE①②は `verdict` 必須） |
 | `condition` | VALUE①の条件付きVALUEだけ：`{text, min_odds, met, checked_at}` |
 | `closing_odds` | 試合後に追記してよい |
-| `reevaluations` | 将来モデルの参考再評価。**追記のみ** |
+| `recalculated_reference` | 後から別モデルで再計算した**参考値**（事前確率ではない）。**追記のみ** |
 | `settlement_override` | 自動判定できない場合だけ使う明示的な精算：`{state: win/loss/push/void, reason, set_at, source}` |
-| `flags` | `duplicate_review` / `needs_review` / `legacy_import` / `time_unverified` / `odds_unverified` / `result_unverified` |
+| `flags` | `duplicate_review` / `needs_review` / `legacy_import` / `time_unverified` / `odds_unverified` / `result_unverified` / `lock_unverified` |
+| `legacy` | 旧 analysis.html から移行したカードの出典：`{source, commit, table, row_index, detail_id, data_ts, sort_at, first_seen_at, first_seen_commit, lock_evidence, raw}`。`legacy_import` フラグと必ず対にする。`raw` は旧表示の原文で、計算には使わない |
+
+### 事前値（locked）と確認状態
+
+- **推定確率・EV**（`prob` / `prob_lo` / `prob_hi` / `prob_point` / `ev_lo` / `ev_hi` / `market_gap_lo` / `market_gap_hi`）を持てるのは `locked_at` があるカードだけ（`ESTIMATE_WITHOUT_LOCK`）。
+- 過去カードの事前確率は、次の優先順で決める。
+  1. 試合開始前に保存されたことを確認できる locked 値
+  2. 試合開始前から HTML に保存されていたことを Git 履歴で確認できる値
+  3. どちらも確認できなければ null
+- 確認できない旧データは `locked_at = null` と `lock_unverified` にする。旧値は `legacy.raw.data_locked_prob_unverified` などの原文として残す。
+- 現行モデルで再計算した確率は `recalculated_reference` にだけ置く。
 
 試合開始時刻 `start_at` は `matches.json` 側にある。**日時はすべてタイムゾーン付きISO 8601**（例：`2026-09-26T21:00:00+09:00`）で、オフセットのない値はスキーマ違反になる。
+
+`matches.json` の試合事実に関するルール：
+
+- `start_time_status` は `recorded` / `unverified` / `unknown` のいずれか。`start_at` を持てるのは `recorded` のときだけ（`START_STATUS_MISMATCH`）。仮時刻や未確認の候補は、`start_at` ではなく `start_time_note` に書く。
+- `status` の `unknown` は、開始時刻を過ぎた（または開始時刻不明の）まま結果が記録されていない状態を表す。
+- `result.winners` は、スコアが残っておらず勝者だけ分かる場合（例：第1セット勝利・スコア未確認）に使う。スコアと矛盾すると error（`WINNER_SCORE_CONFLICT`）。
 
 払戻し・純損益・結果記号（○×△）は**保存しない**。スキーマでも保存を禁止している。
 
@@ -91,7 +108,7 @@
 
 - `locked_at` のあるカードは、次の項目を変更できない：`system` / `match_id` / `market` / `selection` / `market_odds` / `odds_taken` / `stake` / `discovered_at` / `run_id` / `locked_at` / `locked` / `live`。`bet_at` を記録済みならそれも変更不可。
 - locked 済みのカードは削除できない。
-- `reevaluations` は追記のみ。一度決めた `condition` も変更できない。
+- `recalculated_reference` は追記のみ。一度決めた `condition` も変更できない。
 - `closing_odds`、`settlement_override`、`flags`、`note` の試合後追記は許可する。
 - `scripts/check-locked.js <基準コミット>` が、直前の data と比べて違反を検出する（GitHub Actions でも実行する）。
 
@@ -109,7 +126,10 @@
 | オッズ | `ODDS_RANGE_UNPARSED` `ODDS_TAKEN_FROM_RANGE` | warning |
 | 条件付き | `CONDITION_NOT_ALLOWED` `CONDITION_MISSING` `CONDITION_UNCHECKED` | error |
 | 条件付き | `CONDITION_CHECKED_AFTER_START` | warning |
-| locked | `LOCKED_FIELD_CHANGED` `LOCKED_PICK_DELETED` `REEVALUATION_REWRITTEN` `CONDITION_CHANGED` | error |
+| locked | `LOCKED_FIELD_CHANGED` `LOCKED_PICK_DELETED` `RECALCULATED_REFERENCE_REWRITTEN` `CONDITION_CHANGED` `LEGACY_RECORD_CHANGED`（旧データ由来のカードは `locked_at` が無くても保護） | error |
+| 事前値 | `ESTIMATE_WITHOUT_LOCK` `LOCK_UNVERIFIED_UNFLAGGED` `LEGACY_FLAG_MISMATCH` | error |
+| 試合事実 | `START_STATUS_MISMATCH` `FINAL_WITHOUT_RESULT` `WINNER_SCORE_CONFLICT` | error |
+| 旧データ | `ODDS_TAKEN_WITHOUT_TIME` と `TIME_LIVE_WITHOUT_BET_AT` は、`legacy_import` の場合だけ warning（記録が無いものを推測で埋めないため） | warning |
 
 ## 9. コマンド
 

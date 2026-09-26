@@ -80,14 +80,14 @@
       "type": "array",
       "uniqueItems": true,
       "items": {
-        "enum": ["duplicate_review", "needs_review", "legacy_import", "time_unverified", "odds_unverified", "result_unverified"]
+        "enum": ["duplicate_review", "needs_review", "legacy_import", "time_unverified", "odds_unverified", "result_unverified", "lock_unverified"]
       }
     },
-    "reevaluation": {
+    "recalculatedReference": {
       "type": "object",
       "required": ["at", "model_version"],
       "additionalProperties": false,
-      "description": "将来モデルによる参考再評価。locked の値は変更せず、ここへ追記だけする。",
+      "description": "後から別モデルで再計算した参考値。事前確率（locked）ではない。locked は変更せず、ここへ追記だけする。",
       "properties": {
         "at": { "$ref": "#/$defs/dateTime" },
         "model_version": { "type": "string", "minLength": 1 },
@@ -105,6 +105,19 @@
         "min_odds": { "$ref": "#/$defs/oddsOrNull" },
         "met": { "type": ["boolean", "null"] },
         "checked_at": { "$ref": "#/$defs/dateTimeOrNull" }
+      }
+    },
+    "fileMeta": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "ファイルの生成情報（移行元・時点）。",
+      "properties": {
+        "generated_by": { "$ref": "#/$defs/stringOrNull" },
+        "legacy_source": { "$ref": "#/$defs/stringOrNull" },
+        "legacy_commit": { "$ref": "#/$defs/stringOrNull" },
+        "as_of": { "$ref": "#/$defs/dateTimeOrNull" },
+        "status": { "enum": ["draft", "active"] },
+        "note": { "$ref": "#/$defs/stringOrNull" }
       }
     },
     "discoveryRun": {
@@ -147,11 +160,31 @@
         "locked": { "type": ["object", "null"] },
         "condition": { "$ref": "#/$defs/condition" },
         "closing_odds": { "$ref": "#/$defs/oddsOrNull" },
-        "reevaluations": { "type": "array", "items": { "$ref": "#/$defs/reevaluation" } },
+        "recalculated_reference": { "type": "array", "items": { "$ref": "#/$defs/recalculatedReference" } },
         "settlement_override": { "$ref": "#/$defs/settlementOverride" },
         "flags": { "$ref": "#/$defs/flags" },
         "detail_ref": { "$ref": "#/$defs/stringOrNull" },
-        "note": { "$ref": "#/$defs/stringOrNull" }
+        "note": { "$ref": "#/$defs/stringOrNull" },
+        "legacy": { "$ref": "#/$defs/legacy" }
+      }
+    },
+    "legacy": {
+      "type": "object",
+      "required": ["source", "commit", "table", "row_index"],
+      "additionalProperties": false,
+      "description": "旧 analysis.html から移行したカードの出典。flags に legacy_import を必ず付ける。raw は旧表示の原文で、計算には使わない。",
+      "properties": {
+        "source": { "const": "analysis.html" },
+        "commit": { "type": "string", "pattern": "^[0-9a-f]{7,40}$" },
+        "table": { "type": "string", "minLength": 1 },
+        "row_index": { "type": "integer", "minimum": 0 },
+        "detail_id": { "$ref": "#/$defs/stringOrNull" },
+        "data_ts": { "$ref": "#/$defs/stringOrNull" },
+        "sort_at": { "$ref": "#/$defs/dateTimeOrNull" },
+        "first_seen_at": { "$ref": "#/$defs/dateTimeOrNull" },
+        "first_seen_commit": { "$ref": "#/$defs/stringOrNull" },
+        "lock_evidence": { "$ref": "#/$defs/stringOrNull" },
+        "raw": { "type": "object" }
       }
     }
   }

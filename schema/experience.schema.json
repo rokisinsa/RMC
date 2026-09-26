@@ -8,6 +8,7 @@
   "additionalProperties": false,
   "properties": {
     "schema_version": { "const": 1 },
+    "meta": { "$ref": "defs.schema.json#/$defs/fileMeta" },
     "system": { "const": "experience" },
     "picks": {
       "type": "array",

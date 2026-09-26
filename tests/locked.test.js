@@ -50,22 +50,22 @@ test("locked 済みカードの削除は error", () => {
   assert.ok(codes(change("value1", "v1-a", (p, file) => { file.picks = file.picks.filter(x => x !== p); })).includes("LOCKED_PICK_DELETED"));
 });
 
-test("将来モデルの再計算は reevaluations へ追記するだけならOK", () => {
+test("将来モデルの再計算は recalculated_reference へ追記するだけならOK", () => {
   const issues = change("recommendations", "rec-r1", p => {
-    p.reevaluations.push({ at: "2026-10-01T06:00:00+09:00", model_version: "6.0", prob: 0.87, note: "参考再評価" });
+    p.recalculated_reference.push({ at: "2026-10-01T06:00:00+09:00", model_version: "6.0", prob: 0.87, note: "参考再評価" });
   });
   assert.deepEqual(issues, []);
 });
 
-test("既存の reevaluations を書き換える・消すのは error", () => {
+test("既存の recalculated_reference を書き換える・消すのは error", () => {
   const before = makeDataset().recommendations;
-  before.picks[0].reevaluations.push({ at: "2026-10-01T06:00:00+09:00", model_version: "6.0", prob: 0.87, note: null });
+  before.picks[0].recalculated_reference.push({ at: "2026-10-01T06:00:00+09:00", model_version: "6.0", prob: 0.87, note: null });
   const edited = structuredClone(before);
-  edited.picks[0].reevaluations[0].prob = 0.95;
-  assert.ok(codes(checkLockedImmutable(before, edited)).includes("REEVALUATION_REWRITTEN"));
+  edited.picks[0].recalculated_reference[0].prob = 0.95;
+  assert.ok(codes(checkLockedImmutable(before, edited)).includes("RECALCULATED_REFERENCE_REWRITTEN"));
   const removed = structuredClone(before);
-  removed.picks[0].reevaluations = [];
-  assert.ok(codes(checkLockedImmutable(before, removed)).includes("REEVALUATION_REWRITTEN"));
+  removed.picks[0].recalculated_reference = [];
+  assert.ok(codes(checkLockedImmutable(before, removed)).includes("RECALCULATED_REFERENCE_REWRITTEN"));
 });
 
 test("試合後の追記（closing_odds・手動精算・フラグ・メモ）は許可", () => {

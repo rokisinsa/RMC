@@ -1,0 +1,1905 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "generated_by": "migration/migrate.js",
+    "legacy_source": "analysis.html",
+    "legacy_commit": "02e5167",
+    "as_of": "2026-09-26T06:45:58+09:00",
+    "status": "draft",
+    "note": "推奨取引：旧RMC（baseline-2026-09-26）からの移行用下書き。analysis.html は未切り替え。"
+  },
+  "system": "recommendations",
+  "discovery_runs": [
+    {
+      "run_id": "rec-legacy-import",
+      "started_at": "2026-09-26T06:45:58+09:00",
+      "slot": "adhoc",
+      "note": "推奨取引：旧RMC（02e5167）からの一括移行用。実際の探索回・探索時刻は記録がない。系統ごとに別の移行用探索回として扱う（他系統と共有しない）"
+    }
+  ],
+  "picks": [
+    {
+      "id": "rec-legacy-log-barca-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-log-barca",
+      "market": "match_1x2",
+      "market_label": "プリメーラディビシオン女子・第5節 / 注目：Barcelona",
+      "selection": "away",
+      "selection_label": "Barcelona",
+      "market_odds": {
+        "text": "公開市場：Barcelona 1.02〜1.05級（直近試合参考）",
+        "min": 1.02,
+        "max": 1.05,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T21:59:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 94,
+        "confidence": "A",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-log-barca-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 0,
+        "detail_id": "detail-log-barca-rec",
+        "data_ts": "2026-09-26T23:30:00+09:00",
+        "sort_at": "2026-09-26T23:30:00+09:00",
+        "first_seen_at": "2026-09-25T21:59:02+09:00",
+        "first_seen_commit": "5167b44",
+        "lock_evidence": "現在の事前値は 5167b44（2026-09-25T21:59:02+09:00）から基準点まで不変。試合開始 2026-09-26T23:30:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 23:30 JST",
+          "market_text": "プリメーラディビシオン女子・第5節 / 注目：Barcelona",
+          "odds_text": "公開市場：Barcelona 1.02〜1.05級（直近試合参考）",
+          "result_text": "未確定",
+          "confidence_text": "A",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-charlton-city-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-cha-mci",
+      "market": "match_1x2",
+      "market_label": "Barclays Women's Super League 2026/27 / 注目：Manchester City",
+      "selection": "away",
+      "selection_label": "Manchester City",
+      "market_odds": {
+        "text": "Man City 1.03〜1.06（公開市場）",
+        "min": 1.03,
+        "max": 1.06,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T21:59:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 93,
+        "confidence": "A-",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-charlton-city-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 1,
+        "detail_id": "detail-charlton-city-rec",
+        "data_ts": "2026-09-26T21:30:00+09:00",
+        "sort_at": "2026-09-26T21:30:00+09:00",
+        "first_seen_at": "2026-09-25T21:59:02+09:00",
+        "first_seen_commit": "5167b44",
+        "lock_evidence": "現在の事前値は 5167b44（2026-09-25T21:59:02+09:00）から基準点まで不変。試合開始 2026-09-26T21:30:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 21:30 JST",
+          "market_text": "Barclays Women's Super League 2026/27 / 注目：Manchester City",
+          "odds_text": "Man City 1.03〜1.06（公開市場）",
+          "result_text": "未確定",
+          "confidence_text": "A-",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-lat-ger-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-27-lat-ger-u21",
+      "market": "match_1x2",
+      "market_label": "UEFA European Under-21 Championship 2027 Qualifying・Group F / 注目：Germany U21",
+      "selection": "away",
+      "selection_label": "Germany U21",
+      "market_odds": {
+        "text": "Germany 1.05〜1.08（公開市場）",
+        "min": 1.05,
+        "max": 1.08,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T21:59:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 92,
+        "confidence": "A",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-lat-ger-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 2,
+        "detail_id": "detail-lat-ger-rec",
+        "data_ts": "2026-09-27T01:00:00+09:00",
+        "sort_at": "2026-09-27T01:00:00+09:00",
+        "first_seen_at": "2026-09-25T21:59:02+09:00",
+        "first_seen_commit": "5167b44",
+        "lock_evidence": "現在の事前値は 5167b44（2026-09-25T21:59:02+09:00）から基準点まで不変。試合開始 2026-09-27T01:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 01:00 JST（現地9/26 18:00 CEST）",
+          "market_text": "UEFA European Under-21 Championship 2027 Qualifying・Group F / 注目：Germany U21",
+          "odds_text": "Germany 1.05〜1.08（公開市場）",
+          "result_text": "未確定",
+          "confidence_text": "A",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-smr-fin-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-27-smr-fin",
+      "market": "match_1x2",
+      "market_label": "UEFA Nations League 2026/27・League C / 注目：Finland",
+      "selection": "away",
+      "selection_label": "Finland",
+      "market_odds": {
+        "text": "Finland 1.07〜1.11（公開市場）",
+        "min": 1.07,
+        "max": 1.11,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T21:59:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 90,
+        "confidence": "A",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-smr-fin-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 3,
+        "detail_id": "detail-smr-fin-rec",
+        "data_ts": "2026-09-27T01:00:00+09:00",
+        "sort_at": "2026-09-27T01:00:00+09:00",
+        "first_seen_at": "2026-09-25T21:59:02+09:00",
+        "first_seen_commit": "5167b44",
+        "lock_evidence": "現在の事前値は 5167b44（2026-09-25T21:59:02+09:00）から基準点まで不変。試合開始 2026-09-27T01:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 01:00 JST（9/26 16:00 UTC）",
+          "market_text": "UEFA Nations League 2026/27・League C / 注目：Finland",
+          "odds_text": "Finland 1.07〜1.11（公開市場）",
+          "result_text": "未確定",
+          "confidence_text": "A",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-ag-lgd-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-ag-lgd",
+      "market": "match_winner",
+      "market_label": "Rainbow Six CNL 2026 Stage 2・Group Stage / BO1 / 注目：All Gamers",
+      "selection": "home",
+      "selection_label": "All Gamers",
+      "market_odds": {
+        "text": "公開ブック価格なし",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": 86,
+        "confidence": "A-",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-ag-lgd-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 4,
+        "detail_id": "detail-ag-lgd-rec",
+        "data_ts": "2026-09-26T18:00:00+09:00",
+        "sort_at": "2026-09-26T18:00:00+09:00",
+        "first_seen_at": "2026-09-25T21:59:02+09:00",
+        "first_seen_commit": "5167b44",
+        "lock_evidence": "現在の事前値は 5167b44（2026-09-25T21:59:02+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "date_and_start_text": "公式ページ表示 09:00（JST換算は再確認中）",
+          "market_text": "Rainbow Six CNL 2026 Stage 2・Group Stage / BO1 / 注目：All Gamers",
+          "odds_text": "公開ブック価格なし",
+          "result_text": "未確定",
+          "confidence_text": "A-",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-fearx-cyb-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-fearx-cybme",
+      "market": "match_winner",
+      "market_label": "Rainbow Six APAC North 2026 Stage 2 / BO1 / 注目：FearX",
+      "selection": "home",
+      "selection_label": "FearX",
+      "market_odds": {
+        "text": "公開ブック価格なし",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": 84,
+        "confidence": "A-",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-fearx-cyb-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 5,
+        "detail_id": "detail-fearx-cyb-rec",
+        "data_ts": "2026-09-26T15:00:00+09:00",
+        "sort_at": "2026-09-26T15:00:00+09:00",
+        "first_seen_at": "2026-09-25T21:59:02+09:00",
+        "first_seen_commit": "5167b44",
+        "lock_evidence": "現在の事前値は 5167b44（2026-09-25T21:59:02+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "date_and_start_text": "開始時刻：公開ソース間差異あり・再確認中",
+          "market_text": "Rainbow Six APAC North 2026 Stage 2 / BO1 / 注目：FearX",
+          "odds_text": "公開ブック価格なし",
+          "result_text": "未確定",
+          "confidence_text": "A-",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-tmt-rrx-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-tmt-rrx",
+      "market": "match_winner",
+      "market_label": "Rainbow Six APAC North 2026 Stage 2 / 注目：RRX",
+      "selection": "away",
+      "selection_label": "RRX",
+      "market_odds": {
+        "text": "公開ブック価格なし",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": 65,
+        "confidence": "B",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified",
+        "odds_unverified"
+      ],
+      "detail_ref": "detail-tmt-rrx-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 6,
+        "detail_id": "detail-tmt-rrx-rec",
+        "data_ts": "2026-09-26T18:00:00+09:00",
+        "sort_at": "2026-09-26T18:00:00+09:00",
+        "first_seen_at": "2026-09-25T21:59:02+09:00",
+        "first_seen_commit": "5167b44",
+        "lock_evidence": "現在の事前値は 5167b44（2026-09-25T21:59:02+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "date_and_start_text": "開始時刻：公開ソース間差異あり・再確認中",
+          "market_text": "Rainbow Six APAC North 2026 Stage 2 / 注目：RRX",
+          "odds_text": "公開ブック価格なし",
+          "result_text": "未確定",
+          "confidence_text": "B",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-kaz-uzb-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-kaz-uzb",
+      "market": "match_1x2",
+      "market_label": "愛知・名古屋2026アジア競技大会 / 注目：カザフスタン",
+      "selection": "home",
+      "selection_label": "カザフスタン",
+      "market_odds": {
+        "text": "公開Webで未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T21:26:29+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 82,
+        "confidence": "B",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified"
+      ],
+      "detail_ref": "detail-kaz-uzb-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 7,
+        "detail_id": "detail-kaz-uzb-rec",
+        "data_ts": "2026-09-26T12:30:00+09:00",
+        "sort_at": "2026-09-26T12:30:00+09:00",
+        "first_seen_at": "2026-09-25T21:26:29+09:00",
+        "first_seen_commit": "6a2fffa",
+        "lock_evidence": "現在の事前値は 6a2fffa（2026-09-25T21:26:29+09:00）から基準点まで不変。試合開始 2026-09-26T12:30:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 12:30 JST",
+          "market_text": "愛知・名古屋2026アジア競技大会 / 注目：カザフスタン",
+          "odds_text": "公開Webで未確認",
+          "result_text": "未確定",
+          "confidence_text": "B",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-china-hk-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-chn-hkg",
+      "market": "match_1x2",
+      "market_label": "愛知・名古屋2026アジア競技大会 / 注目：中国",
+      "selection": "home",
+      "selection_label": "中国",
+      "market_odds": {
+        "text": "公開Webで未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T21:26:29+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 91,
+        "confidence": "A-",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified"
+      ],
+      "detail_ref": "detail-china-hk-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 8,
+        "detail_id": "detail-china-hk-rec",
+        "data_ts": "2026-09-26T15:00:00+09:00",
+        "sort_at": "2026-09-26T15:00:00+09:00",
+        "first_seen_at": "2026-09-25T21:26:29+09:00",
+        "first_seen_commit": "6a2fffa",
+        "lock_evidence": "現在の事前値は 6a2fffa（2026-09-25T21:26:29+09:00）から基準点まで不変。試合開始 2026-09-26T15:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 15:00 JST",
+          "market_text": "愛知・名古屋2026アジア競技大会 / 注目：中国",
+          "odds_text": "公開Webで未確認",
+          "result_text": "未確定",
+          "confidence_text": "A-",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-kor-vie-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-kor-vie",
+      "market": "match_1x2",
+      "market_label": "愛知・名古屋2026アジア競技大会 / 注目：韓国",
+      "selection": "home",
+      "selection_label": "韓国",
+      "market_odds": {
+        "text": "公開Webで未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T21:26:29+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 93,
+        "confidence": "A-",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified"
+      ],
+      "detail_ref": "detail-kor-vie-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 9,
+        "detail_id": "detail-kor-vie-rec",
+        "data_ts": "2026-09-26T17:30:00+09:00",
+        "sort_at": "2026-09-26T17:30:00+09:00",
+        "first_seen_at": "2026-09-25T21:26:29+09:00",
+        "first_seen_commit": "6a2fffa",
+        "lock_evidence": "現在の事前値は 6a2fffa（2026-09-25T21:26:29+09:00）から基準点まで不変。試合開始 2026-09-26T17:30:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 17:30 JST",
+          "market_text": "愛知・名古屋2026アジア競技大会 / 注目：韓国",
+          "odds_text": "公開Webで未確認",
+          "result_text": "未確定",
+          "confidence_text": "A-",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-jpn-nep-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-jpn-nep",
+      "market": "match_winner",
+      "market_label": "愛知・名古屋2026アジア競技大会・男子クリケットT20 / 注目：ネパール",
+      "selection": "away",
+      "selection_label": "ネパール",
+      "market_odds": {
+        "text": "公開Webで未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T21:26:29+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 87,
+        "confidence": "B+",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified"
+      ],
+      "detail_ref": "detail-jpn-nep-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 10,
+        "detail_id": "detail-jpn-nep-rec",
+        "data_ts": "2026-09-26T09:00:00+09:00",
+        "sort_at": "2026-09-26T09:00:00+09:00",
+        "first_seen_at": "2026-09-25T21:26:29+09:00",
+        "first_seen_commit": "6a2fffa",
+        "lock_evidence": "現在の事前値は 6a2fffa（2026-09-25T21:26:29+09:00）から基準点まで不変。試合開始 2026-09-26T09:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 09:00 JST",
+          "market_text": "愛知・名古屋2026アジア競技大会・男子クリケットT20 / 注目：ネパール",
+          "odds_text": "公開Webで未確認",
+          "result_text": "未確定",
+          "confidence_text": "B+",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-log-barca",
+      "system": "recommendations",
+      "match_id": "2026-09-26-log-barca",
+      "market": "match_1x2",
+      "market_label": "プリメーラディビシオン女子・第5節 / Barcelona勝者",
+      "selection": "away",
+      "selection_label": "Barcelona",
+      "market_odds": {
+        "text": "1.03〜1.06",
+        "min": 1.03,
+        "max": 1.06,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T22:09:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 94,
+        "confidence": "A",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-log-barca",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 11,
+        "detail_id": "detail-log-barca",
+        "data_ts": "2026-09-26T23:30:00+09:00",
+        "sort_at": "2026-09-26T23:30:00+09:00",
+        "first_seen_at": "2026-09-25T22:09:02+09:00",
+        "first_seen_commit": "889f37b",
+        "lock_evidence": "現在の事前値は 889f37b（2026-09-25T22:09:02+09:00）から基準点まで不変。試合開始 2026-09-26T23:30:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 23:30 JST",
+          "market_text": "プリメーラディビシオン女子・第5節 / Barcelona勝者",
+          "odds_text": "1.03〜1.06",
+          "result_text": "未確定",
+          "confidence_text": "A",
+          "data_status": "open",
+          "stake_history": [
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-lat-ger",
+      "system": "recommendations",
+      "match_id": "2026-09-27-lat-ger-u21",
+      "market": "match_1x2",
+      "market_label": "UEFA European Under-21 Championship 2027 Qualifying・Group F / Germany勝者",
+      "selection": "away",
+      "selection_label": "Germany U21",
+      "market_odds": {
+        "text": "1.04〜1.09",
+        "min": 1.04,
+        "max": 1.09,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T22:09:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 93,
+        "confidence": "A",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-lat-ger",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 12,
+        "detail_id": "detail-lat-ger",
+        "data_ts": "2026-09-27T01:00:00+09:00",
+        "sort_at": "2026-09-27T01:00:00+09:00",
+        "first_seen_at": "2026-09-25T22:09:02+09:00",
+        "first_seen_commit": "889f37b",
+        "lock_evidence": "現在の事前値は 889f37b（2026-09-25T22:09:02+09:00）から基準点まで不変。試合開始 2026-09-27T01:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 01:00 JST",
+          "market_text": "UEFA European Under-21 Championship 2027 Qualifying・Group F / Germany勝者",
+          "odds_text": "1.04〜1.09",
+          "result_text": "未確定",
+          "confidence_text": "A",
+          "data_status": "open",
+          "stake_history": [
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-cha-mci",
+      "system": "recommendations",
+      "match_id": "2026-09-26-cha-mci",
+      "market": "match_1x2",
+      "market_label": "Barclays Women's Super League 2026/27 / Manchester City勝者",
+      "selection": "away",
+      "selection_label": "Manchester City",
+      "market_odds": {
+        "text": "精査中",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T22:09:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 91,
+        "confidence": "A-",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-cha-mci",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 13,
+        "detail_id": "detail-cha-mci",
+        "data_ts": "2026-09-26T21:30:00+09:00",
+        "sort_at": "2026-09-26T21:30:00+09:00",
+        "first_seen_at": "2026-09-25T22:09:02+09:00",
+        "first_seen_commit": "889f37b",
+        "lock_evidence": "現在の事前値は 889f37b（2026-09-25T22:09:02+09:00）から基準点まで不変。試合開始 2026-09-26T21:30:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 21:30 JST",
+          "market_text": "Barclays Women's Super League 2026/27 / Manchester City勝者",
+          "odds_text": "精査中",
+          "result_text": "未確定",
+          "confidence_text": "A-",
+          "data_status": "open",
+          "stake_history": [
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-smr-fin",
+      "system": "recommendations",
+      "match_id": "2026-09-27-smr-fin",
+      "market": "match_1x2",
+      "market_label": "UEFA Nations League 2026/27・League C / Finland勝者",
+      "selection": "away",
+      "selection_label": "Finland",
+      "market_odds": {
+        "text": "約1.10",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T22:09:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 90,
+        "confidence": "A",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-smr-fin",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 14,
+        "detail_id": "detail-smr-fin",
+        "data_ts": "2026-09-27T01:00:00+09:00",
+        "sort_at": "2026-09-27T01:00:00+09:00",
+        "first_seen_at": "2026-09-25T22:09:02+09:00",
+        "first_seen_commit": "889f37b",
+        "lock_evidence": "現在の事前値は 889f37b（2026-09-25T22:09:02+09:00）から基準点まで不変。試合開始 2026-09-27T01:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 01:00 JST",
+          "market_text": "UEFA Nations League 2026/27・League C / Finland勝者",
+          "odds_text": "約1.10",
+          "result_text": "未確定",
+          "confidence_text": "A",
+          "data_status": "open",
+          "stake_history": [
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-faze-furia-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-27-faze-furia",
+      "market": "match_winner",
+      "market_label": "Rainbow Six South America League 2026 Stage 2 / FaZe",
+      "selection": "home",
+      "selection_label": "FaZe Clan",
+      "market_odds": {
+        "text": "未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T22:09:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 84,
+        "confidence": "A",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified"
+      ],
+      "detail_ref": "detail-faze-furia-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 15,
+        "detail_id": "detail-faze-furia-rec",
+        "data_ts": "2026-09-27T04:45:00+09:00",
+        "sort_at": "2026-09-27T04:45:00+09:00",
+        "first_seen_at": "2026-09-25T21:26:29+09:00",
+        "first_seen_commit": "6a2fffa",
+        "lock_evidence": "現在の事前値は 889f37b（2026-09-25T22:09:02+09:00）から基準点まで不変。試合開始 2026-09-27T04:45:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 04:45 JST",
+          "market_text": "Rainbow Six South America League 2026 Stage 2 / FaZe",
+          "odds_text": "未確認",
+          "result_text": "未確定",
+          "confidence_text": "A",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-fearx",
+      "system": "recommendations",
+      "match_id": "2026-09-26-fearx-cybme",
+      "market": "match_winner",
+      "market_label": "Rainbow Six APAC North 2026 Stage 2 / FearX",
+      "selection": "home",
+      "selection_label": "FearX",
+      "market_odds": {
+        "text": "未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": 83,
+        "confidence": "A-",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-fearx",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 16,
+        "detail_id": "detail-fearx",
+        "data_ts": "2026-09-26T00:00:00+09:00",
+        "sort_at": null,
+        "first_seen_at": "2026-09-25T22:09:02+09:00",
+        "first_seen_commit": "889f37b",
+        "lock_evidence": "現在の事前値は 889f37b（2026-09-25T22:09:02+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "date_and_start_text": "試合開始 時刻照合中 JST",
+          "market_text": "Rainbow Six APAC North 2026 Stage 2 / FearX",
+          "odds_text": "未確認",
+          "result_text": "未確定",
+          "confidence_text": "A-",
+          "data_status": "open",
+          "stake_history": [
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-loud-edg-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-loud-edg",
+      "market": "match_winner",
+      "market_label": "VALORANT Champions 2026・Group Stage / LOUD",
+      "selection": "home",
+      "selection_label": "LOUD",
+      "market_odds": {
+        "text": "1.37〜1.43",
+        "min": 1.37,
+        "max": 1.43,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T22:09:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 77,
+        "confidence": "A-",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified"
+      ],
+      "detail_ref": "detail-loud-edg-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 17,
+        "detail_id": "detail-loud-edg-rec",
+        "data_ts": "2026-09-26T21:00:00+09:00",
+        "sort_at": "2026-09-26T21:00:00+09:00",
+        "first_seen_at": "2026-09-25T21:26:29+09:00",
+        "first_seen_commit": "6a2fffa",
+        "lock_evidence": "現在の事前値は 889f37b（2026-09-25T22:09:02+09:00）から基準点まで不変。試合開始 2026-09-26T21:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 21:00 JST",
+          "market_text": "VALORANT Champions 2026・Group Stage / LOUD",
+          "odds_text": "1.37〜1.43",
+          "result_text": "未確定",
+          "confidence_text": "A-",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-ge-vit-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-26-ge-vit",
+      "market": "match_winner",
+      "market_label": "VALORANT Champions 2026・Group Stage / Vitality",
+      "selection": "away",
+      "selection_label": "Team Vitality",
+      "market_odds": {
+        "text": "1.76〜1.78",
+        "min": 1.76,
+        "max": 1.78,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T22:09:02+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 68,
+        "confidence": "B+",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified"
+      ],
+      "detail_ref": "detail-ge-vit-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 18,
+        "detail_id": "detail-ge-vit-rec",
+        "data_ts": "2026-09-26T18:00:00+09:00",
+        "sort_at": "2026-09-26T18:00:00+09:00",
+        "first_seen_at": "2026-09-25T21:26:29+09:00",
+        "first_seen_commit": "6a2fffa",
+        "lock_evidence": "現在の事前値は 889f37b（2026-09-25T22:09:02+09:00）から基準点まで不変。試合開始 2026-09-26T18:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 18:00 JST",
+          "market_text": "VALORANT Champions 2026・Group Stage / Vitality",
+          "odds_text": "1.76〜1.78",
+          "result_text": "未確定",
+          "confidence_text": "B+",
+          "data_status": "open",
+          "stake_history": [
+            "0",
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-ag-lgd",
+      "system": "recommendations",
+      "match_id": "2026-09-26-ag-lgd",
+      "market": "match_winner",
+      "market_label": "Rainbow Six CNL 2026 Stage 2・Group Stage / All Gamers",
+      "selection": "home",
+      "selection_label": "All Gamers",
+      "market_odds": {
+        "text": "未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": 68,
+        "confidence": "B+",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified",
+        "odds_unverified",
+        "duplicate_review"
+      ],
+      "detail_ref": "detail-ag-lgd",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 19,
+        "detail_id": "detail-ag-lgd",
+        "data_ts": "2026-09-26T00:01:00+09:00",
+        "sort_at": null,
+        "first_seen_at": "2026-09-25T22:09:02+09:00",
+        "first_seen_commit": "889f37b",
+        "lock_evidence": "現在の事前値は 889f37b（2026-09-25T22:09:02+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "date_and_start_text": "試合開始 時刻照合中 JST",
+          "market_text": "Rainbow Six CNL 2026 Stage 2・Group Stage / All Gamers",
+          "odds_text": "未確認",
+          "result_text": "未確定",
+          "confidence_text": "B+",
+          "data_status": "open",
+          "stake_history": [
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-prz-rin",
+      "system": "recommendations",
+      "match_id": "2026-09-22-prz-rin",
+      "market": "match_winner",
+      "market_label": "ATP Challenger Saint-Tropez 2026 / 勝者：プリズミッチ、ディノ",
+      "selection": "home",
+      "selection_label": "プリズミッチ、ディノ",
+      "market_odds": null,
+      "odds_taken": 1.19,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 20,
+        "detail_id": null,
+        "data_ts": "2026-09-22T15:00:00+09:00",
+        "sort_at": "2026-09-22T15:00:00+09:00",
+        "first_seen_at": "2026-09-25T12:50:18+09:00",
+        "first_seen_commit": "296a7b1",
+        "lock_evidence": "現在の事前値は 296a7b1（2026-09-25T12:50:18+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "date_and_start_text": "試合開始時刻 未確認",
+          "market_text": "ATP Challenger Saint-Tropez 2026 / 勝者：プリズミッチ、ディノ",
+          "odds_text": "1.19",
+          "result_text": "プリズミッチ 2-0（6-4 / 6-3）",
+          "confidence_text": "—",
+          "data_status": "win",
+          "stake_history": [
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-spain-czech-rec",
+      "system": "recommendations",
+      "match_id": "2026-09-25-esp-cze",
+      "market": "match_winner",
+      "market_label": "2026 Billie Jean King Cup Finals / 推奨：チェコ勝者",
+      "selection": "away",
+      "selection_label": "チェコ",
+      "market_odds": null,
+      "odds_taken": 1.14,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T13:07:33+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import"
+      ],
+      "detail_ref": "detail-spain-czech-rec",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 21,
+        "detail_id": "detail-spain-czech-rec",
+        "data_ts": "2026-09-25T12:31:00+09:00",
+        "sort_at": "2026-09-25T12:31:00+09:00",
+        "first_seen_at": "2026-09-25T13:07:33+09:00",
+        "first_seen_commit": "d559623",
+        "lock_evidence": "現在の事前値は d559623（2026-09-25T13:07:33+09:00）から基準点まで不変。試合開始 2026-09-25T18:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 18:00 JST",
+          "market_text": "2026 Billie Jean King Cup Finals / 推奨：チェコ勝者",
+          "odds_text": "1.14",
+          "result_text": "未確定",
+          "confidence_text": "—",
+          "data_status": "open",
+          "stake_history": [
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-china-maldives",
+      "system": "recommendations",
+      "match_id": "2026-09-24-chn-mdv",
+      "market": "first_half_1x2",
+      "market_label": "前半1X2：中国 / 前半17分頃・0-0でベット",
+      "selection": "home",
+      "selection_label": "中国（前半）",
+      "market_odds": null,
+      "odds_taken": 1.27,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "live": true,
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified"
+      ],
+      "detail_ref": "detail-china-maldives",
+      "note": "旧表記「前半17分頃・0-0でベット」のライブ取引。投入時刻の正確な記録なし",
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 22,
+        "detail_id": "detail-china-maldives",
+        "data_ts": "2026-09-24T20:35:00+09:00",
+        "sort_at": "2026-09-24T20:35:00+09:00",
+        "first_seen_at": "2026-09-24T05:17:00+09:00",
+        "first_seen_commit": "1d6f0d9",
+        "lock_evidence": "現在の事前値の保存は 8b76b88（2026-09-25T12:58:18+09:00）で、試合開始 2026-09-24T20:35:00+09:00 より後",
+        "raw": {
+          "date_and_start_text": "試合開始 20:35 JST",
+          "market_text": "前半1X2：中国 / 前半17分頃・0-0でベット",
+          "odds_text": "1.27",
+          "result_text": "前半 0-0",
+          "confidence_text": "—",
+          "data_status": "loss",
+          "stake_history": [
+            "0",
+            "100",
+            "300"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-sak-hib",
+      "system": "recommendations",
+      "match_id": "2026-09-24-sak-hib",
+      "market": "match_winner",
+      "market_label": "勝者：サッカリ、マリア",
+      "selection": "home",
+      "selection_label": "サッカリ、マリア",
+      "market_odds": null,
+      "odds_taken": 1.18,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 23,
+        "detail_id": null,
+        "data_ts": "2026-09-24T04:40:00+09:00",
+        "sort_at": "2026-09-24T04:40:00+09:00",
+        "first_seen_at": "2026-09-24T04:53:44+09:00",
+        "first_seen_commit": "d8feefc",
+        "lock_evidence": "現在の事前値は d8feefc（2026-09-24T04:53:44+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "date_and_start_text": "試合開始時刻 未確認",
+          "market_text": "勝者：サッカリ、マリア",
+          "odds_text": "1.18",
+          "result_text": "サッカリ 2-0（日比野 7-5 / 6-1）",
+          "confidence_text": "—",
+          "data_status": "win",
+          "stake_history": [
+            "300",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-oddik-procyon",
+      "system": "recommendations",
+      "match_id": "2026-09-24-oddik-procyon",
+      "market": "match_winner",
+      "market_label": "BO3 勝者：ODDIK",
+      "selection": "home",
+      "selection_label": "ODDIK",
+      "market_odds": null,
+      "odds_taken": 1.24,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-24T04:23:20+09:00",
+      "locked": {
+        "prob": 0.7542,
+        "gap_score": null,
+        "confidence": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [
+        {
+          "at": "2026-09-26T06:45:58+09:00",
+          "model_version": "5.1",
+          "prob": 0.754,
+          "note": "旧analysis.js v5.1 の bayesEstimate で再計算した参考値。事前確率ではない"
+        }
+      ],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "time_unverified"
+      ],
+      "detail_ref": "detail-oddik-procyon",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 24,
+        "detail_id": "detail-oddik-procyon",
+        "data_ts": "2026-09-24T03:47:00",
+        "sort_at": "2026-09-24T03:47:00+09:00",
+        "first_seen_at": "2026-09-24T04:23:20+09:00",
+        "first_seen_commit": "a136f57",
+        "lock_evidence": "現在の事前値は a136f57（2026-09-24T04:23:20+09:00）から基準点まで不変。試合開始 2026-09-24T06:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 9/24 06:00 JST",
+          "market_text": "BO3 勝者：ODDIK",
+          "odds_text": "1.24",
+          "result_text": "Procyon 2-0 ODDIK",
+          "confidence_text": "—",
+          "data_status": "loss",
+          "stake_history": [
+            "270",
+            "100"
+          ],
+          "static_probability_text": "ODDIK 75.4%",
+          "data_locked_prob": 0.7542
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-lyon",
+      "system": "recommendations",
+      "match_id": "2026-09-23-ser-lyo",
+      "market": "first_half_1x2",
+      "market_label": "前半1X2：オリンピック・リヨン",
+      "selection": "away",
+      "selection_label": "オリンピック・リヨン（前半）",
+      "market_odds": null,
+      "odds_taken": 1.12,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [
+        {
+          "at": "2026-09-26T06:45:58+09:00",
+          "model_version": "5.1",
+          "prob": 0.9103,
+          "note": "旧analysis.js v5.1 の bayesEstimate で再計算した参考値。事前確率ではない"
+        }
+      ],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified"
+      ],
+      "detail_ref": "detail-lyon",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 25,
+        "detail_id": "detail-lyon",
+        "data_ts": "2026-09-23T12:13:00",
+        "sort_at": "2026-09-23T12:13:00+09:00",
+        "first_seen_at": "2026-09-23T22:37:41+09:00",
+        "first_seen_commit": "01656a4",
+        "lock_evidence": "現在の事前値は 58bebb7（2026-09-23T23:13:05+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "date_and_start_text": "試合開始時刻 未確認",
+          "market_text": "前半1X2：オリンピック・リヨン",
+          "odds_text": "1.12",
+          "result_text": "前半 0-4",
+          "confidence_text": "—",
+          "data_status": "win",
+          "stake_history": [
+            "300",
+            "100"
+          ],
+          "static_probability_text": "87.0%",
+          "data_locked_prob_unverified": 0.922
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-italy",
+      "system": "recommendations",
+      "match_id": "2026-09-23-ita-fin",
+      "market": "set1_winner",
+      "market_label": "第1セット勝者：イタリア",
+      "selection": "home",
+      "selection_label": "イタリア（第1セット）",
+      "market_odds": null,
+      "odds_taken": 1.23,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [
+        {
+          "at": "2026-09-26T06:45:58+09:00",
+          "model_version": "5.1",
+          "prob": 0.7993,
+          "note": "旧analysis.js v5.1 の bayesEstimate で再計算した参考値。事前確率ではない"
+        }
+      ],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified"
+      ],
+      "detail_ref": "detail-italy",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 26,
+        "detail_id": "detail-italy",
+        "data_ts": "2026-09-22T21:56:00",
+        "sort_at": "2026-09-22T21:56:00+09:00",
+        "first_seen_at": "2026-09-23T22:37:41+09:00",
+        "first_seen_commit": "01656a4",
+        "lock_evidence": "現在の事前値は 58bebb7（2026-09-23T23:13:05+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "date_and_start_text": "試合開始時刻 未確認",
+          "market_text": "第1セット勝者：イタリア",
+          "odds_text": "1.23",
+          "result_text": "第1S 勝利（スコア未確認）",
+          "confidence_text": "—",
+          "data_status": "win",
+          "stake_history": [
+            "300",
+            "100"
+          ],
+          "static_probability_text": "イタリア 85.5%",
+          "data_locked_prob_unverified": 0.802
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-cs2",
+      "system": "recommendations",
+      "match_id": "2026-09-23-dam-bh",
+      "market": "map1_winner",
+      "market_label": "第1マップ勝者：Bounty Hunters",
+      "selection": "away",
+      "selection_label": "Bounty Hunters（第1マップ）",
+      "market_odds": null,
+      "odds_taken": 1.13,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [
+        {
+          "at": "2026-09-26T06:45:58+09:00",
+          "model_version": "5.1",
+          "prob": 0.885,
+          "note": "旧analysis.js v5.1 の bayesEstimate で再計算した参考値。事前確率ではない"
+        }
+      ],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified"
+      ],
+      "detail_ref": "detail-cs2",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 27,
+        "detail_id": "detail-cs2",
+        "data_ts": "2026-09-22T21:42:00",
+        "sort_at": "2026-09-22T21:42:00+09:00",
+        "first_seen_at": "2026-09-23T22:37:41+09:00",
+        "first_seen_commit": "01656a4",
+        "lock_evidence": "現在の事前値の保存は 5546658（2026-09-23T23:02:30+09:00）で、試合開始 2026-09-23T05:55:00+09:00 より後",
+        "raw": {
+          "date_and_start_text": "試合開始 9/23 05:55 JST",
+          "market_text": "第1マップ勝者：Bounty Hunters",
+          "odds_text": "1.13",
+          "result_text": "Map1 6-13",
+          "confidence_text": "—",
+          "data_status": "win",
+          "stake_history": [
+            "300",
+            "100"
+          ],
+          "static_probability_text": "86.5%"
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-cor",
+      "system": "recommendations",
+      "match_id": "2026-09-22-cor-bah",
+      "market": "dnb",
+      "market_label": "ドローノーベット：コリンチャンス",
+      "selection": "home",
+      "selection_label": "コリンチャンス（DNB）",
+      "market_odds": null,
+      "odds_taken": 1.11,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [
+        {
+          "at": "2026-09-26T06:45:58+09:00",
+          "model_version": "5.1",
+          "prob": 0.9492,
+          "note": "旧analysis.js v5.1 の bayesEstimate で再計算した参考値。事前確率ではない"
+        }
+      ],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified"
+      ],
+      "detail_ref": "detail-cor",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 28,
+        "detail_id": "detail-cor",
+        "data_ts": "2026-09-22T02:07:00",
+        "sort_at": "2026-09-22T02:07:00+09:00",
+        "first_seen_at": "2026-09-23T22:37:41+09:00",
+        "first_seen_commit": "01656a4",
+        "lock_evidence": "現在の事前値の保存は 5546658（2026-09-23T23:02:30+09:00）で、試合開始 2026-09-22T09:30:00+09:00 より後",
+        "raw": {
+          "date_and_start_text": "試合開始 09:30 JST",
+          "market_text": "ドローノーベット：コリンチャンス",
+          "odds_text": "1.11",
+          "result_text": "1-0",
+          "confidence_text": "—",
+          "data_status": "win",
+          "stake_history": [
+            "300",
+            "100"
+          ],
+          "static_probability_text": "92.0%"
+        }
+      }
+    },
+    {
+      "id": "rec-legacy-tun",
+      "system": "recommendations",
+      "match_id": "2026-09-21-tun-rwa",
+      "market": "set1_winner",
+      "market_label": "第1セット勝者：チュニジア",
+      "selection": "home",
+      "selection_label": "チュニジア（第1セット）",
+      "market_odds": null,
+      "odds_taken": 1.17,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "rec-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [
+        {
+          "at": "2026-09-26T06:45:58+09:00",
+          "model_version": "5.1",
+          "prob": 0.8836,
+          "note": "旧analysis.js v5.1 の bayesEstimate で再計算した参考値。事前確率ではない"
+        }
+      ],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified"
+      ],
+      "detail_ref": "detail-tun",
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "resultTable",
+        "row_index": 29,
+        "detail_id": "detail-tun",
+        "data_ts": "2026-09-21T21:39:00",
+        "sort_at": "2026-09-21T21:39:00+09:00",
+        "first_seen_at": "2026-09-23T22:37:41+09:00",
+        "first_seen_commit": "01656a4",
+        "lock_evidence": "現在の事前値は 5546658（2026-09-23T23:02:30+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "date_and_start_text": "試合開始時刻 未確認",
+          "market_text": "第1セット勝者：チュニジア",
+          "odds_text": "1.17",
+          "result_text": "第1S 25-13",
+          "confidence_text": "—",
+          "data_status": "win",
+          "stake_history": [
+            "300",
+            "100"
+          ],
+          "static_probability_text": "86.0%"
+        }
+      }
+    }
+  ]
+}

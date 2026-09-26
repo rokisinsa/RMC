@@ -1,0 +1,181 @@
+// 手順2：旧 analysis.html（baseline-2026-09-26 = 02e5167）の各行を、試合事実とカードへ対応付ける手作業の対応表。
+//
+// 方針
+// - ここに書くのは旧HTML・Git履歴に記録されている事実だけ。推測で補わない。
+// - 開始時刻は、旧HTMLの最終状態が明示している場合だけ recorded。未確認・候補のみは null（start_time_note に根拠）。
+// - home/away は旧表記「A vs B」の並び（A=home, B=away）。中立地開催でも表記順に従う。
+// - 結果は旧HTMLの最終状態を採用。途中で別の記録があった場合は flags と note に残す。
+
+const JST = "+09:00";
+
+// ── 試合事実 ─────────────────────────────────────────────
+// status: 基準時点（2026-09-26 06:45:58 JST）で開始前なら scheduled、開始済みor開始不明で結果未記録なら unknown
+export const MATCHES = [
+  // 推奨取引（旧来分）
+  { id: "2026-09-21-tun-rwa", sport: "男子バレー", competition: null, home: "チュニジア", away: "ルワンダ",
+    start: null, start_time_status: "unverified", start_time_note: "旧HTMLは「試合開始時刻 未確認」。9/25 20:49 の一時記録「9/22 02:00 JST」は2分後に取り消し",
+    status: "final", result: { periods: { set1: { home: 25, away: 13 } }, text: "第1S 25-13" } },
+  { id: "2026-09-22-cor-bah", sport: "女子サッカー", competition: "ブラジル女子A1", home: "SCコリンチャンスSP", away: "ECバイーアBA",
+    start: `2026-09-22T09:30:00${JST}`, status: "final", result: { final: { home: 1, away: 0 }, text: "1-0" } },
+  { id: "2026-09-22-prz-rin", sport: "男子テニス", competition: "ATP Challenger Saint-Tropez 2026", home: "プリズミッチ、ディノ", away: "リンコン、ダニエル",
+    start: null, start_time_status: "unverified", start_time_note: "旧HTMLは「試合開始時刻 未確認」。一時記録「17:00 JST」は取り消し済み",
+    status: "final", result: { final: { home: 2, away: 0 }, text: "プリズミッチ 2-0（6-4 / 6-3）" } },
+  { id: "2026-09-23-dam-bh", sport: "CS2", competition: null, home: "DAMAJUANA", away: "Bounty Hunters Esports",
+    start: `2026-09-23T05:55:00${JST}`, status: "final", result: { periods: { map1: { home: 6, away: 13 } }, text: "Map1 6-13" } },
+  { id: "2026-09-23-ita-fin", sport: "男子バレー", competition: null, home: "イタリア", away: "フィンランド",
+    start: null, start_time_status: "unverified",
+    start_time_note: "旧HTMLは「試合開始時刻 未確認」。候補：9/25 20:49 の一時記録「9/24 04:05 JST」（2分後に取り消し）、analysis.js の eventDate 2026-09-23T21:05:00+02:00",
+    status: "final", result: { winners: { set1: "home" }, text: "第1S 勝利（スコア未確認）" } },
+  { id: "2026-09-23-ser-lyo", sport: "女子サッカー", competition: null, home: "セルヴェットFC", away: "オリンピック・リヨン",
+    start: null, start_time_status: "unverified",
+    start_time_note: "旧HTMLは「試合開始時刻 未確認」。候補：9/25 20:49 の一時記録「9/24 01:45 JST」（2分後に取り消し）",
+    status: "final", result: { periods: { ht: { home: 0, away: 4 } }, text: "前半 0-4" } },
+  { id: "2026-09-24-oddik-procyon", sport: "CS2", competition: "ESL Challenger League Season 52 South America Cup #2", home: "ODDIK", away: "Procyon",
+    start: `2026-09-24T06:00:00${JST}`,
+    start_time_note: "旧HTMLは「試合開始 9/24 06:00 JST」（9/25 20:49 に 06:15 と記録後、2分後に修正）。analysis.js の eventDate は 2026-09-24T06:00:00-03:00 で矛盾",
+    flags: ["needs_review"],
+    status: "final", result: { final: { home: 0, away: 2 }, periods: { map1: { home: 4, away: 13 } }, text: "Procyon 2-0 ODDIK（Dust2 13-4 / Anubis 13-3）" } },
+  { id: "2026-09-24-sak-hib", sport: "女子テニス", competition: null, home: "サッカリ、マリア", away: "日比野、菜緒",
+    start: null, start_time_status: "unverified", start_time_note: "旧HTMLは「試合開始時刻 未確認」。一時記録「12:00 JST」は取り消し済み",
+    status: "final", result: { final: { home: 2, away: 0 }, text: "サッカリ 2-0（日比野 7-5 / 6-1）" } },
+  { id: "2026-09-24-chn-mdv", sport: "男子サッカー", competition: "国際親善試合", home: "中国", away: "モルディブ",
+    start: `2026-09-24T20:35:00${JST}`, status: "final",
+    result: { final: { home: 3, away: 0 }, periods: { ht: { home: 0, away: 0 } }, text: "前半 0-0 / 試合 3-0（分析メモ記載）" } },
+  { id: "2026-09-25-esp-cze", sport: "女子テニス", competition: "2026 Billie Jean King Cup Finals", home: "スペイン", away: "チェコ",
+    start: `2026-09-25T18:00:00${JST}`, status: "unknown", result: null },
+
+  // 経験値取引
+  { id: "2026-09-25-ish-ita", sport: "女子テニス", competition: "ITF W50 七尾", home: "石井さやか", away: "板谷莉央",
+    start: `2026-09-25T11:00:00${JST}`, start_time_note: "履歴上 11:00 → 11:30 → 11:00 と変遷",
+    status: "final", result: { final: { home: 2, away: 0 }, text: "石井さやか 2-0（6-2 / 6-0）" } },
+  { id: "2026-09-25-prz-gri", sport: "男子テニス", competition: "ATP Challenger Saint-Tropez", home: "ディノ・プリズミッチ", away: "ダニエル・グリン",
+    start: `2026-09-25T23:40:00${JST}`, status: "unknown", result: null },
+  { id: "2026-09-26-hos-oze", sport: "女子テニス", competition: "W50 Nanao, Japan", home: "サクラ・ホソギ", away: "ミチカ・オゼキ",
+    start: `2026-09-26T11:00:00${JST}`, status: "scheduled", result: null },
+
+  // VALUE①
+  { id: "2026-09-26-bul-por-u21", sport: "男子U21サッカー", competition: "UEFA European Under-21 Championship 2027 Qualifying・Group B", home: "Bulgaria U21", away: "Portugal U21",
+    start: `2026-09-26T00:00:00${JST}`, start_time_note: "履歴上 01:00 → 00:30 → 00:00 と変遷",
+    flags: ["result_unverified"],
+    note: "結果の記録が変遷：9/26 01:14「Portugal U21 4-0 Bulgaria U21」→ 02:55「結果確認中」→ 06:41「Bulgaria U21 2-1 Portugal U21」。最終記録を採用し要確認",
+    status: "final", result: { final: { home: 2, away: 1 }, text: "Bulgaria U21 2-1 Portugal U21" } },
+  { id: "2026-09-25-nip-3dmax", sport: "CS2", competition: "1win Private Club Season 1", home: "NiP", away: "3DMAX",
+    start: `2026-09-25T21:00:00${JST}`, status: "final",
+    result: { final: { home: 2, away: 0 }, periods: { map1: { home: 16, away: 14 } }, text: "NiP 2-0 3DMAX（Nuke 16-14 / Cache 13-4）" } },
+  { id: "2026-09-26-slo-pol", sport: "男子バレー", competition: "CEV EuroVolley 2026 Men・準決勝", home: "Slovenia", away: "Poland",
+    start: `2026-09-26T00:00:00${JST}`, status: "final", result: { final: { home: 0, away: 3 }, text: "Slovenia 0-3 Poland（CEV公式）" } },
+  { id: "2026-09-25-heroic-fnatic", sport: "CS2", competition: "Stake Pulse Beat II・準々決勝", home: "HEROIC", away: "fnatic",
+    start: `2026-09-25T17:00:00${JST}`, status: "final",
+    note: "スコアは 9/26 01:14 の旧HTML記録「HEROIC 2-1 fnatic」（最終版では損益表示に置換）",
+    result: { final: { home: 2, away: 1 }, text: "HEROIC 2-1 fnatic" } },
+  { id: "2026-09-26-fin-fra", sport: "男子バレー", competition: "CEV EuroVolley 2026 Men・準決勝", home: "Finland", away: "France",
+    start: `2026-09-26T04:00:00${JST}`, start_time_note: "履歴上 04:05 → 04:00", status: "unknown", result: null },
+  { id: "2026-09-25-kc-xlg", sport: "VALORANT", competition: "VALORANT Champions 2026・Group Stage", home: "Karmine Corp", away: "Xi Lai Gaming",
+    start: null, start_time_status: "unknown",
+    start_time_note: "VALUE①の行に開始時刻の記載なし（削除済みの旧テスト行に「試合開始 21:00 JST」の記録あり・日付未記載）",
+    status: "final", note: "スコアは 9/26 01:14 の旧HTML記録「Karmine Corp 2-0（13-3 / 13-6）」",
+    result: { final: { home: 2, away: 0 }, periods: { map1: { home: 13, away: 3 } }, text: "Karmine Corp 2-0（13-3 / 13-6）" } },
+  { id: "2026-09-27-gl-k27", sport: "CS2", competition: "1win Private Club Season 1 Playoffs", home: "GamerLegion", away: "K27",
+    start: `2026-09-27T01:00:00${JST}`, status: "scheduled", result: null },
+  { id: "2026-09-27-jsk-barca", sport: "LoL", competition: "EMEA Masters 2026 Summer Swiss", home: "JSK Esports", away: "Barça eSports",
+    start: `2026-09-27T01:00:00${JST}`, status: "scheduled", result: null },
+
+  // 複数系統で共有する試合（推奨・VALUE①・VALUE②）
+  { id: "2026-09-26-loud-edg", sport: "VALORANT", competition: "VALORANT Champions 2026・Group Stage Opening B", home: "LOUD", away: "EDward Gaming",
+    start: `2026-09-26T21:00:00${JST}`, status: "scheduled", result: null },
+  { id: "2026-09-26-ge-vit", sport: "VALORANT", competition: "VALORANT Champions 2026・Group Stage Opening B", home: "Global Esports", away: "Team Vitality",
+    start: `2026-09-26T18:00:00${JST}`, status: "scheduled", result: null },
+
+  // 推奨取引（9/26〜27）
+  { id: "2026-09-26-log-barca", sport: "女子サッカー", competition: "プリメーラディビシオン女子・第5節", home: "Logroño United", away: "FC Barcelona",
+    venue: "Las Gaunas", start: `2026-09-26T23:30:00${JST}`, status: "scheduled", result: null },
+  { id: "2026-09-26-cha-mci", sport: "女子サッカー", competition: "Barclays Women's Super League 2026/27", home: "Charlton Athletic Women", away: "Manchester City Women",
+    venue: "The Valley", start: `2026-09-26T21:30:00${JST}`, status: "scheduled", result: null },
+  { id: "2026-09-27-lat-ger-u21", sport: "男子U21サッカー", competition: "UEFA European Under-21 Championship 2027 Qualifying・Group F", home: "Latvia U21", away: "Germany U21",
+    venue: "Daugava", start: `2026-09-27T01:00:00${JST}`, status: "scheduled", result: null },
+  { id: "2026-09-27-smr-fin", sport: "男子サッカー", competition: "UEFA Nations League 2026/27・League C", home: "San Marino", away: "Finland",
+    venue: "Serravalle", start: `2026-09-27T01:00:00${JST}`, status: "scheduled", result: null },
+  { id: "2026-09-26-ag-lgd", sport: "Rainbow Six", competition: "Rainbow Six CNL 2026 Stage 2・Group Stage", home: "All Gamers", away: "LGD Gaming",
+    start: null, start_time_status: "unverified",
+    start_time_note: "旧HTMLは「公式ページ表示 09:00（JST換算は再確認中）」。重複行の data-ts 00:01 は仮時刻のため不採用",
+    status: "unknown", result: null },
+  { id: "2026-09-26-fearx-cybme", sport: "Rainbow Six", competition: "Rainbow Six APAC North 2026 Stage 2", home: "FearX", away: "Can You Be My Enemy",
+    start: null, start_time_status: "unverified",
+    start_time_note: "旧HTMLは「開始時刻：公開ソース間差異あり・再確認中」「試合開始 時刻照合中」。data-ts 15:00 / 00:00（仮時刻）は不採用",
+    status: "unknown", result: null },
+  { id: "2026-09-26-tmt-rrx", sport: "Rainbow Six", competition: "Rainbow Six APAC North 2026 Stage 2", home: "Trippy Main Telecom", away: "RRX",
+    start: null, start_time_status: "unverified", start_time_note: "旧HTMLは「開始時刻：公開ソース間差異あり・再確認中」。data-ts 18:00 は不採用",
+    status: "unknown", result: null },
+  { id: "2026-09-26-kaz-uzb", sport: "女子ハンドボール", competition: "愛知・名古屋2026アジア競技大会", home: "カザフスタン", away: "ウズベキスタン",
+    start: `2026-09-26T12:30:00${JST}`, status: "scheduled", result: null },
+  { id: "2026-09-26-chn-hkg", sport: "女子ハンドボール", competition: "愛知・名古屋2026アジア競技大会", home: "中国", away: "香港",
+    start: `2026-09-26T15:00:00${JST}`, status: "scheduled", result: null },
+  { id: "2026-09-26-kor-vie", sport: "女子ハンドボール", competition: "愛知・名古屋2026アジア競技大会", home: "韓国", away: "ベトナム",
+    start: `2026-09-26T17:30:00${JST}`, status: "scheduled", result: null },
+  { id: "2026-09-26-jpn-nep", sport: "男子クリケット", competition: "愛知・名古屋2026アジア競技大会・男子クリケットT20", home: "日本", away: "ネパール",
+    venue: "Korogi Athletic Park", start: `2026-09-26T09:00:00${JST}`, status: "scheduled", result: null },
+  { id: "2026-09-27-faze-furia", sport: "Rainbow Six", competition: "Rainbow Six South America League 2026 Stage 2", home: "FaZe Clan", away: "FURIA",
+    start: `2026-09-27T04:45:00${JST}`, status: "scheduled", result: null },
+];
+
+// ── カード ───────────────────────────────────────────────
+// key: 系統ごとの旧行番号（baseline.json の legacy_rows の legacy_index）
+export const PICKS = {
+  recommendations: {
+    0: { slug: "log-barca-rec", match: "2026-09-26-log-barca", market: "match_1x2", selection: "away", label: "Barcelona" },
+    1: { slug: "charlton-city-rec", match: "2026-09-26-cha-mci", market: "match_1x2", selection: "away", label: "Manchester City" },
+    2: { slug: "lat-ger-rec", match: "2026-09-27-lat-ger-u21", market: "match_1x2", selection: "away", label: "Germany U21" },
+    3: { slug: "smr-fin-rec", match: "2026-09-27-smr-fin", market: "match_1x2", selection: "away", label: "Finland" },
+    4: { slug: "ag-lgd-rec", match: "2026-09-26-ag-lgd", market: "match_winner", selection: "home", label: "All Gamers" },
+    5: { slug: "fearx-cyb-rec", match: "2026-09-26-fearx-cybme", market: "match_winner", selection: "home", label: "FearX" },
+    6: { slug: "tmt-rrx-rec", match: "2026-09-26-tmt-rrx", market: "match_winner", selection: "away", label: "RRX" },
+    7: { slug: "kaz-uzb-rec", match: "2026-09-26-kaz-uzb", market: "match_1x2", selection: "home", label: "カザフスタン" },
+    8: { slug: "china-hk-rec", match: "2026-09-26-chn-hkg", market: "match_1x2", selection: "home", label: "中国" },
+    9: { slug: "kor-vie-rec", match: "2026-09-26-kor-vie", market: "match_1x2", selection: "home", label: "韓国" },
+    10: { slug: "jpn-nep-rec", match: "2026-09-26-jpn-nep", market: "match_winner", selection: "away", label: "ネパール" },
+    11: { slug: "log-barca", match: "2026-09-26-log-barca", market: "match_1x2", selection: "away", label: "Barcelona" },
+    12: { slug: "lat-ger", match: "2026-09-27-lat-ger-u21", market: "match_1x2", selection: "away", label: "Germany U21" },
+    13: { slug: "cha-mci", match: "2026-09-26-cha-mci", market: "match_1x2", selection: "away", label: "Manchester City" },
+    14: { slug: "smr-fin", match: "2026-09-27-smr-fin", market: "match_1x2", selection: "away", label: "Finland" },
+    15: { slug: "faze-furia-rec", match: "2026-09-27-faze-furia", market: "match_winner", selection: "home", label: "FaZe Clan" },
+    16: { slug: "fearx", match: "2026-09-26-fearx-cybme", market: "match_winner", selection: "home", label: "FearX" },
+    17: { slug: "loud-edg-rec", match: "2026-09-26-loud-edg", market: "match_winner", selection: "home", label: "LOUD" },
+    18: { slug: "ge-vit-rec", match: "2026-09-26-ge-vit", market: "match_winner", selection: "away", label: "Team Vitality" },
+    19: { slug: "ag-lgd", match: "2026-09-26-ag-lgd", market: "match_winner", selection: "home", label: "All Gamers" },
+    20: { slug: "prz-rin", match: "2026-09-22-prz-rin", market: "match_winner", selection: "home", label: "プリズミッチ、ディノ" },
+    21: { slug: "spain-czech-rec", match: "2026-09-25-esp-cze", market: "match_winner", selection: "away", label: "チェコ" },
+    22: { slug: "china-maldives", match: "2026-09-24-chn-mdv", market: "first_half_1x2", selection: "home", label: "中国（前半）", live: true },
+    23: { slug: "sak-hib", match: "2026-09-24-sak-hib", market: "match_winner", selection: "home", label: "サッカリ、マリア" },
+    24: { slug: "oddik-procyon", match: "2026-09-24-oddik-procyon", market: "match_winner", selection: "home", label: "ODDIK", model: "oddik" },
+    25: { slug: "lyon", match: "2026-09-23-ser-lyo", market: "first_half_1x2", selection: "away", label: "オリンピック・リヨン（前半）", model: "lyon" },
+    26: { slug: "italy", match: "2026-09-23-ita-fin", market: "set1_winner", selection: "home", label: "イタリア（第1セット）", model: "italy" },
+    27: { slug: "cs2", match: "2026-09-23-dam-bh", market: "map1_winner", selection: "away", label: "Bounty Hunters（第1マップ）", model: "cs2" },
+    28: { slug: "cor", match: "2026-09-22-cor-bah", market: "dnb", selection: "home", label: "コリンチャンス（DNB）", model: "cor" },
+    29: { slug: "tun", match: "2026-09-21-tun-rwa", market: "set1_winner", selection: "home", label: "チュニジア（第1セット）", model: "tun" },
+  },
+  experience: {
+    0: { slug: "hos-oze", match: "2026-09-26-hos-oze", market: "match_winner", selection: "home", label: "サクラ・ホソギ" },
+    1: { slug: "prz-gri", match: "2026-09-25-prz-gri", market: "match_winner", selection: "home", label: "ディノ・プリズミッチ" },
+    2: { slug: "esp-cze", match: "2026-09-25-esp-cze", market: "match_winner", selection: "away", label: "チェコ" },
+    3: { slug: "ish-ita", match: "2026-09-25-ish-ita", market: "match_winner", selection: "home", label: "石井さやか" },
+  },
+  value1: {
+    0: { slug: "bul-por-u21", match: "2026-09-26-bul-por-u21", market: "match_1x2", selection: "away", label: "Portugal U21",
+      condition: { text: "Portugal U21 1.25以上（旧表記「注目価格 1.25以上」）", min_odds: 1.25 } },
+    1: { slug: "nip-3dmax", match: "2026-09-25-nip-3dmax", market: "match_winner", selection: "away", label: "3DMAX" },
+    2: { slug: "slo-pol", match: "2026-09-26-slo-pol", market: "match_winner", selection: "away", label: "Poland" },
+    3: { slug: "heroic-fnatic", match: "2026-09-25-heroic-fnatic", market: "match_winner", selection: "home", label: "HEROIC" },
+    4: { slug: "fin-fra", match: "2026-09-26-fin-fra", market: "match_winner", selection: "away", label: "France" },
+    5: { slug: "kc-xlg", match: "2026-09-25-kc-xlg", market: "match_winner", selection: "home", label: "Karmine Corp" },
+    6: { slug: "gl-k27", match: "2026-09-27-gl-k27", market: "match_winner", selection: "home", label: "GamerLegion" },
+    7: { slug: "jsk-barca", match: "2026-09-27-jsk-barca", market: "match_winner", selection: "away", label: "Barça eSports" },
+    8: { slug: "loud-edg", match: "2026-09-26-loud-edg", market: "match_winner", selection: "home", label: "LOUD" },
+  },
+  value2: {
+    0: { slug: "ge-vit", match: "2026-09-26-ge-vit", market: "match_winner", selection: "away", label: "Team Vitality" },
+    1: { slug: "loud-edg", match: "2026-09-26-loud-edg", market: "match_winner", selection: "home", label: "LOUD" },
+  },
+};
+
+// VALUE②の除外ログ（旧HTMLで VALUE② 欄に置かれていたもの）。どちらの系統の除外か要確認。
+export const VALUE2_EXCLUDED_LOG_TEXT = "Afghanistan vs Nepal / NAVI vs Nemesis / Tunisia vs Cameroon";

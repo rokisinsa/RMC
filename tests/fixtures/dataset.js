@@ -12,7 +12,7 @@ const JST = "+09:00";
 function match(id, sport, start, status, result = null) {
   return {
     id, sport, competition: "Fixture League", home: `${id}-home`, away: `${id}-away`,
-    venue: null, start_at: `${start}${JST}`, start_verified: true, status, result,
+    venue: null, start_at: `${start}${JST}`, start_time_status: "recorded", status, result,
     sources: ["fixture"], verified_at: status === "final" ? `2026-09-25T12:00:00${JST}` : null, note: null,
   };
 }
@@ -36,7 +36,7 @@ function pick(system, id, fields) {
     locked: fields.locked ?? null,
     ...(fields.condition !== undefined ? { condition: fields.condition } : {}),
     closing_odds: null,
-    reevaluations: [],
+    recalculated_reference: [],
     settlement_override: fields.settlement_override ?? null,
     flags: fields.flags ?? [],
     detail_ref: null,

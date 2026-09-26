@@ -1,0 +1,611 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "generated_by": "migration/migrate.js",
+    "legacy_source": "analysis.html",
+    "legacy_commit": "02e5167",
+    "as_of": "2026-09-26T06:45:58+09:00",
+    "status": "draft",
+    "note": "VALUE①：旧RMC（baseline-2026-09-26）からの移行用下書き。analysis.html は未切り替え。"
+  },
+  "system": "value1",
+  "discovery_runs": [
+    {
+      "run_id": "v1-legacy-import",
+      "started_at": "2026-09-26T06:45:58+09:00",
+      "slot": "adhoc",
+      "note": "VALUE①：旧RMC（02e5167）からの一括移行用。実際の探索回・探索時刻は記録がない。系統ごとに別の移行用探索回として扱う（他系統と共有しない）"
+    }
+  ],
+  "excluded_log": [],
+  "picks": [
+    {
+      "id": "v1-legacy-bul-por-u21",
+      "system": "value1",
+      "match_id": "2026-09-26-bul-por-u21",
+      "market": "match_1x2",
+      "market_label": "大会：UEFA European Under-21 Championship 2027 Qualifying・Group B / 選択：Portugal U21 / 注目価格 1.25以上",
+      "selection": "away",
+      "selection_label": "Portugal U21",
+      "market_odds": {
+        "text": "1.25以上",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "v1-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T12:41:51+09:00",
+      "locked": {
+        "verdict": "conditional",
+        "prob_lo": 0.82,
+        "prob_hi": 0.86,
+        "prob_point": null,
+        "required_prob": null,
+        "ev_lo": 0.025,
+        "ev_hi": 0.075,
+        "gap_score": null,
+        "model_version": null,
+        "summary": null
+      },
+      "condition": {
+        "text": "Portugal U21 1.25以上（旧表記「注目価格 1.25以上」）",
+        "min_odds": 1.25,
+        "met": null,
+        "checked_at": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified",
+        "result_unverified",
+        "needs_review"
+      ],
+      "detail_ref": null,
+      "note": "条件成立（1.25以上で取得できたか）の記録がないため met=null。本成績に算入しない",
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable",
+        "row_index": 0,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-25T12:41:51+09:00",
+        "first_seen_commit": "430fb33",
+        "lock_evidence": "現在の事前値は 430fb33（2026-09-25T12:41:51+09:00）から基準点まで不変。試合開始 2026-09-26T00:00:00+09:00 より前",
+        "raw": {
+          "verdict_label": "条件付きVALUE",
+          "date_and_start_text": "試合開始 9/26 00:00 JST",
+          "market_texts": [
+            "大会：UEFA European Under-21 Championship 2027 Qualifying・Group B / 選択：Portugal U21 / 注目価格 1.25以上",
+            "最終結果：Bulgaria U21 2-1 Portugal U21"
+          ],
+          "odds_text": "1.25以上",
+          "required_prob_text": "80.0%以下",
+          "estimated_prob_text": "82〜86%",
+          "ev_or_gap_text": "1.25時 約+2.5〜+7.5%",
+          "stake_text": "条件成立時$100"
+        }
+      }
+    },
+    {
+      "id": "v1-legacy-nip-3dmax",
+      "system": "value1",
+      "match_id": "2026-09-25-nip-3dmax",
+      "market": "match_winner",
+      "market_label": "大会：1win Private Club Season 1 / 選択：3DMAX / BO3",
+      "selection": "away",
+      "selection_label": "3DMAX",
+      "market_odds": {
+        "text": "1.95〜2.00",
+        "min": 1.95,
+        "max": 2,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "v1-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T12:31:01+09:00",
+      "locked": {
+        "verdict": "formal",
+        "prob_lo": 0.56,
+        "prob_hi": 0.58,
+        "prob_point": null,
+        "required_prob": null,
+        "ev_lo": 0.09,
+        "ev_hi": 0.16,
+        "gap_score": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable",
+        "row_index": 1,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-25T12:31:01+09:00",
+        "first_seen_commit": "7772d1d",
+        "lock_evidence": "現在の事前値は 7772d1d（2026-09-25T12:31:01+09:00）から基準点まで不変。試合開始 2026-09-25T21:00:00+09:00 より前",
+        "raw": {
+          "verdict_label": "正式VALUE",
+          "date_and_start_text": "試合開始 21:00 JST",
+          "market_texts": [
+            "大会：1win Private Club Season 1 / 選択：3DMAX / BO3",
+            "最終結果：NiP 2-0 3DMAX（Nuke 16-14 / Cache 13-4）"
+          ],
+          "odds_text": "1.95〜2.00",
+          "required_prob_text": "約50.0〜51.3%",
+          "estimated_prob_text": "56〜58%",
+          "ev_or_gap_text": "約+9〜+16%",
+          "stake_text": "$100"
+        }
+      }
+    },
+    {
+      "id": "v1-legacy-slo-pol",
+      "system": "value1",
+      "match_id": "2026-09-26-slo-pol",
+      "market": "match_winner",
+      "market_label": "大会：CEV EuroVolley 2026 Men・準決勝 / 選択：Poland",
+      "selection": "away",
+      "selection_label": "Poland",
+      "market_odds": null,
+      "odds_taken": 1.25,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "v1-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T12:31:01+09:00",
+      "locked": {
+        "verdict": "formal",
+        "prob_lo": 0.84,
+        "prob_hi": 0.87,
+        "prob_point": null,
+        "required_prob": 0.8,
+        "ev_lo": 0.05,
+        "ev_hi": 0.0875,
+        "gap_score": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable",
+        "row_index": 2,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-25T12:31:01+09:00",
+        "first_seen_commit": "7772d1d",
+        "lock_evidence": "現在の事前値は 7772d1d（2026-09-25T12:31:01+09:00）から基準点まで不変。試合開始 2026-09-26T00:00:00+09:00 より前",
+        "raw": {
+          "verdict_label": "正式VALUE",
+          "date_and_start_text": "試合開始 9/26 00:00 JST",
+          "market_texts": [
+            "大会：CEV EuroVolley 2026 Men・準決勝 / 選択：Poland",
+            "最終結果：Slovenia 0-3 Poland（CEV公式）"
+          ],
+          "odds_text": "1.25",
+          "required_prob_text": "80.0%",
+          "estimated_prob_text": "84〜87%",
+          "ev_or_gap_text": "+5.0〜+8.75%",
+          "stake_text": "$100"
+        }
+      }
+    },
+    {
+      "id": "v1-legacy-heroic-fnatic",
+      "system": "value1",
+      "match_id": "2026-09-25-heroic-fnatic",
+      "market": "match_winner",
+      "market_label": "大会：Stake Pulse Beat II・準々決勝 / 選択候補：HEROIC / BO3・LAN",
+      "selection": "home",
+      "selection_label": "HEROIC",
+      "market_odds": null,
+      "odds_taken": 1.35,
+      "stake": null,
+      "discovered_at": null,
+      "run_id": "v1-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T12:31:01+09:00",
+      "locked": {
+        "verdict": "watch",
+        "prob_lo": null,
+        "prob_hi": null,
+        "prob_point": null,
+        "required_prob": 0.741,
+        "ev_lo": null,
+        "ev_hi": null,
+        "gap_score": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable",
+        "row_index": 3,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-25T12:31:01+09:00",
+        "first_seen_commit": "7772d1d",
+        "lock_evidence": "現在の事前値は 7772d1d（2026-09-25T12:31:01+09:00）から基準点まで不変。試合開始 2026-09-25T17:00:00+09:00 より前",
+        "raw": {
+          "verdict_label": "監視",
+          "date_and_start_text": "試合開始 17:00 JST",
+          "market_texts": [
+            "大会：Stake Pulse Beat II・準々決勝 / 選択候補：HEROIC / BO3・LAN"
+          ],
+          "odds_text": "1.35",
+          "required_prob_text": "74.1%",
+          "estimated_prob_text": "未固定",
+          "ev_or_gap_text": "未固定",
+          "stake_text": "—"
+        }
+      }
+    },
+    {
+      "id": "v1-legacy-fin-fra",
+      "system": "value1",
+      "match_id": "2026-09-26-fin-fra",
+      "market": "match_winner",
+      "market_label": "大会：CEV EuroVolley 2026 Men・準決勝 / 選択候補：France",
+      "selection": "away",
+      "selection_label": "France",
+      "market_odds": {
+        "text": "約1.20",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": null,
+      "discovered_at": null,
+      "run_id": "v1-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-25T12:31:01+09:00",
+      "locked": {
+        "verdict": "watch",
+        "prob_lo": null,
+        "prob_hi": null,
+        "prob_point": null,
+        "required_prob": 0.833,
+        "ev_lo": null,
+        "ev_hi": null,
+        "gap_score": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable",
+        "row_index": 4,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-25T12:31:01+09:00",
+        "first_seen_commit": "7772d1d",
+        "lock_evidence": "現在の事前値は 7772d1d（2026-09-25T12:31:01+09:00）から基準点まで不変。試合開始 2026-09-26T04:00:00+09:00 より前",
+        "raw": {
+          "verdict_label": "監視",
+          "date_and_start_text": "試合開始 9/26 04:00 JST",
+          "market_texts": [
+            "大会：CEV EuroVolley 2026 Men・準決勝 / 選択候補：France"
+          ],
+          "odds_text": "約1.20",
+          "required_prob_text": "83.3%",
+          "estimated_prob_text": "未固定",
+          "ev_or_gap_text": "未固定",
+          "stake_text": "—"
+        }
+      }
+    },
+    {
+      "id": "v1-legacy-kc-xlg",
+      "system": "value1",
+      "match_id": "2026-09-25-kc-xlg",
+      "market": "match_winner",
+      "market_label": "大会：VALORANT Champions 2026・Group Stage / 選択候補：Karmine Corp / BO3",
+      "selection": "home",
+      "selection_label": "Karmine Corp",
+      "market_odds": {
+        "text": "1.17〜1.20",
+        "min": 1.17,
+        "max": 1.2,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": null,
+      "discovered_at": null,
+      "run_id": "v1-legacy-import",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "verdict": "watch",
+        "prob_lo": null,
+        "prob_hi": null,
+        "prob_point": null,
+        "required_prob": null,
+        "ev_lo": null,
+        "ev_hi": null,
+        "gap_score": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified",
+        "time_unverified",
+        "odds_unverified"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable",
+        "row_index": 5,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-25T12:31:01+09:00",
+        "first_seen_commit": "7772d1d",
+        "lock_evidence": "現在の事前値は 7772d1d（2026-09-25T12:31:01+09:00）から保存。試合開始時刻が未確認のため、試合前の保存か確認できない",
+        "raw": {
+          "verdict_label": "監視",
+          "date_and_start_text": null,
+          "market_texts": [
+            "大会：VALORANT Champions 2026・Group Stage / 選択候補：Karmine Corp / BO3"
+          ],
+          "odds_text": "1.17〜1.20",
+          "required_prob_text": "83.3〜85.5%",
+          "estimated_prob_text": "未固定",
+          "ev_or_gap_text": "未固定",
+          "stake_text": "—"
+        }
+      }
+    },
+    {
+      "id": "v1-legacy-gl-k27",
+      "system": "value1",
+      "match_id": "2026-09-27-gl-k27",
+      "market": "match_winner",
+      "market_label": "1win Private Club Season 1 Playoffs / 選択：GamerLegion / BO3 LAN",
+      "selection": "home",
+      "selection_label": "GamerLegion",
+      "market_odds": null,
+      "odds_taken": 1.67,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "v1-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-26T01:44:16+09:00",
+      "locked": {
+        "verdict": "formal",
+        "prob_lo": 0.64,
+        "prob_hi": 0.67,
+        "prob_point": null,
+        "required_prob": 0.599,
+        "ev_lo": 0.069,
+        "ev_hi": 0.11900000000000001,
+        "gap_score": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable",
+        "row_index": 6,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-26T01:44:16+09:00",
+        "first_seen_commit": "badba80",
+        "lock_evidence": "現在の事前値は badba80（2026-09-26T01:44:16+09:00）から基準点まで不変。試合開始 2026-09-27T01:00:00+09:00 より前",
+        "raw": {
+          "verdict_label": "正式VALUE",
+          "date_and_start_text": "試合開始 9/27 01:00 JST",
+          "market_texts": [
+            "1win Private Club Season 1 Playoffs / 選択：GamerLegion / BO3 LAN"
+          ],
+          "odds_text": "1.67",
+          "required_prob_text": "59.9%",
+          "estimated_prob_text": "64〜67%",
+          "ev_or_gap_text": "約+6.9〜+11.9%",
+          "stake_text": "$100"
+        }
+      }
+    },
+    {
+      "id": "v1-legacy-jsk-barca",
+      "system": "value1",
+      "match_id": "2026-09-27-jsk-barca",
+      "market": "match_winner",
+      "market_label": "EMEA Masters 2026 Summer Swiss / 選択：Barça eSports / BO1",
+      "selection": "away",
+      "selection_label": "Barça eSports",
+      "market_odds": null,
+      "odds_taken": 1.12,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "v1-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-26T01:44:16+09:00",
+      "locked": {
+        "verdict": "formal",
+        "prob_lo": 0.91,
+        "prob_hi": 0.93,
+        "prob_point": null,
+        "required_prob": 0.893,
+        "ev_lo": 0.019,
+        "ev_hi": 0.042,
+        "gap_score": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable",
+        "row_index": 7,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-26T01:44:16+09:00",
+        "first_seen_commit": "badba80",
+        "lock_evidence": "現在の事前値は badba80（2026-09-26T01:44:16+09:00）から基準点まで不変。試合開始 2026-09-27T01:00:00+09:00 より前",
+        "raw": {
+          "verdict_label": "正式VALUE",
+          "date_and_start_text": "試合開始 9/27 01:00 JST",
+          "market_texts": [
+            "EMEA Masters 2026 Summer Swiss / 選択：Barça eSports / BO1"
+          ],
+          "odds_text": "1.12",
+          "required_prob_text": "89.3%",
+          "estimated_prob_text": "91〜93%",
+          "ev_or_gap_text": "約+1.9〜+4.2%",
+          "stake_text": "$100"
+        }
+      }
+    },
+    {
+      "id": "v1-legacy-loud-edg",
+      "system": "value1",
+      "match_id": "2026-09-26-loud-edg",
+      "market": "match_winner",
+      "market_label": "VALORANT Champions 2026 Group Stage Opening B / 選択候補：LOUD / BO3",
+      "selection": "home",
+      "selection_label": "LOUD",
+      "market_odds": {
+        "text": "1.37〜1.43",
+        "min": 1.37,
+        "max": 1.43,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": null,
+      "discovered_at": null,
+      "run_id": "v1-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-26T01:44:16+09:00",
+      "locked": {
+        "verdict": "watch",
+        "prob_lo": 0.72,
+        "prob_hi": 0.75,
+        "prob_point": null,
+        "required_prob": null,
+        "ev_lo": -0.013999999999999999,
+        "ev_hi": 0.073,
+        "gap_score": null,
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable",
+        "row_index": 8,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-26T01:44:16+09:00",
+        "first_seen_commit": "badba80",
+        "lock_evidence": "現在の事前値は badba80（2026-09-26T01:44:16+09:00）から基準点まで不変。試合開始 2026-09-26T21:00:00+09:00 より前",
+        "raw": {
+          "verdict_label": "監視",
+          "date_and_start_text": "試合開始 9/26 21:00 JST",
+          "market_texts": [
+            "VALORANT Champions 2026 Group Stage Opening B / 選択候補：LOUD / BO3"
+          ],
+          "odds_text": "1.37〜1.43",
+          "required_prob_text": "69.9〜73.0%",
+          "estimated_prob_text": "72〜75%",
+          "ev_or_gap_text": "約-1.4〜+7.3%",
+          "stake_text": "$100（仮定）"
+        }
+      }
+    }
+  ]
+}

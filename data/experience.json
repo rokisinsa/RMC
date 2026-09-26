@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "generated_by": "migration/migrate.js",
+    "legacy_source": "analysis.html",
+    "legacy_commit": "02e5167",
+    "as_of": "2026-09-26T06:45:58+09:00",
+    "status": "draft",
+    "note": "経験値取引：旧RMC（baseline-2026-09-26）からの移行用下書き。analysis.html は未切り替え。"
+  },
+  "system": "experience",
+  "picks": [
+    {
+      "id": "exp-legacy-hos-oze",
+      "system": "experience",
+      "match_id": "2026-09-26-hos-oze",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：サクラ・ホソギ",
+      "selection": "home",
+      "selection_label": "サクラ・ホソギ",
+      "market_odds": null,
+      "odds_taken": 1.09,
+      "stake": 350,
+      "discovered_at": null,
+      "run_id": null,
+      "bet_at": null,
+      "locked_at": "2026-09-26T03:00:06+09:00",
+      "locked": {
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "actualBetTable",
+        "row_index": 0,
+        "detail_id": null,
+        "data_ts": "2026-09-26T11:00:00+09:00",
+        "sort_at": "2026-09-26T11:00:00+09:00",
+        "first_seen_at": "2026-09-26T03:00:06+09:00",
+        "first_seen_commit": "af4d9e2",
+        "lock_evidence": "現在の事前値は af4d9e2（2026-09-26T03:00:06+09:00）から基準点まで不変。試合開始 2026-09-26T11:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 11:00 JST",
+          "market_text": "W50 Nanao, Japan",
+          "bet_text": "マッチウィナー：サクラ・ホソギ",
+          "odds_text": "1.09",
+          "data_status": "open",
+          "stake_history": [
+            "350"
+          ]
+        }
+      }
+    },
+    {
+      "id": "exp-legacy-prz-gri",
+      "system": "experience",
+      "match_id": "2026-09-25-prz-gri",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：ディノ・プリズミッチ",
+      "selection": "home",
+      "selection_label": "ディノ・プリズミッチ",
+      "market_odds": null,
+      "odds_taken": 1.17,
+      "stake": 300,
+      "discovered_at": null,
+      "run_id": null,
+      "bet_at": null,
+      "locked_at": "2026-09-25T23:26:25+09:00",
+      "locked": {
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "actualBetTable",
+        "row_index": 1,
+        "detail_id": null,
+        "data_ts": "2026-09-25T23:40:00+09:00",
+        "sort_at": "2026-09-25T23:40:00+09:00",
+        "first_seen_at": "2026-09-25T23:26:25+09:00",
+        "first_seen_commit": "19f57e4",
+        "lock_evidence": "現在の事前値は 19f57e4（2026-09-25T23:26:25+09:00）から基準点まで不変。試合開始 2026-09-25T23:40:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 23:40 JST",
+          "market_text": "ATP Challenger Saint-Tropez, France",
+          "bet_text": "マッチウィナー：ディノ・プリズミッチ",
+          "odds_text": "1.17",
+          "data_status": "open",
+          "stake_history": [
+            "300"
+          ]
+        }
+      }
+    },
+    {
+      "id": "exp-legacy-esp-cze",
+      "system": "experience",
+      "match_id": "2026-09-25-esp-cze",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：チェコ",
+      "selection": "away",
+      "selection_label": "チェコ",
+      "market_odds": null,
+      "odds_taken": 1.14,
+      "stake": 300,
+      "discovered_at": null,
+      "run_id": null,
+      "bet_at": null,
+      "locked_at": "2026-09-25T13:00:37+09:00",
+      "locked": {
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "actualBetTable",
+        "row_index": 2,
+        "detail_id": null,
+        "data_ts": "2026-09-25T12:30:00+09:00",
+        "sort_at": "2026-09-25T12:30:00+09:00",
+        "first_seen_at": "2026-09-25T13:00:37+09:00",
+        "first_seen_commit": "83d78e5",
+        "lock_evidence": "現在の事前値は 83d78e5（2026-09-25T13:00:37+09:00）から基準点まで不変。試合開始 2026-09-25T18:00:00+09:00 より前",
+        "raw": {
+          "date_and_start_text": "試合開始 18:00 JST",
+          "market_text": "フェドカップ / 国別対抗戦",
+          "bet_text": "マッチウィナー：チェコ",
+          "odds_text": "1.14",
+          "data_status": "open",
+          "stake_history": [
+            "300"
+          ]
+        }
+      }
+    },
+    {
+      "id": "exp-legacy-ish-ita",
+      "system": "experience",
+      "match_id": "2026-09-25-ish-ita",
+      "market": "match_winner",
+      "market_label": "石井さやか 2-0（6-2 / 6-0）",
+      "selection": "home",
+      "selection_label": "石井さやか",
+      "market_odds": null,
+      "odds_taken": 1.05,
+      "stake": 300,
+      "discovered_at": null,
+      "run_id": null,
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "lock_unverified"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "actualBetTable",
+        "row_index": 3,
+        "detail_id": null,
+        "data_ts": "2026-09-25T12:29:00+09:00",
+        "sort_at": "2026-09-25T12:29:00+09:00",
+        "first_seen_at": "2026-09-25T12:58:18+09:00",
+        "first_seen_commit": "8b76b88",
+        "lock_evidence": "現在の事前値の保存は 8b76b88（2026-09-25T12:58:18+09:00）で、試合開始 2026-09-25T11:00:00+09:00 より後",
+        "raw": {
+          "date_and_start_text": "試合開始 11:00 JST",
+          "market_text": "ITF W50 七尾",
+          "bet_text": "石井さやか 2-0（6-2 / 6-0）",
+          "odds_text": "1.05",
+          "data_status": "win",
+          "stake_history": [
+            "300"
+          ]
+        }
+      }
+    }
+  ]
+}

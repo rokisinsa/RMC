@@ -8,22 +8,30 @@
   "additionalProperties": false,
   "properties": {
     "schema_version": { "const": 1 },
+    "meta": { "$ref": "defs.schema.json#/$defs/fileMeta" },
     "matches": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "sport", "competition", "home", "away", "start_at", "status", "result"],
+        "required": ["id", "sport", "competition", "home", "away", "start_at", "start_time_status", "status", "result"],
         "additionalProperties": false,
         "properties": {
           "id": { "$ref": "defs.schema.json#/$defs/id" },
           "sport": { "type": "string", "minLength": 1 },
-          "competition": { "type": "string", "minLength": 1 },
+          "competition": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
           "home": { "type": "string", "minLength": 1 },
           "away": { "type": "string", "minLength": 1 },
           "venue": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
-          "start_at": { "$ref": "defs.schema.json#/$defs/dateTime" },
-          "start_verified": { "type": "boolean" },
-          "status": { "enum": ["scheduled", "live", "final", "cancelled", "postponed", "abandoned"] },
+          "start_at": { "$ref": "defs.schema.json#/$defs/dateTimeOrNull" },
+          "start_time_status": {
+            "enum": ["recorded", "unverified", "unknown"],
+            "description": "recorded=記録どおりの開始時刻 / unverified=候補はあるが未確認（start_at は null） / unknown=不明（start_at は null）"
+          },
+          "start_time_note": { "$ref": "defs.schema.json#/$defs/stringOrNull" },
+          "status": {
+            "enum": ["scheduled", "live", "final", "cancelled", "postponed", "abandoned", "unknown"],
+            "description": "unknown=開始時刻を過ぎた、または開始時刻不明で結果が未記録"
+          },
           "result": {
             "type": ["object", "null"],
             "additionalProperties": false,
@@ -34,11 +42,17 @@
                 "description": "ht=前半, set1=第1セット, map1=第1マップ など",
                 "additionalProperties": { "$ref": "defs.schema.json#/$defs/score" }
               },
+              "winners": {
+                "type": "object",
+                "description": "スコアは不明だが勝者だけ記録がある場合（キーは final / ht / set1 / map1 など）",
+                "additionalProperties": { "$ref": "defs.schema.json#/$defs/side" }
+              },
               "text": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
             }
           },
           "sources": { "type": "array", "items": { "type": "string", "minLength": 1 } },
           "verified_at": { "$ref": "defs.schema.json#/$defs/dateTimeOrNull" },
+          "flags": { "$ref": "defs.schema.json#/$defs/flags" },
           "note": { "$ref": "defs.schema.json#/$defs/stringOrNull" }
         }
       }
