@@ -18,7 +18,7 @@ function walk(x, fn, seen=new Set()){
   if(Array.isArray(x)) for(const v of x) walk(v,fn,seen);
   else for(const v of Object.values(x)) walk(v,fn,seen);
 }
-function eventFrom(o, sourceUrl, category){
+function eventFrom(o, sourceUrl, category, categoryCt){
   const hasMeta = ["game_start_date","game_start_time","band_name","graph_choice1","graph_choice2","Choices","match_name","match_title","match_detail"].some(k => Object.prototype.hasOwnProperty.call(o,k));
   if(!hasMeta) return null;
   const id = o.match_id ?? o.matchId ?? o.event_id ?? o.eventId ?? o.id;
@@ -33,6 +33,8 @@ function eventFrom(o, sourceUrl, category){
   return {
     event_id:String(id),
     category:category||null,
+    category_ct:categoryCt??null,
+    category_key:categoryCt!=null ? String(categoryCt)+":"+String(category||"") : null,
     source_url:sourceUrl,
     game_start_date:o.game_start_date ?? o.start_date ?? o.date ?? null,
     game_start_time:o.game_start_time ?? o.start_time ?? o.time ?? null,
@@ -92,7 +94,7 @@ function canonicalKey(e){
 
 const browser = await chromium.launch({headless:true});
 const ctx = await browser.newContext({locale:"ja-JP", timezoneId:"Asia/Tokyo"});
-async function collectPage(url, label){
+async function collectPage(url, label, categoryCt=null){
   const page = await ctx.newPage();
   page.setDefaultTimeout(10000);
   const events = new Map();
@@ -105,7 +107,7 @@ async function collectPage(url, label){
     try{
       const j=await r.json(); jsonUrls.add(r.url());
       walk(j,o=>{
-        const e=eventFrom(o,url,label);
+        const e=eventFrom(o,url,label,categoryCt);
         if(e){
           const prev=events.get(e.event_id);
           if(!prev) events.set(e.event_id,e);
@@ -171,7 +173,7 @@ await menuPage.goto(START,{waitUntil:"domcontentloaded",timeout:30000});
 await menuPage.waitForTimeout(1200);
 const anchors = await menuPage.evaluate(() => [...document.querySelectorAll('a[href*="/matches?ct="]')].map(a=>({text:(a.textContent||"").replace(/\s+/g," ").trim(),href:a.getAttribute("href")})));
 await menuPage.close();
-const root = await collectPage(START,"本日のイベント");
+const root = await collectPage(START,"本日のイベント","1");
 const catsMap=new Map();
 for(const a of anchors){
   const u=abs(a.href); if(!u) continue;
@@ -184,7 +186,7 @@ const results=[];
 const CONCURRENCY=8;
 for(let i=0;i<categories.length;i+=CONCURRENCY){
   const batch=categories.slice(i,i+CONCURRENCY);
-  const got=await Promise.all(batch.map(async c=>({...c,...await collectPage(c.url,c.label)})));
+  const got=await Promise.all(batch.map(async c=>({...c,...await collectPage(c.url,c.label,c.ct)})));
   results.push(...got);
   console.log(`progress ${Math.min(i+CONCURRENCY,categories.length)}/${categories.length}`);
 }
@@ -193,8 +195,13 @@ await browser.close();
 const allEvents=new Map();
 for(const r of [root,...results]) for(const e of r.events||[]){
   const prev=allEvents.get(e.event_id);
-  if(!prev) allEvents.set(e.event_id,{...e,seen_in:[r.label]});
-  else if(!prev.seen_in.includes(r.label)) prev.seen_in.push(r.label);
+  if(!prev) allEvents.set(e.event_id,{...e,seen_in:[r.label],seen_in_keys:[(r.ct??"1")+":"+r.label]});
+  else {
+    if(!prev.seen_in.includes(r.label)) prev.seen_in.push(r.label);
+    const k=(r.ct??"1")+":"+r.label;
+    prev.seen_in_keys ??= [];
+    if(!prev.seen_in_keys.includes(k)) prev.seen_in_keys.push(k);
+  }
 }
 const failed=results.filter(r=>!r.nav_status||r.nav_status>=400||r.errors.some(e=>/Timeout|ERR_|Navigation/.test(e.error)));
 const empty=results.filter(r=>r.event_count===0);
@@ -221,20 +228,29 @@ for(const e of primaryCurrent){
     card_id:"bc-"+e.canonical_match_key,
     start_at_jst:e.start_at_jst,
     category:e.category,
+    category_ct:e.category_ct,
+    category_key:e.category_key,
     side_a:e.choice1,
     side_b:e.choice2,
     source_event_ids:[e.event_id],
     market_choices:e.market_choices??[],
     bettable:(e.market_choices??[]).slice(0,2).every(x=>x.is_valid_bet===true && typeof x.odds==="number" && x.odds>1),
     source_url:e.source_url,
-    seen_in:e.seen_in??[]
+    seen_in:e.seen_in??[],
+    seen_in_keys:e.seen_in_keys??[]
   });
   else{
     if(!old.source_event_ids.includes(e.event_id)) old.source_event_ids.push(e.event_id);
     for(const x of e.seen_in??[]) if(!old.seen_in.includes(x)) old.seen_in.push(x);
+    for(const x of e.seen_in_keys??[]) if(!old.seen_in_keys.includes(x)) old.seen_in_keys.push(x);
   }
 }
 const analysisCards=[...canonical.values()].sort((a,b)=>a.start_at_jst.localeCompare(b.start_at_jst)||a.card_id.localeCompare(b.card_id));
+const categoryKeys=categories.map(c=>String(c.ct)+":"+c.label);
+const analysisCardCountsByCategory=Object.fromEntries(categoryKeys.map(k=>[k,0]));
+for(const card of analysisCards){
+  if(card.category_key in analysisCardCountsByCategory) analysisCardCountsByCategory[card.category_key]++;
+}
 const inventory={
   schema_version:1,
   source:"BET CHANNEL",
@@ -243,6 +259,7 @@ const inventory={
   acquisition:"playwright_dynamic_xhr_plus_dom",
   menu_end_verified:categories.length>0,
   category_count:categories.length,
+  category_keys:categoryKeys,
   event_count:allEvents.size,
   failed_category_count:failed.length,
   empty_category_count:empty.length,
@@ -255,6 +272,7 @@ const inventory={
   unavailable_price_card_count:analysisCards.filter(x=>!x.bettable).length,
   analysis_card_ids:analysisCards.map(x=>x.card_id),
   analysis_cards:analysisCards,
+  analysis_card_counts_by_category:analysisCardCountsByCategory,
   analysis_ready:failed.length===0 && metadataMissing.length===0 && timeParseMissing.length===0 && analysisCards.length>0,
   complete:failed.length===0 && metadataMissing.length===0 && timeParseMissing.length===0 && allEvents.size>0,
   categories:results.map(r=>({ct:r.ct,label:r.label,url:r.url,nav_status:r.nav_status,event_count:r.event_count,json_urls:r.json_urls,errors:r.errors})),
@@ -265,6 +283,8 @@ const inventory={
   integrity:{
     event_count_matches_ids:allEvents.size===new Set(allEvents.keys()).size,
     unique_category_ct:categories.length===new Set(categories.map(c=>c.ct)).size,
+    category_keys_complete:categoryKeys.length===categories.length && new Set(categoryKeys).size===categoryKeys.length,
+    category_card_counts_sum:Object.values(analysisCardCountsByCategory).reduce((a,b)=>a+b,0)===analysisCards.length,
     digest:hash(JSON.stringify([...allEvents.keys()].sort())),
     analysis_card_count_matches_ids:analysisCards.length===new Set(analysisCards.map(x=>x.card_id)).size
   }
@@ -272,4 +292,4 @@ const inventory={
 await fs.mkdir(OUT.split("/").slice(0,-1).join("/")||".",{recursive:true});
 await fs.writeFile(OUT,JSON.stringify(inventory,null,2)+"\n");
 console.log(JSON.stringify({category_count:inventory.category_count,event_count:inventory.event_count,market_event_count:inventory.market_event_count,analysis_card_count:inventory.analysis_card_count,failed_category_count:inventory.failed_category_count,empty_category_count:inventory.empty_category_count,metadata_missing_count:inventory.metadata_missing_count,time_parse_missing_count:inventory.time_parse_missing_count,analysis_ready:inventory.analysis_ready,complete:inventory.complete,digest:inventory.integrity.digest},null,2));
-if(!inventory.menu_end_verified||!inventory.integrity.event_count_matches_ids||!inventory.integrity.analysis_card_count_matches_ids||!inventory.analysis_ready||failed.length) process.exitCode=2;
+if(!inventory.menu_end_verified||!inventory.integrity.event_count_matches_ids||!inventory.integrity.analysis_card_count_matches_ids||!inventory.integrity.category_keys_complete||!inventory.integrity.category_card_counts_sum||!inventory.analysis_ready||failed.length) process.exitCode=2;
