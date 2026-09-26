@@ -1,0 +1,176 @@
+{
+  "payload_version": 1,
+  "run_id": "rmc-fulltrial-20260926-2254b",
+  "source": "ChatGPT complete analysis trial",
+  "generated_at": "2026-09-26T22:54:00+09:00",
+  "slot": "adhoc",
+  "note": "完全分析試走。①〜④を独立探索。採用は各系統の独立条件で判定。",
+  "matches": {
+    "update_run": {
+      "run_id": "mr-fulltrial-20260926-2254b",
+      "kind": "human_review",
+      "at": "2026-09-26T22:54:00+09:00",
+      "source": "ChatGPT complete analysis trial",
+      "note": "Chengdu QF Mannarino-Shapovalov verified from multiple current sources."
+    },
+    "new": [
+      {
+        "id": "2026-09-27-mannarino-shapovalov",
+        "sport": "tennis",
+        "competition": "ATP Chengdu Open 2026 QF",
+        "side_a": "Adrian Mannarino",
+        "side_b": "Denis Shapovalov",
+        "home_side": "neutral",
+        "region": "Chengdu, China",
+        "venue": "Sichuan International Tennis Center",
+        "start_at": "2026-09-27T11:00:00+09:00",
+        "start_time_status": "recorded",
+        "status": "scheduled",
+        "result": null,
+        "provenance": [
+          {
+            "update_run_id": "mr-fulltrial-20260926-2254b",
+            "changes": [
+              {
+                "field": "new_match",
+                "before": null,
+                "after": "registered"
+              }
+            ],
+            "note": "H2H 1-3; outdoor hard 0-3 from Mannarino perspective; rankings 78 vs 50; current market around 2.84/1.42.",
+            "evidence": {
+              "sources": [
+                "The Stats Zone 2026-09-25",
+                "TNT Sports current",
+                "Matchstat current",
+                "SteveG Tennis current"
+              ],
+              "checked_at": "2026-09-26T22:54:00+09:00",
+              "confidence": "high"
+            }
+          }
+        ],
+        "sources": [
+          "https://www.thestatszone.com/adrian-mannarino-vs-denis-shapovalov-preview-prediction-2026-chengdu-open-quarter-final-226212",
+          "https://www.tntsports.co.uk/tennis/atp-chengdu/2026/adrian-mannarino-denis-shapovalov_mtc22012816/live-stats.shtml",
+          "https://matchstat.com/",
+          "https://www.stevegtennis.com/head-to-head/men/Denis_Shapovalov/Adrian_Mannarino/"
+        ],
+        "verified_at": "2026-09-26T22:54:00+09:00",
+        "flags": [],
+        "note": "H2H 4 meetings: Shapovalov 3-1; all 3 outdoor-hard meetings won by Shapovalov. Recent10: Shapovalov 6-4, Mannarino 4-6. Current tournament: Shapovalov beat Griekspoor and Kopriva; Mannarino beat Shang and Tabilo."
+      }
+    ]
+  },
+  "systems": {
+    "recommendations": {
+      "discovery_runs": [
+        {
+          "run_id": "rec-fulltrial-20260926-2254b",
+          "started_at": "2026-09-26T22:54:00+09:00",
+          "slot": "adhoc",
+          "note": "独立完全探索。Mannarino-ShapovalovをH2H全4件、屋外ハードH2H、直近10、ランキング、当大会直近、オッズまで確認。Shapovalovを正式推奨候補として採用。Rublev-Gastonはランキング差が大きいが直近6がRublev 3-3対Gaston 5-1のため推奨から除外。"
+        }
+      ],
+      "new_picks": [
+        {
+          "id": "rec-20260927-shapovalovb",
+          "system": "recommendations",
+          "match_id": "2026-09-27-mannarino-shapovalov",
+          "market": "match_winner",
+          "selection": "side_b",
+          "market_odds": {
+            "text": "Shapovalov 1.42 / Mannarino 2.84",
+            "min": 1.42,
+            "max": 1.42,
+            "observed_at": "2026-09-26T22:54:00+09:00",
+            "source": "Matchstat current market"
+          },
+          "odds_taken": 1.42,
+          "stake": 100,
+          "discovered_at": "2026-09-26T22:54:00+09:00",
+          "run_id": "rec-fulltrial-20260926-2254b",
+          "bet_at": "2026-09-26T22:54:00+09:00",
+          "locked_at": "2026-09-26T22:54:00+09:00",
+          "locked": {
+            "prob": 0.735,
+            "gap_score": 76,
+            "confidence": "medium-high",
+            "model_version": "rmc-rec-complete-20260926",
+            "summary": "H2H 3-1、屋外ハード3-0、ランキング50対78、直近10は6-4対4-6。当大会ShapovalovはGriekspoor/Koprivaに連勝。MannarinoもShang/Tabilo連勝のため過信せず73.5%推定。"
+          },
+          "settlement_override": null,
+          "flags": [],
+          "note": "完全分析試走の正式推奨。"
+        }
+      ]
+    },
+    "value1": {
+      "discovery_runs": [
+        {
+          "run_id": "v1-fulltrial-20260926-2254b",
+          "started_at": "2026-09-26T22:54:00+09:00",
+          "slot": "adhoc",
+          "note": "独立VALUE①探索。Shapovalov 1.42の必要勝率70.42%に対し、H2H/屋外ハード/直近10/ランキング/当大会内容から独立推定73.5%（レンジ72-75%）。小幅だが正のEVとしてformal判定。"
+        }
+      ],
+      "new_picks": [
+        {
+          "id": "v1-20260927-shapovalovb",
+          "system": "value1",
+          "match_id": "2026-09-27-mannarino-shapovalov",
+          "market": "match_winner",
+          "selection": "side_b",
+          "market_odds": {
+            "text": "Shapovalov 1.42",
+            "min": 1.42,
+            "max": 1.42,
+            "observed_at": "2026-09-26T22:54:00+09:00",
+            "source": "Matchstat current market"
+          },
+          "odds_taken": 1.42,
+          "stake": 100,
+          "discovered_at": "2026-09-26T22:54:00+09:00",
+          "run_id": "v1-fulltrial-20260926-2254b",
+          "bet_at": "2026-09-26T22:54:00+09:00",
+          "locked_at": "2026-09-26T22:54:00+09:00",
+          "locked": {
+            "verdict": "formal",
+            "prob_lo": 0.72,
+            "prob_hi": 0.75,
+            "prob_point": 0.735,
+            "required_prob": 0.704225,
+            "ev_lo": 0.0224,
+            "ev_hi": 0.065,
+            "gap_score": 70,
+            "model_version": "rmc-v1-complete-20260926",
+            "summary": "必要勝率70.42%。独立推定72-75%、中心73.5%。H2H3-1・屋外ハード3-0・直近10 6-4対4-6を重視。Mannarinoの当大会2連勝をリスクとして織込み。"
+          },
+          "settlement_override": null,
+          "flags": [],
+          "note": "VALUE①独立判定。"
+        }
+      ]
+    },
+    "value2": {
+      "discovery_runs": [
+        {
+          "run_id": "v2-fulltrial-20260926-2254b",
+          "started_at": "2026-09-26T22:54:00+09:00",
+          "slot": "adhoc",
+          "note": "独立VALUE②探索。Shapovalov、Rublev、FUT、100T等を検討したが、現時点の校正済みモデル/SoS/upset-risk条件を満たす十分な独立サンプルがなく新規adoptedなし。無理な採用をしない。"
+        }
+      ]
+    },
+    "pro_edge": {
+      "discovery_runs": [
+        {
+          "run_id": "pe-fulltrial-20260926-2254b",
+          "started_at": "2026-09-26T22:54:00+09:00",
+          "slot": "adhoc",
+          "note": "独立PRO EDGE探索。Mannarino/Shapovalov市場2.84/1.42のno-vig Shapovalov確率は約66.67%。独立ベースは72-75%方向だが、1.42で中心73.5%ならEV約4.37%。ただしPRO EDGE専用の再現可能なbase model入力一式と複数book consensusをこの回で固定できないためaccepted/watch登録は見送り。市場確率をbaseへコピーしていない。"
+        }
+      ]
+    }
+  }
+}
