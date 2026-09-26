@@ -387,7 +387,7 @@ function checkCoverageAudit(payload, ledger) {
   if (!scheduled.has(payload.slot)) return;
   const c = payload.coverage_audit;
   if (!c) { ledger.error("coverage", "payload", null, "定時更新は coverage_audit 必須。全競技探索を数値で証明できないため拒否"); return; }
-  const scope = c.scope ?? "all_three";
+  const scope = c.coverage_scope ?? "three_site_union";
   const master = c.sportsbook_master?.union_sports ?? [];
   const sa = c.sportsbook_master?.source_audit;
   const requiredSites = scope === "bet_channel_only" ? ["bet_channel"] : ["bet_channel","casitabi","yuugado"];
