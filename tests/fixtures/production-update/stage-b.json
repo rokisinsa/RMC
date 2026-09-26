@@ -50,6 +50,14 @@
           "pick_id": "rec-fx-00-a",
           "closing_odds": 1.75
         }
+      ],
+      "discovery_runs": [
+        {
+          "run_id": "rec-fixture-stage-b-1800",
+          "started_at": "2026-09-27T18:00:00+09:00",
+          "slot": "18:00",
+          "note": "fixture complete scheduled discovery"
+        }
       ]
     },
     "pro_edge": {
@@ -78,6 +86,34 @@
           "ev": 0.073,
           "clv_price": 0.057143,
           "clv_probability": 0.004914
+        }
+      ],
+      "discovery_runs": [
+        {
+          "run_id": "pe-fixture-stage-b-1800",
+          "started_at": "2026-09-27T18:00:00+09:00",
+          "slot": "18:00",
+          "note": "fixture complete scheduled discovery"
+        }
+      ]
+    },
+    "value1": {
+      "discovery_runs": [
+        {
+          "run_id": "v1-fixture-stage-b-1800",
+          "started_at": "2026-09-27T18:00:00+09:00",
+          "slot": "18:00",
+          "note": "fixture complete scheduled discovery"
+        }
+      ]
+    },
+    "value2": {
+      "discovery_runs": [
+        {
+          "run_id": "v2-fixture-stage-b-1800",
+          "started_at": "2026-09-27T18:00:00+09:00",
+          "slot": "18:00",
+          "note": "fixture complete scheduled discovery"
         }
       ]
     }
