@@ -283,6 +283,7 @@
     "coverage_audit": {
       "type": "object",
       "required": [
+        "scope",
         "sportsbook_master",
         "systems"
       ],
@@ -566,6 +567,13 @@
               "$ref": "#/$defs/coverageSystem"
             }
           }
+        },
+        "scope": {
+          "enum": [
+            "bet_channel_only",
+            "all_three"
+          ],
+          "description": "今回の完全探索対象。bet_channel_only はBET CHANNELだけを完全母表にする。"
         }
       }
     }
