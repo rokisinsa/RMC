@@ -389,14 +389,23 @@ function checkCoverageAudit(payload, ledger) {
   if (!c) { ledger.error("coverage", "payload", null, "定時更新は coverage_audit 必須。全競技探索を数値で証明できないため拒否"); return; }
   const master = c.sportsbook_master?.union_sports ?? [];
   const sa = c.sportsbook_master?.source_audit;
-  for (const site of ["bet_channel","casitabi","yuugado"]) {
+  const coverageMode = c.sportsbook_master?.mode ?? "three_site";
+  const activeSites = coverageMode === "bet_channel_only" ? ["bet_channel"] : ["bet_channel","casitabi","yuugado"];
+  for (const site of activeSites) {
     const a = sa?.[site];
     if (!a) { ledger.error("coverage", site, null, "サイト別source_auditが無い"); continue; }
     if (!a.menu_end_verified) ledger.error("coverage", site, null, "競技メニュー最下部までの確認証跡が無い");
-    if (a.access_status === "unavailable") ledger.error("coverage", site, null, "サイト競技一覧が未確認のため完全版不可");
+    if (a.access_status !== "direct") ledger.error("coverage", site, null, `完全版はdirect取得のみ。access_status=${a.access_status}`);
     if (!a.source_urls?.length) ledger.error("coverage", site, null, "競技一覧のsource URLが無い");
     const listed = c.sportsbook_master?.[site] ?? [];
     if (a.category_count !== listed.length) ledger.error("coverage", site, null, `category_count ${a.category_count} != 実一覧 ${listed.length}`);
+    if (!Array.isArray(a.event_ids) || a.event_count !== a.event_ids.length) ledger.error("coverage", site, null, `event_count ${a.event_count} != event_ids実数 ${a.event_ids?.length ?? 0}`);
+  }
+  if (coverageMode === "bet_channel_only") {
+    const listed = c.sportsbook_master?.bet_channel ?? [];
+    const a = new Set(listed.map(x => String(x).trim().toLowerCase()));
+    const b = new Set(master.map(x => String(x).trim().toLowerCase()));
+    if (a.size !== b.size || [...a].some(x => !b.has(x))) ledger.error("coverage", "bet_channel", null, "bet_channel_onlyではunion_sportsはBET CHANNEL実査一覧と完全一致が必要");
   }
   if (!master.length) ledger.error("coverage", "payload", null, "3サイト和集合の対象競技マスターが空");
   const uniq = new Set(master.map(x => String(x).trim().toLowerCase()));
