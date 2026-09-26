@@ -4,7 +4,7 @@
     "generated_by": "scripts/rmc-production-update.mjs",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-09-26T22:58:00+09:00",
+    "as_of": "2026-09-26T22:54:00+09:00",
     "status": "active",
     "note": "本番更新 workflow の実行記録（追記のみ）"
   },
@@ -113,6 +113,41 @@
       "actions_result": "pass",
       "pages_result": "pending",
       "note": "今すぐ本番試走。最新Webで9/26-27の実カード・実オッズを確認。確認例: ATP Chengdu Mannarino-Shapovalov、ATP Hangzhou Gaston-Rublev、Laver Cup Alcaraz-Fritz等。①〜④は独立探索し、H2H/直近6-10/ランキング/当日メンバー等を同一試走で十分に検証できないため新規採用は強制しない。"
+    },
+    {
+      "run_id": "rmc-fulltrial-20260926-2254c",
+      "started_at": "2026-09-26T22:57:57+09:00",
+      "finished_at": "2026-09-26T22:57:57+09:00",
+      "source": "ChatGPT complete analysis trial",
+      "payload_generated_at": "2026-09-26T22:54:00+09:00",
+      "payload_sha256": "af77f1b28545e767e11efab23c12a024479588bc47d5880cc107e1157a10358e",
+      "start_sha": "b4ef09657554fd7eb62b1411b228da2ff4205a56",
+      "end_sha": null,
+      "systems_checked": [
+        "recommendations",
+        "experience",
+        "value1",
+        "value2",
+        "pro_edge"
+      ],
+      "cards_checked": 47,
+      "results_updated": 0,
+      "metadata_updated": 0,
+      "new_candidates": {
+        "recommendations": 1,
+        "experience": 0,
+        "value1": 1,
+        "value2": 0,
+        "pro_edge": 0
+      },
+      "accepted": 2,
+      "watch": 0,
+      "rejected": 0,
+      "postmortems_created": 0,
+      "validation_result": "pass",
+      "actions_result": "pass",
+      "pages_result": "pending",
+      "note": "完全分析試走。①〜④を独立探索。採用は各系統の独立条件で判定。"
     }
   ]
 }

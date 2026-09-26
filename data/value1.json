@@ -27,6 +27,12 @@
       "started_at": "2026-09-26T22:58:00+09:00",
       "slot": "adhoc",
       "note": "独立探索。実オッズを確認したが、事前推定勝率と必要勝率・EVを独立根拠で固定できないため新規VALUE①なし。"
+    },
+    {
+      "run_id": "v1-fulltrial-20260926-2254c",
+      "started_at": "2026-09-26T22:54:00+09:00",
+      "slot": "adhoc",
+      "note": "独立VALUE①探索。Shapovalov 1.42の必要勝率70.42%に対し、H2H/屋外ハード/直近10/ランキング/当大会内容から独立推定73.5%（レンジ72-75%）。小幅だが正のEVとしてformal判定。"
     }
   ],
   "excluded_log": [],
@@ -618,6 +624,41 @@
           "stake_text": "$100（仮定）"
         }
       }
+    },
+    {
+      "id": "v1-20260927-shapovalovc",
+      "system": "value1",
+      "match_id": "2026-09-27-mannarino-shapovalov",
+      "market": "match_winner",
+      "selection": "side_b",
+      "market_odds": {
+        "text": "Shapovalov 1.42",
+        "min": 1.42,
+        "max": 1.42,
+        "observed_at": "2026-09-26T22:54:00+09:00",
+        "source": "Matchstat current market"
+      },
+      "odds_taken": 1.42,
+      "stake": 100,
+      "discovered_at": "2026-09-26T22:54:00+09:00",
+      "run_id": "v1-fulltrial-20260926-2254c",
+      "bet_at": "2026-09-26T22:54:00+09:00",
+      "locked_at": "2026-09-26T22:54:00+09:00",
+      "locked": {
+        "verdict": "formal",
+        "prob_lo": 0.72,
+        "prob_hi": 0.75,
+        "prob_point": 0.735,
+        "required_prob": 0.704225,
+        "ev_lo": 0.0224,
+        "ev_hi": 0.065,
+        "gap_score": 70,
+        "model_version": "rmc-v1-complete-20260926",
+        "summary": "必要勝率70.42%。独立推定72-75%、中心73.5%。H2H3-1・屋外ハード3-0・直近10 6-4対4-6を重視。Mannarinoの当大会2連勝をリスクとして織込み。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "VALUE①独立判定。"
     }
   ]
 }

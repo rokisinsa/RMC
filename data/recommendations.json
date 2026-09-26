@@ -27,6 +27,12 @@
       "started_at": "2026-09-26T22:58:00+09:00",
       "slot": "adhoc",
       "note": "独立探索。9/26-27の実カード・市場を再検索。強い市場 фав? 候補を確認したが、必要なH2H全件・直近6〜10・ランキング/レーティング・当日情報の検証が不十分なため新規推奨なし。"
+    },
+    {
+      "run_id": "rec-fulltrial-20260926-2254c",
+      "started_at": "2026-09-26T22:54:00+09:00",
+      "slot": "adhoc",
+      "note": "独立完全探索。Mannarino-ShapovalovをH2H全4件、屋外ハードH2H、直近10、ランキング、当大会直近、オッズまで確認。Shapovalovを正式推奨候補として採用。Rublev-Gastonはランキング差が大きいが直近6がRublev 3-3対Gaston 5-1のため推奨から除外。"
     }
   ],
   "picks": [
@@ -1910,6 +1916,36 @@
           "static_probability_text": "86.0%"
         }
       }
+    },
+    {
+      "id": "rec-20260927-shapovalovc",
+      "system": "recommendations",
+      "match_id": "2026-09-27-mannarino-shapovalov",
+      "market": "match_winner",
+      "selection": "side_b",
+      "market_odds": {
+        "text": "Shapovalov 1.42 / Mannarino 2.84",
+        "min": 1.42,
+        "max": 1.42,
+        "observed_at": "2026-09-26T22:54:00+09:00",
+        "source": "Matchstat current market"
+      },
+      "odds_taken": 1.42,
+      "stake": 100,
+      "discovered_at": "2026-09-26T22:54:00+09:00",
+      "run_id": "rec-fulltrial-20260926-2254c",
+      "bet_at": "2026-09-26T22:54:00+09:00",
+      "locked_at": "2026-09-26T22:54:00+09:00",
+      "locked": {
+        "prob": 0.735,
+        "gap_score": 76,
+        "confidence": "medium-high",
+        "model_version": "rmc-rec-complete-20260926",
+        "summary": "H2H 3-1、屋外ハード3-0、ランキング50対78、直近10は6-4対4-6。当大会ShapovalovはGriekspoor/Koprivaに連勝。MannarinoもShang/Tabilo連勝のため過信せず73.5%推定。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "完全分析試走の正式推奨。"
     }
   ]
 }
