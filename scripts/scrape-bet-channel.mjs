@@ -225,6 +225,7 @@ for(const e of primaryCurrent){
     side_b:e.choice2,
     source_event_ids:[e.event_id],
     market_choices:e.market_choices??[],
+    bettable:(e.market_choices??[]).slice(0,2).every(x=>x.is_valid_bet===true && typeof x.odds==="number" && x.odds>1),
     source_url:e.source_url,
     seen_in:e.seen_in??[]
   });
@@ -250,6 +251,8 @@ const inventory={
   market_event_count:allEvents.size,
   analysis_window:{start_jst:jstIso(new Date(windowStartMs).toISOString()),end_jst:jstIso(new Date(windowEndMs).toISOString()),hours:48},
   analysis_card_count:analysisCards.length,
+  bettable_analysis_card_count:analysisCards.filter(x=>x.bettable).length,
+  unavailable_price_card_count:analysisCards.filter(x=>!x.bettable).length,
   analysis_card_ids:analysisCards.map(x=>x.card_id),
   analysis_cards:analysisCards,
   analysis_ready:failed.length===0 && metadataMissing.length===0 && timeParseMissing.length===0 && analysisCards.length>0,
