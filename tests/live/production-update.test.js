@@ -130,15 +130,15 @@ test("locked 改変 payload は拒否（事前値・価格・結果の書き換�
     assert.ok(!r.ok, `case ${i}`);
     assert.ok(cats(r).includes("locked"), `case ${i}: ${cats(r)}`);
   }
-  const resultOnly = run(mutate(B, p => { p.systems = {}; p.post_match_reviews = {}; }), dir, NOW_B);   // 正しい結果更新だけ
+  const resultOnly = run(mutate(B, p => { p.systems = {}; p.post_match_reviews = {}; p.slot = "adhoc"; delete p.coverage_audit; }), dir, NOW_B);   // 正しい結果更新だけ（adhoc）
   assert.ok(resultOnly.ok, JSON.stringify(resultOnly.ledger.errors));
-  const correction = run(mutate(B, p => { p.run_id = "fixture-correction"; p.systems = {}; p.post_match_reviews = {};
+  const correction = run(mutate(B, p => { p.run_id = "fixture-correction"; p.systems = {}; p.post_match_reviews = {}; p.slot = "adhoc"; delete p.coverage_audit;
     p.result_updates[0].run_id = "mr-2026-09-27-1805-fixture-correction"; p.result_updates[0].at = "2026-09-27T18:05:00+09:00";
     p.result_updates[0].changes[0].set.result.final = { a: 1, b: 2 }; }), dir, NOW_B);
   assert.ok(!correction.ok, "理由の無い結果の書き換え");
   assert.ok(correction.ledger.errors.some(e => /CORRECTION_REASON/.test(e.message)));
   // 既存の更新ログ・試合事実の書き換え
-  const rewrite = run(mutate(B, p => { p.run_id = "fixture-rewrite"; p.result_updates[0].note = "書き換え"; }), dir, NOW_B);
+  const rewrite = run(mutate(B, p => { p.run_id = "fixture-rewrite"; p.slot = "adhoc"; delete p.coverage_audit; p.result_updates[0].note = "書き換え"; }), dir, NOW_B);
   assert.ok(!rewrite.ok && cats(rewrite).includes("locked"));
   assert.notEqual(fingerprint(dir), fp);          // 正しい結果更新（resultOnly）だけは適用されている
 });
