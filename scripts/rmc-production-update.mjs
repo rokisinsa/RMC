@@ -406,6 +406,37 @@ function checkCoverageAudit(payload, ledger) {
     const a = new Set(listed.map(x => String(x).trim().toLowerCase()));
     const b = new Set(master.map(x => String(x).trim().toLowerCase()));
     if (a.size !== b.size || [...a].some(x => !b.has(x))) ledger.error("coverage", "bet_channel", null, "bet_channel_onlyではunion_sportsはBET CHANNEL実査一覧と完全一致が必要");
+
+    // payload の自己申告ではなく、GitHub Actions が実ブラウザで取得した最新 snapshot と照合する。
+    const scanPath = join(ROOT, "data", "betchannel-scan.json");
+    if (!existsSync(scanPath)) {
+      ledger.error("coverage", "bet_channel", null, "data/betchannel-scan.json が無い");
+    } else {
+      try {
+        const scan = JSON.parse(readFileSync(scanPath, "utf8"));
+        if (scan.complete !== true || scan.access_status !== "direct" || scan.menu_end_verified !== true || scan.failed_category_count !== 0) {
+          ledger.error("coverage", "bet_channel", null, "最新BET CHANNEL scanがcomplete/direct/全カテゴリ成功ではない");
+        }
+        if (scan.category_count !== scan.categories?.length) ledger.error("coverage", "bet_channel", null, "scan category_countとcategories実数が不一致");
+        if (scan.event_count !== scan.event_ids?.length || new Set(scan.event_ids ?? []).size !== (scan.event_ids ?? []).length) {
+          ledger.error("coverage", "bet_channel", null, "scan event_count/event_ids実数または一意性が不正");
+        }
+        const expectedMaster = (scan.categories ?? []).map(x => `ct=${x.ct}:${String(x.label ?? "").trim()}`);
+        const em = new Set(expectedMaster.map(x => x.toLowerCase()));
+        if (a.size !== em.size || [...a].some(x => !em.has(x))) ledger.error("coverage", "bet_channel", null, "payloadのBET CHANNELカテゴリ母表が実scanと一致しない");
+        const audit = sa?.bet_channel;
+        const si = new Set(scan.event_ids ?? []), pi = new Set(audit?.event_ids ?? []);
+        if (si.size !== pi.size || [...si].some(x => !pi.has(x))) ledger.error("coverage", "bet_channel", null, "payload event_idsが実scan event_idsと一致しない");
+        if (audit?.category_count !== scan.category_count || audit?.event_count !== scan.event_count) {
+          ledger.error("coverage", "bet_channel", null, "payloadのカテゴリ/イベント件数が実scanと一致しない");
+        }
+        if (audit?.checked_at !== scan.finished_at) ledger.error("coverage", "bet_channel", null, "payload checked_atが実scan finished_atと一致しない");
+        const age = toMs(payload.generated_at) - toMs(scan.finished_at);
+        if (!Number.isFinite(age) || age < 0 || age > 60 * 60 * 1000) ledger.error("coverage", "bet_channel", null, "BET CHANNEL scanが更新時刻より未来、または60分超で古い");
+      } catch (e) {
+        ledger.error("coverage", "bet_channel", null, `BET CHANNEL scan読込失敗: ${e.message}`);
+      }
+    }
   }
   if (!master.length) ledger.error("coverage", "payload", null, "3サイト和集合の対象競技マスターが空");
   const uniq = new Set(master.map(x => String(x).trim().toLowerCase()));
