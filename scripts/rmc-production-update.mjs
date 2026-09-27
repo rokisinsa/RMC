@@ -33,7 +33,7 @@ export const AUDIT_FILE = "automation-runs.json";
 // payload で更新してよいファイル（これ以外は workflow の差分検査で拒否）
 export const WRITABLE_FILES = [
   "data/matches.json", "data/match-updates.json", "data/recommendations.json", "data/experience.json",
-  "data/value1.json", "data/value2.json", "data/pro_edge.json", `data/${AUDIT_FILE}`,
+  "data/value1.json", "data/value2.json", "data/pro_edge.json", "data/system-analysis.json", `data/${AUDIT_FILE}`,
   "data/post-match-reviews/recommendations.json", "data/post-match-reviews/experience.json",
   "data/post-match-reviews/value1.json", "data/post-match-reviews/value2.json", "data/post-match-reviews/pro_edge.json",
 ];
@@ -546,6 +546,61 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
     const out = serialize(text, current[name] ?? null, next[name]);
     if (out != null) writes.push([path, out]);
   }
+  // 定時更新で深掘りした候補を、公開RMCの各系統にそのまま表示できる形で保存する。
+  // 「採用カードだけ」ではなく deep_dive_evidence 全件（candidate/watch/reject/insufficient_data）を残す。
+  if (payload.coverage_audit) {
+    let eventById = new Map();
+    const invPath = join(dataDir, "bet-channel-inventory.json");
+    if (existsSync(invPath)) {
+      const inv = JSON.parse(readFileSync(invPath, "utf8"));
+      eventById = new Map((inv.screening_events ?? []).map(e => [String(e.event_id), e]));
+    }
+    const systems = {};
+    for (const system of DISCOVERY) {
+      const c = payload.coverage_audit.systems?.[system];
+      if (!c) continue;
+      systems[system] = {
+        cards_checked: c.cards_checked,
+        deep_dived: c.deep_dived,
+        accepted: c.accepted,
+        watch: c.watch,
+        rejected: c.rejected,
+        candidates: (c.deep_dive_evidence ?? []).map(d => {
+          const e = eventById.get(String(d.event_id)) ?? {};
+          const choices = e.market_choices ?? [];
+          return {
+            event_id: String(d.event_id),
+            category: e.category ?? null,
+            category_key: e.category_key ?? null,
+            start_at_jst: e.start_at_jst ?? null,
+            market: e.band_name ?? null,
+            side_a: choices[0]?.choice_name ?? null,
+            side_b: choices[1]?.choice_name ?? null,
+            odds: choices.slice(0, 3).map(x => ({ name: x.choice_name ?? null, odds: typeof x.odds === "number" ? x.odds : null, bettable: x.is_valid_bet === true })),
+            outcome: d.outcome,
+            checks: d.checks,
+            source_urls: d.source_urls,
+            note: d.note ?? null,
+            analysis_detail: d.analysis_detail
+          };
+        })
+      };
+    }
+    const systemAnalysis = {
+      schema_version: 1,
+      meta: {
+        run_id: payload.run_id,
+        source: payload.source,
+        generated_at: payload.generated_at,
+        slot: payload.slot,
+        coverage_scope: payload.coverage_audit.coverage_scope
+      },
+      systems
+    };
+    const analysisPath = join(dataDir, "system-analysis.json");
+    writes.push([analysisPath, JSON.stringify(systemAnalysis, null, 2) + "\n"]);
+  }
+
   const nextAudit = clone(audit);
   nextAudit.runs.push(record);
   if (nextAudit.meta) nextAudit.meta.as_of = payload.generated_at;
