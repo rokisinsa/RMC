@@ -393,6 +393,14 @@
         },
         "legacy": {
           "$ref": "#/$defs/legacy"
+        },
+        "source_event_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "BET CHANNEL complete inventoryの元event_id。旧移行カードはnull可。定時更新で追加する新規①〜③カードはproduction gateで必須。"
         }
       }
     },
