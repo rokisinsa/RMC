@@ -109,6 +109,316 @@
         { "match_id": "2026-09-26-fearx-cybme", "status": "review_required", "note": "SiegeGG では 9/26 の試合として掲載されているが「Awaiting match results」で結果未掲載。開始時刻も未確認のまま" },
         { "match_id": "2026-09-26-tmt-rrx", "status": "review_required", "note": "SiegeGG では 9/26 の試合として掲載されているが「Awaiting match results」で結果未掲載。開始時刻も未確認のまま" }
       ]
+    },
+    {
+      "run_id": "mr-result-cleanup-20260927-1757",
+      "kind": "result_update",
+      "at": "2026-09-27T17:57:48+09:00",
+      "source": "ChatGPT RMC stale-result full cleanup 17:57",
+      "note": "公式/専門DB/信頼できる結果ソースで同一性を確認できたものだけ確定。",
+      "changes": [
+        {
+          "match_id": "2026-09-26-log-barca",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 2
+              },
+              "text": "Logroño United 0-2 FC Barcelona"
+            },
+            "result_confirmed_at": "2026-09-27T17:57:48+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "FC Barcelona official match report",
+                "url": "https://www.fcbarcelona.com/en/news/4582141/logrono-united-0-2-fc-barcelona-win-and-record-goal",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-09-27T17:57:48+09:00",
+            "source_confidence": "official",
+            "note": "FC Barcelona公式がLogroño United 0-2 FC Barcelonaを掲載。"
+          }
+        },
+        {
+          "match_id": "2026-09-26-cha-mci",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 1
+              },
+              "text": "Charlton Athletic Women 0-1 Manchester City Women"
+            },
+            "result_confirmed_at": "2026-09-27T17:57:48+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Manchester City official match report",
+                "url": "https://www.mancity.com/news/womens/charlton-athletic-man-city-women-wsl-match-report-63926022",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-09-27T17:57:48+09:00",
+            "source_confidence": "official",
+            "note": "Manchester City公式がCharlton 0-1 Man Cityを掲載。"
+          }
+        },
+        {
+          "match_id": "2026-09-27-lat-ger-u21",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 4
+              },
+              "text": "Latvia U21 0-4 Germany U21"
+            },
+            "result_confirmed_at": "2026-09-27T17:57:48+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "DFB official",
+                "url": "https://www.dfb.de/news/doppelpack-brunner-beim-40-in-lettland",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-09-27T17:57:48+09:00",
+            "source_confidence": "official",
+            "note": "DFB公式のU21試合報告でドイツがラトビアに4-0。"
+          }
+        },
+        {
+          "match_id": "2026-09-27-smr-fin",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 7
+              },
+              "text": "San Marino 0-7 Finland"
+            },
+            "result_confirmed_at": "2026-09-27T17:57:48+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "UEFA official",
+                "url": "https://www.uefa.com/uefanationsleague/news/02a9-21abb9d8b85c-0d9416d472ce-1000--uefa-nations-league-matchday-1-highlights-and-round-up-c/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-09-27T17:57:48+09:00",
+            "source_confidence": "official",
+            "note": "UEFA公式ラウンドアップでSan Marino 0-7 Finland。"
+          }
+        },
+        {
+          "match_id": "2026-09-26-kor-vie",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 46,
+                "b": 18
+              },
+              "text": "Republic of Korea 46-18 Vietnam"
+            },
+            "result_confirmed_at": "2026-09-27T17:57:48+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Yonhap News Agency",
+                "url": "https://en.yna.co.kr/view/AEN20260926003600315",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-09-27T17:57:48+09:00",
+            "source_confidence": "single_source",
+            "note": "Yonhapが韓国46-18ベトナムを報道。"
+          }
+        },
+        {
+          "match_id": "2026-09-26-loud-edg",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "periods": {
+                "map1": {
+                  "a": 13,
+                  "b": 8
+                },
+                "map2": {
+                  "a": 13,
+                  "b": 5
+                }
+              },
+              "text": "LOUD 2-0 EDward Gaming（Lotus 13-8 / Summit 13-5）"
+            },
+            "result_confirmed_at": "2026-09-27T17:57:48+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "VLR.gg match page",
+                "url": "https://www.vlr.gg/753450/loud-vs-edward-gaming-valorant-champions-2026-opening-b/",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-09-27T17:57:48+09:00",
+            "source_confidence": "specialist_db",
+            "note": "VLR.ggでChampions 2026 Group B Opening、LOUD 2-0 EDG、Lotus 13-8 / Summit 13-5を確認。"
+          }
+        },
+        {
+          "match_id": "2026-09-27-gl-k27",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "periods": {
+                "map1": {
+                  "a": 13,
+                  "b": 10
+                },
+                "map2": {
+                  "a": 13,
+                  "b": 10
+                }
+              },
+              "text": "GamerLegion 2-0 K27（Cache 13-10 / Nuke 13-10）"
+            },
+            "result_confirmed_at": "2026-09-27T17:57:48+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "HLTV.org",
+                "url": "https://www.hltv.org/matches/2398096/gamerlegion-vs-k27-1win-private-club-season-1",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-09-27T17:57:48+09:00",
+            "source_confidence": "specialist_db",
+            "note": "HLTVで1win Private Club Season 1、GamerLegion 2-0 K27を確認。"
+          }
+        },
+        {
+          "match_id": "2026-09-26-hos-oze",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "Sakura Hosogi 2-0 Michika Ozeki（6-4 / 7-6）"
+            },
+            "result_confirmed_at": "2026-09-27T17:57:48+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Sofascore",
+                "url": "https://www.sofascore.com/tennis/match/sakura-hosogi-michika-ozeki/JcEsGwcc",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-09-27T17:57:48+09:00",
+            "source_confidence": "specialist_db",
+            "note": "SofascoreでW50 Nanao準決勝、細木咲良2-0尾関美智香（6-4,7-6）を確認。"
+          }
+        },
+        {
+          "match_id": "2026-09-27-faze-furia",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 0
+              },
+              "text": "FaZe Clan 1-0 FURIA"
+            },
+            "result_confirmed_at": "2026-09-27T17:57:48+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "bo3.gg Rainbow Six",
+                "url": "https://bo3.gg/ru/r6siege/matches/faze-clan-1-vs-furia-esports-1-26-09-2026",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-09-27T17:57:48+09:00",
+            "source_confidence": "specialist_db",
+            "note": "bo3.ggのSouth America League Stage 2該当カードでFaZe Clan 1-0 FURIAを確認。旧RMCの開始時刻にはずれの可能性があるため、結果のみ確定し開始時刻は別途監査。"
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "match_id": "2026-09-25-prz-gri",
+          "status": "review_required",
+          "note": "Saint-Tropezの実結果ソースはPrizmic vs Daniil Glinkaを示すが、RMC側の相手名が「ダニエル・グリン」。日付・大会は整合するが人物同一性を断定せず、結果は未反映。"
+        },
+        {
+          "match_id": "2026-09-26-kaz-uzb",
+          "status": "unknown",
+          "note": "Asian Handball Federation公式ページは該当日程を掲載しているが、現時点の取得ページに最終スコアが出ていないため確定しない。"
+        },
+        {
+          "match_id": "2026-09-26-chn-hkg",
+          "status": "unknown",
+          "note": "AHF公式は日程を掲載。Sofascore取得断片は試合途中表示で最終スコアではないため確定しない。"
+        },
+        {
+          "match_id": "2026-09-26-ag-lgd",
+          "status": "review_required",
+          "note": "CNLの同日カードについて信頼できる最終結果を現在の検索で確定できず。開始時刻も旧RMCで未確認。"
+        },
+        {
+          "match_id": "2026-09-26-fearx-cybme",
+          "status": "review_required",
+          "note": "Ubisoft公式は9/26のカードを掲載するが取得ページが「今後」のままで結果未掲載。別ソースも結果確定前表示のため未確定。"
+        },
+        {
+          "match_id": "2026-09-26-tmt-rrx",
+          "status": "review_required",
+          "note": "Ubisoft公式/Tips.ggでカードは確認できるが、取得ページに最終結果がなく確定不可。"
+        },
+        {
+          "match_id": "2026-09-27-jsk-barca",
+          "status": "unknown",
+          "note": "Liquipedia/BO3.gg取得ページがまだupcoming表示で最終結果を確認できないため確定しない。"
+        },
+        {
+          "match_id": "2026-09-27-mannarino-shapovalov",
+          "status": "unknown",
+          "note": "Tennis.comでChengdu準々決勝が現在もUpcoming表示。RMCの11:00 JSTは実開始時刻と不整合の可能性があり、終了扱いしない。"
+        },
+        {
+          "match_id": "2026-09-27-kawasaki-nagoyad",
+          "status": "unknown",
+          "note": "川崎公式で9/27 16:05 TIPOFFは確認できるが、現時点の公開ページに最終スコア未掲載。試合終了を確認できるまでfinalにしない。"
+        }
+      ]
     }
   ]
 }

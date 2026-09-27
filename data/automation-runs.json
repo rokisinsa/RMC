@@ -4,7 +4,7 @@
     "generated_by": "scripts/rmc-production-update.mjs",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-09-27T15:09:30+09:00",
+    "as_of": "2026-09-27T17:57:48+09:00",
     "status": "active",
     "note": "本番更新 workflow の実行記録（追記のみ）"
   },
@@ -21253,6 +21253,42 @@
         }
       },
       "note": "BET CHANNEL全186件×①〜④を再監査。新しいmarket_crosscheckゲートを実運用確認。過去locked値は変更せず、Seattle VALUE①は外部市場比較により今回runではWATCH相当へ再評価。"
+    },
+    {
+      "run_id": "rmc-result-cleanup-20260927-1757",
+      "started_at": "2026-09-27T18:06:25+09:00",
+      "finished_at": "2026-09-27T18:06:25+09:00",
+      "source": "ChatGPT RMC stale-result full cleanup 17:57",
+      "payload_generated_at": "2026-09-27T17:57:48+09:00",
+      "payload_sha256": "9c5028a8e1855c2c186a051378074a0583619cf3e33efbd6d7919fda983118fd",
+      "start_sha": "0005feb81d85206ad7ef850bbf36093ee4d636e3",
+      "end_sha": null,
+      "systems_checked": [
+        "recommendations",
+        "experience",
+        "value1",
+        "value2",
+        "pro_edge"
+      ],
+      "cards_checked": 52,
+      "results_updated": 9,
+      "metadata_updated": 0,
+      "new_candidates": {
+        "recommendations": 0,
+        "experience": 0,
+        "value1": 0,
+        "value2": 0,
+        "pro_edge": 0
+      },
+      "accepted": 0,
+      "watch": 0,
+      "rejected": 0,
+      "postmortems_created": 0,
+      "validation_result": "pass",
+      "actions_result": "pass",
+      "pages_result": "pending",
+      "coverage_audit": null,
+      "note": "RMC公開画面で開始済みなのに△/未確定だったカードを全件抽出し、確認できた終了結果を反映。確認不能・未終了・試合同一性に疑義があるカードはreviewsへ残す。"
     }
   ]
 }
