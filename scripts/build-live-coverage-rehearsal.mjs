@@ -1,17 +1,17 @@
 import fs from "node:fs";
 
-const summaryPath=process.argv[2]||"data/bet-channel-screening-summary.json";
+const summaryPath=process.argv[2]||"data/bet-channel-complete-summary.json";
 const outPath=process.argv[3]||"tmp/live-coverage-trial.json";
 const s=JSON.parse(fs.readFileSync(summaryPath,"utf8"));
 
 const jst=iso=>{
   const d=new Date(iso);
-  const x=new Date(d.getTime()+9*3600e3).toISOString().replace("Z","+09:00");
-  return x;
+  return new Date(d.getTime()+9*3600e3).toISOString().replace("Z","+09:00");
 };
 const generatedAt=jst(s.checked_at);
+const runMs=Date.parse(generatedAt);
 const stamp=generatedAt.replace(/[-:T+]/g,"").slice(0,12);
-const runId=`live-coverage-${stamp}-${String(s.screening_digest||"none").slice(0,6)}`;
+const runId=`live-coverage-${stamp}-${String(s.screening_digest||s.integrity?.screening_digest||"none").slice(0,6)}`;
 const cards=[...(s.screening_event_ids||[])].map(String);
 const byId=new Map((s.events||[]).map(e=>[String(e.event_id),e]));
 const categories=[...(s.category_keys||[])];
@@ -22,44 +22,71 @@ for(const id of cards){
 }
 const competitionsChecked=Object.values(counts).filter(x=>x>0).length;
 const zeroCardSports=Object.values(counts).filter(x=>x===0).length;
+const prioritySet=new Set((s.priority_12h_event_ids||[]).map(String));
+const standardMarket=e=>["primary_h2h","h2h_or_two_way"].includes(e?.market_class)||e?.primary_market===true;
+const priced=e=>e?.price_state==="priced"||(e?.market_choices||[]).some(x=>typeof x.odds==="number"&&x.bettable!==false);
+const within24=e=>{
+  const t=Date.parse(e?.start_at_jst||"");
+  return Number.isFinite(t)&&Number.isFinite(runMs)&&t>=runMs&&t<=runMs+24*3600e3;
+};
+const eligible=e=>!!e&&e.start_state==="future_or_upcoming"&&priced(e)&&standardMarket(e)&&within24(e);
 
-const reasons=(e,system)=>{
+// Coverage rehearsal: every eligible category must have deep-dive proof for every system.
+// Up to 3 cards/category to mirror production shortlist behavior; this is validation evidence, not a pick recommendation.
+const eligibleByCategory=new Map();
+for(const id of cards){
+  const e=byId.get(id);
+  if(!eligible(e)) continue;
+  const k=e.category_key||e.category||"unknown";
+  if(!eligibleByCategory.has(k)) eligibleByCategory.set(k,[]);
+  eligibleByCategory.get(k).push(id);
+}
+const deepSet=new Set([...eligibleByCategory.values()].flatMap(ids=>ids.slice(0,3)));
+
+const reasons=(e,system,id)=>{
   const r=[];
   if(!e){r.push("event_metadata_missing");return {deep:false,r};}
-  if(e.priority_12h!==true) r.push("outside_priority_12h_deep_dive_window");
-  if(e.start_state!=="future_or_upcoming") r.push("start_time_passed_or_long_market");
-  if(e.price_state!=="priced") r.push("price_unavailable");
-  if(!["primary_h2h","h2h_or_two_way"].includes(e.market_class)) r.push("market_not_standard_h2h");
+  if(!within24(e)) r.push("outside_24h_deep_dive_window");
+  if(e.start_state!=="future_or_upcoming") r.push("not_future_upcoming");
+  if(!priced(e)) r.push("price_unavailable");
+  if(!standardMarket(e)) r.push("market_not_standard_h2h");
   const odds=(e.market_choices||[]).map(x=>x.odds).filter(x=>typeof x==="number"&&x>1);
   const fav=odds.length?Math.min(...odds):null;
-  let deep=false;
-  if(system==="recommendations"){
-    deep=e.priority_12h===true&&e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&fav!=null&&fav<=1.50;
-    if(!deep&&fav!=null&&fav>1.50) r.push("favorite_not_short_enough_for_gap_screen");
-  }else if(system==="value1"){
-    deep=e.priority_12h===true&&e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&odds.length>=2;
-    if(!deep&&odds.length<2) r.push("insufficient_priced_outcomes_for_value");
-  }else if(system==="value2"){
-    deep=e.priority_12h===true&&e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&odds.length>=2;
-    if(!deep&&odds.length<2) r.push("insufficient_market_baseline");
-  }else{
-    deep=e.priority_12h===true&&e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&odds.length>=2;
-    if(!deep&&odds.length<2) r.push("insufficient_outcomes_for_novig");
-  }
-  if(deep) r.push("metadata_screen_pass");
+  if(system==="recommendations" && fav!=null) r.push(`gap_screen_favorite_odds_${fav}`);
+  if(system==="value1") r.push("value1_independent_probability_ev_screen");
+  if(system==="value2") r.push("value2_market_clv_calibration_screen");
+  if(system==="pro_edge") r.push("pro_edge_novig_base_expert_ev_screen");
+  const deep=deepSet.has(String(id));
+  if(deep) r.push("category_coverage_deep_dive_required");
   if(!r.length) r.push("screen_reject_rule");
   return {deep,r:[...new Set(r)]};
 };
+
+const analysisDetail=e=>({
+  summary:"live coverage rehearsal: production handoff/gate validation only; external research is intentionally marked unavailable, never fabricated",
+  h2h:{status:"unavailable",summary:"rehearsal does not fabricate H2H; production analysis must supply verified H2H or a source-backed unavailable reason",items:[]},
+  recent_form:{status:"unavailable",summary:"rehearsal does not fabricate recent form"},
+  ranking_or_rating:{status:"unavailable",summary:"rehearsal does not fabricate rankings/ratings"},
+  home_away:{status:"unavailable",summary:"rehearsal does not fabricate venue splits"},
+  availability:{status:"unavailable",summary:"rehearsal does not fabricate roster/availability"},
+  market:{status:priced(e)?"checked":"unavailable",summary:priced(e)?"inventory contains current published price metadata":"published price unavailable"},
+  sport_specific:{status:"unavailable",summary:"sport/title-specific external research is required in production"},
+  rationale:{
+    why:["eligible-category coverage gate exercised with the real current inventory"],
+    risks:["external H2H/form/ranking/roster research is not performed by this CI rehearsal"],
+    conclusion:"insufficient_data"
+  },
+  missing_information:["external-source H2H/form/ranking/availability/sport-specific evidence"]
+});
 
 const prefixes={recommendations:"rec",value1:"v1",value2:"v2",pro_edge:"pe"};
 const coverageSystems={};
 const systems={};
 for(const system of Object.keys(prefixes)){
   const evidence=cards.map(id=>{
-    const x=reasons(byId.get(id),system);
-    return {event_id:id,screen_decision:x.deep?"deep_dive":"screen_reject",reason_codes:x.r,note:"live coverage rehearsal: metadata-level first pass only"};
+    const x=reasons(byId.get(id),system,id);
+    return {event_id:id,screen_decision:x.deep?"deep_dive":"screen_reject",reason_codes:x.r,note:"live complete-union coverage rehearsal"};
   });
-  const deep=evidence.filter(x=>x.screen_decision==="deep_dive").length;
   const deepIds=evidence.filter(x=>x.screen_decision==="deep_dive").map(x=>x.event_id);
   coverageSystems[system]={
     target_sports:categories.length,
@@ -69,34 +96,39 @@ for(const system of Object.keys(prefixes)){
     unavailable_sports:0,
     cards_checked:cards.length,
     competitions_checked:competitionsChecked,
-    deep_dived:deep,
+    deep_dived:deepIds.length,
     accepted:0,watch:0,rejected:0,
     scanned_sport_names:categories,
     unscanned_sport_names:[],
     card_ids:cards,
     sport_card_counts:counts,
     screening_evidence:evidence,
-    deep_dive_evidence:deepIds.map(id=>({
-      event_id:id,
-      source_urls:[byId.get(id)?.source_url||"https://bet-channel.com/matches?lang=ja"],
-      checks:{
-        h2h:"unavailable",
-        recent_form:"unavailable",
-        ranking_or_rating:"unavailable",
-        availability:"unavailable",
-        market_odds:"checked",
-        sport_specific:"unavailable"
-      },
-      outcome:"insufficient_data",
-      note:"live coverage rehearsal only: this workflow verifies handoff/gates; external-source deep research is validated separately"
-    }))
+    deep_dive_evidence:deepIds.map(id=>{
+      const e=byId.get(id);
+      return {
+        event_id:id,
+        source_urls:[e?.source_url||s.source_url||"https://bet-channel.com/"],
+        checks:{
+          h2h:"unavailable",
+          recent_form:"unavailable",
+          ranking_or_rating:"unavailable",
+          availability:"unavailable",
+          market_odds:priced(e)?"checked":"unavailable",
+          sport_specific:"unavailable",
+          market_crosscheck:"unavailable"
+        },
+        outcome:"insufficient_data",
+        note:"CI rehearsal verifies complete-union handoff and mandatory per-category deep-dive proof; it does not create betting picks",
+        analysis_detail:analysisDetail(e)
+      };
+    })
   };
   systems[system]={
     discovery_runs:[{
       run_id:`${prefixes[system]}-${runId}`,
       started_at:generatedAt,
       slot:"12:00",
-      note:"BET CHANNEL実掲載全eventを使うライブcoverage dry-run。候補の最終採否・本番pick追加は行わない。"
+      note:"BET CHANNEL complete union（通常+fixed-odds/eSports）全eventを使うライブcoverage dry-run。候補の最終採否・本番pick追加は行わない。"
     }],
     new_picks:[]
   };
@@ -104,10 +136,10 @@ for(const system of Object.keys(prefixes)){
 const payload={
   payload_version:1,
   run_id:runId,
-  source:"RMC live BET CHANNEL coverage rehearsal",
+  source:"RMC live BET CHANNEL complete-union coverage rehearsal",
   generated_at:generatedAt,
   slot:"12:00",
-  note:"実BET CHANNEL全掲載eventを①〜④で独立一次走査した証跡を使うdry-run。production dataは変更しない。",
+  note:"実BET CHANNEL complete union全掲載eventを①〜④で独立一次走査した証跡を使うdry-run。production dataは変更しない。",
   systems,
   coverage_audit:{
     coverage_scope:"bet_channel_only",
@@ -118,15 +150,15 @@ const payload={
       mode:"bet_channel_only",
       source_audit:{
         bet_channel:{
-          checked_at:generatedAt,
-          source_urls:[s.source_url||"https://bet-channel.com/matches?lang=ja"],
+          checked_at:s.checked_at,
+          source_urls:[s.source_url||"https://bet-channel.com/"],
           menu_end_verified:s.menu_end_verified===true,
           category_count:s.category_count,
           event_count:s.event_count,
-          access_status:"direct",
+          access_status:s.complete===true?"direct":"partial",
           event_ids:s.event_ids,
-          note:"live compact summary",
-          inventory_digest:s.inventory_digest,
+          note:"live complete union summary",
+          inventory_digest:s.integrity?.digest||s.inventory_digest,
           analysis_ready:s.analysis_ready===true,
           analysis_card_count:s.analysis_card_count,
           analysis_card_ids:s.analysis_card_ids,
@@ -134,21 +166,21 @@ const payload={
           unavailable_price_card_count:s.unavailable_price_card_count,
           screening_event_count:s.screening_event_count,
           screening_event_ids:s.screening_event_ids,
-          screening_digest:s.screening_digest
+          screening_digest:s.integrity?.screening_digest||s.screening_digest
         }
       }
     },
     systems:coverageSystems,
     self_audit:{
-      checked_at:generatedAt,
+      checked_at:s.checked_at,
       inventory_status:s.self_audit?.status,
       inventory_self_audit_digest:s.self_audit?.digest,
       anomalies_found:s.self_audit?.anomaly_count??0,
       remediation_status:s.self_audit?.remediation_status??"unknown",
       fixes_applied:s.self_audit?.fixes_applied??[],
       unresolved_blockers:s.self_audit?.unresolved_blockers??0,
-      checks_performed:s.self_audit?.checks_run??["live_summary_present"],
-      note:"live inventory self-audit mirrored into rehearsal payload"
+      checks_performed:s.self_audit?.checks_run??["complete_union_present"],
+      note:"complete-union inventory self-audit mirrored into rehearsal payload"
     }
   }
 };
@@ -159,6 +191,7 @@ console.log(JSON.stringify({
   run_id:runId,
   category_count:categories.length,
   cards_checked:cards.length,
+  eligible_categories:eligibleByCategory.size,
   systems:Object.fromEntries(Object.entries(coverageSystems).map(([k,v])=>[k,{cards_checked:v.cards_checked,evidence:v.screening_evidence.length,deep_dived:v.deep_dived,deep_dive_evidence:v.deep_dive_evidence.length}])),
   self_audit:payload.coverage_audit.self_audit
 },null,2));
