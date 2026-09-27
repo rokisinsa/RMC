@@ -149,12 +149,38 @@ export function applyPayload(current, payload, ledger) {
       if (keys.has(key)) { ledger.reject("duplicate", system, p.id, `同じ系統に同じ試合・市場・選択のカード ${keys.get(key)} がある（重複登録しない）`); continue; }
       const ownRuns = new Set([...data.discovery_runs.map(r => r.run_id)]);
       if (DISCOVERY.includes(system) && !ownRuns.has(p.run_id)) { ledger.reject("independence", system, p.id, `run_id ${p.run_id} はこの系統の探索回ではない（他系統の候補の流用・振り分けは不可）`); continue; }
+      const isFormal =
+        (system === "recommendations" && p.stake != null) ||
+        (system === "value1" && p.locked?.verdict === "formal") ||
+        (system === "value2" && p.locked?.verdict === "adopted") ||
+        (system === "pro_edge" && p.locked?.decision === "accepted");
       const formalPriceMissing =
-        (system === "recommendations" && p.stake != null && p.odds_taken == null) ||
-        (system === "value1" && p.locked?.verdict === "formal" && p.odds_taken == null) ||
-        (system === "value2" && p.locked?.verdict === "adopted" && p.odds_taken == null) ||
-        (system === "pro_edge" && p.locked?.decision === "accepted" && (p.bet_odds == null || p.stake == null));
+        (system === "recommendations" && isFormal && (p.odds_taken == null || p.stake == null)) ||
+        (system === "value1" && isFormal && (p.odds_taken == null || p.stake == null)) ||
+        (system === "value2" && isFormal && (p.odds_taken == null || p.stake == null)) ||
+        (system === "pro_edge" && isFormal && (p.bet_odds == null || p.stake == null));
       if (formalPriceMissing) { ledger.reject("pl", system, p.id, "正式採用なのにexact odds/stakeが無い。結果確定後の収益を正確に計算できないため登録しない"); continue; }
+      if (isFormal && ["06:00","12:00","18:00","23:00"].includes(payload.slot)) {
+        if (!p.bet_at) { ledger.reject("pl", system, p.id, "正式採用なのにbet_at（採用/購入時刻）が無い"); continue; }
+        if (system !== "pro_edge") {
+          const mo=p.market_odds;
+          if (!mo?.observed_at || !mo?.source || mo.exact == null || mo.exact !== p.odds_taken) {
+            ledger.reject("pl", system, p.id, "正式採用のexact odds証拠が不完全。market_odds.exact=odds_taken、observed_at、sourceを必須とする");
+            continue;
+          }
+        } else {
+          if (!p.bet_bookmaker) { ledger.reject("pl", system, p.id, "④正式採用なのにbet_bookmakerが無い"); continue; }
+          const exactSnapshot=(p.price_snapshots??[]).some(s =>
+            s.bookmaker===p.bet_bookmaker &&
+            s.observed_at &&
+            Object.values(s.outcomes??{}).some(v=>typeof v==="number" && v===p.bet_odds)
+          );
+          if (!exactSnapshot) {
+            ledger.reject("pl", system, p.id, "④正式採用のbet_oddsと一致するbookmaker/observed_at付き価格snapshotが無い");
+            continue;
+          }
+        }
+      }
       keys.set(key, p.id);
       data.picks.push(clone(p));
       ledger.add("added", system, p.id, "新規カード");
