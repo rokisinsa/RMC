@@ -496,6 +496,45 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-correct-nagoya-v2-20260927",
+      "kind": "result_update",
+      "at": "2026-09-27T19:56:00+09:00",
+      "source": "SportsNavi B.LEAGUE result verification",
+      "note": "9/26 GAME1の63-93が9/27 GAME2へ誤紐付けされていたため日付・対戦・最終結果を照合して訂正。",
+      "changes": [
+        {
+          "match_id": "2026-09-27-kawasaki-nagoyad",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 78,
+                "b": 90
+              },
+              "text": "川崎ブレイブサンダース 78-90 名古屋ダイヤモンドドルフィンズ"
+            },
+            "result_confirmed_at": "2026-09-27T19:55:00+09:00"
+          },
+          "correction": {
+            "reason": "2026-09-27 16:05 JSTのGAME2に、前日2026-09-26 GAME1の63-93を誤って紐付けていたため、9/27の最終結果78-90へ訂正。"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "SportsNavi B.LEAGUE 2026-09-27 result",
+                "url": "https://sports.yahoo.co.jp/basket/bleague/premier/game/506400/boxscore",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-09-27T19:55:00+09:00",
+            "source_confidence": "single_source",
+            "note": "2026-09-27の日程・結果で川崎78-90名古屋D、試合終了を確認。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }

@@ -4,7 +4,7 @@
     "generated_by": "scripts/rmc-production-update.mjs",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-09-27T19:25:18+09:00",
+    "as_of": "2026-09-27T19:56:00+09:00",
     "status": "active",
     "note": "本番更新 workflow の実行記録（追記のみ）"
   },
@@ -22001,6 +22001,154 @@
       "pages_result": "published",
       "coverage_audit": null,
       "note": "川崎vs名古屋Dの確定結果を反映し、既存集計を再計算する。"
+    },
+    {
+      "run_id": "rmc-correct-nagoya-v2-20260927",
+      "started_at": "2026-09-27T20:07:28+09:00",
+      "finished_at": "2026-09-27T20:07:29+09:00",
+      "source": "ChatGPT result identity correction retry",
+      "payload_generated_at": "2026-09-27T19:56:00+09:00",
+      "payload_sha256": "3e2c7672bbdcb30c0b1b2dda59c0cb42b6d9e569014589b1857cbdb260512ef1",
+      "start_sha": "f1744072e852f088fe6004b242b7ce3f8fce07ea",
+      "end_sha": null,
+      "systems_checked": [
+        "recommendations",
+        "experience",
+        "value1",
+        "value2",
+        "pro_edge"
+      ],
+      "cards_checked": 52,
+      "results_updated": 1,
+      "metadata_updated": 0,
+      "new_candidates": {
+        "recommendations": 0,
+        "experience": 0,
+        "value1": 0,
+        "value2": 0,
+        "pro_edge": 0
+      },
+      "accepted": 0,
+      "watch": 0,
+      "rejected": 0,
+      "postmortems_created": 0,
+      "profit_audit": {
+        "recommendations": {
+          "official": {
+            "count": 33,
+            "settled_games": 23,
+            "wins": 21,
+            "losses": 2,
+            "pending": 9,
+            "settled_stake": 1100,
+            "net_profit": -55,
+            "roi": -5,
+            "amount_missing": 12
+          },
+          "watch": {
+            "count": 0,
+            "settled_games": 0,
+            "wins": 0,
+            "losses": 0,
+            "pending": 0,
+            "settled_stake": 0,
+            "net_profit": 0,
+            "roi": null,
+            "amount_missing": 0
+          },
+          "compound": {
+            "balance": 134.52,
+            "stock": 140.58,
+            "cycles": 1,
+            "failures": 2,
+            "incomplete": 12,
+            "profit": 34.52
+          },
+          "quarter_kelly": {
+            "balance": 101.19,
+            "profit": 1.19,
+            "bets": 2,
+            "skipped": 21
+          }
+        },
+        "value1": {
+          "official": {
+            "count": 6,
+            "settled_games": 4,
+            "wins": 2,
+            "losses": 2,
+            "pending": 2,
+            "settled_stake": 400,
+            "net_profit": -108,
+            "roi": -27,
+            "amount_missing": 0
+          },
+          "watch": {
+            "count": 4,
+            "settled_games": 4,
+            "wins": 4,
+            "losses": 0,
+            "pending": 0,
+            "settled_stake": 100,
+            "net_profit": 35,
+            "roi": 35,
+            "amount_missing": 3
+          }
+        },
+        "value2": {
+          "official": {
+            "count": 1,
+            "settled_games": 1,
+            "wins": 1,
+            "losses": 0,
+            "pending": 0,
+            "settled_stake": 100,
+            "net_profit": 76,
+            "roi": 76,
+            "amount_missing": 0
+          },
+          "watch": {
+            "count": 2,
+            "settled_games": 1,
+            "wins": 1,
+            "losses": 0,
+            "pending": 1,
+            "settled_stake": 0,
+            "net_profit": 0,
+            "roi": null,
+            "amount_missing": 1
+          }
+        },
+        "pro_edge": {
+          "official": {
+            "count": 0,
+            "settled_games": 0,
+            "wins": 0,
+            "losses": 0,
+            "pending": 0,
+            "settled_stake": 0,
+            "net_profit": 0,
+            "roi": null,
+            "amount_missing": 0
+          },
+          "watch": {
+            "count": 1,
+            "settled_games": 0,
+            "wins": 0,
+            "losses": 0,
+            "pending": 1,
+            "settled_stake": 0,
+            "net_profit": 0,
+            "roi": null,
+            "amount_missing": 0
+          }
+        }
+      },
+      "validation_result": "pass",
+      "actions_result": "pass",
+      "pages_result": "pending",
+      "coverage_audit": null,
+      "note": "9/27川崎vs名古屋D GAME2を78-90へ訂正。正式採用オッズ1.18・$100投入・払戻$118・損益+$18を維持し、公開RMCの収支まで検証する。"
     }
   ]
 }
