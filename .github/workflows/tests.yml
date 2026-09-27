@@ -27,6 +27,7 @@ jobs:
           node --check scripts/scrape-bet-channel.mjs
           node --check scripts/scrape-bet-channel-fixed-odds-local.mjs
           node --check scripts/build-bet-channel-complete-inventory.mjs
+          node --check analysis-v2.js
           bash -n scripts/run-fixed-odds-vps.sh
           bash -n scripts/install-fixed-odds-vps.sh
           if command -v pwsh >/dev/null 2>&1; then
