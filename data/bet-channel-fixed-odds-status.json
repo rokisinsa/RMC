@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-27T21:25:02.576+09:00",
+  "checked_at": "2026-09-27T21:46:25.760+09:00",
   "source": "BET CHANNEL fixed-odds / Betby",
   "source_urls": [
     "https://bet-channel.com/fixed-odds?bt-path=/",
@@ -13,6 +13,39 @@
   "event_count": 0,
   "event_ids": [],
   "json_hit_urls": [],
+  "diagnostic_brand_ids": [
+    "2564963746585911298"
+  ],
+  "diagnostic_hosts": [
+    "bet-channel.com",
+    "betchannel.sptpub.com",
+    "start26.sptpub.com"
+  ],
+  "diagnostic_script_urls": [
+    "https://bet-channel.com/bet-channel.com/js/sb.min.js?1764228507",
+    "https://bet-channel.com/bet-channel.com/js/sb.defer.js?1632983945",
+    "https://bet-channel.com/bet-channel.com/js/sb.addition.js?1766995156",
+    "https://bet-channel.com/bet-channel.com/js/common.v2.min.js?1764656572",
+    "https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.js",
+    "https://bet-channel.com/bet-channel.com/js/messages_ja.js?1541054596",
+    "https://bet-channel.com/bet-channel.com/js/livesports.js?1764236223",
+    "https://betchannel.sptpub.com/bt-renderer.min.js"
+  ],
+  "diagnostic_resource_urls": [
+    "https://fonts.googleapis.com/css2?family=Chau+Philomene+One&display=swap",
+    "https://betchannel.sptpub.com/bt-renderer.min.js",
+    "https://start26.sptpub.com/bt-renderer.min.js",
+    "https://bet-channel.com/bet-channel.com/js/livesports.js?1764236223",
+    "https://bet-channel.com/bet-channel.com/css/livesports.css?1761530979",
+    "https://bet-channel.com/matches/api/matchlist?ct=1",
+    "https://bet-channel.com/matches/api/checklist?mode=get",
+    "https://bet-channel.com/fixed-odds?bt-path=/esports",
+    "https://bet-channel.com/fixed-odds?bt-path=/esports-1"
+  ],
+  "diagnostic_snippets": [
+    "<script src=\"https://betchannel.sptpub.com/bt-renderer.min.js\" nonce=\"\"></script>",
+    "        const instance = new BTRenderer().initialize({"
+  ],
   "rules_esports_detected": true,
   "supported_title_hints": [
     "Counter-Strike / CS2",
