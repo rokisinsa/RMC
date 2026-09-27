@@ -680,18 +680,8 @@
         "fixture-volleyball",
         "fixture-esports"
       ],
-      "casitabi": [
-        "fixture-soccer",
-        "fixture-tennis",
-        "fixture-volleyball",
-        "fixture-esports"
-      ],
-      "yuugado": [
-        "fixture-soccer",
-        "fixture-tennis",
-        "fixture-volleyball",
-        "fixture-esports"
-      ],
+      "casitabi": [],
+      "yuugado": [],
       "union_sports": [
         "fixture-soccer",
         "fixture-tennis",
@@ -784,8 +774,45 @@
             "bc-00000000000000000014"
           ],
           "screening_digest": "fixture-screening-digest-20260927"
+        },
+        "casitabi": {
+          "checked_at": "2026-09-27T06:49:00+09:00",
+          "source_urls": [
+            "https://fixture.example/casitabi"
+          ],
+          "menu_end_verified": false,
+          "category_count": 0,
+          "event_count": 0,
+          "access_status": "unavailable",
+          "note": "test fixture: supplementary source unavailable by design",
+          "event_ids": []
+        },
+        "bet365": {
+          "checked_at": "2026-09-27T06:49:00+09:00",
+          "source_urls": [
+            "https://fixture.example/bet365"
+          ],
+          "menu_end_verified": false,
+          "category_count": 0,
+          "event_count": 0,
+          "access_status": "unavailable",
+          "note": "test fixture: supplementary source unavailable by design",
+          "event_ids": []
+        },
+        "yuugado": {
+          "checked_at": "2026-09-27T06:49:00+09:00",
+          "source_urls": [
+            "https://fixture.example/yuugado"
+          ],
+          "menu_end_verified": false,
+          "category_count": 0,
+          "event_count": 0,
+          "access_status": "unavailable",
+          "note": "test fixture: supplementary source unavailable by design",
+          "event_ids": []
         }
-      }
+      },
+      "bet365": []
     },
     "systems": {
       "recommendations": {
@@ -3000,5 +3027,231 @@
       ],
       "note": "test fixture only"
     }
+  },
+  "completion_audit": {
+    "existing_pick_ids_by_system": {
+      "recommendations": [
+        "rec-legacy-log-barca-rec",
+        "rec-legacy-charlton-city-rec",
+        "rec-legacy-lat-ger-rec",
+        "rec-legacy-smr-fin-rec",
+        "rec-legacy-ag-lgd-rec",
+        "rec-legacy-fearx-cyb-rec",
+        "rec-legacy-tmt-rrx-rec",
+        "rec-legacy-kaz-uzb-rec",
+        "rec-legacy-china-hk-rec",
+        "rec-legacy-kor-vie-rec",
+        "rec-legacy-jpn-nep-rec",
+        "rec-legacy-log-barca",
+        "rec-legacy-lat-ger",
+        "rec-legacy-cha-mci",
+        "rec-legacy-smr-fin",
+        "rec-legacy-faze-furia-rec",
+        "rec-legacy-fearx",
+        "rec-legacy-loud-edg-rec",
+        "rec-legacy-ge-vit-rec",
+        "rec-legacy-ag-lgd",
+        "rec-legacy-prz-rin",
+        "rec-legacy-spain-czech-rec",
+        "rec-legacy-china-maldives",
+        "rec-legacy-sak-hib",
+        "rec-legacy-oddik-procyon",
+        "rec-legacy-lyon",
+        "rec-legacy-italy",
+        "rec-legacy-cs2",
+        "rec-legacy-cor",
+        "rec-legacy-tun"
+      ],
+      "experience": [
+        "exp-legacy-hos-oze",
+        "exp-legacy-prz-gri",
+        "exp-legacy-esp-cze",
+        "exp-legacy-ish-ita"
+      ],
+      "value1": [
+        "v1-legacy-bul-por-u21",
+        "v1-legacy-nip-3dmax",
+        "v1-legacy-slo-pol",
+        "v1-legacy-heroic-fnatic",
+        "v1-legacy-fin-fra",
+        "v1-legacy-kc-xlg",
+        "v1-legacy-gl-k27",
+        "v1-legacy-jsk-barca",
+        "v1-legacy-loud-edg"
+      ],
+      "value2": [
+        "v2-legacy-ge-vit",
+        "v2-legacy-loud-edg"
+      ],
+      "pro_edge": []
+    },
+    "result_checks": [
+      {
+        "match_id": "2026-09-26-log-barca",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-26-log-barca"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-26-cha-mci",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-26-cha-mci"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-27-lat-ger-u21",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-27-lat-ger-u21"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-27-smr-fin",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-27-smr-fin"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-26-kaz-uzb",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-26-kaz-uzb"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-26-chn-hkg",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-26-chn-hkg"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-26-kor-vie",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-26-kor-vie"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-27-faze-furia",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-27-faze-furia"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-26-loud-edg",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-26-loud-edg"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-26-ge-vit",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-26-ge-vit"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-26-hos-oze",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-26-hos-oze"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-25-prz-gri",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-25-prz-gri"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-27-gl-k27",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-27-gl-k27"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      },
+      {
+        "match_id": "2026-09-27-jsk-barca",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://fixture.example/result-check/2026-09-27-jsk-barca"
+        ],
+        "verified_at": "2026-09-27T06:49:00+09:00",
+        "identity_ok": true,
+        "note": "test fixture completion audit"
+      }
+    ],
+    "settlement_propagation_checked": true,
+    "exact_odds_checked": true,
+    "legacy_amount_missing_only": true,
+    "profit_recalculated": {
+      "recommendations": true,
+      "value1": true,
+      "value2": true,
+      "pro_edge": true
+    },
+    "loss_reviews_checked": true,
+    "future_info_leakage_checked": true,
+    "locked_history_checked": true
   }
 }
