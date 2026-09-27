@@ -62,9 +62,14 @@ jobs:
           if(x.metadata_missing_count!==0) errors.push("metadata missing");
           if(x.time_parse_missing_count!==0) errors.push("time parse missing");
           if(!x.analysis_ready) errors.push("analysis_ready=false");
+          if(x.screening_event_count!==x.screening_event_ids.length) errors.push("screening_event_count mismatch");
+          if(new Set(x.screening_event_ids).size!==x.screening_event_ids.length) errors.push("duplicate screening event ids");
+          if(!x.integrity?.screening_event_count_matches_ids) errors.push("screening ids integrity failed");
+          if(!x.integrity?.screening_category_counts_sum) errors.push("screening category counts mismatch");
+          if(!x.integrity?.priority_12h_is_subset) errors.push("priority 12h is not subset of screening universe");
           if(x.analysis_card_count!==x.analysis_card_ids.length) errors.push("analysis_card_count mismatch");
           if(new Set(x.analysis_card_ids).size!==x.analysis_card_ids.length) errors.push("duplicate analysis card ids");
-          console.log(JSON.stringify({checked_at:x.checked_at,category_count:x.category_count,event_count:x.event_count,failed:x.failed_category_count,empty:x.empty_category_count,complete:x.complete,errors},null,2));
+          console.log(JSON.stringify({checked_at:x.checked_at,category_count:x.category_count,event_count:x.event_count,screening_event_count:x.screening_event_count,priority_12h_event_count:x.priority_12h_event_count,analysis_card_count:x.analysis_card_count,failed:x.failed_category_count,empty:x.empty_category_count,complete:x.complete,errors},null,2));
           if(errors.length) process.exit(1);
           NODE
 
@@ -91,5 +96,5 @@ jobs:
             console.error(`Incomplete BET CHANNEL scrape: failed=${x.failed_category_count} metadata=${x.metadata_missing_count} time_parse=${x.time_parse_missing_count} analysis_ready=${x.analysis_ready}`);
             process.exit(1);
           }
-          console.log(`COMPLETE: ${x.category_count} categories / ${x.event_count} market events / ${x.analysis_card_count} canonical 48h cards / ${x.bettable_analysis_card_count} priced`);
+          console.log(`COMPLETE: ${x.category_count} categories / ${x.event_count} collected market events / ${x.screening_event_count} currently listed sports/esports events for full screening / ${x.priority_12h_event_count} priority next-12h / ${x.analysis_card_count} canonical 48h cards`);
           NODE
