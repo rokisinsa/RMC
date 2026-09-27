@@ -111,7 +111,7 @@ test("同じ run_id の二重適用は拒否。変更0件の回も「完全チ�
   assert.ok(same.ok, JSON.stringify(same.ledger.errors));
   assert.equal(same.ledger.count("added") + same.ledger.count("updated"), 0);
   assert.ok(same.ledger.count("unchanged") > 0);
-  assert.deepEqual(same.written.map(f => f.split("/").at(-1)), [AUDIT_FILE]);
+  assert.deepEqual(same.written.map(f => f.split("/").at(-1)), ["system-analysis.json", AUDIT_FILE]);
   const empty = run(JSON.stringify({ payload_version: 1, run_id: "fixture-empty", source: "テスト", generated_at: "2026-09-27T07:10:00+09:00" }), dir, NOW_A);
   assert.ok(empty.ok);
   assert.deepEqual(empty.written.map(f => f.split("/").at(-1)), [AUDIT_FILE]);
