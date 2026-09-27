@@ -16,8 +16,8 @@ body{min-height:100svh;background:radial-gradient(circle at 50% 0%,rgba(70,190,2
 .hero h1{margin:0;font-size:clamp(32px,9vw,60px);letter-spacing:.08em;background:linear-gradient(180deg,#e9fbff,#75d8ff 50%,#2e8fbd);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{margin:6px 0 0;color:#9fc9da;letter-spacing:.14em;font-size:12px}
 .data-status{font-size:11px;color:#9fb3bd;margin:0 0 10px;line-height:1.7}
-.sys-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
-.sys-nav a{color:#dff8ff;text-decoration:none;font-size:12px;padding:6px 10px;border:1px solid rgba(110,210,255,.25);border-radius:999px;background:rgba(15,29,40,.6)}
+.sys-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:0 0 22px}
+.sys-nav a{color:#dff8ff;text-decoration:none;font-size:12px;font-weight:800;text-align:center;padding:9px 10px;border:1px solid rgba(110,210,255,.25);border-radius:10px;background:rgba(15,29,40,.75)}
 .system{margin:0 0 30px;padding-top:18px;border-top:1px solid rgba(110,210,255,.18)}
 .system.value{border-top-color:rgba(255,212,93,.22)}
 .system.pro-edge{border-top-color:rgba(105,240,165,.3)}
@@ -89,9 +89,36 @@ table.kv th{width:42%;color:#8eb2c1}
 .eval{padding:8px 10px;border:1px solid rgba(105,240,165,.18);border-radius:12px;margin-bottom:12px}
 .metrics th{width:55%}
 .empty{padding:18px;text-align:center;color:#8497a1;font-size:12px;border:1px dashed rgba(110,210,255,.16);border-radius:14px}
+.system-separated{margin-top:34px;padding:18px 14px;border:1px solid rgba(110,210,255,.16);border-radius:18px;background:rgba(5,10,15,.72)}
+.system-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.system-chip{font-size:10px;font-weight:900;letter-spacing:.08em;color:#7edcff;padding:4px 8px;border:1px solid rgba(126,220,255,.32);border-radius:999px;background:rgba(126,220,255,.07)}
+.analysis-panel{margin:16px 0 18px;border:1px solid rgba(126,220,255,.22);border-radius:14px;overflow:hidden;background:rgba(4,10,15,.8)}
+.analysis-panel-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px;background:rgba(55,165,216,.08);border-bottom:1px solid rgba(126,220,255,.14)}
+.analysis-counts{display:flex;gap:6px;flex-wrap:wrap}
+.analysis-counts span{font-size:10px;padding:4px 7px;border-radius:999px;background:rgba(255,255,255,.05);color:#cfe8f3}
+.analysis-card{border-bottom:1px solid rgba(255,255,255,.07)}
+.analysis-card:last-child{border-bottom:0}
+.analysis-card summary{list-style:none;cursor:pointer;padding:11px 12px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.analysis-card summary::-webkit-details-marker{display:none}
+.analysis-card summary:after{content:"＋ 詳細を見る";margin-left:auto;font-size:10px;color:#75d9ff}
+.analysis-card[open] summary:after{content:"− 閉じる"}
+.analysis-match{font-weight:900;color:#f3fbff}
+.analysis-time{font-size:10px;color:#8fa8b5}
+.analysis-card-body{padding:0 12px 13px}
+.analysis-summary{padding:9px 10px;border-left:3px solid #69d9ff;background:rgba(72,184,235,.07);font-size:12px;line-height:1.75;margin-bottom:10px}
+.analysis-lines{margin-top:7px;display:grid;gap:5px}
+.analysis-lines>div{padding:6px 7px;border-radius:8px;background:rgba(255,255,255,.035);font-size:11px;line-height:1.55}
+.analysis-side{padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.08);font-size:11.5px;line-height:1.65}
+.analysis-side:last-child{border-bottom:0}
+.analysis-subhead{margin-top:10px!important}
+.analysis-missing{margin-top:10px;padding:8px 10px;border-radius:9px;background:rgba(255,212,93,.08);border:1px solid rgba(255,212,93,.22);font-size:11px;color:#ffe293}
+.analysis-sources{margin-top:10px;font-size:10px;display:flex;gap:8px;flex-wrap:wrap}
+.analysis-sources a{color:#7edcff;text-decoration:none}
 .demo-banner{margin:0 0 10px;padding:8px 10px;border-radius:10px;background:rgba(255,107,120,.12);border:1px solid rgba(255,107,120,.4);color:#ffb3ba;font-size:12px;font-weight:800}
 .load-error{padding:14px;border-radius:12px;background:rgba(255,107,120,.12);border:1px solid rgba(255,107,120,.4);color:#ffb3ba}
 @media(max-width:760px){
+  .sys-nav{grid-template-columns:1fr 1fr}
+  .analysis-panel-head{align-items:flex-start;flex-direction:column}
   .summary,.summary.four,.summary.three{grid-template-columns:1fr 1fr}
   .detail-grid{grid-template-columns:1fr}
   .value{font-size:17px}
