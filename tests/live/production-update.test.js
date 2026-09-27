@@ -102,6 +102,20 @@ test("2回目の定時更新（結果・締切・レビュー）：精算・CLV 
   assert.equal(fingerprint(DATA_DIR), liveBefore);
 });
 
+test("定時更新：新たな敗戦確定にpost-match reviewが無ければ拒否", () => {
+  const dir = withA();
+  const p = mutate(B, x => {
+    x.run_id = "fixture-loss-without-review";
+    x.result_updates[0].run_id = "mr-fixture-loss-without-review";
+    x.result_updates[0].changes[0].set.result.final = { a: 0, b: 2 };
+    x.result_updates[0].changes[0].set.result.text = "Fixture Player A 0-2 Fixture Player B（架空）";
+    x.post_match_reviews = {};
+  });
+  const r = run(p, dir, NOW_B);
+  assert.ok(!r.ok);
+  assert.ok(cats(r).includes("postmortem"), JSON.stringify(r.ledger.errors));
+});
+
 test("同じ run_id の二重適用は拒否。変更0件の回も「完全チェック」の実行記録だけ残す", () => {
   const dir = withA();
   const again = run(A, dir, NOW_A);
