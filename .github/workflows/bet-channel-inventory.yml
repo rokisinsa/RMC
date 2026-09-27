@@ -83,7 +83,18 @@ jobs:
             echo "No inventory diff"
           else
             git commit -m "Update BET CHANNEL inventory"
-            git push origin HEAD:main
+            # 別のRMC更新が同時にmainへ入っても、最新mainへ追従してから保存する。
+            for attempt in 1 2 3; do
+              git fetch origin main
+              if git rebase origin/main && git push origin HEAD:main; then
+                exit 0
+              fi
+              git rebase --abort || true
+              echo "inventory push retry $attempt/3"
+              sleep 2
+            done
+            echo "Failed to persist measured inventory after 3 retries"
+            exit 1
           fi
 
       - name: Enforce complete scrape
