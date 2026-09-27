@@ -1,0 +1,80 @@
+name: RMC Live Coverage Rehearsal
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build-live-coverage-rehearsal.mjs"
+      - ".github/workflows/rmc-live-coverage-rehearsal.yml"
+      - "data/bet-channel-screening-summary.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rmc-live-coverage-rehearsal
+  cancel-in-progress: true
+
+jobs:
+  live-rehearsal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build live all-event rehearsal payload
+        run: |
+          node scripts/build-live-coverage-rehearsal.mjs data/bet-channel-screening-summary.json tmp/live-coverage-trial.json | tee /tmp/live-builder.txt
+
+      - name: Run production validator against live BET CHANNEL universe
+        run: |
+          node scripts/rmc-production-update.mjs --payload tmp/live-coverage-trial.json --dry-run --start-sha "$(git rev-parse HEAD)" --report tmp/live-coverage-report.json | tee /tmp/live-validator.txt
+
+      - name: Run full regression tests
+        run: npm test
+
+      - name: Assert real-event coverage evidence
+        run: |
+          node - <<'NODE'
+          const fs=require("fs");
+          const p=JSON.parse(fs.readFileSync("tmp/live-coverage-trial.json","utf8"));
+          const report=JSON.parse(fs.readFileSync("tmp/live-coverage-report.json","utf8"));
+          if(!report.ok) throw new Error("production dry-run report is not ok");
+          const n=p.coverage_audit.sportsbook_master.source_audit.bet_channel.screening_event_count;
+          if(n<1) throw new Error("screening_event_count is zero");
+          for(const key of ["recommendations","value1","value2","pro_edge"]){
+            const c=p.coverage_audit.systems[key];
+            if(c.cards_checked!==n) throw new Error(key+" cards_checked mismatch");
+            if(c.screening_evidence.length!==n) throw new Error(key+" screening_evidence mismatch");
+            if(new Set(c.screening_evidence.map(x=>x.event_id)).size!==n) throw new Error(key+" duplicate/missing evidence");
+            if(c.screening_evidence.filter(x=>x.screen_decision==="deep_dive").length!==c.deep_dived) throw new Error(key+" deep_dived mismatch");
+          }
+          console.log(JSON.stringify({
+            ok:true,
+            run_id:p.run_id,
+            category_count:p.coverage_audit.sportsbook_master.bet_channel.length,
+            screening_event_count:n,
+            systems:Object.fromEntries(["recommendations","value1","value2","pro_edge"].map(k=>[k,{
+              cards_checked:p.coverage_audit.systems[k].cards_checked,
+              evidence:p.coverage_audit.systems[k].screening_evidence.length,
+              deep_dived:p.coverage_audit.systems[k].deep_dived
+            }]))
+          },null,2));
+          NODE
+
+      - name: Rehearsal summary
+        if: always()
+        run: |
+          {
+            echo "## RMC live BET CHANNEL coverage rehearsal"
+            cat /tmp/live-builder.txt 2>/dev/null || true
+            cat /tmp/live-validator.txt 2>/dev/null || true
+          } >> "$GITHUB_STEP_SUMMARY"
