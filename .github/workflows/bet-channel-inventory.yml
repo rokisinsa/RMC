@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "scripts/scrape-bet-channel.mjs"
+      - "scripts/select-bet-channel-inventory.mjs"
       - ".github/workflows/bet-channel-inventory.yml"
   workflow_dispatch:
   schedule:
@@ -36,16 +37,42 @@ jobs:
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
 
-      - name: Scrape BET CHANNEL all categories and events
+      - name: Scrape BET CHANNEL + self-healing retry
         id: scrape
         shell: bash
         run: |
           set +e
-          node scripts/scrape-bet-channel.mjs data/bet-channel-inventory.json | tee /tmp/bc-summary.txt
-          code=${PIPESTATUS[0]}
-          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
-          cat /tmp/bc-summary.txt >> "$GITHUB_STEP_SUMMARY"
-          exit 0
+          cp data/bet-channel-inventory.json /tmp/bc-attempt1.json 2>/dev/null || true
+          node scripts/scrape-bet-channel.mjs /tmp/bc-attempt1.json | tee /tmp/bc-summary-1.txt
+          code1=${PIPESTATUS[0]}
+
+          need_retry=$(node - <<'NODE'
+          const fs=require("fs");
+          try{
+            const x=JSON.parse(fs.readFileSync("/tmp/bc-attempt1.json","utf8"));
+            process.stdout.write((x.self_audit?.requires_rescan || !x.complete || !x.analysis_ready) ? "yes" : "no");
+          }catch{ process.stdout.write("yes"); }
+          NODE
+          )
+
+          code2=0
+          if [ "$need_retry" = "yes" ]; then
+            echo "Self-audit detected anomaly; running one full automatic rescan." | tee -a /tmp/bc-summary-1.txt
+            cp data/bet-channel-inventory.json /tmp/bc-attempt2.json 2>/dev/null || true
+            node scripts/scrape-bet-channel.mjs /tmp/bc-attempt2.json | tee /tmp/bc-summary-2.txt
+            code2=${PIPESTATUS[0]}
+          fi
+
+          set -e
+          args=(--attempt1 /tmp/bc-attempt1.json --out data/bet-channel-inventory.json)
+          if [ -f /tmp/bc-attempt2.json ]; then args+=(--attempt2 /tmp/bc-attempt2.json); fi
+          node scripts/select-bet-channel-inventory.mjs "${args[@]}" | tee /tmp/bc-selection.txt
+
+          echo "attempt1_exit=$code1" >> "$GITHUB_OUTPUT"
+          echo "attempt2_exit=$code2" >> "$GITHUB_OUTPUT"
+          cat /tmp/bc-summary-1.txt >> "$GITHUB_STEP_SUMMARY"
+          if [ -f /tmp/bc-summary-2.txt ]; then cat /tmp/bc-summary-2.txt >> "$GITHUB_STEP_SUMMARY"; fi
+          cat /tmp/bc-selection.txt >> "$GITHUB_STEP_SUMMARY"
 
       - name: Validate inventory structure
         shell: bash
@@ -62,6 +89,10 @@ jobs:
           if(x.metadata_missing_count!==0) errors.push("metadata missing");
           if(x.time_parse_missing_count!==0) errors.push("time parse missing");
           if(!x.analysis_ready) errors.push("analysis_ready=false");
+          if(!x.self_audit) errors.push("self_audit missing");
+          if(!["pass","pass_after_remediation"].includes(x.self_audit?.status)) errors.push("self_audit status not pass");
+          if(x.self_audit?.requires_rescan) errors.push("self_audit still requires rescan");
+          if((x.self_audit?.unresolved_blockers??1)!==0) errors.push("self_audit unresolved blockers");
           if(x.screening_event_count!==x.screening_event_ids.length) errors.push("screening_event_count mismatch");
           if(new Set(x.screening_event_ids).size!==x.screening_event_ids.length) errors.push("duplicate screening event ids");
           if(!x.integrity?.screening_event_count_matches_ids) errors.push("screening ids integrity failed");
@@ -69,7 +100,7 @@ jobs:
           if(!x.integrity?.priority_12h_is_subset) errors.push("priority 12h is not subset of screening universe");
           if(x.analysis_card_count!==x.analysis_card_ids.length) errors.push("analysis_card_count mismatch");
           if(new Set(x.analysis_card_ids).size!==x.analysis_card_ids.length) errors.push("duplicate analysis card ids");
-          console.log(JSON.stringify({checked_at:x.checked_at,category_count:x.category_count,event_count:x.event_count,screening_event_count:x.screening_event_count,priority_12h_event_count:x.priority_12h_event_count,analysis_card_count:x.analysis_card_count,failed:x.failed_category_count,empty:x.empty_category_count,complete:x.complete,errors},null,2));
+          console.log(JSON.stringify({checked_at:x.checked_at,category_count:x.category_count,event_count:x.event_count,screening_event_count:x.screening_event_count,priority_12h_event_count:x.priority_12h_event_count,analysis_card_count:x.analysis_card_count,failed:x.failed_category_count,empty:x.empty_category_count,complete:x.complete,self_audit_status:x.self_audit?.status,self_audit_anomalies:x.self_audit?.anomaly_count,remediation_status:x.self_audit?.remediation_status,fixes_applied:x.self_audit?.fixes_applied,errors},null,2));
           if(errors.length) process.exit(1);
           NODE
 
@@ -103,9 +134,9 @@ jobs:
           node - <<'NODE'
           const fs=require("fs");
           const x=JSON.parse(fs.readFileSync("data/bet-channel-inventory.json","utf8"));
-          if(!x.complete || !x.analysis_ready || x.failed_category_count!==0 || x.metadata_missing_count!==0 || x.time_parse_missing_count!==0){
-            console.error(`Incomplete BET CHANNEL scrape: failed=${x.failed_category_count} metadata=${x.metadata_missing_count} time_parse=${x.time_parse_missing_count} analysis_ready=${x.analysis_ready}`);
+          if(!x.complete || !x.analysis_ready || x.failed_category_count!==0 || x.metadata_missing_count!==0 || x.time_parse_missing_count!==0 || !["pass","pass_after_remediation"].includes(x.self_audit?.status) || x.self_audit?.requires_rescan || x.self_audit?.unresolved_blockers!==0){
+            console.error(`Incomplete BET CHANNEL scrape: failed=${x.failed_category_count} metadata=${x.metadata_missing_count} time_parse=${x.time_parse_missing_count} analysis_ready=${x.analysis_ready} self_audit=${x.self_audit?.status} unresolved=${x.self_audit?.unresolved_blockers}`);
             process.exit(1);
           }
-          console.log(`COMPLETE: ${x.category_count} categories / ${x.event_count} collected market events / ${x.screening_event_count} currently listed sports/esports events for full screening / ${x.priority_12h_event_count} priority next-12h / ${x.analysis_card_count} canonical 48h cards`);
+          console.log(`COMPLETE: ${x.category_count} categories / ${x.event_count} collected market events / ${x.screening_event_count} currently listed sports/esports events / ${x.priority_12h_event_count} priority next-12h / self-audit ${x.self_audit.status} / remediation ${x.self_audit.remediation_status}`);
           NODE
