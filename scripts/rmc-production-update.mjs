@@ -493,6 +493,15 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
   const master = c.sportsbook_master?.union_sports ?? [];
   const sa = c.sportsbook_master?.source_audit;
   const requiredSites = scope === "bet_channel_only" ? ["bet_channel"] : scope === "three_site_union" ? ["bet_channel","casitabi","yuugado"] : ["bet_channel","bet365","casitabi","yuugado"];
+  if (isScheduled) {
+    for (const site of ["casitabi","bet365","yuugado"]) {
+      const a=sa?.[site];
+      if (!a) { ledger.error("coverage",site,null,"定時更新は補助サイトsource_audit必須（取得不能でもchecked_at/source_urls/access_status/noteを残す）"); continue; }
+      if (!a.checked_at || !a.source_urls?.length || !a.access_status) ledger.error("coverage",site,null,"補助サイトのchecked_at/source_urls/access_statusが不足");
+      if (["unavailable","partial"].includes(a.access_status) && !String(a.note??"").trim()) ledger.error("coverage",site,null,"取得不能/partialの具体的理由noteが無い");
+      if (toMs(a.checked_at)>toMs(payload.generated_at)) ledger.error("future",site,null,"補助サイトchecked_atがgenerated_atより未来");
+    }
+  }
   const normList = xs => [...new Set((xs ?? []).map(x => String(x).trim().toLowerCase()))].sort();
 
   for (const site of requiredSites) {
@@ -722,6 +731,51 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
   }
 }
 
+// ── 定時更新の全件完了証跡ゲート ──────────────────────────────────────
+function checkCompletionAudit(current, payload, ledger, { cfg }) {
+  if (!["06:00","12:00","18:00","23:00"].includes(payload.slot)) return;
+  const c = payload.completion_audit;
+  if (!c) {
+    ledger.error("completion", "payload", null, "定時更新は completion_audit 必須。既存カード全件・結果照合・精算・収支再計算の証拠が無い");
+    return;
+  }
+  const setEq = (a,b) => JSON.stringify([...new Set((a??[]).map(String))].sort()) === JSON.stringify([...new Set((b??[]).map(String))].sort());
+  for (const s of ["recommendations","experience","value1","value2","pro_edge"]) {
+    const expected=(current[s]?.picks??[]).map(x=>String(x.id));
+    const got=c.existing_pick_ids_by_system?.[s]??[];
+    if (!setEq(expected,got)) ledger.error("completion",s,null,`既存カード全件再照合IDが一致しない（${got.length}/${expected.length}）`);
+  }
+  let vm;
+  try { vm=buildViewModel(clone(current),{proEdgeConfig:cfg,now:payload.generated_at}); }
+  catch(e) { ledger.error("completion","payload",null,`既存カード監査用view model生成失敗: ${e.message}`); return; }
+  const gen=toMs(payload.generated_at);
+  const overdue=new Set();
+  for (const s of ["recommendations","experience","value1","value2","pro_edge"]) {
+    for (const r of vm[s]?.rows??[]) {
+      const st=toMs(r.match?.start_at);
+      if (r.settlement?.state==="pending" && Number.isFinite(st) && st<=gen) overdue.add(String(r.match.id));
+    }
+  }
+  const checks=c.result_checks??[];
+  const ids=checks.map(x=>String(x.match_id));
+  if (!setEq([...overdue],ids)) ledger.error("completion","result_checks",null,`開始済みpending/review_required全matchの照合証跡が一致しない（${ids.length}/${overdue.size}）`);
+  for (const x of checks) {
+    if (x.identity_ok!==true) ledger.error("identity","result_checks",x.match_id,"日付/JST/大会/対戦相手の同一性確認が完了していない");
+    if (!x.source_priority || !(x.source_urls??[]).length || !x.verified_at) ledger.error("source","result_checks",x.match_id,"結果照合のsource priority/source URL/verified_atが不足");
+    if (toMs(x.verified_at)>gen) ledger.error("future","result_checks",x.match_id,"結果照合verified_atがpayload generated_atより未来");
+  }
+  const requiredFlags=[
+    ["settlement_propagation_checked","同一match_id全系統精算伝播"],
+    ["exact_odds_checked","正式採用exact odds/取得時刻/stake"],
+    ["legacy_amount_missing_only","amount_missingは旧移行カードのみ"],
+    ["loss_reviews_checked","新規敗戦post-match review"],
+    ["future_info_leakage_checked","future-info leakage"],
+    ["locked_history_checked","locked/baseline/snapshot/history保護"]
+  ];
+  for (const [k,label] of requiredFlags) if (c[k]!==true) ledger.error("completion","payload",k,`${label}の完了証跡がtrueではない`);
+  for (const s of ["recommendations","value1","value2","pro_edge"]) if (c.profit_recalculated?.[s]!==true) ledger.error("completion",s,null,"収支/ROI/関連指標の全再計算証跡が無い");
+}
+
 // ── 実行 ──────────────────────────────────────────────
 export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().toISOString(), apply = false, startSha = gitHead(), startedAt = jstNow() }) {
   const ledger = new Ledger();
@@ -743,6 +797,7 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
 
   checkPayloadShape(payload, ledger, { now });
   checkCoverageAudit(payload, ledger, { dataDir });
+  checkCompletionAudit(current, payload, ledger, { cfg });
   const { next, stats } = applyPayload(current, payload, ledger);
   const { vmBefore, vmAfter, plChanges } = checkNext(current, next, payload, ledger, { schemas, cfg, now });
 
