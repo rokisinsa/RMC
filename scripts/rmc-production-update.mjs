@@ -472,9 +472,21 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
       const evidenceIds=evidence.map(e=>e.event_id);
       const sameEvidenceIds=JSON.stringify([...evidenceIds].sort())===JSON.stringify([...(x.card_ids??[])].sort());
       if (!sameEvidenceIds || new Set(evidenceIds).size!==evidenceIds.length) ledger.error("coverage",system,null,"screening_evidenceのevent_idがcard_ids全件と1対1一致していない");
-      const deepCount=evidence.filter(e=>e.screen_decision==="deep_dive").length;
+      const deepIds=evidence.filter(e=>e.screen_decision==="deep_dive").map(e=>e.event_id);
+      const deepCount=deepIds.length;
       if (deepCount!==x.deep_dived) ledger.error("coverage",system,null,`screening_evidenceのdeep_dive件数 ${deepCount} != deep_dived ${x.deep_dived}`);
       for (const e of evidence) if (!Array.isArray(e.reason_codes)||!e.reason_codes.length) ledger.error("coverage",system,e.event_id,"一次判定reason_codesが無い");
+      const dd=x.deep_dive_evidence ?? [];
+      if (!Array.isArray(dd) || dd.length!==x.deep_dived) ledger.error("coverage",system,null,`deep_dive_evidence件数 ${dd?.length ?? 0} != deep_dived ${x.deep_dived}`);
+      else {
+        const ddIds=dd.map(e=>e.event_id);
+        if (new Set(ddIds).size!==ddIds.length || JSON.stringify([...ddIds].sort())!==JSON.stringify([...deepIds].sort())) ledger.error("coverage",system,null,"deep_dive_evidenceのevent_idがdeep_dive対象と1対1一致していない");
+        for (const d of dd) {
+          if (!Array.isArray(d.source_urls)||!d.source_urls.length) ledger.error("coverage",system,d.event_id,"深掘り情報源URLが無い");
+          const requiredChecks=["h2h","recent_form","ranking_or_rating","availability","market_odds","sport_specific"];
+          for (const k of requiredChecks) if (!d.checks?.[k]) ledger.error("coverage",system,d.event_id,`深掘りチェック ${k} の状態証跡が無い`);
+        }
+      }
     }
     const countKeys = Object.keys(x.sport_card_counts ?? {});
     if (countKeys.length !== master.length) ledger.error("coverage", system, null, "sport_card_countsが対象競技マスター全件を持っていない");
