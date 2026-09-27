@@ -483,8 +483,9 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
         if (new Set(ddIds).size!==ddIds.length || JSON.stringify([...ddIds].sort())!==JSON.stringify([...deepIds].sort())) ledger.error("coverage",system,null,"deep_dive_evidenceのevent_idがdeep_dive対象と1対1一致していない");
         for (const d of dd) {
           if (!Array.isArray(d.source_urls)||!d.source_urls.length) ledger.error("coverage",system,d.event_id,"深掘り情報源URLが無い");
-          const requiredChecks=["h2h","recent_form","ranking_or_rating","availability","market_odds","sport_specific"];
+          const requiredChecks=["h2h","recent_form","ranking_or_rating","availability","market_odds","sport_specific","market_crosscheck"];
           for (const k of requiredChecks) if (!d.checks?.[k]) ledger.error("coverage",system,d.event_id,`深掘りチェック ${k} の状態証跡が無い`);
+          if (["value1","value2","pro_edge"].includes(system) && d.outcome==="candidate" && d.checks?.market_crosscheck!=="checked") ledger.error("coverage",system,d.event_id,"VALUE/PRO EDGE候補なのにBET CHANNEL外の市場クロスチェックが未確認");
         }
       }
     }
