@@ -157,6 +157,6 @@ table.kv th{width:42%;color:#8eb2c1}
 <section class="hero"><h1>分析情報 V2</h1><p>RESULT LOG / 4 INDEPENDENT SYSTEMS</p></section>
 <div id="app"><div class="note">読み込み中…</div></div>
 </div>
-<script type="module" src="./analysis-v2.js"></script>
+<script type="module">import(`./analysis-v2.js?cb=${Date.now()}`);</script>
 </body>
 </html>
