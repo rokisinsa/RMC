@@ -98,17 +98,22 @@ function blockPending(run,reason){
   recompute(run);
 }
 function inferNextSlot(d=new Date()){
-  const j=new Date(d.getTime()+9*3600e3);
-  const y=j.getUTCFullYear(),m=j.getUTCMonth(),day=j.getUTCDate(),h=j.getUTCHours(),min=j.getUTCMinutes();
-  for(const sh of [6,12,18,23])if(h<sh||(h===sh&&min===0)){
-    const iso=new Date(Date.UTC(y,m,day,sh-9,0,0)).toISOString().replace("Z","+00:00");
-    const date=`${y}-${String(m+1).padStart(2,"0")}-${String(day).padStart(2,"0")}`;
-    return {slot:String(sh).padStart(2,"0")+":00",scheduledFor:`${date}T${String(sh).padStart(2,"0")}:00:00+09:00`,runId:`rmc-${date.replaceAll("-","")}-${String(sh).padStart(2,"0")}00`};
+  const ms=d.getTime();
+  const j=new Date(ms+9*3600e3);
+  const y=j.getUTCFullYear(),m=j.getUTCMonth(),day=j.getUTCDate();
+  const candidates=[];
+  for(const dd of [-1,0,1]){
+    const base=new Date(Date.UTC(y,m,day+dd,0,0,0));
+    const by=base.getUTCFullYear(),bm=base.getUTCMonth(),bd=base.getUTCDate();
+    for(const sh of [6,12,18,23]){
+      const utc=Date.UTC(by,bm,bd,sh-9,0,0);
+      const localDate=`${by}-${String(bm+1).padStart(2,"0")}-${String(bd).padStart(2,"0")}`;
+      candidates.push({ms:utc,slot:String(sh).padStart(2,"0")+":00",scheduledFor:`${localDate}T${String(sh).padStart(2,"0")}:00:00+09:00`,runId:`rmc-${localDate.replaceAll("-","")}-${String(sh).padStart(2,"0")}00`});
+    }
   }
-  const n=new Date(Date.UTC(y,m,day+1,6-9,0,0));
-  const jj=new Date(n.getTime()+9*3600e3);
-  const date=`${jj.getUTCFullYear()}-${String(jj.getUTCMonth()+1).padStart(2,"0")}-${String(jj.getUTCDate()).padStart(2,"0")}`;
-  return {slot:"06:00",scheduledFor:`${date}T06:00:00+09:00`,runId:`rmc-${date.replaceAll("-","")}-0600`};
+  const nearest=[...candidates].sort((a,b)=>Math.abs(a.ms-ms)-Math.abs(b.ms-ms))[0];
+  if(nearest && Math.abs(nearest.ms-ms)<=90*60000) return nearest;
+  return candidates.filter(x=>x.ms>=ms).sort((a,b)=>a.ms-b.ms)[0];
 }
 function ageMinutes(ref,ts){return (Date.parse(ref)-Date.parse(ts))/60000}
 function inventoryPhase(run,root=ROOT,refTime=null){
