@@ -509,7 +509,7 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
           const fxChecked = Date.parse(fx.checked_at ?? "");
           const fxAge = generated - fxChecked;
           if (fx.complete !== true || fx.analysis_ready !== true || fx.access_status !== "direct") ledger.error("coverage","bet_channel_fixed_odds",null,`日本側fixed-odds/eSportsが完全取得できていない（access=${fx.access_status ?? "unknown"}, blockers=${JSON.stringify(fx.self_audit?.blockers ?? [])}）。全競技/eSports網羅を満たさないため更新完了禁止`);
-          if (fx.source_machine !== "japan_local_windows") ledger.error("coverage","bet_channel_fixed_odds",null,`fixed-odds/eSportsが日本Windows取得証跡ではない（source_machine=${fx.source_machine ?? "null"}）`);
+          if (!["japan_local_windows","japan_vps_linux"].includes(fx.source_machine)) ledger.error("coverage","bet_channel_fixed_odds",null,`fixed-odds/eSportsが許可済み日本取得ノードの証跡ではない（source_machine=${fx.source_machine ?? "null"}）`);\n          if (fx.source_region !== "JP") ledger.error("coverage","bet_channel_fixed_odds",null,`fixed-odds/eSportsの取得リージョンがJPではない（source_region=${fx.source_region ?? "null"}）`);
           if (!fx.menu_end_verified) ledger.error("coverage","bet_channel_fixed_odds",null,"fixed-odds/eSportsの競技/タイトルメニュー終端確認が未完了");
           if (!Array.isArray(fx.event_ids) || fx.event_count !== fx.event_ids.length || !Array.isArray(fx.screening_event_ids) || fx.screening_event_count !== fx.screening_event_ids.length) ledger.error("coverage","bet_channel_fixed_odds",null,"fixed-odds/eSportsのevent/screening件数とID配列が不一致");
           // 日本ローカルは各定時の約40分前に取得。55分を超えた前回スロットの使い回しは禁止。
@@ -703,10 +703,14 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
   // 「採用カードだけ」ではなく deep_dive_evidence 全件（candidate/watch/reject/insufficient_data）を残す。
   if (payload.coverage_audit) {
     let eventById = new Map();
-    const invPath = join(dataDir, "bet-channel-inventory.json");
-    if (existsSync(invPath)) {
-      const inv = JSON.parse(readFileSync(invPath, "utf8"));
-      eventById = new Map((inv.screening_events ?? []).map(e => [String(e.event_id), e]));
+    const completeInvPath = join(dataDir, "bet-channel-complete-summary.json");
+    const legacyInvPath = join(dataDir, "bet-channel-inventory.json");
+    if (existsSync(completeInvPath)) {
+      const inv = JSON.parse(readFileSync(completeInvPath, "utf8"));
+      eventById = new Map((inv.events ?? []).map(e => [String(e.event_id), e]));
+    } else if (existsSync(legacyInvPath)) {
+      const inv = JSON.parse(readFileSync(legacyInvPath, "utf8"));
+      eventById = new Map((inv.screening_events ?? inv.events ?? []).map(e => [String(e.event_id), e]));
     }
     const systems = {};
     for (const system of DISCOVERY) {
@@ -726,10 +730,10 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
             category: e.category ?? null,
             category_key: e.category_key ?? null,
             start_at_jst: e.start_at_jst ?? null,
-            market: e.band_name ?? null,
-            side_a: choices[0]?.choice_name ?? null,
-            side_b: choices[1]?.choice_name ?? null,
-            odds: choices.slice(0, 3).map(x => ({ name: x.choice_name ?? null, odds: typeof x.odds === "number" ? x.odds : null, bettable: x.is_valid_bet === true })),
+            market: e.band_name ?? e.competition ?? e.market_class ?? null,
+            side_a: e.side_a ?? choices[0]?.choice_name ?? choices[0]?.name ?? null,
+            side_b: e.side_b ?? choices[1]?.choice_name ?? choices[1]?.name ?? null,
+            odds: choices.slice(0, 3).map(x => ({ name: x.choice_name ?? x.name ?? null, odds: typeof x.odds === "number" ? x.odds : null, bettable: x.is_valid_bet === true || x.bettable === true })),
             outcome: d.outcome,
             checks: d.checks,
             source_urls: d.source_urls,
