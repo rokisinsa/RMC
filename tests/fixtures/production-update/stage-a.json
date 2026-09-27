@@ -191,11 +191,11 @@
             "observed_at": "2026-09-27T06:05:00+09:00",
             "source": "公開オッズ（架空）"
           },
-          "odds_taken": null,
+          "odds_taken": 1.18,
           "stake": 100,
           "discovered_at": "2026-09-27T06:05:00+09:00",
           "run_id": "rec-2026-09-27-0600-fx",
-          "bet_at": null,
+          "bet_at": "2026-09-27T06:35:00+09:00",
           "locked_at": "2026-09-27T06:20:00+09:00",
           "locked": {
             "prob": null,
@@ -205,7 +205,8 @@
             "summary": "①独自の分析 FC（架空）"
           },
           "settlement_override": null,
-          "flags": []
+          "flags": [],
+          "note": "テストfixture：正式推奨はexact odds 1.18を固定し、結果後の収益計算を検証する。"
         }
       ]
     },
