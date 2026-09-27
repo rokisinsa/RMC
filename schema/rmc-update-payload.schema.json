@@ -1037,7 +1037,8 @@
               "event_id",
               "source_urls",
               "checks",
-              "outcome"
+              "outcome",
+              "analysis_detail"
             ],
             "additionalProperties": false,
             "properties": {
@@ -1128,6 +1129,303 @@
                 ]
               },
               "note": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "analysis_detail": {
+                "type": "object",
+                "required": [
+                  "summary",
+                  "h2h",
+                  "recent_form",
+                  "ranking_or_rating",
+                  "home_away",
+                  "availability",
+                  "market",
+                  "sport_specific",
+                  "rationale",
+                  "missing_information"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "summary": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "h2h": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "summary",
+                      "items"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "checked",
+                          "unavailable",
+                          "not_applicable"
+                        ]
+                      },
+                      "summary": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "date",
+                            "label",
+                            "result"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "date": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "label": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "result": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "note": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "recent_form": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "side_a",
+                      "side_b"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "checked",
+                          "unavailable",
+                          "not_applicable"
+                        ]
+                      },
+                      "side_a": {
+                        "$ref": "#/$defs/formSide"
+                      },
+                      "side_b": {
+                        "$ref": "#/$defs/formSide"
+                      }
+                    }
+                  },
+                  "ranking_or_rating": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "text"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "checked",
+                          "unavailable",
+                          "not_applicable"
+                        ]
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "home_away": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "text"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "checked",
+                          "unavailable",
+                          "not_applicable"
+                        ]
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "availability": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "text"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "checked",
+                          "unavailable",
+                          "not_applicable"
+                        ]
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "market": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "text"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "checked",
+                          "unavailable",
+                          "not_applicable"
+                        ]
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "sport_specific": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "text"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "checked",
+                          "unavailable",
+                          "not_applicable"
+                        ]
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "rationale": {
+                    "type": "object",
+                    "required": [
+                      "why",
+                      "risks",
+                      "conclusion"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "why": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "risks": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "conclusion": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "missing_information": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "formSide": {
+      "type": "object",
+      "required": [
+        "label",
+        "summary",
+        "items"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "date",
+              "opponent",
+              "result"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "opponent": {
+                "type": "string",
+                "minLength": 1
+              },
+              "result": {
+                "type": "string",
+                "minLength": 1
+              },
+              "competition": {
                 "type": [
                   "string",
                   "null"
