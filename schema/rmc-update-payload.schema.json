@@ -285,7 +285,8 @@
       "required": [
         "coverage_scope",
         "sportsbook_master",
-        "systems"
+        "systems",
+        "self_audit"
       ],
       "additionalProperties": false,
       "description": "完全版更新の探索網羅性監査。定時スロットでは必須。未走査が1競技でもあれば本番反映を拒否する。",
@@ -702,6 +703,71 @@
             "four_site_union"
           ],
           "description": "定時更新の探索母表。完全版はBET CHANNEL・bet365・カジ旅・優雅堂系の4サイトを横断し、各サイトの実掲載イベントを全件走査する。"
+        },
+        "self_audit": {
+          "type": "object",
+          "required": [
+            "checked_at",
+            "inventory_status",
+            "inventory_self_audit_digest",
+            "anomalies_found",
+            "remediation_status",
+            "fixes_applied",
+            "unresolved_blockers",
+            "checks_performed"
+          ],
+          "additionalProperties": false,
+          "description": "□12 自己監査・改善。異常検知→必要時再取得/修正→再検証を行い、未解決blockerが0であることを本番反映条件にする。",
+          "properties": {
+            "checked_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "inventory_status": {
+              "enum": [
+                "pass",
+                "pass_after_remediation"
+              ]
+            },
+            "inventory_self_audit_digest": {
+              "type": "string",
+              "minLength": 8
+            },
+            "anomalies_found": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "remediation_status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "fixes_applied": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "unresolved_blockers": {
+              "const": 0
+            },
+            "checks_performed": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
         }
       }
     }
