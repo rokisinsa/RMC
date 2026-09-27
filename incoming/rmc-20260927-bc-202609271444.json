@@ -338,10 +338,10 @@
               "method": "rating_logistic",
               "trained_through": "2026-09-26T23:59:00+09:00"
             },
-            "base_probability": 0.785,
+            "base_probability": 0.782,
             "expert_adjustments": [
               {
-                "adjustment_value": 0.03,
+                "adjustment_value": 0.033,
                 "category": "absence",
                 "reason": "Washington starting QB Jayden Daniels OUT; Marcus Mariota starts",
                 "source": "https://www.nfl.com/news/marcus-mariota-commanders-week-3-qb-jayden-daniels-elbow",
@@ -429,7 +429,7 @@
               "calibrated_multi_season_independent_rating",
               "closing_price"
             ],
-            "summary": "④は市場確率をbaseへコピーせず、独立base78.5%に当日欠場補正+2.0ptを加えfinal80.5%。ただし校正不足のためwatch。"
+            "summary": "④は市場確率をbaseへコピーせず、①②③とも別の独立base78.2%から開始。当日欠場補正+2.3pt後のfinal80.5%。計算EVはプラスだが校正サンプル不足のためwatch。"
           },
           "settlement_override": null,
           "flags": [],
