@@ -60,6 +60,7 @@ for(const system of Object.keys(prefixes)){
     return {event_id:id,screen_decision:x.deep?"deep_dive":"screen_reject",reason_codes:x.r,note:"live coverage rehearsal: metadata-level first pass only"};
   });
   const deep=evidence.filter(x=>x.screen_decision==="deep_dive").length;
+  const deepIds=evidence.filter(x=>x.screen_decision==="deep_dive").map(x=>x.event_id);
   coverageSystems[system]={
     target_sports:categories.length,
     scanned_sports:categories.length,
@@ -74,7 +75,21 @@ for(const system of Object.keys(prefixes)){
     unscanned_sport_names:[],
     card_ids:cards,
     sport_card_counts:counts,
-    screening_evidence:evidence
+    screening_evidence:evidence,
+    deep_dive_evidence:deepIds.map(id=>({
+      event_id:id,
+      source_urls:[byId.get(id)?.source_url||"https://bet-channel.com/matches?lang=ja"],
+      checks:{
+        h2h:"unavailable",
+        recent_form:"unavailable",
+        ranking_or_rating:"unavailable",
+        availability:"unavailable",
+        market_odds:"checked",
+        sport_specific:"unavailable"
+      },
+      outcome:"insufficient_data",
+      note:"live coverage rehearsal only: this workflow verifies handoff/gates; external-source deep research is validated separately"
+    }))
   };
   systems[system]={
     discovery_runs:[{
@@ -144,6 +159,6 @@ console.log(JSON.stringify({
   run_id:runId,
   category_count:categories.length,
   cards_checked:cards.length,
-  systems:Object.fromEntries(Object.entries(coverageSystems).map(([k,v])=>[k,{cards_checked:v.cards_checked,evidence:v.screening_evidence.length,deep_dived:v.deep_dived}])),
+  systems:Object.fromEntries(Object.entries(coverageSystems).map(([k,v])=>[k,{cards_checked:v.cards_checked,evidence:v.screening_evidence.length,deep_dived:v.deep_dived,deep_dive_evidence:v.deep_dive_evidence.length}])),
   self_audit:payload.coverage_audit.self_audit
 },null,2));
