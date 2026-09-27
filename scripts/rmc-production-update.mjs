@@ -387,10 +387,11 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
   if (!scheduled.has(payload.slot)) return;
   const c = payload.coverage_audit;
   if (!c) { ledger.error("coverage", "payload", null, "定時更新は coverage_audit 必須。全競技探索を数値で証明できないため拒否"); return; }
-  const scope = c.coverage_scope ?? "three_site_union";
+  const scope = c.coverage_scope ?? "four_site_union";
   const master = c.sportsbook_master?.union_sports ?? [];
   const sa = c.sportsbook_master?.source_audit;
-  const requiredSites = scope === "bet_channel_only" ? ["bet_channel"] : ["bet_channel","casitabi","yuugado"];
+  const requiredSites = scope === "bet_channel_only" ? ["bet_channel"] : scope === "three_site_union" ? ["bet_channel","casitabi","yuugado"] : ["bet_channel","bet365","casitabi","yuugado"];
+  const normList = xs => [...new Set((xs ?? []).map(x => String(x).trim().toLowerCase()))].sort();
 
   for (const site of requiredSites) {
     const a = sa?.[site];
@@ -398,15 +399,26 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
     if (!a.menu_end_verified) ledger.error("coverage", site, null, "競技メニュー最下部までの確認証跡が無い");
     if (a.access_status === "unavailable" || a.access_status === "partial") ledger.error("coverage", site, null, "サイト競技/イベント一覧が完全取得できていないため完全版不可");
     if (!a.source_urls?.length) ledger.error("coverage", site, null, "競技一覧のsource URLが無い");
-    const listed = c.sportsbook_master?.[site] ?? [];
-    if (a.category_count !== listed.length) ledger.error("coverage", site, null, `category_count ${a.category_count} != 実一覧 ${listed.length}`);
+    const listed = c.sportsbook_master?.[site];
+    if (!Array.isArray(listed)) ledger.error("coverage", site, null, "サイト別競技一覧がsportsbook_masterに無い");
+    else if (a.category_count !== listed.length) ledger.error("coverage", site, null, `category_count ${a.category_count} != 実一覧 ${listed.length}`);
     if (!Array.isArray(a.event_ids) || a.event_count !== a.event_ids.length) ledger.error("coverage", site, null, `event_count ${a.event_count} != event_ids実数 ${a.event_ids?.length ?? 0}`);
+  }
+
+  if (scope === "four_site_union") {
+    const categoryUnion = normList(requiredSites.flatMap(site => c.sportsbook_master?.[site] ?? []));
+    if (JSON.stringify(normList(master)) !== JSON.stringify(categoryUnion)) ledger.error("coverage", "payload", null, "union_sportsが4サイトの実競技一覧の和集合と一致していない");
+    const allEventIds = [...new Set(requiredSites.flatMap(site => sa?.[site]?.event_ids ?? []))].sort();
+    if (!allEventIds.length) ledger.error("coverage", "payload", null, "4サイトの実掲載event_idsが0件。全カード走査を証明できない");
+    for (const system of DISCOVERY) {
+      const ids = [...(c.systems?.[system]?.card_ids ?? [])].sort();
+      if (JSON.stringify(ids) !== JSON.stringify(allEventIds)) ledger.error("coverage", system, null, `card_idsが4サイト実掲載イベント全件と一致していない（${ids.length}/${allEventIds.length}）`);
+    }
   }
 
   if (scope === "bet_channel_only") {
     const bc = c.sportsbook_master?.bet_channel ?? [];
-    const norm = xs => [...new Set(xs.map(x => String(x).trim().toLowerCase()))].sort();
-    if (JSON.stringify(norm(master)) !== JSON.stringify(norm(bc))) ledger.error("coverage", "bet_channel", null, "BET CHANNEL完全版では union_sports が bet_channel実一覧と一致していない");
+    if (JSON.stringify(normList(master)) !== JSON.stringify(normList(bc))) ledger.error("coverage", "bet_channel", null, "BET CHANNEL完全版では union_sports が bet_channel実一覧と一致していない");
 
     const invPath = join(dataDir, "bet-channel-inventory.json");
     if (!existsSync(invPath)) ledger.error("coverage","bet_channel",null,"実測 bet-channel-inventory.json が無い");
