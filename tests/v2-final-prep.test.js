@@ -179,7 +179,7 @@ test("V2 は旧 analysis.html を取得しない（コード上に取得処理�
   assert.ok(!/fetch\([^)]*analysis\.html/.test(src));
   assert.ok(!/DOMParser/.test(src));
   const paths = [...src.matchAll(/"(data\/[^"]+\.json)"/g)].map(m => m[1]).sort();
-  assert.deepEqual(paths, Object.values(DATA_FILES).map(f => `data/${f}`).sort());          // 読み込むデータは data/ だけ
+  assert.deepEqual(paths, [...Object.values(DATA_FILES).map(f => `data/${f}`), "data/system-analysis.json"].sort()); // 読み込むデータは data/ だけ（最新候補分析を含む）
 });
 
 test("V2 の描画に必要な情報がすべてデータから揃う（①②③④・経験値・旧分析メモ）", () => {
