@@ -1,0 +1,49 @@
+{
+  "payload_version": 1,
+  "run_id": "rmc-correct-nagoya-20260927-1955",
+  "source": "ChatGPT result identity correction 19:55",
+  "generated_at": "2026-09-27T19:55:00+09:00",
+  "slot": "adhoc",
+  "note": "9/27川崎vs名古屋Dに9/26 GAME1の63-93が誤登録されていたため、9/27 GAME2の78-90へ訂正。名古屋D 1.18の正式採用オッズ・$100投入・+$18損益は維持し全収支を再監査する。",
+  "result_updates": [
+    {
+      "run_id": "mr-correct-nagoya-20260927-1955",
+      "kind": "result_update",
+      "at": "2026-09-27T19:55:00+09:00",
+      "source": "SportsNavi B.LEAGUE result verification",
+      "note": "同一カードが連日開催のため、日付とGAMEを照合して前日結果の取り違えを訂正。",
+      "changes": [
+        {
+          "match_id": "2026-09-27-kawasaki-nagoyad",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 78,
+                "b": 90
+              },
+              "text": "川崎ブレイブサンダース 78-90 名古屋ダイヤモンドドルフィンズ"
+            },
+            "result_confirmed_at": "2026-09-27T19:55:00+09:00"
+          },
+          "correction": {
+            "reason": "2026-09-27 16:05 JSTのGAME2に、2026-09-26 GAME1の63-93を誤って紐付けていた。SportsNaviの9/27日程・結果で川崎78-90名古屋Dを確認。"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "SportsNavi B.LEAGUE 2026-09-27 result",
+                "url": "https://sports.yahoo.co.jp/basket/bleague/premier/game/506400/boxscore",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-09-27T19:55:00+09:00",
+            "source_confidence": "single_source",
+            "note": "9月27日（日）の日程・結果に川崎78-90名古屋D、試合終了と掲載。"
+          }
+        }
+      ],
+      "reviews": []
+    }
+  ]
+}
