@@ -362,7 +362,10 @@
                     "analysis_card_count",
                     "analysis_card_ids",
                     "bettable_analysis_card_count",
-                    "unavailable_price_card_count"
+                    "unavailable_price_card_count",
+                    "screening_event_count",
+                    "screening_event_ids",
+                    "screening_digest"
                   ],
                   "additionalProperties": false,
                   "properties": {
@@ -440,6 +443,26 @@
                     "unavailable_price_card_count": {
                       "type": "integer",
                       "minimum": 0
+                    },
+                    "screening_event_count": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "description": "BET CHANNELに現在掲載中のスポーツ/eスポーツ全イベント数（一次走査母集団）"
+                    },
+                    "screening_event_ids": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true,
+                      "description": "現在掲載中のスポーツ/eスポーツ全イベントID。①〜④はこの全件を独立走査する"
+                    },
+                    "screening_digest": {
+                      "type": "string",
+                      "minLength": 8,
+                      "description": "screening_event_idsの実測ダイジェスト"
                     }
                   }
                 },
