@@ -1,10 +1,7 @@
-name: BET CHANNEL Complete Scan
+name: BET CHANNEL Legacy Sports Diagnostic
 
 on:
   workflow_dispatch:
-  schedule:
-    # 05:30 / 11:30 / 17:30 / 22:30 JST
-    - cron: '30 20,2,8,13 * * *'
   push:
     branches: [main]
     paths:
@@ -66,7 +63,7 @@ jobs:
           p='data/betchannel-scan.json'
           d=json.load(open(p,encoding='utf-8'))
           lines=[
-            '## BET CHANNEL exhaustive scan',
+            '## BET CHANNEL legacy /matches diagnostic scan',
             f"- complete: {d.get('complete')}",
             f"- access_status: {d.get('access_status')}",
             f"- menu_end_verified: {d.get('menu_end_verified')}",
@@ -84,7 +81,7 @@ jobs:
       - name: Reject incomplete scan
         if: steps.scan.outcome != 'success'
         run: |
-          echo "BET CHANNEL full scan did not satisfy completeness gate."
+          echo "BET CHANNEL legacy sports diagnostic did not satisfy its own completeness gate."
           exit 1
 
       - name: Validate evidence-backed counts
