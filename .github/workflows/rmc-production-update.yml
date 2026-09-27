@@ -144,10 +144,43 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
-          git commit -m "RMC production update: $RMC_RUN_ID"
-          git push origin HEAD:main
-          echo "END_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          pushed=0
+          end_sha=""
+          for attempt in $(seq 1 5); do
+            if [ "$attempt" -gt 1 ]; then
+              # 競合したら最新mainへ戻し、同じpayloadを最新データに対して最初から再検証・再適用する。
+              git fetch origin main
+              git reset --hard origin/main
+              latest_sha=$(git rev-parse HEAD)
+              node scripts/rmc-production-update.mjs --payload "$WORK/payload.json" --dry-run --start-sha "$latest_sha" --report "$WORK/retry-dry-$attempt.json"
+              node scripts/rmc-production-update.mjs --payload "$WORK/payload.json" --apply --start-sha "$latest_sha" --report "$WORK/retry-apply-$attempt.json"
+              node scripts/rmc-production-update.mjs --check-diff
+              npm test
+              node scripts/verify-baseline.mjs
+              npm run validate:data
+              npm run audit
+            fi
+            git add data
+            if git diff --cached --quiet; then
+              # 既に同じrunが別経路で反映済みなら二重適用せず成功。
+              if node -e 'const j=require("./data/automation-runs.json");process.exit((j.runs||[]).some(x=>x.run_id===process.env.RMC_RUN_ID)?0:1)'; then
+                pushed=1
+                end_sha=$(git rev-parse HEAD)
+                break
+              fi
+            else
+              git commit -m "RMC production update: $RMC_RUN_ID"
+              if git push origin HEAD:main; then
+                pushed=1
+                end_sha=$(git rev-parse HEAD)
+                break
+              fi
+            fi
+            echo "Production push conflicted; retry $attempt/5"
+            sleep 2
+          done
+          [ "$pushed" = "1" ] || exit 1
+          echo "END_SHA=$end_sha" >> "$GITHUB_ENV"
 
       - name: 13. Pages の公開確認・監査記録を published に確定
         if: env.RMC_DRY_RUN != 'true'
