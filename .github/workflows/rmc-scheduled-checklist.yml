@@ -52,11 +52,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           cp data/scheduled-update-checklist.json /tmp/scheduled-update-checklist.json
+          audit_run_id=$(node -e 'const j=require("/tmp/scheduled-update-checklist.json");process.stdout.write(j.latest_run_id||"")')
+          [ -n "$audit_run_id" ] || exit 1
           pushed=0
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             git reset --hard origin/main
-            cp /tmp/scheduled-update-checklist.json data/scheduled-update-checklist.json
+            node scripts/merge-scheduled-checklist.mjs --incoming /tmp/scheduled-update-checklist.json --target data/scheduled-update-checklist.json --run-id "$audit_run_id"
             git add data/scheduled-update-checklist.json
             if git diff --cached --quiet; then
               pushed=1
