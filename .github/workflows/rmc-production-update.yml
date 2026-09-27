@@ -310,10 +310,11 @@ jobs:
           if [ ! -f "$WORK/scheduled-update-checklist.json" ]; then
             cp data/scheduled-update-checklist.json "$WORK/scheduled-update-checklist.json"
           fi
+          audit_start_sha="${START_SHA:-$(git rev-parse HEAD)}"
           if [ "$JOB_STATUS" = "success" ] && [ "$RMC_DRY_RUN" != "true" ]; then
-            node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --success --detail "checks 1-40 completed"
+            node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --source "$RMC_SOURCE" --start-sha "$audit_start_sha" --success --detail "checks 1-40 completed"
           else
-            node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --fail --detail "production workflow status=$JOB_STATUS; incomplete checks are blocked"
+            node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --source "$RMC_SOURCE" --start-sha "$audit_start_sha" --fail --detail "production workflow status=$JOB_STATUS; incomplete checks are blocked"
           fi
           cp "$WORK/scheduled-update-checklist.json" /tmp/rmc-run-checklist.json
 
