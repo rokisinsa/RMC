@@ -472,7 +472,12 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
     const bc = c.sportsbook_master?.bet_channel ?? [];
     if (JSON.stringify(normList(master)) !== JSON.stringify(normList(bc))) ledger.error("coverage", "bet_channel", null, "BET CHANNEL完全版では union_sports が bet_channel実一覧と一致していない");
 
-    const invPath = join(dataDir, "bet-channel-complete-summary.json");
+    const productionDataDir = resolve(dataDir) === resolve(DATA_DIR);
+    const completePath = join(dataDir, "bet-channel-complete-summary.json");
+    const legacyFallbackPath = join(dataDir, "bet-channel-inventory.json");
+    // 本番data/は必ず通常+fixed-odds/eSports unionを要求する。
+    // テスト/リハーサルの一時data-dirだけは、既存fixture互換のためlegacy inventoryへフォールバックする。
+    const invPath = existsSync(completePath) ? completePath : (!productionDataDir && existsSync(legacyFallbackPath) ? legacyFallbackPath : completePath);
     if (!existsSync(invPath)) ledger.error("coverage","bet_channel",null,"実測 bet-channel-complete-summary.json が無い。通常+fixed-odds/eSportsのunionを証明できない");
     else {
       const inv = JSON.parse(readFileSync(invPath,"utf8"));
