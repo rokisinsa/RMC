@@ -318,7 +318,12 @@ let fixedOddsStatus={
   }
   // ブランド別BTRenderer bundle自体を解析し、公開API/WebSocket候補を抽出する。
   // geo blockが初期化時にローカル表示されても、bundle内の公式通信先は特定できる。
-  const rendererBundleUrls=[...diagnosticScripts].filter(u=>/bt-renderer\.min\.js/i.test(u));
+  const rendererBundleUrls=[...new Set([
+    ...diagnosticScripts,
+    ...diagnosticResources,
+    "https://start26.sptpub.com/bt-renderer.min.js",
+    "https://ui.invisiblesport.com/bt-renderer.min.js"
+  ])].filter(u=>/bt-renderer\.min\.js/i.test(u));
   const rendererBundleDiagnostics=[];
   for(const rendererUrl of rendererBundleUrls.slice(0,4)){
     try{
