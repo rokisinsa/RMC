@@ -6,7 +6,7 @@
     "generated_at": "2026-09-27T15:09:30+09:00",
     "slot": "12:00",
     "coverage_scope": "bet_channel_only",
-    "note": "RMC公開用。今回深掘りした全候補を①〜④別に表示。"
+    "note": "RMC公開用。今回深掘りした全候補を①〜④別に表示。H2H・直近明細の不足を18時台監査で補強し、確認できない項目はunavailableとして明示。"
   },
   "systems": {
     "recommendations": {
@@ -278,7 +278,7 @@
           "outcome": "reject",
           "checks": {
             "h2h": "unavailable",
-            "recent_form": "checked",
+            "recent_form": "unavailable",
             "ranking_or_rating": "checked",
             "availability": "checked",
             "market_odds": "checked",
@@ -298,15 +298,15 @@
               "items": []
             },
             "recent_form": {
-              "status": "checked",
+              "status": "unavailable",
               "side_a": {
                 "label": "西田凌佑",
-                "summary": "11勝1敗。IBF1位。",
+                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
                 "items": []
               },
               "side_b": {
                 "label": "サム・グッドマン",
-                "summary": "22勝1敗。IBF2位。",
+                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
                 "items": []
               }
             },
@@ -341,7 +341,8 @@
               "conclusion": "①推奨で除外。"
             },
             "missing_information": [
-              "直接H2Hなし"
+              "直接H2Hなし",
+              "個別の直近6〜10戦の完全照合"
             ]
           }
         },
@@ -368,7 +369,7 @@
           "outcome": "reject",
           "checks": {
             "h2h": "unavailable",
-            "recent_form": "checked",
+            "recent_form": "unavailable",
             "ranking_or_rating": "checked",
             "availability": "checked",
             "market_odds": "checked",
@@ -388,15 +389,15 @@
               "items": []
             },
             "recent_form": {
-              "status": "checked",
+              "status": "unavailable",
               "side_a": {
                 "label": "坪井智也",
-                "summary": "3勝0敗1NC。WBC1位。",
+                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
                 "items": []
               },
               "side_b": {
                 "label": "リカルド・マラジカ",
-                "summary": "17勝2敗。WBC2位。",
+                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
                 "items": []
               }
             },
@@ -431,7 +432,8 @@
               "conclusion": "①推奨で除外。"
             },
             "missing_information": [
-              "直接H2Hなし"
+              "直接H2Hなし",
+              "個別の直近6〜10戦の完全照合"
             ]
           }
         },
@@ -447,7 +449,7 @@
           "outcome": "reject",
           "checks": {
             "h2h": "unavailable",
-            "recent_form": "checked",
+            "recent_form": "unavailable",
             "ranking_or_rating": "checked",
             "availability": "checked",
             "market_odds": "checked",
@@ -467,15 +469,15 @@
               "items": []
             },
             "recent_form": {
-              "status": "checked",
+              "status": "unavailable",
               "side_a": {
                 "label": "松本（WBO1位）",
-                "summary": "8戦全勝。",
+                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
                 "items": []
               },
               "side_b": {
                 "label": "Acosta（WBO3位）",
-                "summary": "17戦全勝。",
+                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
                 "items": []
               }
             },
@@ -510,7 +512,8 @@
               "conclusion": "①推奨で除外。"
             },
             "missing_information": [
-              "直接H2Hなし"
+              "直接H2Hなし",
+              "個別の直近6〜10戦の完全照合"
             ]
           }
         },
@@ -541,7 +544,7 @@
           ],
           "outcome": "watch",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -560,21 +563,59 @@
           "analysis_detail": {
             "summary": "Billsの2-0とChargersの0-2は差だが、両軍の負傷者が多く1.28を正式採用するには不確実性が高い。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新では信頼できるH2H全件を取得できず、採用根拠には使用していない。",
-              "items": []
+              "status": "checked",
+              "summary": "近年3対戦はBills 2勝、Chargers 1勝。Chargers公式のシリーズ通算はChargers 25勝・Bills 14勝・2分。",
+              "items": [
+                {
+                  "date": "2023-12-23",
+                  "label": "Chargers vs Bills",
+                  "result": "Chargers 22-24 Bills"
+                },
+                {
+                  "date": "2020-11-29",
+                  "label": "Bills vs Chargers",
+                  "result": "Bills 27-17 Chargers"
+                },
+                {
+                  "date": "2018-09-16",
+                  "label": "Bills vs Chargers",
+                  "result": "Bills 20-31 Chargers"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ビルズ",
-                "summary": "2026開幕2勝0敗。",
-                "items": []
+                "summary": "2026開幕2勝0敗。存在する今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Texans",
+                    "result": "○ 36-31"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Lions",
+                    "result": "○ 41-31"
+                  }
+                ]
               },
               "side_b": {
                 "label": "チャージャーズ",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。存在する今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Cardinals",
+                    "result": "× 14-26"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Raiders",
+                    "result": "× 14-26"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -642,7 +683,7 @@
           ],
           "outcome": "reject",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -660,21 +701,59 @@
           "analysis_detail": {
             "summary": "LionsとJetsはともに1-1で、負傷者も双方に存在。1.32前後のLions優位を裏付ける独立差が不足。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "直近3対戦はLions 2勝、Jets 1勝。",
+              "items": [
+                {
+                  "date": "2022-12-18",
+                  "label": "Jets vs Lions",
+                  "result": "Jets 17-20 Lions"
+                },
+                {
+                  "date": "2018-09-10",
+                  "label": "Lions vs Jets",
+                  "result": "Lions 17-48 Jets"
+                },
+                {
+                  "date": "2014-09-28",
+                  "label": "Jets vs Lions",
+                  "result": "Jets 17-24 Lions"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ライオンズ",
-                "summary": "2026開幕1勝1敗。",
-                "items": []
+                "summary": "2026開幕1勝1敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Saints",
+                    "result": "○ 31-30"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Bills",
+                    "result": "× 31-41"
+                  }
+                ]
               },
               "side_b": {
                 "label": "ジェッツ",
-                "summary": "2026開幕1勝1敗。",
-                "items": []
+                "summary": "2026開幕1勝1敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Titans",
+                    "result": "○ 23-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Packers",
+                    "result": "× 17-20（OT）"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -740,7 +819,7 @@
           ],
           "outcome": "reject",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -759,21 +838,54 @@
           "analysis_detail": {
             "summary": "Chiefs優位は認めるが1.16は必要勝率約86.2%。OT欠場もあり、価格ほどの確信度を置けない。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "確認できた直近2対戦はいずれもChiefs勝利。",
+              "items": [
+                {
+                  "date": "2024-01-13",
+                  "label": "Chiefs vs Dolphins",
+                  "result": "Chiefs 26-7 Dolphins"
+                },
+                {
+                  "date": "2020-12-13",
+                  "label": "Dolphins vs Chiefs",
+                  "result": "Dolphins 27-33 Chiefs"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ドルフィンズ",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Raiders",
+                    "result": "× 13-27"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "49ers",
+                    "result": "× 13-35"
+                  }
+                ]
               },
               "side_b": {
                 "label": "チーフス",
-                "summary": "Chiefs優勢と評価したが、今回runでは詳細直近スコア保存不足。",
-                "items": []
+                "summary": "2026開幕2勝0敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Broncos",
+                    "result": "○ 31-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Colts",
+                    "result": "○ 33-30（OT）"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -840,7 +952,7 @@
           ],
           "outcome": "candidate",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -859,21 +971,59 @@
           "analysis_detail": {
             "summary": "Seattle 2-0対Washington 0-2、Washington先発QB欠場が大きな差。ただし外部市場クロスチェック後、VALUE①では明確な価格優位を確認できずWATCHへ修正。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "直近3対戦はSeahawks 2勝、Washington 1勝。",
+              "items": [
+                {
+                  "date": "2023-11-12",
+                  "label": "Seahawks vs Commanders",
+                  "result": "Seahawks 29-26 Commanders"
+                },
+                {
+                  "date": "2021-11-29",
+                  "label": "Washington vs Seahawks",
+                  "result": "Washington 17-15 Seahawks"
+                },
+                {
+                  "date": "2020-12-20",
+                  "label": "Washington vs Seahawks",
+                  "result": "Washington 15-20 Seahawks"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "コマンダース",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Eagles",
+                    "result": "× 22-24"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Cowboys",
+                    "result": "× 20-37"
+                  }
+                ]
               },
               "side_b": {
                 "label": "シーホークス",
-                "summary": "2026開幕2勝0敗。",
-                "items": []
+                "summary": "2026開幕2勝0敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Patriots",
+                    "result": "○ 13-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Cardinals",
+                    "result": "○ 31-7"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -1204,27 +1354,101 @@
             "https://npb.jp/bis/2026/stats/",
             "https://npb.jp/bis/2026/stats/std_c.html",
             "https://npb.jp/announcement/starter/",
-            "https://npb.jp/games/2026/schedule_09_detail.html"
+            "https://npb.jp/games/2026/schedule_09_detail.html",
+            "https://npb.jp/bis/teams/results_g_09.html",
+            "https://npb.jp/bis/teams/results_s_09.html",
+            "https://npb.jp/bis/teams/results_e_index.html",
+            "https://npb.jp/bis/teams/results_l_09.html",
+            "https://npb.jp/bis/teams/results_f_index.html",
+            "https://npb.jp/bis/teams/results_m_index.html"
           ],
           "note": "value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
           "analysis_detail": {
             "summary": "巨人は順位・今季H2Hで優位だが、1.66の損益分岐約60.2%に対して先発差を含めると明確なVALUE確定まで届かず監視。",
             "h2h": {
               "status": "checked",
-              "summary": "2026年シーズン対戦は巨人13勝・ヤクルト10勝。",
-              "items": []
+              "summary": "2026年シーズン対戦は巨人13勝・ヤクルト10勝。 最新対戦明細も保存。",
+              "items": [
+                {
+                  "date": "2026-09-20",
+                  "label": "巨人 vs ヤクルト",
+                  "result": "巨人 3-2 ヤクルト"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ヤクルト",
-                "summary": "シーズン58勝76敗2分・4位。",
-                "items": []
+                "summary": "9/25までの直近6試合は1勝5敗。",
+                "items": [
+                  {
+                    "date": "2026-09-25",
+                    "opponent": "中日",
+                    "result": "○ 5-4"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "阪神",
+                    "result": "× 4-8"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "阪神",
+                    "result": "× 7-9"
+                  },
+                  {
+                    "date": "2026-09-20",
+                    "opponent": "巨人",
+                    "result": "× 2-3"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "DeNA",
+                    "result": "× 3-5"
+                  },
+                  {
+                    "date": "2026-09-18",
+                    "opponent": "DeNA",
+                    "result": "○ 3-1"
+                  }
+                ]
               },
               "side_b": {
                 "label": "巨人",
-                "summary": "シーズン74勝62敗2分・2位。",
-                "items": []
+                "summary": "9/25までの直近6試合は2勝4敗。",
+                "items": [
+                  {
+                    "date": "2026-09-25",
+                    "opponent": "広島",
+                    "result": "× 2-3"
+                  },
+                  {
+                    "date": "2026-09-24",
+                    "opponent": "広島",
+                    "result": "× 1-3"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "広島",
+                    "result": "○ 2-1"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "広島",
+                    "result": "× 1-2"
+                  },
+                  {
+                    "date": "2026-09-20",
+                    "opponent": "ヤクルト",
+                    "result": "○ 3-2"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "中日",
+                    "result": "○ 14-1"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -1305,27 +1529,101 @@
             "https://npb.jp/announcement/starter/",
             "https://npb.jp/games/2026/schedule_09_detail.html",
             "https://npb.jp/bis/players/91895150.html",
-            "https://npb.jp/bis/players/31835153.html"
+            "https://npb.jp/bis/players/31835153.html",
+            "https://npb.jp/bis/teams/results_g_09.html",
+            "https://npb.jp/bis/teams/results_s_09.html",
+            "https://npb.jp/bis/teams/results_e_index.html",
+            "https://npb.jp/bis/teams/results_l_09.html",
+            "https://npb.jp/bis/teams/results_f_index.html",
+            "https://npb.jp/bis/teams/results_m_index.html"
           ],
           "note": "value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
           "analysis_detail": {
             "summary": "チーム順位では西武優位だが、先発投手の比較が逆方向。市場価格とチーム力が噛み合わず不確実性が高いため除外。",
             "h2h": {
               "status": "checked",
-              "summary": "今季H2Hは確認したが、この更新回の詳細全スコア保存が不足。",
-              "items": []
+              "summary": "今季H2Hは確認したが、この更新回の詳細全スコア保存が不足。 最新対戦明細も保存。",
+              "items": [
+                {
+                  "date": "2026-09-15",
+                  "label": "楽天 vs 西武",
+                  "result": "楽天 1-0 西武"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "楽天",
-                "summary": "54勝79敗1分・6位。",
-                "items": []
+                "summary": "9/24までの直近6試合は5勝1敗。",
+                "items": [
+                  {
+                    "date": "2026-09-24",
+                    "opponent": "日本ハム",
+                    "result": "○ 6-0"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "日本ハム",
+                    "result": "○ 5-3"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "日本ハム",
+                    "result": "× 5-6"
+                  },
+                  {
+                    "date": "2026-09-20",
+                    "opponent": "ソフトバンク",
+                    "result": "○ 5-3"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "ソフトバンク",
+                    "result": "○ 5-2"
+                  },
+                  {
+                    "date": "2026-09-17",
+                    "opponent": "ロッテ",
+                    "result": "○ 5-1"
+                  }
+                ]
               },
               "side_b": {
                 "label": "西武",
-                "summary": "74勝59敗4分・2位。",
-                "items": []
+                "summary": "9/25までの直近6試合は1勝5敗。",
+                "items": [
+                  {
+                    "date": "2026-09-25",
+                    "opponent": "ロッテ",
+                    "result": "× 2-6"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "ソフトバンク",
+                    "result": "× 3-10"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "ソフトバンク",
+                    "result": "× 5-6"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "ロッテ",
+                    "result": "○ 4-2"
+                  },
+                  {
+                    "date": "2026-09-17",
+                    "opponent": "日本ハム",
+                    "result": "× 2-4"
+                  },
+                  {
+                    "date": "2026-09-15",
+                    "opponent": "楽天",
+                    "result": "× 0-1"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -1406,27 +1704,101 @@
             "https://npb.jp/announcement/starter/",
             "https://npb.jp/games/2026/schedule_09_detail.html",
             "https://npb.jp/bis/players/31035157.html",
-            "https://npb.jp/bis/2026/stats/idp1_f.html"
+            "https://npb.jp/bis/2026/stats/idp1_f.html",
+            "https://npb.jp/bis/teams/results_g_09.html",
+            "https://npb.jp/bis/teams/results_s_09.html",
+            "https://npb.jp/bis/teams/results_e_index.html",
+            "https://npb.jp/bis/teams/results_l_09.html",
+            "https://npb.jp/bis/teams/results_f_index.html",
+            "https://npb.jp/bis/teams/results_m_index.html"
           ],
           "note": "value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
           "analysis_detail": {
             "summary": "日本ハムは順位・今季H2Hで優位だが、先発ERAではロッテ側が上。1.77の価格では確信度不足として監視。",
             "h2h": {
               "status": "checked",
-              "summary": "2026年シーズン対戦は日本ハム13勝・ロッテ9勝。",
-              "items": []
+              "summary": "2026年シーズン対戦は日本ハム13勝・ロッテ9勝。 最新対戦明細も保存。",
+              "items": [
+                {
+                  "date": "2026-09-15",
+                  "label": "日本ハム vs ロッテ",
+                  "result": "日本ハム 6-7 ロッテ"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "日本ハム",
-                "summary": "75勝61敗3分・3位。",
-                "items": []
+                "summary": "9/24までの直近6試合は3勝3敗。",
+                "items": [
+                  {
+                    "date": "2026-09-24",
+                    "opponent": "楽天",
+                    "result": "× 0-6"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "楽天",
+                    "result": "× 3-5"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "楽天",
+                    "result": "○ 6-5"
+                  },
+                  {
+                    "date": "2026-09-21",
+                    "opponent": "オリックス",
+                    "result": "○ 5-3"
+                  },
+                  {
+                    "date": "2026-09-20",
+                    "opponent": "オリックス",
+                    "result": "× 6-9"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "オリックス",
+                    "result": "× 4-7"
+                  }
+                ]
               },
               "side_b": {
                 "label": "ロッテ",
-                "summary": "59勝70敗3分・5位。",
-                "items": []
+                "summary": "9/25までの直近6試合は1勝5敗。",
+                "items": [
+                  {
+                    "date": "2026-09-25",
+                    "opponent": "西武",
+                    "result": "○ 6-2"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "オリックス",
+                    "result": "× 0-1"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "オリックス",
+                    "result": "× 4-6"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "西武",
+                    "result": "× 2-4"
+                  },
+                  {
+                    "date": "2026-09-17",
+                    "opponent": "楽天",
+                    "result": "× 1-5"
+                  },
+                  {
+                    "date": "2026-09-16",
+                    "opponent": "楽天",
+                    "result": "× 0-4"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -1492,7 +1864,7 @@
           ],
           "outcome": "watch",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -1511,21 +1883,59 @@
           "analysis_detail": {
             "summary": "Billsの2-0とChargersの0-2は差だが、両軍の負傷者が多く1.28を正式採用するには不確実性が高い。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新では信頼できるH2H全件を取得できず、採用根拠には使用していない。",
-              "items": []
+              "status": "checked",
+              "summary": "近年3対戦はBills 2勝、Chargers 1勝。Chargers公式のシリーズ通算はChargers 25勝・Bills 14勝・2分。",
+              "items": [
+                {
+                  "date": "2023-12-23",
+                  "label": "Chargers vs Bills",
+                  "result": "Chargers 22-24 Bills"
+                },
+                {
+                  "date": "2020-11-29",
+                  "label": "Bills vs Chargers",
+                  "result": "Bills 27-17 Chargers"
+                },
+                {
+                  "date": "2018-09-16",
+                  "label": "Bills vs Chargers",
+                  "result": "Bills 20-31 Chargers"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ビルズ",
-                "summary": "2026開幕2勝0敗。",
-                "items": []
+                "summary": "2026開幕2勝0敗。存在する今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Texans",
+                    "result": "○ 36-31"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Lions",
+                    "result": "○ 41-31"
+                  }
+                ]
               },
               "side_b": {
                 "label": "チャージャーズ",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。存在する今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Cardinals",
+                    "result": "× 14-26"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Raiders",
+                    "result": "× 14-26"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -1593,7 +2003,7 @@
           ],
           "outcome": "reject",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -1611,21 +2021,59 @@
           "analysis_detail": {
             "summary": "LionsとJetsはともに1-1で、負傷者も双方に存在。1.32前後のLions優位を裏付ける独立差が不足。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "直近3対戦はLions 2勝、Jets 1勝。",
+              "items": [
+                {
+                  "date": "2022-12-18",
+                  "label": "Jets vs Lions",
+                  "result": "Jets 17-20 Lions"
+                },
+                {
+                  "date": "2018-09-10",
+                  "label": "Lions vs Jets",
+                  "result": "Lions 17-48 Jets"
+                },
+                {
+                  "date": "2014-09-28",
+                  "label": "Jets vs Lions",
+                  "result": "Jets 17-24 Lions"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ライオンズ",
-                "summary": "2026開幕1勝1敗。",
-                "items": []
+                "summary": "2026開幕1勝1敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Saints",
+                    "result": "○ 31-30"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Bills",
+                    "result": "× 31-41"
+                  }
+                ]
               },
               "side_b": {
                 "label": "ジェッツ",
-                "summary": "2026開幕1勝1敗。",
-                "items": []
+                "summary": "2026開幕1勝1敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Titans",
+                    "result": "○ 23-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Packers",
+                    "result": "× 17-20（OT）"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -1691,7 +2139,7 @@
           ],
           "outcome": "reject",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -1710,21 +2158,54 @@
           "analysis_detail": {
             "summary": "Chiefs優位は認めるが1.16は必要勝率約86.2%。OT欠場もあり、価格ほどの確信度を置けない。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "確認できた直近2対戦はいずれもChiefs勝利。",
+              "items": [
+                {
+                  "date": "2024-01-13",
+                  "label": "Chiefs vs Dolphins",
+                  "result": "Chiefs 26-7 Dolphins"
+                },
+                {
+                  "date": "2020-12-13",
+                  "label": "Dolphins vs Chiefs",
+                  "result": "Dolphins 27-33 Chiefs"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ドルフィンズ",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Raiders",
+                    "result": "× 13-27"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "49ers",
+                    "result": "× 13-35"
+                  }
+                ]
               },
               "side_b": {
                 "label": "チーフス",
-                "summary": "Chiefs優勢と評価したが、今回runでは詳細直近スコア保存不足。",
-                "items": []
+                "summary": "2026開幕2勝0敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Broncos",
+                    "result": "○ 31-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Colts",
+                    "result": "○ 33-30（OT）"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -1791,7 +2272,7 @@
           ],
           "outcome": "watch",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -1810,21 +2291,59 @@
           "analysis_detail": {
             "summary": "Seattle 2-0対Washington 0-2、Washington先発QB欠場が大きな差。ただし外部市場クロスチェック後、VALUE①では明確な価格優位を確認できずWATCHへ修正。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "直近3対戦はSeahawks 2勝、Washington 1勝。",
+              "items": [
+                {
+                  "date": "2023-11-12",
+                  "label": "Seahawks vs Commanders",
+                  "result": "Seahawks 29-26 Commanders"
+                },
+                {
+                  "date": "2021-11-29",
+                  "label": "Washington vs Seahawks",
+                  "result": "Washington 17-15 Seahawks"
+                },
+                {
+                  "date": "2020-12-20",
+                  "label": "Washington vs Seahawks",
+                  "result": "Washington 15-20 Seahawks"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "コマンダース",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Eagles",
+                    "result": "× 22-24"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Cowboys",
+                    "result": "× 20-37"
+                  }
+                ]
               },
               "side_b": {
                 "label": "シーホークス",
-                "summary": "2026開幕2勝0敗。",
-                "items": []
+                "summary": "2026開幕2勝0敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Patriots",
+                    "result": "○ 13-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Cardinals",
+                    "result": "○ 31-7"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -1916,27 +2435,101 @@
             "https://npb.jp/bis/2026/stats/",
             "https://npb.jp/bis/2026/stats/std_c.html",
             "https://npb.jp/announcement/starter/",
-            "https://npb.jp/games/2026/schedule_09_detail.html"
+            "https://npb.jp/games/2026/schedule_09_detail.html",
+            "https://npb.jp/bis/teams/results_g_09.html",
+            "https://npb.jp/bis/teams/results_s_09.html",
+            "https://npb.jp/bis/teams/results_e_index.html",
+            "https://npb.jp/bis/teams/results_l_09.html",
+            "https://npb.jp/bis/teams/results_f_index.html",
+            "https://npb.jp/bis/teams/results_m_index.html"
           ],
           "note": "value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
           "analysis_detail": {
             "summary": "巨人は順位・今季H2Hで優位だが、1.66の損益分岐約60.2%に対して先発差を含めると明確なVALUE確定まで届かず監視。",
             "h2h": {
               "status": "checked",
-              "summary": "2026年シーズン対戦は巨人13勝・ヤクルト10勝。",
-              "items": []
+              "summary": "2026年シーズン対戦は巨人13勝・ヤクルト10勝。 最新対戦明細も保存。",
+              "items": [
+                {
+                  "date": "2026-09-20",
+                  "label": "巨人 vs ヤクルト",
+                  "result": "巨人 3-2 ヤクルト"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ヤクルト",
-                "summary": "シーズン58勝76敗2分・4位。",
-                "items": []
+                "summary": "9/25までの直近6試合は1勝5敗。",
+                "items": [
+                  {
+                    "date": "2026-09-25",
+                    "opponent": "中日",
+                    "result": "○ 5-4"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "阪神",
+                    "result": "× 4-8"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "阪神",
+                    "result": "× 7-9"
+                  },
+                  {
+                    "date": "2026-09-20",
+                    "opponent": "巨人",
+                    "result": "× 2-3"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "DeNA",
+                    "result": "× 3-5"
+                  },
+                  {
+                    "date": "2026-09-18",
+                    "opponent": "DeNA",
+                    "result": "○ 3-1"
+                  }
+                ]
               },
               "side_b": {
                 "label": "巨人",
-                "summary": "シーズン74勝62敗2分・2位。",
-                "items": []
+                "summary": "9/25までの直近6試合は2勝4敗。",
+                "items": [
+                  {
+                    "date": "2026-09-25",
+                    "opponent": "広島",
+                    "result": "× 2-3"
+                  },
+                  {
+                    "date": "2026-09-24",
+                    "opponent": "広島",
+                    "result": "× 1-3"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "広島",
+                    "result": "○ 2-1"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "広島",
+                    "result": "× 1-2"
+                  },
+                  {
+                    "date": "2026-09-20",
+                    "opponent": "ヤクルト",
+                    "result": "○ 3-2"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "中日",
+                    "result": "○ 14-1"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -2017,27 +2610,101 @@
             "https://npb.jp/announcement/starter/",
             "https://npb.jp/games/2026/schedule_09_detail.html",
             "https://npb.jp/bis/players/91895150.html",
-            "https://npb.jp/bis/players/31835153.html"
+            "https://npb.jp/bis/players/31835153.html",
+            "https://npb.jp/bis/teams/results_g_09.html",
+            "https://npb.jp/bis/teams/results_s_09.html",
+            "https://npb.jp/bis/teams/results_e_index.html",
+            "https://npb.jp/bis/teams/results_l_09.html",
+            "https://npb.jp/bis/teams/results_f_index.html",
+            "https://npb.jp/bis/teams/results_m_index.html"
           ],
           "note": "value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
           "analysis_detail": {
             "summary": "チーム順位では西武優位だが、先発投手の比較が逆方向。市場価格とチーム力が噛み合わず不確実性が高いため除外。",
             "h2h": {
               "status": "checked",
-              "summary": "今季H2Hは確認したが、この更新回の詳細全スコア保存が不足。",
-              "items": []
+              "summary": "今季H2Hは確認したが、この更新回の詳細全スコア保存が不足。 最新対戦明細も保存。",
+              "items": [
+                {
+                  "date": "2026-09-15",
+                  "label": "楽天 vs 西武",
+                  "result": "楽天 1-0 西武"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "楽天",
-                "summary": "54勝79敗1分・6位。",
-                "items": []
+                "summary": "9/24までの直近6試合は5勝1敗。",
+                "items": [
+                  {
+                    "date": "2026-09-24",
+                    "opponent": "日本ハム",
+                    "result": "○ 6-0"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "日本ハム",
+                    "result": "○ 5-3"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "日本ハム",
+                    "result": "× 5-6"
+                  },
+                  {
+                    "date": "2026-09-20",
+                    "opponent": "ソフトバンク",
+                    "result": "○ 5-3"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "ソフトバンク",
+                    "result": "○ 5-2"
+                  },
+                  {
+                    "date": "2026-09-17",
+                    "opponent": "ロッテ",
+                    "result": "○ 5-1"
+                  }
+                ]
               },
               "side_b": {
                 "label": "西武",
-                "summary": "74勝59敗4分・2位。",
-                "items": []
+                "summary": "9/25までの直近6試合は1勝5敗。",
+                "items": [
+                  {
+                    "date": "2026-09-25",
+                    "opponent": "ロッテ",
+                    "result": "× 2-6"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "ソフトバンク",
+                    "result": "× 3-10"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "ソフトバンク",
+                    "result": "× 5-6"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "ロッテ",
+                    "result": "○ 4-2"
+                  },
+                  {
+                    "date": "2026-09-17",
+                    "opponent": "日本ハム",
+                    "result": "× 2-4"
+                  },
+                  {
+                    "date": "2026-09-15",
+                    "opponent": "楽天",
+                    "result": "× 0-1"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -2118,27 +2785,101 @@
             "https://npb.jp/announcement/starter/",
             "https://npb.jp/games/2026/schedule_09_detail.html",
             "https://npb.jp/bis/players/31035157.html",
-            "https://npb.jp/bis/2026/stats/idp1_f.html"
+            "https://npb.jp/bis/2026/stats/idp1_f.html",
+            "https://npb.jp/bis/teams/results_g_09.html",
+            "https://npb.jp/bis/teams/results_s_09.html",
+            "https://npb.jp/bis/teams/results_e_index.html",
+            "https://npb.jp/bis/teams/results_l_09.html",
+            "https://npb.jp/bis/teams/results_f_index.html",
+            "https://npb.jp/bis/teams/results_m_index.html"
           ],
           "note": "value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
           "analysis_detail": {
             "summary": "日本ハムは順位・今季H2Hで優位だが、先発ERAではロッテ側が上。1.77の価格では確信度不足として監視。",
             "h2h": {
               "status": "checked",
-              "summary": "2026年シーズン対戦は日本ハム13勝・ロッテ9勝。",
-              "items": []
+              "summary": "2026年シーズン対戦は日本ハム13勝・ロッテ9勝。 最新対戦明細も保存。",
+              "items": [
+                {
+                  "date": "2026-09-15",
+                  "label": "日本ハム vs ロッテ",
+                  "result": "日本ハム 6-7 ロッテ"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "日本ハム",
-                "summary": "75勝61敗3分・3位。",
-                "items": []
+                "summary": "9/24までの直近6試合は3勝3敗。",
+                "items": [
+                  {
+                    "date": "2026-09-24",
+                    "opponent": "楽天",
+                    "result": "× 0-6"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "楽天",
+                    "result": "× 3-5"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "楽天",
+                    "result": "○ 6-5"
+                  },
+                  {
+                    "date": "2026-09-21",
+                    "opponent": "オリックス",
+                    "result": "○ 5-3"
+                  },
+                  {
+                    "date": "2026-09-20",
+                    "opponent": "オリックス",
+                    "result": "× 6-9"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "オリックス",
+                    "result": "× 4-7"
+                  }
+                ]
               },
               "side_b": {
                 "label": "ロッテ",
-                "summary": "59勝70敗3分・5位。",
-                "items": []
+                "summary": "9/25までの直近6試合は1勝5敗。",
+                "items": [
+                  {
+                    "date": "2026-09-25",
+                    "opponent": "西武",
+                    "result": "○ 6-2"
+                  },
+                  {
+                    "date": "2026-09-23",
+                    "opponent": "オリックス",
+                    "result": "× 0-1"
+                  },
+                  {
+                    "date": "2026-09-22",
+                    "opponent": "オリックス",
+                    "result": "× 4-6"
+                  },
+                  {
+                    "date": "2026-09-19",
+                    "opponent": "西武",
+                    "result": "× 2-4"
+                  },
+                  {
+                    "date": "2026-09-17",
+                    "opponent": "楽天",
+                    "result": "× 1-5"
+                  },
+                  {
+                    "date": "2026-09-16",
+                    "opponent": "楽天",
+                    "result": "× 0-4"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -2204,7 +2945,7 @@
           ],
           "outcome": "watch",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -2223,21 +2964,59 @@
           "analysis_detail": {
             "summary": "Billsの2-0とChargersの0-2は差だが、両軍の負傷者が多く1.28を正式採用するには不確実性が高い。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新では信頼できるH2H全件を取得できず、採用根拠には使用していない。",
-              "items": []
+              "status": "checked",
+              "summary": "近年3対戦はBills 2勝、Chargers 1勝。Chargers公式のシリーズ通算はChargers 25勝・Bills 14勝・2分。",
+              "items": [
+                {
+                  "date": "2023-12-23",
+                  "label": "Chargers vs Bills",
+                  "result": "Chargers 22-24 Bills"
+                },
+                {
+                  "date": "2020-11-29",
+                  "label": "Bills vs Chargers",
+                  "result": "Bills 27-17 Chargers"
+                },
+                {
+                  "date": "2018-09-16",
+                  "label": "Bills vs Chargers",
+                  "result": "Bills 20-31 Chargers"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ビルズ",
-                "summary": "2026開幕2勝0敗。",
-                "items": []
+                "summary": "2026開幕2勝0敗。存在する今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Texans",
+                    "result": "○ 36-31"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Lions",
+                    "result": "○ 41-31"
+                  }
+                ]
               },
               "side_b": {
                 "label": "チャージャーズ",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。存在する今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Cardinals",
+                    "result": "× 14-26"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Raiders",
+                    "result": "× 14-26"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -2305,7 +3084,7 @@
           ],
           "outcome": "reject",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -2323,21 +3102,59 @@
           "analysis_detail": {
             "summary": "LionsとJetsはともに1-1で、負傷者も双方に存在。1.32前後のLions優位を裏付ける独立差が不足。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "直近3対戦はLions 2勝、Jets 1勝。",
+              "items": [
+                {
+                  "date": "2022-12-18",
+                  "label": "Jets vs Lions",
+                  "result": "Jets 17-20 Lions"
+                },
+                {
+                  "date": "2018-09-10",
+                  "label": "Lions vs Jets",
+                  "result": "Lions 17-48 Jets"
+                },
+                {
+                  "date": "2014-09-28",
+                  "label": "Jets vs Lions",
+                  "result": "Jets 17-24 Lions"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ライオンズ",
-                "summary": "2026開幕1勝1敗。",
-                "items": []
+                "summary": "2026開幕1勝1敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Saints",
+                    "result": "○ 31-30"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Bills",
+                    "result": "× 31-41"
+                  }
+                ]
               },
               "side_b": {
                 "label": "ジェッツ",
-                "summary": "2026開幕1勝1敗。",
-                "items": []
+                "summary": "2026開幕1勝1敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Titans",
+                    "result": "○ 23-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Packers",
+                    "result": "× 17-20（OT）"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -2403,7 +3220,7 @@
           ],
           "outcome": "watch",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -2422,21 +3239,59 @@
           "analysis_detail": {
             "summary": "Seattle 2-0対Washington 0-2、Washington先発QB欠場が大きな差。ただし外部市場クロスチェック後、VALUE①では明確な価格優位を確認できずWATCHへ修正。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "直近3対戦はSeahawks 2勝、Washington 1勝。",
+              "items": [
+                {
+                  "date": "2023-11-12",
+                  "label": "Seahawks vs Commanders",
+                  "result": "Seahawks 29-26 Commanders"
+                },
+                {
+                  "date": "2021-11-29",
+                  "label": "Washington vs Seahawks",
+                  "result": "Washington 17-15 Seahawks"
+                },
+                {
+                  "date": "2020-12-20",
+                  "label": "Washington vs Seahawks",
+                  "result": "Washington 15-20 Seahawks"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "コマンダース",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Eagles",
+                    "result": "× 22-24"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Cowboys",
+                    "result": "× 20-37"
+                  }
+                ]
               },
               "side_b": {
                 "label": "シーホークス",
-                "summary": "2026開幕2勝0敗。",
-                "items": []
+                "summary": "2026開幕2勝0敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Patriots",
+                    "result": "○ 13-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Cardinals",
+                    "result": "○ 31-7"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -2515,7 +3370,7 @@
           ],
           "outcome": "watch",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -2534,21 +3389,59 @@
           "analysis_detail": {
             "summary": "Billsの2-0とChargersの0-2は差だが、両軍の負傷者が多く1.28を正式採用するには不確実性が高い。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新では信頼できるH2H全件を取得できず、採用根拠には使用していない。",
-              "items": []
+              "status": "checked",
+              "summary": "近年3対戦はBills 2勝、Chargers 1勝。Chargers公式のシリーズ通算はChargers 25勝・Bills 14勝・2分。",
+              "items": [
+                {
+                  "date": "2023-12-23",
+                  "label": "Chargers vs Bills",
+                  "result": "Chargers 22-24 Bills"
+                },
+                {
+                  "date": "2020-11-29",
+                  "label": "Bills vs Chargers",
+                  "result": "Bills 27-17 Chargers"
+                },
+                {
+                  "date": "2018-09-16",
+                  "label": "Bills vs Chargers",
+                  "result": "Bills 20-31 Chargers"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ビルズ",
-                "summary": "2026開幕2勝0敗。",
-                "items": []
+                "summary": "2026開幕2勝0敗。存在する今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Texans",
+                    "result": "○ 36-31"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Lions",
+                    "result": "○ 41-31"
+                  }
+                ]
               },
               "side_b": {
                 "label": "チャージャーズ",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。存在する今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Cardinals",
+                    "result": "× 14-26"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Raiders",
+                    "result": "× 14-26"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -2616,7 +3509,7 @@
           ],
           "outcome": "reject",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -2634,21 +3527,59 @@
           "analysis_detail": {
             "summary": "LionsとJetsはともに1-1で、負傷者も双方に存在。1.32前後のLions優位を裏付ける独立差が不足。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "直近3対戦はLions 2勝、Jets 1勝。",
+              "items": [
+                {
+                  "date": "2022-12-18",
+                  "label": "Jets vs Lions",
+                  "result": "Jets 17-20 Lions"
+                },
+                {
+                  "date": "2018-09-10",
+                  "label": "Lions vs Jets",
+                  "result": "Lions 17-48 Jets"
+                },
+                {
+                  "date": "2014-09-28",
+                  "label": "Jets vs Lions",
+                  "result": "Jets 17-24 Lions"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ライオンズ",
-                "summary": "2026開幕1勝1敗。",
-                "items": []
+                "summary": "2026開幕1勝1敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Saints",
+                    "result": "○ 31-30"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Bills",
+                    "result": "× 31-41"
+                  }
+                ]
               },
               "side_b": {
                 "label": "ジェッツ",
-                "summary": "2026開幕1勝1敗。",
-                "items": []
+                "summary": "2026開幕1勝1敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Titans",
+                    "result": "○ 23-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Packers",
+                    "result": "× 17-20（OT）"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -2714,7 +3645,7 @@
           ],
           "outcome": "reject",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -2733,21 +3664,54 @@
           "analysis_detail": {
             "summary": "Chiefs優位は認めるが1.16は必要勝率約86.2%。OT欠場もあり、価格ほどの確信度を置けない。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "確認できた直近2対戦はいずれもChiefs勝利。",
+              "items": [
+                {
+                  "date": "2024-01-13",
+                  "label": "Chiefs vs Dolphins",
+                  "result": "Chiefs 26-7 Dolphins"
+                },
+                {
+                  "date": "2020-12-13",
+                  "label": "Dolphins vs Chiefs",
+                  "result": "Dolphins 27-33 Chiefs"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "ドルフィンズ",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Raiders",
+                    "result": "× 13-27"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "49ers",
+                    "result": "× 13-35"
+                  }
+                ]
               },
               "side_b": {
                 "label": "チーフス",
-                "summary": "Chiefs優勢と評価したが、今回runでは詳細直近スコア保存不足。",
-                "items": []
+                "summary": "2026開幕2勝0敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Broncos",
+                    "result": "○ 31-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Colts",
+                    "result": "○ 33-30（OT）"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -2814,7 +3778,7 @@
           ],
           "outcome": "watch",
           "checks": {
-            "h2h": "unavailable",
+            "h2h": "checked",
             "recent_form": "checked",
             "ranking_or_rating": "not_applicable",
             "availability": "checked",
@@ -2833,21 +3797,59 @@
           "analysis_detail": {
             "summary": "Seattle 2-0対Washington 0-2、Washington先発QB欠場が大きな差。ただし外部市場クロスチェック後、VALUE①では明確な価格優位を確認できずWATCHへ修正。",
             "h2h": {
-              "status": "unavailable",
-              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
-              "items": []
+              "status": "checked",
+              "summary": "直近3対戦はSeahawks 2勝、Washington 1勝。",
+              "items": [
+                {
+                  "date": "2023-11-12",
+                  "label": "Seahawks vs Commanders",
+                  "result": "Seahawks 29-26 Commanders"
+                },
+                {
+                  "date": "2021-11-29",
+                  "label": "Washington vs Seahawks",
+                  "result": "Washington 17-15 Seahawks"
+                },
+                {
+                  "date": "2020-12-20",
+                  "label": "Washington vs Seahawks",
+                  "result": "Washington 15-20 Seahawks"
+                }
+              ]
             },
             "recent_form": {
               "status": "checked",
               "side_a": {
                 "label": "コマンダース",
-                "summary": "2026開幕0勝2敗。",
-                "items": []
+                "summary": "2026開幕0勝2敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Eagles",
+                    "result": "× 22-24"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Cowboys",
+                    "result": "× 20-37"
+                  }
+                ]
               },
               "side_b": {
                 "label": "シーホークス",
-                "summary": "2026開幕2勝0敗。",
-                "items": []
+                "summary": "2026開幕2勝0敗。今季公式戦2試合を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-W1",
+                    "opponent": "Patriots",
+                    "result": "○ 13-10"
+                  },
+                  {
+                    "date": "2026-W2",
+                    "opponent": "Cardinals",
+                    "result": "○ 31-7"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
