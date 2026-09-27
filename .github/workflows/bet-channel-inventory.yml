@@ -114,13 +114,15 @@ jobs:
           # 古いworkflow SHAの手動再実行でもdataファイル同士をrebase競合させない。
           cp data/bet-channel-inventory.json /tmp/generated-bet-channel-inventory.json
           cp data/bet-channel-screening-summary.json /tmp/generated-bet-channel-screening-summary.json
+          cp data/bet-channel-fixed-odds-status.json /tmp/generated-bet-channel-fixed-odds-status.json
 
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
             cp /tmp/generated-bet-channel-inventory.json data/bet-channel-inventory.json
             cp /tmp/generated-bet-channel-screening-summary.json data/bet-channel-screening-summary.json
-            git add data/bet-channel-inventory.json data/bet-channel-screening-summary.json
+            cp /tmp/generated-bet-channel-fixed-odds-status.json data/bet-channel-fixed-odds-status.json
+            git add data/bet-channel-inventory.json data/bet-channel-screening-summary.json data/bet-channel-fixed-odds-status.json
 
             if git diff --cached --quiet; then
               echo "No inventory diff after syncing latest main"
@@ -149,5 +151,7 @@ jobs:
             console.error(`Incomplete BET CHANNEL scrape: failed=${x.failed_category_count} metadata=${x.metadata_missing_count} time_parse=${x.time_parse_missing_count} analysis_ready=${x.analysis_ready} self_audit=${x.self_audit?.status} unresolved=${x.self_audit?.unresolved_blockers}`);
             process.exit(1);
           }
-          console.log(`COMPLETE: ${x.category_count} categories / ${x.event_count} collected market events / ${x.screening_event_count} currently listed sports/esports events / ${x.priority_12h_event_count} priority next-12h / self-audit ${x.self_audit.status} / remediation ${x.self_audit.remediation_status}`);
+          const fx=JSON.parse(fs.readFileSync("data/bet-channel-fixed-odds-status.json","utf8"));
+          console.log(`LEGACY MATCHES COMPLETE: ${x.category_count} categories / ${x.event_count} collected market events / ${x.screening_event_count} currently listed events / ${x.priority_12h_event_count} priority next-12h / self-audit ${x.self_audit.status} / remediation ${x.self_audit.remediation_status}`);
+          console.log(`FIXED-ODDS ESPORTS STATUS: access=${fx.access_status} complete=${fx.complete} event_feed_detected=${fx.event_feed_detected} blocker=${fx.blocker_reason}`);
           NODE
