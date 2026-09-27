@@ -561,6 +561,7 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
           if (fx.complete !== true || fx.analysis_ready !== true || fx.access_status !== "direct") ledger.error("coverage","bet_channel_fixed_odds",null,`日本側fixed-odds/eSportsが完全取得できていない（access=${fx.access_status ?? "unknown"}, blockers=${JSON.stringify(fx.self_audit?.blockers ?? [])}）。全競技/eSports網羅を満たさないため更新完了禁止`);
           if (!["japan_local_windows","japan_vps_linux"].includes(fx.source_machine)) ledger.error("coverage","bet_channel_fixed_odds",null,`fixed-odds/eSportsが許可済み日本取得ノードの証跡ではない（source_machine=${fx.source_machine ?? "null"}）`);
           if (fx.source_region !== "JP") ledger.error("coverage","bet_channel_fixed_odds",null,`fixed-odds/eSportsの取得リージョンがJPではない（source_region=${fx.source_region ?? "null"}）`);
+          if (fx.source_machine === "japan_vps_linux" && fx.source_region_evidence !== "cloudflare_trace:JP") ledger.error("coverage","bet_channel_fixed_odds",null,`Japan VPSの外向きIP国コード証跡が無い/不正（source_region_evidence=${fx.source_region_evidence ?? "null"}）`);
           if (!fx.menu_end_verified) ledger.error("coverage","bet_channel_fixed_odds",null,"fixed-odds/eSportsの競技/タイトルメニュー終端確認が未完了");
           if (!Array.isArray(fx.event_ids) || fx.event_count !== fx.event_ids.length || !Array.isArray(fx.screening_event_ids) || fx.screening_event_count !== fx.screening_event_ids.length) ledger.error("coverage","bet_channel_fixed_odds",null,"fixed-odds/eSportsのevent/screening件数とID配列が不一致");
           // 日本ローカルは各定時の約40分前に取得。55分を超えた前回スロットの使い回しは禁止。
