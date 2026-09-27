@@ -202,14 +202,14 @@ function payloadPhase(run,payloadPath,reportPath){
 
   const noCap=SYSTEMS.every(s=>arr(sys[s]?.screening_evidence).length===master.length&&arr(sys[s]?.card_ids).length===master.length);
   mark(run,18,noCap?"pass":"fail",noCap?"full-universe evidence retained; no runtime truncation":"screening evidence truncated");
-  const reasonsOk=SYSTEMS.every(s=>arr(sys[s]?.screening_evidence).every(e=>e.screen_decision==="deep_dive"||arr(e.reason_codes).length>0));
+  const reasonsOk=allCards&&SYSTEMS.every(s=>arr(sys[s]?.screening_evidence).every(e=>e.screen_decision==="deep_dive"||arr(e.reason_codes).length>0));
   mark(run,19,reasonsOk?"pass":"fail",reasonsOk?"all non-deep cards carry concrete reason_codes":"abstract/missing reject reason detected");
-  const d20=SYSTEMS.every(s=>arr(sys[s]?.deep_dive_evidence).every(detailOk));
+  const d20=allCards&&SYSTEMS.every(s=>arr(sys[s]?.deep_dive_evidence).every(detailOk));
   mark(run,20,d20?"pass":"fail",d20?"all deep-dive evidence has structured complete fields/source URLs":"deep-dive structured evidence missing");
 
   const esportRe=/esport|eスポ|cs2|counter.?strike|valorant|dota|league of legends|\blol\b|rainbow six|efootball|esoccer|ebasket|nba.?2k|ecricket|etennis|efighting|rocket league|overwatch|pubg|mobile legends/i;
   const eids=new Set(events.filter(e=>esportRe.test(`${e.category||""} ${e.category_key||""} ${e.sport||""} ${e.title||""}`)).map(e=>String(e.event_id)));
-  let espDeep=true, espCount=0;
+  let espDeep=allCards, espCount=0;
   for(const s of SYSTEMS)for(const d of arr(sys[s]?.deep_dive_evidence).filter(d=>eids.has(String(d.event_id)))){
     espCount++;const txt=JSON.stringify(d.analysis_detail?.sport_specific||{})+" "+arr(d.analysis_detail?.missing_information).join(" ");
     if(!/(bo\d|map|veto|patch|roster|lan|online|マップ|ロスター|パッチ|取得できず|unavailable)/i.test(txt))espDeep=false;
@@ -219,9 +219,9 @@ function payloadPhase(run,payloadPath,reportPath){
   if(eligibleEsports.length>0&&espCount===0)espDeep=false;
   mark(run,21,espDeep?"pass":"fail",espDeep?`eSports-specific evidence recorded for ${espCount} deep dives; eligible eSports events=${eligibleEsports.length}`:"eligible eSports deep-dive specific evidence missing");
 
-  const idsOk=SYSTEMS.every(s=>setEq(arr(sys[s]?.screening_evidence).filter(x=>x.screen_decision==="deep_dive").map(x=>x.event_id),arr(sys[s]?.deep_dive_evidence).map(x=>x.event_id)));
+  const idsOk=allCards&&SYSTEMS.every(s=>setEq(arr(sys[s]?.screening_evidence).filter(x=>x.screen_decision==="deep_dive").map(x=>x.event_id),arr(sys[s]?.deep_dive_evidence).map(x=>x.event_id)));
   mark(run,22,idsOk?"pass":"fail",idsOk?"deep-dive target IDs exactly match proof IDs":"deep-dive target/proof ID mismatch");
-  const crossOk=["value1","value2","pro_edge"].every(s=>arr(sys[s]?.deep_dive_evidence).filter(d=>["candidate","watch"].includes(d.outcome)).every(d=>d.checks?.market_crosscheck==="checked"));
+  const crossOk=allCards&&["value1","value2","pro_edge"].every(s=>arr(sys[s]?.deep_dive_evidence).filter(d=>["candidate","watch"].includes(d.outcome)).every(d=>d.checks?.market_crosscheck==="checked"));
   mark(run,23,crossOk?"pass":"fail",crossOk?"②③④ candidate/watch external market cross-check complete":"candidate/watch market cross-check missing");
 
   const comp=p.completion_audit;
