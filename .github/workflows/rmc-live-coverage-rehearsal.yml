@@ -31,6 +31,17 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Require complete sports + eSports union before rehearsal
+        run: |
+          node - <<'NODE'
+          const x=require("./data/bet-channel-complete-summary.json");
+          if(x.complete!==true || x.analysis_ready!==true || x.menu_end_verified!==true || x.self_audit?.unresolved_blockers!==0){
+            console.error("Complete union unavailable; live coverage rehearsal correctly blocked.", x.self_audit?.blockers||[]);
+            process.exit(1);
+          }
+          console.log("Complete union ready:", x.event_count, "events /", x.screening_event_count, "screening");
+          NODE
+
       - name: Build live all-event rehearsal payload
         run: |
           node scripts/build-live-coverage-rehearsal.mjs data/bet-channel-complete-summary.json tmp/live-coverage-trial.json | tee /tmp/live-builder.txt
