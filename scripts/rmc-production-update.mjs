@@ -472,62 +472,70 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
     const bc = c.sportsbook_master?.bet_channel ?? [];
     if (JSON.stringify(normList(master)) !== JSON.stringify(normList(bc))) ledger.error("coverage", "bet_channel", null, "BET CHANNEL完全版では union_sports が bet_channel実一覧と一致していない");
 
-    const invPath = join(dataDir, "bet-channel-inventory.json");
-    if (!existsSync(invPath)) ledger.error("coverage","bet_channel",null,"実測 bet-channel-inventory.json が無い");
+    const invPath = join(dataDir, "bet-channel-complete-summary.json");
+    if (!existsSync(invPath)) ledger.error("coverage","bet_channel",null,"実測 bet-channel-complete-summary.json が無い。通常+fixed-odds/eSportsのunionを証明できない");
     else {
       const inv = JSON.parse(readFileSync(invPath,"utf8"));
       const a = c.sportsbook_master?.source_audit?.bet_channel;
       const sameIds = (u,v) => JSON.stringify([...(u??[])].sort()) === JSON.stringify([...(v??[])].sort());
 
-      // 本番 data/ では、BET CHANNELの別系統 fixed-odds / Betby eSports 面も完全取得必須。
-      // legacy /matches が105カテゴリ取得できても、fixed-odds側が未取得なら「全スポーツ/eSports完全版」とは扱わない。
+      // 完全版は GitHubで取得するlegacy /matches と、日本側で取得するfixed-odds/Betby eSports のunion。
+      // どちらか一方でも欠落・古い・不完全なら定時更新完了を禁止する。
       if (resolve(dataDir) === resolve(DATA_DIR)) {
-        const fixedPath = join(dataDir, "bet-channel-fixed-odds-status.json");
-        if (!existsSync(fixedPath)) {
-          ledger.error("coverage","bet_channel_fixed_odds",null,"BET CHANNEL fixed-odds/eSports取得状態が無い。legacy /matchesだけでは完全更新不可");
+        const legacyPath = join(dataDir, "bet-channel-inventory.json");
+        const fixedPath = join(dataDir, "bet-channel-fixed-odds-inventory.json");
+        let legacy=null, fx=null;
+        try { legacy = JSON.parse(readFileSync(legacyPath,"utf8")); } catch {}
+        try { fx = JSON.parse(readFileSync(fixedPath,"utf8")); } catch {}
+        const generated = Date.parse(payload.generated_at ?? "");
+
+        if (!legacy) {
+          ledger.error("coverage","bet_channel",null,"legacy /matchesインベントリが無い");
         } else {
-          const fx = JSON.parse(readFileSync(fixedPath,"utf8"));
-          const fxChecked = Date.parse(fx.checked_at ?? "");
-          const generated = Date.parse(payload.generated_at ?? "");
-          const fxAge = generated - fxChecked;
-          if (fx.complete !== true) ledger.error("coverage","bet_channel_fixed_odds",null,`BET CHANNEL fixed-odds/eSportsが完全取得できていない（access=${fx.access_status ?? "unknown"}, blocker=${fx.blocker_reason ?? "unknown"}）。全競技/eSports網羅を満たさないため更新完了禁止`);
-          if (!fx.menu_end_verified) ledger.error("coverage","bet_channel_fixed_odds",null,"fixed-odds/eSportsの競技/タイトルメニュー終端確認が未完了");
-          if (!Array.isArray(fx.event_ids) || fx.event_count !== fx.event_ids.length) ledger.error("coverage","bet_channel_fixed_odds",null,"fixed-odds/eSportsのevent_countとevent_idsが不一致");
-          if (!Number.isFinite(fxChecked) || !Number.isFinite(generated) || fxAge < -5*60*1000 || fxAge > 45*60*1000) ledger.error("coverage","bet_channel_fixed_odds",null,`fixed-odds/eSports取得時刻が定時更新に対して古い/不正（checked_at=${fx.checked_at ?? "null"}, generated_at=${payload.generated_at ?? "null"}）`);
+          const legacyChecked=Date.parse(legacy.checked_at ?? "");
+          const legacyAge=generated-legacyChecked;
+          if (legacy.complete!==true || legacy.analysis_ready!==true || legacy.self_audit?.unresolved_blockers!==0) ledger.error("coverage","bet_channel",null,"legacy /matchesインベントリが完全取得済みではない");
+          if (!Number.isFinite(legacyChecked) || !Number.isFinite(generated) || legacyAge < -5*60*1000 || legacyAge > 45*60*1000) ledger.error("coverage","bet_channel",null,`legacy /matches取得時刻が定時更新に対して古い/不正（checked_at=${legacy.checked_at ?? "null"}, generated_at=${payload.generated_at ?? "null"}）`);
         }
 
-        // legacy /matchesインベントリも、各定時更新の直前取得だけを使う。前回snapshotの使い回しを拒否。
-        const invChecked = Date.parse(inv.checked_at ?? "");
-        const generated = Date.parse(payload.generated_at ?? "");
-        const invAge = generated - invChecked;
-        if (!Number.isFinite(invChecked) || !Number.isFinite(generated) || invAge < -5*60*1000 || invAge > 45*60*1000) {
-          ledger.error("coverage","bet_channel",null,`BET CHANNELインベントリが定時更新に対して古い/不正（checked_at=${inv.checked_at ?? "null"}, generated_at=${payload.generated_at ?? "null"}）。直前再取得が必要`);
+        if (!fx) {
+          ledger.error("coverage","bet_channel_fixed_odds",null,"日本側fixed-odds/eSportsインベントリが無い。完全更新不可");
+        } else {
+          const fxChecked = Date.parse(fx.checked_at ?? "");
+          const fxAge = generated - fxChecked;
+          if (fx.complete !== true || fx.analysis_ready !== true || fx.access_status !== "direct") ledger.error("coverage","bet_channel_fixed_odds",null,`日本側fixed-odds/eSportsが完全取得できていない（access=${fx.access_status ?? "unknown"}, blockers=${JSON.stringify(fx.self_audit?.blockers ?? [])}）。全競技/eSports網羅を満たさないため更新完了禁止`);
+          if (fx.source_machine !== "japan_local_windows") ledger.error("coverage","bet_channel_fixed_odds",null,`fixed-odds/eSportsが日本Windows取得証跡ではない（source_machine=${fx.source_machine ?? "null"}）`);
+          if (!fx.menu_end_verified) ledger.error("coverage","bet_channel_fixed_odds",null,"fixed-odds/eSportsの競技/タイトルメニュー終端確認が未完了");
+          if (!Array.isArray(fx.event_ids) || fx.event_count !== fx.event_ids.length || !Array.isArray(fx.screening_event_ids) || fx.screening_event_count !== fx.screening_event_ids.length) ledger.error("coverage","bet_channel_fixed_odds",null,"fixed-odds/eSportsのevent/screening件数とID配列が不一致");
+          // 日本ローカルは各定時の約40分前に取得。55分を超えた前回スロットの使い回しは禁止。
+          if (!Number.isFinite(fxChecked) || !Number.isFinite(generated) || fxAge < -5*60*1000 || fxAge > 55*60*1000) ledger.error("coverage","bet_channel_fixed_odds",null,`fixed-odds/eSports取得時刻が定時更新に対して古い/不正（checked_at=${fx.checked_at ?? "null"}, generated_at=${payload.generated_at ?? "null"}）`);
         }
-        if (a?.checked_at !== inv.checked_at) ledger.error("coverage","bet_channel",null,"payloadのchecked_atが最新BET CHANNELインベントリと一致しない");
+
+        if (a?.checked_at !== inv.checked_at) ledger.error("coverage","bet_channel",null,"payloadのchecked_atが最新BET CHANNEL完全unionと一致しない");
       }
-      if (!inv.complete || !inv.analysis_ready || inv.failed_category_count !== 0 || inv.metadata_missing_count !== 0 || inv.time_parse_missing_count !== 0) ledger.error("coverage","bet_channel",null,"最新BET CHANNELインベントリが完全取得・analysis_readyではない");
+      if (!inv.complete || !inv.analysis_ready || inv.failed_category_count !== 0 || inv.metadata_missing_count !== 0 || inv.time_parse_missing_count !== 0) ledger.error("coverage","bet_channel",null,"最新BET CHANNEL完全union（通常+fixed-odds/eSports）がcomplete・analysis_readyではない");
       const health = c.self_audit;
-      if (!inv.self_audit || !["pass","pass_after_remediation"].includes(inv.self_audit.status) || inv.self_audit.requires_rescan || inv.self_audit.unresolved_blockers !== 0) ledger.error("self_audit","bet_channel",null,"BET CHANNEL自己監査が未解決または再取得要求のまま");
+      if (!inv.self_audit || !["pass","pass_after_remediation"].includes(inv.self_audit.status) || inv.self_audit.requires_rescan || inv.self_audit.unresolved_blockers !== 0) ledger.error("self_audit","bet_channel",null,"BET CHANNEL完全union自己監査が未解決のまま");
       if (!health) ledger.error("self_audit","payload",null,"定時更新の自己監査・改善チェックが無い");
       else {
-        if (health.inventory_status !== inv.self_audit?.status) ledger.error("self_audit","payload",null,"自己監査statusが実インベントリと一致しない");
-        if (health.inventory_self_audit_digest !== inv.self_audit?.digest) ledger.error("self_audit","payload",null,"自己監査digestが実インベントリと一致しない");
-        if (health.anomalies_found !== inv.self_audit?.anomaly_count) ledger.error("self_audit","payload",null,"異常検知件数が実インベントリと一致しない");
-        if (health.remediation_status !== inv.self_audit?.remediation_status) ledger.error("self_audit","payload",null,"改善/再取得状態が実インベントリと一致しない");
+        if (health.inventory_status !== inv.self_audit?.status) ledger.error("self_audit","payload",null,"自己監査statusが実BET CHANNEL完全unionと一致しない");
+        if (health.inventory_self_audit_digest !== inv.self_audit?.digest) ledger.error("self_audit","payload",null,"自己監査digestが実BET CHANNEL完全unionと一致しない");
+        if (health.anomalies_found !== inv.self_audit?.anomaly_count) ledger.error("self_audit","payload",null,"異常検知件数が実BET CHANNEL完全unionと一致しない");
+        if (health.remediation_status !== inv.self_audit?.remediation_status) ledger.error("self_audit","payload",null,"改善/再取得状態が実BET CHANNEL完全unionと一致しない");
         const fixA=[...(health.fixes_applied??[])].sort(), fixB=[...(inv.self_audit?.fixes_applied??[])].sort();
-        if (JSON.stringify(fixA)!==JSON.stringify(fixB)) ledger.error("self_audit","payload",null,"適用済み改善内容が実インベントリと一致しない");
+        if (JSON.stringify(fixA)!==JSON.stringify(fixB)) ledger.error("self_audit","payload",null,"適用済み改善内容が実BET CHANNEL完全unionと一致しない");
         if (health.unresolved_blockers !== 0 || inv.self_audit?.unresolved_blockers !== 0) ledger.error("self_audit","payload",null,"未解決blockerが残っている");
         if (!health.checks_performed?.length) ledger.error("self_audit","payload",null,"自己監査チェック項目の実施証跡が無い");
       }
-      if (a?.inventory_digest !== inv.integrity?.digest) ledger.error("coverage","bet_channel",null,"payloadのinventory_digestが実インベントリと一致しない");
-      if (a?.event_count !== inv.event_count || !sameIds(a?.event_ids,inv.event_ids)) ledger.error("coverage","bet_channel",null,"payloadの市場event一覧が実インベントリと一致しない");
-      if (a?.analysis_card_count !== inv.analysis_card_count || !sameIds(a?.analysis_card_ids,inv.analysis_card_ids)) ledger.error("coverage","bet_channel",null,"payloadのcanonical card一覧が実インベントリと一致しない");
-      if (a?.bettable_analysis_card_count !== inv.bettable_analysis_card_count || a?.unavailable_price_card_count !== inv.unavailable_price_card_count) ledger.error("coverage","bet_channel",null,"価格公開/未公開カード件数が実インベントリと一致しない");
-      if (a?.screening_event_count !== inv.screening_event_count || !sameIds(a?.screening_event_ids,inv.screening_event_ids)) ledger.error("coverage","bet_channel",null,"payloadの全掲載一次走査event一覧が実インベントリと一致しない");
-      if (a?.screening_digest !== inv.integrity?.screening_digest) ledger.error("coverage","bet_channel",null,"payloadのscreening_digestが実インベントリと一致しない");
+      if (a?.inventory_digest !== inv.integrity?.digest) ledger.error("coverage","bet_channel",null,"payloadのinventory_digestが実BET CHANNEL完全unionと一致しない");
+      if (a?.event_count !== inv.event_count || !sameIds(a?.event_ids,inv.event_ids)) ledger.error("coverage","bet_channel",null,"payloadの市場event一覧が実BET CHANNEL完全unionと一致しない");
+      if (a?.analysis_card_count !== inv.analysis_card_count || !sameIds(a?.analysis_card_ids,inv.analysis_card_ids)) ledger.error("coverage","bet_channel",null,"payloadのcanonical card一覧が実BET CHANNEL完全unionと一致しない");
+      if (a?.bettable_analysis_card_count !== inv.bettable_analysis_card_count || a?.unavailable_price_card_count !== inv.unavailable_price_card_count) ledger.error("coverage","bet_channel",null,"価格公開/未公開カード件数が実BET CHANNEL完全unionと一致しない");
+      if (a?.screening_event_count !== inv.screening_event_count || !sameIds(a?.screening_event_ids,inv.screening_event_ids)) ledger.error("coverage","bet_channel",null,"payloadの全掲載一次走査event一覧が実BET CHANNEL完全unionと一致しない");
+      if (a?.screening_digest !== inv.integrity?.screening_digest) ledger.error("coverage","bet_channel",null,"payloadのscreening_digestが実BET CHANNEL完全unionと一致しない");
       for (const system of DISCOVERY) {
         const ids=c.systems?.[system]?.card_ids ?? [];
-        if (!sameIds(ids,inv.screening_event_ids)) ledger.error("coverage",system,null,`card_idsがBET CHANNEL掲載中スポーツ/eスポーツ全eventと完全一致していない（${ids.length}/${inv.screening_event_ids?.length??0}）`);
+        if (!sameIds(ids,inv.screening_event_ids)) ledger.error("coverage",system,null,`card_idsがBET CHANNEL完全union（通常+fixed-odds/eSports）の全eventと完全一致していない（${ids.length}/${inv.screening_event_ids?.length??0}）`);
       }
 
       // 競技別deep-dive偏重防止ゲート。
