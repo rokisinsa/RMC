@@ -972,7 +972,7 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
   const errs = validateDataset(reread, schemas, { proEdgeConfig: cfg }).filter(i => i.level === "error");
   const auditErrs = validate("automation-runs.schema.json", JSON.parse(readFileSync(auditPath, "utf8")));
   if (errs.length || auditErrs.length || !PICK_SYSTEMS.every(s => deepEqual(reread[s], next[s]))) {
-    throw new Error(`書き込み後の再検査で不一致（${errs.length + auditErrs.length}件）`);
+    throw new Error(`書き込み後の再検査で不一致（${errs.length + auditErrs.length}件）: ${[...errs.map(x=>`${x.code}:${x.system}:${x.id??""}:${x.message}`),...auditErrs.map(x=>`automation_runs:${x}`)].join(" | ") || "dataset mismatch"}`);
   }
   return result;
 }
