@@ -486,6 +486,30 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
           const requiredChecks=["h2h","recent_form","ranking_or_rating","availability","market_odds","sport_specific","market_crosscheck"];
           for (const k of requiredChecks) if (!d.checks?.[k]) ledger.error("coverage",system,d.event_id,`深掘りチェック ${k} の状態証跡が無い`);
           if (["value1","value2","pro_edge"].includes(system) && d.outcome==="candidate" && d.checks?.market_crosscheck!=="checked") ledger.error("coverage",system,d.event_id,"VALUE/PRO EDGE候補なのにBET CHANNEL外の市場クロスチェックが未確認");
+
+          // 公開RMCで「なぜその判定なのか」を完全表示するための詳細証跡。
+          // deep_dive と言いながら要約1行だけ、H2H/直近の明細なし、という状態を本番で許可しない。
+          const ad=d.analysis_detail;
+          if (!ad || typeof ad!=="object") ledger.error("analysis_detail",system,d.event_id,"deep_dive_evidenceにanalysis_detailが無い");
+          else {
+            if (!ad.summary || !String(ad.summary).trim()) ledger.error("analysis_detail",system,d.event_id,"分析要約が無い");
+            for (const k of ["h2h","recent_form","ranking_or_rating","home_away","availability","market","sport_specific","rationale"]) {
+              if (!ad[k] || typeof ad[k]!=="object") ledger.error("analysis_detail",system,d.event_id,`分析詳細 ${k} が無い`);
+            }
+            if (ad.h2h?.status==="checked" && (!Array.isArray(ad.h2h.items)||ad.h2h.items.length===0)) ledger.error("analysis_detail",system,d.event_id,"H2Hを確認済みにしているのに対戦日・スコア明細が0件");
+            if (ad.h2h?.status==="unavailable" && !ad.h2h?.summary) ledger.error("analysis_detail",system,d.event_id,"H2H取得不能の理由説明が無い");
+            if (ad.recent_form?.status==="checked") {
+              for (const side of ["side_a","side_b"]) {
+                const x=ad.recent_form?.[side];
+                if (!x?.label || !x?.summary) ledger.error("analysis_detail",system,d.event_id,`直近成績 ${side} の要約が無い`);
+                if (!Array.isArray(x?.items)||x.items.length===0) ledger.error("analysis_detail",system,d.event_id,`直近成績 ${side} を確認済みにしているのに試合明細が0件`);
+              }
+            }
+            if (!Array.isArray(ad.rationale?.why)||ad.rationale.why.length===0) ledger.error("analysis_detail",system,d.event_id,"採否の強い根拠が無い");
+            if (!Array.isArray(ad.rationale?.risks)) ledger.error("analysis_detail",system,d.event_id,"リスク一覧が無い");
+            if (!ad.rationale?.conclusion) ledger.error("analysis_detail",system,d.event_id,"採用/監視/除外の結論説明が無い");
+            if (!Array.isArray(ad.missing_information)) ledger.error("analysis_detail",system,d.event_id,"不足情報一覧が無い");
+          }
         }
       }
     }
