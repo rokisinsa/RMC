@@ -732,5 +732,35 @@
     "bc-00000000000000000012",
     "bc-00000000000000000013",
     "bc-00000000000000000014"
-  ]
+  ],
+  "self_audit": {
+    "checked_at": "2026-09-27T06:49:00+09:00",
+    "previous_checked_at": null,
+    "previous_counts": null,
+    "checks_run": [
+      "category_nonzero",
+      "screening_nonzero",
+      "category_fetch_failures",
+      "metadata_completeness",
+      "time_parse",
+      "event_id_uniqueness",
+      "category_uniqueness",
+      "category_count_integrity",
+      "screening_id_integrity",
+      "screening_category_sum",
+      "priority_subset",
+      "previous_screening_drop",
+      "previous_category_drop"
+    ],
+    "anomaly_count": 0,
+    "blocker_count": 0,
+    "warning_count": 0,
+    "anomalies": [],
+    "requires_rescan": false,
+    "remediation_status": "not_needed",
+    "fixes_applied": [],
+    "unresolved_blockers": 0,
+    "status": "pass",
+    "digest": "fixture-self-audit-digest-20260927"
+  }
 }
