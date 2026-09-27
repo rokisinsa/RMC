@@ -27,6 +27,8 @@ jobs:
           node --check scripts/scrape-bet-channel.mjs
           node --check scripts/scrape-bet-channel-fixed-odds-local.mjs
           node --check scripts/build-bet-channel-complete-inventory.mjs
+          bash -n scripts/run-fixed-odds-vps.sh
+          bash -n scripts/install-fixed-odds-vps.sh
           if command -v pwsh >/dev/null 2>&1; then
             pwsh -NoProfile -Command '$errs=$null; [System.Management.Automation.Language.Parser]::ParseFile("scripts/run-fixed-odds-local.ps1",[ref]$null,[ref]$errs) > $null; if($errs.Count){$errs | ForEach-Object { Write-Error $_ }; exit 1 }'
             pwsh -NoProfile -Command '$errs=$null; [System.Management.Automation.Language.Parser]::ParseFile("scripts/install-fixed-odds-scheduler.ps1",[ref]$null,[ref]$errs) > $null; if($errs.Count){$errs | ForEach-Object { Write-Error $_ }; exit 1 }'
