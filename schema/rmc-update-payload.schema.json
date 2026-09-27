@@ -1062,7 +1062,8 @@
                   "ranking_or_rating",
                   "availability",
                   "market_odds",
-                  "sport_specific"
+                  "sport_specific",
+                  "market_crosscheck"
                 ],
                 "additionalProperties": false,
                 "properties": {
@@ -1107,6 +1108,14 @@
                       "unavailable",
                       "not_applicable"
                     ]
+                  },
+                  "market_crosscheck": {
+                    "enum": [
+                      "checked",
+                      "unavailable",
+                      "not_applicable"
+                    ],
+                    "description": "BET CHANNEL以外の外部市場/公正価格とのサニティチェック。VALUE①/②・PRO EDGEのcandidateではchecked必須。"
                   }
                 }
               },
