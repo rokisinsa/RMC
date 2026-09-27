@@ -98,8 +98,8 @@ jobs:
         if: env.RMC_IS_SCHEDULED == 'true'
         run: |
           cp data/scheduled-update-checklist.json "$WORK/scheduled-update-checklist.json"
-          slot=$(node -e 'const p=require("./'"$WORK"'/payload.json");process.stdout.write(p.slot)')
-          scheduled_for=$(node -e 'const p=require("./'"$WORK"'/payload.json");process.stdout.write(p.generated_at.slice(0,10)+"T"+p.slot+":00+09:00")')
+          slot=$(node -e 'const fs=require("fs");const p=JSON.parse(fs.readFileSync(process.env.WORK+"/payload.json","utf8"));process.stdout.write(p.slot)')
+          scheduled_for=$(node -e 'const fs=require("fs");const p=JSON.parse(fs.readFileSync(process.env.WORK+"/payload.json","utf8"));process.stdout.write(p.generated_at.slice(0,10)+"T"+p.slot+":00+09:00")')
           node scripts/rmc-scheduled-checklist.mjs             --file "$WORK/scheduled-update-checklist.json"             --run-id "$RMC_RUN_ID"             --slot "$slot"             --scheduled-for "$scheduled_for"             --source "$RMC_SOURCE"             --start-sha "$START_SHA"             --inventory
 
       - name: 2. 検証（dry-run：schema・重複・JST・source・未来情報・locked・損益/ROI/CLV）
@@ -205,7 +205,8 @@ jobs:
 
       - name: 12b. 定時監査：main commit/push PASS
         if: env.RMC_DRY_RUN != 'true' && env.RMC_IS_SCHEDULED == 'true'
-        run: node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --phase commit --detail "main push PASS: $END_SHA" --end-sha "$END_SHA"
+        run: |
+          node scripts/rmc-scheduled-checklist.mjs             --file "$WORK/scheduled-update-checklist.json"             --run-id "$RMC_RUN_ID"             --phase commit             --detail "main push PASS: $END_SHA"             --end-sha "$END_SHA"
 
       - name: 13. Pages の公開確認・監査記録を published に確定
         if: env.RMC_DRY_RUN != 'true'
