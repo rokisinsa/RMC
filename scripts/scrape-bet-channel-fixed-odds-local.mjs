@@ -236,7 +236,23 @@ while(queue.length){
   try{
     await p.goto(url,{waitUntil:"domcontentloaded",timeout:45000});
     await p.waitForTimeout(7000);
-    for(let i=0;i<18;i++){ await p.mouse.wheel(0,2200); await p.waitForTimeout(220); }
+    let scrollStable=0, scrollExhausted=false;
+    const MAX_SCROLL_ROUNDS=240;
+    let prevHeight=-1;
+    for(let i=0;i<MAX_SCROLL_ROUNDS;i++){
+      const before=await p.evaluate(()=>({h:document.documentElement.scrollHeight,y:window.scrollY,vh:window.innerHeight}));
+      await p.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight));
+      await p.waitForTimeout(320);
+      const after=await p.evaluate(()=>({h:document.documentElement.scrollHeight,y:window.scrollY,vh:window.innerHeight}));
+      const atBottom=after.y+after.vh>=after.h-4;
+      if(atBottom && after.h===before.h && after.h===prevHeight) scrollStable++;
+      else scrollStable=0;
+      prevHeight=after.h;
+      if(scrollStable>=3){ scrollExhausted=true; break; }
+    }
+    if(!scrollExhausted){
+      errors.push({stage:"scroll",url,route,error:`scroll_end_not_verified_after_${MAX_SCROLL_ROUNDS}_rounds`});
+    }
     const body=clean(await p.locator("body").innerText());
     if(/Access is forbidden from your location|forbidden from your location/i.test(body)) geoBlocked=true;
     if(ESPORT_RE.test(body)) bodyEsportsSeen=true;
