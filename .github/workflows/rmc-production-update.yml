@@ -203,6 +203,11 @@ jobs:
           done
           [ "$published" = "1" ] || { echo "PAGES_RESULT=timeout" >> "$GITHUB_ENV"; exit 1; }
 
+          # 公開済みデータを再取得して、①〜④の収支・オッズ・払戻し・損益を同じ計算ロジックで再計算。
+          # result_updates で今回結果が変わった正式採用カードは、非legacyなら exact odds/stake/profit が揃っていなければ失敗。
+          # profit_audit と公開再計算値、さらに公開JS/集計ロジックが main と一致しなければ published 扱いにしない。
+          node scripts/verify-public-profit.mjs --base "$base" --run-id "$RMC_RUN_ID" --payload "$WORK/payload.json"
+
           # 公開確認できた後だけ audit を pending→published にする。
           # 他の定時更新やコード修正が同時に main へ入っても、最新 main を取り直して run_id 単位で安全に再適用する。
           finalize_pushed=0
@@ -245,7 +250,8 @@ jobs:
             sleep 10
           done
           [ "$verified" = "1" ] || { echo "PAGES_RESULT=audit_publish_timeout" >> "$GITHUB_ENV"; exit 1; }
-          echo "PAGES_RESULT=published (analysis-v2.html HTTP 200, audit SHA $pages_sha)" >> "$GITHUB_ENV"
+          node scripts/verify-public-profit.mjs --base "$base" --run-id "$RMC_RUN_ID" --payload "$WORK/payload.json"
+          echo "PAGES_RESULT=published (analysis-v2.html HTTP 200 + public profit/odds audit PASS, audit SHA $pages_sha)" >> "$GITHUB_ENV"
 
       - name: 実行結果のまとめ
         if: always()
