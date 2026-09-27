@@ -6,7 +6,7 @@ on:
     paths:
       - "scripts/build-live-coverage-rehearsal.mjs"
       - ".github/workflows/rmc-live-coverage-rehearsal.yml"
-      - "data/bet-channel-screening-summary.json"
+      - "data/bet-channel-complete-summary.json"\n      - "data/bet-channel-fixed-odds-inventory.json"
   workflow_dispatch:
 
 permissions:
@@ -32,7 +32,7 @@ jobs:
 
       - name: Build live all-event rehearsal payload
         run: |
-          node scripts/build-live-coverage-rehearsal.mjs data/bet-channel-screening-summary.json tmp/live-coverage-trial.json | tee /tmp/live-builder.txt
+          node scripts/build-live-coverage-rehearsal.mjs data/bet-channel-complete-summary.json tmp/live-coverage-trial.json | tee /tmp/live-builder.txt
 
       - name: Run production validator against live BET CHANNEL universe
         run: |
