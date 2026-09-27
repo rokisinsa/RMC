@@ -102,6 +102,21 @@ test("2回目の定時更新（結果・締切・レビュー）：精算・CLV 
   assert.equal(fingerprint(DATA_DIR), liveBefore);
 });
 
+test("定時更新：正式採用は時刻・出典付きexact odds証拠必須", () => {
+  const cases = [
+    p => { p.systems.recommendations.new_picks[0].market_odds.exact = null; },
+    p => { p.systems.value1.new_picks[1].bet_at = null; },
+    p => { p.systems.value2.new_picks[0].market_odds.source = null; },
+    p => { p.systems.pro_edge.new_picks[0].price_snapshots = p.systems.pro_edge.new_picks[0].price_snapshots.filter(s => !Object.values(s.outcomes||{}).includes(p.systems.pro_edge.new_picks[0].bet_odds)); }
+  ];
+  for (const [i, mutateFn] of cases.entries()) {
+    const p = mutate(A, x => { x.run_id = `fixture-exact-odds-${i}`; mutateFn(x); });
+    const r = run(p, tempData(), NOW_A);
+    assert.ok(!r.ok, `case ${i}`);
+    assert.ok(cats(r).includes("pl"), JSON.stringify(r.ledger.errors));
+  }
+});
+
 test("定時更新：新規カードはsource_event_idで全件走査→deep_diveまで追跡必須", () => {
   const cases = [
     p => { delete p.systems.recommendations.new_picks[0].source_event_id; },
@@ -114,6 +129,20 @@ test("定時更新：新規カードはsource_event_idで全件走査→deep_div
     assert.ok(!r.ok, `case ${i}`);
     assert.ok(cats(r).includes("traceability"), JSON.stringify(r.ledger.errors));
   }
+});
+
+test("定時更新：敗戦レビューは完全構造が無ければ拒否", () => {
+  const dir = withA();
+  const p = mutate(B, x => {
+    x.run_id = "fixture-loss-incomplete-review";
+    x.result_updates[0].run_id = "mr-fixture-loss-incomplete-review";
+    x.result_updates[0].changes[0].set.result.final = { a: 0, b: 2 };
+    x.result_updates[0].changes[0].set.result.text = "Fixture Player A 0-2 Fixture Player B（架空）";
+    x.post_match_reviews.recommendations[0].outcome = "loss";
+  });
+  const r = run(p, dir, NOW_B);
+  assert.ok(!r.ok);
+  assert.ok(cats(r).includes("postmortem"), JSON.stringify(r.ledger.errors));
 });
 
 test("定時更新：新たな敗戦確定にpost-match reviewが無ければ拒否", () => {
