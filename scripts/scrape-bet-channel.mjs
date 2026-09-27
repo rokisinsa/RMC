@@ -264,8 +264,45 @@ let fixedOddsStatus={
         if(s.src){ diagnosticScripts.add(s.src); diagnosticResources.add(s.src); try{diagnosticHosts.add(new URL(s.src).host);}catch{} }
         const corpus=(s.text||"")+"\n"+html.slice(0,200000);
         for(const m of corpus.matchAll(/(?:brand_id|brandId)\s*[:=]\s*["']?(\d{6,})/gi)) diagnosticBrandIds.add(m[1]);
-        if(/BTRenderer|invisiblesport|sptpub|betby/i.test(corpus)) diagnosticSnippets.push(corpus.match(/.{0,220}(?:BTRenderer|brand_id|brandId|invisiblesport|sptpub|betby).{0,420}/i)?.[0]||"");
+        if(/BTRenderer|invisiblesport|sptpub|betby/i.test(corpus)){
+          const ix=corpus.search(/BTRenderer|brand_id|brandId|invisiblesport|sptpub|betby/i);
+          diagnosticSnippets.push(ix>=0?corpus.slice(Math.max(0,ix-1000),Math.min(corpus.length,ix+12000)):"");
+        }
       }
+
+      // BET CHANNELのinline初期化がCSP nonce不一致で止まるrunner環境では、
+      // DevTools経由で同じ公開BTRendererを明示初期化して通信先を観測する。
+      // 認証トークンは使わず guest(null) のみ。brand_idはページHTMLから抽出した正式値を使う。
+      const brandId=[...diagnosticBrandIds][0]||"2564963746585911298";
+      try{
+        const initState=await p.evaluate(async ({brandId,probeUrl})=>{
+          const route=new URL(probeUrl).searchParams.get("bt-path")||"/";
+          let target=document.getElementById("betby");
+          if(!target){ target=document.createElement("div"); target.id="betby"; document.body.appendChild(target); }
+          const hasRenderer=typeof window.BTRenderer==="function";
+          if(!hasRenderer) return {ok:false,reason:"BTRenderer_missing",route};
+          try{
+            const instance=new window.BTRenderer().initialize({
+              brand_id:String(brandId),
+              token:null,
+              lang:"ja",
+              url:route,
+              target,
+              stickyTop:0,
+              betSlipOffsetTop:0,
+              betSlipOffsetBottom:0,
+              betslipZIndex:100
+            });
+            window.__rmcBetbyInstance=instance;
+            return {ok:true,route};
+          }catch(e){ return {ok:false,reason:String(e?.message||e),route}; }
+        },{brandId,probeUrl});
+        diagnosticConsole.push("RMC_MANUAL_BT_INIT "+JSON.stringify(initState));
+        await p.waitForTimeout(7000);
+      }catch(e){
+        diagnosticConsole.push("RMC_MANUAL_BT_INIT_ERROR "+String(e?.message||e));
+      }
+
       const perf=await p.evaluate(()=>performance.getEntriesByType("resource").map(x=>x.name));
       for(const u of perf){ diagnosticResources.add(u); try{diagnosticHosts.add(new URL(u).host);}catch{} }
     }catch(e){ body="ERROR "+String(e.message||e); }
