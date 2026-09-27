@@ -62,6 +62,32 @@ jobs:
         with:
           node-version: 22
 
+      - name: 0a. 定時run識別のfail-safe bootstrap
+        run: |
+          node <<'NODE'
+          const fs=require('fs'), cp=require('child_process'), path=require('path');
+          let runId='', source='';
+          try {
+            const ev=JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH,'utf8'));
+            if(process.env.GITHUB_EVENT_NAME==='push'){
+              const files=cp.execFileSync('git',['diff-tree','--no-commit-id','--name-only','-r',process.env.GITHUB_SHA],{encoding:'utf8'}).trim().split(/\r?\n/).filter(x=>/^incoming\/[^/]+\.json$/.test(x));
+              if(files.length===1){
+                try{const p=JSON.parse(fs.readFileSync(files[0],'utf8'));runId=p.run_id||path.basename(files[0],'.json');source=p.source||'incoming push';}
+                catch{runId=path.basename(files[0],'.json');source='incoming push parse failure';}
+              }
+            } else if(process.env.GITHUB_EVENT_NAME==='workflow_dispatch'){
+              runId=ev.inputs?.run_id||''; source=ev.inputs?.source||'workflow_dispatch';
+            } else if(process.env.GITHUB_EVENT_NAME==='repository_dispatch'){
+              runId=ev.client_payload?.run_id||''; source=ev.client_payload?.source||'repository_dispatch';
+            }
+          } catch {}
+          const scheduled=/^rmc-\d{8}-(0600|1200|1800|2300)$/.test(runId);
+          const esc=s=>String(s).replace(/%/g,'%25').replace(/\r/g,'%0D').replace(/\n/g,'%0A');
+          const out={RMC_FAILSAFE_RUN_ID:runId,RMC_FAILSAFE_SOURCE:source,RMC_FAILSAFE_SCHEDULED:scheduled?'true':'false'};
+          fs.appendFileSync(process.env.GITHUB_ENV,Object.entries(out).map(([k,v])=>k+'='+esc(v)).join('\n')+'\n');
+          console.log(JSON.stringify({runId,source,scheduled}));
+          NODE
+
       - name: 0. 起動イベントを安全に入力へ変換
         run: |
           node <<'NODE'
@@ -84,7 +110,8 @@ jobs:
             runId=p.run_id||''; source=p.source||''; payloadPath=p.payload_path||''; payloadJson=p.payload ? JSON.stringify(p.payload) : ''; dry=String(p.dry_run||false);
           } else throw new Error('unsupported event: '+process.env.GITHUB_EVENT_NAME);
           if(!runId || !source) throw new Error('run_id/source missing');
-          const scheduled=/^rmc-\\d{8}-(0600|1200|1800|2300)$/.test(runId);\n          const out={RMC_RUN_ID:runId,RMC_SOURCE:source,RMC_PAYLOAD_PATH:payloadPath,RMC_PAYLOAD_JSON:payloadJson,RMC_DRY_RUN:dry,RMC_IS_SCHEDULED:scheduled?"true":"false"};
+          const scheduled=/^rmc-\\d{8}-(0600|1200|1800|2300)$/.test(runId);
+          const out={RMC_RUN_ID:runId,RMC_SOURCE:source,RMC_PAYLOAD_PATH:payloadPath,RMC_PAYLOAD_JSON:payloadJson,RMC_DRY_RUN:dry,RMC_IS_SCHEDULED:scheduled?"true":"false"};
           const esc=s=>String(s).replace(/%/g,'%25').replace(/\r/g,'%0D').replace(/\n/g,'%0A');
           fs.appendFileSync(process.env.GITHUB_ENV,Object.entries(out).map(([k,v])=>k+'='+esc(v)).join('\n')+'\n');
           NODE
@@ -303,18 +330,21 @@ jobs:
           node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --phase public --detail "public RMC run/system-analysis/profit verification PASS"
 
       - name: 14. 定時41項目監査を必ずmainへ保存
-        if: always() && env.RMC_IS_SCHEDULED == 'true'
+        if: always() && (env.RMC_IS_SCHEDULED == 'true' || env.RMC_FAILSAFE_SCHEDULED == 'true')
         env:
           JOB_STATUS: ${{ job.status }}
         run: |
+          audit_run_id="${RMC_RUN_ID:-$RMC_FAILSAFE_RUN_ID}"
+          audit_source="${RMC_SOURCE:-$RMC_FAILSAFE_SOURCE}"
+          [ -n "$audit_run_id" ] || { echo "No run_id available for fail-safe audit"; exit 1; }
           if [ ! -f "$WORK/scheduled-update-checklist.json" ]; then
             cp data/scheduled-update-checklist.json "$WORK/scheduled-update-checklist.json"
           fi
           audit_start_sha="${START_SHA:-$(git rev-parse HEAD)}"
           if [ "$JOB_STATUS" = "success" ] && [ "$RMC_DRY_RUN" != "true" ]; then
-            node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --source "$RMC_SOURCE" --start-sha "$audit_start_sha" --success --detail "checks 1-40 completed"
+            node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$audit_run_id" --source "$audit_source" --start-sha "$audit_start_sha" --success --detail "checks 1-40 completed"
           else
-            node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --source "$RMC_SOURCE" --start-sha "$audit_start_sha" --fail --detail "production workflow status=$JOB_STATUS; incomplete checks are blocked"
+            node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$audit_run_id" --source "$audit_source" --start-sha "$audit_start_sha" --fail --detail "production workflow status=$JOB_STATUS; incomplete checks are blocked"
           fi
           cp "$WORK/scheduled-update-checklist.json" /tmp/rmc-run-checklist.json
 
@@ -325,7 +355,7 @@ jobs:
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             git reset --hard origin/main
-            RUN_ID="$RMC_RUN_ID" node - <<'NODE'
+            RUN_ID="$audit_run_id" node - <<'NODE'
           const fs=require("fs");
           const runId=process.env.RUN_ID;
           const incoming=JSON.parse(fs.readFileSync("/tmp/rmc-run-checklist.json","utf8"));
@@ -341,7 +371,7 @@ jobs:
           NODE
             git add data/scheduled-update-checklist.json
             if git diff --cached --quiet; then pushed=1; checklist_sha=$(git rev-parse HEAD); break; fi
-            git commit -m "RMC 41-check audit: $RMC_RUN_ID"
+            git commit -m "RMC 41-check audit: $audit_run_id"
             if git push origin HEAD:main; then pushed=1; checklist_sha=$(git rev-parse HEAD); break; fi
             sleep 2
           done
@@ -355,7 +385,7 @@ jobs:
             for i in $(seq 1 60); do
               rm -f /tmp/public-checklist.json
               curl -fsS "$base/data/scheduled-update-checklist.json?cb=$RANDOM" -o /tmp/public-checklist.json || true
-              if [ -s /tmp/public-checklist.json ] && RUN_ID="$RMC_RUN_ID" node -e 'try{const j=JSON.parse(require("fs").readFileSync("/tmp/public-checklist.json","utf8"));const r=(j.runs||[]).find(x=>x.run_id===process.env.RUN_ID);process.exit(r?.status==="passed"&&r?.summary?.pass===41?0:1)}catch{process.exit(1)}'; then visible=1; break; fi
+              if [ -s /tmp/public-checklist.json ] && RUN_ID="$audit_run_id" node -e 'try{const j=JSON.parse(require("fs").readFileSync("/tmp/public-checklist.json","utf8"));const r=(j.runs||[]).find(x=>x.run_id===process.env.RUN_ID);process.exit(r?.status==="passed"&&r?.summary?.pass===41?0:1)}catch{process.exit(1)}'; then visible=1; break; fi
               sleep 10
             done
             [ "$visible" = "1" ] || exit 1
