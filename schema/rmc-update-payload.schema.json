@@ -770,6 +770,180 @@
           }
         }
       }
+    },
+    "completion_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "定時更新で既存カード結果再照合・精算伝播・収支再計算・敗戦レビュー・未来情報/locked保護を全件実施した証跡。06/12/18/23は必須。",
+      "required": [
+        "existing_pick_ids_by_system",
+        "result_checks",
+        "settlement_propagation_checked",
+        "exact_odds_checked",
+        "legacy_amount_missing_only",
+        "profit_recalculated",
+        "loss_reviews_checked",
+        "future_info_leakage_checked",
+        "locked_history_checked"
+      ],
+      "properties": {
+        "existing_pick_ids_by_system": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "recommendations",
+            "experience",
+            "value1",
+            "value2",
+            "pro_edge"
+          ],
+          "properties": {
+            "recommendations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "experience": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "value1": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "value2": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "pro_edge": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            }
+          }
+        },
+        "result_checks": {
+          "type": "array",
+          "description": "generated_at時点で開始時刻を過ぎてもpending/review_requiredの全matchを一意に列挙",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "match_id",
+              "status",
+              "source_urls",
+              "verified_at",
+              "identity_ok"
+            ],
+            "properties": {
+              "match_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "final",
+                  "in_progress",
+                  "postponed",
+                  "cancelled",
+                  "abandoned",
+                  "unresolved"
+                ]
+              },
+              "source_priority": {
+                "enum": [
+                  "official",
+                  "competition_official",
+                  "specialist_db",
+                  "trusted_live_score",
+                  "unresolved"
+                ]
+              },
+              "source_urls": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "verified_at": {
+                "$ref": "defs.schema.json#/$defs/dateTime"
+              },
+              "identity_ok": {
+                "const": true
+              },
+              "note": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "settlement_propagation_checked": {
+          "const": true
+        },
+        "exact_odds_checked": {
+          "const": true
+        },
+        "legacy_amount_missing_only": {
+          "const": true
+        },
+        "profit_recalculated": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "recommendations",
+            "value1",
+            "value2",
+            "pro_edge"
+          ],
+          "properties": {
+            "recommendations": {
+              "const": true
+            },
+            "value1": {
+              "const": true
+            },
+            "value2": {
+              "const": true
+            },
+            "pro_edge": {
+              "const": true
+            }
+          }
+        },
+        "loss_reviews_checked": {
+          "const": true
+        },
+        "future_info_leakage_checked": {
+          "const": true
+        },
+        "locked_history_checked": {
+          "const": true
+        }
+      }
     }
   },
   "$defs": {
