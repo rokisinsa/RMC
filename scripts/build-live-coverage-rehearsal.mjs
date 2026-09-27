@@ -131,7 +131,7 @@ for(const system of Object.keys(prefixes)){
     discovery_runs:[{
       run_id:`${prefixes[system]}-${runId}`,
       started_at:generatedAt,
-      slot:"12:00",
+      slot:"adhoc",
       note:"BET CHANNEL complete union（通常+fixed-odds/eSports）全eventを使うライブcoverage dry-run。候補の最終採否・本番pick追加は行わない。"
     }],
     new_picks:[]
@@ -142,7 +142,7 @@ const payload={
   run_id:runId,
   source:"RMC live BET CHANNEL complete-union coverage rehearsal",
   generated_at:generatedAt,
-  slot:"12:00",
+  slot:"adhoc",
   note:"実BET CHANNEL complete union全掲載eventを①〜④で独立一次走査した証跡を使うdry-run。production dataは変更しない。",
   systems,
   coverage_audit:{
