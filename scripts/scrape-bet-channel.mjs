@@ -213,10 +213,21 @@ for(const e of allEvents.values()){
 const metadataMissing=[...allEvents.values()].filter(e=>!(e.game_start_date&&e.game_start_time) || !(e.choice1||e.choice2||e.band_name));
 const timeParseMissing=[...allEvents.values()].filter(e=>e.game_start_date&&e.game_start_time&&!e.start_at_jst);
 const checkedMs=new Date(NOW).getTime();
+// 一次走査の母集団は「今BET CHANNELに掲載中のスポーツ/eスポーツ全イベント」。
+// 48hや最終結果市場で先に削らない。12hは深掘り優先順位にだけ使う。
+const screeningEvents=[...allEvents.values()].filter(e=>e.status===0 && !NON_SPORT_LABELS.test(e.category??""));
+const priority12hEndMs=checkedMs+12*3600e3;
+const priority12hEvents=screeningEvents.filter(e=>{
+  if(!e.start_at_jst) return false;
+  const t=new Date(e.start_at_jst).getTime();
+  return t>=checkedMs && t<=priority12hEndMs;
+});
+
+// 従来の48h canonical primary cardsは表示・比較用として残すが、全件走査の母集団には使わない。
 const windowStartMs=checkedMs;
 const windowEndMs=checkedMs+48*3600e3;
-const primaryCurrent=[...allEvents.values()].filter(e=>{
-  if(!e.primary_market||!e.start_at_jst||e.status!==0) return false;
+const primaryCurrent=screeningEvents.filter(e=>{
+  if(!e.primary_market||!e.start_at_jst) return false;
   const t=new Date(e.start_at_jst).getTime();
   return t>=windowStartMs && t<=windowEndMs;
 });
@@ -251,6 +262,11 @@ const analysisCardCountsByCategory=Object.fromEntries(categoryKeys.map(k=>[k,0])
 for(const card of analysisCards){
   if(card.category_key in analysisCardCountsByCategory) analysisCardCountsByCategory[card.category_key]++;
 }
+const screeningEventCountsByCategory=Object.fromEntries(categoryKeys.map(k=>[k,0]));
+for(const e of screeningEvents){
+  const k=e.category_key;
+  if(k in screeningEventCountsByCategory) screeningEventCountsByCategory[k]++;
+}
 const inventory={
   schema_version:1,
   source:"BET CHANNEL",
@@ -266,6 +282,14 @@ const inventory={
   metadata_missing_count:metadataMissing.length,
   time_parse_missing_count:timeParseMissing.length,
   market_event_count:allEvents.size,
+  screening_rule:"all currently listed active sports/esports market events; no horizon or primary-market prefilter",
+  screening_event_count:screeningEvents.length,
+  screening_event_ids:screeningEvents.map(e=>e.event_id).sort(),
+  screening_events:screeningEvents.sort((a,b)=>(a.start_at_jst??"").localeCompare(b.start_at_jst??"")||String(a.event_id).localeCompare(String(b.event_id))),
+  screening_event_counts_by_category:screeningEventCountsByCategory,
+  priority_window:{start_jst:jstIso(new Date(checkedMs).toISOString()),end_jst:jstIso(new Date(priority12hEndMs).toISOString()),hours:12},
+  priority_12h_event_count:priority12hEvents.length,
+  priority_12h_event_ids:priority12hEvents.map(e=>e.event_id).sort(),
   analysis_window:{start_jst:jstIso(new Date(windowStartMs).toISOString()),end_jst:jstIso(new Date(windowEndMs).toISOString()),hours:48},
   analysis_card_count:analysisCards.length,
   bettable_analysis_card_count:analysisCards.filter(x=>x.bettable).length,
@@ -285,11 +309,15 @@ const inventory={
     unique_category_ct:categories.length===new Set(categories.map(c=>c.ct)).size,
     category_keys_complete:categoryKeys.length===categories.length && new Set(categoryKeys).size===categoryKeys.length,
     category_card_counts_sum:Object.values(analysisCardCountsByCategory).reduce((a,b)=>a+b,0)===analysisCards.length,
+    screening_event_count_matches_ids:screeningEvents.length===new Set(screeningEvents.map(x=>x.event_id)).size,
+    screening_category_counts_sum:Object.values(screeningEventCountsByCategory).reduce((a,b)=>a+b,0)===screeningEvents.length,
+    priority_12h_is_subset:priority12hEvents.every(x=>screeningEvents.some(y=>y.event_id===x.event_id)),
     digest:hash(JSON.stringify([...allEvents.keys()].sort())),
+    screening_digest:hash(JSON.stringify(screeningEvents.map(x=>x.event_id).sort())),
     analysis_card_count_matches_ids:analysisCards.length===new Set(analysisCards.map(x=>x.card_id)).size
   }
 };
 await fs.mkdir(OUT.split("/").slice(0,-1).join("/")||".",{recursive:true});
 await fs.writeFile(OUT,JSON.stringify(inventory,null,2)+"\n");
-console.log(JSON.stringify({category_count:inventory.category_count,event_count:inventory.event_count,market_event_count:inventory.market_event_count,analysis_card_count:inventory.analysis_card_count,failed_category_count:inventory.failed_category_count,empty_category_count:inventory.empty_category_count,metadata_missing_count:inventory.metadata_missing_count,time_parse_missing_count:inventory.time_parse_missing_count,analysis_ready:inventory.analysis_ready,complete:inventory.complete,digest:inventory.integrity.digest},null,2));
-if(!inventory.menu_end_verified||!inventory.integrity.event_count_matches_ids||!inventory.integrity.analysis_card_count_matches_ids||!inventory.integrity.category_keys_complete||!inventory.integrity.category_card_counts_sum||!inventory.analysis_ready||failed.length) process.exitCode=2;
+console.log(JSON.stringify({category_count:inventory.category_count,event_count:inventory.event_count,market_event_count:inventory.market_event_count,screening_event_count:inventory.screening_event_count,priority_12h_event_count:inventory.priority_12h_event_count,analysis_card_count:inventory.analysis_card_count,failed_category_count:inventory.failed_category_count,empty_category_count:inventory.empty_category_count,metadata_missing_count:inventory.metadata_missing_count,time_parse_missing_count:inventory.time_parse_missing_count,analysis_ready:inventory.analysis_ready,complete:inventory.complete,digest:inventory.integrity.digest,screening_digest:inventory.integrity.screening_digest},null,2));
+if(!inventory.menu_end_verified||!inventory.integrity.event_count_matches_ids||!inventory.integrity.screening_event_count_matches_ids||!inventory.integrity.screening_category_counts_sum||!inventory.integrity.priority_12h_is_subset||!inventory.integrity.analysis_card_count_matches_ids||!inventory.integrity.category_keys_complete||!inventory.integrity.category_card_counts_sum||!inventory.analysis_ready||failed.length) process.exitCode=2;
