@@ -403,7 +403,7 @@ let fixedOddsStatus={
         :"fixed_odds_event_feed_not_observed"
   };
   await fs.mkdir("data",{recursive:true});
-  await fs.writeFile("data/bet-channel-fixed-odds-status.json",JSON.stringify(fixedOddsStatus,null,2)+"\n");
+  await fs.writeFile("data/bet-channel-fixed-odds-cloud-status.json",JSON.stringify(fixedOddsStatus,null,2)+"\n");
   console.log("FIXED_ODDS_ESPORTS_STATUS "+JSON.stringify(fixedOddsStatus));
 }
 await browser.close();
