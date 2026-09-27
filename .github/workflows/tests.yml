@@ -21,6 +21,17 @@ jobs:
         with:
           node-version: 22
 
+      - name: RMC取得スクリプト構文検査
+        shell: bash
+        run: |
+          node --check scripts/scrape-bet-channel.mjs
+          node --check scripts/scrape-bet-channel-fixed-odds-local.mjs
+          node --check scripts/build-bet-channel-complete-inventory.mjs
+          if command -v pwsh >/dev/null 2>&1; then
+            pwsh -NoProfile -Command '$errs=$null; [System.Management.Automation.Language.Parser]::ParseFile("scripts/run-fixed-odds-local.ps1",[ref]$null,[ref]$errs) > $null; if($errs.Count){$errs | ForEach-Object { Write-Error $_ }; exit 1 }'
+            pwsh -NoProfile -Command '$errs=$null; [System.Management.Automation.Language.Parser]::ParseFile("scripts/install-fixed-odds-scheduler.ps1",[ref]$null,[ref]$errs) > $null; if($errs.Count){$errs | ForEach-Object { Write-Error $_ }; exit 1 }'
+          fi
+
       - name: テスト（snapshot 段＝移行時点の検証 / live 段＝現在データの検証）
         run: npm test
 
