@@ -7,6 +7,8 @@ const BASE = "https://bet-channel.com";
 const START = `${BASE}/matches?lang=ja`;
 const OUT = process.argv[2] || "data/bet-channel-inventory.json";
 const NOW = new Date().toISOString();
+let previousInventory = null;
+try { previousInventory = JSON.parse(await fs.readFile(OUT,"utf8")); } catch {}
 
 const clean = s => String(s ?? "").replace(/\s+/g, " ").trim();
 const abs = u => { try { return new URL(u, BASE).toString(); } catch { return null; } };
@@ -267,6 +269,53 @@ for(const e of screeningEvents){
   const k=e.category_key;
   if(k in screeningEventCountsByCategory) screeningEventCountsByCategory[k]++;
 }
+const integrity={
+  event_count_matches_ids:allEvents.size===new Set(allEvents.keys()).size,
+  unique_category_ct:categories.length===new Set(categories.map(c=>c.ct)).size,
+  category_keys_complete:categoryKeys.length===categories.length && new Set(categoryKeys).size===categoryKeys.length,
+  category_card_counts_sum:Object.values(analysisCardCountsByCategory).reduce((a,b)=>a+b,0)===analysisCards.length,
+  screening_event_count_matches_ids:screeningEvents.length===new Set(screeningEvents.map(x=>x.event_id)).size,
+  screening_category_counts_sum:Object.values(screeningEventCountsByCategory).reduce((a,b)=>a+b,0)===screeningEvents.length,
+  priority_12h_is_subset:priority12hEvents.every(x=>screeningEvents.some(y=>y.event_id===x.event_id)),
+  digest:hash(JSON.stringify([...allEvents.keys()].sort())),
+  screening_digest:hash(JSON.stringify(screeningEvents.map(x=>x.event_id).sort())),
+  analysis_card_count_matches_ids:analysisCards.length===new Set(analysisCards.map(x=>x.card_id)).size
+};
+const anomalies=[];
+const anomaly=(code,severity,message,details={})=>anomalies.push({code,severity,message,details});
+if(categories.length===0) anomaly("CATEGORY_ZERO","blocker","カテゴリを1件も取得できていない");
+if(screeningEvents.length===0) anomaly("SCREENING_ZERO","blocker","掲載中スポーツ/eスポーツの一次走査対象が0件");
+if(failed.length>0) anomaly("CATEGORY_FETCH_FAILURE","blocker",`取得失敗カテゴリが${failed.length}件ある`,{failed_category_count:failed.length});
+if(metadataMissing.length>0) anomaly("METADATA_MISSING","blocker",`必須メタデータ欠損が${metadataMissing.length}件ある`,{metadata_missing_count:metadataMissing.length});
+if(timeParseMissing.length>0) anomaly("TIME_PARSE_FAILURE","blocker",`開始時刻を解釈できないイベントが${timeParseMissing.length}件ある`,{time_parse_missing_count:timeParseMissing.length});
+for(const [key,ok] of Object.entries(integrity)) if(typeof ok==="boolean"&&!ok) anomaly("INTEGRITY_"+key.toUpperCase(),"blocker",`整合性チェック失敗: ${key}`);
+const prevScreen=Number(previousInventory?.screening_event_count??0);
+const prevCats=Number(previousInventory?.category_count??0);
+if(prevScreen>=30 && screeningEvents.length < prevScreen*0.55) anomaly("SCREENING_EVENT_DROP","warning",`一次走査対象が前回比45%以上急減: ${prevScreen}→${screeningEvents.length}`,{previous:prevScreen,current:screeningEvents.length,ratio:screeningEvents.length/prevScreen});
+if(prevCats>=20 && categories.length < prevCats*0.75) anomaly("CATEGORY_COUNT_DROP","warning",`カテゴリ数が前回比25%以上急減: ${prevCats}→${categories.length}`,{previous:prevCats,current:categories.length,ratio:categories.length/prevCats});
+const blockerCount=anomalies.filter(x=>x.severity==="blocker").length;
+const requiresRescan=blockerCount>0 || anomalies.some(x=>["SCREENING_EVENT_DROP","CATEGORY_COUNT_DROP"].includes(x.code));
+const selfAudit={
+  checked_at:NOW,
+  previous_checked_at:previousInventory?.checked_at??null,
+  previous_counts:previousInventory?{category_count:prevCats,event_count:Number(previousInventory.event_count??0),screening_event_count:prevScreen}:null,
+  checks_run:[
+    "category_nonzero","screening_nonzero","category_fetch_failures","metadata_completeness","time_parse",
+    "event_id_uniqueness","category_uniqueness","category_count_integrity","screening_id_integrity",
+    "screening_category_sum","priority_subset","previous_screening_drop","previous_category_drop"
+  ],
+  anomaly_count:anomalies.length,
+  blocker_count:blockerCount,
+  warning_count:anomalies.filter(x=>x.severity==="warning").length,
+  anomalies,
+  requires_rescan:requiresRescan,
+  remediation_status:requiresRescan?"retry_required":"not_needed",
+  fixes_applied:[],
+  unresolved_blockers:blockerCount,
+  status:blockerCount?"blocker":requiresRescan?"suspicious":"pass"
+};
+selfAudit.digest=hash(JSON.stringify({checked_at:selfAudit.checked_at,previous_checked_at:selfAudit.previous_checked_at,anomalies:selfAudit.anomalies,screening_digest:integrity.screening_digest}));
+
 const inventory={
   schema_version:1,
   source:"BET CHANNEL",
@@ -304,20 +353,10 @@ const inventory={
   events:[...allEvents.values()],
   failed_categories:failed.map(r=>({ct:r.ct,label:r.label,url:r.url,errors:r.errors})),
   metadata_missing_events:metadataMissing.slice(0,200).map(e=>({event_id:e.event_id,category:e.category,game_start_date:e.game_start_date,game_start_time:e.game_start_time,band_name:e.band_name,choice1:e.choice1,choice2:e.choice2,raw_keys:e.raw_keys})),
-  integrity:{
-    event_count_matches_ids:allEvents.size===new Set(allEvents.keys()).size,
-    unique_category_ct:categories.length===new Set(categories.map(c=>c.ct)).size,
-    category_keys_complete:categoryKeys.length===categories.length && new Set(categoryKeys).size===categoryKeys.length,
-    category_card_counts_sum:Object.values(analysisCardCountsByCategory).reduce((a,b)=>a+b,0)===analysisCards.length,
-    screening_event_count_matches_ids:screeningEvents.length===new Set(screeningEvents.map(x=>x.event_id)).size,
-    screening_category_counts_sum:Object.values(screeningEventCountsByCategory).reduce((a,b)=>a+b,0)===screeningEvents.length,
-    priority_12h_is_subset:priority12hEvents.every(x=>screeningEvents.some(y=>y.event_id===x.event_id)),
-    digest:hash(JSON.stringify([...allEvents.keys()].sort())),
-    screening_digest:hash(JSON.stringify(screeningEvents.map(x=>x.event_id).sort())),
-    analysis_card_count_matches_ids:analysisCards.length===new Set(analysisCards.map(x=>x.card_id)).size
-  }
+  integrity,
+  self_audit:selfAudit
 };
 await fs.mkdir(OUT.split("/").slice(0,-1).join("/")||".",{recursive:true});
 await fs.writeFile(OUT,JSON.stringify(inventory,null,2)+"\n");
-console.log(JSON.stringify({category_count:inventory.category_count,event_count:inventory.event_count,market_event_count:inventory.market_event_count,screening_event_count:inventory.screening_event_count,priority_12h_event_count:inventory.priority_12h_event_count,analysis_card_count:inventory.analysis_card_count,failed_category_count:inventory.failed_category_count,empty_category_count:inventory.empty_category_count,metadata_missing_count:inventory.metadata_missing_count,time_parse_missing_count:inventory.time_parse_missing_count,analysis_ready:inventory.analysis_ready,complete:inventory.complete,digest:inventory.integrity.digest,screening_digest:inventory.integrity.screening_digest},null,2));
-if(!inventory.menu_end_verified||!inventory.integrity.event_count_matches_ids||!inventory.integrity.screening_event_count_matches_ids||!inventory.integrity.screening_category_counts_sum||!inventory.integrity.priority_12h_is_subset||!inventory.integrity.analysis_card_count_matches_ids||!inventory.integrity.category_keys_complete||!inventory.integrity.category_card_counts_sum||!inventory.analysis_ready||failed.length) process.exitCode=2;
+console.log(JSON.stringify({category_count:inventory.category_count,event_count:inventory.event_count,market_event_count:inventory.market_event_count,screening_event_count:inventory.screening_event_count,priority_12h_event_count:inventory.priority_12h_event_count,analysis_card_count:inventory.analysis_card_count,failed_category_count:inventory.failed_category_count,empty_category_count:inventory.empty_category_count,metadata_missing_count:inventory.metadata_missing_count,time_parse_missing_count:inventory.time_parse_missing_count,analysis_ready:inventory.analysis_ready,complete:inventory.complete,self_audit_status:inventory.self_audit.status,self_audit_anomalies:inventory.self_audit.anomaly_count,requires_rescan:inventory.self_audit.requires_rescan,digest:inventory.integrity.digest,screening_digest:inventory.integrity.screening_digest},null,2));
+if(!inventory.menu_end_verified||!inventory.integrity.event_count_matches_ids||!inventory.integrity.screening_event_count_matches_ids||!inventory.integrity.screening_category_counts_sum||!inventory.integrity.priority_12h_is_subset||!inventory.integrity.analysis_card_count_matches_ids||!inventory.integrity.category_keys_complete||!inventory.integrity.category_card_counts_sum||!inventory.analysis_ready||failed.length||inventory.self_audit.requires_rescan) process.exitCode=2;
