@@ -46,24 +46,43 @@ jobs:
           node scripts/scrape-bet-channel.mjs /tmp/bc-attempt1.json | tee /tmp/bc-summary-1.txt
           code1=${PIPESTATUS[0]}
 
-          need_retry=$(node - <<'NODE'
+          if [ "$code1" -ne 0 ]; then
+            echo "First scrape process failed (exit=$code1); stale attempt1 is invalid and will not be reused." | tee -a /tmp/bc-summary-1.txt
+            rm -f /tmp/bc-attempt1.json
+            need_retry=yes
+          else
+            need_retry=$(node - <<'NODE'
           const fs=require("fs");
           try{
             const x=JSON.parse(fs.readFileSync("/tmp/bc-attempt1.json","utf8"));
             process.stdout.write((x.self_audit?.requires_rescan || !x.complete || !x.analysis_ready) ? "yes" : "no");
           }catch{ process.stdout.write("yes"); }
           NODE
-          )
+            )
+          fi
 
           code2=0
           if [ "$need_retry" = "yes" ]; then
-            echo "Self-audit detected anomaly; running one full automatic rescan." | tee -a /tmp/bc-summary-1.txt
+            echo "Scrape retry required; running one full automatic rescan." | tee -a /tmp/bc-summary-1.txt
             cp data/bet-channel-inventory.json /tmp/bc-attempt2.json 2>/dev/null || true
             node scripts/scrape-bet-channel.mjs /tmp/bc-attempt2.json | tee /tmp/bc-summary-2.txt
             code2=${PIPESTATUS[0]}
+            if [ "$code2" -ne 0 ]; then
+              echo "Retry scrape process failed (exit=$code2); stale attempt2 is invalid." | tee -a /tmp/bc-summary-2.txt
+              rm -f /tmp/bc-attempt2.json
+            fi
           fi
 
           set -e
+          if [ ! -f /tmp/bc-attempt1.json ] && [ ! -f /tmp/bc-attempt2.json ]; then
+            echo "No valid fresh scrape output exists; refusing to reuse previous inventory."
+            exit 1
+          fi
+
+          if [ ! -f /tmp/bc-attempt1.json ] && [ -f /tmp/bc-attempt2.json ]; then
+            mv /tmp/bc-attempt2.json /tmp/bc-attempt1.json
+          fi
+
           args=(--attempt1 /tmp/bc-attempt1.json --out data/bet-channel-inventory.json)
           if [ -f /tmp/bc-attempt2.json ]; then args+=(--attempt2 /tmp/bc-attempt2.json); fi
           node scripts/select-bet-channel-inventory.mjs "${args[@]}" --summary data/bet-channel-screening-summary.json | tee /tmp/bc-selection.txt
