@@ -102,6 +102,19 @@ test("2回目の定時更新（結果・締切・レビュー）：精算・CLV 
   assert.equal(fingerprint(DATA_DIR), liveBefore);
 });
 
+test("定時更新：completion_audit欠落・既存カード1件欠落・期限超過結果1件欠落を拒否", () => {
+  const cases = [
+    p => { delete p.completion_audit; },
+    p => { p.completion_audit.existing_pick_ids_by_system.recommendations.pop(); },
+    p => { p.completion_audit.result_checks.pop(); }
+  ];
+  for (const [i, f] of cases.entries()) {
+    const r = run(mutate(A, p => { p.run_id = `fixture-completion-audit-${i}`; f(p); }), tempData(), NOW_A);
+    assert.ok(!r.ok, `case ${i}`);
+    assert.ok(cats(r).includes("completion") || cats(r).includes("schema"), JSON.stringify(r.ledger.errors));
+  }
+});
+
 test("定時更新：正式採用は時刻・出典付きexact odds証拠必須", () => {
   const cases = [
     p => { p.systems.recommendations.new_picks[0].market_odds.exact = null; },
@@ -164,7 +177,14 @@ test("同じ run_id の二重適用は拒否。変更0件の回も「完全チ�
   const again = run(A, dir, NOW_A);
   assert.ok(!again.ok);
   assert.ok(cats(again).includes("duplicate"));
-  const same = run(mutate(A, p => { p.run_id = "fixture-2026-09-27-0600-rerun"; }), dir, NOW_A);
+  const same = run(mutate(A, p => {
+    p.run_id = "fixture-2026-09-27-0600-rerun";
+    // 1回目のstage-aで追加済みのカードも、再実行時点の「既存全カード」として必ず再照合する。
+    p.completion_audit.existing_pick_ids_by_system.recommendations.push("rec-fx-00-a","rec-fx-01");
+    p.completion_audit.existing_pick_ids_by_system.value1.push("v1-fx-00-a","v1-fx-01");
+    p.completion_audit.existing_pick_ids_by_system.value2.push("v2-fx-01");
+    p.completion_audit.existing_pick_ids_by_system.pro_edge.push("pe-fx-00-a","pe-fx-01","pe-fx-02");
+  }), dir, NOW_A);
   assert.ok(same.ok, JSON.stringify(same.ledger.errors));
   assert.equal(same.ledger.count("added") + same.ledger.count("updated"), 0);
   assert.ok(same.ledger.count("unchanged") > 0);
