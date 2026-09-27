@@ -355,20 +355,7 @@ jobs:
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             git reset --hard origin/main
-            RUN_ID="$audit_run_id" node - <<'NODE'
-          const fs=require("fs");
-          const runId=process.env.RUN_ID;
-          const incoming=JSON.parse(fs.readFileSync("/tmp/rmc-run-checklist.json","utf8"));
-          const src=(incoming.runs||[]).find(r=>r.run_id===runId);
-          if(!src) throw new Error("run missing in temp checklist: "+runId);
-          let dst={schema_version:1,latest_run_id:null,runs:[]};
-          try{dst=JSON.parse(fs.readFileSync("data/scheduled-update-checklist.json","utf8"))}catch{}
-          dst.runs=(dst.runs||[]).filter(r=>r.run_id!==runId);
-          dst.runs.push(src);
-          dst.runs=dst.runs.slice(-40);
-          dst.latest_run_id=runId;
-          fs.writeFileSync("data/scheduled-update-checklist.json",JSON.stringify(dst,null,2)+"\n");
-          NODE
+            node scripts/merge-scheduled-checklist.mjs --incoming /tmp/rmc-run-checklist.json --target data/scheduled-update-checklist.json --run-id "$audit_run_id"
             git add data/scheduled-update-checklist.json
             if git diff --cached --quiet; then pushed=1; checklist_sha=$(git rev-parse HEAD); break; fi
             git commit -m "RMC 41-check audit: $audit_run_id"
