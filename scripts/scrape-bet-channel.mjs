@@ -193,13 +193,33 @@ for(let i=0;i<categories.length;i+=CONCURRENCY){
   console.log(`progress ${Math.min(i+CONCURRENCY,categories.length)}/${categories.length}`);
 }
 
-/* FIXED_ODDS_ESPORTS_PROBE: manual discovery of BET CHANNEL Betby/fixed-odds eSports feed. */
+/* BET CHANNEL fixed-odds / Betby eSports completeness probe.
+   The legacy /matches tree and fixed-odds sportsbook are separate surfaces.
+   We persist the status so production can refuse a false "complete" update. */
+let fixedOddsStatus={
+  schema_version:1,
+  checked_at:NOW,
+  source:"BET CHANNEL fixed-odds / Betby",
+  source_urls:[],
+  access_status:"unavailable",
+  menu_end_verified:false,
+  event_feed_detected:false,
+  event_count:0,
+  event_ids:[],
+  rules_esports_detected:false,
+  supported_title_hints:[],
+  complete:false,
+  blocker_reason:"not_checked"
+};
 {
   const probeUrls=[
     `${BASE}/fixed-odds?bt-path=/`,
     `${BASE}/fixed-odds?bt-path=/esports`,
     `${BASE}/fixed-odds?bt-path=/esports-1`
   ];
+  const allBodies=[];
+  const hitUrls=new Set();
+  let geoBlocked=false;
   for(const probeUrl of probeUrls){
     const p=await ctx.newPage();
     p.setDefaultTimeout(12000);
@@ -212,6 +232,7 @@ for(let i=0;i<categories.length;i+=CONCURRENCY){
         const raw=JSON.stringify(j);
         if(/esport|counter.?strike|valorant|dota|league.?of.?legends|rainbow|honor.?of.?kings|king.?of.?glory|world.?of.?tanks|fortnite|starcraft|nba.?2k|ea.?sports.?fc|rocket.?league|overwatch|call.?of.?duty|pubg|mobile.?legends/i.test(raw)){
           hits.push({url:resp.url(),sample:raw.slice(0,12000)});
+          hitUrls.add(resp.url());
         }
       }catch{}
     });
@@ -221,11 +242,54 @@ for(let i=0;i<categories.length;i+=CONCURRENCY){
       await p.waitForTimeout(4500);
       body=clean(await p.locator("body").innerText()).slice(0,20000);
     }catch(e){ body="ERROR "+String(e.message||e); }
-    console.log("FIXED_ODDS_ESPORTS_PROBE "+JSON.stringify({probeUrl,body,hits:hits.slice(0,20)}));
+    if(/Access is forbidden from your location|forbidden from your location/i.test(body)) geoBlocked=true;
+    allBodies.push(body);
+    console.log("FIXED_ODDS_ESPORTS_PROBE "+JSON.stringify({probeUrl,geoBlocked,body:body.slice(0,5000),hit_urls:hits.map(x=>x.url)}));
     await p.close();
   }
+  const combined=allBodies.join("\n");
+  const titleHints=[
+    ["Counter-Strike / CS2",/counter.?strike|cs2/i],
+    ["VALORANT",/valorant/i],
+    ["Dota 2",/dota\s*2/i],
+    ["League of Legends",/league.?of.?legends/i],
+    ["Rainbow Six",/rainbow.?six/i],
+    ["Honor of Kings / King of Glory",/honor.?of.?kings|king.?of.?glory/i],
+    ["World of Tanks",/world.?of.?tanks/i],
+    ["EA SPORTS FC / eSoccer",/ea.?sports.?fc|esoccer|eサッカー/i],
+    ["NBA 2K / eBasketball",/nba.?2k|ebasketball|eBasketball/i],
+    ["Fortnite",/fortnite/i],
+    ["StarCraft",/starcraft/i],
+    ["Overwatch",/overwatch/i],
+    ["Call of Duty",/call.?of.?duty/i],
+    ["PUBG",/pubg/i],
+    ["Mobile Legends",/mobile.?legends/i]
+  ].filter(([,re])=>re.test(combined)).map(([name])=>name);
+  const eventFeedDetected=hitUrls.size>0;
+  fixedOddsStatus={
+    schema_version:1,
+    checked_at:NOW,
+    source:"BET CHANNEL fixed-odds / Betby",
+    source_urls:probeUrls,
+    access_status:geoBlocked?"unavailable":eventFeedDetected?"partial":"partial",
+    menu_end_verified:false,
+    event_feed_detected:eventFeedDetected,
+    event_count:0,
+    event_ids:[],
+    json_hit_urls:[...hitUrls],
+    rules_esports_detected:/eスポーツ特別ルール|esports related rules|eスポーツ/i.test(combined),
+    supported_title_hints:titleHints,
+    complete:false,
+    blocker_reason:geoBlocked
+      ?"github_actions_region_blocked_fixed_odds"
+      :eventFeedDetected
+        ?"fixed_odds_event_feed_detected_but_complete_event_parser_not_implemented"
+        :"fixed_odds_event_feed_not_observed"
+  };
+  await fs.mkdir("data",{recursive:true});
+  await fs.writeFile("data/bet-channel-fixed-odds-status.json",JSON.stringify(fixedOddsStatus,null,2)+"\n");
+  console.log("FIXED_ODDS_ESPORTS_STATUS "+JSON.stringify(fixedOddsStatus));
 }
-
 await browser.close();
 
 const allEvents=new Map();
