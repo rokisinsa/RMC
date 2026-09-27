@@ -23,7 +23,14 @@ fi
 
 cd "$REPO_ROOT"
 export RMC_SOURCE_MACHINE="japan_vps_linux"
+
+COUNTRY="$(curl -fsS https://www.cloudflare.com/cdn-cgi/trace | awk -F= '$1=="loc"{print $2}' | tr -d '\r\n' || true)"
+if [ "$COUNTRY" != "JP" ]; then
+  log "FAIL: VPS outbound country is not JP (Cloudflare trace loc=${COUNTRY:-unknown})"
+  exit 1
+fi
 export RMC_SOURCE_REGION="JP"
+export RMC_SOURCE_REGION_EVIDENCE="cloudflare_trace:JP"
 
 log "START fixed-odds Japan VPS scan"
 git fetch origin main
