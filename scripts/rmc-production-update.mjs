@@ -431,9 +431,11 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
       if (a?.event_count !== inv.event_count || !sameIds(a?.event_ids,inv.event_ids)) ledger.error("coverage","bet_channel",null,"payloadの市場event一覧が実インベントリと一致しない");
       if (a?.analysis_card_count !== inv.analysis_card_count || !sameIds(a?.analysis_card_ids,inv.analysis_card_ids)) ledger.error("coverage","bet_channel",null,"payloadのcanonical card一覧が実インベントリと一致しない");
       if (a?.bettable_analysis_card_count !== inv.bettable_analysis_card_count || a?.unavailable_price_card_count !== inv.unavailable_price_card_count) ledger.error("coverage","bet_channel",null,"価格公開/未公開カード件数が実インベントリと一致しない");
+      if (a?.screening_event_count !== inv.screening_event_count || !sameIds(a?.screening_event_ids,inv.screening_event_ids)) ledger.error("coverage","bet_channel",null,"payloadの全掲載一次走査event一覧が実インベントリと一致しない");
+      if (a?.screening_digest !== inv.integrity?.screening_digest) ledger.error("coverage","bet_channel",null,"payloadのscreening_digestが実インベントリと一致しない");
       for (const system of DISCOVERY) {
         const ids=c.systems?.[system]?.card_ids ?? [];
-        if (!sameIds(ids,inv.analysis_card_ids)) ledger.error("coverage",system,null,`card_idsがBET CHANNELの48h canonical全カードと完全一致していない（${ids.length}/${inv.analysis_card_ids?.length??0}）`);
+        if (!sameIds(ids,inv.screening_event_ids)) ledger.error("coverage",system,null,`card_idsがBET CHANNEL掲載中スポーツ/eスポーツ全eventと完全一致していない（${ids.length}/${inv.screening_event_ids?.length??0}）`);
       }
     }
   }
