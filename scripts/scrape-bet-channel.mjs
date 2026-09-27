@@ -6,7 +6,7 @@ import crypto from "node:crypto";
 const BASE = "https://bet-channel.com";
 const START = `${BASE}/matches?lang=ja`;
 const OUT = process.argv[2] || "data/bet-channel-inventory.json";
-const NOW = new Date().toISOString();
+const NOW = new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().replace("Z", "+09:00");
 let previousInventory = null;
 try { previousInventory = JSON.parse(await fs.readFile(OUT,"utf8")); } catch {}
 
