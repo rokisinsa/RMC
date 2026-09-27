@@ -66,7 +66,7 @@ jobs:
           set -e
           args=(--attempt1 /tmp/bc-attempt1.json --out data/bet-channel-inventory.json)
           if [ -f /tmp/bc-attempt2.json ]; then args+=(--attempt2 /tmp/bc-attempt2.json); fi
-          node scripts/select-bet-channel-inventory.mjs "${args[@]}" | tee /tmp/bc-selection.txt
+          node scripts/select-bet-channel-inventory.mjs "${args[@]}" --summary data/bet-channel-screening-summary.json | tee /tmp/bc-selection.txt
 
           echo "attempt1_exit=$code1" >> "$GITHUB_OUTPUT"
           echo "attempt2_exit=$code2" >> "$GITHUB_OUTPUT"
@@ -109,7 +109,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/bet-channel-inventory.json
+          git add data/bet-channel-inventory.json data/bet-channel-screening-summary.json
           if git diff --cached --quiet; then
             echo "No inventory diff"
           else
