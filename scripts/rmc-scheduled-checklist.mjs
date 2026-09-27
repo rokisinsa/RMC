@@ -262,8 +262,11 @@ function finish(run,success,reason){
     if(pending.length){mark(run,41,"fail",`cannot finalize: checks not passed: ${pending.map(c=>c.id).join(",")}`);run.status="failed"}
     else{mark(run,41,"pass","checks 1-40 all PASS; final report allowed");run.status="passed";run.finished_at=nowIso()}
   }else{
-    const first=run.checks.slice(0,40).find(c=>c.status==="pending");
-    if(first)mark(run,first.id,"fail",reason||"workflow failed before this check completed");
+    const alreadyFailed=run.checks.slice(0,40).some(c=>c.status==="fail");
+    if(!alreadyFailed){
+      const first=run.checks.slice(0,40).find(c=>c.status==="pending");
+      if(first)mark(run,first.id,"fail",reason||"workflow failed before this check completed");
+    }
     blockPending(run,reason||"blocked by prior failure");
     mark(run,41,"fail",reason||"one or more checks failed/blocked");
     run.status="failed";run.finished_at=nowIso();
