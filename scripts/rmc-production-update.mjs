@@ -475,6 +475,33 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
       const inv = JSON.parse(readFileSync(invPath,"utf8"));
       const a = c.sportsbook_master?.source_audit?.bet_channel;
       const sameIds = (u,v) => JSON.stringify([...(u??[])].sort()) === JSON.stringify([...(v??[])].sort());
+
+      // 本番 data/ では、BET CHANNELの別系統 fixed-odds / Betby eSports 面も完全取得必須。
+      // legacy /matches が105カテゴリ取得できても、fixed-odds側が未取得なら「全スポーツ/eSports完全版」とは扱わない。
+      if (resolve(dataDir) === resolve(DATA_DIR)) {
+        const fixedPath = join(dataDir, "bet-channel-fixed-odds-status.json");
+        if (!existsSync(fixedPath)) {
+          ledger.error("coverage","bet_channel_fixed_odds",null,"BET CHANNEL fixed-odds/eSports取得状態が無い。legacy /matchesだけでは完全更新不可");
+        } else {
+          const fx = JSON.parse(readFileSync(fixedPath,"utf8"));
+          const fxChecked = Date.parse(fx.checked_at ?? "");
+          const generated = Date.parse(payload.generated_at ?? "");
+          const fxAge = generated - fxChecked;
+          if (fx.complete !== true) ledger.error("coverage","bet_channel_fixed_odds",null,`BET CHANNEL fixed-odds/eSportsが完全取得できていない（access=${fx.access_status ?? "unknown"}, blocker=${fx.blocker_reason ?? "unknown"}）。全競技/eSports網羅を満たさないため更新完了禁止`);
+          if (!fx.menu_end_verified) ledger.error("coverage","bet_channel_fixed_odds",null,"fixed-odds/eSportsの競技/タイトルメニュー終端確認が未完了");
+          if (!Array.isArray(fx.event_ids) || fx.event_count !== fx.event_ids.length) ledger.error("coverage","bet_channel_fixed_odds",null,"fixed-odds/eSportsのevent_countとevent_idsが不一致");
+          if (!Number.isFinite(fxChecked) || !Number.isFinite(generated) || fxAge < -5*60*1000 || fxAge > 45*60*1000) ledger.error("coverage","bet_channel_fixed_odds",null,`fixed-odds/eSports取得時刻が定時更新に対して古い/不正（checked_at=${fx.checked_at ?? "null"}, generated_at=${payload.generated_at ?? "null"}）`);
+        }
+
+        // legacy /matchesインベントリも、各定時更新の直前取得だけを使う。前回snapshotの使い回しを拒否。
+        const invChecked = Date.parse(inv.checked_at ?? "");
+        const generated = Date.parse(payload.generated_at ?? "");
+        const invAge = generated - invChecked;
+        if (!Number.isFinite(invChecked) || !Number.isFinite(generated) || invAge < -5*60*1000 || invAge > 45*60*1000) {
+          ledger.error("coverage","bet_channel",null,`BET CHANNELインベントリが定時更新に対して古い/不正（checked_at=${inv.checked_at ?? "null"}, generated_at=${payload.generated_at ?? "null"}）。直前再取得が必要`);
+        }
+        if (a?.checked_at !== inv.checked_at) ledger.error("coverage","bet_channel",null,"payloadのchecked_atが最新BET CHANNELインベントリと一致しない");
+      }
       if (!inv.complete || !inv.analysis_ready || inv.failed_category_count !== 0 || inv.metadata_missing_count !== 0 || inv.time_parse_missing_count !== 0) ledger.error("coverage","bet_channel",null,"最新BET CHANNELインベントリが完全取得・analysis_readyではない");
       const health = c.self_audit;
       if (!inv.self_audit || !["pass","pass_after_remediation"].includes(inv.self_audit.status) || inv.self_audit.requires_rescan || inv.self_audit.unresolved_blockers !== 0) ledger.error("self_audit","bet_channel",null,"BET CHANNEL自己監査が未解決または再取得要求のまま");
