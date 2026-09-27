@@ -94,6 +94,23 @@ function writeDataDir(dir, ds) {
 
 const live = loadDatasets(LIVE_DATA).datasets;
 
+// リハーサルの結果更新時刻は fixture の18:00/20:00をそのまま live data に足さない。
+// 本番の最新 result_update が後ろへ進んでも UPDATE_RUN_ORDER で壊れないよう、
+// 「最新本番更新より後」にテスト用run.atだけを動的にrebaseする。
+// 試合結果・確認時刻・locked値など分析事実は一切書き換えない。
+const latestLiveUpdateMs = Math.max(
+  0,
+  ...(live.match_updates?.runs ?? []).map(r => Date.parse(r.at)).filter(Number.isFinite)
+);
+const afterResultRun = clone(input.steps.s1_result_update.run);
+if (Date.parse(afterResultRun.at) <= latestLiveUpdateMs) {
+  afterResultRun.at = new Date(latestLiveUpdateMs + 60_000).toISOString().replace(".000Z","+00:00");
+}
+const correctionRun = clone(input.correction_fixture.run);
+if (Date.parse(correctionRun.at) <= Date.parse(afterResultRun.at)) {
+  correctionRun.at = new Date(Date.parse(afterResultRun.at) + 60_000).toISOString().replace(".000Z","+00:00");
+}
+
 // before：前回の定時更新（REHEARSAL-00）までの状態
 const before = clone(live);
 registerMatches(before, input.setup);
@@ -102,7 +119,7 @@ for (const [system, block] of Object.entries(input.setup.systems)) addDiscovery(
 // after：今回の定時更新（REHEARSAL-01）
 const after = clone(before);
 const S = input.steps;
-after.match_updates.runs.push(clone(S.s1_result_update.run));                           // □1
+after.match_updates.runs.push(afterResultRun);                                            // □1
 for (const { pick_id, snapshot } of S.s2_pending_cards.pro_edge_snapshots) {            // □2
   after.pro_edge.picks.find(p => p.id === pick_id).price_snapshots.push(clone(snapshot));
 }
@@ -118,7 +135,7 @@ for (const [system, reviews] of Object.entries(S.s8_post_match_reviews)) addRevi
 
 // corrected：確定結果の訂正（別シナリオ）
 const corrected = clone(after);
-corrected.match_updates.runs.push(clone(input.correction_fixture.run));
+corrected.match_updates.runs.push(correctionRun);
 
 rmSync(OUT, { recursive: true, force: true });
 writeDataDir(join(OUT, "before"), before);
@@ -133,7 +150,7 @@ log(`定時更新の想定時刻：${input.run_at}（slot ${input.slot}）`);
 // ── □1〜□12 の適用状況 ─────────────────────────────────
 head("□1〜□12 の実施内容");
 const newPickIds = sys => [...(sys === "recommendations" ? S.s3_recommendations : sys === "value1" ? S.s4_value1 : sys === "value2" ? S.s5_value2 : S.s6_pro_edge).picks.map(p => p.id)];
-log(`- □1 結果更新：${S.s1_result_update.run.run_id}（${S.s1_result_update.run.changes.map(c => c.match_id).join(", ")} を final へ）`);
+log(`- □1 結果更新：${afterResultRun.run_id}（${afterResultRun.changes.map(c => c.match_id).join(", ")} を final へ／run.at ${afterResultRun.at}）`);
 log(`- □2 未確定カード更新：④締切スナップショット ${S.s2_pending_cards.pro_edge_snapshots.length}件・①closing_odds ${S.s2_pending_cards.closing_odds.length}件`);
 log(`- □3 ①新規：${newPickIds("recommendations").join(", ")}（探索回 ${S.s3_recommendations.discovery_run.run_id}）`);
 log(`- □4 ②新規：${newPickIds("value1").join(", ")}（探索回 ${S.s4_value1.discovery_run.run_id}）`);
