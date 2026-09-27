@@ -161,7 +161,7 @@ const payload={
 };
 write(PAYLOAD_PATH,payload);
 
-const dry=runUpdate({payloadText:JSON.stringify(payload),dataDir:DATA,now:"2026-09-28T06:02:00+09:00",apply:false,startSha:"rehearsal-start-sha",startedAt:"2026-09-28T06:00:00+09:00"});
+const dry=runUpdate({payloadText:JSON.stringify(payload),dataDir:DATA,now:"2026-09-28T06:02:00+09:00",apply:false,startSha:"1111111111111111111111111111111111111111",startedAt:"2026-09-28T06:00:00+09:00"});
 write(REPORT_PATH,{ok:dry.ok,errors:dry.ledger.errors,warnings:dry.ledger.warnings,items:dry.ledger.items});
 if(!dry.ok){
   console.error(JSON.stringify(dry.ledger.errors,null,2));
@@ -169,12 +169,12 @@ if(!dry.ok){
 }
 
 const db={schema_version:1,latest_run_id:null,runs:[]};
-const checklist=ensure(db,{runId:RUN_ID,slot:SLOT,scheduledFor:SCHEDULED_FOR,source:"RMC full scheduled rehearsal",startSha:"rehearsal-start-sha"});
+const checklist=ensure(db,{runId:RUN_ID,slot:SLOT,scheduledFor:SCHEDULED_FOR,source:"RMC full scheduled rehearsal",startSha:"1111111111111111111111111111111111111111"});
 mark(checklist,1,"pass",`${RUN_ID} / ${SCHEDULED_FOR} / rehearsal-start-sha / prior_blockers none`);
 inventoryPhase(checklist,TMP,SCHEDULED_FOR);
 payloadPhase(checklist,PAYLOAD_PATH,REPORT_PATH,{root:TMP,dataDir:DATA});
 
-const applied=runUpdate({payloadText:JSON.stringify(payload),dataDir:DATA,now:"2026-09-28T06:02:00+09:00",apply:true,startSha:"rehearsal-start-sha",startedAt:"2026-09-28T06:00:00+09:00"});
+const applied=runUpdate({payloadText:JSON.stringify(payload),dataDir:DATA,now:"2026-09-28T06:02:00+09:00",apply:true,startSha:"1111111111111111111111111111111111111111",startedAt:"2026-09-28T06:00:00+09:00"});
 if(!applied.ok)throw new Error("isolated production apply failed: "+JSON.stringify(applied.ledger.errors));
 
 run(process.execPath,["scripts/validate-data.js",DATA]);
@@ -213,7 +213,7 @@ const expectedCats=categories.slice().sort();
 const publicSystemsOk=systemNames.every(s=>JSON.stringify((sys.systems?.[s]?.sport_coverage??[]).map(x=>x.category_key).sort())===JSON.stringify(expectedCats));
 if(!publicSystemsOk)throw new Error("system-analysis does not expose both real-sport and eSports categories for all systems");
 mark(checklist,40,"pass","isolated public system-analysis exposes Football + CS2 eSports for ①〜④");
-checklist.end_sha="rehearsal-end-sha";
+checklist.end_sha="2222222222222222222222222222222222222222";
 finish(checklist,true,"full pre-VPS scheduled rehearsal");
 write(CHECKLIST_PATH,db);
 if(checklist.status!=="passed"||checklist.summary.pass!==41)throw new Error("41-check rehearsal did not reach 41/41: "+JSON.stringify(checklist.summary));
