@@ -95,8 +95,40 @@ function ensure(db,{runId,slot,scheduledFor,source,startSha}){
   db.runs=db.runs.slice(-40);
   return r;
 }
+const PASS_PREREQS={
+  10:[5],11:[5],12:[5],13:[5],
+  14:[5,10,11,12,13],
+  15:[5,14],
+  16:[5,14,15],
+  17:[16],
+  18:[5,14],
+  19:[5,14],
+  20:[5,14],
+  21:[3,4,5,9,16],
+  22:[5,14],
+  23:[5,14],
+  25:[24],
+  26:[25],
+  27:[24,25,26],
+  30:[24,27,28,29],
+  31:[24,27,28,29],
+  32:[24,27,28,29],
+  33:[24,27,28,29],
+  34:[24,25],
+  37:Array.from({length:36},(_,i)=>i+1),
+  38:[37],
+  39:[38],
+  40:[39]
+};
 function mark(run,id,status,detail){
   const c=run.checks[id-1]; if(!c)throw new Error("unknown check "+id);
+  if(status==="pass"&&PASS_PREREQS[id]){
+    const unmet=PASS_PREREQS[id].filter(x=>run.checks[x-1]?.status!=="pass");
+    if(unmet.length){
+      status="blocked";
+      detail=`PASS禁止: prerequisite未PASS #${unmet.join(",#")} ／ ${detail||"evidence not evaluated"}`;
+    }
+  }
   c.status=status;c.detail=detail||null;c.checked_at=nowIso();
   recompute(run);
 }
