@@ -83,100 +83,100 @@
         {
           "id": 10,
           "title": "①推奨が完全screening全件を独立一次走査",
-          "status": "fail",
-          "detail": "recommendations: full independent screening evidence mismatch",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5 ／ recommendations: full independent screening evidence mismatch",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 11,
           "title": "②VALUE①が完全screening全件を独立一次走査",
-          "status": "fail",
-          "detail": "value1: full independent screening evidence mismatch",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5 ／ value1: full independent screening evidence mismatch",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 12,
           "title": "③VALUE②が完全screening全件を独立一次走査",
-          "status": "fail",
-          "detail": "value2: full independent screening evidence mismatch",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5 ／ value2: full independent screening evidence mismatch",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 13,
           "title": "④PRO EDGEが完全screening全件を独立一次走査",
-          "status": "fail",
-          "detail": "pro_edge: full independent screening evidence mismatch",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5 ／ pro_edge: full independent screening evidence mismatch",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 14,
           "title": "①〜④ card_idsが完全母集団と一致",
-          "status": "fail",
-          "detail": "one or more systems differ from complete screening universe",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5,#10,#11,#12,#13 ／ one or more systems differ from complete screening universe",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 15,
           "title": "競技/タイトル別sport coverage監査",
-          "status": "fail",
-          "detail": "sport_card_counts incomplete/mismatched",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5,#14 ／ sport_card_counts incomplete/mismatched",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 16,
           "title": "各priced 24h競技/タイトルのdeep dive実施",
-          "status": "fail",
-          "detail": "one or more eligible categories lacks required deep dives",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5,#14,#15 ／ one or more eligible categories lacks required deep dives",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 17,
           "title": "priced_upcoming>0でdeep_dive=0を禁止",
-          "status": "fail",
-          "detail": "priced-upcoming category with zero deep dive detected",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #16 ／ priced-upcoming category with zero deep dive detected",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 18,
           "title": "候補数上限なし・全件証跡保持",
-          "status": "fail",
-          "detail": "screening evidence truncated",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5,#14 ／ screening evidence truncated",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 19,
           "title": "各カードに具体的reason_codes",
-          "status": "fail",
-          "detail": "abstract/missing reject reason detected",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5,#14 ／ abstract/missing reject reason detected",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 20,
           "title": "deep dive完全項目（H2H/直近/rating/roster/市場/EV等）",
-          "status": "fail",
-          "detail": "deep-dive structured evidence missing",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5,#14 ／ deep-dive structured evidence missing",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 21,
           "title": "eSports固有deep dive（BO/map/veto/patch/roster/LAN等）",
-          "status": "fail",
-          "detail": "eligible eSports deep-dive specific evidence missing",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #3,#4,#5,#9,#16 ／ eligible eSports deep-dive specific evidence missing",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 22,
           "title": "deep_dive対象IDとdeep_dive_evidence ID完全一致",
-          "status": "fail",
-          "detail": "deep-dive target/proof ID mismatch",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5,#14 ／ deep-dive target/proof ID mismatch",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 23,
           "title": "②③④ candidate/watchの外部市場cross-check",
-          "status": "fail",
-          "detail": "candidate/watch market cross-check missing",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #5,#14 ／ candidate/watch market cross-check missing",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 24,
@@ -188,23 +188,23 @@
         {
           "id": 25,
           "title": "結果ソース優先順位と根拠記録",
-          "status": "fail",
-          "detail": "result source evidence incomplete (0/4)",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #24 ／ result source evidence incomplete (0/4)",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 26,
           "title": "日付/JST/大会/対戦相手identity照合",
-          "status": "fail",
-          "detail": "identity confirmation missing",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #25 ／ identity confirmation missing",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 27,
           "title": "同一match_idの全系統同時精算",
-          "status": "fail",
-          "detail": "settlement propagation not proven",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #24,#25,#26 ／ settlement propagation not proven",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 28,
@@ -223,37 +223,37 @@
         {
           "id": 30,
           "title": "①戦績/投入/損益/ROI/pending/複利/1/4 Kelly再計算",
-          "status": "fail",
-          "detail": "① profit/ROI/compound/quarter-Kelly recalculation evidence",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #24,#27,#28,#29 ／ ① profit/ROI/compound/quarter-Kelly recalculation evidence",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 31,
           "title": "②VALUE①戦績/投入/損益/ROI/pending再計算",
-          "status": "fail",
-          "detail": "② VALUE① recalculation evidence",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #24,#27,#28,#29 ／ ② VALUE① recalculation evidence",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 32,
           "title": "③VALUE②戦績/投入/損益/ROI/pending再計算",
-          "status": "fail",
-          "detail": "③ VALUE② recalculation evidence",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #24,#27,#28,#29 ／ ③ VALUE② recalculation evidence",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 33,
           "title": "④PRO EDGE戦績/投入/損益/ROI/CLV/pending再計算",
-          "status": "fail",
-          "detail": "④ PRO EDGE/CLV recalculation evidence",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #24,#27,#28,#29 ／ ④ PRO EDGE/CLV recalculation evidence",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 34,
           "title": "新規敗戦post-match review完備",
-          "status": "fail",
-          "detail": "loss-review completeness not proven",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #24,#25 ／ loss-review completeness not proven",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         },
         {
           "id": 35,
@@ -301,18 +301,18 @@
           "id": 41,
           "title": "1〜40全PASSの最終報告",
           "status": "fail",
-          "detail": "1〜40にFAIL/BLOCKEDあり。FAIL経路がGitHub mainへ保存されることは実地検証済み",
-          "checked_at": "2026-09-28T00:36:32+09:00"
+          "detail": "1〜40に未PASSあり。✅3 / ❌12 / ⏸26。41/41以外は完全成功扱い禁止。",
+          "checked_at": "2026-09-28T00:56:00+09:00"
         }
       ],
       "summary": {
         "pass": 3,
-        "fail": 34,
-        "blocked": 4,
+        "fail": 12,
+        "blocked": 26,
         "pending": 0,
         "total": 41
       },
-      "updated_at": "2026-09-28T00:41:00+09:00",
+      "updated_at": "2026-09-28T00:56:00+09:00",
       "prior_blockers": []
     }
   ]
