@@ -26,6 +26,7 @@ const zeroCardSports=Object.values(counts).filter(x=>x===0).length;
 const reasons=(e,system)=>{
   const r=[];
   if(!e){r.push("event_metadata_missing");return {deep:false,r};}
+  if(e.priority_12h!==true) r.push("outside_priority_12h_deep_dive_window");
   if(e.start_state!=="future_or_upcoming") r.push("start_time_passed_or_long_market");
   if(e.price_state!=="priced") r.push("price_unavailable");
   if(!["primary_h2h","h2h_or_two_way"].includes(e.market_class)) r.push("market_not_standard_h2h");
@@ -33,16 +34,16 @@ const reasons=(e,system)=>{
   const fav=odds.length?Math.min(...odds):null;
   let deep=false;
   if(system==="recommendations"){
-    deep=e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&fav!=null&&fav<=1.50;
+    deep=e.priority_12h===true&&e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&fav!=null&&fav<=1.50;
     if(!deep&&fav!=null&&fav>1.50) r.push("favorite_not_short_enough_for_gap_screen");
   }else if(system==="value1"){
-    deep=e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&odds.length>=2;
+    deep=e.priority_12h===true&&e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&odds.length>=2;
     if(!deep&&odds.length<2) r.push("insufficient_priced_outcomes_for_value");
   }else if(system==="value2"){
-    deep=e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&odds.length>=2;
+    deep=e.priority_12h===true&&e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&odds.length>=2;
     if(!deep&&odds.length<2) r.push("insufficient_market_baseline");
   }else{
-    deep=e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&odds.length>=2;
+    deep=e.priority_12h===true&&e.start_state==="future_or_upcoming"&&e.price_state==="priced"&&["primary_h2h","h2h_or_two_way"].includes(e.market_class)&&odds.length>=2;
     if(!deep&&odds.length<2) r.push("insufficient_outcomes_for_novig");
   }
   if(deep) r.push("metadata_screen_pass");
