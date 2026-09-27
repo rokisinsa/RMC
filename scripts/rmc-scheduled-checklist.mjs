@@ -186,9 +186,11 @@ function sourceAuditOk(a){
   if(a.access_status==="unavailable"||a.access_status==="partial")return !!String(a.note||"").trim();
   return a.menu_end_verified===true&&Number.isInteger(a.event_count)&&arr(a.event_ids).length===a.event_count;
 }
-function payloadPhase(run,payloadPath,reportPath){
+function payloadPhase(run,payloadPath,reportPath,options={}){
+  const auditRoot=options.root||ROOT;
+  const auditDataDir=options.dataDir||path.join(auditRoot,"data");
   const p=readJson(payloadPath), report=reportPath&&fs.existsSync(reportPath)?readJson(reportPath):null;
-  const complete=maybe(path.join(ROOT,"data","bet-channel-complete-summary.json"));
+  const complete=maybe(path.join(auditDataDir,"bet-channel-complete-summary.json"));
   const master=arr(complete?.screening_event_ids).map(String);
   const ca=p.coverage_audit, sys=ca?.systems||{}, sourceAudit=ca?.sportsbook_master?.source_audit||{};
   const supp=["casitabi","bet365","yuugado"];
@@ -257,7 +259,7 @@ function payloadPhase(run,payloadPath,reportPath){
   mark(run,23,crossOk?"pass":"fail",crossOk?"②③④ candidate/watch external market cross-check complete":"candidate/watch market cross-check missing");
 
   const comp=p.completion_audit;
-  const {datasets}=loadDatasets();
+  const {datasets}=loadDatasets(auditDataDir);
   const expected={};
   for(const s of ["recommendations","experience","value1","value2","pro_edge"])expected[s]=arr(datasets[s]?.picks).map(x=>String(x.id));
   const checked=comp?.existing_pick_ids_by_system||{};
