@@ -419,6 +419,42 @@
           "note": "川崎公式で9/27 16:05 TIPOFFは確認できるが、現時点の公開ページに最終スコア未掲載。試合終了を確認できるまでfinalにしない。"
         }
       ]
+    },
+    {
+      "run_id": "mr-result-profit-sync-20260927-1852",
+      "kind": "result_update",
+      "at": "2026-09-27T18:52:00+09:00",
+      "source": "ChatGPT RMC result/profit sync 18:52",
+      "note": "Sofascoreで対戦・大会・UTC/JST開始時刻を照合して確定。",
+      "changes": [
+        {
+          "match_id": "2026-09-27-jsk-barca",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 0
+              },
+              "text": "JSK Esports 1-0 Barça eSports"
+            },
+            "result_confirmed_at": "2026-09-27T18:52:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Sofascore JSK Esports vs Barça eSports",
+                "url": "https://www.sofascore.com/es-la/esports/match/jsk-esports-barca-esports/xhmdshoKj",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-09-27T18:52:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "EMEA Masters Swiss Stage、2026-09-26 16:00 UTC = 2026-09-27 01:00 JST、JSK Esports 1-0 Barça eSports。RMC登録の対戦・大会・開始JSTと一致。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }
