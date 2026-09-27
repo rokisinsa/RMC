@@ -6,6 +6,7 @@ on:
     paths:
       - "scripts/scrape-bet-channel.mjs"
       - "scripts/select-bet-channel-inventory.mjs"
+      - "data/bet-channel-fixed-odds-inventory.json"
       - ".github/workflows/bet-channel-inventory.yml"
   workflow_dispatch:
   schedule:
