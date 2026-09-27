@@ -4,5 +4,5 @@
   "source": "RMC scheduled failure-path audit probe",
   "generated_at": "2026-09-27T23:59:00+09:00",
   "slot": "23:00",
-  "note": "FAIL-path probe only. Intentionally incomplete so production data cannot be applied; verifies 41-item audit persistence."
+  "note": "FAIL-path probe v2 after fail-safe bootstrap fix. Intentionally incomplete; must persist 41-item failure audit and must not apply production data."
 }
