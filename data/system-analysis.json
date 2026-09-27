@@ -1,0 +1,2896 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "run_id": "rmc-20260927-bc-202609271509-marketcheck",
+    "source": "ChatGPT RMC BET CHANNEL complete recheck with external market sanity",
+    "generated_at": "2026-09-27T15:09:30+09:00",
+    "slot": "12:00",
+    "coverage_scope": "bet_channel_only",
+    "note": "RMC公開用。今回深掘りした全候補を①〜④別に表示。"
+  },
+  "systems": {
+    "recommendations": {
+      "cards_checked": 186,
+      "deep_dived": 8,
+      "accepted": 2,
+      "watch": 1,
+      "rejected": 5,
+      "candidates": [
+        {
+          "event_id": "220570",
+          "category": "バスケットボール",
+          "category_key": "10056:バスケットボール",
+          "start_at_jst": "2026-09-27T16:05:00+09:00",
+          "market": null,
+          "side_a": "川崎ブレイブサンダース",
+          "side_b": "名古屋ダイヤモンドドルフィンズ",
+          "odds": [
+            {
+              "name": "川崎ブレイブサンダース",
+              "odds": null,
+              "bettable": true
+            },
+            {
+              "name": "名古屋ダイヤモンドドルフィンズ",
+              "odds": null,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": null,
+              "bettable": true
+            }
+          ],
+          "outcome": "candidate",
+          "checks": {
+            "h2h": "checked",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "unavailable",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja",
+            "https://www.bleague.jp/record/?club1=729&club2=727",
+            "https://kawasaki-bravethunders.com/schedule/2026-27/"
+          ],
+          "note": "recommendations独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+          "analysis_detail": {
+            "summary": "名古屋D優位の最大根拠は、直近H2H7連勝と前日93-63の30点差。川崎ホームだが、直近対戦の継続性を重視した。",
+            "h2h": {
+              "status": "checked",
+              "summary": "公式対戦成績は通算 名古屋D12勝・川崎15勝。直近7戦は名古屋Dが7連勝。",
+              "items": [
+                {
+                  "date": "2026-09-26",
+                  "label": "川崎 vs 名古屋D",
+                  "result": "63-93（名古屋D勝）"
+                },
+                {
+                  "date": "2025-10-19",
+                  "label": "川崎 vs 名古屋D",
+                  "result": "73-90（名古屋D勝）"
+                },
+                {
+                  "date": "2025-10-18",
+                  "label": "川崎 vs 名古屋D",
+                  "result": "72-86（名古屋D勝）"
+                },
+                {
+                  "date": "2025-04-09",
+                  "label": "川崎 vs 名古屋D",
+                  "result": "70-73（名古屋D勝）"
+                },
+                {
+                  "date": "2024-12-18",
+                  "label": "名古屋D vs 川崎",
+                  "result": "95-84（名古屋D勝）"
+                },
+                {
+                  "date": "2024-10-13",
+                  "label": "名古屋D vs 川崎",
+                  "result": "94-87（名古屋D勝）"
+                },
+                {
+                  "date": "2024-10-12",
+                  "label": "名古屋D vs 川崎",
+                  "result": "82-62（名古屋D勝）"
+                }
+              ]
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "川崎ブレイブサンダース",
+                "summary": "直近10試合（2025-26終盤）は2勝8敗。直前9/26も名古屋Dに63-93で敗戦。",
+                "items": [
+                  {
+                    "date": "2026-05-03",
+                    "opponent": "横浜BC",
+                    "result": "○ 88-84",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-05-02",
+                    "opponent": "横浜BC",
+                    "result": "○ 74-71",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-26",
+                    "opponent": "越谷",
+                    "result": "× 79-89",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-25",
+                    "opponent": "越谷",
+                    "result": "× 84-90",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-22",
+                    "opponent": "琉球",
+                    "result": "× 71-80",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-19",
+                    "opponent": "大阪",
+                    "result": "× 93-103",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-18",
+                    "opponent": "大阪",
+                    "result": "× 76-98",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-15",
+                    "opponent": "千葉J",
+                    "result": "× 63-84",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-12",
+                    "opponent": "群馬",
+                    "result": "× 64-87",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-11",
+                    "opponent": "群馬",
+                    "result": "× 77-97",
+                    "competition": "B1"
+                  }
+                ]
+              },
+              "side_b": {
+                "label": "名古屋ダイヤモンドドルフィンズ",
+                "summary": "2025-26終盤はCSで宇都宮に連勝後、琉球に連敗。2026-27初戦は川崎に93-63勝利。",
+                "items": [
+                  {
+                    "date": "2026-09-26",
+                    "opponent": "川崎",
+                    "result": "○ 93-63",
+                    "competition": "B.PREMIER"
+                  },
+                  {
+                    "date": "2026-05-16",
+                    "opponent": "琉球",
+                    "result": "× 74-90",
+                    "competition": "CS"
+                  },
+                  {
+                    "date": "2026-05-15",
+                    "opponent": "琉球",
+                    "result": "× 65-85",
+                    "competition": "CS"
+                  },
+                  {
+                    "date": "2026-05-10",
+                    "opponent": "宇都宮",
+                    "result": "○ 75-66",
+                    "competition": "CS"
+                  },
+                  {
+                    "date": "2026-05-09",
+                    "opponent": "宇都宮",
+                    "result": "○ 89-82",
+                    "competition": "CS"
+                  },
+                  {
+                    "date": "2026-05-03",
+                    "opponent": "三遠",
+                    "result": "× 79-93",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-05-02",
+                    "opponent": "三遠",
+                    "result": "× 66-89",
+                    "competition": "B1"
+                  }
+                ]
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "開幕直後のため今季順位はサンプル不足。H2Hと直近対戦差を主軸にした。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "川崎ホーム（とどろきアリーナ）。名古屋Dはアウェー。前日9/26も同会場で名古屋Dが93-63。"
+            },
+            "availability": {
+              "status": "unavailable",
+              "text": "14:44分析時点で信頼できる当日欠場情報を取得できず。これを不確実性として勝率推定を抑制。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL分析時点：名古屋D 1.18、川崎 6.32、引分 21.16。名古屋D必要勝率は約84.75%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "前日同会場で30点差、直近H2H7連勝を強い継続シグナルとして使用。"
+            },
+            "rationale": {
+              "why": [
+                "直近H2H7連勝",
+                "前日同会場で93-63の30点差",
+                "川崎の2025-26終盤直近10が2勝8敗"
+              ],
+              "risks": [
+                "当日欠場情報未取得",
+                "開幕直後で2026-27シーズン順位サンプルが小さい",
+                "低オッズ1.18で必要勝率が高い"
+              ],
+              "conclusion": "①推奨では採用。②VALUE①では価格余地が小さく監視。"
+            },
+            "missing_information": [
+              "当日欠場・ローテーションの完全確認"
+            ]
+          }
+        },
+        {
+          "event_id": "220214",
+          "category": "本日のイベント",
+          "category_key": "1:本日のイベント",
+          "start_at_jst": "2026-09-27T17:00:00+09:00",
+          "market": "2選択肢",
+          "side_a": "西田 凌佑",
+          "side_b": "サム・グッドマン",
+          "odds": [
+            {
+              "name": "西田 凌佑",
+              "odds": 1.2,
+              "bettable": true
+            },
+            {
+              "name": "サム・グッドマン",
+              "odds": 3.75,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "checked",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10049&lang=ja",
+            "https://teiken.com/"
+          ],
+          "note": "recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。",
+          "analysis_detail": {
+            "summary": "IBF上位同士。西田の低オッズに対してGoodmanも22勝1敗で、圧倒的格差とは判定できない。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "両者の直接対戦を確認できず。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "西田凌佑",
+                "summary": "11勝1敗。IBF1位。",
+                "items": []
+              },
+              "side_b": {
+                "label": "サム・グッドマン",
+                "summary": "22勝1敗。IBF2位。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "checked",
+              "text": "IBF1位 vs IBF2位。"
+            },
+            "home_away": {
+              "status": "not_applicable",
+              "text": "ボクシングのため通常のH/A評価は使用しない。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "試合実施カードとして確認。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNELで西田が大幅favor。低オッズのみを格差根拠にしない。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "戦績とIBF順位、相手のキャリア実績を評価。"
+            },
+            "rationale": {
+              "why": [
+                "西田IBF1位"
+              ],
+              "risks": [
+                "GoodmanもIBF2位・22勝1敗",
+                "トップ級同士で圧倒差の根拠不足"
+              ],
+              "conclusion": "①推奨で除外。"
+            },
+            "missing_information": [
+              "直接H2Hなし"
+            ]
+          }
+        },
+        {
+          "event_id": "220216",
+          "category": "本日のイベント",
+          "category_key": "1:本日のイベント",
+          "start_at_jst": "2026-09-27T17:00:00+09:00",
+          "market": "2選択肢",
+          "side_a": "坪井智也",
+          "side_b": "リカルド・マラジカ",
+          "odds": [
+            {
+              "name": "坪井智也",
+              "odds": 1.03,
+              "bettable": true
+            },
+            {
+              "name": "リカルド・マラジカ",
+              "odds": 8.63,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "checked",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10049&lang=ja",
+            "https://teiken.com/"
+          ],
+          "note": "recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。",
+          "analysis_detail": {
+            "summary": "坪井はWBC1位だが、MalajikaはWBC2位でプロ経験が大きい。極端な低オッズを正当化するには不確実性が高い。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "直接対戦を確認できず。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "坪井智也",
+                "summary": "3勝0敗1NC。WBC1位。",
+                "items": []
+              },
+              "side_b": {
+                "label": "リカルド・マラジカ",
+                "summary": "17勝2敗。WBC2位。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "checked",
+              "text": "WBC1位 vs WBC2位。"
+            },
+            "home_away": {
+              "status": "not_applicable",
+              "text": "ボクシングのため通常H/Aは使用しない。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "試合実施カードとして確認。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNELで坪井が極端なfavor。必要勝率が非常に高い。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "プロ経験差とランキングを評価。"
+            },
+            "rationale": {
+              "why": [
+                "坪井WBC1位"
+              ],
+              "risks": [
+                "Malajikaは17勝2敗で経験豊富",
+                "極端な低オッズ"
+              ],
+              "conclusion": "①推奨で除外。"
+            },
+            "missing_information": [
+              "直接H2Hなし"
+            ]
+          }
+        },
+        {
+          "event_id": "220218",
+          "category": null,
+          "category_key": null,
+          "start_at_jst": null,
+          "market": null,
+          "side_a": "松本（WBO1位）",
+          "side_b": "Acosta（WBO3位）",
+          "odds": [],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "checked",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja",
+            "https://teiken.com/"
+          ],
+          "note": "recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。",
+          "analysis_detail": {
+            "summary": "WBO上位同士かつ両者無敗。松本側の極端な低オッズに対し、相手も17戦全勝で格差根拠が不足。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "直接対戦を確認できず。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "松本（WBO1位）",
+                "summary": "8戦全勝。",
+                "items": []
+              },
+              "side_b": {
+                "label": "Acosta（WBO3位）",
+                "summary": "17戦全勝。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "checked",
+              "text": "WBO1位 vs WBO3位。"
+            },
+            "home_away": {
+              "status": "not_applicable",
+              "text": "ボクシングのため通常H/Aは使用しない。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "試合実施カードとして確認。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNELでは松本側が極端な低オッズ。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "双方無敗というアップセットリスクを重視。"
+            },
+            "rationale": {
+              "why": [
+                "松本WBO1位"
+              ],
+              "risks": [
+                "Acostaも17戦全勝",
+                "低オッズで価格余地なし"
+              ],
+              "conclusion": "①推奨で除外。"
+            },
+            "missing_information": [
+              "直接H2Hなし"
+            ]
+          }
+        },
+        {
+          "event_id": "220222",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ビルズ",
+          "side_b": "チャージャーズ",
+          "odds": [
+            {
+              "name": "ビルズ",
+              "odds": 1.28,
+              "bettable": true
+            },
+            {
+              "name": "チャージャーズ",
+              "odds": 3.81,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.32,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.buffalobills.com/news/buffalo-bills-vs-los-angeles-chargers-where-to-watch-stream-and-listen-week-3",
+            "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-chargers-week-3",
+            "https://www.chargers.com/news/bills-injury-report-week-3-ladd-mcconkey-fantasy",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "recommendations独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+          "analysis_detail": {
+            "summary": "Billsの2-0とChargersの0-2は差だが、両軍の負傷者が多く1.28を正式採用するには不確実性が高い。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新では信頼できるH2H全件を取得できず、採用根拠には使用していない。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ビルズ",
+                "summary": "2026開幕2勝0敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "チャージャーズ",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤のため順位/レーティングより戦績と負傷情報を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "試合会場・H/Aは公式プレビューで確認対象。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Chargersは6人OUT。BillsもWR2人などQUESTIONABLEがあり、両側に不確実性。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Bills 1.28 / Chargers 3.81 / Draw 30.32。Bills必要勝率約78.13%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "序盤戦績とinjury reportを主軸に評価。"
+            },
+            "rationale": {
+              "why": [
+                "Bills 2-0",
+                "Chargers 0-2",
+                "Chargers側の複数OUT"
+              ],
+              "risks": [
+                "Bills側にもQUESTIONABLE複数",
+                "シーズン2試合だけの小サンプル"
+              ],
+              "conclusion": "①②③④すべて監視。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "複数年の独立レーティング"
+            ]
+          }
+        },
+        {
+          "event_id": "220224",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ライオンズ",
+          "side_b": "ジェッツ",
+          "odds": [
+            {
+              "name": "ライオンズ",
+              "odds": 1.32,
+              "bettable": true
+            },
+            {
+              "name": "ジェッツ",
+              "odds": 3.56,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.35,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.detroitlions.com/news/lions-vs-jets-injury-report-sept-25-bartch-miller-harper",
+            "https://www.nfl.com/news/nfl-week-3-injury-report-player-statuses-for-all-16-games",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "recommendations独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+          "analysis_detail": {
+            "summary": "LionsとJetsはともに1-1で、負傷者も双方に存在。1.32前後のLions優位を裏付ける独立差が不足。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ライオンズ",
+                "summary": "2026開幕1勝1敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "ジェッツ",
+                "summary": "2026開幕1勝1敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "序盤のため戦績・負傷状況を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "H/Aは公式ゲーム情報で確認対象。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Jetsは複数主力OUT、LionsもOL/Sに欠場。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Lions 1.32 / Jets 3.56 / Draw 30.35。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "同じ1-1で一方的な戦力差の裏付けが弱い。"
+            },
+            "rationale": {
+              "why": [
+                "Jets側の複数欠場"
+              ],
+              "risks": [
+                "Lions側にも欠場",
+                "両軍1-1でフォーム差がない"
+              ],
+              "conclusion": "①②③④で除外。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "独立長期レーティング"
+            ]
+          }
+        },
+        {
+          "event_id": "220227",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ドルフィンズ",
+          "side_b": "チーフス",
+          "odds": [
+            {
+              "name": "ドルフィンズ",
+              "odds": 6.08,
+              "bettable": true
+            },
+            {
+              "name": "チーフス",
+              "odds": 1.16,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.35,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.chiefs.com/news/week-3-injury-report-chiefs-vs-dolphins-2026",
+            "https://www.chiefs.com/news/how-to-watch-and-listen-week-3-chiefs-vs-dolphins",
+            "https://www.nfl.com/news/nfl-week-3-injury-report-player-statuses-for-all-16-games",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "recommendations独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+          "analysis_detail": {
+            "summary": "Chiefs優位は認めるが1.16は必要勝率約86.2%。OT欠場もあり、価格ほどの確信度を置けない。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ドルフィンズ",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "チーフス",
+                "summary": "Chiefs優勢と評価したが、今回runでは詳細直近スコア保存不足。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤のため固定順位より戦績・負傷情報を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "公式ゲーム情報で確認。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Chiefs OT Josh Simmons OUT。その他injury reportも確認。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Dolphins 6.08 / Chiefs 1.16 / Draw 30.35。Chiefs必要勝率約86.21%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "低オッズの高必要勝率とOL欠場リスクを重視。"
+            },
+            "rationale": {
+              "why": [
+                "Dolphins 0-2",
+                "Chiefs側の戦力優位"
+              ],
+              "risks": [
+                "1.16で必要勝率が高すぎる",
+                "Chiefs OL欠場"
+              ],
+              "conclusion": "①②④で除外。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "Chiefsの直近試合個別スコア一覧"
+            ]
+          }
+        },
+        {
+          "event_id": "220230",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "コマンダース",
+          "side_b": "シーホークス",
+          "odds": [
+            {
+              "name": "コマンダース",
+              "odds": 3.99,
+              "bettable": true
+            },
+            {
+              "name": "シーホークス",
+              "odds": 1.27,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.44,
+              "bettable": true
+            }
+          ],
+          "outcome": "candidate",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.seahawks.com/news/week-3-injury-report-seahawks-vs-commanders",
+            "https://www.commanders.com/news/game-status-commanders-seahawks-week-3",
+            "https://www.nfl.com/news/marcus-mariota-commanders-week-3-qb-jayden-daniels-elbow",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "recommendations独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+          "analysis_detail": {
+            "summary": "Seattle 2-0対Washington 0-2、Washington先発QB欠場が大きな差。ただし外部市場クロスチェック後、VALUE①では明確な価格優位を確認できずWATCHへ修正。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "コマンダース",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "シーホークス",
+                "summary": "2026開幕2勝0敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤。独立の校正済み長期ratingは取得できず。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "Washington home / Seattle away。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Washington: Jayden Daniels OUT、Marcus Mariota先発、ほかSam Cosmi/Nick Cross/Frankie Luvu/Chigoziem Okonkwo OUT。SeattleはJulian Love/Ty Okada OUT、Sam Darnoldはready。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNELはSeattle約1.27-1.29。外部市場クロスチェックでは明確なVALUE優位を確認できず、②VALUE①は今回runでWATCH相当。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "QB欠場・復帰、secondary欠場、開幕戦績を独立評価。④はbase 78.2%→欠場補正後80.5%でwatch。"
+            },
+            "rationale": {
+              "why": [
+                "Seattle 2-0 vs Washington 0-2",
+                "Washington先発QB Jayden Daniels OUT",
+                "Seattle QB Sam Darnold ready"
+              ],
+              "risks": [
+                "Seattle先発S2人OUT",
+                "外部市場と比べた価格優位が小さい",
+                "2試合のみの小サンプル"
+              ],
+              "conclusion": "①推奨は採用済み。②VALUE①は外部市場再監査後WATCH。③VALUE②・④PRO EDGEもWATCH。"
+            },
+            "missing_information": [
+              "校正済み複数年独立レーティング",
+              "H2H全件",
+              "closing price"
+            ]
+          }
+        }
+      ]
+    },
+    "value1": {
+      "cards_checked": 186,
+      "deep_dived": 8,
+      "accepted": 0,
+      "watch": 5,
+      "rejected": 3,
+      "candidates": [
+        {
+          "event_id": "220570",
+          "category": "バスケットボール",
+          "category_key": "10056:バスケットボール",
+          "start_at_jst": "2026-09-27T16:05:00+09:00",
+          "market": null,
+          "side_a": "川崎ブレイブサンダース",
+          "side_b": "名古屋ダイヤモンドドルフィンズ",
+          "odds": [
+            {
+              "name": "川崎ブレイブサンダース",
+              "odds": null,
+              "bettable": true
+            },
+            {
+              "name": "名古屋ダイヤモンドドルフィンズ",
+              "odds": null,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": null,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "checked",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "unavailable",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja",
+            "https://www.bleague.jp/record/?club1=729&club2=727",
+            "https://kawasaki-bravethunders.com/schedule/2026-27/"
+          ],
+          "note": "value1独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+          "analysis_detail": {
+            "summary": "名古屋D優位の最大根拠は、直近H2H7連勝と前日93-63の30点差。川崎ホームだが、直近対戦の継続性を重視した。",
+            "h2h": {
+              "status": "checked",
+              "summary": "公式対戦成績は通算 名古屋D12勝・川崎15勝。直近7戦は名古屋Dが7連勝。",
+              "items": [
+                {
+                  "date": "2026-09-26",
+                  "label": "川崎 vs 名古屋D",
+                  "result": "63-93（名古屋D勝）"
+                },
+                {
+                  "date": "2025-10-19",
+                  "label": "川崎 vs 名古屋D",
+                  "result": "73-90（名古屋D勝）"
+                },
+                {
+                  "date": "2025-10-18",
+                  "label": "川崎 vs 名古屋D",
+                  "result": "72-86（名古屋D勝）"
+                },
+                {
+                  "date": "2025-04-09",
+                  "label": "川崎 vs 名古屋D",
+                  "result": "70-73（名古屋D勝）"
+                },
+                {
+                  "date": "2024-12-18",
+                  "label": "名古屋D vs 川崎",
+                  "result": "95-84（名古屋D勝）"
+                },
+                {
+                  "date": "2024-10-13",
+                  "label": "名古屋D vs 川崎",
+                  "result": "94-87（名古屋D勝）"
+                },
+                {
+                  "date": "2024-10-12",
+                  "label": "名古屋D vs 川崎",
+                  "result": "82-62（名古屋D勝）"
+                }
+              ]
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "川崎ブレイブサンダース",
+                "summary": "直近10試合（2025-26終盤）は2勝8敗。直前9/26も名古屋Dに63-93で敗戦。",
+                "items": [
+                  {
+                    "date": "2026-05-03",
+                    "opponent": "横浜BC",
+                    "result": "○ 88-84",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-05-02",
+                    "opponent": "横浜BC",
+                    "result": "○ 74-71",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-26",
+                    "opponent": "越谷",
+                    "result": "× 79-89",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-25",
+                    "opponent": "越谷",
+                    "result": "× 84-90",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-22",
+                    "opponent": "琉球",
+                    "result": "× 71-80",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-19",
+                    "opponent": "大阪",
+                    "result": "× 93-103",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-18",
+                    "opponent": "大阪",
+                    "result": "× 76-98",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-15",
+                    "opponent": "千葉J",
+                    "result": "× 63-84",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-12",
+                    "opponent": "群馬",
+                    "result": "× 64-87",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-04-11",
+                    "opponent": "群馬",
+                    "result": "× 77-97",
+                    "competition": "B1"
+                  }
+                ]
+              },
+              "side_b": {
+                "label": "名古屋ダイヤモンドドルフィンズ",
+                "summary": "2025-26終盤はCSで宇都宮に連勝後、琉球に連敗。2026-27初戦は川崎に93-63勝利。",
+                "items": [
+                  {
+                    "date": "2026-09-26",
+                    "opponent": "川崎",
+                    "result": "○ 93-63",
+                    "competition": "B.PREMIER"
+                  },
+                  {
+                    "date": "2026-05-16",
+                    "opponent": "琉球",
+                    "result": "× 74-90",
+                    "competition": "CS"
+                  },
+                  {
+                    "date": "2026-05-15",
+                    "opponent": "琉球",
+                    "result": "× 65-85",
+                    "competition": "CS"
+                  },
+                  {
+                    "date": "2026-05-10",
+                    "opponent": "宇都宮",
+                    "result": "○ 75-66",
+                    "competition": "CS"
+                  },
+                  {
+                    "date": "2026-05-09",
+                    "opponent": "宇都宮",
+                    "result": "○ 89-82",
+                    "competition": "CS"
+                  },
+                  {
+                    "date": "2026-05-03",
+                    "opponent": "三遠",
+                    "result": "× 79-93",
+                    "competition": "B1"
+                  },
+                  {
+                    "date": "2026-05-02",
+                    "opponent": "三遠",
+                    "result": "× 66-89",
+                    "competition": "B1"
+                  }
+                ]
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "開幕直後のため今季順位はサンプル不足。H2Hと直近対戦差を主軸にした。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "川崎ホーム（とどろきアリーナ）。名古屋Dはアウェー。前日9/26も同会場で名古屋Dが93-63。"
+            },
+            "availability": {
+              "status": "unavailable",
+              "text": "14:44分析時点で信頼できる当日欠場情報を取得できず。これを不確実性として勝率推定を抑制。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL分析時点：名古屋D 1.18、川崎 6.32、引分 21.16。名古屋D必要勝率は約84.75%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "前日同会場で30点差、直近H2H7連勝を強い継続シグナルとして使用。"
+            },
+            "rationale": {
+              "why": [
+                "直近H2H7連勝",
+                "前日同会場で93-63の30点差",
+                "川崎の2025-26終盤直近10が2勝8敗"
+              ],
+              "risks": [
+                "当日欠場情報未取得",
+                "開幕直後で2026-27シーズン順位サンプルが小さい",
+                "低オッズ1.18で必要勝率が高い"
+              ],
+              "conclusion": "①推奨では採用。②VALUE①では価格余地が小さく監視。"
+            },
+            "missing_information": [
+              "当日欠場・ローテーションの完全確認"
+            ]
+          }
+        },
+        {
+          "event_id": "220423",
+          "category": "本日のイベント",
+          "category_key": "1:本日のイベント",
+          "start_at_jst": "2026-09-27T18:00:00+09:00",
+          "market": "最終結果",
+          "side_a": "ヤクルト",
+          "side_b": "巨人",
+          "odds": [
+            {
+              "name": "ヤクルト",
+              "odds": 2.36,
+              "bettable": true
+            },
+            {
+              "name": "巨人",
+              "odds": 1.66,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 27.71,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "checked",
+            "recent_form": "checked",
+            "ranking_or_rating": "checked",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja",
+            "https://npb.jp/bis/2026/stats/",
+            "https://npb.jp/bis/2026/stats/std_c.html",
+            "https://npb.jp/announcement/starter/",
+            "https://npb.jp/games/2026/schedule_09_detail.html"
+          ],
+          "note": "value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+          "analysis_detail": {
+            "summary": "巨人は順位・今季H2Hで優位だが、1.66の損益分岐約60.2%に対して先発差を含めると明確なVALUE確定まで届かず監視。",
+            "h2h": {
+              "status": "checked",
+              "summary": "2026年シーズン対戦は巨人13勝・ヤクルト10勝。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ヤクルト",
+                "summary": "シーズン58勝76敗2分・4位。",
+                "items": []
+              },
+              "side_b": {
+                "label": "巨人",
+                "summary": "シーズン74勝62敗2分・2位。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "checked",
+              "text": "巨人2位 74-62-2、ヤクルト4位 58-76-2。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "ヤクルト主催カード。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "予告先発：ヤクルト高橋、巨人小笠原。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：ヤクルト2.36 / 巨人1.66 / 引分27.71。巨人必要勝率約60.24%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "順位・今季H2H・予告先発の3要素を使用。"
+            },
+            "rationale": {
+              "why": [
+                "巨人が順位で上",
+                "今季H2H 13-10で巨人優位"
+              ],
+              "risks": [
+                "先発要因を含めると優位幅が縮小",
+                "1.66は大きな価格余地ではない"
+              ],
+              "conclusion": "②VALUE①・③VALUE②とも監視。"
+            },
+            "missing_information": [
+              "直近10試合の個別スコア一覧はこの更新回では保存不足"
+            ]
+          }
+        },
+        {
+          "event_id": "220425",
+          "category": "本日のイベント",
+          "category_key": "1:本日のイベント",
+          "start_at_jst": "2026-09-27T18:00:00+09:00",
+          "market": "最終結果",
+          "side_a": "楽天",
+          "side_b": "西武",
+          "odds": [
+            {
+              "name": "楽天",
+              "odds": 1.77,
+              "bettable": true
+            },
+            {
+              "name": "西武",
+              "odds": 2.14,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 27.65,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "checked",
+            "recent_form": "checked",
+            "ranking_or_rating": "checked",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja",
+            "https://npb.jp/bis/2026/stats/",
+            "https://npb.jp/bis/2026/stats/std_p.html",
+            "https://npb.jp/announcement/starter/",
+            "https://npb.jp/games/2026/schedule_09_detail.html",
+            "https://npb.jp/bis/players/91895150.html",
+            "https://npb.jp/bis/players/31835153.html"
+          ],
+          "note": "value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+          "analysis_detail": {
+            "summary": "チーム順位では西武優位だが、先発投手の比較が逆方向。市場価格とチーム力が噛み合わず不確実性が高いため除外。",
+            "h2h": {
+              "status": "checked",
+              "summary": "今季H2Hは確認したが、この更新回の詳細全スコア保存が不足。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "楽天",
+                "summary": "54勝79敗1分・6位。",
+                "items": []
+              },
+              "side_b": {
+                "label": "西武",
+                "summary": "74勝59敗4分・2位。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "checked",
+              "text": "西武2位、楽天6位。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "楽天主催。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "先発：楽天 早川、西武 冨士。冨士は一軍2登板2回 ERA22.50という小サンプル。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：楽天1.77 / 西武2.14 / 引分27.65。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "順位差と先発投手差が逆方向のためモデル不確実性が上昇。"
+            },
+            "rationale": {
+              "why": [
+                "西武のシーズン順位は大幅に上"
+              ],
+              "risks": [
+                "楽天先発早川と西武先発冨士の比較がチーム順位と逆方向",
+                "冨士の一軍サンプルが極端に小さい"
+              ],
+              "conclusion": "②VALUE①・③VALUE②とも除外。"
+            },
+            "missing_information": [
+              "今季H2H全スコア",
+              "直近10試合個別一覧"
+            ]
+          }
+        },
+        {
+          "event_id": "220427",
+          "category": "本日のイベント",
+          "category_key": "1:本日のイベント",
+          "start_at_jst": "2026-09-27T18:00:00+09:00",
+          "market": "最終結果",
+          "side_a": "日本ハム",
+          "side_b": "ロッテ",
+          "odds": [
+            {
+              "name": "日本ハム",
+              "odds": 1.77,
+              "bettable": true
+            },
+            {
+              "name": "ロッテ",
+              "odds": 2.12,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 27.67,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "checked",
+            "recent_form": "checked",
+            "ranking_or_rating": "checked",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja",
+            "https://npb.jp/bis/2026/stats/",
+            "https://npb.jp/bis/2026/stats/std_p.html",
+            "https://npb.jp/announcement/starter/",
+            "https://npb.jp/games/2026/schedule_09_detail.html",
+            "https://npb.jp/bis/players/31035157.html",
+            "https://npb.jp/bis/2026/stats/idp1_f.html"
+          ],
+          "note": "value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+          "analysis_detail": {
+            "summary": "日本ハムは順位・今季H2Hで優位だが、先発ERAではロッテ側が上。1.77の価格では確信度不足として監視。",
+            "h2h": {
+              "status": "checked",
+              "summary": "2026年シーズン対戦は日本ハム13勝・ロッテ9勝。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "日本ハム",
+                "summary": "75勝61敗3分・3位。",
+                "items": []
+              },
+              "side_b": {
+                "label": "ロッテ",
+                "summary": "59勝70敗3分・5位。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "checked",
+              "text": "日本ハム3位、ロッテ5位。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "日本ハム主催。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "先発：日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：日本ハム1.77 / ロッテ2.12 / 引分27.67。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "チーム力差は日本ハム、先発ERAはロッテ側という相殺構造。"
+            },
+            "rationale": {
+              "why": [
+                "日本ハムが順位で上",
+                "今季H2H 13-9"
+              ],
+              "risks": [
+                "先発ERAはロッテ高野が良好",
+                "価格が優位幅を十分に補償するか不明"
+              ],
+              "conclusion": "②VALUE①・③VALUE②とも監視。"
+            },
+            "missing_information": [
+              "直近10試合個別一覧"
+            ]
+          }
+        },
+        {
+          "event_id": "220222",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ビルズ",
+          "side_b": "チャージャーズ",
+          "odds": [
+            {
+              "name": "ビルズ",
+              "odds": 1.28,
+              "bettable": true
+            },
+            {
+              "name": "チャージャーズ",
+              "odds": 3.81,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.32,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.buffalobills.com/news/buffalo-bills-vs-los-angeles-chargers-where-to-watch-stream-and-listen-week-3",
+            "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-chargers-week-3",
+            "https://www.chargers.com/news/bills-injury-report-week-3-ladd-mcconkey-fantasy",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "value1独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+          "analysis_detail": {
+            "summary": "Billsの2-0とChargersの0-2は差だが、両軍の負傷者が多く1.28を正式採用するには不確実性が高い。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新では信頼できるH2H全件を取得できず、採用根拠には使用していない。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ビルズ",
+                "summary": "2026開幕2勝0敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "チャージャーズ",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤のため順位/レーティングより戦績と負傷情報を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "試合会場・H/Aは公式プレビューで確認対象。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Chargersは6人OUT。BillsもWR2人などQUESTIONABLEがあり、両側に不確実性。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Bills 1.28 / Chargers 3.81 / Draw 30.32。Bills必要勝率約78.13%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "序盤戦績とinjury reportを主軸に評価。"
+            },
+            "rationale": {
+              "why": [
+                "Bills 2-0",
+                "Chargers 0-2",
+                "Chargers側の複数OUT"
+              ],
+              "risks": [
+                "Bills側にもQUESTIONABLE複数",
+                "シーズン2試合だけの小サンプル"
+              ],
+              "conclusion": "①②③④すべて監視。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "複数年の独立レーティング"
+            ]
+          }
+        },
+        {
+          "event_id": "220224",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ライオンズ",
+          "side_b": "ジェッツ",
+          "odds": [
+            {
+              "name": "ライオンズ",
+              "odds": 1.32,
+              "bettable": true
+            },
+            {
+              "name": "ジェッツ",
+              "odds": 3.56,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.35,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.detroitlions.com/news/lions-vs-jets-injury-report-sept-25-bartch-miller-harper",
+            "https://www.nfl.com/news/nfl-week-3-injury-report-player-statuses-for-all-16-games",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "value1独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+          "analysis_detail": {
+            "summary": "LionsとJetsはともに1-1で、負傷者も双方に存在。1.32前後のLions優位を裏付ける独立差が不足。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ライオンズ",
+                "summary": "2026開幕1勝1敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "ジェッツ",
+                "summary": "2026開幕1勝1敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "序盤のため戦績・負傷状況を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "H/Aは公式ゲーム情報で確認対象。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Jetsは複数主力OUT、LionsもOL/Sに欠場。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Lions 1.32 / Jets 3.56 / Draw 30.35。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "同じ1-1で一方的な戦力差の裏付けが弱い。"
+            },
+            "rationale": {
+              "why": [
+                "Jets側の複数欠場"
+              ],
+              "risks": [
+                "Lions側にも欠場",
+                "両軍1-1でフォーム差がない"
+              ],
+              "conclusion": "①②③④で除外。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "独立長期レーティング"
+            ]
+          }
+        },
+        {
+          "event_id": "220227",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ドルフィンズ",
+          "side_b": "チーフス",
+          "odds": [
+            {
+              "name": "ドルフィンズ",
+              "odds": 6.08,
+              "bettable": true
+            },
+            {
+              "name": "チーフス",
+              "odds": 1.16,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.35,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.chiefs.com/news/week-3-injury-report-chiefs-vs-dolphins-2026",
+            "https://www.chiefs.com/news/how-to-watch-and-listen-week-3-chiefs-vs-dolphins",
+            "https://www.nfl.com/news/nfl-week-3-injury-report-player-statuses-for-all-16-games",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "value1独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+          "analysis_detail": {
+            "summary": "Chiefs優位は認めるが1.16は必要勝率約86.2%。OT欠場もあり、価格ほどの確信度を置けない。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ドルフィンズ",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "チーフス",
+                "summary": "Chiefs優勢と評価したが、今回runでは詳細直近スコア保存不足。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤のため固定順位より戦績・負傷情報を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "公式ゲーム情報で確認。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Chiefs OT Josh Simmons OUT。その他injury reportも確認。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Dolphins 6.08 / Chiefs 1.16 / Draw 30.35。Chiefs必要勝率約86.21%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "低オッズの高必要勝率とOL欠場リスクを重視。"
+            },
+            "rationale": {
+              "why": [
+                "Dolphins 0-2",
+                "Chiefs側の戦力優位"
+              ],
+              "risks": [
+                "1.16で必要勝率が高すぎる",
+                "Chiefs OL欠場"
+              ],
+              "conclusion": "①②④で除外。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "Chiefsの直近試合個別スコア一覧"
+            ]
+          }
+        },
+        {
+          "event_id": "220230",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "コマンダース",
+          "side_b": "シーホークス",
+          "odds": [
+            {
+              "name": "コマンダース",
+              "odds": 3.99,
+              "bettable": true
+            },
+            {
+              "name": "シーホークス",
+              "odds": 1.27,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.44,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.seahawks.com/news/week-3-injury-report-seahawks-vs-commanders",
+            "https://www.commanders.com/news/game-status-commanders-seahawks-week-3",
+            "https://www.nfl.com/news/marcus-mariota-commanders-week-3-qb-jayden-daniels-elbow",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "value1再監査: BET CHANNEL Seahawks 1.29の必要勝率77.52%。外部市場はSeahawks概ね-375前後/Commanders+300前後で、no-vig基準ではBET CHANNEL価格に明確な独立edgeを確認できない。過去locked formalは改変せず、今回runではWATCH。",
+          "analysis_detail": {
+            "summary": "Seattle 2-0対Washington 0-2、Washington先発QB欠場が大きな差。ただし外部市場クロスチェック後、VALUE①では明確な価格優位を確認できずWATCHへ修正。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "コマンダース",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "シーホークス",
+                "summary": "2026開幕2勝0敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤。独立の校正済み長期ratingは取得できず。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "Washington home / Seattle away。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Washington: Jayden Daniels OUT、Marcus Mariota先発、ほかSam Cosmi/Nick Cross/Frankie Luvu/Chigoziem Okonkwo OUT。SeattleはJulian Love/Ty Okada OUT、Sam Darnoldはready。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNELはSeattle約1.27-1.29。外部市場クロスチェックでは明確なVALUE優位を確認できず、②VALUE①は今回runでWATCH相当。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "QB欠場・復帰、secondary欠場、開幕戦績を独立評価。④はbase 78.2%→欠場補正後80.5%でwatch。"
+            },
+            "rationale": {
+              "why": [
+                "Seattle 2-0 vs Washington 0-2",
+                "Washington先発QB Jayden Daniels OUT",
+                "Seattle QB Sam Darnold ready"
+              ],
+              "risks": [
+                "Seattle先発S2人OUT",
+                "外部市場と比べた価格優位が小さい",
+                "2試合のみの小サンプル"
+              ],
+              "conclusion": "①推奨は採用済み。②VALUE①は外部市場再監査後WATCH。③VALUE②・④PRO EDGEもWATCH。"
+            },
+            "missing_information": [
+              "校正済み複数年独立レーティング",
+              "H2H全件",
+              "closing price"
+            ]
+          }
+        }
+      ]
+    },
+    "value2": {
+      "cards_checked": 186,
+      "deep_dived": 6,
+      "accepted": 0,
+      "watch": 4,
+      "rejected": 2,
+      "candidates": [
+        {
+          "event_id": "220423",
+          "category": "本日のイベント",
+          "category_key": "1:本日のイベント",
+          "start_at_jst": "2026-09-27T18:00:00+09:00",
+          "market": "最終結果",
+          "side_a": "ヤクルト",
+          "side_b": "巨人",
+          "odds": [
+            {
+              "name": "ヤクルト",
+              "odds": 2.36,
+              "bettable": true
+            },
+            {
+              "name": "巨人",
+              "odds": 1.66,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 27.71,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "checked",
+            "recent_form": "checked",
+            "ranking_or_rating": "checked",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja",
+            "https://npb.jp/bis/2026/stats/",
+            "https://npb.jp/bis/2026/stats/std_c.html",
+            "https://npb.jp/announcement/starter/",
+            "https://npb.jp/games/2026/schedule_09_detail.html"
+          ],
+          "note": "value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+          "analysis_detail": {
+            "summary": "巨人は順位・今季H2Hで優位だが、1.66の損益分岐約60.2%に対して先発差を含めると明確なVALUE確定まで届かず監視。",
+            "h2h": {
+              "status": "checked",
+              "summary": "2026年シーズン対戦は巨人13勝・ヤクルト10勝。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ヤクルト",
+                "summary": "シーズン58勝76敗2分・4位。",
+                "items": []
+              },
+              "side_b": {
+                "label": "巨人",
+                "summary": "シーズン74勝62敗2分・2位。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "checked",
+              "text": "巨人2位 74-62-2、ヤクルト4位 58-76-2。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "ヤクルト主催カード。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "予告先発：ヤクルト高橋、巨人小笠原。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：ヤクルト2.36 / 巨人1.66 / 引分27.71。巨人必要勝率約60.24%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "順位・今季H2H・予告先発の3要素を使用。"
+            },
+            "rationale": {
+              "why": [
+                "巨人が順位で上",
+                "今季H2H 13-10で巨人優位"
+              ],
+              "risks": [
+                "先発要因を含めると優位幅が縮小",
+                "1.66は大きな価格余地ではない"
+              ],
+              "conclusion": "②VALUE①・③VALUE②とも監視。"
+            },
+            "missing_information": [
+              "直近10試合の個別スコア一覧はこの更新回では保存不足"
+            ]
+          }
+        },
+        {
+          "event_id": "220425",
+          "category": "本日のイベント",
+          "category_key": "1:本日のイベント",
+          "start_at_jst": "2026-09-27T18:00:00+09:00",
+          "market": "最終結果",
+          "side_a": "楽天",
+          "side_b": "西武",
+          "odds": [
+            {
+              "name": "楽天",
+              "odds": 1.77,
+              "bettable": true
+            },
+            {
+              "name": "西武",
+              "odds": 2.14,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 27.65,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "checked",
+            "recent_form": "checked",
+            "ranking_or_rating": "checked",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja",
+            "https://npb.jp/bis/2026/stats/",
+            "https://npb.jp/bis/2026/stats/std_p.html",
+            "https://npb.jp/announcement/starter/",
+            "https://npb.jp/games/2026/schedule_09_detail.html",
+            "https://npb.jp/bis/players/91895150.html",
+            "https://npb.jp/bis/players/31835153.html"
+          ],
+          "note": "value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+          "analysis_detail": {
+            "summary": "チーム順位では西武優位だが、先発投手の比較が逆方向。市場価格とチーム力が噛み合わず不確実性が高いため除外。",
+            "h2h": {
+              "status": "checked",
+              "summary": "今季H2Hは確認したが、この更新回の詳細全スコア保存が不足。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "楽天",
+                "summary": "54勝79敗1分・6位。",
+                "items": []
+              },
+              "side_b": {
+                "label": "西武",
+                "summary": "74勝59敗4分・2位。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "checked",
+              "text": "西武2位、楽天6位。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "楽天主催。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "先発：楽天 早川、西武 冨士。冨士は一軍2登板2回 ERA22.50という小サンプル。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：楽天1.77 / 西武2.14 / 引分27.65。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "順位差と先発投手差が逆方向のためモデル不確実性が上昇。"
+            },
+            "rationale": {
+              "why": [
+                "西武のシーズン順位は大幅に上"
+              ],
+              "risks": [
+                "楽天先発早川と西武先発冨士の比較がチーム順位と逆方向",
+                "冨士の一軍サンプルが極端に小さい"
+              ],
+              "conclusion": "②VALUE①・③VALUE②とも除外。"
+            },
+            "missing_information": [
+              "今季H2H全スコア",
+              "直近10試合個別一覧"
+            ]
+          }
+        },
+        {
+          "event_id": "220427",
+          "category": "本日のイベント",
+          "category_key": "1:本日のイベント",
+          "start_at_jst": "2026-09-27T18:00:00+09:00",
+          "market": "最終結果",
+          "side_a": "日本ハム",
+          "side_b": "ロッテ",
+          "odds": [
+            {
+              "name": "日本ハム",
+              "odds": 1.77,
+              "bettable": true
+            },
+            {
+              "name": "ロッテ",
+              "odds": 2.12,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 27.67,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "checked",
+            "recent_form": "checked",
+            "ranking_or_rating": "checked",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "unavailable"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?lang=ja",
+            "https://npb.jp/bis/2026/stats/",
+            "https://npb.jp/bis/2026/stats/std_p.html",
+            "https://npb.jp/announcement/starter/",
+            "https://npb.jp/games/2026/schedule_09_detail.html",
+            "https://npb.jp/bis/players/31035157.html",
+            "https://npb.jp/bis/2026/stats/idp1_f.html"
+          ],
+          "note": "value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+          "analysis_detail": {
+            "summary": "日本ハムは順位・今季H2Hで優位だが、先発ERAではロッテ側が上。1.77の価格では確信度不足として監視。",
+            "h2h": {
+              "status": "checked",
+              "summary": "2026年シーズン対戦は日本ハム13勝・ロッテ9勝。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "日本ハム",
+                "summary": "75勝61敗3分・3位。",
+                "items": []
+              },
+              "side_b": {
+                "label": "ロッテ",
+                "summary": "59勝70敗3分・5位。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "checked",
+              "text": "日本ハム3位、ロッテ5位。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "日本ハム主催。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "先発：日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：日本ハム1.77 / ロッテ2.12 / 引分27.67。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "チーム力差は日本ハム、先発ERAはロッテ側という相殺構造。"
+            },
+            "rationale": {
+              "why": [
+                "日本ハムが順位で上",
+                "今季H2H 13-9"
+              ],
+              "risks": [
+                "先発ERAはロッテ高野が良好",
+                "価格が優位幅を十分に補償するか不明"
+              ],
+              "conclusion": "②VALUE①・③VALUE②とも監視。"
+            },
+            "missing_information": [
+              "直近10試合個別一覧"
+            ]
+          }
+        },
+        {
+          "event_id": "220222",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ビルズ",
+          "side_b": "チャージャーズ",
+          "odds": [
+            {
+              "name": "ビルズ",
+              "odds": 1.28,
+              "bettable": true
+            },
+            {
+              "name": "チャージャーズ",
+              "odds": 3.81,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.32,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.buffalobills.com/news/buffalo-bills-vs-los-angeles-chargers-where-to-watch-stream-and-listen-week-3",
+            "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-chargers-week-3",
+            "https://www.chargers.com/news/bills-injury-report-week-3-ladd-mcconkey-fantasy",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "value2独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+          "analysis_detail": {
+            "summary": "Billsの2-0とChargersの0-2は差だが、両軍の負傷者が多く1.28を正式採用するには不確実性が高い。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新では信頼できるH2H全件を取得できず、採用根拠には使用していない。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ビルズ",
+                "summary": "2026開幕2勝0敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "チャージャーズ",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤のため順位/レーティングより戦績と負傷情報を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "試合会場・H/Aは公式プレビューで確認対象。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Chargersは6人OUT。BillsもWR2人などQUESTIONABLEがあり、両側に不確実性。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Bills 1.28 / Chargers 3.81 / Draw 30.32。Bills必要勝率約78.13%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "序盤戦績とinjury reportを主軸に評価。"
+            },
+            "rationale": {
+              "why": [
+                "Bills 2-0",
+                "Chargers 0-2",
+                "Chargers側の複数OUT"
+              ],
+              "risks": [
+                "Bills側にもQUESTIONABLE複数",
+                "シーズン2試合だけの小サンプル"
+              ],
+              "conclusion": "①②③④すべて監視。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "複数年の独立レーティング"
+            ]
+          }
+        },
+        {
+          "event_id": "220224",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ライオンズ",
+          "side_b": "ジェッツ",
+          "odds": [
+            {
+              "name": "ライオンズ",
+              "odds": 1.32,
+              "bettable": true
+            },
+            {
+              "name": "ジェッツ",
+              "odds": 3.56,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.35,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.detroitlions.com/news/lions-vs-jets-injury-report-sept-25-bartch-miller-harper",
+            "https://www.nfl.com/news/nfl-week-3-injury-report-player-statuses-for-all-16-games",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "value2独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+          "analysis_detail": {
+            "summary": "LionsとJetsはともに1-1で、負傷者も双方に存在。1.32前後のLions優位を裏付ける独立差が不足。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ライオンズ",
+                "summary": "2026開幕1勝1敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "ジェッツ",
+                "summary": "2026開幕1勝1敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "序盤のため戦績・負傷状況を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "H/Aは公式ゲーム情報で確認対象。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Jetsは複数主力OUT、LionsもOL/Sに欠場。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Lions 1.32 / Jets 3.56 / Draw 30.35。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "同じ1-1で一方的な戦力差の裏付けが弱い。"
+            },
+            "rationale": {
+              "why": [
+                "Jets側の複数欠場"
+              ],
+              "risks": [
+                "Lions側にも欠場",
+                "両軍1-1でフォーム差がない"
+              ],
+              "conclusion": "①②③④で除外。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "独立長期レーティング"
+            ]
+          }
+        },
+        {
+          "event_id": "220230",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "コマンダース",
+          "side_b": "シーホークス",
+          "odds": [
+            {
+              "name": "コマンダース",
+              "odds": 3.99,
+              "bettable": true
+            },
+            {
+              "name": "シーホークス",
+              "odds": 1.27,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.44,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.seahawks.com/news/week-3-injury-report-seahawks-vs-commanders",
+            "https://www.commanders.com/news/game-status-commanders-seahawks-week-3",
+            "https://www.nfl.com/news/marcus-mariota-commanders-week-3-qb-jayden-daniels-elbow",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "value2独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+          "analysis_detail": {
+            "summary": "Seattle 2-0対Washington 0-2、Washington先発QB欠場が大きな差。ただし外部市場クロスチェック後、VALUE①では明確な価格優位を確認できずWATCHへ修正。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "コマンダース",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "シーホークス",
+                "summary": "2026開幕2勝0敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤。独立の校正済み長期ratingは取得できず。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "Washington home / Seattle away。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Washington: Jayden Daniels OUT、Marcus Mariota先発、ほかSam Cosmi/Nick Cross/Frankie Luvu/Chigoziem Okonkwo OUT。SeattleはJulian Love/Ty Okada OUT、Sam Darnoldはready。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNELはSeattle約1.27-1.29。外部市場クロスチェックでは明確なVALUE優位を確認できず、②VALUE①は今回runでWATCH相当。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "QB欠場・復帰、secondary欠場、開幕戦績を独立評価。④はbase 78.2%→欠場補正後80.5%でwatch。"
+            },
+            "rationale": {
+              "why": [
+                "Seattle 2-0 vs Washington 0-2",
+                "Washington先発QB Jayden Daniels OUT",
+                "Seattle QB Sam Darnold ready"
+              ],
+              "risks": [
+                "Seattle先発S2人OUT",
+                "外部市場と比べた価格優位が小さい",
+                "2試合のみの小サンプル"
+              ],
+              "conclusion": "①推奨は採用済み。②VALUE①は外部市場再監査後WATCH。③VALUE②・④PRO EDGEもWATCH。"
+            },
+            "missing_information": [
+              "校正済み複数年独立レーティング",
+              "H2H全件",
+              "closing price"
+            ]
+          }
+        }
+      ]
+    },
+    "pro_edge": {
+      "cards_checked": 186,
+      "deep_dived": 4,
+      "accepted": 0,
+      "watch": 2,
+      "rejected": 2,
+      "candidates": [
+        {
+          "event_id": "220222",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ビルズ",
+          "side_b": "チャージャーズ",
+          "odds": [
+            {
+              "name": "ビルズ",
+              "odds": 1.28,
+              "bettable": true
+            },
+            {
+              "name": "チャージャーズ",
+              "odds": 3.81,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.32,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.buffalobills.com/news/buffalo-bills-vs-los-angeles-chargers-where-to-watch-stream-and-listen-week-3",
+            "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-chargers-week-3",
+            "https://www.chargers.com/news/bills-injury-report-week-3-ladd-mcconkey-fantasy",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "pro_edge独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+          "analysis_detail": {
+            "summary": "Billsの2-0とChargersの0-2は差だが、両軍の負傷者が多く1.28を正式採用するには不確実性が高い。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新では信頼できるH2H全件を取得できず、採用根拠には使用していない。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ビルズ",
+                "summary": "2026開幕2勝0敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "チャージャーズ",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤のため順位/レーティングより戦績と負傷情報を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "試合会場・H/Aは公式プレビューで確認対象。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Chargersは6人OUT。BillsもWR2人などQUESTIONABLEがあり、両側に不確実性。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Bills 1.28 / Chargers 3.81 / Draw 30.32。Bills必要勝率約78.13%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "序盤戦績とinjury reportを主軸に評価。"
+            },
+            "rationale": {
+              "why": [
+                "Bills 2-0",
+                "Chargers 0-2",
+                "Chargers側の複数OUT"
+              ],
+              "risks": [
+                "Bills側にもQUESTIONABLE複数",
+                "シーズン2試合だけの小サンプル"
+              ],
+              "conclusion": "①②③④すべて監視。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "複数年の独立レーティング"
+            ]
+          }
+        },
+        {
+          "event_id": "220224",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ライオンズ",
+          "side_b": "ジェッツ",
+          "odds": [
+            {
+              "name": "ライオンズ",
+              "odds": 1.32,
+              "bettable": true
+            },
+            {
+              "name": "ジェッツ",
+              "odds": 3.56,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.35,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.detroitlions.com/news/lions-vs-jets-injury-report-sept-25-bartch-miller-harper",
+            "https://www.nfl.com/news/nfl-week-3-injury-report-player-statuses-for-all-16-games",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "pro_edge独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+          "analysis_detail": {
+            "summary": "LionsとJetsはともに1-1で、負傷者も双方に存在。1.32前後のLions優位を裏付ける独立差が不足。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ライオンズ",
+                "summary": "2026開幕1勝1敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "ジェッツ",
+                "summary": "2026開幕1勝1敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "序盤のため戦績・負傷状況を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "H/Aは公式ゲーム情報で確認対象。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Jetsは複数主力OUT、LionsもOL/Sに欠場。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Lions 1.32 / Jets 3.56 / Draw 30.35。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "同じ1-1で一方的な戦力差の裏付けが弱い。"
+            },
+            "rationale": {
+              "why": [
+                "Jets側の複数欠場"
+              ],
+              "risks": [
+                "Lions側にも欠場",
+                "両軍1-1でフォーム差がない"
+              ],
+              "conclusion": "①②③④で除外。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "独立長期レーティング"
+            ]
+          }
+        },
+        {
+          "event_id": "220227",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "ドルフィンズ",
+          "side_b": "チーフス",
+          "odds": [
+            {
+              "name": "ドルフィンズ",
+              "odds": 6.08,
+              "bettable": true
+            },
+            {
+              "name": "チーフス",
+              "odds": 1.16,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.35,
+              "bettable": true
+            }
+          ],
+          "outcome": "reject",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.chiefs.com/news/week-3-injury-report-chiefs-vs-dolphins-2026",
+            "https://www.chiefs.com/news/how-to-watch-and-listen-week-3-chiefs-vs-dolphins",
+            "https://www.nfl.com/news/nfl-week-3-injury-report-player-statuses-for-all-16-games",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "pro_edge独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+          "analysis_detail": {
+            "summary": "Chiefs優位は認めるが1.16は必要勝率約86.2%。OT欠場もあり、価格ほどの確信度を置けない。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "ドルフィンズ",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "チーフス",
+                "summary": "Chiefs優勢と評価したが、今回runでは詳細直近スコア保存不足。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤のため固定順位より戦績・負傷情報を優先。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "公式ゲーム情報で確認。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Chiefs OT Josh Simmons OUT。その他injury reportも確認。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNEL：Dolphins 6.08 / Chiefs 1.16 / Draw 30.35。Chiefs必要勝率約86.21%。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "低オッズの高必要勝率とOL欠場リスクを重視。"
+            },
+            "rationale": {
+              "why": [
+                "Dolphins 0-2",
+                "Chiefs側の戦力優位"
+              ],
+              "risks": [
+                "1.16で必要勝率が高すぎる",
+                "Chiefs OL欠場"
+              ],
+              "conclusion": "①②④で除外。"
+            },
+            "missing_information": [
+              "H2H全件",
+              "Chiefsの直近試合個別スコア一覧"
+            ]
+          }
+        },
+        {
+          "event_id": "220230",
+          "category": "アメフト (NFL)",
+          "category_key": "10109:アメフト (NFL)",
+          "start_at_jst": "2026-09-28T02:00:00+09:00",
+          "market": null,
+          "side_a": "コマンダース",
+          "side_b": "シーホークス",
+          "odds": [
+            {
+              "name": "コマンダース",
+              "odds": 3.99,
+              "bettable": true
+            },
+            {
+              "name": "シーホークス",
+              "odds": 1.27,
+              "bettable": true
+            },
+            {
+              "name": "引き分け",
+              "odds": 30.44,
+              "bettable": true
+            }
+          ],
+          "outcome": "watch",
+          "checks": {
+            "h2h": "unavailable",
+            "recent_form": "checked",
+            "ranking_or_rating": "not_applicable",
+            "availability": "checked",
+            "market_odds": "checked",
+            "sport_specific": "checked",
+            "market_crosscheck": "checked"
+          },
+          "source_urls": [
+            "https://bet-channel.com/matches?ct=10109&lang=ja",
+            "https://www.seahawks.com/news/week-3-injury-report-seahawks-vs-commanders",
+            "https://www.commanders.com/news/game-status-commanders-seahawks-week-3",
+            "https://www.nfl.com/news/marcus-mariota-commanders-week-3-qb-jayden-daniels-elbow",
+            "https://www.vegasinsider.com/nfl/nfl-week-3-odds-2026/"
+          ],
+          "note": "pro_edge独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+          "analysis_detail": {
+            "summary": "Seattle 2-0対Washington 0-2、Washington先発QB欠場が大きな差。ただし外部市場クロスチェック後、VALUE①では明確な価格優位を確認できずWATCHへ修正。",
+            "h2h": {
+              "status": "unavailable",
+              "summary": "今回の更新ではH2H全件を取得できず、採用根拠には未使用。",
+              "items": []
+            },
+            "recent_form": {
+              "status": "checked",
+              "side_a": {
+                "label": "コマンダース",
+                "summary": "2026開幕0勝2敗。",
+                "items": []
+              },
+              "side_b": {
+                "label": "シーホークス",
+                "summary": "2026開幕2勝0敗。",
+                "items": []
+              }
+            },
+            "ranking_or_rating": {
+              "status": "not_applicable",
+              "text": "NFL序盤。独立の校正済み長期ratingは取得できず。"
+            },
+            "home_away": {
+              "status": "checked",
+              "text": "Washington home / Seattle away。"
+            },
+            "availability": {
+              "status": "checked",
+              "text": "Washington: Jayden Daniels OUT、Marcus Mariota先発、ほかSam Cosmi/Nick Cross/Frankie Luvu/Chigoziem Okonkwo OUT。SeattleはJulian Love/Ty Okada OUT、Sam Darnoldはready。"
+            },
+            "market": {
+              "status": "checked",
+              "text": "BET CHANNELはSeattle約1.27-1.29。外部市場クロスチェックでは明確なVALUE優位を確認できず、②VALUE①は今回runでWATCH相当。"
+            },
+            "sport_specific": {
+              "status": "checked",
+              "text": "QB欠場・復帰、secondary欠場、開幕戦績を独立評価。④はbase 78.2%→欠場補正後80.5%でwatch。"
+            },
+            "rationale": {
+              "why": [
+                "Seattle 2-0 vs Washington 0-2",
+                "Washington先発QB Jayden Daniels OUT",
+                "Seattle QB Sam Darnold ready"
+              ],
+              "risks": [
+                "Seattle先発S2人OUT",
+                "外部市場と比べた価格優位が小さい",
+                "2試合のみの小サンプル"
+              ],
+              "conclusion": "①推奨は採用済み。②VALUE①は外部市場再監査後WATCH。③VALUE②・④PRO EDGEもWATCH。"
+            },
+            "missing_information": [
+              "校正済み複数年独立レーティング",
+              "H2H全件",
+              "closing price"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
