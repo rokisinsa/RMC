@@ -84,7 +84,7 @@ jobs:
             runId=p.run_id||''; source=p.source||''; payloadPath=p.payload_path||''; payloadJson=p.payload ? JSON.stringify(p.payload) : ''; dry=String(p.dry_run||false);
           } else throw new Error('unsupported event: '+process.env.GITHUB_EVENT_NAME);
           if(!runId || !source) throw new Error('run_id/source missing');
-          const out={RMC_RUN_ID:runId,RMC_SOURCE:source,RMC_PAYLOAD_PATH:payloadPath,RMC_PAYLOAD_JSON:payloadJson,RMC_DRY_RUN:dry};
+          const scheduled=/^rmc-\\d{8}-(0600|1200|1800|2300)$/.test(runId);\n          const out={RMC_RUN_ID:runId,RMC_SOURCE:source,RMC_PAYLOAD_PATH:payloadPath,RMC_PAYLOAD_JSON:payloadJson,RMC_DRY_RUN:dry,RMC_IS_SCHEDULED:scheduled?"true":"false"};
           const esc=s=>String(s).replace(/%/g,'%25').replace(/\r/g,'%0D').replace(/\n/g,'%0A');
           fs.appendFileSync(process.env.GITHUB_ENV,Object.entries(out).map(([k,v])=>k+'='+esc(v)).join('\n')+'\n');
           NODE
@@ -94,8 +94,25 @@ jobs:
           echo "START_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
           node scripts/rmc-production-update.mjs --receive --out "$WORK/payload.json"
 
+      - name: 1b. 定時41項目監査を開始（失敗しても最終stepで必ず保存）
+        if: env.RMC_IS_SCHEDULED == 'true'
+        run: |
+          cp data/scheduled-update-checklist.json "$WORK/scheduled-update-checklist.json"
+          slot=$(node -e 'const p=require("./'"$WORK"'/payload.json");process.stdout.write(p.slot)')
+          scheduled_for=$(node -e 'const p=require("./'"$WORK"'/payload.json");process.stdout.write(p.generated_at.slice(0,10)+"T"+p.slot+":00+09:00")')
+          node scripts/rmc-scheduled-checklist.mjs             --file "$WORK/scheduled-update-checklist.json"             --run-id "$RMC_RUN_ID"             --slot "$slot"             --scheduled-for "$scheduled_for"             --source "$RMC_SOURCE"             --start-sha "$START_SHA"             --inventory
+
       - name: 2. 検証（dry-run：schema・重複・JST・source・未来情報・locked・損益/ROI/CLV）
         run: node scripts/rmc-production-update.mjs --payload "$WORK/payload.json" --dry-run --start-sha "$START_SHA" --report "$WORK/dry-run.json"
+
+      - name: 2b. 定時41項目監査へpayload証跡を反映
+        if: always() && env.RMC_IS_SCHEDULED == 'true'
+        run: |
+          if [ ! -f "$WORK/scheduled-update-checklist.json" ]; then cp data/scheduled-update-checklist.json "$WORK/scheduled-update-checklist.json"; fi
+          args=(--file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID")
+          [ -f "$WORK/payload.json" ] && args+=(--payload "$WORK/payload.json")
+          [ -f "$WORK/dry-run.json" ] && args+=(--report "$WORK/dry-run.json")
+          node scripts/rmc-scheduled-checklist.mjs "${args[@]}"
 
       - name: 3. 反映（検証をすべて通ったときだけ data/ を変更）
         if: env.RMC_DRY_RUN != 'true'
@@ -108,6 +125,10 @@ jobs:
       - name: 5. 全テスト（snapshot 段・live 段：schema/integrity・PRO EDGE・V2・switch gate・本番更新）
         if: env.RMC_DRY_RUN != 'true'
         run: npm test
+
+      - name: 5b. 定時監査：全tests PASS
+        if: env.RMC_DRY_RUN != 'true' && env.RMC_IS_SCHEDULED == 'true'
+        run: node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --phase tests --detail "npm test PASS"
 
       - name: 6. 移行スナップショットの不変性
         if: env.RMC_DRY_RUN != 'true'
@@ -181,6 +202,10 @@ jobs:
           done
           [ "$pushed" = "1" ] || exit 1
           echo "END_SHA=$end_sha" >> "$GITHUB_ENV"
+
+      - name: 12b. 定時監査：main commit/push PASS
+        if: env.RMC_DRY_RUN != 'true' && env.RMC_IS_SCHEDULED == 'true'
+        run: node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --phase commit --detail "main push PASS: $END_SHA" --end-sha "$END_SHA"
 
       - name: 13. Pages の公開確認・監査記録を published に確定
         if: env.RMC_DRY_RUN != 'true'
@@ -268,6 +293,70 @@ jobs:
           done
           [ "$public_audit_ok" = "1" ] || { echo "PAGES_RESULT=public_profit_audit_timeout" >> "$GITHUB_ENV"; exit 1; }
           echo "PAGES_RESULT=published (analysis-v2.html HTTP 200 + public profit/odds audit PASS, audit SHA $pages_sha)" >> "$GITHUB_ENV"
+
+      - name: 13b. 定時監査：Pages・公開RMC PASS
+        if: env.RMC_DRY_RUN != 'true' && env.RMC_IS_SCHEDULED == 'true'
+        run: |
+          node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --phase pages --detail "${PAGES_RESULT:-Pages/public profit audit PASS}"
+          node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --phase public --detail "public RMC run/system-analysis/profit verification PASS"
+
+      - name: 14. 定時41項目監査を必ずmainへ保存
+        if: always() && env.RMC_IS_SCHEDULED == 'true'
+        env:
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          if [ ! -f "$WORK/scheduled-update-checklist.json" ]; then
+            cp data/scheduled-update-checklist.json "$WORK/scheduled-update-checklist.json"
+          fi
+          if [ "$JOB_STATUS" = "success" ] && [ "$RMC_DRY_RUN" != "true" ]; then
+            node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --success --detail "checks 1-40 completed"
+          else
+            node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --fail --detail "production workflow status=$JOB_STATUS; incomplete checks are blocked"
+          fi
+          cp "$WORK/scheduled-update-checklist.json" /tmp/rmc-run-checklist.json
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          pushed=0
+          checklist_sha=""
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            RUN_ID="$RMC_RUN_ID" node - <<'NODE'
+          const fs=require("fs");
+          const runId=process.env.RUN_ID;
+          const incoming=JSON.parse(fs.readFileSync("/tmp/rmc-run-checklist.json","utf8"));
+          const src=(incoming.runs||[]).find(r=>r.run_id===runId);
+          if(!src) throw new Error("run missing in temp checklist: "+runId);
+          let dst={schema_version:1,latest_run_id:null,runs:[]};
+          try{dst=JSON.parse(fs.readFileSync("data/scheduled-update-checklist.json","utf8"))}catch{}
+          dst.runs=(dst.runs||[]).filter(r=>r.run_id!==runId);
+          dst.runs.push(src);
+          dst.runs=dst.runs.slice(-40);
+          dst.latest_run_id=runId;
+          fs.writeFileSync("data/scheduled-update-checklist.json",JSON.stringify(dst,null,2)+"\n");
+          NODE
+            git add data/scheduled-update-checklist.json
+            if git diff --cached --quiet; then pushed=1; checklist_sha=$(git rev-parse HEAD); break; fi
+            git commit -m "RMC 41-check audit: $RMC_RUN_ID"
+            if git push origin HEAD:main; then pushed=1; checklist_sha=$(git rev-parse HEAD); break; fi
+            sleep 2
+          done
+          [ "$pushed" = "1" ] || exit 1
+          echo "CHECKLIST_SHA=$checklist_sha" >> "$GITHUB_ENV"
+
+          # 成功runは、41/41 PASSの台帳自体がPagesへ公開されたことまで確認。
+          if [ "$JOB_STATUS" = "success" ] && [ "$RMC_DRY_RUN" != "true" ]; then
+            owner="${GITHUB_REPOSITORY%%/*}"; repo="${GITHUB_REPOSITORY#*/}"; base="https://${owner}.github.io/${repo}"
+            visible=0
+            for i in $(seq 1 60); do
+              rm -f /tmp/public-checklist.json
+              curl -fsS "$base/data/scheduled-update-checklist.json?cb=$RANDOM" -o /tmp/public-checklist.json || true
+              if [ -s /tmp/public-checklist.json ] && RUN_ID="$RMC_RUN_ID" node -e 'try{const j=JSON.parse(require("fs").readFileSync("/tmp/public-checklist.json","utf8"));const r=(j.runs||[]).find(x=>x.run_id===process.env.RUN_ID);process.exit(r?.status==="passed"&&r?.summary?.pass===41?0:1)}catch{process.exit(1)}'; then visible=1; break; fi
+              sleep 10
+            done
+            [ "$visible" = "1" ] || exit 1
+          fi
 
       - name: 実行結果のまとめ
         if: always()
