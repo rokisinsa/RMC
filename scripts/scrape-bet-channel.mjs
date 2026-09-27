@@ -130,14 +130,23 @@ async function collectPage(url, label, categoryCt=null){
     const r=await page.goto(url,{waitUntil:"domcontentloaded",timeout:30000});
     navStatus=r?.status()??null;
     await page.waitForTimeout(900);
-    for(let i=0;i<10;i++){
+    let moreClicks=0, moreExhausted=false;
+    const MAX_MORE_CLICKS=500;
+    while(moreClicks<MAX_MORE_CLICKS){
       const btn=page.getByText("もっと試合を表示する",{exact:false}).last();
-      if(await btn.count()===0) break;
+      if(await btn.count()===0){ moreExhausted=true; break; }
       try{
-        if(!(await btn.isVisible())) break;
+        if(!(await btn.isVisible())){ moreExhausted=true; break; }
         await btn.click({timeout:2000});
-        await page.waitForTimeout(250);
-      }catch{break;}
+        moreClicks++;
+        await page.waitForTimeout(300);
+      }catch(e){
+        responseErrors.push({url,stage:"more_matches",error:String(e.message||e)});
+        break;
+      }
+    }
+    if(!moreExhausted){
+      responseErrors.push({url,stage:"more_matches",error:`more_matches_end_not_verified_after_${MAX_MORE_CLICKS}_clicks`});
     }
     title=await page.title();
     bodyText=clean(await page.locator("body").innerText()).slice(0,5000);
