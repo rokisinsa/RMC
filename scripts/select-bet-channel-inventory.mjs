@@ -76,22 +76,43 @@ await fs.mkdir(out.split("/").slice(0,-1).join("/")||".",{recursive:true});
 await fs.writeFile(out,JSON.stringify(chosen,null,2)+"\n");
 if(summaryOut){
   const priority=new Set(chosen.priority_12h_event_ids??[]);
-  const rows=(chosen.screening_events??[]).map(e=>({
-    event_id:String(e.event_id),
-    category:e.category??null,
-    category_key:e.category_key??null,
-    start_at_jst:e.start_at_jst??null,
-    band_name:e.band_name??null,
-    side_a:e.choice1??null,
-    side_b:e.choice2??null,
-    priority_12h:priority.has(e.event_id),
-    market_choices:(e.market_choices??[]).slice(0,6).map(x=>({
-      name:x.choice_name??null,
-      odds:typeof x.odds==="number"?x.odds:null,
-      bettable:x.is_valid_bet===true
-    })),
-    source_url:e.source_url??null
-  }));
+  const checkedMs=new Date(chosen.checked_at).getTime();
+  const classify=e=>{
+    const choices=e.market_choices??[];
+    const band=String(e.band_name??"").trim();
+    if(e.primary_market===true) return "primary_h2h";
+    if(band && !/^(最終結果|2選択肢)$/u.test(band)) return "prop_or_special";
+    if(choices.length>3) return "multi_outcome_or_futures";
+    if(choices.length===2||choices.length===3) return "h2h_or_two_way";
+    return "unknown";
+  };
+  const rows=(chosen.screening_events??[]).map(e=>{
+    const choices=e.market_choices??[];
+    const startMs=e.start_at_jst?new Date(e.start_at_jst).getTime():NaN;
+    const hasPrice=choices.some(x=>typeof x.odds==="number"&&x.odds>1);
+    return {
+      event_id:String(e.event_id),
+      category:e.category??null,
+      category_key:e.category_key??null,
+      start_at_jst:e.start_at_jst??null,
+      bet_end_time:e.bet_end_time??null,
+      status:e.status??null,
+      band_name:e.band_name??null,
+      side_a:e.choice1??null,
+      side_b:e.choice2??null,
+      primary_market:e.primary_market===true,
+      market_class:classify(e),
+      start_state:Number.isFinite(startMs)?(startMs>=checkedMs?"future_or_upcoming":"start_time_passed"):"unknown",
+      price_state:hasPrice?"priced":"unpriced",
+      priority_12h:priority.has(e.event_id),
+      market_choices:choices.slice(0,12).map(x=>({
+        name:x.choice_name??null,
+        odds:typeof x.odds==="number"?x.odds:null,
+        bettable:x.is_valid_bet===true
+      })),
+      source_url:e.source_url??null
+    };
+  });
   const compact={
     schema_version:1,
     source:"BET CHANNEL",
@@ -104,6 +125,16 @@ if(summaryOut){
       anomaly_count:chosen.self_audit?.anomaly_count??null,
       remediation_status:chosen.self_audit?.remediation_status??null,
       unresolved_blockers:chosen.self_audit?.unresolved_blockers??null
+    },
+    stats:{
+      priced_event_count:rows.filter(x=>x.price_state==="priced").length,
+      unpriced_event_count:rows.filter(x=>x.price_state==="unpriced").length,
+      future_or_upcoming_count:rows.filter(x=>x.start_state==="future_or_upcoming").length,
+      start_time_passed_count:rows.filter(x=>x.start_state==="start_time_passed").length,
+      primary_h2h_count:rows.filter(x=>x.market_class==="primary_h2h").length,
+      prop_or_special_count:rows.filter(x=>x.market_class==="prop_or_special").length,
+      multi_outcome_or_futures_count:rows.filter(x=>x.market_class==="multi_outcome_or_futures").length,
+      priority_12h_priced_count:rows.filter(x=>x.priority_12h&&x.price_state==="priced").length
     },
     events:rows
   };
