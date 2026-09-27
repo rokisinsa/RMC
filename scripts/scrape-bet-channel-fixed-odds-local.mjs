@@ -78,23 +78,44 @@ function getParticipants(o) {
 }
 function extractOdds(o) {
   const rows=[];
-  const add=(name,odds,bettable=true,id=null)=>{
+  const add=(name,odds,bettable=true,id=null,market=null,marketId=null)=>{
     const n=clean(name), x=typeof odds==="number"?odds:Number(odds);
     if(!n || !Number.isFinite(x) || x<=1 || x>10000) return;
-    rows.push({name:n,odds:x,bettable:bettable!==false,id:id==null?null:String(id)});
+    rows.push({
+      market:clean(market)||null,
+      market_id:marketId==null?null:String(marketId),
+      name:n,odds:x,bettable:bettable!==false,id:id==null?null:String(id)
+    });
   };
-  const inspect=(v,depth=0)=>{
-    if(!v || typeof v!=="object" || depth>4) return;
-    if(Array.isArray(v)){ for(const x of v.slice(0,200)) inspect(x,depth+1); return; }
-    const name=first(v,["name","title","label","outcome_name","outcomeName","selection_name","selectionName","runner_name","runnerName"]);
+  const childKeys=["selections","outcomes","runners","choices","market_outcomes","marketOutcomes","markets"];
+  const seen=new Set();
+  const inspect=(v,ctx={market:null,marketId:null})=>{
+    if(!v || typeof v!=="object" || seen.has(v)) return;
+    seen.add(v);
+    if(Array.isArray(v)){ for(const x of v) inspect(x,ctx); return; }
+    const hasChildren=childKeys.some(k=>v[k]!=null);
+    const explicitMarket=first(v,["market_name","marketName","market_title","marketTitle"]);
+    const containerName=hasChildren ? first(v,["name","title","label"]) : null;
+    const nextCtx={
+      market:clean(explicitMarket??containerName??ctx.market)||null,
+      marketId:first(v,["market_id","marketId"])??ctx.marketId
+    };
+    const name=first(v,["outcome_name","outcomeName","selection_name","selectionName","runner_name","runnerName","name","title","label"]);
     const price=first(v,["odds","decimal_odds","decimalOdds","price","value","coefficient","coef"]);
     const state=first(v,["active","enabled","available","bettable","is_valid_bet","isValidBet"]);
-    if(name!=null && price!=null) add(name,price,state!==false,first(v,["id","selection_id","selectionId","outcome_id","outcomeId"]));
-    for(const k of ["selections","outcomes","runners","choices","market_outcomes","marketOutcomes","markets"]) if(v[k]) inspect(v[k],depth+1);
+    if(name!=null && price!=null) add(name,price,state!==false,first(v,["id","selection_id","selectionId","outcome_id","outcomeId"]),ctx.market,ctx.marketId);
+    for(const k of childKeys) if(v[k]!=null) inspect(v[k],nextCtx);
   };
   inspect(o);
-  const seen=new Set();
-  return rows.filter(r=>{ const k=`${r.name}|${r.odds}`; if(seen.has(k)) return false; seen.add(k); return true; }).slice(0,20);
+  const uniqRows=[];
+  const keys=new Set();
+  for(const r of rows){
+    const k=`${r.market_id??""}|${r.market??""}|${r.id??""}|${r.name}|${r.odds}`;
+    if(keys.has(k)) continue;
+    keys.add(k);
+    uniqRows.push(r);
+  }
+  return uniqRows;
 }
 function sportName(o) {
   const values=[
@@ -145,7 +166,9 @@ function eventCandidate(o,sourceUrl,path) {
     market_class:"primary_h2h",
     price_state:odds.length>=2?"priced":"unpriced",
     start_state:startState,
-    market_choices:odds.map(x=>({name:x.name,odds:x.odds,bettable:x.bettable,id:x.id})),
+    market_count:new Set(odds.map(x=>x.market_id??x.market).filter(Boolean)).size,
+    market_names:uniq(odds.map(x=>x.market).filter(Boolean)),
+    market_choices:odds.map(x=>({market:x.market,market_id:x.market_id,name:x.name,odds:x.odds,bettable:x.bettable,id:x.id})),
     source_url:sourceUrl,
     source_path:path
   };
