@@ -466,6 +466,16 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
     if (x.unscanned_sport_names?.length) ledger.error("coverage", system, null, `未走査競技名が残っている: ${x.unscanned_sport_names.join(", ")}`);
     if (x.scanned_sport_names && x.scanned_sport_names.length !== x.scanned_sports) ledger.error("coverage", system, null, "scanned_sport_names 件数が scanned_sports と一致しない");
     if (!Array.isArray(x.card_ids) || x.cards_checked !== x.card_ids.length) ledger.error("coverage", system, null, `cards_checked ${x.cards_checked} != card_ids実数 ${x.card_ids?.length ?? 0}`);
+    const evidence=x.screening_evidence ?? [];
+    if (!Array.isArray(evidence) || evidence.length !== x.cards_checked) ledger.error("coverage", system, null, `screening_evidence件数 ${evidence?.length ?? 0} != cards_checked ${x.cards_checked}`);
+    else {
+      const evidenceIds=evidence.map(e=>e.event_id);
+      const sameEvidenceIds=JSON.stringify([...evidenceIds].sort())===JSON.stringify([...(x.card_ids??[])].sort());
+      if (!sameEvidenceIds || new Set(evidenceIds).size!==evidenceIds.length) ledger.error("coverage",system,null,"screening_evidenceのevent_idがcard_ids全件と1対1一致していない");
+      const deepCount=evidence.filter(e=>e.screen_decision==="deep_dive").length;
+      if (deepCount!==x.deep_dived) ledger.error("coverage",system,null,`screening_evidenceのdeep_dive件数 ${deepCount} != deep_dived ${x.deep_dived}`);
+      for (const e of evidence) if (!Array.isArray(e.reason_codes)||!e.reason_codes.length) ledger.error("coverage",system,e.event_id,"一次判定reason_codesが無い");
+    }
     const countKeys = Object.keys(x.sport_card_counts ?? {});
     if (countKeys.length !== master.length) ledger.error("coverage", system, null, "sport_card_countsが対象競技マスター全件を持っていない");
     const normKeys = new Set(countKeys.map(v => v.trim().toLowerCase()));
