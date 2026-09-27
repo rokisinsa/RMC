@@ -170,12 +170,34 @@ jobs:
           done
           [ "$published" = "1" ] || { echo "PAGES_RESULT=timeout" >> "$GITHUB_ENV"; exit 1; }
 
-          # 公開確認できた後だけ audit を pending→published にする
-          node scripts/rmc-production-update.mjs --finalize-pages --run-id "$RMC_RUN_ID"
-          git add data/automation-runs.json
-          git commit -m "RMC Pages verified: $RMC_RUN_ID"
-          git push origin HEAD:main
-          pages_sha=$(git rev-parse HEAD)
+          # 公開確認できた後だけ audit を pending→published にする。
+          # 他の定時更新やコード修正が同時に main へ入っても、最新 main を取り直して run_id 単位で安全に再適用する。
+          finalize_pushed=0
+          pages_sha=""
+          for attempt in $(seq 1 5); do
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/rmc-production-update.mjs --finalize-pages --run-id "$RMC_RUN_ID"
+            git add data/automation-runs.json
+            if git diff --cached --quiet; then
+              # 既に別実行が published を反映済みなら成功扱い。
+              if node -e 'const j=require("./data/automation-runs.json");const r=(j.runs||[]).find(x=>x.run_id===process.env.RMC_RUN_ID);process.exit(r?.pages_result==="published"?0:1)'; then
+                finalize_pushed=1
+                pages_sha=$(git rev-parse HEAD)
+                break
+              fi
+            else
+              git commit -m "RMC Pages verified: $RMC_RUN_ID"
+              if git push origin HEAD:main; then
+                finalize_pushed=1
+                pages_sha=$(git rev-parse HEAD)
+                break
+              fi
+            fi
+            echo "Pages audit push conflicted; retry $attempt/5"
+            sleep 2
+          done
+          [ "$finalize_pushed" = "1" ] || { echo "PAGES_RESULT=audit_push_conflict" >> "$GITHUB_ENV"; exit 1; }
 
           # published 記録そのものも公開サイトへ載ったことを再確認
           # 1 run の行数に依存する grep -A は使わず、JSONとして run_id と pages_result を照合する。
