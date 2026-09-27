@@ -1,0 +1,46 @@
+{
+  "payload_version": 1,
+  "run_id": "rmc-result-profit-sync-20260927-1840",
+  "source": "ChatGPT RMC result/profit sync 18:40",
+  "generated_at": "2026-09-27T18:40:00+09:00",
+  "slot": "adhoc",
+  "note": "結果確定と①〜④収支連動の即時監査。JSK Esports vs Barça eSportsを確定し、該当する②VALUE①の損益・ROIを再計算。profit_auditで①〜④全系統の現在収支を保存。",
+  "result_updates": [
+    {
+      "run_id": "mr-result-profit-sync-20260927-1840",
+      "kind": "result_update",
+      "at": "2026-09-27T18:40:00+09:00",
+      "source": "ChatGPT RMC result/profit sync 18:40",
+      "note": "開始済み未確定カードを再照合。試合同一性をUTC/JST変換、対戦カード、大会名で確認したものだけ確定。",
+      "changes": [
+        {
+          "match_id": "2026-09-27-jsk-barca",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 0
+              },
+              "text": "JSK Esports 1-0 Barça eSports"
+            },
+            "result_confirmed_at": "2026-09-27T18:40:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Sofascore JSK Esports vs Barça eSports",
+                "url": "https://www.sofascore.com/es-la/esports/match/jsk-esports-barca-esports/xhmdshoKj",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-09-27T18:40:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "Sofascore掲載: EMEA Masters Swiss Stage、2026-09-26 16:00 UTC（= 2026-09-27 01:00 JST）、JSK Esports 1-0 Barça eSports。RMCの対戦・大会・開始JSTと一致。"
+          }
+        }
+      ],
+      "reviews": []
+    }
+  ]
+}
