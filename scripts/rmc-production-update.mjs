@@ -433,8 +433,11 @@ function gitHead() {
 // ── 完全版の探索網羅性ゲート ──────────────────────────────────────
 function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
   const scheduled = new Set(["06:00", "12:00", "18:00", "23:00"]);
-  if (!scheduled.has(payload.slot)) return;
+  const isScheduled = scheduled.has(payload.slot);
   const c = payload.coverage_audit;
+  // 定時更新は coverage_audit 必須。adhoc でも coverage_audit を付けた完全試走は
+  // 定時更新と同じ全競技/eSportsゲートを必ず通す。手動試走だけ抜け道になるのを禁止。
+  if (!isScheduled && !c) return;
   if (!c) { ledger.error("coverage", "payload", null, "定時更新は coverage_audit 必須。全競技探索を数値で証明できないため拒否"); return; }
   const scope = c.coverage_scope ?? "four_site_union";
   const master = c.sportsbook_master?.union_sports ?? [];
