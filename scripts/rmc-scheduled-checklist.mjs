@@ -207,8 +207,10 @@ function payloadPhase(run,payloadPath,reportPath){
     espCount++;const txt=JSON.stringify(d.analysis_detail?.sport_specific||{})+" "+arr(d.analysis_detail?.missing_information).join(" ");
     if(!/(bo\d|map|veto|patch|roster|lan|online|マップ|ロスター|パッチ|取得できず|unavailable)/i.test(txt))espDeep=false;
   }
-  if(eids.size>0&&eligibleByCat.size>0&&espCount===0)espDeep=false;
-  mark(run,21,espDeep?"pass":"fail",espDeep?`eSports-specific evidence recorded for ${espCount} deep dives (or explicitly unavailable)`:"eSports deep-dive specific evidence missing");
+  const eligibleIds=new Set([...eligibleByCat.values()].flat());
+  const eligibleEsports=[...eids].filter(id=>eligibleIds.has(id));
+  if(eligibleEsports.length>0&&espCount===0)espDeep=false;
+  mark(run,21,espDeep?"pass":"fail",espDeep?`eSports-specific evidence recorded for ${espCount} deep dives; eligible eSports events=${eligibleEsports.length}`:"eligible eSports deep-dive specific evidence missing");
 
   const idsOk=SYSTEMS.every(s=>setEq(arr(sys[s]?.screening_evidence).filter(x=>x.screen_decision==="deep_dive").map(x=>x.event_id),arr(sys[s]?.deep_dive_evidence).map(x=>x.event_id)));
   mark(run,22,idsOk?"pass":"fail",idsOk?"deep-dive target IDs exactly match proof IDs":"deep-dive target/proof ID mismatch");
@@ -287,5 +289,5 @@ function main(){
   console.log(JSON.stringify({file:path.relative(ROOT,file),run_id:run.run_id,status:run.status,summary:run.summary,blockers:run.blockers,checks:run.checks.map(c=>({id:c.id,status:c.status,detail:c.detail}))},null,2));
   if(has("--assert-pass")&&run.status!=="passed")process.exit(1);
 }
-if(import.meta.url===`file://${process.argv[1].replaceAll("\\","/")}`)main();
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();
 export {TITLES,inferNextSlot,inventoryPhase,payloadPhase,ensure,mark,finish,recompute};
