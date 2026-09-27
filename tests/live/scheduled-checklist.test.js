@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { TITLES, inferNextSlot, ensure, mark, finish } from "../../scripts/rmc-scheduled-checklist.mjs";
+import { mergeRun } from "../../scripts/merge-scheduled-checklist.mjs";
 import { ROOT, loadSchemas } from "../../scripts/load-node.js";
 import { createValidator } from "../../lib/schema-validate.js";
 
@@ -54,4 +55,23 @@ test("公開用scheduled-update-checklist.jsonはschema PASS・41項目整合", 
   assert.equal(latest.checks.length,41);
   assert.deepEqual(latest.checks.map(x=>x.id),Array.from({length:41},(_,i)=>i+1));
   assert.equal(latest.summary.pass+latest.summary.fail+latest.summary.blocked+latest.summary.pending,41);
+});
+
+test("並行監査マージ：passedを降格させず、pendingで既存証拠を消さない", () => {
+  const base={run_id:"rmc-20260928-1800",scheduled_for:"2026-09-28T18:00:00+09:00",status:"passed",blockers:[],checks:TITLES.map((title,i)=>({id:i+1,title,status:"pass",checked_at:"2026-09-28T18:20:00+09:00"})),summary:{pass:41,fail:0,blocked:0,pending:0,total:41},updated_at:"2026-09-28T18:20:00+09:00"};
+  const stale=structuredClone(base);
+  stale.status="failed"; stale.checks[2].status="fail"; stale.checks[2].checked_at="2026-09-28T18:10:00+09:00"; stale.summary={pass:40,fail:1,blocked:0,pending:0,total:41};
+  assert.equal(mergeRun(base,stale).status,"passed");
+
+  const running=structuredClone(base); running.status="running"; running.checks[40].status="pending"; running.summary={pass:40,fail:0,blocked:0,pending:1,total:41};
+  const incoming=structuredClone(running); incoming.checks[0].status="pending"; incoming.checks[0].checked_at="2026-09-28T18:30:00+09:00";
+  const merged=mergeRun(running,incoming);
+  assert.equal(merged.checks[0].status,"pass");
+});
+
+test("並行監査マージ：新しい再試行証拠でFAILをPASSへ更新できる", () => {
+  const mk=(status,at)=>({run_id:"rmc-20260928-2300",scheduled_for:"2026-09-28T23:00:00+09:00",status:"failed",blockers:["fixed_odds_incomplete"],checks:TITLES.map((title,i)=>({id:i+1,title,status:i===2?status:"pending",checked_at:at})),summary:{pass:0,fail:status==="fail"?1:0,blocked:0,pending:status==="fail"?40:41,total:41},updated_at:at});
+  const old=mk("fail","2026-09-28T22:35:00+09:00");
+  const fresh=mk("pass","2026-09-28T22:50:00+09:00"); fresh.blockers=[];
+  assert.equal(mergeRun(old,fresh).checks[2].status,"pass");
 });
