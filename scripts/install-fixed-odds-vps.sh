@@ -21,6 +21,16 @@ if ! command -v node >/dev/null || [ "$(node -p 'Number(process.versions.node.sp
 fi
 
 cd "$REPO_ROOT"
+git fetch origin main
+if ! git push --dry-run origin HEAD:main >/dev/null 2>&1; then
+  echo "GitHub mainへのpush認証がありません。VPSにGitHub SSHキー/PAT等の書込認証を設定してから再実行してください。" >&2
+  exit 1
+fi
+COUNTRY="$(curl -fsS https://www.cloudflare.com/cdn-cgi/trace | awk -F= '$1=="loc"{print $2}' | tr -d '\r\n' || true)"
+if [ "$COUNTRY" != "JP" ]; then
+  echo "VPSの外向きIPがJPではありません (loc=${COUNTRY:-unknown})。東京リージョンを確認してください。" >&2
+  exit 1
+fi
 npm install --no-save playwright@1.55.0
 npx playwright install --with-deps chromium
 chmod +x "$RUNNER"
