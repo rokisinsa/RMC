@@ -311,6 +311,22 @@ export function checkNext(current, next, payload, ledger, { schemas, cfg, now })
   // 損益の整合：試合事実が変わっていないカードの精算は変わらない／集計は各カードの精算と一致／CLV は式どおり
   const vmBefore = buildViewModel(clone(current), { proEdgeConfig: cfg, now });
   const vmAfter = buildViewModel(clone(next), { proEdgeConfig: cfg, now });
+
+  // 定時更新で新たに敗戦が確定した正式カードは、同じ更新内に系統別post-match review必須。
+  // 「結果だけ更新して敗因分析を忘れる」状態を本番完了扱いしない。
+  if (["06:00","12:00","18:00","23:00"].includes(payload.slot)) {
+    for (const system of PICK_SYSTEMS) {
+      const beforeRows = new Map((vmBefore[system]?.rows ?? []).map(r => [r.id, r]));
+      const supplied = new Set((payload.post_match_reviews?.[system] ?? []).map(r => r.pick_id));
+      for (const row of vmAfter[system]?.rows ?? []) {
+        const beforeState = beforeRows.get(row.id)?.settlement?.state ?? null;
+        const afterState = row.settlement?.state ?? null;
+        if (afterState === "loss" && beforeState !== "loss" && !supplied.has(row.id)) {
+          ledger.error("postmortem", system, row.id, "定時更新で新規敗戦が確定したのに同一更新内のpost-match reviewが無い");
+        }
+      }
+    }
+  }
   const effectiveBeforeMatches = applyMatchUpdates(current.matches, current.match_updates).matches;
   const effectiveAfterMatches = applyMatchUpdates(next.matches, next.match_updates).matches;
   const effBefore = new Map(effectiveBeforeMatches.map(m => [m.id, JSON.stringify(m)]));
