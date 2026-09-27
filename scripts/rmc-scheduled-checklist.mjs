@@ -119,8 +119,8 @@ function inferNextSlot(d=new Date()){
     }
   }
   const nearest=[...candidates].sort((a,b)=>Math.abs(a.ms-ms)-Math.abs(b.ms-ms))[0];
-  if(nearest && Math.abs(nearest.ms-ms)<=90*60000) return nearest;
-  return candidates.filter(x=>x.ms>=ms).sort((a,b)=>a.ms-b.ms)[0];
+  if(nearest && Math.abs(nearest.ms-ms)<=120*60000) return nearest;
+  return null;
 }
 function ageMinutes(ref,ts){return (Date.parse(ref)-Date.parse(ts))/60000}
 function inventoryPhase(run,root=ROOT,refTime=null){
@@ -285,7 +285,7 @@ function main(){
   const file=arg("--file")?path.resolve(ROOT,arg("--file")):DEFAULT_FILE;
   const db=load(file);
   let runId=arg("--run-id"),slot=arg("--slot"),scheduledFor=arg("--scheduled-for");
-  if(has("--auto-next")){const x=inferNextSlot();runId=x.runId;slot=x.slot;scheduledFor=x.scheduledFor}
+  if(has("--auto-next")){const x=inferNextSlot();if(!x)throw new Error("current time is outside the allowed scheduled-slot audit window");runId=x.runId;slot=x.slot;scheduledFor=x.scheduledFor}
   if(!runId)throw new Error("--run-id required (or --auto-next)");
   const run=ensure(db,{runId,slot,scheduledFor,source:arg("--source"),startSha:arg("--start-sha")});
   if(run.slot&&run.scheduled_for&&run.start_sha)mark(run,1,"pass",`${run.run_id} / ${run.scheduled_for} / start_sha ${run.start_sha} / prior_blockers ${(run.prior_blockers||[]).join(",")||"none"}`);
