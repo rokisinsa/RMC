@@ -14,6 +14,7 @@ export const DATA_PATHS = {
   value1: "data/value1.json",
   value2: "data/value2.json",
   pro_edge: "data/pro_edge.json",
+  system_analysis: "data/system-analysis.json",
   legacy_unassigned: "data/legacy-unassigned.json",
   legacy_analysis_recommendations: "data/legacy-analysis/recommendations.json",
   legacy_analysis_value1: "data/legacy-analysis/value1.json",
@@ -25,7 +26,7 @@ export const DATA_PATHS = {
   post_match_pro_edge: "data/post-match-reviews/pro_edge.json",
 };
 
-const OPTIONAL = new Set(["post_match_recommendations", "post_match_experience", "post_match_value1", "post_match_value2", "post_match_pro_edge"]);
+const OPTIONAL = new Set(["system_analysis", "post_match_recommendations", "post_match_experience", "post_match_value1", "post_match_value2", "post_match_pro_edge"]);
 
 async function getJson(path, optional = false) {
   const res = await fetch(path, { cache: "no-cache" });
