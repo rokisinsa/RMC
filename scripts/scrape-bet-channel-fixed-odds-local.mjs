@@ -8,8 +8,9 @@ const SOURCE_MACHINE = process.env.RMC_SOURCE_MACHINE || (process.platform === "
 const SOURCE_REGION = process.env.RMC_SOURCE_REGION || "JP";
 const BASE = "https://bet-channel.com";
 const BRAND_ID = "2564963746585911298";
-const ROUTES = ["/esports", "/esports-1", "/"];
-const URLS = ROUTES.map(r => `${BASE}/fixed-odds?bt-path=${encodeURIComponent(r)}`);
+const SEED_ROUTES = ["/esports", "/esports-1", "/"];
+const MAX_DISCOVERED_ROUTES = 500;
+const routeUrl = r => `${BASE}/fixed-odds?bt-path=${encodeURIComponent(r)}`;
 
 const clean = v => String(v ?? "").replace(/\s+/g, " ").trim();
 const uniq = xs => [...new Set((xs || []).filter(Boolean).map(String))];
@@ -158,7 +159,7 @@ function mergeEvent(prev,next) {
 const browser=await chromium.launch({headless:true});
 const ctx=await browser.newContext({locale:"ja-JP",timezoneId:"Asia/Tokyo"});
 const events=new Map(), categoryNames=new Set(), sourceUrls=new Set(), jsonUrls=new Set(), wsUrls=new Set(), errors=[];
-let geoBlocked=false, rendererLoaded=false, menuRouteSeen=false, bodyEsportsSeen=false;
+let geoBlocked=false, rendererLoaded=false, menuRouteSeen=false, bodyEsportsSeen=false, routeLimitExceeded=false;
 
 function ingestPayload(payload,sourceUrl,kind) {
   try{
@@ -168,8 +169,30 @@ function ingestPayload(payload,sourceUrl,kind) {
     });
   }catch(e){ errors.push({stage:"ingest",sourceUrl,error:String(e?.message||e)}); }
 }
+function normalizeBtRoute(href){
+  try{
+    const u=new URL(href,BASE);
+    const raw=u.searchParams.get("bt-path");
+    if(!raw) return null;
+    const r=decodeURIComponent(raw);
+    return r.startsWith("/")?r:`/${r}`;
+  }catch{return null;}
+}
 
-for(const url of URLS){
+const discoveredRoutes=new Set(SEED_ROUTES);
+const visitedRoutes=new Set();
+const queue=[...SEED_ROUTES];
+
+while(queue.length){
+  if(discoveredRoutes.size>MAX_DISCOVERED_ROUTES){
+    routeLimitExceeded=true;
+    errors.push({stage:"menu",error:`discovered route count exceeded safety ceiling ${MAX_DISCOVERED_ROUTES}; refusing to claim completeness`});
+    break;
+  }
+  const route=queue.shift();
+  if(visitedRoutes.has(route)) continue;
+  visitedRoutes.add(route);
+  const url=routeUrl(route);
   sourceUrls.add(url);
   const p=await ctx.newPage();
   p.setDefaultTimeout(15000);
@@ -196,13 +219,22 @@ for(const url of URLS){
     if(ESPORT_RE.test(body)) bodyEsportsSeen=true;
     const perf=await p.evaluate(()=>performance.getEntriesByType("resource").map(x=>x.name));
     if(perf.some(u=>/bt-renderer\.min\.js/i.test(u))) rendererLoaded=true;
-    const rows=await p.evaluate(()=>[...document.querySelectorAll("a[href]")].map(a=>({href:a.href||"",text:(a.textContent||"").replace(/\s+/g," ").trim()})).filter(x=>/bt-path=|esport/i.test(x.href+" "+x.text)));
+    const rows=await p.evaluate(()=>[...document.querySelectorAll("a[href]")].map(a=>({href:a.href||"",text:(a.textContent||"").replace(/\s+/g," ").trim()})).filter(x=>/bt-path=/i.test(x.href)));
+    const insideEsportsTree=/^\/esports(?:\/|-|$)/i.test(route);
     for(const r of rows){
-      sourceUrls.add(r.href);
+      const child=normalizeBtRoute(r.href);
+      if(!child) continue;
+      const looksEsports=insideEsportsTree || /^\/esports(?:\/|-|$)/i.test(child) || ESPORT_RE.test(`${r.text} ${child}`);
+      if(!looksEsports) continue;
+      sourceUrls.add(routeUrl(child));
       menuRouteSeen=true;
-      if(ESPORT_RE.test(r.text)) categoryNames.add(`BETBY_ESPORTS:${clean(r.text)}`);
+      if(r.text) categoryNames.add(`BETBY_ESPORTS:${clean(r.text)}`);
+      if(!discoveredRoutes.has(child)){
+        discoveredRoutes.add(child);
+        queue.push(child);
+      }
     }
-  }catch(e){ errors.push({stage:"page",url,error:String(e?.message||e)}); }
+  }catch(e){ errors.push({stage:"page",url,route,error:String(e?.message||e)}); }
   finally{ await p.close(); }
 }
 await browser.close();
@@ -224,7 +256,10 @@ if(eventIds.length===0) blockers.push("event_feed_empty");
 if(screeningIds.length===0) blockers.push("screening_event_empty");
 if(missingParticipants.length) blockers.push("participant_metadata_missing");
 if(missingTime.length) blockers.push("time_parse_missing");
-const menuEndVerified=!geoBlocked && (menuRouteSeen||categoryKeys.length>0) && eventIds.length>0;
+if(errors.length) blockers.push("route_or_ingest_errors");
+if(routeLimitExceeded) blockers.push("route_limit_exceeded");
+if(discoveredRoutes.size!==visitedRoutes.size) blockers.push("unvisited_esports_routes");
+const menuEndVerified=!geoBlocked && !routeLimitExceeded && discoveredRoutes.size===visitedRoutes.size && (menuRouteSeen||categoryKeys.length>0) && eventIds.length>0;
 const complete=blockers.length===0 && menuEndVerified;
 const digest=hash([...eventIds].sort().join("|")), screeningDigest=hash([...screeningIds].sort().join("|"));
 const analysisIds=uniq(allEvents.filter(e=>e.primary_market).map(e=>"bc-"+hash(`${e.start_at_jst||""}|${[e.side_a,e.side_b].sort().join("||")}`)));
@@ -242,6 +277,10 @@ const out={
   event_feed_detected:eventIds.length>0,
   category_count:categoryKeys.length,
   category_keys:categoryKeys,
+  menu_route_count:discoveredRoutes.size,
+  menu_routes:[...discoveredRoutes].sort(),
+  visited_route_count:visitedRoutes.size,
+  visited_routes:[...visitedRoutes].sort(),
   event_count:eventIds.length,
   event_ids:eventIds,
   screening_event_count:screeningIds.length,
@@ -269,7 +308,7 @@ const out={
     warning_count:priceMissing.length,
     remediation_status:complete?"not_needed":"required",
     fixes_applied:[],
-    checks_run:["japan_access","renderer_loaded","esports_menu_observed","event_feed_nonzero","event_id_uniqueness","participant_completeness","time_parse","screening_nonzero","menu_end_verified"],
+    checks_run:["japan_access","renderer_loaded","esports_menu_observed","recursive_menu_route_discovery","all_discovered_routes_visited","event_feed_nonzero","event_id_uniqueness","participant_completeness","time_parse","screening_nonzero","menu_end_verified"],
     unresolved_blockers:blockers.length,
     blockers
   },
