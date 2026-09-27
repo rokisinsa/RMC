@@ -109,24 +109,35 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/bet-channel-inventory.json data/bet-channel-screening-summary.json
-          if git diff --cached --quiet; then
-            echo "No inventory diff"
-          else
+
+          # 生成結果を退避し、毎回最新mainを土台に戻してから2ファイルだけ重ねる。
+          # 古いworkflow SHAの手動再実行でもdataファイル同士をrebase競合させない。
+          cp data/bet-channel-inventory.json /tmp/generated-bet-channel-inventory.json
+          cp data/bet-channel-screening-summary.json /tmp/generated-bet-channel-screening-summary.json
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/generated-bet-channel-inventory.json data/bet-channel-inventory.json
+            cp /tmp/generated-bet-channel-screening-summary.json data/bet-channel-screening-summary.json
+            git add data/bet-channel-inventory.json data/bet-channel-screening-summary.json
+
+            if git diff --cached --quiet; then
+              echo "No inventory diff after syncing latest main"
+              exit 0
+            fi
+
             git commit -m "Update BET CHANNEL inventory"
-            # 別のRMC更新が同時にmainへ入っても、最新mainへ追従してから保存する。
-            for attempt in 1 2 3; do
-              git fetch origin main
-              if git rebase origin/main && git push origin HEAD:main; then
-                exit 0
-              fi
-              git rebase --abort || true
-              echo "inventory push retry $attempt/3"
-              sleep 2
-            done
-            echo "Failed to persist measured inventory after 3 retries"
-            exit 1
-          fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "inventory push retry $attempt/3"
+            sleep 2
+          done
+
+          echo "Failed to persist measured inventory after 3 retries"
+          exit 1
 
       - name: Enforce complete scrape
         shell: bash
