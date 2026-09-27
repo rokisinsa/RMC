@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 
 const args=process.argv.slice(2);
 const opt=name=>{const i=args.indexOf(name); return i>=0?args[i+1]:null;};
-const a1p=opt("--attempt1"), a2p=opt("--attempt2"), out=opt("--out");
+const a1p=opt("--attempt1"), a2p=opt("--attempt2"), out=opt("--out"), summaryOut=opt("--summary");
 if(!a1p||!out){ console.error("usage: --attempt1 <json> [--attempt2 <json>] --out <json>"); process.exit(2); }
 
 async function read(p){ if(!p) return null; try{return JSON.parse(await fs.readFile(p,"utf8"));}catch{return null;} }
@@ -74,4 +74,40 @@ chosen.self_audit.final_selection_reason=remediation;
 
 await fs.mkdir(out.split("/").slice(0,-1).join("/")||".",{recursive:true});
 await fs.writeFile(out,JSON.stringify(chosen,null,2)+"\n");
-console.log(JSON.stringify({ok:true,selected:summary(chosen),remediation_status:remediation},null,2));
+if(summaryOut){
+  const priority=new Set(chosen.priority_12h_event_ids??[]);
+  const rows=(chosen.screening_events??[]).map(e=>({
+    event_id:String(e.event_id),
+    category:e.category??null,
+    category_key:e.category_key??null,
+    start_at_jst:e.start_at_jst??null,
+    band_name:e.band_name??null,
+    side_a:e.choice1??null,
+    side_b:e.choice2??null,
+    priority_12h:priority.has(e.event_id),
+    market_choices:(e.market_choices??[]).slice(0,6).map(x=>({
+      name:x.choice_name??null,
+      odds:typeof x.odds==="number"?x.odds:null,
+      bettable:x.is_valid_bet===true
+    })),
+    source_url:e.source_url??null
+  }));
+  const compact={
+    schema_version:1,
+    source:"BET CHANNEL",
+    checked_at:chosen.checked_at,
+    screening_event_count:chosen.screening_event_count,
+    priority_12h_event_count:chosen.priority_12h_event_count,
+    screening_digest:chosen.integrity?.screening_digest??null,
+    self_audit:{
+      status:chosen.self_audit?.status??null,
+      anomaly_count:chosen.self_audit?.anomaly_count??null,
+      remediation_status:chosen.self_audit?.remediation_status??null,
+      unresolved_blockers:chosen.self_audit?.unresolved_blockers??null
+    },
+    events:rows
+  };
+  await fs.mkdir(summaryOut.split("/").slice(0,-1).join("/")||".",{recursive:true});
+  await fs.writeFile(summaryOut,JSON.stringify(compact,null,2)+"\n");
+}
+console.log(JSON.stringify({ok:true,selected:summary(chosen),remediation_status:remediation,summary_out:summaryOut},null,2));
