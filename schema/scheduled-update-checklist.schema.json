@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "scheduled-update-checklist.schema.json",
+  "title": "RMC定時更新41項目監査",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "latest_run_id",
+    "runs"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "latest_run_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "run_id",
+          "slot",
+          "scheduled_for",
+          "status",
+          "checks",
+          "summary"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "run_id": {
+            "type": "string"
+          },
+          "slot": {
+            "enum": [
+              "06:00",
+              "12:00",
+              "18:00",
+              "23:00"
+            ]
+          },
+          "scheduled_for": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "enum": [
+              "running",
+              "blocked",
+              "failed",
+              "passed"
+            ]
+          },
+          "checks": {
+            "type": "array",
+            "minItems": 41,
+            "maxItems": 41,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "status"
+              ],
+              "additionalProperties": true,
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 41
+                },
+                "title": {
+                  "type": "string"
+                },
+                "status": {
+                  "enum": [
+                    "pending",
+                    "pass",
+                    "fail",
+                    "blocked"
+                  ]
+                }
+              }
+            }
+          },
+          "summary": {
+            "type": "object",
+            "required": [
+              "pass",
+              "fail",
+              "blocked",
+              "pending",
+              "total"
+            ],
+            "properties": {
+              "total": {
+                "const": 41
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
