@@ -2,9 +2,7 @@
 // data/*.json だけを読み込み、lib/view の表示モデル・描画を呼ぶ（数値はすべてデータから自動計算）。
 // 旧 analysis.html は参照しない（旧分析メモは data/legacy-analysis に移行済み）。
 
-import { buildViewModel } from "./lib/view/model.js";
-import { renderPage } from "./lib/view/render.js";
-import { resolveMode, assertNoDemoInProduction } from "./lib/view/mode.js";
+let buildViewModel, renderPage, resolveMode, assertNoDemoInProduction;
 
 export const DATA_PATHS = {
   matches: "data/matches.json",
@@ -29,7 +27,8 @@ export const DATA_PATHS = {
 const OPTIONAL = new Set(["system_analysis", "post_match_recommendations", "post_match_experience", "post_match_value1", "post_match_value2", "post_match_pro_edge"]);
 
 async function getJson(path, optional = false) {
-  const res = await fetch(path, { cache: "no-cache" });
+  const sep = path.includes("?") ? "&" : "?";
+  const res = await fetch(`${path}${sep}cb=${Date.now()}`, { cache: "no-store" });
   if (optional && res.status === 404) return null;
   if (!res.ok) throw new Error(`${path} を読み込めません（${res.status}）`);
   return res.json();
@@ -66,6 +65,16 @@ function wire(root) {
 }
 
 async function main() {
+  const cb = Date.now();
+  const [modelMod, renderMod, modeMod] = await Promise.all([
+    import(`./lib/view/model.js?cb=${cb}`),
+    import(`./lib/view/render.js?cb=${cb}`),
+    import(`./lib/view/mode.js?cb=${cb}`)
+  ]);
+  buildViewModel = modelMod.buildViewModel;
+  renderPage = renderMod.renderPage;
+  resolveMode = modeMod.resolveMode;
+  assertNoDemoInProduction = modeMod.assertNoDemoInProduction;
   const root = document.getElementById("app");
   const mode = resolveMode(location.href);
   document.documentElement.dataset.mode = mode.mode;
