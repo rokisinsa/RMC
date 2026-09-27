@@ -324,11 +324,11 @@ let fixedOddsStatus={
     try{
       const rr=await ctx.request.get(rendererUrl,{timeout:30000});
       const js=await rr.text();
-      const absUrls=[...new Set((js.match(/https?:\\/\\/[^"'\\s)]+/g)||[]))].slice(0,300);
-      const wsUrls=[...new Set((js.match(/wss?:\\/\\/[^"'\\s)]+/g)||[]))].slice(0,120);
+      const absUrls=[...new Set((js.match(/https?:\/\/[^"'\s)]+/g)||[]))].slice(0,300);
+      const wsUrls=[...new Set((js.match(/wss?:\/\/[^"'\s)]+/g)||[]))].slice(0,120);
       const hosts=[...new Set([...absUrls,...wsUrls].map(u=>{try{return new URL(u).host}catch{return null}}).filter(Boolean))];
       const snippets=[];
-      for(const re of [/graphql/ig,/websocket/ig,/wss?:\\/\\//ig,/api[\\/._-]/ig,/forbidden/ig,/geo(?:location)?/ig,/location/ig,/brand[_-]?id/ig,/sportsbook/ig]){
+      for(const re of [/graphql/ig,/websocket/ig,/wss?:\/\//ig,/api[\/._-]/ig,/forbidden/ig,/geo(?:location)?/ig,/location/ig,/brand[_-]?id/ig,/sportsbook/ig]){
         const m=re.exec(js);
         if(m) snippets.push(js.slice(Math.max(0,m.index-600),Math.min(js.length,m.index+1800)));
       }
