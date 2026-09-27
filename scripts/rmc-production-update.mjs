@@ -427,6 +427,19 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
       const a = c.sportsbook_master?.source_audit?.bet_channel;
       const sameIds = (u,v) => JSON.stringify([...(u??[])].sort()) === JSON.stringify([...(v??[])].sort());
       if (!inv.complete || !inv.analysis_ready || inv.failed_category_count !== 0 || inv.metadata_missing_count !== 0 || inv.time_parse_missing_count !== 0) ledger.error("coverage","bet_channel",null,"最新BET CHANNELインベントリが完全取得・analysis_readyではない");
+      const health = c.self_audit;
+      if (!inv.self_audit || !["pass","pass_after_remediation"].includes(inv.self_audit.status) || inv.self_audit.requires_rescan || inv.self_audit.unresolved_blockers !== 0) ledger.error("self_audit","bet_channel",null,"BET CHANNEL自己監査が未解決または再取得要求のまま");
+      if (!health) ledger.error("self_audit","payload",null,"定時更新の自己監査・改善チェックが無い");
+      else {
+        if (health.inventory_status !== inv.self_audit?.status) ledger.error("self_audit","payload",null,"自己監査statusが実インベントリと一致しない");
+        if (health.inventory_self_audit_digest !== inv.self_audit?.digest) ledger.error("self_audit","payload",null,"自己監査digestが実インベントリと一致しない");
+        if (health.anomalies_found !== inv.self_audit?.anomaly_count) ledger.error("self_audit","payload",null,"異常検知件数が実インベントリと一致しない");
+        if (health.remediation_status !== inv.self_audit?.remediation_status) ledger.error("self_audit","payload",null,"改善/再取得状態が実インベントリと一致しない");
+        const fixA=[...(health.fixes_applied??[])].sort(), fixB=[...(inv.self_audit?.fixes_applied??[])].sort();
+        if (JSON.stringify(fixA)!==JSON.stringify(fixB)) ledger.error("self_audit","payload",null,"適用済み改善内容が実インベントリと一致しない");
+        if (health.unresolved_blockers !== 0 || inv.self_audit?.unresolved_blockers !== 0) ledger.error("self_audit","payload",null,"未解決blockerが残っている");
+        if (!health.checks_performed?.length) ledger.error("self_audit","payload",null,"自己監査チェック項目の実施証跡が無い");
+      }
       if (a?.inventory_digest !== inv.integrity?.digest) ledger.error("coverage","bet_channel",null,"payloadのinventory_digestが実インベントリと一致しない");
       if (a?.event_count !== inv.event_count || !sameIds(a?.event_ids,inv.event_ids)) ledger.error("coverage","bet_channel",null,"payloadの市場event一覧が実インベントリと一致しない");
       if (a?.analysis_card_count !== inv.analysis_card_count || !sameIds(a?.analysis_card_ids,inv.analysis_card_ids)) ledger.error("coverage","bet_channel",null,"payloadのcanonical card一覧が実インベントリと一致しない");
