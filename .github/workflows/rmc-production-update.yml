@@ -178,10 +178,11 @@ jobs:
           pages_sha=$(git rev-parse HEAD)
 
           # published 記録そのものも公開サイトへ載ったことを再確認
+          # 1 run の行数に依存する grep -A は使わず、JSONとして run_id と pages_result を照合する。
           verified=0
           for i in $(seq 1 60); do
             body=$(curl -fsS "$base/data/automation-runs.json?cb=$RANDOM" || true)
-            if printf '%s' "$body" | grep -q "\"run_id\": \"$RMC_RUN_ID\"" && printf '%s' "$body" | grep -A35 "\"run_id\": \"$RMC_RUN_ID\"" | grep -q "\"pages_result\": \"published\""; then
+            if BODY="$body" RUN_ID="$RMC_RUN_ID" node -e 'try{const j=JSON.parse(process.env.BODY);const r=(j.runs||[]).find(x=>x.run_id===process.env.RUN_ID);process.exit(r?.pages_result==="published"?0:1)}catch{process.exit(1)}'; then
               code=$(curl -s -o /dev/null -w '%{http_code}' "$base/analysis-v2.html?cb=$RANDOM")
               if [ "$code" = "200" ]; then verified=1; break; fi
             fi
