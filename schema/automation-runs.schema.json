@@ -298,6 +298,67 @@
                         "minimum": 0
                       }
                     }
+                  },
+                  "compound": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "balance",
+                      "stock",
+                      "cycles",
+                      "failures",
+                      "incomplete",
+                      "profit"
+                    ],
+                    "properties": {
+                      "balance": {
+                        "type": "number"
+                      },
+                      "stock": {
+                        "type": "number"
+                      },
+                      "cycles": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "failures": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "incomplete": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "profit": {
+                        "type": "number"
+                      }
+                    }
+                  },
+                  "quarter_kelly": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "balance",
+                      "profit",
+                      "bets",
+                      "skipped"
+                    ],
+                    "properties": {
+                      "balance": {
+                        "type": "number"
+                      },
+                      "profit": {
+                        "type": "number"
+                      },
+                      "bets": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "skipped": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    }
                   }
                 }
               },
