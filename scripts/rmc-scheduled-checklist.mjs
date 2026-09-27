@@ -122,11 +122,11 @@ const PASS_PREREQS={
 };
 function mark(run,id,status,detail){
   const c=run.checks[id-1]; if(!c)throw new Error("unknown check "+id);
-  if(status==="pass"&&PASS_PREREQS[id]){
+  if(["pass","fail"].includes(status)&&PASS_PREREQS[id]){
     const unmet=PASS_PREREQS[id].filter(x=>run.checks[x-1]?.status!=="pass");
     if(unmet.length){
       status="blocked";
-      detail=`PASS禁止: prerequisite未PASS #${unmet.join(",#")} ／ ${detail||"evidence not evaluated"}`;
+      detail=`前提未PASSのため評価不能 #${unmet.join(",#")} ／ ${detail||"evidence not evaluated"}`;
     }
   }
   c.status=status;c.detail=detail||null;c.checked_at=nowIso();
