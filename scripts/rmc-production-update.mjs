@@ -347,8 +347,16 @@ export function checkNext(current, next, payload, ledger, { schemas, cfg, now })
       for (const row of vmAfter[system]?.rows ?? []) {
         const beforeState = beforeRows.get(row.id)?.settlement?.state ?? null;
         const afterState = row.settlement?.state ?? null;
-        if (afterState === "loss" && beforeState !== "loss" && !supplied.has(row.id)) {
-          ledger.error("postmortem", system, row.id, "定時更新で新規敗戦が確定したのに同一更新内のpost-match reviewが無い");
+        if (afterState === "loss" && beforeState !== "loss") {
+          const review=(payload.post_match_reviews?.[system] ?? []).find(r=>r.pick_id===row.id);
+          if (!review) {
+            ledger.error("postmortem", system, row.id, "定時更新で新規敗戦が確定したのに同一更新内のpost-match reviewが無い");
+            continue;
+          }
+          const requiredText=["pre_match_hypothesis","actual_outcome_driver","probability_overestimate","clv_assessment","prevention_hypothesis"];
+          for (const k of requiredText) if (!review[k] || !String(review[k]).trim()) ledger.error("postmortem",system,row.id,`敗戦レビューの${k}が無い`);
+          if (!Array.isArray(review.missed_factors)) ledger.error("postmortem",system,row.id,"敗戦レビューのmissed_factors配列が無い");
+          if (!["variance","structural","mixed","unclear"].includes(review.variance_vs_structural)) ledger.error("postmortem",system,row.id,"敗戦レビューのvariance_vs_structuralが無い/不正");
         }
       }
     }
