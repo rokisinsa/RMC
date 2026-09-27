@@ -950,6 +950,24 @@
         }
       }
     },
-    "coverage_scope": "bet_channel_only"
+    "coverage_scope": "bet_channel_only",
+    "self_audit": {
+      "checked_at": "2026-09-27T06:50:00+09:00",
+      "inventory_status": "pass",
+      "inventory_self_audit_digest": "fixture-self-audit-digest-20260927",
+      "anomalies_found": 0,
+      "remediation_status": "not_needed",
+      "fixes_applied": [],
+      "unresolved_blockers": 0,
+      "checks_performed": [
+        "inventory completeness",
+        "count drift",
+        "id uniqueness",
+        "metadata completeness",
+        "time parsing",
+        "coverage consistency"
+      ],
+      "note": "test fixture only"
+    }
   }
 }
