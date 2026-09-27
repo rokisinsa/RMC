@@ -225,10 +225,19 @@ let fixedOddsStatus={
   const diagnosticHosts=new Set();
   const diagnosticBrandIds=new Set();
   const diagnosticSnippets=[];
+  const diagnosticWebSockets=new Set();
+  const diagnosticFailedRequests=[];
+  const diagnosticConsole=[];
   for(const probeUrl of probeUrls){
     const p=await ctx.newPage();
     p.setDefaultTimeout(12000);
     const hits=[];
+    p.on("websocket",ws=>diagnosticWebSockets.add(ws.url()));
+    p.on("requestfailed",req=>diagnosticFailedRequests.push({url:req.url(),failure:req.failure()?.errorText??null}));
+    p.on("console",msg=>{
+      const s=msg.text();
+      if(/betby|sptpub|brand|sport|geo|forbidden|location|api|socket/i.test(s)) diagnosticConsole.push(s.slice(0,2000));
+    });
     p.on("response",async resp=>{
       const u=resp.url();
       diagnosticResources.add(u);
@@ -304,6 +313,11 @@ let fixedOddsStatus={
     diagnostic_hosts:[...diagnosticHosts].filter(h=>/betby|invisible|sptpub|bet-channel/i.test(h)),
     diagnostic_script_urls:[...diagnosticScripts].slice(0,80),
     diagnostic_resource_urls:[...diagnosticResources].filter(u=>/betby|invisible|sptpub|api|sport/i.test(u)).slice(0,160),
+    diagnostic_all_hosts:[...diagnosticHosts].slice(0,120),
+    diagnostic_nonstatic_urls:[...diagnosticResources].filter(u=>!/[.](?:png|jpg|jpeg|gif|svg|webp|ico|woff2?|ttf|css)(?:[?#]|$)/i.test(u)).slice(0,240),
+    diagnostic_websocket_urls:[...diagnosticWebSockets].slice(0,80),
+    diagnostic_failed_requests:diagnosticFailedRequests.slice(0,80),
+    diagnostic_console:[...new Set(diagnosticConsole)].slice(0,80),
     diagnostic_snippets:[...new Set(diagnosticSnippets.filter(Boolean))].slice(0,20),
     rules_esports_detected:/eスポーツ特別ルール|esports related rules|eスポーツ/i.test(combined),
     supported_title_hints:titleHints,
