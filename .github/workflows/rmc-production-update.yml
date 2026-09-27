@@ -346,6 +346,7 @@ jobs:
           else
             node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$audit_run_id" --source "$audit_source" --start-sha "$audit_start_sha" --fail --detail "production workflow status=$JOB_STATUS; incomplete checks are blocked"
           fi
+          node scripts/validate-scheduled-checklist.mjs "$WORK/scheduled-update-checklist.json"
           cp "$WORK/scheduled-update-checklist.json" /tmp/rmc-run-checklist.json
 
           git config user.name "github-actions[bot]"
@@ -356,6 +357,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             node scripts/merge-scheduled-checklist.mjs --incoming /tmp/rmc-run-checklist.json --target data/scheduled-update-checklist.json --run-id "$audit_run_id"
+            node scripts/validate-scheduled-checklist.mjs data/scheduled-update-checklist.json
             git add data/scheduled-update-checklist.json
             if git diff --cached --quiet; then pushed=1; checklist_sha=$(git rev-parse HEAD); break; fi
             git commit -m "RMC 41-check audit: $audit_run_id"
@@ -394,3 +396,76 @@ jobs:
             done
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
+
+  audit-failsafe:
+    name: scheduled-audit-failsafe
+    needs: update
+    if: always() && needs.update.result != 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Persist scheduled failure even if primary job could not reach its final audit step
+        env:
+          PRIMARY_RESULT: ${{ needs.update.result }}
+        run: |
+          node <<'NODE'
+          const fs=require('fs'),cp=require('child_process'),path=require('path');
+          const ev=JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH,'utf8'));
+          let runId='',source='';
+          if(process.env.GITHUB_EVENT_NAME==='push'){
+            let files=[];
+            try{files=cp.execFileSync('git',['diff-tree','--no-commit-id','--name-only','-r',process.env.GITHUB_SHA],{encoding:'utf8'}).trim().split(/\r?\n/).filter(x=>/^incoming\/[^/]+\.json$/.test(x));}catch{}
+            if(files.length===1){
+              try{const p=JSON.parse(fs.readFileSync(files[0],'utf8'));runId=p.run_id||path.basename(files[0],'.json');source=p.source||'incoming push';}
+              catch{runId=path.basename(files[0],'.json');source='incoming push parse failure';}
+            }
+          } else if(process.env.GITHUB_EVENT_NAME==='workflow_dispatch'){
+            runId=ev.inputs?.run_id||'';source=ev.inputs?.source||'workflow_dispatch';
+          } else if(process.env.GITHUB_EVENT_NAME==='repository_dispatch'){
+            runId=ev.client_payload?.run_id||'';source=ev.client_payload?.source||'repository_dispatch';
+          }
+          const scheduled=/^rmc-\d{8}-(0600|1200|1800|2300)$/.test(runId);
+          fs.appendFileSync(process.env.GITHUB_ENV,`AUDIT_RUN_ID=${runId}\nAUDIT_SOURCE=${String(source).replace(/\n/g,' ')}\nAUDIT_SCHEDULED=${scheduled?'true':'false'}\n`);
+          console.log(JSON.stringify({runId,source,scheduled,primaryResult:process.env.PRIMARY_RESULT}));
+          NODE
+
+          [ "${AUDIT_SCHEDULED:-false}" = "true" ] || { echo "Not a scheduled RMC run; no fail-safe ledger entry required."; exit 0; }
+
+          # If the primary job already persisted this run, do not replace richer evidence.
+          git fetch origin main
+          git reset --hard origin/main
+          if RUN_ID="$AUDIT_RUN_ID" node -e 'const fs=require("fs");const p="data/scheduled-update-checklist.json";if(!fs.existsSync(p))process.exit(1);const j=JSON.parse(fs.readFileSync(p,"utf8"));process.exit((j.runs||[]).some(r=>r.run_id===process.env.RUN_ID&&r.finished_at)?0:1)'; then
+            echo "Primary job already persisted a completed failure record; fail-safe exits without overwriting it."
+            exit 0
+          fi
+
+          tmp=/tmp/rmc-failsafe-checklist.json
+          cp data/scheduled-update-checklist.json "$tmp"
+          node scripts/rmc-scheduled-checklist.mjs --file "$tmp" --run-id "$AUDIT_RUN_ID" --source "$AUDIT_SOURCE" --start-sha "$GITHUB_SHA" --fail --detail "primary production job failed before normal audit persistence; result=$PRIMARY_RESULT"
+          node scripts/validate-scheduled-checklist.mjs "$tmp"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/merge-scheduled-checklist.mjs --incoming "$tmp" --target data/scheduled-update-checklist.json --run-id "$AUDIT_RUN_ID"
+            node scripts/validate-scheduled-checklist.mjs data/scheduled-update-checklist.json
+            git add data/scheduled-update-checklist.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "RMC fail-safe 41-check audit: $AUDIT_RUN_ID"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "FAIL: could not persist fail-safe scheduled audit after 5 retries"
+          exit 1
+
