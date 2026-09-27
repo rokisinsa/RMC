@@ -102,6 +102,20 @@ test("2回目の定時更新（結果・締切・レビュー）：精算・CLV 
   assert.equal(fingerprint(DATA_DIR), liveBefore);
 });
 
+test("定時更新：新規カードはsource_event_idで全件走査→deep_diveまで追跡必須", () => {
+  const cases = [
+    p => { delete p.systems.recommendations.new_picks[0].source_event_id; },
+    p => { p.systems.value1.new_picks[0].source_event_id = "bc-not-in-inventory"; },
+    p => { p.systems.pro_edge.new_picks[0].source_event_id = "bc-00000000000000000005"; }
+  ];
+  for (const [i, mutateFn] of cases.entries()) {
+    const p = mutate(A, x => { x.run_id = `fixture-source-event-${i}`; mutateFn(x); });
+    const r = run(p, tempData(), NOW_A);
+    assert.ok(!r.ok, `case ${i}`);
+    assert.ok(cats(r).includes("traceability"), JSON.stringify(r.ledger.errors));
+  }
+});
+
 test("定時更新：新たな敗戦確定にpost-match reviewが無ければ拒否", () => {
   const dir = withA();
   const p = mutate(B, x => {
