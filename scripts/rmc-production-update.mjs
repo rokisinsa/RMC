@@ -340,7 +340,12 @@ export function checkNext(current, next, payload, ledger, { schemas, cfg, now })
         ledger.error("pl", system, r.id, `結果更新済みの試合 ${r.match.id} がこの系統では未精算のまま（${r.settlement.reason}）。①〜④の収支へ同時反映できていない`);
       }
       if (["win","loss"].includes(r.settlement.state) && r.settlement.stake != null && r.settlement.profit == null) {
-        ledger.warn("pl", system, r.id, "勝敗は確定したがexact oddsが無いため金額未計算。0円扱いせずamount_missingとして表示する");
+        const legacy = r.flags?.includes("legacy_import");
+        if (legacy) {
+          ledger.warn("pl", system, r.id, "旧移行カード：勝敗は確定したがexact oddsが無いため金額未計算。0円扱いせずamount_missingとして表示する");
+        } else {
+          ledger.error("pl", system, r.id, "新規の正式採用カードなのに結果確定後もexact odds/profitが無い。採用時オッズ→払戻し→損益→系統集計まで同じ更新内で確定するまで本番更新を拒否する");
+        }
       }
     }
   }
