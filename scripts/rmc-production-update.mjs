@@ -586,8 +586,8 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
         })
       };
     }
-    const systemAnalysis = {
-      schema_version: 1,
+    const analysisPath = join(dataDir, "system-analysis.json");
+    const runAnalysis = {
       meta: {
         run_id: payload.run_id,
         source: payload.source,
@@ -597,7 +597,22 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
       },
       systems
     };
-    const analysisPath = join(dataDir, "system-analysis.json");
+    let previousRuns = [];
+    if (existsSync(analysisPath)) {
+      try {
+        const prev = JSON.parse(readFileSync(analysisPath, "utf8"));
+        if (Array.isArray(prev.runs)) previousRuns = prev.runs;
+        else if (prev.meta?.run_id && prev.systems) previousRuns = [{ meta: prev.meta, systems: prev.systems }];
+      } catch {}
+    }
+    previousRuns = previousRuns.filter(r => r?.meta?.run_id !== payload.run_id);
+    previousRuns.push(runAnalysis);
+    const systemAnalysis = {
+      schema_version: 2,
+      meta: runAnalysis.meta,
+      systems: runAnalysis.systems,
+      runs: previousRuns.slice(-40)
+    };
     writes.push([analysisPath, JSON.stringify(systemAnalysis, null, 2) + "\n"]);
   }
 
