@@ -220,31 +220,54 @@ let fixedOddsStatus={
   const allBodies=[];
   const hitUrls=new Set();
   let geoBlocked=false;
+  const diagnosticResources=new Set();
+  const diagnosticScripts=new Set();
+  const diagnosticHosts=new Set();
+  const diagnosticBrandIds=new Set();
+  const diagnosticSnippets=[];
   for(const probeUrl of probeUrls){
     const p=await ctx.newPage();
     p.setDefaultTimeout(12000);
     const hits=[];
     p.on("response",async resp=>{
+      const u=resp.url();
+      diagnosticResources.add(u);
+      try{ diagnosticHosts.add(new URL(u).host); }catch{}
       const ct=(resp.headers()["content-type"]||"").toLowerCase();
       if(!ct.includes("json")) return;
       try{
         const j=await resp.json();
         const raw=JSON.stringify(j);
         if(/esport|counter.?strike|valorant|dota|league.?of.?legends|rainbow|honor.?of.?kings|king.?of.?glory|world.?of.?tanks|fortnite|starcraft|nba.?2k|ea.?sports.?fc|rocket.?league|overwatch|call.?of.?duty|pubg|mobile.?legends/i.test(raw)){
-          hits.push({url:resp.url(),sample:raw.slice(0,12000)});
-          hitUrls.add(resp.url());
+          hits.push({url:u,sample:raw.slice(0,12000)});
+          hitUrls.add(u);
         }
       }catch{}
     });
-    let body="";
+    let body="", html="";
     try{
       await p.goto(probeUrl,{waitUntil:"domcontentloaded",timeout:30000});
       await p.waitForTimeout(4500);
       body=clean(await p.locator("body").innerText()).slice(0,20000);
+      html=await p.content();
+      const scripts=await p.locator("script").evaluateAll(nodes=>nodes.map(s=>({src:s.src||"",text:(s.textContent||"").slice(0,50000)})));
+      for(const s of scripts){
+        if(s.src){ diagnosticScripts.add(s.src); diagnosticResources.add(s.src); try{diagnosticHosts.add(new URL(s.src).host);}catch{} }
+        const corpus=(s.text||"")+"\n"+html.slice(0,200000);
+        for(const m of corpus.matchAll(/(?:brand_id|brandId)\s*[:=]\s*["']?(\d{6,})/gi)) diagnosticBrandIds.add(m[1]);
+        if(/BTRenderer|invisiblesport|sptpub|betby/i.test(corpus)) diagnosticSnippets.push(corpus.match(/.{0,220}(?:BTRenderer|brand_id|brandId|invisiblesport|sptpub|betby).{0,420}/i)?.[0]||"");
+      }
+      const perf=await p.evaluate(()=>performance.getEntriesByType("resource").map(x=>x.name));
+      for(const u of perf){ diagnosticResources.add(u); try{diagnosticHosts.add(new URL(u).host);}catch{} }
     }catch(e){ body="ERROR "+String(e.message||e); }
     if(/Access is forbidden from your location|forbidden from your location/i.test(body)) geoBlocked=true;
-    allBodies.push(body);
-    console.log("FIXED_ODDS_ESPORTS_PROBE "+JSON.stringify({probeUrl,geoBlocked,body:body.slice(0,5000),hit_urls:hits.map(x=>x.url)}));
+    allBodies.push(body+"\n"+html.slice(0,200000));
+    console.log("FIXED_ODDS_ESPORTS_PROBE "+JSON.stringify({
+      probeUrl,geoBlocked,body:body.slice(0,5000),hit_urls:hits.map(x=>x.url),
+      brand_ids:[...diagnosticBrandIds],
+      hosts:[...diagnosticHosts].filter(h=>/betby|invisible|sptpub|bet-channel/i.test(h)),
+      resources:[...diagnosticResources].filter(u=>/betby|invisible|sptpub|api|sport/i.test(u)).slice(0,80)
+    }));
     await p.close();
   }
   const combined=allBodies.join("\n");
@@ -277,6 +300,11 @@ let fixedOddsStatus={
     event_count:0,
     event_ids:[],
     json_hit_urls:[...hitUrls],
+    diagnostic_brand_ids:[...diagnosticBrandIds],
+    diagnostic_hosts:[...diagnosticHosts].filter(h=>/betby|invisible|sptpub|bet-channel/i.test(h)),
+    diagnostic_script_urls:[...diagnosticScripts].slice(0,80),
+    diagnostic_resource_urls:[...diagnosticResources].filter(u=>/betby|invisible|sptpub|api|sport/i.test(u)).slice(0,160),
+    diagnostic_snippets:[...new Set(diagnosticSnippets.filter(Boolean))].slice(0,20),
     rules_esports_detected:/eスポーツ特別ルール|esports related rules|eスポーツ/i.test(combined),
     supported_title_hints:titleHints,
     complete:false,
