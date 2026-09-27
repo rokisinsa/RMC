@@ -236,8 +236,9 @@ jobs:
           # 1 run の行数に依存する grep -A は使わず、JSONとして run_id と pages_result を照合する。
           verified=0
           for i in $(seq 1 60); do
-            body=$(curl -fsS "$base/data/automation-runs.json?cb=$RANDOM" || true)
-            if BODY="$body" RUN_ID="$RMC_RUN_ID" node -e 'try{const j=JSON.parse(process.env.BODY);const r=(j.runs||[]).find(x=>x.run_id===process.env.RUN_ID);process.exit(r?.pages_result==="published"?0:1)}catch{process.exit(1)}'; then
+            rm -f /tmp/rmc-public-runs.json
+            curl -fsS "$base/data/automation-runs.json?cb=$RANDOM" -o /tmp/rmc-public-runs.json || true
+            if [ -s /tmp/rmc-public-runs.json ] && RUN_ID="$RMC_RUN_ID" node -e 'try{const j=JSON.parse(require("fs").readFileSync("/tmp/rmc-public-runs.json","utf8"));const r=(j.runs||[]).find(x=>x.run_id===process.env.RUN_ID);process.exit(r?.pages_result==="published"?0:1)}catch{process.exit(1)}'; then
               code=$(curl -s -o /dev/null -w '%{http_code}' "$base/analysis-v2.html?cb=$RANDOM")
               if [ "$code" = "200" ]; then verified=1; break; fi
             fi
