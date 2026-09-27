@@ -84,3 +84,23 @@ test("RMC V2は41項目台帳を読み、FAIL時に新規判断禁止を表示�
   assert.match(src,/新規判断に使用禁止/);
   assert.match(src,/定時更新41項目の監査結果を表示/);
 });
+
+
+test("定時41項目: 前提未PASSの空集合チェックを見かけ上PASSにしない",()=>{
+  const {run}=makeRun();
+  mark(run,1,"pass","start");
+  mark(run,2,"pass","legacy");
+  mark(run,3,"fail","fixed missing");
+  mark(run,4,"fail","routes unavailable");
+  mark(run,5,"fail","union incomplete");
+  mark(run,15,"fail","coverage unavailable");
+  mark(run,16,"pass","eligible category 0");
+  mark(run,17,"pass","zero violations");
+  mark(run,24,"fail","existing cards not rechecked");
+  mark(run,25,"pass","0 overdue matches");
+  mark(run,26,"pass","all identities ok");
+  assert.equal(run.checks[15].status,"blocked");
+  assert.equal(run.checks[16].status,"blocked");
+  assert.equal(run.checks[24].status,"blocked");
+  assert.equal(run.checks[25].status,"blocked");
+});
