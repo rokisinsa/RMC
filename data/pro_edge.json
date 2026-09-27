@@ -45,7 +45,162 @@
       "started_at": "2026-09-27T00:21:00+09:00",
       "slot": "23:00",
       "note": "mechanism test"
+    },
+    {
+      "run_id": "pe-rmc-20260927-bc-202609271444",
+      "started_at": "2026-09-27T14:44:07.844+09:00",
+      "slot": "12:00",
+      "note": "BET CHANNEL最新screening_event_ids 186件をpro_edgeロジックで独立全件一次走査。共通候補プール不使用。"
     }
   ],
-  "picks": []
+  "picks": [
+    {
+      "id": "pe-202609271444-seahawks",
+      "system": "pro_edge",
+      "match_id": "2026-09-28-commanders-seahawks",
+      "run_id": "pe-rmc-20260927-bc-202609271444",
+      "analysis_id": "pe-an-202609271444-seahawks",
+      "market": "match_1x2",
+      "selection": "side_b",
+      "selection_label": "シーホークス",
+      "discovered_at": "2026-09-27T14:44:07.844+09:00",
+      "locked_at": "2026-09-27T14:44:07.844+09:00",
+      "bet_at": null,
+      "live": false,
+      "price_snapshots": [
+        {
+          "snapshot_id": "ps-bc-220230-202609271444",
+          "kind": "analysis",
+          "bookmaker": "BET CHANNEL",
+          "market": "match_1x2",
+          "outcomes": {
+            "side_a": 3.97,
+            "side_b": 1.29,
+            "draw": 30.44
+          },
+          "observed_at": "2026-09-27T14:33:16.617+09:00",
+          "source": "BET CHANNEL event 220230"
+        }
+      ],
+      "bet_odds": null,
+      "bet_bookmaker": null,
+      "stake": null,
+      "locked": {
+        "decision": "watch",
+        "decision_reason": "計算EVは3%基準を上回るが、2026序盤2試合のみで独立モデルの校正サンプルが不足するため監視。",
+        "required_ev": 0.03,
+        "market_reference": {
+          "snapshot_ids": [
+            "ps-bc-220230-202609271444"
+          ],
+          "method": "single_book"
+        },
+        "offered_price": {
+          "snapshot_id": "ps-bc-220230-202609271444"
+        },
+        "model": {
+          "model_id": "rmc-nfl-rating-logistic",
+          "model_version": "0.1",
+          "sport_module": "other",
+          "method": "rating_logistic",
+          "trained_through": "2026-09-26T23:59:00+09:00"
+        },
+        "base_probability": 0.782,
+        "expert_adjustments": [
+          {
+            "adjustment_value": 0.033,
+            "category": "absence",
+            "reason": "Washington starting QB Jayden Daniels OUT; Marcus Mariota starts",
+            "source": "https://www.nfl.com/news/marcus-mariota-commanders-week-3-qb-jayden-daniels-elbow",
+            "created_at": "2026-09-27T14:44:07.844+09:00"
+          },
+          {
+            "adjustment_value": -0.01,
+            "category": "absence",
+            "reason": "Seattle starting safeties Julian Love and Ty Okada OUT",
+            "source": "https://www.seahawks.com/news/week-3-injury-report-seahawks-vs-commanders",
+            "created_at": "2026-09-27T14:44:07.844+09:00"
+          }
+        ],
+        "features": [
+          {
+            "name": "recent6_record",
+            "status": "present",
+            "value": {
+              "seattle": "2-0",
+              "washington": "0-2"
+            },
+            "observed_at": "2026-09-27T14:44:07.844+09:00",
+            "source": "https://www.seahawks.com/news/week-3-injury-report-seahawks-vs-commanders",
+            "note": "2026 Week 2終了時点のスタート"
+          },
+          {
+            "name": "lineup_today",
+            "status": "present",
+            "value": {
+              "seattle_qb": "Sam Darnold ready",
+              "washington_qb": "Marcus Mariota start"
+            },
+            "observed_at": "2026-09-27T14:44:07.844+09:00",
+            "source": "https://www.seahawks.com/news/week-3-injury-report-seahawks-vs-commanders",
+            "note": null
+          },
+          {
+            "name": "absences",
+            "status": "present",
+            "value": {
+              "seattle": [
+                "Julian Love",
+                "Ty Okada"
+              ],
+              "washington": [
+                "Jayden Daniels",
+                "Sam Cosmi",
+                "Nick Cross",
+                "Frankie Luvu",
+                "Chigoziem Okonkwo"
+              ]
+            },
+            "observed_at": "2026-09-27T14:44:07.844+09:00",
+            "source": "https://www.seahawks.com/news/week-3-injury-report-seahawks-vs-commanders",
+            "note": null
+          },
+          {
+            "name": "venue_role",
+            "status": "present",
+            "value": "Washington home / Seattle away",
+            "observed_at": "2026-09-27T14:44:07.844+09:00",
+            "source": "https://www.commanders.com/news/game-status-commanders-seahawks-week-3",
+            "note": null
+          },
+          {
+            "name": "rating",
+            "status": "missing",
+            "value": null,
+            "observed_at": null,
+            "source": null,
+            "note": "独立の校正済み長期ratingは今回取得できず"
+          }
+        ],
+        "data_confidence": "medium",
+        "price_gap_factors": [
+          "starting_qb_absence",
+          "team_start_2_0_vs_0_2",
+          "returning_seattle_qb"
+        ],
+        "disagreement_reasons": [
+          "early_season_small_sample",
+          "seattle_secondary_absences"
+        ],
+        "missing_information": [
+          "calibrated_multi_season_independent_rating",
+          "closing_price"
+        ],
+        "summary": "④は市場確率をbaseへコピーせず、①②③とも別の独立base78.2%から開始。当日欠場補正+2.3pt後のfinal80.5%。計算EVはプラスだが校正サンプル不足のためwatch。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "④PRO EDGE独立186件走査。"
+    }
+  ]
 }

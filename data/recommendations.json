@@ -51,6 +51,12 @@
       "started_at": "2026-09-27T00:21:00+09:00",
       "slot": "23:00",
       "note": "mechanism test"
+    },
+    {
+      "run_id": "rec-rmc-20260927-bc-202609271444",
+      "started_at": "2026-09-27T14:44:07.844+09:00",
+      "slot": "12:00",
+      "note": "BET CHANNEL最新screening_event_ids 186件をrecommendationsロジックで独立全件一次走査。共通候補プール不使用。"
     }
   ],
   "picks": [
@@ -1964,6 +1970,70 @@
       "settlement_override": null,
       "flags": [],
       "note": "完全分析試走の正式推奨。"
+    },
+    {
+      "id": "rec-202609271444-nagoyad",
+      "system": "recommendations",
+      "match_id": "2026-09-27-kawasaki-nagoyad",
+      "run_id": "rec-rmc-20260927-bc-202609271444",
+      "market": "match_1x2",
+      "market_label": "BET CHANNEL 3-way 最終結果",
+      "selection": "side_b",
+      "selection_label": "名古屋ダイヤモンドドルフィンズ",
+      "market_odds": {
+        "text": "川崎 6.32 / 名古屋D 1.18 / 引分 21.16",
+        "min": 1.18,
+        "max": 1.18,
+        "observed_at": "2026-09-27T14:33:16.617+09:00",
+        "source": "BET CHANNEL event 220570"
+      },
+      "odds_taken": 1.18,
+      "stake": 100,
+      "discovered_at": "2026-09-27T14:44:07.844+09:00",
+      "bet_at": "2026-09-27T14:44:07.844+09:00",
+      "locked_at": "2026-09-27T14:44:07.844+09:00",
+      "locked": {
+        "prob": 0.86,
+        "gap_score": 90,
+        "confidence": "medium-high",
+        "model_version": "rmc-rec-bc-20260927",
+        "summary": "名古屋Dは川崎との直近7対戦を連勝し、前日も93-63。H2Hと直近同会場結果を重視。ただし当日欠場情報未取得のため86%推定に抑制。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "①独立全186件走査から採用。$100想定取引。"
+    },
+    {
+      "id": "rec-202609271444-seahawks",
+      "system": "recommendations",
+      "match_id": "2026-09-28-commanders-seahawks",
+      "run_id": "rec-rmc-20260927-bc-202609271444",
+      "market": "match_1x2",
+      "market_label": "BET CHANNEL 3-way 最終結果",
+      "selection": "side_b",
+      "selection_label": "シーホークス",
+      "market_odds": {
+        "text": "Commanders 3.97 / Seahawks 1.29 / Draw 30.44",
+        "min": 1.29,
+        "max": 1.29,
+        "observed_at": "2026-09-27T14:33:16.617+09:00",
+        "source": "BET CHANNEL event 220230"
+      },
+      "odds_taken": 1.29,
+      "stake": 100,
+      "discovered_at": "2026-09-27T14:44:07.844+09:00",
+      "bet_at": "2026-09-27T14:44:07.844+09:00",
+      "locked_at": "2026-09-27T14:44:07.844+09:00",
+      "locked": {
+        "prob": 0.81,
+        "gap_score": 84,
+        "confidence": "medium-high",
+        "model_version": "rmc-rec-nfl-20260927",
+        "summary": "Seattle 2-0対Washington 0-2。Darnold復帰、Daniels欠場・Mariota先発とWashington複数主力OUTを重視。Seattle側S2人OUTをリスク控除。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "①独立全186件走査から採用。$100想定取引。"
     }
   ]
 }

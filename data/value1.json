@@ -51,6 +51,12 @@
       "started_at": "2026-09-27T00:21:00+09:00",
       "slot": "23:00",
       "note": "mechanism test"
+    },
+    {
+      "run_id": "v1-rmc-20260927-bc-202609271444",
+      "started_at": "2026-09-27T14:44:07.844+09:00",
+      "slot": "12:00",
+      "note": "BET CHANNEL最新screening_event_ids 186件をvalue1ロジックで独立全件一次走査。共通候補プール不使用。"
     }
   ],
   "excluded_log": [],
@@ -677,6 +683,43 @@
       "settlement_override": null,
       "flags": [],
       "note": "VALUE①独立判定。"
+    },
+    {
+      "id": "v1-202609271444-seahawks",
+      "system": "value1",
+      "match_id": "2026-09-28-commanders-seahawks",
+      "run_id": "v1-rmc-20260927-bc-202609271444",
+      "market": "match_1x2",
+      "market_label": "BET CHANNEL 3-way 最終結果",
+      "selection": "side_b",
+      "selection_label": "シーホークス",
+      "market_odds": {
+        "text": "Seahawks 1.29",
+        "min": 1.29,
+        "max": 1.29,
+        "observed_at": "2026-09-27T14:33:16.617+09:00",
+        "source": "BET CHANNEL event 220230"
+      },
+      "odds_taken": 1.29,
+      "stake": 100,
+      "discovered_at": "2026-09-27T14:44:07.844+09:00",
+      "bet_at": "2026-09-27T14:44:07.844+09:00",
+      "locked_at": "2026-09-27T14:44:07.844+09:00",
+      "locked": {
+        "verdict": "formal",
+        "prob_lo": 0.79,
+        "prob_hi": 0.83,
+        "prob_point": 0.81,
+        "required_prob": 0.775194,
+        "ev_lo": 0.0191,
+        "ev_hi": 0.0707,
+        "gap_score": 82,
+        "model_version": "rmc-v1-nfl-20260927",
+        "summary": "必要勝率77.52%。VALUE①独立推定79-83%。Seattle 2-0、Washington 0-2、Daniels OUT/Mariota先発、Darnold復帰。ただしSeattle先発S2人OUTを反映。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "②VALUE①独立186件走査。正式VALUE。"
     }
   ]
 }
