@@ -156,7 +156,7 @@ jobs:
               node scripts/rmc-production-update.mjs --payload "$WORK/payload.json" --apply --start-sha "$latest_sha" --report "$WORK/retry-apply-$attempt.json"
               node scripts/rmc-production-update.mjs --check-diff
               npm test
-              node scripts/verify-baseline.mjs
+              node scripts/snapshot-manifest.js verify
               npm run validate:data
               npm run audit
             fi
