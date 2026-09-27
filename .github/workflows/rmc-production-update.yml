@@ -126,10 +126,6 @@ jobs:
         if: env.RMC_DRY_RUN != 'true'
         run: npm test
 
-      - name: 5b. 定時監査：全tests PASS
-        if: env.RMC_DRY_RUN != 'true' && env.RMC_IS_SCHEDULED == 'true'
-        run: node scripts/rmc-scheduled-checklist.mjs --file "$WORK/scheduled-update-checklist.json" --run-id "$RMC_RUN_ID" --phase tests --detail "npm test PASS"
-
       - name: 6. 移行スナップショットの不変性
         if: env.RMC_DRY_RUN != 'true'
         run: node scripts/snapshot-manifest.js verify
@@ -151,6 +147,11 @@ jobs:
         run: |
           node scripts/rehearsal.js rehearsals/RMC-20260926-REHEARSAL-01
           git checkout -- rehearsals
+
+      - name: 10b. 定時監査：全検査・テスト PASS
+        if: env.RMC_DRY_RUN != 'true' && env.RMC_IS_SCHEDULED == 'true'
+        run: |
+          node scripts/rmc-scheduled-checklist.mjs             --file "$WORK/scheduled-update-checklist.json"             --run-id "$RMC_RUN_ID"             --phase tests             --detail "npm test + snapshot + validate-data + locked + audit + rehearsal PASS"
 
       - name: 11. 実行記録に全テスト PASS を記録し、変更ファイルを再検査
         if: env.RMC_DRY_RUN != 'true'
