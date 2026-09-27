@@ -70,6 +70,7 @@ const paths = {
   value2:"data/value2.json",
   pro_edge:"data/pro_edge.json",
   system_analysis:"data/system-analysis.json",
+  complete_summary:"data/bet-channel-complete-summary.json",
   legacy_unassigned:"data/legacy-unassigned.json",
   legacy_analysis_recommendations:"data/legacy-analysis/recommendations.json",
   legacy_analysis_value1:"data/legacy-analysis/value1.json",
@@ -96,6 +97,25 @@ const cfg=await getJson(base,"config/pro-edge.config.json");
 const automation=await getJson(base,"data/automation-runs.json");
 const vm=buildViewModel(ds,{proEdgeConfig:cfg});
 const actual=profitAuditSnapshot(vm);
+const complete=ds.complete_summary;
+const sysAnalysis=ds.system_analysis;
+if (!complete || complete.complete!==true || complete.analysis_ready!==true || complete.menu_end_verified!==true || (complete.self_audit?.unresolved_blockers??1)!==0) {
+  fail("public complete-summary is not complete");
+}
+if (!sysAnalysis || sysAnalysis.meta?.run_id!==runId) {
+  fail(`public system-analysis run_id mismatch: expected ${runId}, got ${sysAnalysis?.meta?.run_id??"missing"}`);
+}
+const expectedCats=[...new Set((complete.category_keys??[]).map(String))].sort();
+for (const system of ["recommendations","value1","value2","pro_edge"]) {
+  const got=[...new Set((sysAnalysis.systems?.[system]?.sport_coverage??[]).map(x=>String(x.category_key??x.category??"")))].sort();
+  if (JSON.stringify(got)!==JSON.stringify(expectedCats)) {
+    fail(`public system-analysis ${system} category coverage mismatch: ${got.length}/${expectedCats.length}`);
+  }
+}
+const fixedCount=complete.component_status?.fixed_odds?.screening_event_count??0;
+if (fixedCount<=0) fail("public complete-summary has zero fixed-odds/eSports screening events");
+console.log(`PUBLIC_SYSTEM_ANALYSIS_OK run=${runId} categories=${expectedCats.length} fixed_esports=${fixedCount}`);
+
 const rec=(automation.runs||[]).find(x=>x.run_id===runId);
 if (!rec) fail(`automation run ${runId} not found on public Pages`);
 if (!close(actual,rec.profit_audit)) {
