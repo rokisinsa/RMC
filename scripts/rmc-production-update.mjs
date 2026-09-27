@@ -149,6 +149,12 @@ export function applyPayload(current, payload, ledger) {
       if (keys.has(key)) { ledger.reject("duplicate", system, p.id, `同じ系統に同じ試合・市場・選択のカード ${keys.get(key)} がある（重複登録しない）`); continue; }
       const ownRuns = new Set([...data.discovery_runs.map(r => r.run_id)]);
       if (DISCOVERY.includes(system) && !ownRuns.has(p.run_id)) { ledger.reject("independence", system, p.id, `run_id ${p.run_id} はこの系統の探索回ではない（他系統の候補の流用・振り分けは不可）`); continue; }
+      const formalPriceMissing =
+        (system === "recommendations" && p.stake != null && p.odds_taken == null) ||
+        (system === "value1" && p.locked?.verdict === "formal" && p.odds_taken == null) ||
+        (system === "value2" && p.locked?.verdict === "adopted" && p.odds_taken == null) ||
+        (system === "pro_edge" && p.locked?.decision === "accepted" && (p.bet_odds == null || p.stake == null));
+      if (formalPriceMissing) { ledger.reject("pl", system, p.id, "正式採用なのにexact odds/stakeが無い。結果確定後の収益を正確に計算できないため登録しない"); continue; }
       keys.set(key, p.id);
       data.picks.push(clone(p));
       ledger.add("added", system, p.id, "新規カード");
@@ -305,8 +311,13 @@ export function checkNext(current, next, payload, ledger, { schemas, cfg, now })
   // 損益の整合：試合事実が変わっていないカードの精算は変わらない／集計は各カードの精算と一致／CLV は式どおり
   const vmBefore = buildViewModel(clone(current), { proEdgeConfig: cfg, now });
   const vmAfter = buildViewModel(clone(next), { proEdgeConfig: cfg, now });
-  const effBefore = new Map(applyMatchUpdates(current.matches, current.match_updates).matches.map(m => [m.id, JSON.stringify(m)]));
-  const effAfter = new Map(applyMatchUpdates(next.matches, next.match_updates).matches.map(m => [m.id, JSON.stringify(m)]));
+  const effectiveBeforeMatches = applyMatchUpdates(current.matches, current.match_updates).matches;
+  const effectiveAfterMatches = applyMatchUpdates(next.matches, next.match_updates).matches;
+  const effBefore = new Map(effectiveBeforeMatches.map(m => [m.id, JSON.stringify(m)]));
+  const effAfter = new Map(effectiveAfterMatches.map(m => [m.id, JSON.stringify(m)]));
+  const effAfterObj = new Map(effectiveAfterMatches.map(m => [m.id, m]));
+  const changedResultMatchIds = new Set((payload.result_updates ?? []).flatMap(r => (r.changes ?? [])
+    .filter(c => "result" in (c.set ?? {}) || "status" in (c.set ?? {})).map(c => c.match_id)));
   const plChanges = [];
   for (const s of PICK_SYSTEMS) {
     const after = new Map(vmAfter[s].rows.map(r => [r.id, r]));
@@ -320,6 +331,20 @@ export function checkNext(current, next, payload, ledger, { schemas, cfg, now })
       else plChanges.push({ system: s, id: r.id, before: pickPl(r.settlement), after: pickPl(a.settlement) });
     }
   }
+  // 結果を確定した試合は、①〜④の該当カード全部が同じ更新内で精算へ移ること。
+  // final/void系なのにpendingのままなら、どこかの収支だけ古い状態になるため本番拒否。
+  for (const system of DISCOVERY) {
+    for (const r of vmAfter[system].rows.filter(x => changedResultMatchIds.has(x.match?.id))) {
+      const m = effAfterObj.get(r.match?.id);
+      if (m && ["final","cancelled","postponed","abandoned"].includes(m.status) && r.settlement.state === "pending") {
+        ledger.error("pl", system, r.id, `結果更新済みの試合 ${r.match.id} がこの系統では未精算のまま（${r.settlement.reason}）。①〜④の収支へ同時反映できていない`);
+      }
+      if (["win","loss"].includes(r.settlement.state) && r.settlement.stake != null && r.settlement.profit == null) {
+        ledger.warn("pl", system, r.id, "勝敗は確定したがexact oddsが無いため金額未計算。0円扱いせずamount_missingとして表示する");
+      }
+    }
+  }
+
   for (const [name, sum, rows] of summaryTargets(vmAfter)) {
     const own = rows.map(r => r.settlement);
     const net = own.filter(x => ["win", "loss"].includes(x.state) && x.profit != null).reduce((t, x) => t + x.profit, 0);
@@ -350,10 +375,25 @@ function summaryTargets(vm) {
   return [
     ["recommendations", vm.recommendations.summary, vm.recommendations.rows],
     ["experience", vm.experience.summary, vm.experience.rows],
-    ["value1 本成績", vm.value1.official, off(vm.value1, "official")], ["value1 参考", vm.value1.reference, off(vm.value1, "reference")],
-    ["value2 本成績", vm.value2.official, off(vm.value2, "official")], ["value2 参考", vm.value2.reference, off(vm.value2, "reference")],
-    ["pro_edge 本成績", vm.pro_edge.official, off(vm.pro_edge, "official")], ["pro_edge 参考", vm.pro_edge.reference, off(vm.pro_edge, "reference")],
+    ["value1 本成績", vm.value1.official, off(vm.value1, "official")], ["value1 監視", vm.value1.reference, off(vm.value1, "reference")],
+    ["value2 本成績", vm.value2.official, off(vm.value2, "official")], ["value2 監視", vm.value2.reference, off(vm.value2, "reference")],
+    ["pro_edge 本成績", vm.pro_edge.official, off(vm.pro_edge, "official")], ["pro_edge 監視", vm.pro_edge.reference, off(vm.pro_edge, "reference")],
   ];
+}
+function auditSummary(s) {
+  return {
+    count:s.count, settled_games:s.settledGames, wins:s.wins, losses:s.losses, pending:s.pending,
+    settled_stake:s.settledStake, net_profit:s.netProfit, roi:s.roi, amount_missing:s.amountMissing
+  };
+}
+function profitAuditSnapshot(vm) {
+  const zero={count:0,settledGames:0,wins:0,losses:0,pending:0,settledStake:0,netProfit:0,roi:null,amountMissing:0};
+  return {
+    recommendations:{official:auditSummary(vm.recommendations.summary),watch:auditSummary(zero)},
+    value1:{official:auditSummary(vm.value1.official),watch:auditSummary(vm.value1.reference)},
+    value2:{official:auditSummary(vm.value2.official),watch:auditSummary(vm.value2.reference)},
+    pro_edge:{official:auditSummary(vm.pro_edge.official),watch:auditSummary(vm.pro_edge.reference)}
+  };
 }
 
 // ── ファイルへの書き込み（既存の書式を崩さない。意味の無い差分を作らない） ─────────────
@@ -555,6 +595,7 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
     start_sha: startSha, end_sha: null, systems_checked: [...PICK_SYSTEMS], cards_checked: cardsChecked,
     results_updated: stats.results_updated, metadata_updated: stats.metadata_updated, new_candidates: stats.new_candidates,
     accepted: stats.accepted, watch: stats.watch, rejected: stats.rejected, postmortems_created: stats.postmortems_created,
+    profit_audit: profitAuditSnapshot(vmAfter),
     validation_result: "pass", actions_result: "pending", pages_result: "pending", coverage_audit: payload.coverage_audit ?? null, note: payload.note ?? null,
   };
   const ok = ledger.errors.length === 0;
@@ -672,7 +713,13 @@ export function formatReport(r, { apply }) {
     if (a + u + n + x) out.push(`    ${s}: 追加 ${a} / 更新 ${u} / 変更なし ${n} / 拒否 ${x}`);
   }
   if (r.vmBefore && r.vmAfter) {
-    out.push("  損益差分（本成績・参考成績。確定分）：");
+    out.push("  ①〜④ 現在の収支（正式採用・計算可能な確定分）：");
+    const pa=profitAuditSnapshot(r.vmAfter);
+    for (const [label,key] of [["①推奨","recommendations"],["②VALUE①","value1"],["③VALUE②","value2"],["④PRO EDGE","pro_edge"]]) {
+      const x=pa[key].official;
+      out.push(`    ${label}: ${x.wins}勝${x.losses}敗 ${money(x.net_profit)} ROI ${x.roi==null?"—":x.roi.toFixed(2)+"%"} / 金額未計算${x.amount_missing}件 / 未確定${x.pending}件`);
+    }
+    out.push("  損益差分（正式採用・監視。確定分）：");
     for (const [[name, b], [, a]] of summaryTargets(r.vmBefore).map((x, i) => [x, summaryTargets(r.vmAfter)[i]])) {
       if (b.count === a.count && b.netProfit === a.netProfit && b.pending === a.pending && b.wins === a.wins && b.losses === a.losses) continue;
       out.push(`    ${name}: ${b.wins}勝${b.losses}敗 ${money(b.netProfit)} ROI ${b.roi == null ? "—" : b.roi.toFixed(2) + "%"} 未確定${b.pending} → ${a.wins}勝${a.losses}敗 ${money(a.netProfit)} ROI ${a.roi == null ? "—" : a.roi.toFixed(2) + "%"} 未確定${a.pending}（件数 ${b.count}→${a.count}）`);
