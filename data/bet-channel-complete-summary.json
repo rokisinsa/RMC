@@ -1,9 +1,10 @@
 {
   "schema_version": 1,
-  "source": "BET CHANNEL",
-  "source_url": "https://bet-channel.com/matches?lang=ja",
+  "source": "BET CHANNEL complete union (legacy /matches + fixed-odds/Betby eSports)",
+  "source_url": "https://bet-channel.com/",
   "checked_at": "2026-09-27T22:12:15.528+09:00",
-  "menu_end_verified": true,
+  "generated_at": "2026-09-27T22:13:48.184+09:00",
+  "menu_end_verified": false,
   "category_count": 105,
   "category_keys": [
     "1:本日のイベント",
@@ -323,9 +324,9 @@
   "failed_category_count": 0,
   "metadata_missing_count": 0,
   "time_parse_missing_count": 0,
-  "complete": true,
-  "analysis_ready": true,
-  "inventory_digest": "353ed626536364c75329",
+  "complete": false,
+  "analysis_ready": false,
+  "inventory_digest": "044a0a76364c5035ea3b",
   "analysis_card_count": 30,
   "analysis_card_ids": [
     "bc-465dc4f5434b31d4bf5b",
@@ -509,6 +510,8 @@
   ],
   "priority_12h_event_count": 38,
   "priority_12h_event_ids": [
+    "220386",
+    "220387",
     "220222",
     "220223",
     "220224",
@@ -518,21 +521,24 @@
     "220228",
     "220229",
     "220230",
-    "220231",
-    "220386",
-    "220387",
-    "220388",
-    "220389",
-    "220518",
-    "220519",
     "220520",
     "220521",
+    "220546",
+    "220547",
+    "220388",
+    "220389",
+    "220649",
+    "220518",
+    "220519",
     "220522",
     "220523",
     "220524",
     "220525",
     "220526",
     "220527",
+    "220593",
+    "220594",
+    "220595",
     "220528",
     "220529",
     "220530",
@@ -541,48 +547,61 @@
     "220535",
     "220540",
     "220541",
-    "220546",
-    "220547",
-    "220593",
-    "220594",
-    "220595",
-    "220649"
+    "220231"
   ],
-  "screening_digest": "bdf017bc4aa3dcdb9e15",
+  "screening_digest": "bf0fc57c8f54d1b89c9d",
+  "component_status": {
+    "legacy": {
+      "checked_at": "2026-09-27T22:12:15.528+09:00",
+      "complete": true,
+      "event_count": 205,
+      "screening_event_count": 143
+    },
+    "fixed_odds": {
+      "checked_at": null,
+      "complete": false,
+      "event_count": 0,
+      "screening_event_count": 0,
+      "source_machine": null
+    }
+  },
   "self_audit": {
-    "status": "pass",
-    "digest": "92974fd97111fed66442",
-    "anomaly_count": 0,
-    "blocker_count": 0,
+    "status": "blocked",
+    "digest": "aa9470f743a1a2081afc",
+    "anomaly_count": 1,
+    "blocker_count": 1,
     "warning_count": 0,
-    "remediation_status": "not_needed",
+    "remediation_status": "required",
     "fixes_applied": [],
     "checks_run": [
-      "category_nonzero",
-      "screening_nonzero",
-      "category_fetch_failures",
-      "metadata_completeness",
-      "time_parse",
-      "event_id_uniqueness",
-      "category_uniqueness",
-      "category_count_integrity",
-      "screening_id_integrity",
-      "screening_category_sum",
-      "priority_subset",
-      "previous_screening_drop",
-      "previous_category_drop"
+      "legacy_complete",
+      "fixed_odds_complete",
+      "menu_end_verified",
+      "event_id_union_unique",
+      "screening_union_unique",
+      "component_freshness_checked_by_production_gate",
+      "analysis_card_union"
     ],
-    "unresolved_blockers": 0
+    "unresolved_blockers": 1,
+    "blockers": [
+      "fixed_odds_incomplete"
+    ],
+    "warnings": []
+  },
+  "integrity": {
+    "digest": "044a0a76364c5035ea3b",
+    "screening_digest": "bf0fc57c8f54d1b89c9d",
+    "event_count_matches_ids": true,
+    "screening_event_count_matches_ids": true,
+    "category_keys_complete": true,
+    "priority_12h_is_subset": true
   },
   "stats": {
     "priced_event_count": 72,
     "unpriced_event_count": 71,
-    "future_or_upcoming_count": 129,
-    "start_time_passed_count": 14,
     "primary_h2h_count": 45,
-    "prop_or_special_count": 40,
-    "multi_outcome_or_futures_count": 34,
-    "priority_12h_priced_count": 28
+    "fixed_odds_event_count": 0,
+    "legacy_screening_event_count": 143
   },
   "events": [
     {
