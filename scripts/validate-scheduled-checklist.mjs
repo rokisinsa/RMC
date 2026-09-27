@@ -8,6 +8,14 @@ let db;
 try{db=JSON.parse(fs.readFileSync(file,"utf8"));}catch(e){console.error("scheduled-checklist validation FAIL: unreadable JSON",e.message);process.exit(1);}
 if(db.schema_version!==1)fail("schema_version must be 1");
 if(!Array.isArray(db.runs))fail("runs must be array");
+const PREREQS={
+  10:[5],11:[5],12:[5],13:[5],
+  14:[5,10,11,12,13],15:[5,14],16:[5,14,15],17:[16],
+  18:[5,14],19:[5,14],20:[5,14],21:[3,4,5,9,16],22:[5,14],23:[5,14],
+  25:[24],26:[25],27:[24,25,26],
+  30:[24,27,28,29],31:[24,27,28,29],32:[24,27,28,29],33:[24,27,28,29],34:[24,25],
+  37:Array.from({length:36},(_,i)=>i+1),38:[37],39:[38],40:[39]
+};
 const ids=new Set();
 for(const r of db.runs||[]){
   if(!r||typeof r!=="object"){fail("run must be object");continue;}
@@ -22,6 +30,11 @@ for(const r of db.runs||[]){
   for(const c of r.checks){
     if(!["pending","pass","fail","blocked"].includes(c.status))fail(`${r.run_id} #${c.id}: invalid status`);
     if(typeof c.title!=="string"||!c.title.trim())fail(`${r.run_id} #${c.id}: missing title`);
+  }
+  for(const [idText,deps] of Object.entries(PREREQS)){
+    const id=Number(idText), c=r.checks[id-1];
+    const unmet=deps.filter(d=>r.checks[d-1]?.status!=="pass");
+    if(unmet.length && ["pass","fail"].includes(c?.status)) fail(`${r.run_id} #${id}: prerequisite #${unmet.join(",#")} not PASS but status=${c.status}; must be blocked`);
   }
   const s={pass:0,fail:0,blocked:0,pending:0,total:41};
   for(const c of r.checks)s[c.status]++;
