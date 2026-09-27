@@ -1,4 +1,4 @@
-// trigger: complete-live-trial
+// trigger: manual-complete-check-20260927-2046
 import { chromium } from "playwright";
 import fs from "node:fs/promises";
 import crypto from "node:crypto";
