@@ -13,6 +13,8 @@ export const DATA_PATHS = {
   value2: "data/value2.json",
   pro_edge: "data/pro_edge.json",
   system_analysis: "data/system-analysis.json",
+  complete_summary: "data/bet-channel-complete-summary.json",
+  automation_runs: "data/automation-runs.json",
   legacy_unassigned: "data/legacy-unassigned.json",
   legacy_analysis_recommendations: "data/legacy-analysis/recommendations.json",
   legacy_analysis_value1: "data/legacy-analysis/value1.json",
@@ -24,7 +26,7 @@ export const DATA_PATHS = {
   post_match_pro_edge: "data/post-match-reviews/pro_edge.json",
 };
 
-const OPTIONAL = new Set(["system_analysis", "post_match_recommendations", "post_match_experience", "post_match_value1", "post_match_value2", "post_match_pro_edge"]);
+const OPTIONAL = new Set(["system_analysis", "complete_summary", "automation_runs", "post_match_recommendations", "post_match_experience", "post_match_value1", "post_match_value2", "post_match_pro_edge"]);
 
 async function getJson(path, optional = false) {
   const sep = path.includes("?") ? "&" : "?";
@@ -44,6 +46,35 @@ async function applyDemo(ds) {
     matches: { ...ds.matches, update_runs: [...ds.matches.update_runs, ...sample.matches.update_runs], matches: [...ds.matches.matches, ...sample.matches.matches] },
     pro_edge: sample.pro_edge,
   };
+}
+
+function safeText(v) {
+  return String(v ?? "").replace(/[<>&]/g, "");
+}
+
+function completeUpdateBanner(ds) {
+  const c = ds.complete_summary;
+  if (!c) return '<div class="load-error">⚠ 完全版取得状態を確認できません。bet-channel-complete-summary.json が未取得です。</div>';
+
+  const blockers = c.self_audit?.blockers ?? [];
+  const fixed = c.component_status?.fixed_odds ?? {};
+  const latestAnalysis = ds.system_analysis?.meta?.generated_at ?? null;
+  const publishedRuns = (ds.automation_runs?.runs ?? []).filter(r => r.pages_result === "published");
+  const lastPublished = publishedRuns.at(-1) ?? null;
+
+  if (c.complete !== true || c.analysis_ready !== true || c.menu_end_verified !== true || (c.self_audit?.unresolved_blockers ?? 1) !== 0) {
+    return `<div class="load-error" style="border:2px solid #d33;padding:12px;margin:10px 0;font-weight:700">
+      ⚠ RMC完全定時更新：未完了／新規判断に使用禁止
+      <div class="sub" style="font-weight:400">完全母集団チェック：${safeText(c.checked_at ?? c.generated_at ?? "時刻不明")} ／ blockers：${safeText(blockers.join(", ") || "不明")}</div>
+      <div class="sub" style="font-weight:400">通常：${safeText(c.component_status?.legacy?.screening_event_count ?? 0)}件 ／ eSports：${safeText(fixed.screening_event_count ?? 0)}件 ／ eSports取得元：${safeText(fixed.source_machine ?? "未取得")}</div>
+      <div class="sub" style="font-weight:400">画面内の候補分析は前回成功時点の記録です。最終分析：${safeText(latestAnalysis ?? "未記録")} ／ 最終公開成功run：${safeText(lastPublished?.run_id ?? "未記録")}</div>
+    </div>`;
+  }
+
+  return `<div class="data-status" style="border:2px solid #2a8;padding:10px;margin:10px 0">
+    RMC完全定時更新：完全母集団OK
+    <div class="sub">確認：${safeText(c.checked_at ?? c.generated_at ?? "—")} ／ 全event ${safeText(c.event_count ?? 0)} ／ screening ${safeText(c.screening_event_count ?? 0)} ／ eSports ${safeText(fixed.screening_event_count ?? 0)}</div>
+  </div>`;
 }
 
 function wire(root) {
@@ -86,6 +117,7 @@ async function main() {
     assertNoDemoInProduction(mode, ds);
     const vm = buildViewModel(ds, { proEdgeConfig: cfg });
     root.innerHTML = (mode.mode === "development" ? '<div class="dev-banner">development モード（ローカル確認環境）</div>' : "")
+      + completeUpdateBanner(ds)
       + renderPage(vm, { demo: mode.demo });
     wire(root);
     window.__rmcV2 = vm;   // 確認用
