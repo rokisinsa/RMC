@@ -566,6 +566,68 @@
                       "description": "当該更新窓で実際に確認したサイト掲載イベントの一意ID"
                     }
                   }
+                },
+                "bet365": {
+                  "type": "object",
+                  "required": [
+                    "checked_at",
+                    "source_urls",
+                    "menu_end_verified",
+                    "category_count",
+                    "event_count",
+                    "access_status",
+                    "event_ids"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "checked_at": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "source_urls": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true
+                    },
+                    "menu_end_verified": {
+                      "type": "boolean"
+                    },
+                    "category_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "event_count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "access_status": {
+                      "enum": [
+                        "direct",
+                        "public_fallback",
+                        "partial",
+                        "unavailable"
+                      ]
+                    },
+                    "note": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "event_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "uniqueItems": true,
+                      "description": "当該更新窓で実際に確認したサイト掲載イベントの一意ID"
+                    }
+                  }
                 }
               }
             },
@@ -575,6 +637,14 @@
                 "three_site"
               ],
               "description": "bet_channel_onlyならBET CHANNELだけを完全性の母表にする。省略時は旧互換のthree_site扱い。"
+            },
+            "bet365": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
             }
           }
         },
@@ -605,9 +675,10 @@
         "coverage_scope": {
           "enum": [
             "bet_channel_only",
-            "three_site_union"
+            "three_site_union",
+            "four_site_union"
           ],
-          "description": "定時更新の探索母表。現在はBET CHANNEL完全取得を主運用とする。"
+          "description": "定時更新の探索母表。完全版はBET CHANNEL・bet365・カジ旅・優雅堂系の4サイトを横断し、各サイトの実掲載イベントを全件走査する。"
         }
       }
     }
