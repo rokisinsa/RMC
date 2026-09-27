@@ -499,6 +499,42 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
         const ids=c.systems?.[system]?.card_ids ?? [];
         if (!sameIds(ids,inv.screening_event_ids)) ledger.error("coverage",system,null,`card_idsがBET CHANNEL掲載中スポーツ/eスポーツ全eventと完全一致していない（${ids.length}/${inv.screening_event_ids?.length??0}）`);
       }
+
+      // 競技別deep-dive偏重防止ゲート。
+      // 全体ランキング上位だけを深掘りするとNFL/格闘技等へ偏るため、
+      // 24時間以内・価格あり・通常のH2H市場が存在する各カテゴリで、①〜④それぞれ最低1件はdeep_dive必須。
+      // 正式採用を強制するものではなく、deep_dive後にwatch/rejectは可。
+      const runAt = Date.parse(payload.generated_at);
+      const eligibleByCategory = new Map();
+      for (const e of inv.events ?? []) {
+        const start = Date.parse(e.start_at_jst ?? e.start_at ?? "");
+        const within24h = Number.isFinite(start) && Number.isFinite(runAt) && start >= runAt && start <= runAt + 24*60*60*1000;
+        const priced = e.price_state === "priced" || (e.market_choices ?? []).some(q => typeof q.odds === "number" && q.is_valid_bet !== false && q.bettable !== false);
+        const normalH2H = e.primary_market === true || e.market_class === "primary_h2h";
+        const upcoming = !["start_time_passed","ended","cancelled","postponed"].includes(e.start_state) && !["final","cancelled","postponed"].includes(e.status);
+        if (!within24h || !priced || !normalH2H || !upcoming) continue;
+        const key = String(e.category_key ?? e.category ?? "unknown");
+        const arr = eligibleByCategory.get(key) ?? [];
+        arr.push(String(e.event_id));
+        eligibleByCategory.set(key, arr);
+      }
+      for (const system of DISCOVERY) {
+        const evidence = c.systems?.[system]?.screening_evidence ?? [];
+        const deep = new Set(evidence.filter(e => e.screen_decision === "deep_dive").map(e => String(e.event_id)));
+        for (const [category, ids] of eligibleByCategory) {
+          if (!ids.some(id => deep.has(id))) {
+            ledger.error("coverage",system,category,`24時間以内のpriced通常試合が${ids.length}件あるのに競技/カテゴリ別deep_diveが0件（event_ids: ${ids.slice(0,8).join(",")}）。全体上位だけに偏る更新は禁止`);
+          }
+        }
+        for (const e of evidence) {
+          if (e.screen_decision !== "screen_reject") continue;
+          const codes = e.reason_codes ?? [];
+          const genericOnly = codes.length > 0 && codes.every(x => /no_deep_dive_signal$/i.test(String(x)));
+          if (genericOnly) {
+            ledger.error("coverage",system,e.event_id,"screen_reject理由が抽象的な no_deep_dive_signal だけ。価格・必要勝率・時間窓・市場種別・データ不足等の具体理由が必要");
+          }
+        }
+      }
     }
   }
 
