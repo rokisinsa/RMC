@@ -1,8 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { loadDatasets, loadProEdgeConfig } from "../scripts/load-node.js";
-import { buildViewModel } from "../lib/view/model.js";
+import { loadProEdgeConfig } from "../scripts/load-node.js";
 import { summarizeSystem } from "../lib/buckets.js";
+import { compound, quarterKelly } from "../lib/summary.js";
 import { makeDataset, matchesById } from "./fixtures/dataset.js";
 import { makeProEdgeSample } from "./fixtures/pro-edge-sample.js";
 import { summarizeProEdge } from "../lib/pro-edge/summary.js";
@@ -10,50 +10,44 @@ import { summarizeProEdge } from "../lib/pro-edge/summary.js";
 const cfg = loadProEdgeConfig();
 
 test("①②：正式採用の結果確定で上部収支と①の複利・1/4ケリーが実際に更新される", () => {
-  const ds = structuredClone(loadDatasets().datasets);
-  delete ds.match_updates;
-  const m = ds.matches.matches.find(x => x.id === "2026-09-28-commanders-seahawks");
-  assert.ok(m, "Seattle match exists");
+  const ds = makeDataset();
+  const m = ds.matches.matches.find(x => x.id === "m1");
+  const finalResult = structuredClone(m.result);
+
+  // 同じ試合を①推奨と②VALUE①の正式カードが参照している状態で、結果未確定→確定を再現。
   m.status = "scheduled";
   m.result = null;
-
-  const before = buildViewModel(ds, { proEdgeConfig: cfg, now: "2026-09-27T19:00:00+09:00" });
-  const recBefore = before.recommendations.rows.find(x => x.id === "rec-202609271444-seahawks");
-  const v1Before = before.value1.rows.find(x => x.id === "v1-202609271444-seahawks");
-  assert.equal(recBefore.settlement.state, "pending");
-  assert.equal(v1Before.settlement.state, "pending");
-
-  const recSummaryBefore = structuredClone(before.recommendations.summary);
-  const compoundBefore = structuredClone(before.recommendations.compound);
-  const kellyBefore = structuredClone(before.recommendations.kelly);
-  const v1SummaryBefore = structuredClone(before.value1.official);
+  const recBefore = summarizeSystem(ds.recommendations, matchesById(ds));
+  const v1Before = summarizeSystem(ds.value1, matchesById(ds));
+  const compBefore = compound(recBefore.groups.official.map(g => g.settlement), 100);
+  const kellyBefore = quarterKelly(recBefore.groups.official.map(g => ({ settlement:g.settlement, prob:g.pick.locked?.prob ?? null })), 100);
+  assert.equal(recBefore.groups.official.find(g=>g.pick.id==="rec-r1").settlement.state, "pending");
+  assert.equal(v1Before.groups.official.find(g=>g.pick.id==="v1-a").settlement.state, "pending");
 
   m.status = "final";
-  m.result = { final: { a: 0, b: 1 }, text: "Commanders 0-1 Seahawks" };
-  const after = buildViewModel(ds, { proEdgeConfig: cfg, now: "2026-09-28T20:00:00+09:00" });
-  const recAfter = after.recommendations.rows.find(x => x.id === "rec-202609271444-seahawks");
-  const v1After = after.value1.rows.find(x => x.id === "v1-202609271444-seahawks");
+  m.result = finalResult;
+  const recAfter = summarizeSystem(ds.recommendations, matchesById(ds));
+  const v1After = summarizeSystem(ds.value1, matchesById(ds));
+  const compAfter = compound(recAfter.groups.official.map(g => g.settlement), 100);
+  const kellyAfter = quarterKelly(recAfter.groups.official.map(g => ({ settlement:g.settlement, prob:g.pick.locked?.prob ?? null })), 100);
 
-  assert.equal(recAfter.settlement.state, "win");
-  assert.equal(recAfter.settlement.payout, 129);
-  assert.equal(recAfter.settlement.profit, 29);
-  assert.equal(after.recommendations.summary.wins, recSummaryBefore.wins + 1);
-  assert.equal(after.recommendations.summary.pending, recSummaryBefore.pending - 1);
-  assert.equal(after.recommendations.summary.settledStake, recSummaryBefore.settledStake + 100);
-  assert.equal(after.recommendations.summary.netProfit, recSummaryBefore.netProfit + 29);
-  assert.notDeepEqual(after.recommendations.compound, compoundBefore);
-  assert.equal(after.recommendations.kelly.bets, kellyBefore.bets + 1);
-  assert.notEqual(after.recommendations.kelly.profit, kellyBefore.profit);
+  const rr = recAfter.groups.official.find(g=>g.pick.id==="rec-r1").settlement;
+  assert.deepEqual([rr.state,rr.payout,rr.profit], ["win",120,20]);
+  assert.equal(recAfter.official.wins, recBefore.official.wins + 1);
+  assert.equal(recAfter.official.pending, recBefore.official.pending - 1);
+  assert.equal(recAfter.official.settledStake, recBefore.official.settledStake + 100);
+  assert.equal(recAfter.official.netProfit, recBefore.official.netProfit + 20);
+  assert.notDeepEqual(compAfter, compBefore);
+  assert.equal(kellyAfter.bets, kellyBefore.bets + 1);
+  assert.notEqual(kellyAfter.profit, kellyBefore.profit);
 
-  assert.equal(v1After.settlement.state, "win");
-  assert.equal(v1After.settlement.payout, 129);
-  assert.equal(v1After.settlement.profit, 29);
-  assert.equal(after.value1.official.wins, v1SummaryBefore.wins + 1);
-  assert.equal(after.value1.official.pending, v1SummaryBefore.pending - 1);
-  assert.equal(after.value1.official.settledStake, v1SummaryBefore.settledStake + 100);
-  assert.equal(after.value1.official.netProfit, v1SummaryBefore.netProfit + 29);
+  const vr = v1After.groups.official.find(g=>g.pick.id==="v1-a").settlement;
+  assert.deepEqual([vr.state,vr.payout,vr.profit], ["win",125,25]);
+  assert.equal(v1After.official.wins, v1Before.official.wins + 1);
+  assert.equal(v1After.official.pending, v1Before.official.pending - 1);
+  assert.equal(v1After.official.settledStake, v1Before.official.settledStake + 100);
+  assert.equal(v1After.official.netProfit, v1Before.official.netProfit + 25);
 });
-
 test("③：VALUE②正式採用は結果確定で正式収支へ反映される", () => {
   const ds = makeDataset();
   const m = ds.matches.matches.find(x => x.id === "m3");
