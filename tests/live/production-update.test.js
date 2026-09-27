@@ -199,6 +199,16 @@ test("全件一次走査の証跡：1件でもscreening_evidenceを抜いたら�
   assert.ok(cats(r).includes("coverage") || cats(r).includes("schema"), JSON.stringify(r.ledger.errors));
 });
 
+test("深掘り証跡：deep_dived対象の証拠を1件抜いたら拒否", () => {
+  const dir = tempData();
+  const r = run(mutate(A, p => {
+    p.run_id = "fixture-missing-deep-dive-evidence";
+    p.coverage_audit.systems.recommendations.deep_dive_evidence.pop();
+  }), dir, NOW_A);
+  assert.ok(!r.ok);
+  assert.ok(cats(r).includes("coverage") || cats(r).includes("schema"), JSON.stringify(r.ledger.errors));
+});
+
 test("JST・null の書き方の誤りを拒否", () => {
   const z = run(mutate(A, p => { p.systems.value2.new_picks[0].locked_at = "2026-09-26T21:28:00Z"; }), tempData(), NOW_A);
   assert.ok(!z.ok && cats(z).includes("jst"));
