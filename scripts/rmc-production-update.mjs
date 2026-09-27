@@ -595,6 +595,24 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
           }
         }
       }
+
+      // 新規正式/監視/除外カードを inventory event まで追跡可能にする。
+      // 定時更新の①〜④ new_picks は source_event_id 必須で、全件走査かつdeep_dive済みeventからしか作れない。
+      if (["06:00","12:00","18:00","23:00"].includes(payload.slot)) {
+        const screeningSet = new Set((inv.screening_event_ids ?? []).map(String));
+        for (const system of DISCOVERY) {
+          const deepSet = new Set((c.systems?.[system]?.deep_dive_evidence ?? []).map(d => String(d.event_id)));
+          for (const p of payload.systems?.[system]?.new_picks ?? []) {
+            const sid = p.source_event_id == null ? "" : String(p.source_event_id);
+            if (!sid) {
+              ledger.error("traceability", system, p.id, "定時更新の新規カードにsource_event_idが無い");
+              continue;
+            }
+            if (!screeningSet.has(sid)) ledger.error("traceability", system, p.id, `source_event_id ${sid} がcomplete inventoryのscreening_event_idsに存在しない`);
+            if (!deepSet.has(sid)) ledger.error("traceability", system, p.id, `source_event_id ${sid} はこの系統でdeep_dive済みではない`);
+          }
+        }
+      }
     }
   }
 
@@ -720,26 +738,86 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
   // 「採用カードだけ」ではなく deep_dive_evidence 全件（candidate/watch/reject/insufficient_data）を残す。
   if (payload.coverage_audit) {
     let eventById = new Map();
+    let analysisInventory = null;
     const completeInvPath = join(dataDir, "bet-channel-complete-summary.json");
     const legacyInvPath = join(dataDir, "bet-channel-inventory.json");
     if (existsSync(completeInvPath)) {
-      const inv = JSON.parse(readFileSync(completeInvPath, "utf8"));
-      eventById = new Map((inv.events ?? []).map(e => [String(e.event_id), e]));
+      analysisInventory = JSON.parse(readFileSync(completeInvPath, "utf8"));
+      eventById = new Map((analysisInventory.events ?? []).map(e => [String(e.event_id), e]));
     } else if (existsSync(legacyInvPath)) {
-      const inv = JSON.parse(readFileSync(legacyInvPath, "utf8"));
-      eventById = new Map((inv.screening_events ?? inv.events ?? []).map(e => [String(e.event_id), e]));
+      analysisInventory = JSON.parse(readFileSync(legacyInvPath, "utf8"));
+      eventById = new Map((analysisInventory.screening_events ?? analysisInventory.events ?? []).map(e => [String(e.event_id), e]));
     }
     const systems = {};
     for (const system of DISCOVERY) {
       const c = payload.coverage_audit.systems?.[system];
       if (!c) continue;
+      const dd = c.deep_dive_evidence ?? [];
+      const deepByCategory = new Map();
+      for (const d of dd) {
+        const ev = eventById.get(String(d.event_id)) ?? {};
+        const key = String(ev.category_key ?? ev.category ?? "unknown");
+        if (!deepByCategory.has(key)) deepByCategory.set(key, []);
+        deepByCategory.get(key).push(d);
+      }
+      const newPickByCategory = new Map();
+      const classifyPick = p => {
+        if (system === "recommendations") return "accepted";
+        if (system === "value1") return p.locked?.verdict === "formal" ? "accepted" : p.locked?.verdict === "watch" ? "watch" : "rejected";
+        if (system === "value2") return p.locked?.verdict === "adopted" ? "accepted" : p.locked?.verdict === "watch" ? "watch" : "rejected";
+        if (system === "pro_edge") return p.locked?.decision === "accepted" ? "accepted" : p.locked?.decision === "watch" ? "watch" : "rejected";
+        return "rejected";
+      };
+      for (const p of payload.systems?.[system]?.new_picks ?? []) {
+        const ev = eventById.get(String(p.source_event_id ?? "")) ?? {};
+        const key = String(ev.category_key ?? ev.category ?? "unknown");
+        const cur = newPickByCategory.get(key) ?? { accepted:0, watch:0, rejected:0 };
+        cur[classifyPick(p)]++;
+        newPickByCategory.set(key, cur);
+      }
+      const invEvents = analysisInventory?.events ?? analysisInventory?.screening_events ?? [];
+      const runAtMs = Date.parse(payload.generated_at);
+      const categoryKeys = [...new Set([
+        ...Object.keys(c.sport_card_counts ?? {}),
+        ...invEvents.map(e => String(e.category_key ?? e.category ?? "unknown"))
+      ])];
+      const sportCoverage = categoryKeys.map(key => {
+        const evs = invEvents.filter(e => String(e.category_key ?? e.category ?? "unknown") === key);
+        const screening = Number(c.sport_card_counts?.[key] ?? 0);
+        const deepRows = deepByCategory.get(key) ?? [];
+        const formal = newPickByCategory.get(key) ?? { accepted:0, watch:0, rejected:0 };
+        const pricedUpcoming = evs.filter(e => {
+          const start = Date.parse(e.start_at_jst ?? e.start_at ?? "");
+          const within24 = Number.isFinite(start) && Number.isFinite(runAtMs) && start >= runAtMs && start <= runAtMs + 24*60*60*1000;
+          const priced = e.price_state === "priced" || (e.market_choices ?? []).some(q => typeof q.odds === "number" && q.is_valid_bet !== false && q.bettable !== false);
+          const upcoming = !["start_time_passed","ended","cancelled","postponed"].includes(e.start_state) && !["final","cancelled","postponed"].includes(e.status);
+          return within24 && priced && upcoming;
+        }).length;
+        const label = evs.find(e => e.category)?.category ?? key.replace(/^[^:]+:/,"");
+        return {
+          category_key:key,
+          category:label,
+          event_count:evs.length,
+          screened:screening,
+          priced_upcoming_count:pricedUpcoming,
+          deep_dived:deepRows.length,
+          deep_candidate:deepRows.filter(d=>d.outcome==="candidate").length,
+          deep_watch:deepRows.filter(d=>d.outcome==="watch").length,
+          deep_reject:deepRows.filter(d=>d.outcome==="reject").length,
+          deep_insufficient:deepRows.filter(d=>d.outcome==="insufficient_data").length,
+          accepted:formal.accepted,
+          watch:formal.watch,
+          rejected:formal.rejected
+        };
+      }).sort((a,b)=>(b.priced_upcoming_count-a.priced_upcoming_count)||(b.deep_dived-a.deep_dived)||a.category.localeCompare(b.category,"ja"));
       systems[system] = {
         cards_checked: c.cards_checked,
         deep_dived: c.deep_dived,
         accepted: c.accepted,
         watch: c.watch,
         rejected: c.rejected,
-        candidates: (c.deep_dive_evidence ?? []).map(d => {
+        sport_coverage: sportCoverage,
+        candidates: dd.map(d => {
           const e = eventById.get(String(d.event_id)) ?? {};
           const choices = e.market_choices ?? [];
           return {
