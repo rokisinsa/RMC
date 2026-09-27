@@ -94,13 +94,25 @@ test("定時41項目: 前提未PASSの空集合チェックを見かけ上PASS�
   mark(run,4,"fail","routes unavailable");
   mark(run,5,"fail","union incomplete");
   mark(run,15,"fail","coverage unavailable");
-  mark(run,16,"pass","eligible category 0");
+  mark(run,16,"fail","eligible category unavailable");
   mark(run,17,"pass","zero violations");
   mark(run,24,"fail","existing cards not rechecked");
-  mark(run,25,"pass","0 overdue matches");
-  mark(run,26,"pass","all identities ok");
+  mark(run,25,"fail","result check unavailable");
+  mark(run,26,"fail","identity unavailable");
   assert.equal(run.checks[15].status,"blocked");
   assert.equal(run.checks[16].status,"blocked");
   assert.equal(run.checks[24].status,"blocked");
   assert.equal(run.checks[25].status,"blocked");
+});
+
+
+test("定時41項目: 前提未PASSなら下流のFAILもBLOCKEDへ変換する",()=>{
+  const {run}=makeRun();
+  mark(run,1,"pass","start");
+  mark(run,5,"fail","union incomplete");
+  mark(run,10,"fail","screening mismatch");
+  mark(run,14,"fail","card ids mismatch");
+  assert.equal(run.checks[9].status,"blocked");
+  assert.equal(run.checks[13].status,"blocked");
+  assert.match(run.checks[9].detail,/前提未PASS/);
 });
