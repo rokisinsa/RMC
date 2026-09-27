@@ -316,6 +316,37 @@ let fixedOddsStatus={
     }));
     await p.close();
   }
+  // ブランド別BTRenderer bundle自体を解析し、公開API/WebSocket候補を抽出する。
+  // geo blockが初期化時にローカル表示されても、bundle内の公式通信先は特定できる。
+  const rendererBundleUrls=[...diagnosticScripts].filter(u=>/bt-renderer\.min\.js/i.test(u));
+  const rendererBundleDiagnostics=[];
+  for(const rendererUrl of rendererBundleUrls.slice(0,4)){
+    try{
+      const rr=await ctx.request.get(rendererUrl,{timeout:30000});
+      const js=await rr.text();
+      const absUrls=[...new Set((js.match(/https?:\\/\\/[^"'\\s)]+/g)||[]))].slice(0,300);
+      const wsUrls=[...new Set((js.match(/wss?:\\/\\/[^"'\\s)]+/g)||[]))].slice(0,120);
+      const hosts=[...new Set([...absUrls,...wsUrls].map(u=>{try{return new URL(u).host}catch{return null}}).filter(Boolean))];
+      const snippets=[];
+      for(const re of [/graphql/ig,/websocket/ig,/wss?:\\/\\//ig,/api[\\/._-]/ig,/forbidden/ig,/geo(?:location)?/ig,/location/ig,/brand[_-]?id/ig,/sportsbook/ig]){
+        const m=re.exec(js);
+        if(m) snippets.push(js.slice(Math.max(0,m.index-600),Math.min(js.length,m.index+1800)));
+      }
+      rendererBundleDiagnostics.push({
+        url:rendererUrl,
+        status:rr.status(),
+        bytes:js.length,
+        sha256:crypto.createHash("sha256").update(js).digest("hex"),
+        absolute_urls:absUrls,
+        websocket_urls:wsUrls,
+        hosts,
+        snippets:[...new Set(snippets)].slice(0,30)
+      });
+    }catch(e){
+      rendererBundleDiagnostics.push({url:rendererUrl,error:String(e?.message||e)});
+    }
+  }
+
   const combined=allBodies.join("\n");
   const titleHints=[
     ["Counter-Strike / CS2",/counter.?strike|cs2/i],
@@ -356,6 +387,7 @@ let fixedOddsStatus={
     diagnostic_failed_requests:diagnosticFailedRequests.slice(0,80),
     diagnostic_console:[...new Set(diagnosticConsole)].slice(0,80),
     diagnostic_snippets:[...new Set(diagnosticSnippets.filter(Boolean))].slice(0,20),
+    renderer_bundle_diagnostics:rendererBundleDiagnostics,
     rules_esports_detected:/eスポーツ特別ルール|esports related rules|eスポーツ/i.test(combined),
     supported_title_hints:titleHints,
     complete:false,
