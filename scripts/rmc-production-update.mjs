@@ -752,7 +752,9 @@ function checkCompletionAudit(current, payload, ledger, { cfg }) {
   const overdue=new Set();
   for (const s of ["recommendations","experience","value1","value2","pro_edge"]) {
     for (const r of vm[s]?.rows??[]) {
-      const st=toMs(r.match?.start_at);
+      const rawStart=r.match?.start_at;
+      if (!rawStart) continue;
+      const st=toMs(rawStart);
       if (r.settlement?.state==="pending" && Number.isFinite(st) && st<=gen) overdue.add(String(r.match.id));
     }
   }
