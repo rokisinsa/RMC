@@ -118,6 +118,10 @@
         },
         "source": {
           "$ref": "#/$defs/stringOrNull"
+        },
+        "exact": {
+          "$ref": "#/$defs/oddsOrNull",
+          "description": "正式採用時に実取得した一点のexact odds。scheduled new formal pickではodds_takenと完全一致必須。"
         }
       }
     },
