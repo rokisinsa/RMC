@@ -278,7 +278,7 @@
           "outcome": "reject",
           "checks": {
             "h2h": "unavailable",
-            "recent_form": "unavailable",
+            "recent_form": "checked",
             "ranking_or_rating": "checked",
             "availability": "checked",
             "market_odds": "checked",
@@ -287,7 +287,10 @@
           },
           "source_urls": [
             "https://bet-channel.com/matches?ct=10049&lang=ja",
-            "https://teiken.com/"
+            "https://teiken.com/",
+            "https://boxing-data.com/blog/ryosuke-nishida-vs-sam-goodman-fight-preview-prediction-analysis/",
+            "https://champinon.info/boxing/ryosuke-nishida/",
+            "https://champinon.info/boxing/sam-goodman/"
           ],
           "note": "recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。",
           "analysis_detail": {
@@ -298,16 +301,58 @@
               "items": []
             },
             "recent_form": {
-              "status": "unavailable",
+              "status": "checked",
               "side_a": {
                 "label": "西田凌佑",
-                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
-                "items": []
+                "summary": "直近4戦：3勝1敗。",
+                "items": [
+                  {
+                    "date": "2026-02-15",
+                    "opponent": "Bryan Mercado",
+                    "result": "○ TD 7R"
+                  },
+                  {
+                    "date": "2025-06-08",
+                    "opponent": "Junto Nakatani",
+                    "result": "× TKO 6R"
+                  },
+                  {
+                    "date": "2024-12-15",
+                    "opponent": "Anuchai Donsua",
+                    "result": "○ KO 7R"
+                  },
+                  {
+                    "date": "2024-05-04",
+                    "opponent": "Emmanuel Rodriguez",
+                    "result": "○ UD 12R"
+                  }
+                ]
               },
               "side_b": {
                 "label": "サム・グッドマン",
-                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
-                "items": []
+                "summary": "直近4戦：3勝1敗。",
+                "items": [
+                  {
+                    "date": "2026-04-05",
+                    "opponent": "Rodrigo Ruiz",
+                    "result": "○ UD 12R"
+                  },
+                  {
+                    "date": "2025-12",
+                    "opponent": "Tyler Blizzard",
+                    "result": "○ UD 10R"
+                  },
+                  {
+                    "date": "2025-08",
+                    "opponent": "Nick Ball",
+                    "result": "× UD 12R"
+                  },
+                  {
+                    "date": "2025-05",
+                    "opponent": "Cesar Vaca",
+                    "result": "○ UD 10R"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -341,8 +386,7 @@
               "conclusion": "①推奨で除外。"
             },
             "missing_information": [
-              "直接H2Hなし",
-              "個別の直近6〜10戦の完全照合"
+              "直接H2Hなし"
             ]
           }
         },
@@ -369,7 +413,7 @@
           "outcome": "reject",
           "checks": {
             "h2h": "unavailable",
-            "recent_form": "unavailable",
+            "recent_form": "checked",
             "ranking_or_rating": "checked",
             "availability": "checked",
             "market_odds": "checked",
@@ -378,7 +422,10 @@
           },
           "source_urls": [
             "https://bet-channel.com/matches?ct=10049&lang=ja",
-            "https://teiken.com/"
+            "https://teiken.com/",
+            "https://boxing-data.com/blog/tomoya-tsuboi-vs-ricardo-malajika-fight-preview-prediction-analysis/",
+            "https://www.martialbot.com/boxing/boxers/tomoya-tsuboi-a622b84918637553d6c14ac3012587c7",
+            "https://champinon.info/boxing/ricardo-malajika/"
           ],
           "note": "recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。",
           "analysis_detail": {
@@ -389,16 +436,48 @@
               "items": []
             },
             "recent_form": {
-              "status": "unavailable",
+              "status": "checked",
               "side_a": {
                 "label": "坪井智也",
-                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
-                "items": []
+                "summary": "プロ直近4戦（3勝・1NC）を全件表示。",
+                "items": [
+                  {
+                    "date": "2026-04-11",
+                    "opponent": "Pedro Guevara",
+                    "result": "NC 2R"
+                  },
+                  {
+                    "date": "2025-11-24",
+                    "opponent": "Carlos Cuadras",
+                    "result": "○ TKO 8R"
+                  },
+                  {
+                    "date": "2025-06-08",
+                    "opponent": "Van Thao Tran",
+                    "result": "○ UD 10R"
+                  },
+                  {
+                    "date": "2025-03-13",
+                    "opponent": "Boonrueang Phayom",
+                    "result": "○ TKO 2R"
+                  }
+                ]
               },
               "side_b": {
                 "label": "リカルド・マラジカ",
-                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
-                "items": []
+                "summary": "確認できた直近2戦はいずれも勝利。完全な6〜10戦一覧はこの更新回では一次照合できず、不足情報として明示。",
+                "items": [
+                  {
+                    "date": "2025-11-29",
+                    "opponent": "Vince Paras",
+                    "result": "○ UD 12R"
+                  },
+                  {
+                    "date": "2025",
+                    "opponent": "Jayson Mama",
+                    "result": "○ TKO 5R"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -433,7 +512,7 @@
             },
             "missing_information": [
               "直接H2Hなし",
-              "個別の直近6〜10戦の完全照合"
+              "Malajikaの直近6〜10戦全件の一次情報による完全照合（今回確認できたのは直近2戦）"
             ]
           }
         },
@@ -449,7 +528,7 @@
           "outcome": "reject",
           "checks": {
             "h2h": "unavailable",
-            "recent_form": "unavailable",
+            "recent_form": "checked",
             "ranking_or_rating": "checked",
             "availability": "checked",
             "market_odds": "checked",
@@ -458,7 +537,10 @@
           },
           "source_urls": [
             "https://bet-channel.com/matches?lang=ja",
-            "https://teiken.com/"
+            "https://teiken.com/",
+            "https://boxing-data.com/blog/ryusei-matsumoto-vs-russell-acosta-fight-preview-prediction-analysis/",
+            "https://www.wbaboxing.com/wba-boxer-profile?id=18584",
+            "https://www.tapology.com/fightcenter/fighters/370354-ryusei-matsumoto"
           ],
           "note": "recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。",
           "analysis_detail": {
@@ -469,16 +551,48 @@
               "items": []
             },
             "recent_form": {
-              "status": "unavailable",
+              "status": "checked",
               "side_a": {
-                "label": "松本（WBO1位）",
-                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
-                "items": []
+                "label": "松本流星",
+                "summary": "確認できた直近3戦はいずれも勝利。",
+                "items": [
+                  {
+                    "date": "2026-03-15",
+                    "opponent": "Yuni Takada",
+                    "result": "○ UD 12R"
+                  },
+                  {
+                    "date": "2025-09-13",
+                    "opponent": "Yuni Takada",
+                    "result": "○ TD 5R"
+                  },
+                  {
+                    "date": "2025-06-06",
+                    "opponent": "John Kevin Jimenez",
+                    "result": "○ TKO 4R"
+                  }
+                ]
               },
               "side_b": {
-                "label": "Acosta（WBO3位）",
-                "summary": "個別の直近6〜10戦を、この更新回では一次情報で完全照合できなかったため採用根拠には使用しない。",
-                "items": []
+                "label": "Russell Acosta",
+                "summary": "確認できた直近3戦はいずれも勝利。",
+                "items": [
+                  {
+                    "date": "2026-06",
+                    "opponent": "Mario Cardenas",
+                    "result": "○ UD 10R"
+                  },
+                  {
+                    "date": "2026",
+                    "opponent": "Edinson Martinez",
+                    "result": "○ TKO 10R"
+                  },
+                  {
+                    "date": "2026",
+                    "opponent": "Roberto Ruiz",
+                    "result": "○ UD 10R"
+                  }
+                ]
               }
             },
             "ranking_or_rating": {
@@ -513,7 +627,7 @@
             },
             "missing_information": [
               "直接H2Hなし",
-              "個別の直近6〜10戦の完全照合"
+              "両者の直近6〜10戦全件の一次情報による完全照合（今回確認できたのは直近3戦）"
             ]
           }
         },
