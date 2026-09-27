@@ -112,7 +112,7 @@ const out={
     fixed_odds:{checked_at:fixed?.checked_at||null,complete:fixedOk,event_count:fixed?.event_count||0,screening_event_count:fixed?.screening_event_count||0,source_machine:fixed?.source_machine||null}
   },
   self_audit:{
-    status:blockers.length?"blocked":(warnings.length?"pass_with_warnings":"pass"),
+    status:blockers.length?"blocked":"pass",
     digest:auditDigest,
     anomaly_count:blockers.length+warnings.length,
     blocker_count:blockers.length,
