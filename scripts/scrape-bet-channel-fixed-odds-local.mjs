@@ -6,6 +6,7 @@ import crypto from "node:crypto";
 const OUT = process.argv[2] || "data/bet-channel-fixed-odds-inventory.json";
 const SOURCE_MACHINE = process.env.RMC_SOURCE_MACHINE || (process.platform === "win32" ? "japan_local_windows" : "japan_vps_linux");
 const SOURCE_REGION = process.env.RMC_SOURCE_REGION || "JP";
+const SOURCE_REGION_EVIDENCE = process.env.RMC_SOURCE_REGION_EVIDENCE || null;
 const BASE = "https://bet-channel.com";
 const BRAND_ID = "2564963746585911298";
 const SEED_ROUTES = ["/esports", "/esports-1", "/"];
@@ -309,6 +310,7 @@ const out={
   source:"BET CHANNEL fixed-odds / Betby eSports (Japan node)",
   source_machine:SOURCE_MACHINE,
   source_region:SOURCE_REGION,
+  source_region_evidence:SOURCE_REGION_EVIDENCE,
   source_urls:[...sourceUrls],
   brand_id:BRAND_ID,
   access_status:geoBlocked?"unavailable":"direct",
