@@ -84,7 +84,7 @@ write(path.join(DATA,"bet-channel-complete-summary.json"),complete);
 const detail=e=>({
   summary:`Full scheduled rehearsal deep dive for ${e.side_a} vs ${e.side_b}`,
   h2h:{status:"checked",summary:"Rehearsal fixture contains one verified H2H row.",items:[{date:"2026-09-01",label:`${e.side_a} vs ${e.side_b}`,result:"2-1",note:"synthetic rehearsal evidence"}]},
-  recent_form:{status:"checked",side_a:{label:e.side_a,summary:"Last 6 fixture form checked.",items:[{date:"2026-09-20",label:"recent match",result:"W",note:"synthetic rehearsal evidence"}]},side_b:{label:e.side_b,summary:"Last 6 fixture form checked.",items:[{date:"2026-09-20",label:"recent match",result:"L",note:"synthetic rehearsal evidence"}]}},
+  recent_form:{status:"checked",side_a:{label:e.side_a,summary:"Last 6 fixture form checked.",items:[{date:"2026-09-20",opponent:"Recent Opponent A",result:"W",competition:"Rehearsal Form"}]},side_b:{label:e.side_b,summary:"Last 6 fixture form checked.",items:[{date:"2026-09-20",opponent:"Recent Opponent B",result:"L",competition:"Rehearsal Form"}]}},
   ranking_or_rating:{status:"checked",text:"Synthetic rehearsal ranking/rating evidence present."},
   home_away:{status:"checked",text:e.category.includes("CS2")?"Online neutral server / side context checked.":"Home/away venue split checked."},
   availability:{status:"checked",text:e.category.includes("CS2")?"Roster and stand-in status checked.":"Starting lineup/injury availability checked."},
