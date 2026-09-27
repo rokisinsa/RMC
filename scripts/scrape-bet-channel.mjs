@@ -192,6 +192,40 @@ for(let i=0;i<categories.length;i+=CONCURRENCY){
   results.push(...got);
   console.log(`progress ${Math.min(i+CONCURRENCY,categories.length)}/${categories.length}`);
 }
+
+/* FIXED_ODDS_ESPORTS_PROBE: manual discovery of BET CHANNEL Betby/fixed-odds eSports feed. */
+{
+  const probeUrls=[
+    `${BASE}/fixed-odds?bt-path=/`,
+    `${BASE}/fixed-odds?bt-path=/esports`,
+    `${BASE}/fixed-odds?bt-path=/esports-1`
+  ];
+  for(const probeUrl of probeUrls){
+    const p=await ctx.newPage();
+    p.setDefaultTimeout(12000);
+    const hits=[];
+    p.on("response",async resp=>{
+      const ct=(resp.headers()["content-type"]||"").toLowerCase();
+      if(!ct.includes("json")) return;
+      try{
+        const j=await resp.json();
+        const raw=JSON.stringify(j);
+        if(/esport|counter.?strike|valorant|dota|league.?of.?legends|rainbow|honor.?of.?kings|king.?of.?glory|world.?of.?tanks|fortnite|starcraft|nba.?2k|ea.?sports.?fc|rocket.?league|overwatch|call.?of.?duty|pubg|mobile.?legends/i.test(raw)){
+          hits.push({url:resp.url(),sample:raw.slice(0,12000)});
+        }
+      }catch{}
+    });
+    let body="";
+    try{
+      await p.goto(probeUrl,{waitUntil:"domcontentloaded",timeout:30000});
+      await p.waitForTimeout(4500);
+      body=clean(await p.locator("body").innerText()).slice(0,20000);
+    }catch(e){ body="ERROR "+String(e.message||e); }
+    console.log("FIXED_ODDS_ESPORTS_PROBE "+JSON.stringify({probeUrl,body,hits:hits.slice(0,20)}));
+    await p.close();
+  }
+}
+
 await browser.close();
 
 const allEvents=new Map();
