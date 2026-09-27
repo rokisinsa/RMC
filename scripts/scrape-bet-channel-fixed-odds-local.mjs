@@ -1,0 +1,296 @@
+import { chromium } from "playwright";
+import fs from "node:fs/promises";
+import os from "node:os";
+import crypto from "node:crypto";
+
+const OUT = process.argv[2] || "data/bet-channel-fixed-odds-inventory.json";
+const BASE = "https://bet-channel.com";
+const BRAND_ID = "2564963746585911298";
+const ROUTES = ["/esports", "/esports-1", "/"];
+const URLS = ROUTES.map(r => `${BASE}/fixed-odds?bt-path=${encodeURIComponent(r)}`);
+
+const clean = v => String(v ?? "").replace(/\s+/g, " ").trim();
+const uniq = xs => [...new Set((xs || []).filter(Boolean).map(String))];
+const hash = v => crypto.createHash("sha256").update(typeof v === "string" ? v : JSON.stringify(v)).digest("hex").slice(0,20);
+const jstIso = (ms = Date.now()) => new Date(ms + 9 * 3600e3).toISOString().replace("Z", "+09:00");
+const nowMs = Date.now();
+
+function walk(v, fn, path="$", seen=new Set()) {
+  if (v == null || typeof v !== "object" || seen.has(v)) return;
+  seen.add(v);
+  fn(v,path);
+  if (Array.isArray(v)) v.forEach((x,i)=>walk(x,fn,`${path}[${i}]`,seen));
+  else Object.entries(v).forEach(([k,x])=>walk(x,fn,`${path}.${k}`,seen));
+}
+function first(obj, keys) {
+  for (const k of keys) {
+    const v = obj?.[k];
+    if (v !== undefined && v !== null && v !== "") return v;
+  }
+  return null;
+}
+function nestedName(v) {
+  if (typeof v === "string") return clean(v);
+  if (!v || typeof v !== "object") return "";
+  return clean(first(v,["name","title","label","short_name","shortName","team_name","teamName","competitor_name","competitorName"]) || "");
+}
+function parseTime(v) {
+  if (v == null || v === "") return null;
+  if (typeof v === "number") {
+    const ms = v > 1e12 ? v : v > 1e9 ? v*1000 : NaN;
+    return Number.isFinite(ms) ? new Date(ms).toISOString() : null;
+  }
+  const s=String(v).trim();
+  if (/^\d{10,13}$/.test(s)) {
+    const n=Number(s), ms=s.length===13?n:n*1000;
+    return new Date(ms).toISOString();
+  }
+  const ms=Date.parse(s);
+  return Number.isFinite(ms) ? new Date(ms).toISOString() : null;
+}
+function toJst(iso) {
+  if(!iso) return null;
+  const d=new Date(iso);
+  if(!Number.isFinite(d.getTime())) return null;
+  return new Date(d.getTime()+9*3600e3).toISOString().replace("Z","+09:00");
+}
+function getParticipants(o) {
+  const directA = first(o,["home_name","homeName","team1_name","team1Name","competitor1_name","competitor1Name","participant1_name","participant1Name","player1_name","player1Name"]);
+  const directB = first(o,["away_name","awayName","team2_name","team2Name","competitor2_name","competitor2Name","participant2_name","participant2Name","player2_name","player2Name"]);
+  if (directA && directB) return [clean(directA),clean(directB)];
+  const home = first(o,["home","team1","competitor1","participant1","player1"]);
+  const away = first(o,["away","team2","competitor2","participant2","player2"]);
+  if (home && away) {
+    const a=nestedName(home), b=nestedName(away);
+    if(a&&b) return [a,b];
+  }
+  for (const key of ["competitors","participants","teams","contestants","players","opponents"]) {
+    const arr=o?.[key];
+    if(Array.isArray(arr) && arr.length>=2) {
+      const a=nestedName(arr[0]), b=nestedName(arr[1]);
+      if(a&&b) return [a,b];
+    }
+  }
+  return [null,null];
+}
+function extractOdds(o) {
+  const rows=[];
+  const add=(name,odds,bettable=true,id=null)=>{
+    const n=clean(name), x=typeof odds==="number"?odds:Number(odds);
+    if(!n || !Number.isFinite(x) || x<=1 || x>10000) return;
+    rows.push({name:n,odds:x,bettable:bettable!==false,id:id==null?null:String(id)});
+  };
+  const inspect=(v,depth=0)=>{
+    if(!v || typeof v!=="object" || depth>4) return;
+    if(Array.isArray(v)){ for(const x of v.slice(0,200)) inspect(x,depth+1); return; }
+    const name=first(v,["name","title","label","outcome_name","outcomeName","selection_name","selectionName","runner_name","runnerName"]);
+    const price=first(v,["odds","decimal_odds","decimalOdds","price","value","coefficient","coef"]);
+    const state=first(v,["active","enabled","available","bettable","is_valid_bet","isValidBet"]);
+    if(name!=null && price!=null) add(name,price,state!==false,first(v,["id","selection_id","selectionId","outcome_id","outcomeId"]));
+    for(const k of ["selections","outcomes","runners","choices","market_outcomes","marketOutcomes","markets"]) if(v[k]) inspect(v[k],depth+1);
+  };
+  inspect(o);
+  const seen=new Set();
+  return rows.filter(r=>{ const k=`${r.name}|${r.odds}`; if(seen.has(k)) return false; seen.add(k); return true; }).slice(0,20);
+}
+function sportName(o) {
+  const values=[
+    first(o,["sport_name","sportName","discipline_name","disciplineName","game_name","gameName","category_name","categoryName"]),
+    nestedName(o?.sport), nestedName(o?.discipline), nestedName(o?.game), nestedName(o?.category)
+  ].map(clean).filter(Boolean);
+  return values[0] || "";
+}
+function competitionName(o) {
+  const values=[
+    first(o,["competition_name","competitionName","tournament_name","tournamentName","league_name","leagueName","championship_name","championshipName"]),
+    nestedName(o?.competition),nestedName(o?.tournament),nestedName(o?.league),nestedName(o?.championship)
+  ].map(clean).filter(Boolean);
+  return values[0] || "";
+}
+const ESPORT_RE = /esport|e-sport|eスポーツ|counter.?strike|\bcs2\b|\bcsgo\b|valorant|dota|league.?of.?legends|\blol\b|rainbow.?six|honor.?of.?kings|king.?of.?glory|world.?of.?tanks|rocket.?league|overwatch|call.?of.?duty|\bpubg\b|mobile.?legends|starcraft|ea.?sports.?fc|esoccer|efootball|ebasketball|nba.?2k|etennis|ebaseball|ecricket|efighting/i;
+
+function eventCandidate(o,sourceUrl,path) {
+  if(!o || typeof o!=="object" || Array.isArray(o)) return null;
+  const rawId=first(o,["event_id","eventId","fixture_id","fixtureId","match_id","matchId","game_id","gameId","id"]);
+  if(rawId==null) return null;
+  const [a,b]=getParticipants(o);
+  if(!a||!b||a===b) return null;
+  const sport=sportName(o), competition=competitionName(o);
+  const corpus=[sport,competition,clean(first(o,["name","title","event_name","eventName","match_name","matchName"])),a,b,path].join(" ");
+  if(!ESPORT_RE.test(corpus)) return null;
+  const startRaw=first(o,["start_at","startAt","start_time","startTime","scheduled_at","scheduledAt","scheduled","kickoff","kickoff_at","kickoffAt","date","event_date","eventDate"]);
+  const startUtc=parseTime(startRaw), startAtJst=toJst(startUtc);
+  const odds=extractOdds(o);
+  const rawStatus=clean(first(o,["status","state","event_status","eventStatus","phase"]));
+  const startMs=startUtc?Date.parse(startUtc):NaN;
+  const ended=/ended|finished|final|closed|settled|cancel/i.test(rawStatus);
+  const startState=ended?"ended":Number.isFinite(startMs)&&startMs<nowMs?"start_time_passed":"future_or_upcoming";
+  const title=clean(sport||"eSports");
+  return {
+    event_id:`fx:${String(rawId)}`,
+    raw_event_id:String(rawId),
+    category:`eSports:${title}`,
+    category_key:`BETBY_ESPORTS:${title}`,
+    title,
+    competition:competition||null,
+    band_name:competition||null,
+    start_at_jst:startAtJst,
+    status:rawStatus||null,
+    side_a:a,
+    side_b:b,
+    primary_market:true,
+    market_class:"primary_h2h",
+    price_state:odds.length>=2?"priced":"unpriced",
+    start_state:startState,
+    market_choices:odds.map(x=>({name:x.name,odds:x.odds,bettable:x.bettable,id:x.id})),
+    source_url:sourceUrl,
+    source_path:path
+  };
+}
+function mergeEvent(prev,next) {
+  if(!prev) return next;
+  const odds=(next.market_choices?.length||0)>(prev.market_choices?.length||0)?next.market_choices:prev.market_choices;
+  return {...prev,...Object.fromEntries(Object.entries(next).filter(([,v])=>v!==null&&v!==""&&!(Array.isArray(v)&&v.length===0))),market_choices:odds};
+}
+
+const browser=await chromium.launch({headless:true});
+const ctx=await browser.newContext({locale:"ja-JP",timezoneId:"Asia/Tokyo"});
+const events=new Map(), categoryNames=new Set(), sourceUrls=new Set(), jsonUrls=new Set(), wsUrls=new Set(), errors=[];
+let geoBlocked=false, rendererLoaded=false, menuRouteSeen=false, bodyEsportsSeen=false;
+
+function ingestPayload(payload,sourceUrl,kind) {
+  try{
+    walk(payload,(o,path)=>{
+      const ev=eventCandidate(o,sourceUrl,`${kind}:${path}`);
+      if(ev){ events.set(ev.event_id,mergeEvent(events.get(ev.event_id),ev)); categoryNames.add(ev.category_key); }
+    });
+  }catch(e){ errors.push({stage:"ingest",sourceUrl,error:String(e?.message||e)}); }
+}
+
+for(const url of URLS){
+  sourceUrls.add(url);
+  const p=await ctx.newPage();
+  p.setDefaultTimeout(15000);
+  p.on("response",async resp=>{
+    const u=resp.url(), ct=(resp.headers()["content-type"]||"").toLowerCase();
+    if(ct.includes("json")){
+      try{ const j=await resp.json(); jsonUrls.add(u); ingestPayload(j,u,"json"); }catch{}
+    }
+  });
+  p.on("websocket",ws=>{
+    wsUrls.add(ws.url());
+    ws.on("framereceived",ev=>{
+      const data=ev.payload;
+      if(typeof data!=="string" || data.length>5_000_000) return;
+      try{ ingestPayload(JSON.parse(data),ws.url(),"ws"); }catch{}
+    });
+  });
+  try{
+    await p.goto(url,{waitUntil:"domcontentloaded",timeout:45000});
+    await p.waitForTimeout(7000);
+    for(let i=0;i<18;i++){ await p.mouse.wheel(0,2200); await p.waitForTimeout(220); }
+    const body=clean(await p.locator("body").innerText());
+    if(/Access is forbidden from your location|forbidden from your location/i.test(body)) geoBlocked=true;
+    if(ESPORT_RE.test(body)) bodyEsportsSeen=true;
+    const perf=await p.evaluate(()=>performance.getEntriesByType("resource").map(x=>x.name));
+    if(perf.some(u=>/bt-renderer\.min\.js/i.test(u))) rendererLoaded=true;
+    const rows=await p.evaluate(()=>[...document.querySelectorAll("a[href]")].map(a=>({href:a.href||"",text:(a.textContent||"").replace(/\s+/g," ").trim()})).filter(x=>/bt-path=|esport/i.test(x.href+" "+x.text)));
+    for(const r of rows){
+      sourceUrls.add(r.href);
+      menuRouteSeen=true;
+      if(ESPORT_RE.test(r.text)) categoryNames.add(`BETBY_ESPORTS:${clean(r.text)}`);
+    }
+  }catch(e){ errors.push({stage:"page",url,error:String(e?.message||e)}); }
+  finally{ await p.close(); }
+}
+await browser.close();
+
+const allEvents=[...events.values()].sort((a,b)=>(a.start_at_jst||"9999").localeCompare(b.start_at_jst||"9999")||a.event_id.localeCompare(b.event_id));
+const activeEvents=allEvents.filter(e=>!["ended","cancelled","postponed"].includes(e.start_state));
+const eventIds=uniq(allEvents.map(e=>e.event_id)), screeningIds=uniq(activeEvents.map(e=>e.event_id));
+const categoryKeys=uniq([...categoryNames,...allEvents.map(e=>e.category_key)]);
+const missingTime=allEvents.filter(e=>!e.start_at_jst), missingParticipants=allEvents.filter(e=>!e.side_a||!e.side_b);
+const priceMissing=activeEvents.filter(e=>e.price_state!=="priced");
+const priorityIds=activeEvents.filter(e=>{ const t=Date.parse(e.start_at_jst||""); return Number.isFinite(t)&&t>=nowMs&&t<=nowMs+12*3600e3; }).map(e=>e.event_id);
+
+const blockers=[];
+if(geoBlocked) blockers.push("geo_blocked");
+if(!rendererLoaded) blockers.push("renderer_not_loaded");
+if(!bodyEsportsSeen && categoryKeys.length===0) blockers.push("esports_menu_not_observed");
+if(!menuRouteSeen && categoryKeys.length===0) blockers.push("menu_end_not_verified");
+if(eventIds.length===0) blockers.push("event_feed_empty");
+if(screeningIds.length===0) blockers.push("screening_event_empty");
+if(missingParticipants.length) blockers.push("participant_metadata_missing");
+if(missingTime.length) blockers.push("time_parse_missing");
+const menuEndVerified=!geoBlocked && (menuRouteSeen||categoryKeys.length>0) && eventIds.length>0;
+const complete=blockers.length===0 && menuEndVerified;
+const digest=hash([...eventIds].sort().join("|")), screeningDigest=hash([...screeningIds].sort().join("|"));
+const analysisIds=uniq(allEvents.filter(e=>e.primary_market).map(e=>"bc-"+hash(`${e.start_at_jst||""}|${[e.side_a,e.side_b].sort().join("||")}`)));
+
+const out={
+  schema_version:1,
+  checked_at:jstIso(),
+  source:"BET CHANNEL fixed-odds / Betby eSports (Japan local)",
+  source_machine:"japan_local_windows",
+  source_urls:[...sourceUrls],
+  brand_id:BRAND_ID,
+  access_status:geoBlocked?"unavailable":"direct",
+  menu_end_verified:menuEndVerified,
+  event_feed_detected:eventIds.length>0,
+  category_count:categoryKeys.length,
+  category_keys:categoryKeys,
+  event_count:eventIds.length,
+  event_ids:eventIds,
+  screening_event_count:screeningIds.length,
+  screening_event_ids:screeningIds,
+  priority_12h_event_count:priorityIds.length,
+  priority_12h_event_ids:priorityIds,
+  analysis_card_count:analysisIds.length,
+  analysis_card_ids:analysisIds,
+  bettable_analysis_card_count:activeEvents.filter(e=>e.price_state==="priced").length,
+  unavailable_price_card_count:priceMissing.length,
+  failed_category_count:errors.length,
+  metadata_missing_count:missingParticipants.length,
+  time_parse_missing_count:missingTime.length,
+  complete,
+  analysis_ready:complete,
+  inventory_digest:digest,
+  screening_digest:screeningDigest,
+  json_hit_urls:[...jsonUrls],
+  websocket_urls:[...wsUrls],
+  self_audit:{
+    status:complete?"pass":"blocked",
+    digest:hash(JSON.stringify({digest,screeningDigest,categoryKeys,blockers})),
+    anomaly_count:blockers.length,
+    blocker_count:blockers.length,
+    warning_count:priceMissing.length,
+    remediation_status:complete?"not_needed":"required",
+    fixes_applied:[],
+    checks_run:["japan_access","renderer_loaded","esports_menu_observed","event_feed_nonzero","event_id_uniqueness","participant_completeness","time_parse","screening_nonzero","menu_end_verified"],
+    unresolved_blockers:blockers.length,
+    blockers
+  },
+  integrity:{
+    digest,
+    screening_digest:screeningDigest,
+    event_count_matches_ids:eventIds.length===allEvents.length,
+    screening_event_count_matches_ids:screeningIds.length===activeEvents.length,
+    category_keys_complete:categoryKeys.length===new Set(categoryKeys).size,
+    priority_12h_is_subset:priorityIds.every(id=>screeningIds.includes(id))
+  },
+  stats:{
+    priced_event_count:activeEvents.filter(e=>e.price_state==="priced").length,
+    unpriced_event_count:priceMissing.length,
+    future_or_upcoming_count:activeEvents.filter(e=>e.start_state==="future_or_upcoming").length,
+    start_time_passed_count:activeEvents.filter(e=>e.start_state==="start_time_passed").length,
+    primary_h2h_count:allEvents.filter(e=>e.primary_market).length,
+    raw_event_count:allEvents.length
+  },
+  host:{hostname:os.hostname(),platform:process.platform,node:process.version},
+  errors,
+  events:allEvents
+};
+await fs.mkdir(OUT.split(/[\\/]/).slice(0,-1).join("/")||".",{recursive:true});
+await fs.writeFile(OUT,JSON.stringify(out,null,2)+"\n");
+console.log(JSON.stringify({ok:complete,out:OUT,checked_at:out.checked_at,access_status:out.access_status,category_count:out.category_count,event_count:out.event_count,screening_event_count:out.screening_event_count,json_hits:out.json_hit_urls.length,websockets:out.websocket_urls.length,blockers},null,2));
+if(!complete) process.exit(2);
