@@ -9,7 +9,7 @@
     "recommendations": {
       "discovery_runs": [
         {
-          "run_id": "recommendations-manual-gate-revalidation-20260927-2042",
+          "run_id": "rec-manual-gate-revalidation-20260927-2042",
           "started_at": "2026-09-27T15:09:30+09:00",
           "slot": "12:00",
           "note": "15:09実測screening_event_idsを最新版coverage/deep-diveゲートで手動再検証。"
@@ -19,7 +19,7 @@
     "value1": {
       "discovery_runs": [
         {
-          "run_id": "value1-manual-gate-revalidation-20260927-2042",
+          "run_id": "v1-manual-gate-revalidation-20260927-2042",
           "started_at": "2026-09-27T15:09:30+09:00",
           "slot": "12:00",
           "note": "15:09実測screening_event_idsを最新版coverage/deep-diveゲートで手動再検証。"
@@ -29,7 +29,7 @@
     "value2": {
       "discovery_runs": [
         {
-          "run_id": "value2-manual-gate-revalidation-20260927-2042",
+          "run_id": "v2-manual-gate-revalidation-20260927-2042",
           "started_at": "2026-09-27T15:09:30+09:00",
           "slot": "12:00",
           "note": "15:09実測screening_event_idsを最新版coverage/deep-diveゲートで手動再検証。"
@@ -39,7 +39,7 @@
     "pro_edge": {
       "discovery_runs": [
         {
-          "run_id": "pro_edge-manual-gate-revalidation-20260927-2042",
+          "run_id": "pe-manual-gate-revalidation-20260927-2042",
           "started_at": "2026-09-27T15:09:30+09:00",
           "slot": "12:00",
           "note": "15:09実測screening_event_idsを最新版coverage/deep-diveゲートで手動再検証。"
@@ -3030,7 +3030,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "candidate",
-            "note": "recommendations独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。"
+            "note": "recommendations独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+            "analysis_detail": {
+              "summary": "recommendations独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+              "h2h": {
+                "status": "checked",
+                "summary": "15:09実測deep-diveでH2H確認済み。保存済み要約: recommendations独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "unavailable",
+                "text": "欠場/rosterの確定詳細は取得不能または旧証跡に未構造化。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: recommendations独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: recommendations独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。"
+              },
+              "rationale": {
+                "why": [
+                  "recommendations独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "candidate"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220214",
@@ -3048,7 +3101,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "reject",
-            "note": "recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。"
+            "note": "recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。",
+            "analysis_detail": {
+              "summary": "recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "checked",
+                "text": "ランキング/レーティング確認済み。保存済み要約: recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。"
+              },
+              "rationale": {
+                "why": [
+                  "recommendations独立深掘り: IBF1位西田11勝1敗 vs IBF2位Goodman22勝1敗。上位同士で1.38ほどの圧倒差を裏付けにくく除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220216",
@@ -3066,7 +3172,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "reject",
-            "note": "recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。"
+            "note": "recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。",
+            "analysis_detail": {
+              "summary": "recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "checked",
+                "text": "ランキング/レーティング確認済み。保存済み要約: recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。"
+              },
+              "rationale": {
+                "why": [
+                  "recommendations独立深掘り: WBC1位坪井3勝0敗1NC vs WBC2位Malajika17勝2敗。坪井1.14は要求勝率が高すぎ、経験差も大きく除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220218",
@@ -3084,7 +3243,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "reject",
-            "note": "recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。"
+            "note": "recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。",
+            "analysis_detail": {
+              "summary": "recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "checked",
+                "text": "ランキング/レーティング確認済み。保存済み要約: recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。"
+              },
+              "rationale": {
+                "why": [
+                  "recommendations独立深掘り: WBO1位松本8戦全勝 vs WBO3位Acosta17戦全勝。両者無敗で松本1.06は価格が短すぎるため除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220222",
@@ -3105,7 +3317,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "watch",
-            "note": "recommendations独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+            "note": "recommendations独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+            "analysis_detail": {
+              "summary": "recommendations独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: recommendations独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: recommendations独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: recommendations独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "rationale": {
+                "why": [
+                  "recommendations独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220224",
@@ -3125,7 +3390,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "reject",
-            "note": "recommendations独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+            "note": "recommendations独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+            "analysis_detail": {
+              "summary": "recommendations独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: recommendations独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: recommendations独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: recommendations独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "rationale": {
+                "why": [
+                  "recommendations独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220227",
@@ -3146,7 +3464,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "reject",
-            "note": "recommendations独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+            "note": "recommendations独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+            "analysis_detail": {
+              "summary": "recommendations独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: recommendations独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: recommendations独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: recommendations独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+              },
+              "rationale": {
+                "why": [
+                  "recommendations独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220230",
@@ -3167,7 +3538,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "candidate",
-            "note": "recommendations独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+            "note": "recommendations独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+            "analysis_detail": {
+              "summary": "recommendations独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: recommendations独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: recommendations独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: recommendations独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: recommendations独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+              },
+              "rationale": {
+                "why": [
+                  "recommendations独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "candidate"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           }
         ]
       },
@@ -5453,7 +5877,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "watch",
-            "note": "value1独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。"
+            "note": "value1独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+            "analysis_detail": {
+              "summary": "value1独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+              "h2h": {
+                "status": "checked",
+                "summary": "15:09実測deep-diveでH2H確認済み。保存済み要約: value1独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "unavailable",
+                "text": "欠場/rosterの確定詳細は取得不能または旧証跡に未構造化。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value1独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value1独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。"
+              },
+              "rationale": {
+                "why": [
+                  "value1独立深掘り: 名古屋Dは川崎との直近7対戦を連勝（2024-25の4勝、2025-26の2勝、2026-27開幕戦93-63）。BET CHANNEL 1.18。強い格差信号だが当日欠場情報は取得できず。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220423",
@@ -5474,7 +5951,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "watch",
-            "note": "value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+            "note": "value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+            "analysis_detail": {
+              "summary": "value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+              "h2h": {
+                "status": "checked",
+                "summary": "15:09実測deep-diveでH2H確認済み。保存済み要約: value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "checked",
+                "text": "ランキング/レーティング確認済み。保存済み要約: value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+              },
+              "rationale": {
+                "why": [
+                  "value1独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220425",
@@ -5497,7 +6027,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "reject",
-            "note": "value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+            "note": "value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+            "analysis_detail": {
+              "summary": "value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+              "h2h": {
+                "status": "checked",
+                "summary": "15:09実測deep-diveでH2H確認済み。保存済み要約: value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "checked",
+                "text": "ランキング/レーティング確認済み。保存済み要約: value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+              },
+              "rationale": {
+                "why": [
+                  "value1独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220427",
@@ -5520,7 +6103,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "watch",
-            "note": "value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+            "note": "value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+            "analysis_detail": {
+              "summary": "value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+              "h2h": {
+                "status": "checked",
+                "summary": "15:09実測deep-diveでH2H確認済み。保存済み要約: value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "checked",
+                "text": "ランキング/レーティング確認済み。保存済み要約: value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+              },
+              "rationale": {
+                "why": [
+                  "value1独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220222",
@@ -5541,7 +6177,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "watch",
-            "note": "value1独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+            "note": "value1独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+            "analysis_detail": {
+              "summary": "value1独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value1独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value1独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value1独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "rationale": {
+                "why": [
+                  "value1独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220224",
@@ -5561,7 +6250,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "reject",
-            "note": "value1独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+            "note": "value1独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+            "analysis_detail": {
+              "summary": "value1独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value1独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value1独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value1独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "rationale": {
+                "why": [
+                  "value1独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220227",
@@ -5582,7 +6324,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "reject",
-            "note": "value1独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+            "note": "value1独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+            "analysis_detail": {
+              "summary": "value1独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value1独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value1独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value1独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+              },
+              "rationale": {
+                "why": [
+                  "value1独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220230",
@@ -5603,7 +6398,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "watch",
-            "note": "value1再監査: BET CHANNEL Seahawks 1.29の必要勝率77.52%。外部市場はSeahawks概ね-375前後/Commanders+300前後で、no-vig基準ではBET CHANNEL価格に明確な独立edgeを確認できない。過去locked formalは改変せず、今回runではWATCH。"
+            "note": "value1再監査: BET CHANNEL Seahawks 1.29の必要勝率77.52%。外部市場はSeahawks概ね-375前後/Commanders+300前後で、no-vig基準ではBET CHANNEL価格に明確な独立edgeを確認できない。過去locked formalは改変せず、今回runではWATCH。",
+            "analysis_detail": {
+              "summary": "value1再監査: BET CHANNEL Seahawks 1.29の必要勝率77.52%。外部市場はSeahawks概ね-375前後/Commanders+300前後で、no-vig基準ではBET CHANNEL価格に明確な独立edgeを確認できない。過去locked formalは改変せず、今回runではWATCH。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1再監査: BET CHANNEL Seahawks 1.29の必要勝率77.52%。外部市場はSeahawks概ね-375前後/Commanders+300前後で、no-vig基準ではBET CHANNEL価格に明確な独立edgeを確認できない。過去locked formalは改変せず、今回runではWATCH。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value1再監査: BET CHANNEL Seahawks 1.29の必要勝率77.52%。外部市場はSeahawks概ね-375前後/Commanders+300前後で、no-vig基準ではBET CHANNEL価格に明確な独立edgeを確認できない。過去locked formalは改変せず、今回runではWATCH。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value1再監査: BET CHANNEL Seahawks 1.29の必要勝率77.52%。外部市場はSeahawks概ね-375前後/Commanders+300前後で、no-vig基準ではBET CHANNEL価格に明確な独立edgeを確認できない。過去locked formalは改変せず、今回runではWATCH。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value1再監査: BET CHANNEL Seahawks 1.29の必要勝率77.52%。外部市場はSeahawks概ね-375前後/Commanders+300前後で、no-vig基準ではBET CHANNEL価格に明確な独立edgeを確認できない。過去locked formalは改変せず、今回runではWATCH。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value1再監査: BET CHANNEL Seahawks 1.29の必要勝率77.52%。外部市場はSeahawks概ね-375前後/Commanders+300前後で、no-vig基準ではBET CHANNEL価格に明確な独立edgeを確認できない。過去locked formalは改変せず、今回runではWATCH。"
+              },
+              "rationale": {
+                "why": [
+                  "value1再監査: BET CHANNEL Seahawks 1.29の必要勝率77.52%。外部市場はSeahawks概ね-375前後/Commanders+300前後で、no-vig基準ではBET CHANNEL価格に明確な独立edgeを確認できない。過去locked formalは改変せず、今回runではWATCH。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           }
         ]
       },
@@ -7891,7 +8739,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "watch",
-            "note": "value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+            "note": "value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+            "analysis_detail": {
+              "summary": "value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+              "h2h": {
+                "status": "checked",
+                "summary": "15:09実測deep-diveでH2H確認済み。保存済み要約: value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "checked",
+                "text": "ランキング/レーティング確認済み。保存済み要約: value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+              },
+              "rationale": {
+                "why": [
+                  "value2独立深掘り: 巨人2位74-62-2、ヤクルト4位58-76-2。今季対戦は巨人13-10。予告先発は巨人・小笠原、ヤクルト・高橋。巨人1.66は小幅優位だが確率幅が損益分岐を跨ぐ。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220425",
@@ -7914,7 +8815,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "reject",
-            "note": "value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+            "note": "value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+            "analysis_detail": {
+              "summary": "value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+              "h2h": {
+                "status": "checked",
+                "summary": "15:09実測deep-diveでH2H確認済み。保存済み要約: value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "checked",
+                "text": "ランキング/レーティング確認済み。保存済み要約: value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+              },
+              "rationale": {
+                "why": [
+                  "value2独立深掘り: 西武2位74-59-4に対し楽天6位54-79-1だが、楽天1.63の市場。西武先発冨士は一軍2登板2回ERA22.50、楽天は早川。チーム力と先発差が逆方向で不確実性が高く除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220427",
@@ -7937,7 +8891,60 @@
               "market_crosscheck": "unavailable"
             },
             "outcome": "watch",
-            "note": "value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+            "note": "value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+            "analysis_detail": {
+              "summary": "value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+              "h2h": {
+                "status": "checked",
+                "summary": "15:09実測deep-diveでH2H確認済み。保存済み要約: value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "checked",
+                "text": "ランキング/レーティング確認済み。保存済み要約: value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+              },
+              "rationale": {
+                "why": [
+                  "value2独立深掘り: 日本ハム3位75-61-3、ロッテ5位59-70-3。今季対戦は日本ハム13-9。先発は日本ハム有原（ERA4.35）対ロッテ高野（ERA3.00）。日本ハム1.60はチーム差と先発差が相殺し監視。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220222",
@@ -7958,7 +8965,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "watch",
-            "note": "value2独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+            "note": "value2独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+            "analysis_detail": {
+              "summary": "value2独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value2独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value2独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value2独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "rationale": {
+                "why": [
+                  "value2独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220224",
@@ -7978,7 +9038,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "reject",
-            "note": "value2独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+            "note": "value2独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+            "analysis_detail": {
+              "summary": "value2独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value2独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value2独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value2独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "rationale": {
+                "why": [
+                  "value2独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220230",
@@ -7999,7 +9112,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "watch",
-            "note": "value2独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+            "note": "value2独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+            "analysis_detail": {
+              "summary": "value2独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: value2独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: value2独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: value2独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: value2独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+              },
+              "rationale": {
+                "why": [
+                  "value2独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           }
         ]
       },
@@ -10287,7 +11453,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "watch",
-            "note": "pro_edge独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+            "note": "pro_edge独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+            "analysis_detail": {
+              "summary": "pro_edge独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: pro_edge独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: pro_edge独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: pro_edge独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: pro_edge独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: pro_edge独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+              },
+              "rationale": {
+                "why": [
+                  "pro_edge独立深掘り: Bills 2-0、Chargers 0-2。Chargersは6人OUT、BillsもWR2人などQUESTIONABLE。Bills1.28は優位だが負傷不確実性を織込み監視。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220224",
@@ -10307,7 +11526,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "reject",
-            "note": "pro_edge独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+            "note": "pro_edge独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+            "analysis_detail": {
+              "summary": "pro_edge独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: pro_edge独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: pro_edge独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: pro_edge独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: pro_edge独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: pro_edge独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+              },
+              "rationale": {
+                "why": [
+                  "pro_edge独立深掘り: Lions/Jetsとも1-1。Jetsは複数主力OUT、LionsもOL/Sに欠場。Lions1.33を正当化する独立差が不足し除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220227",
@@ -10328,7 +11600,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "reject",
-            "note": "pro_edge独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+            "note": "pro_edge独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+            "analysis_detail": {
+              "summary": "pro_edge独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: pro_edge独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: pro_edge独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: pro_edge独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: pro_edge独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: pro_edge独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+              },
+              "rationale": {
+                "why": [
+                  "pro_edge独立深掘り: Chiefs優勢・Dolphins0-2だが、Chiefs1.16は必要勝率86%超。OT Josh Simmons OUTなどもあり独立推定は閾値未達として除外。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "reject"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           },
           {
             "event_id": "220230",
@@ -10349,7 +11674,60 @@
               "market_crosscheck": "checked"
             },
             "outcome": "watch",
-            "note": "pro_edge独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+            "note": "pro_edge独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+            "analysis_detail": {
+              "summary": "pro_edge独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+              "h2h": {
+                "status": "unavailable",
+                "summary": "15:09実測deep-diveではH2Hの詳細列を構造化保存できていない。",
+                "items": []
+              },
+              "recent_form": {
+                "status": "checked",
+                "side_a": {
+                  "label": "side_a",
+                  "summary": "直近フォーム確認済み。保存済み要約: pro_edge独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+                  "items": []
+                },
+                "side_b": {
+                  "label": "side_b",
+                  "summary": "直近フォーム確認済み。保存済み要約: pro_edge独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。",
+                  "items": []
+                }
+              },
+              "ranking_or_rating": {
+                "status": "not_applicable",
+                "text": "ランキング/レーティングはこの判定で非該当。"
+              },
+              "home_away": {
+                "status": "unavailable",
+                "text": "15:09 snapshotの旧deep-dive証跡にはhome/away・会場の構造化詳細が保存されていないため推測補完しない。"
+              },
+              "availability": {
+                "status": "checked",
+                "text": "欠場/roster等を確認済み。保存済み要約: pro_edge独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+              },
+              "market": {
+                "status": "checked",
+                "text": "市場オッズ確認済み。保存済み要約: pro_edge独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+              },
+              "sport_specific": {
+                "status": "checked",
+                "text": "競技固有要因確認済み。保存済み要約: pro_edge独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+              },
+              "rationale": {
+                "why": [
+                  "pro_edge独立深掘り: Seattle 2-0、Washington 0-2。SeattleはQB Sam Darnold復帰、WashingtonはQB Jayden Danielsを含む5人OUTでMariota先発。Seattle1.29。Seattle側も先発S2人OUTのため過信はしない。"
+                ],
+                "risks": [
+                  "この手動再検証は15:09実測snapshotの既存証跡を最新版schemaへ構造化したもので、保存されていない数値は推測補完していない。"
+                ],
+                "conclusion": "watch"
+              },
+              "missing_information": [
+                "15:09旧snapshotで構造化保存されていないH2H個票・直近個票・home/away詳細は推測せず欠損として維持。"
+              ]
+            }
           }
         ]
       }
