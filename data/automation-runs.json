@@ -4,7 +4,7 @@
     "generated_by": "scripts/rmc-production-update.mjs",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-09-27T18:52:00+09:00",
+    "as_of": "2026-09-27T19:14:53+09:00",
     "status": "active",
     "note": "本番更新 workflow の実行記録（追記のみ）"
   },
@@ -21423,6 +21423,140 @@
       "pages_result": "published",
       "coverage_audit": null,
       "note": "結果確定→①〜④収支連動の本番再実行。JSK Esports vs Barça eSportsを確定し、②VALUE①の損益・ROIを即時反映。profit_auditで①〜④全系統の現在収支を保存。"
+    },
+    {
+      "run_id": "rmc-display-audit-20260927-1915",
+      "started_at": "2026-09-27T19:15:10+09:00",
+      "finished_at": "2026-09-27T19:15:10+09:00",
+      "source": "ChatGPT RMC display audit 19:15",
+      "payload_generated_at": "2026-09-27T19:14:53+09:00",
+      "payload_sha256": "35694304333a2223ec932445a22d643a9a12ada80fc360f8b29f7a2ade3b87b7",
+      "start_sha": "3bba7a51f6ef7101e121d10c73d75c5d9077935d",
+      "end_sha": null,
+      "systems_checked": [
+        "recommendations",
+        "experience",
+        "value1",
+        "value2",
+        "pro_edge"
+      ],
+      "cards_checked": 52,
+      "results_updated": 0,
+      "metadata_updated": 0,
+      "new_candidates": {
+        "recommendations": 0,
+        "experience": 0,
+        "value1": 0,
+        "value2": 0,
+        "pro_edge": 0
+      },
+      "accepted": 0,
+      "watch": 0,
+      "rejected": 0,
+      "postmortems_created": 0,
+      "profit_audit": {
+        "recommendations": {
+          "official": {
+            "count": 33,
+            "settled_games": 22,
+            "wins": 20,
+            "losses": 2,
+            "pending": 10,
+            "settled_stake": 1000,
+            "net_profit": -73,
+            "roi": -7.3,
+            "amount_missing": 12
+          },
+          "watch": {
+            "count": 0,
+            "settled_games": 0,
+            "wins": 0,
+            "losses": 0,
+            "pending": 0,
+            "settled_stake": 0,
+            "net_profit": 0,
+            "roi": null,
+            "amount_missing": 0
+          }
+        },
+        "value1": {
+          "official": {
+            "count": 6,
+            "settled_games": 4,
+            "wins": 2,
+            "losses": 2,
+            "pending": 2,
+            "settled_stake": 400,
+            "net_profit": -108,
+            "roi": -27,
+            "amount_missing": 0
+          },
+          "watch": {
+            "count": 4,
+            "settled_games": 4,
+            "wins": 4,
+            "losses": 0,
+            "pending": 0,
+            "settled_stake": 100,
+            "net_profit": 35,
+            "roi": 35,
+            "amount_missing": 3
+          }
+        },
+        "value2": {
+          "official": {
+            "count": 1,
+            "settled_games": 1,
+            "wins": 1,
+            "losses": 0,
+            "pending": 0,
+            "settled_stake": 100,
+            "net_profit": 76,
+            "roi": 76,
+            "amount_missing": 0
+          },
+          "watch": {
+            "count": 2,
+            "settled_games": 1,
+            "wins": 1,
+            "losses": 0,
+            "pending": 1,
+            "settled_stake": 0,
+            "net_profit": 0,
+            "roi": null,
+            "amount_missing": 1
+          }
+        },
+        "pro_edge": {
+          "official": {
+            "count": 0,
+            "settled_games": 0,
+            "wins": 0,
+            "losses": 0,
+            "pending": 0,
+            "settled_stake": 0,
+            "net_profit": 0,
+            "roi": null,
+            "amount_missing": 0
+          },
+          "watch": {
+            "count": 1,
+            "settled_games": 0,
+            "wins": 0,
+            "losses": 0,
+            "pending": 1,
+            "settled_stake": 0,
+            "net_profit": 0,
+            "roi": null,
+            "amount_missing": 0
+          }
+        }
+      },
+      "validation_result": "pass",
+      "actions_result": "pass",
+      "pages_result": "pending",
+      "coverage_audit": null,
+      "note": "PASS済み収支回帰テスト・キャッシュ対策・Pages JSON監査修正後、現在の確定結果と保存済み一点オッズから①〜④の集計を再生成し、公開RMCの上部表示まで一致確認する。"
     }
   ]
 }
