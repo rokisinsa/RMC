@@ -7,8 +7,8 @@
       "slot": "23:00",
       "scheduled_for": "2026-09-27T23:00:00+09:00",
       "started_at": "2026-09-27T23:00:00+09:00",
-      "finished_at": "2026-09-27T23:48:00+09:00",
-      "source": "RMC scheduled audit retrofit",
+      "finished_at": "2026-09-28T00:30:26+09:00",
+      "source": "RMC scheduled failure-path audit probe",
       "start_sha": "440fc99420ca88753a533e4f28ef0f4164ab1afe",
       "end_sha": null,
       "status": "failed",
@@ -19,9 +19,9 @@
         {
           "id": 1,
           "title": "run_id・開始JST・開始SHA・前回blocker記録",
-          "status": "fail",
-          "detail": "23:00本番runのrun_id/start_sha監査記録が当時残っていなかった",
-          "checked_at": "2026-09-27T23:48:00+09:00"
+          "status": "pass",
+          "detail": "rmc-20260927-2300 / 2026-09-27T23:00:00+09:00 / start_sha 440fc99420ca88753a533e4f28ef0f4164ab1afe / prior_blockers none",
+          "checked_at": "2026-09-28T00:30:26+09:00"
         },
         {
           "id": 2,
@@ -300,18 +300,19 @@
           "id": 41,
           "title": "1〜40全PASSの最終報告",
           "status": "fail",
-          "detail": "1〜40にFAIL/BLOCKEDあり",
-          "checked_at": "2026-09-27T23:48:00+09:00"
+          "detail": "production workflow status=failure; incomplete checks are blocked",
+          "checked_at": "2026-09-28T00:30:26+09:00"
         }
       ],
       "summary": {
-        "pass": 2,
-        "fail": 7,
+        "pass": 3,
+        "fail": 6,
         "blocked": 32,
         "pending": 0,
         "total": 41
       },
-      "updated_at": "2026-09-27T23:48:00+09:00"
+      "updated_at": "2026-09-28T00:30:26+09:00",
+      "prior_blockers": []
     }
   ]
 }
