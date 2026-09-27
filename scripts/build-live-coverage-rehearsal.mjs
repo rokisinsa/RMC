@@ -65,12 +65,16 @@ const reasons=(e,system,id)=>{
 const analysisDetail=e=>({
   summary:"live coverage rehearsal: production handoff/gate validation only; external research is intentionally marked unavailable, never fabricated",
   h2h:{status:"unavailable",summary:"rehearsal does not fabricate H2H; production analysis must supply verified H2H or a source-backed unavailable reason",items:[]},
-  recent_form:{status:"unavailable",summary:"rehearsal does not fabricate recent form"},
-  ranking_or_rating:{status:"unavailable",summary:"rehearsal does not fabricate rankings/ratings"},
-  home_away:{status:"unavailable",summary:"rehearsal does not fabricate venue splits"},
-  availability:{status:"unavailable",summary:"rehearsal does not fabricate roster/availability"},
-  market:{status:priced(e)?"checked":"unavailable",summary:priced(e)?"inventory contains current published price metadata":"published price unavailable"},
-  sport_specific:{status:"unavailable",summary:"sport/title-specific external research is required in production"},
+  recent_form:{
+    status:"unavailable",
+    side_a:{label:e?.side_a||"side_a",summary:"rehearsal does not fabricate recent form",items:[]},
+    side_b:{label:e?.side_b||"side_b",summary:"rehearsal does not fabricate recent form",items:[]}
+  },
+  ranking_or_rating:{status:"unavailable",text:"rehearsal does not fabricate rankings/ratings"},
+  home_away:{status:"unavailable",text:"rehearsal does not fabricate venue splits"},
+  availability:{status:"unavailable",text:"rehearsal does not fabricate roster/availability"},
+  market:{status:priced(e)?"checked":"unavailable",text:priced(e)?"inventory contains current published price metadata":"published price unavailable"},
+  sport_specific:{status:"unavailable",text:"sport/title-specific external research is required in production"},
   rationale:{
     why:["eligible-category coverage gate exercised with the real current inventory"],
     risks:["external H2H/form/ranking/roster research is not performed by this CI rehearsal"],
