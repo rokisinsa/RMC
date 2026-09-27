@@ -160,7 +160,14 @@
           "market": "match_winner",
           "selection": "side_a",
           "selection_label": "Fixture Player A",
-          "market_odds": null,
+          "market_odds": {
+            "text": "1.8",
+            "exact": 1.8,
+            "min": 1.8,
+            "max": 1.8,
+            "observed_at": "2026-09-27T06:12:00+09:00",
+            "source": "BET CHANNEL fixture exact odds"
+          },
           "odds_taken": 1.8,
           "stake": 100,
           "discovered_at": "2026-09-27T06:10:00+09:00",
@@ -186,9 +193,10 @@
           "selection": "side_b",
           "selection_label": "Fixture FC B",
           "market_odds": {
-            "text": "1.15〜1.20",
-            "min": 1.15,
-            "max": 1.2,
+            "text": "1.18",
+            "exact": 1.18,
+            "min": 1.18,
+            "max": 1.18,
             "observed_at": "2026-09-27T06:05:00+09:00",
             "source": "公開オッズ（架空）"
           },
@@ -259,12 +267,19 @@
           "market": "match_winner",
           "selection": "side_a",
           "selection_label": "Fixture Team A",
-          "market_odds": null,
+          "market_odds": {
+            "text": "1.9",
+            "exact": 1.9,
+            "min": 1.9,
+            "max": 1.9,
+            "observed_at": "2026-09-27T06:08:00+09:00",
+            "source": "BET CHANNEL fixture exact odds"
+          },
           "odds_taken": 1.9,
           "stake": 100,
           "discovered_at": "2026-09-27T06:06:00+09:00",
           "run_id": "v1-2026-09-27-0600-fx",
-          "bet_at": null,
+          "bet_at": "2026-09-27T06:28:00+09:00",
           "locked_at": "2026-09-27T06:25:00+09:00",
           "locked": {
             "verdict": "formal",
@@ -301,12 +316,19 @@
           "market": "match_winner",
           "selection": "side_b",
           "selection_label": "Fixture VC B",
-          "market_odds": null,
+          "market_odds": {
+            "text": "1.65",
+            "exact": 1.65,
+            "min": 1.65,
+            "max": 1.65,
+            "observed_at": "2026-09-27T06:09:00+09:00",
+            "source": "BET CHANNEL fixture exact odds"
+          },
           "odds_taken": 1.65,
           "stake": 100,
           "discovered_at": "2026-09-27T06:07:00+09:00",
           "run_id": "v2-2026-09-27-0600-fx",
-          "bet_at": null,
+          "bet_at": "2026-09-27T06:29:00+09:00",
           "locked_at": "2026-09-27T06:28:00+09:00",
           "locked": {
             "verdict": "adopted",
