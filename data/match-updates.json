@@ -455,6 +455,47 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-result-nagoya-20260927-1925",
+      "kind": "result_update",
+      "at": "2026-09-27T19:25:18+09:00",
+      "source": "official result sync",
+      "note": "公式結果確認",
+      "changes": [
+        {
+          "match_id": "2026-09-27-kawasaki-nagoyad",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 63,
+                "b": 93
+              },
+              "text": "川崎ブレイブサンダース 63-93 名古屋ダイヤモンドドルフィンズ"
+            },
+            "result_confirmed_at": "2026-09-27T19:25:18+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "名古屋ダイヤモンドドルフィンズ公式",
+                "url": "https://x.com/nagoyadolphins",
+                "type": "official"
+              },
+              {
+                "name": "B.LEAGUE公式",
+                "url": "https://www.bleague.jp/topics_detail71/id=618713",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-09-27T19:25:18+09:00",
+            "source_confidence": "official",
+            "note": "公式アカウントで最終スコアを確認。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }
