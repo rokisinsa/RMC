@@ -1,0 +1,80 @@
+name: RMC scheduled 41-check audit
+
+on:
+  workflow_run:
+    workflows: ["BET CHANNEL complete inventory"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rmc-scheduled-41-check-audit
+  cancel-in-progress: false
+
+jobs:
+  inventory-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Start/update the nearest scheduled 41-item audit
+        run: |
+          node scripts/rmc-scheduled-checklist.mjs             --auto-next             --inventory             --source "BET CHANNEL inventory gate"             --start-sha "$(git rev-parse HEAD)"
+
+      - name: Validate checklist shape
+        run: |
+          node - <<'NODE'
+          const fs=require("fs");
+          const x=JSON.parse(fs.readFileSync("data/scheduled-update-checklist.json","utf8"));
+          if(x.schema_version!==1) throw new Error("bad schema_version");
+          const r=(x.runs||[]).find(v=>v.run_id===x.latest_run_id);
+          if(!r) throw new Error("latest run missing");
+          if((r.checks||[]).length!==41) throw new Error("check count must be 41");
+          const ids=r.checks.map(v=>v.id);
+          if(new Set(ids).size!==41 || Math.min(...ids)!==1 || Math.max(...ids)!==41) throw new Error("check IDs invalid");
+          const total=(r.summary?.pass||0)+(r.summary?.fail||0)+(r.summary?.blocked||0)+(r.summary?.pending||0);
+          if(total!==41) throw new Error("summary total mismatch");
+          console.log(JSON.stringify({run_id:r.run_id,status:r.status,summary:r.summary,blockers:r.blockers},null,2));
+          NODE
+
+      - name: Persist inventory audit even when complete update is blocked
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp data/scheduled-update-checklist.json /tmp/scheduled-update-checklist.json
+          pushed=0
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/scheduled-update-checklist.json data/scheduled-update-checklist.json
+            git add data/scheduled-update-checklist.json
+            if git diff --cached --quiet; then
+              pushed=1
+              break
+            fi
+            git commit -m "RMC scheduled inventory audit"
+            if git push origin HEAD:main; then
+              pushed=1
+              break
+            fi
+            sleep 2
+          done
+          [ "$pushed" = "1" ] || exit 1
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## RMC scheduled 41-check audit"
+            node -e 'const x=require("./data/scheduled-update-checklist.json");const r=(x.runs||[]).find(v=>v.run_id===x.latest_run_id);console.log(r?JSON.stringify({run_id:r.run_id,status:r.status,summary:r.summary,blockers:r.blockers},null,2):"no run")' || true
+          } >> "$GITHUB_STEP_SUMMARY"
