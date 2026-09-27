@@ -56,6 +56,10 @@ jobs:
             if(c.screening_evidence.length!==n) throw new Error(key+" screening_evidence mismatch");
             if(new Set(c.screening_evidence.map(x=>x.event_id)).size!==n) throw new Error(key+" duplicate/missing evidence");
             if(c.screening_evidence.filter(x=>x.screen_decision==="deep_dive").length!==c.deep_dived) throw new Error(key+" deep_dived mismatch");
+            if(c.deep_dive_evidence.length!==c.deep_dived) throw new Error(key+" deep_dive_evidence mismatch");
+            const deepIds=c.screening_evidence.filter(x=>x.screen_decision==="deep_dive").map(x=>x.event_id).sort();
+            const proofIds=c.deep_dive_evidence.map(x=>x.event_id).sort();
+            if(JSON.stringify(deepIds)!==JSON.stringify(proofIds)) throw new Error(key+" deep-dive proof IDs mismatch");
           }
           console.log(JSON.stringify({
             ok:true,
@@ -65,7 +69,8 @@ jobs:
             systems:Object.fromEntries(["recommendations","value1","value2","pro_edge"].map(k=>[k,{
               cards_checked:p.coverage_audit.systems[k].cards_checked,
               evidence:p.coverage_audit.systems[k].screening_evidence.length,
-              deep_dived:p.coverage_audit.systems[k].deep_dived
+              deep_dived:p.coverage_audit.systems[k].deep_dived,
+              deep_dive_evidence:p.coverage_audit.systems[k].deep_dive_evidence.length
             }]))
           },null,2));
           NODE
