@@ -389,7 +389,11 @@ function auditSummary(s) {
 function profitAuditSnapshot(vm) {
   const zero={count:0,settledGames:0,wins:0,losses:0,pending:0,settledStake:0,netProfit:0,roi:null,amountMissing:0};
   return {
-    recommendations:{official:auditSummary(vm.recommendations.summary),watch:auditSummary(zero)},
+    recommendations:{
+      official:auditSummary(vm.recommendations.summary),watch:auditSummary(zero),
+      compound:{...vm.recommendations.compound},
+      quarter_kelly:{...vm.recommendations.kelly}
+    },
     value1:{official:auditSummary(vm.value1.official),watch:auditSummary(vm.value1.reference)},
     value2:{official:auditSummary(vm.value2.official),watch:auditSummary(vm.value2.reference)},
     pro_edge:{official:auditSummary(vm.pro_edge.official),watch:auditSummary(vm.pro_edge.reference)}
