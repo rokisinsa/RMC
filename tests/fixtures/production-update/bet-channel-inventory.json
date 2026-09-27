@@ -527,6 +527,210 @@
     "category_keys_complete": true,
     "category_card_counts_sum": true,
     "analysis_card_count_matches_ids": true,
-    "digest": "fixture-digest-20260927"
-  }
+    "digest": "fixture-digest-20260927",
+    "screening_event_count_matches_ids": true,
+    "screening_category_counts_sum": true,
+    "priority_12h_is_subset": true,
+    "screening_digest": "fixture-screening-digest-20260927"
+  },
+  "screening_rule": "fixture: all currently listed active sports/esports events",
+  "screening_event_count": 20,
+  "screening_event_ids": [
+    "bc-00000000000000000001",
+    "bc-00000000000000000002",
+    "bc-00000000000000000003",
+    "bc-00000000000000000004",
+    "bc-00000000000000000005",
+    "bc-00000000000000000006",
+    "bc-00000000000000000007",
+    "bc-00000000000000000008",
+    "bc-00000000000000000009",
+    "bc-0000000000000000000a",
+    "bc-0000000000000000000b",
+    "bc-0000000000000000000c",
+    "bc-0000000000000000000d",
+    "bc-0000000000000000000e",
+    "bc-0000000000000000000f",
+    "bc-00000000000000000010",
+    "bc-00000000000000000011",
+    "bc-00000000000000000012",
+    "bc-00000000000000000013",
+    "bc-00000000000000000014"
+  ],
+  "screening_events": [
+    {
+      "event_id": "bc-00000000000000000001",
+      "category": "fixture-soccer",
+      "category_key": "fixture-soccer",
+      "start_at_jst": "2026-09-27T08:00:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000002",
+      "category": "fixture-tennis",
+      "category_key": "fixture-tennis",
+      "start_at_jst": "2026-09-27T08:10:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000003",
+      "category": "fixture-volleyball",
+      "category_key": "fixture-volleyball",
+      "start_at_jst": "2026-09-27T08:20:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000004",
+      "category": "fixture-esports",
+      "category_key": "fixture-esports",
+      "start_at_jst": "2026-09-27T08:30:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000005",
+      "category": "fixture-soccer",
+      "category_key": "fixture-soccer",
+      "start_at_jst": "2026-09-27T09:00:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000006",
+      "category": "fixture-tennis",
+      "category_key": "fixture-tennis",
+      "start_at_jst": "2026-09-27T09:10:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000007",
+      "category": "fixture-volleyball",
+      "category_key": "fixture-volleyball",
+      "start_at_jst": "2026-09-27T09:20:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000008",
+      "category": "fixture-esports",
+      "category_key": "fixture-esports",
+      "start_at_jst": "2026-09-27T09:30:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000009",
+      "category": "fixture-soccer",
+      "category_key": "fixture-soccer",
+      "start_at_jst": "2026-09-27T10:00:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-0000000000000000000a",
+      "category": "fixture-tennis",
+      "category_key": "fixture-tennis",
+      "start_at_jst": "2026-09-27T10:10:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-0000000000000000000b",
+      "category": "fixture-volleyball",
+      "category_key": "fixture-volleyball",
+      "start_at_jst": "2026-09-27T10:20:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-0000000000000000000c",
+      "category": "fixture-esports",
+      "category_key": "fixture-esports",
+      "start_at_jst": "2026-09-27T10:30:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-0000000000000000000d",
+      "category": "fixture-soccer",
+      "category_key": "fixture-soccer",
+      "start_at_jst": "2026-09-27T11:00:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-0000000000000000000e",
+      "category": "fixture-tennis",
+      "category_key": "fixture-tennis",
+      "start_at_jst": "2026-09-27T11:10:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-0000000000000000000f",
+      "category": "fixture-volleyball",
+      "category_key": "fixture-volleyball",
+      "start_at_jst": "2026-09-27T11:20:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000010",
+      "category": "fixture-esports",
+      "category_key": "fixture-esports",
+      "start_at_jst": "2026-09-27T11:30:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000011",
+      "category": "fixture-soccer",
+      "category_key": "fixture-soccer",
+      "start_at_jst": "2026-09-27T12:00:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000012",
+      "category": "fixture-tennis",
+      "category_key": "fixture-tennis",
+      "start_at_jst": "2026-09-27T12:10:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000013",
+      "category": "fixture-volleyball",
+      "category_key": "fixture-volleyball",
+      "start_at_jst": "2026-09-27T12:20:00+09:00",
+      "status": 0
+    },
+    {
+      "event_id": "bc-00000000000000000014",
+      "category": "fixture-esports",
+      "category_key": "fixture-esports",
+      "start_at_jst": "2026-09-27T12:30:00+09:00",
+      "status": 0
+    }
+  ],
+  "screening_event_counts_by_category": {
+    "fixture-soccer": 5,
+    "fixture-tennis": 5,
+    "fixture-volleyball": 5,
+    "fixture-esports": 5
+  },
+  "priority_window": {
+    "start_jst": "2026-09-27T06:50:00+09:00",
+    "end_jst": "2026-09-27T18:50:00+09:00",
+    "hours": 12
+  },
+  "priority_12h_event_count": 20,
+  "priority_12h_event_ids": [
+    "bc-00000000000000000001",
+    "bc-00000000000000000002",
+    "bc-00000000000000000003",
+    "bc-00000000000000000004",
+    "bc-00000000000000000005",
+    "bc-00000000000000000006",
+    "bc-00000000000000000007",
+    "bc-00000000000000000008",
+    "bc-00000000000000000009",
+    "bc-0000000000000000000a",
+    "bc-0000000000000000000b",
+    "bc-0000000000000000000c",
+    "bc-0000000000000000000d",
+    "bc-0000000000000000000e",
+    "bc-0000000000000000000f",
+    "bc-00000000000000000010",
+    "bc-00000000000000000011",
+    "bc-00000000000000000012",
+    "bc-00000000000000000013",
+    "bc-00000000000000000014"
+  ]
 }
