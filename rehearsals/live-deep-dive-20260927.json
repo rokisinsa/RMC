@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "kind": "live_deep_dive_rehearsal",
+  "checked_at_jst": "2026-09-27T14:05:00+09:00",
+  "source_inventory_checked_at": "2026-09-27T13:53:26+09:00",
+  "purpose": "BET CHANNEL全件一次走査後の12時間優先候補について、低オッズだけで採用せず外部実データで二次精査できるかを確認する試走証跡。本番pickではない。",
+  "candidates": [
+    {
+      "event_id": "220421",
+      "match": "オリックス vs ソフトバンク",
+      "bet_channel_odds": {
+        "favorite": "ソフトバンク",
+        "odds": 1.31
+      },
+      "evidence": {
+        "league_position": "ソフトバンク1位、オリックス4位（9/25時点）",
+        "season_h2h": "ソフトバンク14勝10敗",
+        "starters": "ソフトバンク大津亮介 11勝5敗 ERA2.58 / オリックス髙島泰都 7勝5敗 ERA4.56",
+        "extra": "大津は対オリックス3試合1勝2敗だが20回自責2、ERA0.90"
+      },
+      "rehearsal_outcome": "watch",
+      "reasons": [
+        "順位・先発差は強い",
+        "ただし今季H2H14-10で圧倒的一方差とは言えない",
+        "1.31のみで格差採用しない"
+      ],
+      "sources": [
+        "https://npb.jp/bis/2026/stats/std_p.html",
+        "https://pacificleague.com/news/2026/9/86579"
+      ]
+    },
+    {
+      "event_id": "220569",
+      "match": "宇都宮ブレックス vs 横浜ビー・コルセアーズ",
+      "bet_channel_odds": {
+        "favorite": "宇都宮",
+        "odds": 1.16
+      },
+      "evidence": {
+        "all_time_h2h": "宇都宮20勝3敗",
+        "previous_day": "2026-09-26 宇都宮88-78横浜BC",
+        "previous_day_peak_lead": "宇都宮最大25点差"
+      },
+      "rehearsal_outcome": "retain_for_full_model",
+      "reasons": [
+        "H2H長期差が大きい",
+        "同会場連戦の前日も宇都宮勝利",
+        "前日内容にも優位性あり"
+      ],
+      "sources": [
+        "https://www.bleague.jp/record/?club1=703&club2=694",
+        "https://www.bleague.jp/media_news/detail/id=622287"
+      ]
+    },
+    {
+      "event_id": "220570",
+      "match": "川崎ブレイブサンダース vs 名古屋ダイヤモンドドルフィンズ",
+      "bet_channel_odds": {
+        "favorite": "名古屋D",
+        "odds": 1.17
+      },
+      "evidence": {
+        "all_time_h2h": "名古屋D12勝、川崎15勝",
+        "recent_series": "2024-25以降の公式掲載7試合は名古屋Dが7連勝",
+        "previous_day": "2026-09-26 名古屋D93-63川崎"
+      },
+      "rehearsal_outcome": "retain_for_full_model",
+      "reasons": [
+        "通算H2Hだけなら一方的ではない",
+        "しかし直近系列は名古屋Dが明確に優位",
+        "前日30点差勝利"
+      ],
+      "sources": [
+        "https://www.bleague.jp/record/?club1=729&club2=727",
+        "https://sports.yahoo.co.jp/basket/bleague/premier/game/506391/boxscore"
+      ]
+    },
+    {
+      "event_id": "220214",
+      "match": "西田凌佑 vs サム・グッドマン",
+      "bet_channel_odds": {
+        "favorite": "西田凌佑",
+        "odds": 1.38
+      },
+      "evidence": {
+        "ranking": "IBF Sバンタム級1位 vs 2位",
+        "records": "西田11勝2KO1敗 / グッドマン22勝8KO1敗",
+        "weigh_in": "55.3kg vs 55.2kg"
+      },
+      "rehearsal_outcome": "reject_as_gap",
+      "reasons": [
+        "世界1位対2位の上位同士",
+        "グッドマンも22勝1敗",
+        "低オッズだけでは格差根拠不足"
+      ],
+      "sources": [
+        "https://boxmob.jp/sp/titlematch/index.html?tid=3831",
+        "https://teiken.com/info/index_2.html"
+      ]
+    },
+    {
+      "event_id": "220216",
+      "match": "坪井智也 vs リカルド・マラジカ",
+      "bet_channel_odds": {
+        "favorite": "坪井智也",
+        "odds": 1.14
+      },
+      "evidence": {
+        "ranking": "WBC Sフライ級1位 vs 2位",
+        "records": "坪井3勝2KO・1NC / マラジカ17勝12KO2敗",
+        "opponent_form": "マラジカ直近5戦5勝"
+      },
+      "rehearsal_outcome": "reject_as_gap",
+      "reasons": [
+        "世界1位対2位",
+        "坪井はプロ経験が非常に少ない",
+        "マラジカは19戦・直近連勝で1.14ほどの単純格差と扱えない"
+      ],
+      "sources": [
+        "https://teiken.com/info/index_2.html",
+        "https://corner-index.com/fighters/ricardo-malajika/",
+        "https://boxingnews.jp/news/117882/"
+      ]
+    },
+    {
+      "event_id": "220218",
+      "match": "松本流星 vs ラッセル・アコスタ",
+      "bet_channel_odds": {
+        "favorite": "松本流星",
+        "odds": 1.09
+      },
+      "evidence": {
+        "ranking": "松本WBO1位 / アコスタWBO3位",
+        "records": "松本8戦全勝 / アコスタ17戦全勝",
+        "opponent_note": "アコスタは国外初試合だがサウスポー戦は本人記憶で4戦全勝"
+      },
+      "rehearsal_outcome": "reject_as_gap",
+      "reasons": [
+        "両者無敗",
+        "相手は17戦全勝",
+        "1.09だけで圧倒的格差と判定しない"
+      ],
+      "sources": [
+        "https://www.teiken.com/info/index.html",
+        "https://www.teiken.com/",
+        "https://www.daily.co.jp/ring/2026/08/28/0020756051.shtml"
+      ]
+    },
+    {
+      "event_id": "220386",
+      "match": "セルビア vs オランダ",
+      "bet_channel_odds": {
+        "favorite": "オランダ",
+        "odds": 1.39
+      },
+      "evidence": {
+        "uefa_h2h": "セルビア3勝・1分・オランダ6勝、得点12-18",
+        "form": "セルビア W-L-W-L-L / オランダ W-D-W-W-D",
+        "matchday1": "セルビア1-2ギリシャ / オランダ1-1ドイツ"
+      },
+      "rehearsal_outcome": "watch",
+      "reasons": [
+        "H2H・直近はオランダ優位",
+        "ただしアウェーでH2Hも完全一方差ではない"
+      ],
+      "sources": [
+        "https://www.uefa.com/uefanationsleague/match/2047981--serbia-vs-netherlands/",
+        "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000--2026-27-uefa-nations-league-all-the-league-phase-fixtures/"
+      ]
+    },
+    {
+      "event_id": "220387",
+      "match": "デンマーク vs ウェールズ",
+      "bet_channel_odds": {
+        "favorite": "デンマーク",
+        "odds": 1.42
+      },
+      "evidence": {
+        "uefa_h2h": "デンマーク2勝0分0敗、得点4-1",
+        "form": "デンマーク L-W-D-D-L / ウェールズ D-D-D-L-L",
+        "matchday1": "ノルウェー3-2デンマーク / ポルトガル1-0ウェールズ"
+      },
+      "rehearsal_outcome": "watch",
+      "reasons": [
+        "H2Hはデンマーク優位",
+        "サンプル2試合と小さい",
+        "両者とも初戦敗戦で追加確認が必要"
+      ],
+      "sources": [
+        "https://www.uefa.com/uefanationsleague/match/2047977--denmark-vs-wales/",
+        "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000--2026-27-uefa-nations-league-all-the-league-phase-fixtures/"
+      ]
+    }
+  ],
+  "audit": {
+    "candidate_count": 8,
+    "retain_for_full_model": 2,
+    "watch": 3,
+    "reject_as_gap": 3,
+    "key_check": "低オッズだけで格差採用しない二次精査が機能することを確認",
+    "production_write": false
+  }
+}
