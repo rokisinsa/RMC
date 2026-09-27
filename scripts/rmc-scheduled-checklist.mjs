@@ -77,12 +77,19 @@ function recompute(run){
   run.updated_at=nowIso();
 }
 function ensure(db,{runId,slot,scheduledFor,source,startSha}){
+  const m=String(runId||"").match(/^rmc-(\d{4})(\d{2})(\d{2})-(0600|1200|1800|2300)$/);
+  if(m){
+    slot ||= m[4].slice(0,2)+":"+m[4].slice(2);
+    scheduledFor ||= `${m[1]}-${m[2]}-${m[3]}T${m[4].slice(0,2)}:${m[4].slice(2)}:00+09:00`;
+  }
   let r=db.runs.find(x=>x.run_id===runId);
   if(!r){
-    r={run_id:runId,slot:slot||null,scheduled_for:scheduledFor||null,started_at:nowIso(),finished_at:null,source:source||"RMC scheduled update",start_sha:startSha||null,end_sha:null,status:"running",blockers:[],checks:TITLES.map((title,i)=>({id:i+1,title,status:"pending",detail:null,checked_at:null})),summary:{pass:0,fail:0,blocked:0,pending:41,total:41}};
+    const previous=db.runs.at(-1)??null;
+    r={run_id:runId,slot:slot||null,scheduled_for:scheduledFor||null,started_at:nowIso(),finished_at:null,source:source||"RMC scheduled update",start_sha:startSha||null,end_sha:null,status:"running",prior_blockers:[...(previous?.blockers||[])],blockers:[],checks:TITLES.map((title,i)=>({id:i+1,title,status:"pending",detail:null,checked_at:null})),summary:{pass:0,fail:0,blocked:0,pending:41,total:41}};
     db.runs.push(r);
   }else{
     if(slot)r.slot=slot;if(scheduledFor)r.scheduled_for=scheduledFor;if(source)r.source=source;if(startSha&&!r.start_sha)r.start_sha=startSha;
+    if(!Array.isArray(r.prior_blockers))r.prior_blockers=[];
   }
   db.latest_run_id=runId;
   db.runs=db.runs.slice(-40);
@@ -135,7 +142,7 @@ function inventoryPhase(run,root=ROOT,refTime=null){
   mark(run,8,legacyOk?"pass":"fail",legacyOk?`all listed real-sports menu categories captured (${legacy.category_count})`:"real-sports inventory not complete");
   const espOk=fixedOk&&fixed.event_count>0&&arr(fixed.category_keys).length>0;
   mark(run,9,espOk?"pass":"fail",espOk?`all discovered eSports titles/categories captured (${fixed.category_count||fixed.category_keys.length})`:"eSports titles inventory is zero/incomplete");
-  run.blockers=[...new Set([...(run.blockers||[]),...arr(complete?.self_audit?.blockers)])];
+  run.blockers=[...new Set(arr(complete?.self_audit?.blockers))];
   recompute(run);
 }
 function detailOk(d){
@@ -250,7 +257,8 @@ function payloadPhase(run,payloadPath,reportPath){
   mark(run,34,reportOk&&comp?.loss_reviews_checked===true?"pass":"fail",reportOk?"new losses require complete post-match reviews":"loss-review completeness not proven");
   mark(run,35,reportOk&&comp?.future_info_leakage_checked===true?"pass":"fail",reportOk?"future-info leakage gate passed":"future-info audit not proven");
   mark(run,36,reportOk&&comp?.locked_history_checked===true?"pass":"fail",reportOk?"locked/baseline/snapshot/history protection gate passed":"locked/history audit not proven");
-  if(!reportOk)run.blockers=[...new Set([...(run.blockers||[]),"production_validator_failed"])];
+  if(!reportOk) run.blockers=[...new Set([...(run.blockers||[]),"production_validator_failed"])];
+  else run.blockers=(run.blockers||[]).filter(x=>x!=="production_validator_failed");
   recompute(run);
 }
 function phase(run,name,detail){
@@ -259,8 +267,8 @@ function phase(run,name,detail){
 function finish(run,success,reason){
   if(success){
     const pending=run.checks.slice(0,40).filter(c=>c.status!=="pass");
-    if(pending.length){mark(run,41,"fail",`cannot finalize: checks not passed: ${pending.map(c=>c.id).join(",")}`);run.status="failed"}
-    else{mark(run,41,"pass","checks 1-40 all PASS; final report allowed");run.status="passed";run.finished_at=nowIso()}
+    if(pending.length || (run.blockers||[]).length){mark(run,41,"fail",`cannot finalize: checks not passed: ${pending.map(c=>c.id).join(",")||"none"}; blockers: ${(run.blockers||[]).join(",")||"none"}`);run.status="failed"}
+    else{mark(run,41,"pass","checks 1-40 all PASS; blockers 0; final report allowed");run.status="passed";run.finished_at=nowIso()}
   }else{
     const alreadyFailed=run.checks.slice(0,40).some(c=>c.status==="fail");
     if(!alreadyFailed){
@@ -280,7 +288,7 @@ function main(){
   if(has("--auto-next")){const x=inferNextSlot();runId=x.runId;slot=x.slot;scheduledFor=x.scheduledFor}
   if(!runId)throw new Error("--run-id required (or --auto-next)");
   const run=ensure(db,{runId,slot,scheduledFor,source:arg("--source"),startSha:arg("--start-sha")});
-  if(run.slot&&run.scheduled_for&&run.start_sha)mark(run,1,"pass",`${run.run_id} / ${run.scheduled_for} / start_sha ${run.start_sha}`);
+  if(run.slot&&run.scheduled_for&&run.start_sha)mark(run,1,"pass",`${run.run_id} / ${run.scheduled_for} / start_sha ${run.start_sha} / prior_blockers ${(run.prior_blockers||[]).join(",")||"none"}`);
   else mark(run,1,"fail","run_id/slot/scheduled_for/start_sha evidence incomplete");
   if(has("--inventory"))inventoryPhase(run,ROOT,arg("--reference-time"));
   if(arg("--payload"))payloadPhase(run,path.resolve(ROOT,arg("--payload")),arg("--report")?path.resolve(ROOT,arg("--report")):null);
