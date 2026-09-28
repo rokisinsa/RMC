@@ -1,0 +1,111 @@
+name: BET CHANNEL Japan Fixed Odds
+
+on:
+  workflow_dispatch:
+  schedule:
+    # JST 05:20 / 11:20 / 17:20 / 22:20
+    - cron: "20 20,2,8,13 * * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bet-channel-fixed-odds-japan.yml"
+      - "scripts/scrape-bet-channel-fixed-odds-local.mjs"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bet-channel-fixed-odds-japan
+  cancel-in-progress: true
+
+jobs:
+  fixed-odds:
+    runs-on: [self-hosted, rmc-japan]
+    timeout-minutes: 30
+    env:
+      RMC_SOURCE_REGION: JP
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify outbound region is Japan
+        shell: bash
+        run: |
+          set -euo pipefail
+          COUNTRY="$(curl -fsS https://www.cloudflare.com/cdn-cgi/trace | awk -F= '$1=="loc"{print $2}' | tr -d '\r\n')"
+          echo "Outbound country: $COUNTRY"
+          test "$COUNTRY" = "JP"
+          echo "RMC_SOURCE_REGION_EVIDENCE=cloudflare_trace:JP" >> "$GITHUB_ENV"
+          if [ "${RUNNER_OS}" = "Windows" ]; then
+            echo "RMC_SOURCE_MACHINE=japan_local_windows" >> "$GITHUB_ENV"
+          else
+            echo "RMC_SOURCE_MACHINE=japan_vps_linux" >> "$GITHUB_ENV"
+          fi
+
+      - name: Install Playwright
+        shell: bash
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install chromium
+
+      - name: Scrape BET CHANNEL fixed-odds/eSports
+        shell: bash
+        run: |
+          node scripts/scrape-bet-channel-fixed-odds-local.mjs data/bet-channel-fixed-odds-inventory.json
+
+      - name: Validate Japan fixed-odds inventory
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs=require("fs");
+          const x=JSON.parse(fs.readFileSync("data/bet-channel-fixed-odds-inventory.json","utf8"));
+          const e=[];
+          if(x.complete!==true)e.push("complete");
+          if(x.analysis_ready!==true)e.push("analysis_ready");
+          if(x.access_status!=="direct")e.push("access_status");
+          if(x.source_region!=="JP")e.push("source_region");
+          if(!["japan_local_windows","japan_vps_linux"].includes(x.source_machine))e.push("source_machine");
+          if(x.source_machine==="japan_vps_linux" && x.source_region_evidence!=="cloudflare_trace:JP")e.push("region_evidence");
+          if(x.menu_end_verified!==true)e.push("menu_end_verified");
+          if(x.event_count!==x.event_ids?.length)e.push("event_count");
+          if(x.screening_event_count!==x.screening_event_ids?.length)e.push("screening_event_count");
+          if((x.self_audit?.unresolved_blockers??1)!==0)e.push("unresolved_blockers");
+          if(e.length){console.error("Japan fixed inventory validation failed:",e.join(","));process.exit(1);}
+          console.log(JSON.stringify({
+            checked_at:x.checked_at,
+            source_machine:x.source_machine,
+            category_count:x.category_count,
+            event_count:x.event_count,
+            screening_event_count:x.screening_event_count
+          },null,2));
+          NODE
+
+      - name: Commit and push Japan inventory
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp data/bet-channel-fixed-odds-inventory.json /tmp/fixed.json
+          git config user.name "RMC Japan Runner"
+          git config user.email "rmc-japan@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/fixed.json data/bet-channel-fixed-odds-inventory.json
+            git add data/bet-channel-fixed-odds-inventory.json
+            if git diff --cached --quiet; then
+              echo "No fixed-odds diff"
+              exit 0
+            fi
+            git commit -m "Update BET CHANNEL fixed-odds inventory (Japan runner)"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
