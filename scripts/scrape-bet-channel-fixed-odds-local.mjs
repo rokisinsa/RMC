@@ -36,7 +36,7 @@ function first(obj, keys) {
 function nestedName(v) {
   if (typeof v === "string") return clean(v);
   if (!v || typeof v !== "object") return "";
-  return clean(first(v,["name","title","label","short_name","shortName","team_name","teamName","competitor_name","competitorName"]) || "");
+  return clean(first(v,["name","title","label","caption","display_name","displayName","short_name","shortName","team_name","teamName","competitor_name","competitorName","participant_name","participantName","value"]) || "");
 }
 function parseTime(v) {
   if (v == null || v === "") return null;
@@ -134,16 +134,17 @@ function competitionName(o) {
 }
 const ESPORT_RE = /esport|e-sport|eスポーツ|counter.?strike|\bcs2\b|\bcsgo\b|valorant|dota|league.?of.?legends|\blol\b|rainbow.?six|honor.?of.?kings|king.?of.?glory|world.?of.?tanks|rocket.?league|overwatch|call.?of.?duty|\bpubg\b|mobile.?legends|starcraft|ea.?sports.?fc|esoccer|efootball|ebasketball|nba.?2k|etennis|ebaseball|ecricket|efighting/i;
 
-function eventCandidate(o,sourceUrl,path) {
+function eventCandidate(o,sourceUrl,path,routeHint=null) {
   if(!o || typeof o!=="object" || Array.isArray(o)) return null;
-  const rawId=first(o,["event_id","eventId","fixture_id","fixtureId","match_id","matchId","game_id","gameId","id"]);
+  const rawId=first(o,["event_id","eventId","sport_event_id","sportEventId","fixture_id","fixtureId","match_id","matchId","game_id","gameId","event","eventId","_id","id"]);
   if(rawId==null) return null;
   const [a,b]=getParticipants(o);
   if(!a||!b||a===b) return null;
   const sport=sportName(o), competition=competitionName(o);
-  const corpus=[sport,competition,clean(first(o,["name","title","event_name","eventName","match_name","matchName"])),a,b,path].join(" ");
-  if(!ESPORT_RE.test(corpus)) return null;
-  const startRaw=first(o,["start_at","startAt","start_time","startTime","scheduled_at","scheduledAt","scheduled","kickoff","kickoff_at","kickoffAt","date","event_date","eventDate"]);
+  const corpus=[sport,competition,clean(first(o,["name","title","event_name","eventName","match_name","matchName"])),a,b,path,sourceUrl,routeHint].join(" ");
+  const routeIsEsports=/^\/esports(?:\/|-|$)/i.test(String(routeHint||""));
+  if(!routeIsEsports && !ESPORT_RE.test(corpus)) return null;
+  const startRaw=first(o,["start_at","startAt","starts_at","startsAt","start_time","startTime","start_ts","startTs","start_date","startDate","scheduled_at","scheduledAt","scheduled","kickoff","kickoff_at","kickoffAt","date","event_date","eventDate","start"]);
   const startUtc=parseTime(startRaw), startAtJst=toJst(startUtc);
   const odds=extractOdds(o);
   const rawStatus=clean(first(o,["status","state","event_status","eventStatus","phase"]));
@@ -185,13 +186,26 @@ const ctx=await browser.newContext({locale:"ja-JP",timezoneId:"Asia/Tokyo"});
 const events=new Map(), categoryNames=new Set(), sourceUrls=new Set(), jsonUrls=new Set(), wsUrls=new Set(), errors=[];
 let geoBlocked=false, rendererLoaded=false, menuRouteSeen=false, bodyEsportsSeen=false, routeLimitExceeded=false;
 
-function ingestPayload(payload,sourceUrl,kind) {
-  try{
-    walk(payload,(o,path)=>{
-      const ev=eventCandidate(o,sourceUrl,`${kind}:${path}`);
+function ingestPayload(payload,sourceUrl,kind,routeHint=null) {
+  const parsedStrings=new Set();
+  const ingestOne=(value,prefix)=>{
+    walk(value,(o,path)=>{
+      const ev=eventCandidate(o,sourceUrl,`${prefix}:${path}`,routeHint);
       if(ev){ events.set(ev.event_id,mergeEvent(events.get(ev.event_id),ev)); categoryNames.add(ev.category_key); }
+
+      // Some sportsbook feeds wrap business JSON inside string fields.
+      for (const v of Object.values(o||{})) {
+        if (typeof v!=="string") continue;
+        const s=v.trim();
+        if (s.length<2 || s.length>5_000_000 || !((s.startsWith("{")&&s.endsWith("}"))||(s.startsWith("[")&&s.endsWith("]")))) continue;
+        if(parsedStrings.has(s)) continue;
+        parsedStrings.add(s);
+        try{ ingestOne(JSON.parse(s),prefix+":embedded"); }catch{}
+      }
     });
-  }catch(e){ errors.push({stage:"ingest",sourceUrl,error:String(e?.message||e)}); }
+  };
+  try{ ingestOne(payload,kind); }
+  catch(e){ errors.push({stage:"ingest",sourceUrl,error:String(e?.message||e)}); }
 }
 function normalizeBtRoute(href){
   try{
@@ -223,15 +237,18 @@ while(queue.length){
   p.on("response",async resp=>{
     const u=resp.url(), ct=(resp.headers()["content-type"]||"").toLowerCase();
     if(ct.includes("json")){
-      try{ const j=await resp.json(); jsonUrls.add(u); ingestPayload(j,u,"json"); }catch{}
+      try{ const j=await resp.json(); jsonUrls.add(u); ingestPayload(j,u,"json",route); }catch{}
     }
   });
   p.on("websocket",ws=>{
     wsUrls.add(ws.url());
     ws.on("framereceived",ev=>{
-      const data=ev.payload;
+      let data=ev.payload;
+      if(Buffer.isBuffer(data)) data=data.toString("utf8");
       if(typeof data!=="string" || data.length>5_000_000) return;
-      try{ ingestPayload(JSON.parse(data),ws.url(),"ws"); }catch{}
+      try{ ingestPayload(JSON.parse(data),ws.url(),"ws",route); }catch{
+        // Ignore non-JSON protocol frames, but preserve the connection itself as evidence.
+      }
     });
   });
   try{
@@ -256,6 +273,28 @@ while(queue.length){
     }
     const body=clean(await p.locator("body").innerText());
     if(/Access is forbidden from your location|forbidden from your location/i.test(body)) geoBlocked=true;
+
+    // DOM fallback: BETBY may normalize network payloads internally. Inspect rendered nodes for
+    // event ids / participant labels / timestamps even when raw feed schema is opaque.
+    try {
+      const domRows=await p.evaluate(()=>{
+        const nodes=[...document.querySelectorAll("[data-event-id],[data-eventid],[data-fixture-id],[data-match-id],[data-id]")];
+        return nodes.slice(0,5000).map(el=>({
+          event_id:el.getAttribute("data-event-id")||el.getAttribute("data-eventid")||el.getAttribute("data-fixture-id")||el.getAttribute("data-match-id")||el.getAttribute("data-id"),
+          text:(el.innerText||el.textContent||"").replace(/\s+/g," ").trim(),
+          start_at:el.getAttribute("data-start-at")||el.getAttribute("data-start-time")||el.getAttribute("data-timestamp")||null
+        })).filter(x=>x.event_id&&x.text);
+      });
+      for(const row of domRows){
+        const parts=row.text.split(/\s+(?:vs\.?|v\.?|—|–|-|対)\s+/i).map(clean).filter(Boolean);
+        if(parts.length<2) continue;
+        const pseudo={event_id:row.event_id,participants:[{name:parts[0]},{name:parts[1]}],start_at:row.start_at,sport_name:"eSports"};
+        const ev=eventCandidate(pseudo,url,"dom:$",route);
+        if(ev){ events.set(ev.event_id,mergeEvent(events.get(ev.event_id),ev)); categoryNames.add(ev.category_key); }
+      }
+    } catch(e) {
+      errors.push({stage:"dom_fallback",url,route,error:String(e?.message||e)});
+    }
     if(ESPORT_RE.test(body)) bodyEsportsSeen=true;
     const perf=await p.evaluate(()=>performance.getEntriesByType("resource").map(x=>x.name));
     if(perf.some(u=>/bt-renderer\.min\.js/i.test(u))) rendererLoaded=true;
