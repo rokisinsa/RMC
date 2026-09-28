@@ -70,6 +70,7 @@ const analysisDetail=e=>({
     side_a:{label:e?.side_a||"side_a",summary:"rehearsal does not fabricate recent form",items:[]},
     side_b:{label:e?.side_b||"side_b",summary:"rehearsal does not fabricate recent form",items:[]}
   },
+  common_opponent_comparison:{status:"unavailable",summary:"common opponents cannot be compared because verified recent-form rows are intentionally unavailable in this CI rehearsal",items:[]},
   ranking_or_rating:{status:"unavailable",text:"rehearsal does not fabricate rankings/ratings"},
   home_away:{status:"unavailable",text:"rehearsal does not fabricate venue splits"},
   availability:{status:"unavailable",text:"rehearsal does not fabricate roster/availability"},
@@ -80,7 +81,7 @@ const analysisDetail=e=>({
     risks:["external H2H/form/ranking/roster research is not performed by this CI rehearsal"],
     conclusion:"insufficient_data"
   },
-  missing_information:["external-source H2H/form/ranking/availability/sport-specific evidence"]
+  missing_information:["external-source H2H/form/common-opponent/ranking/availability/sport-specific evidence"]
 });
 
 const prefixes={recommendations:"rec",value1:"v1",value2:"v2",pro_edge:"pe"};
@@ -115,6 +116,7 @@ for(const system of Object.keys(prefixes)){
         checks:{
           h2h:"unavailable",
           recent_form:"unavailable",
+          common_opponent_comparison:"unavailable",
           ranking_or_rating:"unavailable",
           availability:"unavailable",
           market_odds:priced(e)?"checked":"unavailable",
