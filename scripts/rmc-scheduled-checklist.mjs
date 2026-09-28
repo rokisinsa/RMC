@@ -227,15 +227,15 @@ function payloadPhase(run,payloadPath,reportPath,options={}){
   }
   let deepOk=true,zeroOk=true;
   for(const s of SYSTEMS){
-    const deep=arr(sys[s]?.deep_dive_evidence).map(x=>String(x.event_id));
+    const deep=new Set(arr(sys[s]?.deep_dive_evidence).map(x=>String(x.event_id)));
     for(const [k,ids] of eligibleByCat){
-      const n=ids.filter(id=>deep.includes(id)).length;
-      const need=Math.min(3,ids.length);
-      if(n<need)deepOk=false;
+      const n=ids.filter(id=>deep.has(id)).length;
+      if(n!==ids.length)deepOk=false;
       if(n===0)zeroOk=false;
     }
   }
-  mark(run,16,deepOk?"pass":"fail",deepOk?`each eligible category deep-dived up to 3 events across all four systems`:"one or more eligible categories lacks required deep dives");
+  const eligibleTotal=[...eligibleByCat.values()].reduce((a,ids)=>a+ids.length,0);
+  mark(run,16,deepOk?"pass":"fail",deepOk?`all ${eligibleTotal} eligible priced-upcoming H2H events deep-dived in all four systems`:"one or more eligible priced-upcoming events lacks deep dive");
   mark(run,17,zeroOk?"pass":"fail",zeroOk?"no priced-upcoming eligible category has deep_dive=0":"priced-upcoming category with zero deep dive detected");
 
   const noCap=SYSTEMS.every(s=>arr(sys[s]?.screening_evidence).length===master.length&&arr(sys[s]?.card_ids).length===master.length);
