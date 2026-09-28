@@ -27,9 +27,28 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Start/update the nearest scheduled 41-item audit
+      - name: Start/update the correct 41-item audit
+        shell: bash
         run: |
-          node scripts/rmc-scheduled-checklist.mjs             --auto-next             --inventory             --source "BET CHANNEL inventory gate"             --start-sha "$(git rev-parse HEAD)"
+          set -euo pipefail
+          upstream_event="${{ github.event.workflow_run.event || 'workflow_dispatch' }}"
+          if [ "$upstream_event" = "schedule" ]; then
+            node scripts/rmc-scheduled-checklist.mjs \
+              --auto-next \
+              --inventory \
+              --source "BET CHANNEL scheduled inventory gate" \
+              --start-sha "$(git rev-parse HEAD)"
+          else
+            now_jst="$(TZ=Asia/Tokyo date '+%Y-%m-%dT%H:%M:%S+09:00')"
+            run_id="rmc-adhoc-$(TZ=Asia/Tokyo date '+%Y%m%d-%H%M%S')"
+            node scripts/rmc-scheduled-checklist.mjs \
+              --run-id "$run_id" \
+              --slot "adhoc" \
+              --scheduled-for "$now_jst" \
+              --inventory \
+              --source "BET CHANNEL manual full-run gate" \
+              --start-sha "$(git rev-parse HEAD)"
+          fi
 
       - name: Validate checklist shape
         run: |
