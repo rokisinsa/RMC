@@ -446,8 +446,11 @@ head("V2 表示確認用のコピー");
 // ── 本番データ不変 ─────────────────────────────────────
 head("本番データ");
 check("data/ はリハーサルの前後で1バイトも変わっていない", fingerprint(LIVE_DATA) === liveFingerprint, liveFingerprint.slice(0, 16));
+// Audit metadata may legitimately contain the word "rehearsal" (workflow/source names).
+// Detect only known synthetic fixture identifiers/content that must never enter production datasets.
+const syntheticFixtureRe = /Sample League|"(?:pe|rec|v1|v2)-rh-[^"]*"|"mr-[^"]*rehearsal[^"]*"|BookA 公開オッズ（架空）|2026-09-27-rhpa-rhpb/;
 check("data/ に架空のリハーサルデータが無い", !readdirSync(LIVE_DATA, { recursive: true }).filter(f => String(f).endsWith(".json"))
-  .some(f => /Rehearsal|rehearsal|-rh-|REHEARSAL/.test(readFileSync(join(LIVE_DATA, String(f)), "utf8"))));
+  .some(f => syntheticFixtureRe.test(readFileSync(join(LIVE_DATA, String(f)), "utf8"))));
 
 // ── まとめ ─────────────────────────────────────────────
 const failed = results.filter(r => !r.pass);
