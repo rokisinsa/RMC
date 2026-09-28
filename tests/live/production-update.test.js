@@ -286,6 +286,23 @@ test("深掘り証跡：deep_dived対象の証拠を1件抜いたら拒否", () 
   assert.ok(cats(r).includes("coverage") || cats(r).includes("schema"), JSON.stringify(r.ledger.errors));
 });
 
+test("共通相手比較：checks/analysis_detail欠落やcheckedなのに明細0件を拒否", () => {
+  const cases = [
+    x => { delete x.coverage_audit.systems.recommendations.deep_dive_evidence[0].checks.common_opponent_comparison; },
+    x => { delete x.coverage_audit.systems.recommendations.deep_dive_evidence[0].analysis_detail.common_opponent_comparison; },
+    x => {
+      const d=x.coverage_audit.systems.recommendations.deep_dive_evidence[0];
+      d.checks.common_opponent_comparison="checked";
+      d.analysis_detail.common_opponent_comparison={status:"checked",summary:"共通相手を確認済み",items:[]};
+    }
+  ];
+  for (const [i,fn] of cases.entries()) {
+    const r=run(mutate(A,x=>{x.run_id=`fixture-common-opponent-${i}`;fn(x);}),tempData(),NOW_A);
+    assert.ok(!r.ok,`case ${i}`);
+    assert.ok(cats(r).includes("schema")||cats(r).includes("analysis_detail"),JSON.stringify(r.ledger.errors));
+  }
+});
+
 test("JST・null の書き方の誤りを拒否", () => {
   const z = run(mutate(A, p => { p.systems.value2.new_picks[0].locked_at = "2026-09-26T21:28:00Z"; }), tempData(), NOW_A);
   assert.ok(!z.ok && cats(z).includes("jst"));
