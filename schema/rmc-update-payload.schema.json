@@ -1234,6 +1234,7 @@
                 "required": [
                   "h2h",
                   "recent_form",
+                  "common_opponent_comparison",
                   "ranking_or_rating",
                   "availability",
                   "market_odds",
@@ -1291,6 +1292,14 @@
                       "not_applicable"
                     ],
                     "description": "BET CHANNEL以外の外部市場/公正価格とのサニティチェック。VALUE①/②・PRO EDGEのcandidateではchecked必須。"
+                  },
+                  "common_opponent_comparison": {
+                    "enum": [
+                      "checked",
+                      "unavailable",
+                      "not_applicable"
+                    ],
+                    "description": "両者の直近6〜10試合から共通対戦相手を抽出し、同一相手に対する結果・スコア/得失点/セット/マップ/ラウンド差・開催条件を比較した状態。共通相手0件でもunavailableとして理由を必ず残す。"
                   }
                 }
               },
@@ -1314,6 +1323,7 @@
                   "summary",
                   "h2h",
                   "recent_form",
+                  "common_opponent_comparison",
                   "ranking_or_rating",
                   "home_away",
                   "availability",
@@ -1549,6 +1559,58 @@
                       "type": "string",
                       "minLength": 1
                     }
+                  },
+                  "common_opponent_comparison": {
+                    "type": "object",
+                    "required": [
+                      "status",
+                      "summary",
+                      "items"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "checked",
+                          "unavailable",
+                          "not_applicable"
+                        ]
+                      },
+                      "summary": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "opponent",
+                            "side_a",
+                            "side_b",
+                            "comparison"
+                          ],
+                          "additionalProperties": false,
+                          "properties": {
+                            "opponent": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "side_a": {
+                              "$ref": "#/$defs/commonOpponentSide"
+                            },
+                            "side_b": {
+                              "$ref": "#/$defs/commonOpponentSide"
+                            },
+                            "comparison": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "description": "直近6〜10試合の共通対戦相手比較。checkedなら共通相手を1件以上列挙。unavailableなら共通相手0件/必要データ不足などの理由をsummaryへ明記する。"
                   }
                 }
               }
@@ -1607,6 +1669,45 @@
               }
             }
           }
+        }
+      }
+    },
+    "commonOpponentSide": {
+      "type": "object",
+      "required": [
+        "date",
+        "result",
+        "performance"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "performance": {
+          "type": "string",
+          "minLength": 1,
+          "description": "スコア、得失点差、セット差、マップ差、ラウンド差など競技に応じた比較可能な実績"
+        },
+        "competition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "venue_context": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "H/A、LAN/online、中立地など比較条件"
         }
       }
     }
