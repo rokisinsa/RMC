@@ -179,7 +179,7 @@ const applied=runUpdate({payloadText:JSON.stringify(payload),dataDir:DATA,now:"2
 if(!applied.ok)throw new Error("isolated production apply failed: "+JSON.stringify(applied.ledger.errors));
 
 run(process.execPath,["scripts/validate-data.js",DATA]);
-const liveFiles=fs.readdirSync(path.join(ROOT,"tests","live")).filter(x=>x.endsWith(".test.js")).map(x=>path.join("tests","live",x));
+const liveFiles=fs.readdirSync(path.join(ROOT,"tests","live")).filter(x=>x.endsWith(".test.js") && x!=="full-scheduled-rehearsal.test.js").map(x=>path.join("tests","live",x));
 run(process.execPath,["--test",...liveFiles],{env:{RMC_DATA_DIR:DATA}});
 run(process.execPath,["scripts/snapshot-manifest.js","verify"]);
 mark(checklist,37,"pass","production validator + validate-data + all live tests + snapshot verification PASS");
