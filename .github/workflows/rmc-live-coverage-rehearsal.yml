@@ -1,6 +1,9 @@
 name: RMC Live Coverage Rehearsal
 
 on:
+  workflow_run:
+    workflows: ["BET CHANNEL complete inventory"]
+    types: [completed]
   push:
     branches: [main]
     paths:
