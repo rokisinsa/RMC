@@ -182,6 +182,109 @@ function mergeEvent(prev,next) {
   return {...prev,...Object.fromEntries(Object.entries(next).filter(([,v])=>v!==null&&v!==""&&!(Array.isArray(v)&&v.length===0))),market_choices:odds};
 }
 
+function betbyPrimaryChoices(markets, competitors){
+  if(!markets || typeof markets!=="object") return [];
+  const out=[];
+  const add=(marketId,outcomeId,name,node)=>{
+    const raw=node?.k ?? node?.odds ?? node?.price;
+    const odds=Number(raw);
+    if(!Number.isFinite(odds)||odds<=1||odds>10000) return;
+    out.push({
+      market:String(marketId),
+      market_id:String(marketId),
+      name,
+      odds,
+      bettable:node?.b!==0 && node?.active!==false,
+      id:String(outcomeId)
+    });
+  };
+  const readVariant=(marketId,variant)=>{
+    if(!variant||typeof variant!=="object") return;
+    for(const [outcomeId,node] of Object.entries(variant)){
+      let name=String(outcomeId);
+      if(String(marketId)==="1"){
+        if(String(outcomeId)==="1") name=competitors[0]||"Home";
+        else if(String(outcomeId)==="2") name="Draw";
+        else if(String(outcomeId)==="3") name=competitors[1]||"Away";
+      } else if(String(marketId)==="186"){
+        if(String(outcomeId)==="4") name=competitors[0]||"Side A";
+        else if(String(outcomeId)==="5") name=competitors[1]||"Side B";
+      }
+      add(marketId,outcomeId,name,node);
+    }
+  };
+  for(const marketId of ["1","186"]){
+    const market=markets?.[marketId];
+    if(!market||typeof market!=="object") continue;
+    const direct=market[""];
+    if(direct&&typeof direct==="object") readVariant(marketId,direct);
+    else {
+      for(const variant of Object.values(market)) readVariant(marketId,variant);
+    }
+    if(out.length>=2) break;
+  }
+  return out;
+}
+
+function ingestBetbySnapshot(payload,sourceUrl,routeHint){
+  if(!payload || typeof payload!=="object" || !payload.events || typeof payload.events!=="object") return;
+  const sports=payload.sports||{};
+  const categories=payload.categories||{};
+  const tournaments=payload.tournaments||{};
+  for(const [rawId,raw] of Object.entries(payload.events)){
+    if(!raw || typeof raw!=="object") continue;
+    const desc=raw.desc||{};
+    const comps=Array.isArray(desc.competitors)?desc.competitors:[];
+    if(comps.length<2) continue;
+    const a=clean(comps[0]?.name), b=clean(comps[1]?.name);
+    if(!a||!b||a===b) continue;
+
+    const sportObj=sports?.[String(desc.sport)]||{};
+    const catObj=categories?.[String(desc.category)]||{};
+    const tournObj=tournaments?.[String(desc.tournament)]||{};
+    const sport=clean(sportObj.name||sportObj.slug||"");
+    const competition=clean(tournObj.name||tournObj.slug||"");
+    const category=clean(catObj.name||catObj.slug||"");
+    const corpus=[sport,competition,category,a,b,desc.slug,routeHint].join(" ");
+    const isEsport=desc.virtual===true || ESPORT_RE.test(corpus) || /⁽ᵉ⁾|\(e\)|\be-?sport\b/i.test(`${a} ${b}`);
+    if(!isEsport) continue;
+
+    const startUtc=parseTime(desc.scheduled);
+    const startAtJst=toJst(startUtc);
+    const odds=betbyPrimaryChoices(raw.markets,[a,b]);
+    const stateStatus=raw.state?.status;
+    const ended=[2,3,4,100].includes(Number(stateStatus));
+    const startMs=startUtc?Date.parse(startUtc):NaN;
+    const startState=ended?"ended":Number.isFinite(startMs)&&startMs<nowMs?"start_time_passed":"future_or_upcoming";
+    const title=sport || (desc.virtual===true ? "Virtual eSports" : "eSports");
+    const ev={
+      event_id:`fx:${rawId}`,
+      raw_event_id:String(rawId),
+      category:`eSports:${title}`,
+      category_key:`BETBY_ESPORTS:${title}`,
+      title,
+      competition:competition||category||null,
+      band_name:competition||category||null,
+      start_at_jst:startAtJst,
+      status:stateStatus==null?null:String(stateStatus),
+      side_a:a,
+      side_b:b,
+      primary_market:true,
+      market_class:"primary_h2h",
+      price_state:odds.length>=2?"priced":"unpriced",
+      start_state:startState,
+      market_count:Object.keys(raw.markets||{}).length,
+      market_names:Object.keys(raw.markets||{}),
+      market_choices:odds,
+      source_url:sourceUrl,
+      source_path:"betby_snapshot",
+      betby:{sport_id:desc.sport??null,category_id:desc.category??null,tournament_id:desc.tournament??null,virtual:desc.virtual===true}
+    };
+    events.set(ev.event_id,mergeEvent(events.get(ev.event_id),ev));
+    categoryNames.add(ev.category_key);
+  }
+}
+
 const browser=await chromium.launch({headless:true});
 const ctx=await browser.newContext({locale:"ja-JP",timezoneId:"Asia/Tokyo"});
 const events=new Map(), categoryNames=new Set(), sourceUrls=new Set(), jsonUrls=new Set(), wsUrls=new Set(), errors=[];
@@ -214,6 +317,7 @@ function recordShape(o,path,sourceUrl,kind){
 }
 
 function ingestPayload(payload,sourceUrl,kind,routeHint=null) {
+  ingestBetbySnapshot(payload,sourceUrl,routeHint);
   const parsedStrings=new Set();
   const ingestOne=(value,prefix)=>{
     walk(value,(o,path)=>{
