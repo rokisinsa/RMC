@@ -97,13 +97,16 @@ jobs:
           console.log(JSON.stringify({run_id:p.run_id,slot:p.slot,generated_at:p.generated_at,source:p.source},null,2));
           NODE
 
+          # Preserve the freshly generated payload BEFORE resetting the worktree.
+          # Otherwise an older incoming/<run_id>.json already on main can overwrite the new evidence.
+          cp "$out" /tmp/rmc-production-payload.json
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           pushed=0
           for attempt in 1 2 3 4 5; do
             git fetch origin main
             git reset --hard origin/main
-            cp "$out" /tmp/rmc-production-payload.json
             cp /tmp/rmc-production-payload.json "$out"
             git add "$out"
             if git diff --cached --quiet; then
