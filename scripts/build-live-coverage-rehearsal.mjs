@@ -31,8 +31,8 @@ const within24=e=>{
 };
 const eligible=e=>!!e&&e.start_state==="future_or_upcoming"&&priced(e)&&standardMarket(e)&&within24(e);
 
-// Coverage rehearsal: every eligible category must have deep-dive proof for every system.
-// Up to 3 cards/category to mirror production shortlist behavior; this is validation evidence, not a pick recommendation.
+// Coverage rehearsal: every eligible priced/upcoming standard-H2H card must have deep-dive proof for every system.
+// No per-category cap. If 7 cards qualify, all 7 must be deep-dived independently in ①〜④.
 const eligibleByCategory=new Map();
 for(const id of cards){
   const e=byId.get(id);
@@ -41,7 +41,7 @@ for(const id of cards){
   if(!eligibleByCategory.has(k)) eligibleByCategory.set(k,[]);
   eligibleByCategory.get(k).push(id);
 }
-const deepSet=new Set([...eligibleByCategory.values()].flatMap(ids=>ids.slice(0,3)));
+const deepSet=new Set([...eligibleByCategory.values()].flatMap(ids=>ids));
 
 const reasons=(e,system,id)=>{
   const r=[];
