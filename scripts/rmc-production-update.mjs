@@ -604,10 +604,10 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
         if (!sameIds(ids,inv.screening_event_ids)) ledger.error("coverage",system,null,`card_idsがBET CHANNEL完全union（通常+fixed-odds/eSports）の全eventと完全一致していない（${ids.length}/${inv.screening_event_ids?.length??0}）`);
       }
 
-      // 競技別deep-dive偏重防止ゲート。
-      // 全体ランキング上位だけを深掘りするとNFL/格闘技等へ偏るため、
-      // 24時間以内・価格あり・通常のH2H市場が存在する各カテゴリで、①〜④それぞれ最低1件はdeep_dive必須。
-      // 正式採用を強制するものではなく、deep_dive後にwatch/rejectは可。
+      // deep-dive全件必須ゲート。
+      // 24時間以内・価格あり・通常H2H市場・upcoming のカードは候補数上限なし。
+      // 条件を満たす全eventを、①〜④それぞれ独立にdeep_diveしなければ本番PASSにしない。
+      // 正式採用を強制するものではなく、deep_dive後にcandidate/watch/rejectは可。
       const runAt = Date.parse(payload.generated_at);
       const eligibleByCategory = new Map();
       for (const e of inv.events ?? []) {
@@ -626,8 +626,9 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
         const evidence = c.systems?.[system]?.screening_evidence ?? [];
         const deep = new Set(evidence.filter(e => e.screen_decision === "deep_dive").map(e => String(e.event_id)));
         for (const [category, ids] of eligibleByCategory) {
-          if (!ids.some(id => deep.has(id))) {
-            ledger.error("coverage",system,category,`24時間以内のpriced通常試合が${ids.length}件あるのに競技/カテゴリ別deep_diveが0件（event_ids: ${ids.slice(0,8).join(",")}）。全体上位だけに偏る更新は禁止`);
+          const missing = ids.filter(id => !deep.has(id));
+          if (missing.length) {
+            ledger.error("coverage",system,category,`24時間以内のpriced通常試合 ${ids.length}件のうちdeep_dive未実施が${missing.length}件（missing event_ids: ${missing.slice(0,20).join(",")}）。候補数上限・一部抽出は禁止`);
           }
         }
         for (const e of evidence) {
