@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "BET CHANNEL",
   "source_url": "https://bet-channel.com/matches?lang=ja",
-  "checked_at": "2026-09-28T20:51:52.127+09:00",
+  "checked_at": "2026-09-28T21:51:20.332+09:00",
   "menu_end_verified": true,
   "category_count": 105,
   "category_keys": [
@@ -112,29 +112,29 @@
     "10245:バラエティーオッズ",
     "10247:FIFAクラブワールドカップ"
   ],
-  "event_count": 220,
+  "event_count": 207,
   "event_ids": [
     "220644",
     "220650",
     "220651",
+    "220669",
+    "220670",
     "220677",
     "220678",
     "220679",
     "220680",
+    "220708",
+    "220709",
+    "220797",
+    "220671",
+    "220672",
     "220706",
     "220707",
     "220710",
     "220711",
-    "220797",
-    "220669",
-    "220670",
-    "220671",
-    "220672",
-    "220708",
-    "220709",
     "220712",
     "220713",
-    "220390",
+    "220391",
     "220392",
     "220393",
     "220645",
@@ -154,20 +154,6 @@
     "220431",
     "220432",
     "220433",
-    "220408",
-    "220409",
-    "220410",
-    "220411",
-    "220412",
-    "220413",
-    "220414",
-    "220415",
-    "220416",
-    "220417",
-    "220418",
-    "220419",
-    "220420",
-    "220421",
     "214755",
     "214762",
     "214769",
@@ -230,7 +216,7 @@
     "217767",
     "218116",
     "214773",
-    "220391",
+    "220390",
     "219332",
     "219333",
     "219334",
@@ -305,8 +291,8 @@
     "220776",
     "220777",
     "220778",
-    "220613",
-    "220615",
+    "200582",
+    "200583",
     "220673",
     "220674",
     "220675",
@@ -323,7 +309,8 @@
     "220593",
     "220594",
     "220595",
-    "220616",
+    "200585",
+    "200586",
     "220621",
     "220622",
     "220623",
@@ -340,7 +327,7 @@
   "time_parse_missing_count": 0,
   "complete": true,
   "analysis_ready": true,
-  "inventory_digest": "e0b19ed5b20992926e39",
+  "inventory_digest": "3bd099506b35f3ebb5fb",
   "analysis_card_count": 14,
   "analysis_card_ids": [
     "bc-38e0d40b90795af0a1f9",
@@ -360,8 +347,10 @@
   ],
   "bettable_analysis_card_count": 14,
   "unavailable_price_card_count": 0,
-  "screening_event_count": 118,
+  "screening_event_count": 113,
   "screening_event_ids": [
+    "200585",
+    "200586",
     "200624",
     "200625",
     "200626",
@@ -405,13 +394,6 @@
     "220391",
     "220392",
     "220393",
-    "220428",
-    "220429",
-    "220430",
-    "220431",
-    "220432",
-    "220433",
-    "220616",
     "220621",
     "220622",
     "220623",
@@ -481,16 +463,17 @@
     "220778",
     "220797"
   ],
-  "priority_12h_event_count": 3,
+  "priority_12h_event_count": 4,
   "priority_12h_event_ids": [
     "220644",
     "220650",
-    "220651"
+    "220651",
+    "220797"
   ],
-  "screening_digest": "9e85857669bf7067208c",
+  "screening_digest": "061e7a46b43a39d083dd",
   "self_audit": {
     "status": "pass",
-    "digest": "8f6481f595f10fed4d93",
+    "digest": "0ea033d63b5d52e20621",
     "anomaly_count": 0,
     "blocker_count": 0,
     "warning_count": 0,
@@ -515,13 +498,13 @@
   },
   "stats": {
     "priced_event_count": 48,
-    "unpriced_event_count": 70,
+    "unpriced_event_count": 65,
     "future_or_upcoming_count": 100,
-    "start_time_passed_count": 18,
+    "start_time_passed_count": 13,
     "primary_h2h_count": 27,
-    "prop_or_special_count": 32,
-    "multi_outcome_or_futures_count": 38,
-    "priority_12h_priced_count": 3
+    "prop_or_special_count": 29,
+    "multi_outcome_or_futures_count": 46,
+    "priority_12h_priced_count": 4
   },
   "events": [
     {
@@ -760,6 +743,104 @@
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10234&lang=ja"
+    },
+    {
+      "event_id": "200585",
+      "category": "NPB",
+      "category_key": "10235:NPB",
+      "start_at_jst": "2026-03-27T18:00:00+09:00",
+      "bet_end_time": "17:55",
+      "status": 0,
+      "band_name": null,
+      "side_a": "優勝",
+      "side_b": "2 位",
+      "primary_market": false,
+      "market_class": "multi_outcome_or_futures",
+      "start_state": "start_time_passed",
+      "price_state": "unpriced",
+      "priority_12h": false,
+      "market_choices": [
+        {
+          "name": "優勝",
+          "odds": null,
+          "bettable": true
+        },
+        {
+          "name": "2 位",
+          "odds": null,
+          "bettable": true
+        },
+        {
+          "name": "3 位",
+          "odds": null,
+          "bettable": true
+        },
+        {
+          "name": "4 位",
+          "odds": null,
+          "bettable": true
+        },
+        {
+          "name": "5 位",
+          "odds": null,
+          "bettable": true
+        },
+        {
+          "name": "6 位",
+          "odds": null,
+          "bettable": true
+        }
+      ],
+      "source_url": "https://bet-channel.com/matches?ct=10235&lang=ja"
+    },
+    {
+      "event_id": "200586",
+      "category": "NPB",
+      "category_key": "10235:NPB",
+      "start_at_jst": "2026-03-27T18:00:00+09:00",
+      "bet_end_time": "17:55",
+      "status": 0,
+      "band_name": null,
+      "side_a": "優勝",
+      "side_b": "2 位",
+      "primary_market": false,
+      "market_class": "multi_outcome_or_futures",
+      "start_state": "start_time_passed",
+      "price_state": "unpriced",
+      "priority_12h": false,
+      "market_choices": [
+        {
+          "name": "優勝",
+          "odds": null,
+          "bettable": true
+        },
+        {
+          "name": "2 位",
+          "odds": null,
+          "bettable": true
+        },
+        {
+          "name": "3 位",
+          "odds": null,
+          "bettable": true
+        },
+        {
+          "name": "4 位",
+          "odds": null,
+          "bettable": true
+        },
+        {
+          "name": "5 位",
+          "odds": null,
+          "bettable": true
+        },
+        {
+          "name": "6 位",
+          "odds": null,
+          "bettable": true
+        }
+      ],
+      "source_url": "https://bet-channel.com/matches?ct=10235&lang=ja"
     },
     {
       "event_id": "215861",
@@ -1394,319 +1475,6 @@
       "source_url": "https://bet-channel.com/matches?ct=10061&lang=ja"
     },
     {
-      "event_id": "220428",
-      "category": "日本 プロ野球 NPB",
-      "category_key": "10028:日本 プロ野球 NPB",
-      "start_at_jst": "2026-09-28T18:00:00+09:00",
-      "bet_end_time": "17:55",
-      "status": 0,
-      "band_name": "ハンデ戦",
-      "side_a": "DeNA",
-      "side_b": "広島",
-      "primary_market": false,
-      "market_class": "prop_or_special",
-      "start_state": "start_time_passed",
-      "price_state": "unpriced",
-      "priority_12h": false,
-      "market_choices": [
-        {
-          "name": "広島",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "DeNA",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "広島",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "DeNA",
-          "odds": null,
-          "bettable": true
-        }
-      ],
-      "source_url": "https://bet-channel.com/matches?ct=10028&lang=ja"
-    },
-    {
-      "event_id": "220429",
-      "category": "日本 プロ野球 NPB",
-      "category_key": "10028:日本 プロ野球 NPB",
-      "start_at_jst": "2026-09-28T18:00:00+09:00",
-      "bet_end_time": "17:55",
-      "status": 0,
-      "band_name": "最終結果",
-      "side_a": "広島",
-      "side_b": "DeNA",
-      "primary_market": false,
-      "market_class": "multi_outcome_or_futures",
-      "start_state": "start_time_passed",
-      "price_state": "unpriced",
-      "priority_12h": false,
-      "market_choices": [
-        {
-          "name": "広島",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "DeNA",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "引き分け",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "広島",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "DeNA",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "引き分け",
-          "odds": null,
-          "bettable": true
-        }
-      ],
-      "source_url": "https://bet-channel.com/matches?ct=10028&lang=ja"
-    },
-    {
-      "event_id": "220430",
-      "category": "日本 プロ野球 NPB",
-      "category_key": "10028:日本 プロ野球 NPB",
-      "start_at_jst": "2026-09-28T18:00:00+09:00",
-      "bet_end_time": "17:55",
-      "status": 0,
-      "band_name": "ハンデ戦",
-      "side_a": "西武",
-      "side_b": "楽天",
-      "primary_market": false,
-      "market_class": "prop_or_special",
-      "start_state": "start_time_passed",
-      "price_state": "unpriced",
-      "priority_12h": false,
-      "market_choices": [
-        {
-          "name": "楽天",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "西武",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "楽天",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "西武",
-          "odds": null,
-          "bettable": true
-        }
-      ],
-      "source_url": "https://bet-channel.com/matches?ct=10028&lang=ja"
-    },
-    {
-      "event_id": "220431",
-      "category": "日本 プロ野球 NPB",
-      "category_key": "10028:日本 プロ野球 NPB",
-      "start_at_jst": "2026-09-28T18:00:00+09:00",
-      "bet_end_time": "17:55",
-      "status": 0,
-      "band_name": "最終結果",
-      "side_a": "楽天",
-      "side_b": "西武",
-      "primary_market": false,
-      "market_class": "multi_outcome_or_futures",
-      "start_state": "start_time_passed",
-      "price_state": "unpriced",
-      "priority_12h": false,
-      "market_choices": [
-        {
-          "name": "楽天",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "西武",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "引き分け",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "楽天",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "西武",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "引き分け",
-          "odds": null,
-          "bettable": true
-        }
-      ],
-      "source_url": "https://bet-channel.com/matches?ct=10028&lang=ja"
-    },
-    {
-      "event_id": "220432",
-      "category": "日本 プロ野球 NPB",
-      "category_key": "10028:日本 プロ野球 NPB",
-      "start_at_jst": "2026-09-28T18:00:00+09:00",
-      "bet_end_time": "17:55",
-      "status": 0,
-      "band_name": "ハンデ戦",
-      "side_a": "ロッテ",
-      "side_b": "日本ハム",
-      "primary_market": false,
-      "market_class": "prop_or_special",
-      "start_state": "start_time_passed",
-      "price_state": "unpriced",
-      "priority_12h": false,
-      "market_choices": [
-        {
-          "name": "日本ハム",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "ロッテ",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "日本ハム",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "ロッテ",
-          "odds": null,
-          "bettable": true
-        }
-      ],
-      "source_url": "https://bet-channel.com/matches?ct=10028&lang=ja"
-    },
-    {
-      "event_id": "220433",
-      "category": "日本 プロ野球 NPB",
-      "category_key": "10028:日本 プロ野球 NPB",
-      "start_at_jst": "2026-09-28T18:00:00+09:00",
-      "bet_end_time": "17:55",
-      "status": 0,
-      "band_name": "最終結果",
-      "side_a": "日本ハム",
-      "side_b": "ロッテ",
-      "primary_market": false,
-      "market_class": "multi_outcome_or_futures",
-      "start_state": "start_time_passed",
-      "price_state": "unpriced",
-      "priority_12h": false,
-      "market_choices": [
-        {
-          "name": "日本ハム",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "ロッテ",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "引き分け",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "日本ハム",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "ロッテ",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "引き分け",
-          "odds": null,
-          "bettable": true
-        }
-      ],
-      "source_url": "https://bet-channel.com/matches?ct=10028&lang=ja"
-    },
-    {
-      "event_id": "220616",
-      "category": "NPB",
-      "category_key": "10235:NPB",
-      "start_at_jst": "2026-09-28T18:00:00+09:00",
-      "bet_end_time": "17:45",
-      "status": 0,
-      "band_name": null,
-      "side_a": "広島",
-      "side_b": "DeNA",
-      "primary_market": false,
-      "market_class": "multi_outcome_or_futures",
-      "start_state": "start_time_passed",
-      "price_state": "unpriced",
-      "priority_12h": false,
-      "market_choices": [
-        {
-          "name": "広島",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "DeNA",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "楽天",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "西武",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "日本ハム",
-          "odds": null,
-          "bettable": true
-        },
-        {
-          "name": "ロッテ",
-          "odds": null,
-          "bettable": true
-        }
-      ],
-      "source_url": "https://bet-channel.com/matches?ct=10235&lang=ja"
-    },
-    {
       "event_id": "220644",
       "category": "本日のイベント",
       "category_key": "1:本日のイベント",
@@ -1729,57 +1497,57 @@
         },
         {
           "name": "ベルギー 2 - 0 フランス",
-          "odds": 19.71,
+          "odds": 19.82,
           "bettable": true
         },
         {
           "name": "ベルギー 2 - 1 フランス",
-          "odds": 12.59,
+          "odds": 12.64,
           "bettable": true
         },
         {
           "name": "ベルギー 3 - 0 フランス",
-          "odds": 40.52,
+          "odds": 40.76,
           "bettable": true
         },
         {
           "name": "ベルギー 3 - 1 フランス",
-          "odds": 27.28,
+          "odds": 27.41,
           "bettable": true
         },
         {
           "name": "ベルギー 3 - 2 フランス",
-          "odds": 30.01,
+          "odds": 30.14,
           "bettable": true
         },
         {
           "name": "その他のベルギー勝利",
-          "odds": 16.67,
+          "odds": 16.73,
           "bettable": true
         },
         {
           "name": "ベルギー 0 - 0 フランス",
-          "odds": 13.65,
+          "odds": 13.68,
           "bettable": true
         },
         {
           "name": "ベルギー 1 - 1 フランス",
-          "odds": 7.41,
+          "odds": 7.37,
           "bettable": true
         },
         {
           "name": "ベルギー 2 - 2 フランス",
-          "odds": 13.9,
+          "odds": 13.97,
           "bettable": true
         },
         {
           "name": "その他の引き分け",
-          "odds": 35.69,
+          "odds": 35.88,
           "bettable": true
         },
         {
           "name": "ベルギー 0 - 1 フランス",
-          "odds": 8.96,
+          "odds": 8.88,
           "bettable": true
         }
       ],
@@ -1803,17 +1571,17 @@
       "market_choices": [
         {
           "name": "トルコ",
-          "odds": 2.75,
+          "odds": 2.74,
           "bettable": true
         },
         {
           "name": "イタリア",
-          "odds": 2.56,
+          "odds": 2.53,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 3.48,
+          "odds": 3.52,
           "bettable": true
         }
       ],
@@ -1837,12 +1605,12 @@
       "market_choices": [
         {
           "name": "ベルギー",
-          "odds": 3.52,
+          "odds": 3.55,
           "bettable": true
         },
         {
           "name": "フランス",
-          "odds": 1.95,
+          "odds": 1.93,
           "bettable": true
         },
         {
@@ -1867,21 +1635,21 @@
       "market_class": "primary_h2h",
       "start_state": "future_or_upcoming",
       "price_state": "priced",
-      "priority_12h": false,
+      "priority_12h": true,
       "market_choices": [
         {
           "name": "ベアーズ",
-          "odds": 2.75,
+          "odds": 2.72,
           "bettable": true
         },
         {
           "name": "イーグルス",
-          "odds": 1.46,
+          "odds": 1.48,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 32.3,
+          "odds": 32.31,
           "bettable": true
         }
       ],
@@ -1889,8 +1657,8 @@
     },
     {
       "event_id": "220669",
-      "category": "野球",
-      "category_key": "10000:野球",
+      "category": "本日のイベント",
+      "category_key": "1:本日のイベント",
       "start_at_jst": "2026-09-29T18:00:00+09:00",
       "bet_end_time": "17:55",
       "status": 0,
@@ -1905,26 +1673,26 @@
       "market_choices": [
         {
           "name": "広島が初得点する",
-          "odds": 2.49,
+          "odds": 2.48,
           "bettable": true
         },
         {
           "name": "巨人が初得点する",
-          "odds": 1.93,
+          "odds": 1.95,
           "bettable": true
         },
         {
           "name": "同イニング",
-          "odds": 6.6,
+          "odds": 6.59,
           "bettable": true
         }
       ],
-      "source_url": "https://bet-channel.com/matches?ct=10000&lang=ja"
+      "source_url": "https://bet-channel.com/matches?lang=ja"
     },
     {
       "event_id": "220670",
-      "category": "野球",
-      "category_key": "10000:野球",
+      "category": "本日のイベント",
+      "category_key": "1:本日のイベント",
       "start_at_jst": "2026-09-29T18:00:00+09:00",
       "bet_end_time": "17:55",
       "status": 0,
@@ -1939,7 +1707,7 @@
       "market_choices": [
         {
           "name": "広島 1点差勝利",
-          "odds": 6.67,
+          "odds": 6.68,
           "bettable": true
         },
         {
@@ -1949,17 +1717,17 @@
         },
         {
           "name": "広島 4点差以上勝利",
-          "odds": 4.71,
+          "odds": 4.75,
           "bettable": true
         },
         {
           "name": "同点引き分け",
-          "odds": 27.63,
+          "odds": 27.54,
           "bettable": true
         },
         {
           "name": "巨人 1点差勝利",
-          "odds": 5.72,
+          "odds": 5.73,
           "bettable": true
         },
         {
@@ -1969,11 +1737,11 @@
         },
         {
           "name": "巨人 4点差以上勝利",
-          "odds": 4.13,
+          "odds": 4.16,
           "bettable": true
         }
       ],
-      "source_url": "https://bet-channel.com/matches?ct=10000&lang=ja"
+      "source_url": "https://bet-channel.com/matches?lang=ja"
     },
     {
       "event_id": "220671",
@@ -1993,17 +1761,17 @@
       "market_choices": [
         {
           "name": "ヤクルトが初得点する",
-          "odds": 2.78,
+          "odds": 2.74,
           "bettable": true
         },
         {
           "name": "阪神が初得点する",
-          "odds": 1.78,
+          "odds": 1.81,
           "bettable": true
         },
         {
           "name": "同イニング",
-          "odds": 6.86,
+          "odds": 6.87,
           "bettable": true
         }
       ],
@@ -2032,7 +1800,7 @@
         },
         {
           "name": "ヤクルト 2~3点差勝利",
-          "odds": 5.39,
+          "odds": 5.38,
           "bettable": true
         },
         {
@@ -2042,22 +1810,22 @@
         },
         {
           "name": "同点引き分け",
-          "odds": 27.63,
+          "odds": 27.6,
           "bettable": true
         },
         {
           "name": "阪神 1点差勝利",
-          "odds": 5.31,
+          "odds": 5.36,
           "bettable": true
         },
         {
           "name": "阪神 2~3点差勝利",
-          "odds": 4.01,
+          "odds": 3.99,
           "bettable": true
         },
         {
           "name": "阪神 4点差以上勝利",
-          "odds": 3.81,
+          "odds": 3.82,
           "bettable": true
         }
       ],
@@ -2081,7 +1849,7 @@
       "market_choices": [
         {
           "name": "広島",
-          "odds": 44.39,
+          "odds": 44.43,
           "bettable": true
         },
         {
@@ -2091,17 +1859,17 @@
         },
         {
           "name": "広島",
-          "odds": 41.19,
+          "odds": 41.2,
           "bettable": true
         },
         {
           "name": "広島",
-          "odds": 48.02,
+          "odds": 48.03,
           "bettable": true
         },
         {
           "name": "広島",
-          "odds": 39.64,
+          "odds": 39.65,
           "bettable": true
         },
         {
@@ -2111,32 +1879,32 @@
         },
         {
           "name": "広島",
-          "odds": 42.08,
+          "odds": 42.05,
           "bettable": true
         },
         {
           "name": "巨人",
-          "odds": 43.58,
+          "odds": 43.59,
           "bettable": true
         },
         {
           "name": "巨人",
-          "odds": 45.67,
+          "odds": 45.66,
           "bettable": true
         },
         {
           "name": "巨人",
-          "odds": 36.62,
+          "odds": 36.61,
           "bettable": true
         },
         {
           "name": "巨人",
-          "odds": 41.32,
+          "odds": 41.35,
           "bettable": true
         },
         {
           "name": "巨人",
-          "odds": 36.14,
+          "odds": 36.13,
           "bettable": true
         }
       ],
@@ -2165,22 +1933,22 @@
         },
         {
           "name": "巨人",
-          "odds": 6.51,
+          "odds": 6.54,
           "bettable": true
         },
         {
           "name": "ヤクルト",
-          "odds": 7.71,
+          "odds": 7.72,
           "bettable": true
         },
         {
           "name": "阪神",
-          "odds": 5.65,
+          "odds": 5.61,
           "bettable": true
         },
         {
           "name": "ロッテ",
-          "odds": 6.94,
+          "odds": 6.91,
           "bettable": true
         },
         {
@@ -2195,12 +1963,12 @@
         },
         {
           "name": "西武",
-          "odds": 5.86,
+          "odds": 5.85,
           "bettable": true
         },
         {
           "name": "全てのチームが3点得点できない",
-          "odds": 29.91,
+          "odds": 29.95,
           "bettable": true
         }
       ],
@@ -2224,12 +1992,12 @@
       "market_choices": [
         {
           "name": "広島",
-          "odds": 6.71,
+          "odds": 6.68,
           "bettable": true
         },
         {
           "name": "巨人",
-          "odds": 5.28,
+          "odds": 5.41,
           "bettable": true
         },
         {
@@ -2239,27 +2007,27 @@
         },
         {
           "name": "阪神",
-          "odds": 4.87,
+          "odds": 4.86,
           "bettable": true
         },
         {
           "name": "ロッテ",
-          "odds": 11.85,
+          "odds": 11.78,
           "bettable": true
         },
         {
           "name": "楽天",
-          "odds": 5.97,
+          "odds": 5.96,
           "bettable": true
         },
         {
           "name": "オリックス",
-          "odds": 9.81,
+          "odds": 9.82,
           "bettable": true
         },
         {
           "name": "西武",
-          "odds": 4.55,
+          "odds": 4.53,
           "bettable": true
         }
       ],
@@ -2283,7 +2051,7 @@
       "market_choices": [
         {
           "name": "広島",
-          "odds": 8.87,
+          "odds": 8.9,
           "bettable": true
         },
         {
@@ -2293,22 +2061,22 @@
         },
         {
           "name": "ヤクルト",
-          "odds": 8.87,
+          "odds": 8.89,
           "bettable": true
         },
         {
           "name": "阪神",
-          "odds": 20.01,
+          "odds": 19.98,
           "bettable": true
         },
         {
           "name": "ロッテ",
-          "odds": 11.39,
+          "odds": 11.4,
           "bettable": true
         },
         {
           "name": "楽天",
-          "odds": 6.65,
+          "odds": 6.64,
           "bettable": true
         },
         {
@@ -2318,7 +2086,7 @@
         },
         {
           "name": "西武",
-          "odds": 2.43,
+          "odds": 2.41,
           "bettable": true
         }
       ],
@@ -2326,8 +2094,8 @@
     },
     {
       "event_id": "220706",
-      "category": "本日のイベント",
-      "category_key": "1:本日のイベント",
+      "category": "野球",
+      "category_key": "10000:野球",
       "start_at_jst": "2026-09-29T18:00:00+09:00",
       "bet_end_time": "17:55",
       "status": 0,
@@ -2351,12 +2119,12 @@
           "bettable": true
         }
       ],
-      "source_url": "https://bet-channel.com/matches?lang=ja"
+      "source_url": "https://bet-channel.com/matches?ct=10000&lang=ja"
     },
     {
       "event_id": "220707",
-      "category": "本日のイベント",
-      "category_key": "1:本日のイベント",
+      "category": "野球",
+      "category_key": "10000:野球",
       "start_at_jst": "2026-09-29T18:00:00+09:00",
       "bet_end_time": "17:55",
       "status": 0,
@@ -2371,26 +2139,26 @@
       "market_choices": [
         {
           "name": "広島",
-          "odds": 2.25,
+          "odds": 2.24,
           "bettable": true
         },
         {
           "name": "巨人",
-          "odds": 1.71,
+          "odds": 1.7,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 27.63,
+          "odds": 27.65,
           "bettable": true
         }
       ],
-      "source_url": "https://bet-channel.com/matches?lang=ja"
+      "source_url": "https://bet-channel.com/matches?ct=10000&lang=ja"
     },
     {
       "event_id": "220708",
-      "category": "野球",
-      "category_key": "10000:野球",
+      "category": "本日のイベント",
+      "category_key": "1:本日のイベント",
       "start_at_jst": "2026-09-29T18:00:00+09:00",
       "bet_end_time": "17:55",
       "status": 0,
@@ -2414,12 +2182,12 @@
           "bettable": true
         }
       ],
-      "source_url": "https://bet-channel.com/matches?ct=10000&lang=ja"
+      "source_url": "https://bet-channel.com/matches?lang=ja"
     },
     {
       "event_id": "220709",
-      "category": "野球",
-      "category_key": "10000:野球",
+      "category": "本日のイベント",
+      "category_key": "1:本日のイベント",
       "start_at_jst": "2026-09-29T18:00:00+09:00",
       "bet_end_time": "17:55",
       "status": 0,
@@ -2434,26 +2202,26 @@
       "market_choices": [
         {
           "name": "ヤクルト",
-          "odds": 2.6,
+          "odds": 2.59,
           "bettable": true
         },
         {
           "name": "阪神",
-          "odds": 1.56,
+          "odds": 1.52,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 27.72,
+          "odds": 27.77,
           "bettable": true
         }
       ],
-      "source_url": "https://bet-channel.com/matches?ct=10000&lang=ja"
+      "source_url": "https://bet-channel.com/matches?lang=ja"
     },
     {
       "event_id": "220710",
-      "category": "本日のイベント",
-      "category_key": "1:本日のイベント",
+      "category": "野球",
+      "category_key": "10000:野球",
       "start_at_jst": "2026-09-29T18:00:00+09:00",
       "bet_end_time": "17:55",
       "status": 0,
@@ -2477,12 +2245,12 @@
           "bettable": true
         }
       ],
-      "source_url": "https://bet-channel.com/matches?lang=ja"
+      "source_url": "https://bet-channel.com/matches?ct=10000&lang=ja"
     },
     {
       "event_id": "220711",
-      "category": "本日のイベント",
-      "category_key": "1:本日のイベント",
+      "category": "野球",
+      "category_key": "10000:野球",
       "start_at_jst": "2026-09-29T18:00:00+09:00",
       "bet_end_time": "17:55",
       "status": 0,
@@ -2497,21 +2265,21 @@
       "market_choices": [
         {
           "name": "ロッテ",
-          "odds": 2.33,
+          "odds": 2.35,
           "bettable": true
         },
         {
           "name": "楽天",
-          "odds": 1.68,
+          "odds": 1.65,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 27.65,
+          "odds": 27.66,
           "bettable": true
         }
       ],
-      "source_url": "https://bet-channel.com/matches?lang=ja"
+      "source_url": "https://bet-channel.com/matches?ct=10000&lang=ja"
     },
     {
       "event_id": "220712",
@@ -2565,12 +2333,12 @@
         },
         {
           "name": "西武",
-          "odds": 1.51,
+          "odds": 1.53,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 27.66,
+          "odds": 27.65,
           "bettable": true
         }
       ],
@@ -2594,17 +2362,17 @@
       "market_choices": [
         {
           "name": "EX風林火山",
-          "odds": 3.48,
+          "odds": 3.45,
           "bettable": true
         },
         {
           "name": "TEAM RAIDEN / 雷電",
-          "odds": 3.7,
+          "odds": 3.71,
           "bettable": true
         },
         {
           "name": "BEAST X",
-          "odds": 3.25,
+          "odds": 3.27,
           "bettable": true
         },
         {
@@ -2633,22 +2401,22 @@
       "market_choices": [
         {
           "name": "赤坂ドリブンズ",
-          "odds": 3.27,
+          "odds": 3.25,
           "bettable": true
         },
         {
           "name": "KONAMI麻雀格闘倶楽部",
-          "odds": 3.34,
+          "odds": 3.35,
           "bettable": true
         },
         {
           "name": "渋谷ABEMAS",
-          "odds": 3.08,
+          "odds": 3.1,
           "bettable": true
         },
         {
           "name": "セガサミーフェニックス",
-          "odds": 4.03,
+          "odds": 4.02,
           "bettable": true
         }
       ],
@@ -2672,17 +2440,17 @@
       "market_choices": [
         {
           "name": "EX風林火山",
-          "odds": 3.53,
+          "odds": 3.52,
           "bettable": true
         },
         {
           "name": "TEAM RAIDEN / 雷電",
-          "odds": 3.72,
+          "odds": 3.74,
           "bettable": true
         },
         {
           "name": "BEAST X",
-          "odds": 3.25,
+          "odds": 3.24,
           "bettable": true
         },
         {
@@ -2711,12 +2479,12 @@
       "market_choices": [
         {
           "name": "赤坂ドリブンズ",
-          "odds": 3.21,
+          "odds": 3.22,
           "bettable": true
         },
         {
           "name": "KONAMI麻雀格闘倶楽部",
-          "odds": 3.35,
+          "odds": 3.31,
           "bettable": true
         },
         {
@@ -2726,7 +2494,7 @@
         },
         {
           "name": "セガサミーフェニックス",
-          "odds": 4.03,
+          "odds": 4.06,
           "bettable": true
         }
       ],
@@ -2750,17 +2518,17 @@
       "market_choices": [
         {
           "name": "チェコ 1 - 0 イングランド",
-          "odds": 15.98,
+          "odds": 15.93,
           "bettable": true
         },
         {
           "name": "チェコ 2 - 0 イングランド",
-          "odds": 31.24,
+          "odds": 31.23,
           "bettable": true
         },
         {
           "name": "チェコ 2 - 1 イングランド",
-          "odds": 18.27,
+          "odds": 18.31,
           "bettable": true
         },
         {
@@ -2770,7 +2538,7 @@
         },
         {
           "name": "チェコ 3 - 1 イングランド",
-          "odds": 48.37,
+          "odds": 48.4,
           "bettable": true
         },
         {
@@ -2780,17 +2548,17 @@
         },
         {
           "name": "その他のチェコ勝利",
-          "odds": 45.44,
+          "odds": 45.47,
           "bettable": true
         },
         {
           "name": "チェコ 0 - 0 イングランド",
-          "odds": 13.16,
+          "odds": 13.14,
           "bettable": true
         },
         {
           "name": "チェコ 1 - 1 イングランド",
-          "odds": 8.97,
+          "odds": 8.98,
           "bettable": true
         },
         {
@@ -2829,17 +2597,17 @@
       "market_choices": [
         {
           "name": "スペイン 1 - 0 クロアチア",
-          "odds": 7.08,
+          "odds": 7.05,
           "bettable": true
         },
         {
           "name": "スペイン 2 - 0 クロアチア",
-          "odds": 6.1,
+          "odds": 6.13,
           "bettable": true
         },
         {
           "name": "スペイン 2 - 1 クロアチア",
-          "odds": 8.63,
+          "odds": 8.64,
           "bettable": true
         },
         {
@@ -2859,27 +2627,27 @@
         },
         {
           "name": "その他のスペイン勝利",
-          "odds": 3.81,
+          "odds": 3.77,
           "bettable": true
         },
         {
           "name": "スペイン 0 - 0 クロアチア",
-          "odds": 14.44,
+          "odds": 14.4,
           "bettable": true
         },
         {
           "name": "スペイン 1 - 1 クロアチア",
-          "odds": 10.81,
+          "odds": 10.78,
           "bettable": true
         },
         {
           "name": "スペイン 2 - 2 クロアチア",
-          "odds": 20.29,
+          "odds": 20.36,
           "bettable": true
         },
         {
           "name": "その他の引き分け",
-          "odds": 62.51,
+          "odds": 62.49,
           "bettable": true
         },
         {
@@ -2913,12 +2681,12 @@
         },
         {
           "name": "クロアチア",
-          "odds": 12.02,
+          "odds": 11.99,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 6.83,
+          "odds": 6.86,
           "bettable": true
         }
       ],
@@ -2947,12 +2715,12 @@
         },
         {
           "name": "イングランド",
-          "odds": 1.37,
+          "odds": 1.41,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 4.97,
+          "odds": 4.93,
           "bettable": true
         }
       ],
@@ -2976,17 +2744,17 @@
       "market_choices": [
         {
           "name": "カロライナ・ハリケーンズ",
-          "odds": 2.29,
+          "odds": 2.27,
           "bettable": true
         },
         {
           "name": "フロリダ・パンサーズ",
-          "odds": 2.53,
+          "odds": 2.54,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 4.28,
+          "odds": 4.29,
           "bettable": true
         }
       ],
@@ -3010,17 +2778,17 @@
       "market_choices": [
         {
           "name": "トロント・メープルリーフス",
-          "odds": 2.36,
+          "odds": 2.34,
           "bettable": true
         },
         {
           "name": "モントリオール・カナディアンズ",
-          "odds": 2.39,
+          "odds": 2.42,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 4.48,
+          "odds": 4.47,
           "bettable": true
         }
       ],
@@ -3044,17 +2812,17 @@
       "market_choices": [
         {
           "name": "ボストン・ブルーインズ",
-          "odds": 2.36,
+          "odds": 2.38,
           "bettable": true
         },
         {
           "name": "ニューヨーク・レンジャーズ",
-          "odds": 2.44,
+          "odds": 2.43,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 4.28,
+          "odds": 4.27,
           "bettable": true
         }
       ],
@@ -3078,17 +2846,17 @@
       "market_choices": [
         {
           "name": "エドモントン・オイラーズ",
-          "odds": 1.51,
+          "odds": 1.55,
           "bettable": true
         },
         {
           "name": "バンクーバー・カナックス",
-          "odds": 5.34,
+          "odds": 5.33,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 4.41,
+          "odds": 4.38,
           "bettable": true
         }
       ],
@@ -3112,17 +2880,17 @@
       "market_choices": [
         {
           "name": "ベガス・ゴールデンナイツ",
-          "odds": 1.64,
+          "odds": 1.62,
           "bettable": true
         },
         {
           "name": "シカゴ・ブラックホークス",
-          "odds": 4.42,
+          "odds": 4.4,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 4.31,
+          "odds": 4.35,
           "bettable": true
         }
       ],
@@ -3146,17 +2914,17 @@
       "market_choices": [
         {
           "name": "トロント・メープルリーフス",
-          "odds": 2.23,
+          "odds": 2.21,
           "bettable": true
         },
         {
           "name": "ニューヨーク・アイランダーズ",
-          "odds": 2.56,
+          "odds": 2.6,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 4.35,
+          "odds": 4.33,
           "bettable": true
         }
       ],
@@ -3180,17 +2948,17 @@
       "market_choices": [
         {
           "name": "フィラデルフィア・フライヤーズ",
-          "odds": 2.11,
+          "odds": 2.12,
           "bettable": true
         },
         {
           "name": "ピッツバーグ・ペンギンズ",
-          "odds": 2.83,
+          "odds": 2.81,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 4.15,
+          "odds": 4.16,
           "bettable": true
         }
       ],
@@ -3214,22 +2982,22 @@
       "market_choices": [
         {
           "name": "スパーズ",
-          "odds": 2.32,
+          "odds": 2.31,
           "bettable": true
         },
         {
           "name": "サンダー",
-          "odds": 2.32,
+          "odds": 2.34,
           "bettable": true
         },
         {
           "name": "ナゲッツ",
-          "odds": 13.05,
+          "odds": 13.06,
           "bettable": true
         },
         {
           "name": "ウルブズ",
-          "odds": 13.06,
+          "odds": 13.05,
           "bettable": true
         },
         {
@@ -3249,22 +3017,22 @@
         },
         {
           "name": "ブレイザーズ",
-          "odds": 31.57,
+          "odds": 31.56,
           "bettable": true
         },
         {
           "name": "サンズ",
-          "odds": 50,
+          "odds": 50.02,
           "bettable": true
         },
         {
           "name": "マーベリックス",
-          "odds": 80,
+          "odds": 80.03,
           "bettable": true
         },
         {
           "name": "ジャズ",
-          "odds": 80.03,
+          "odds": 80.04,
           "bettable": true
         },
         {
@@ -3293,7 +3061,7 @@
       "market_choices": [
         {
           "name": "ニックス",
-          "odds": 3.98,
+          "odds": 4.02,
           "bettable": true
         },
         {
@@ -3303,27 +3071,27 @@
         },
         {
           "name": "シクサーズ",
-          "odds": 7.99,
+          "odds": 7.98,
           "bettable": true
         },
         {
           "name": "ピストンズ",
-          "odds": 9.03,
+          "odds": 9.01,
           "bettable": true
         },
         {
           "name": "ラプターズ",
-          "odds": 9.04,
+          "odds": 9.01,
           "bettable": true
         },
         {
           "name": "ヒート",
-          "odds": 9.03,
+          "odds": 9.01,
           "bettable": true
         },
         {
           "name": "キャバリアーズ",
-          "odds": 9.32,
+          "odds": 9.28,
           "bettable": true
         },
         {
@@ -3333,22 +3101,22 @@
         },
         {
           "name": "ホークス",
-          "odds": 17.16,
+          "odds": 17.15,
           "bettable": true
         },
         {
           "name": "マジック",
-          "odds": 18.15,
+          "odds": 18.17,
           "bettable": true
         },
         {
           "name": "ホーネッツ",
-          "odds": 33.13,
+          "odds": 33.2,
           "bettable": true
         },
         {
           "name": "ウィザーズ",
-          "odds": 70.58,
+          "odds": 70.6,
           "bettable": true
         }
       ],
@@ -3372,12 +3140,12 @@
       "market_choices": [
         {
           "name": "スパーズ",
-          "odds": 3.48,
+          "odds": 3.46,
           "bettable": true
         },
         {
           "name": "サンダー",
-          "odds": 3.48,
+          "odds": 3.46,
           "bettable": true
         },
         {
@@ -3387,22 +3155,22 @@
         },
         {
           "name": "セルティックス",
-          "odds": 13.03,
+          "odds": 13.02,
           "bettable": true
         },
         {
           "name": "シクサーズ",
-          "odds": 21.1,
+          "odds": 21.03,
           "bettable": true
         },
         {
           "name": "ラプターズ",
-          "odds": 21.07,
+          "odds": 21.06,
           "bettable": true
         },
         {
           "name": "ナゲッツ",
-          "odds": 23.18,
+          "odds": 23.2,
           "bettable": true
         },
         {
@@ -3412,22 +3180,22 @@
         },
         {
           "name": "ウルブズ",
-          "odds": 23.21,
+          "odds": 23.18,
           "bettable": true
         },
         {
           "name": "ピストンズ",
-          "odds": 26.22,
+          "odds": 26.25,
           "bettable": true
         },
         {
           "name": "キャバリアーズ",
-          "odds": 26.22,
+          "odds": 26.24,
           "bettable": true
         },
         {
           "name": "ペイサーズ",
-          "odds": 36.36,
+          "odds": 36.39,
           "bettable": true
         }
       ],
@@ -3451,12 +3219,12 @@
       "market_choices": [
         {
           "name": "コロラド・アバランチ",
-          "odds": 1.86,
+          "odds": 1.89,
           "bettable": true
         },
         {
           "name": "ロサンゼルス・キングス",
-          "odds": 3.45,
+          "odds": 3.42,
           "bettable": true
         },
         {
@@ -3485,12 +3253,12 @@
       "market_choices": [
         {
           "name": "EARTH JETS",
-          "odds": 3.56,
+          "odds": 3.53,
           "bettable": true
         },
         {
           "name": "赤坂ドリブンズ",
-          "odds": 3.18,
+          "odds": 3.21,
           "bettable": true
         },
         {
@@ -3524,12 +3292,12 @@
       "market_choices": [
         {
           "name": "EX風林火山",
-          "odds": 3.44,
+          "odds": 3.47,
           "bettable": true
         },
         {
           "name": "KADOKAWAサクラナイツ",
-          "odds": 3.47,
+          "odds": 3.45,
           "bettable": true
         },
         {
@@ -3539,7 +3307,7 @@
         },
         {
           "name": "U-NEXT Pirates",
-          "odds": 3.02,
+          "odds": 3.01,
           "bettable": true
         }
       ],
@@ -3568,17 +3336,17 @@
         },
         {
           "name": "赤坂ドリブンズ",
-          "odds": 3.22,
+          "odds": 3.19,
           "bettable": true
         },
         {
           "name": "KONAMI麻雀格闘倶楽部",
-          "odds": 3.06,
+          "odds": 3.07,
           "bettable": true
         },
         {
           "name": "セガサミーフェニックス",
-          "odds": 3.76,
+          "odds": 3.78,
           "bettable": true
         }
       ],
@@ -3602,22 +3370,22 @@
       "market_choices": [
         {
           "name": "EX風林火山",
-          "odds": 3.43,
+          "odds": 3.42,
           "bettable": true
         },
         {
           "name": "KADOKAWAサクラナイツ",
-          "odds": 3.52,
+          "odds": 3.51,
           "bettable": true
         },
         {
           "name": "TEAM RAIDEN / 雷電",
-          "odds": 3.67,
+          "odds": 3.71,
           "bettable": true
         },
         {
           "name": "U-NEXT Pirates",
-          "odds": 3.04,
+          "odds": 3.02,
           "bettable": true
         }
       ],
@@ -3625,8 +3393,8 @@
     },
     {
       "event_id": "220390",
-      "category": "サッカー",
-      "category_key": "10001:サッカー",
+      "category": "サッカー代表 国別",
+      "category_key": "10071:サッカー代表 国別",
       "start_at_jst": "2026-10-02T03:45:00+09:00",
       "bet_end_time": "27:40",
       "status": 0,
@@ -3655,12 +3423,12 @@
           "bettable": false
         }
       ],
-      "source_url": "https://bet-channel.com/matches?ct=10001&lang=ja"
+      "source_url": "https://bet-channel.com/matches?ct=10071&lang=ja"
     },
     {
       "event_id": "220391",
-      "category": "サッカー代表 国別",
-      "category_key": "10071:サッカー代表 国別",
+      "category": "サッカー",
+      "category_key": "10001:サッカー",
       "start_at_jst": "2026-10-02T03:45:00+09:00",
       "bet_end_time": "27:40",
       "status": 0,
@@ -3689,7 +3457,7 @@
           "bettable": false
         }
       ],
-      "source_url": "https://bet-channel.com/matches?ct=10071&lang=ja"
+      "source_url": "https://bet-channel.com/matches?ct=10001&lang=ja"
     },
     {
       "event_id": "220392",
@@ -3777,17 +3545,17 @@
       "market_choices": [
         {
           "name": "コロンバス・ブルージャケッツ",
-          "odds": 2.4,
+          "odds": 2.43,
           "bettable": true
         },
         {
           "name": "バッファロー・サブレス",
-          "odds": 2.4,
+          "odds": 2.38,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 4.29,
+          "odds": 4.28,
           "bettable": true
         }
       ],
@@ -3811,17 +3579,17 @@
       "market_choices": [
         {
           "name": "ニュージャージー・デビルズ",
-          "odds": 2.1,
+          "odds": 2.12,
           "bettable": true
         },
         {
           "name": "フィラデルフィア・フライヤーズ",
-          "odds": 2.75,
+          "odds": 2.74,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 4.46,
+          "odds": 4.45,
           "bettable": true
         }
       ],
@@ -3845,22 +3613,22 @@
       "market_choices": [
         {
           "name": "EARTH JETS",
-          "odds": 3.7,
+          "odds": 3.67,
           "bettable": true
         },
         {
           "name": "KONAMI麻雀格闘倶楽部",
-          "odds": 3.24,
+          "odds": 3.28,
           "bettable": true
         },
         {
           "name": "TEAM RAIDEN / 雷電",
-          "odds": 3.69,
+          "odds": 3.71,
           "bettable": true
         },
         {
           "name": "BEAST X",
-          "odds": 3.04,
+          "odds": 3.01,
           "bettable": true
         }
       ],
@@ -3884,7 +3652,7 @@
       "market_choices": [
         {
           "name": "赤坂ドリブンズ",
-          "odds": 3.24,
+          "odds": 3.31,
           "bettable": true
         },
         {
@@ -3894,12 +3662,12 @@
         },
         {
           "name": "渋谷ABEMAS",
-          "odds": 3.05,
+          "odds": 3.02,
           "bettable": true
         },
         {
           "name": "セガサミーフェニックス",
-          "odds": 4.06,
+          "odds": 4.02,
           "bettable": true
         }
       ],
@@ -3923,22 +3691,22 @@
       "market_choices": [
         {
           "name": "横浜(神奈川)",
-          "odds": 3.21,
+          "odds": 3.22,
           "bettable": true
         },
         {
           "name": "智弁和歌山(和歌山)",
-          "odds": 3.64,
+          "odds": 3.65,
           "bettable": true
         },
         {
           "name": "天理(奈良)",
-          "odds": 5.31,
+          "odds": 5.28,
           "bettable": true
         },
         {
           "name": "青森山田(青森)",
-          "odds": 6.24,
+          "odds": 6.28,
           "bettable": true
         },
         {
@@ -3948,7 +3716,7 @@
         },
         {
           "name": "花巻東(岩手)",
-          "odds": 8.86,
+          "odds": 8.82,
           "bettable": true
         },
         {
@@ -3958,7 +3726,7 @@
         },
         {
           "name": "有明(熊本)",
-          "odds": 18.81,
+          "odds": 18.82,
           "bettable": true
         }
       ],
@@ -3982,17 +3750,17 @@
       "market_choices": [
         {
           "name": "青森山田(青森)",
-          "odds": 2.02,
+          "odds": 2,
           "bettable": true
         },
         {
           "name": "健大高崎(群馬)",
-          "odds": 2.11,
+          "odds": 2.1,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 6.92,
+          "odds": 6.95,
           "bettable": true
         }
       ],
@@ -4016,17 +3784,17 @@
       "market_choices": [
         {
           "name": "三重(三重)",
-          "odds": 3.65,
+          "odds": 3.6,
           "bettable": true
         },
         {
           "name": "天理(奈良)",
-          "odds": 1.4,
+          "odds": 1.41,
           "bettable": true
         },
         {
           "name": "引き分け",
-          "odds": 8.16,
+          "odds": 8.2,
           "bettable": true
         }
       ],
@@ -4050,12 +3818,12 @@
       "market_choices": [
         {
           "name": "横浜(神奈川)",
-          "odds": 1.76,
+          "odds": 1.77,
           "bettable": true
         },
         {
           "name": "智弁和歌山(和歌山)",
-          "odds": 2.43,
+          "odds": 2.42,
           "bettable": true
         },
         {
@@ -4077,11 +3845,21 @@
       "side_a": "堀江圭功",
       "side_b": "宇佐美正パトリック",
       "primary_market": false,
-      "market_class": "h2h_or_two_way",
+      "market_class": "multi_outcome_or_futures",
       "start_state": "future_or_upcoming",
       "price_state": "unpriced",
       "priority_12h": false,
       "market_choices": [
+        {
+          "name": "堀江圭功",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "宇佐美正パトリック",
+          "odds": null,
+          "bettable": false
+        },
         {
           "name": "堀江圭功",
           "odds": null,
@@ -4130,6 +3908,26 @@
           "name": "宇佐美正パトリック【判定で勝利】",
           "odds": null,
           "bettable": false
+        },
+        {
+          "name": "堀江圭功【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "堀江圭功【判定で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "宇佐美正パトリック【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "宇佐美正パトリック【判定で勝利】",
+          "odds": null,
+          "bettable": false
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10113&lang=ja"
@@ -4145,11 +3943,21 @@
       "side_a": "ビクター・コレスニック",
       "side_b": "松嶋こよみ",
       "primary_market": false,
-      "market_class": "h2h_or_two_way",
+      "market_class": "multi_outcome_or_futures",
       "start_state": "future_or_upcoming",
       "price_state": "unpriced",
       "priority_12h": false,
       "market_choices": [
+        {
+          "name": "ビクター・コレスニック",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "松嶋こよみ",
+          "odds": null,
+          "bettable": false
+        },
         {
           "name": "ビクター・コレスニック",
           "odds": null,
@@ -4198,6 +4006,26 @@
           "name": "松嶋こよみ【判定で勝利】",
           "odds": null,
           "bettable": false
+        },
+        {
+          "name": "ビクター・コレスニック【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "ビクター・コレスニック【判定で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "松嶋こよみ 【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "松嶋こよみ【判定で勝利】",
+          "odds": null,
+          "bettable": false
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10113&lang=ja"
@@ -4213,11 +4041,21 @@
       "side_a": "芦澤竜誠",
       "side_b": "井上聖矢",
       "primary_market": false,
-      "market_class": "h2h_or_two_way",
+      "market_class": "multi_outcome_or_futures",
       "start_state": "future_or_upcoming",
       "price_state": "unpriced",
       "priority_12h": false,
       "market_choices": [
+        {
+          "name": "芦澤竜誠",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "井上聖矢",
+          "odds": null,
+          "bettable": false
+        },
         {
           "name": "芦澤竜誠",
           "odds": null,
@@ -4266,6 +4104,26 @@
           "name": "井上聖矢【判定で勝利】",
           "odds": null,
           "bettable": false
+        },
+        {
+          "name": "芦澤竜誠【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "芦澤竜誠【判定で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "井上聖矢【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "井上聖矢【判定で勝利】",
+          "odds": null,
+          "bettable": false
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10113&lang=ja"
@@ -4281,11 +4139,21 @@
       "side_a": "ケイト・ロータス",
       "side_b": "NOEL",
       "primary_market": false,
-      "market_class": "h2h_or_two_way",
+      "market_class": "multi_outcome_or_futures",
       "start_state": "future_or_upcoming",
       "price_state": "unpriced",
       "priority_12h": false,
       "market_choices": [
+        {
+          "name": "ケイト・ロータス",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "NOEL",
+          "odds": null,
+          "bettable": false
+        },
         {
           "name": "ケイト・ロータス",
           "odds": null,
@@ -4334,6 +4202,26 @@
           "name": "NOEL【判定で勝利】",
           "odds": null,
           "bettable": false
+        },
+        {
+          "name": "ケイト・ロータス【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "ケイト・ロータス【判定で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "NOEL【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "NOEL【判定で勝利】",
+          "odds": null,
+          "bettable": false
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10113&lang=ja"
@@ -4349,11 +4237,21 @@
       "side_a": "ライアン・カファロ",
       "side_b": "安井飛馬",
       "primary_market": false,
-      "market_class": "h2h_or_two_way",
+      "market_class": "multi_outcome_or_futures",
       "start_state": "future_or_upcoming",
       "price_state": "unpriced",
       "priority_12h": false,
       "market_choices": [
+        {
+          "name": "ライアン・カファロ",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "安井飛馬",
+          "odds": null,
+          "bettable": false
+        },
         {
           "name": "ライアン・カファロ",
           "odds": null,
@@ -4402,6 +4300,26 @@
           "name": "安井飛馬【判定で勝利】",
           "odds": null,
           "bettable": false
+        },
+        {
+          "name": "ライアン・カファロ【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "ライアン・カファロ【判定で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "安井飛馬【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "安井飛馬【判定で勝利】",
+          "odds": null,
+          "bettable": false
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10113&lang=ja"
@@ -4417,11 +4335,21 @@
       "side_a": "火の鳥",
       "side_b": "上田将年",
       "primary_market": false,
-      "market_class": "h2h_or_two_way",
+      "market_class": "multi_outcome_or_futures",
       "start_state": "future_or_upcoming",
       "price_state": "unpriced",
       "priority_12h": false,
       "market_choices": [
+        {
+          "name": "火の鳥",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "上田将年",
+          "odds": null,
+          "bettable": false
+        },
         {
           "name": "火の鳥",
           "odds": null,
@@ -4470,6 +4398,26 @@
           "name": "上田将年【判定で勝利】",
           "odds": null,
           "bettable": false
+        },
+        {
+          "name": "火の鳥【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "火の鳥【判定で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "上田将年【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "上田将年【判定で勝利】",
+          "odds": null,
+          "bettable": false
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10113&lang=ja"
@@ -4485,11 +4433,21 @@
       "side_a": "杉⼭廣平",
       "side_b": "小田魁斗",
       "primary_market": false,
-      "market_class": "h2h_or_two_way",
+      "market_class": "multi_outcome_or_futures",
       "start_state": "future_or_upcoming",
       "price_state": "unpriced",
       "priority_12h": false,
       "market_choices": [
+        {
+          "name": "杉⼭廣平",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "小田魁斗",
+          "odds": null,
+          "bettable": false
+        },
         {
           "name": "杉⼭廣平",
           "odds": null,
@@ -4538,6 +4496,26 @@
           "name": "小田魁斗【判定で勝利】",
           "odds": null,
           "bettable": false
+        },
+        {
+          "name": "杉⼭廣平【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "杉⼭廣平【判定で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "小田魁斗【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "小田魁斗【判定で勝利】",
+          "odds": null,
+          "bettable": false
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10113&lang=ja"
@@ -4553,11 +4531,21 @@
       "side_a": "荒東“怪獣キラー”英貴",
       "side_b": "長谷川賢",
       "primary_market": false,
-      "market_class": "h2h_or_two_way",
+      "market_class": "multi_outcome_or_futures",
       "start_state": "future_or_upcoming",
       "price_state": "unpriced",
       "priority_12h": false,
       "market_choices": [
+        {
+          "name": "荒東“怪獣キラー”英貴",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "長谷川賢",
+          "odds": null,
+          "bettable": false
+        },
         {
           "name": "荒東“怪獣キラー”英貴",
           "odds": null,
@@ -4606,6 +4594,26 @@
           "name": "長谷川賢【判定で勝利】",
           "odds": null,
           "bettable": false
+        },
+        {
+          "name": "荒東“怪獣キラー”英貴【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "荒東“怪獣キラー”英貴【判定で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "長谷川賢【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "長谷川賢【判定で勝利】",
+          "odds": null,
+          "bettable": false
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10113&lang=ja"
@@ -4621,11 +4629,21 @@
       "side_a": "アラン“ヒロ”ヤマニハ",
       "side_b": "山本聖悟",
       "primary_market": false,
-      "market_class": "h2h_or_two_way",
+      "market_class": "multi_outcome_or_futures",
       "start_state": "future_or_upcoming",
       "price_state": "unpriced",
       "priority_12h": false,
       "market_choices": [
+        {
+          "name": "アラン“ヒロ”ヤマニハ",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "山本聖悟",
+          "odds": null,
+          "bettable": false
+        },
         {
           "name": "アラン“ヒロ”ヤマニハ",
           "odds": null,
@@ -4674,6 +4692,26 @@
           "name": "山本聖悟【判定で勝利】",
           "odds": null,
           "bettable": false
+        },
+        {
+          "name": "アラン“ヒロ”ヤマニハ【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "アラン“ヒロ”ヤマニハ【判定で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "山本聖悟【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "山本聖悟【判定で勝利】",
+          "odds": null,
+          "bettable": false
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10113&lang=ja"
@@ -4689,11 +4727,21 @@
       "side_a": "マック・パパリイ",
       "side_b": "アルブリー・ンジャイ",
       "primary_market": false,
-      "market_class": "h2h_or_two_way",
+      "market_class": "multi_outcome_or_futures",
       "start_state": "future_or_upcoming",
       "price_state": "unpriced",
       "priority_12h": false,
       "market_choices": [
+        {
+          "name": "マック・パパリイ",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "アルブリー・ンジャイ",
+          "odds": null,
+          "bettable": false
+        },
         {
           "name": "マック・パパリイ",
           "odds": null,
@@ -4742,6 +4790,26 @@
           "name": "アルブリー・ンジャイ【判定で勝利】",
           "odds": null,
           "bettable": false
+        },
+        {
+          "name": "マック・パパリイ【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "マック・パパリイ【判定で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "アルブリー・ンジャイ【KO、TKO、DQ等判定以外で勝利】",
+          "odds": null,
+          "bettable": false
+        },
+        {
+          "name": "アルブリー・ンジャイ【判定で勝利】",
+          "odds": null,
+          "bettable": false
         }
       ],
       "source_url": "https://bet-channel.com/matches?ct=10113&lang=ja"
@@ -4764,12 +4832,12 @@
       "market_choices": [
         {
           "name": "有明(熊本)",
-          "odds": 2.79,
+          "odds": 2.77,
           "bettable": true
         },
         {
           "name": "花巻東(岩手)",
-          "odds": 1.64,
+          "odds": 1.66,
           "bettable": true
         },
         {
