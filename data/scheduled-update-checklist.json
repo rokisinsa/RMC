@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "latest_run_id": "rmc-20260928-1800",
+  "latest_run_id": "rmc-20260928-2300",
   "runs": [
     {
       "run_id": "rmc-20260927-2300",
@@ -652,42 +652,42 @@
           "title": "run_id・開始JST・開始SHA・前回blocker記録",
           "status": "pass",
           "detail": "rmc-20260928-2300 / 2026-09-28T23:00:00+09:00 / start_sha b82be396253fe4fc6f977330c0d92c1dca7a6ffc / prior_blockers fixed_odds_incomplete",
-          "checked_at": "2026-09-28T20:55:20+09:00"
+          "checked_at": "2026-09-28T21:53:14+09:00"
         },
         {
           "id": 2,
           "title": "BET CHANNEL通常スポーツをメニュー終端まで完全取得",
           "status": "pass",
-          "detail": "legacy complete: 105 categories / 220 events / 118 screening",
-          "checked_at": "2026-09-28T20:55:20+09:00"
+          "detail": "legacy complete: 105 categories / 207 events / 113 screening",
+          "checked_at": "2026-09-28T21:53:14+09:00"
         },
         {
           "id": 3,
           "title": "BET CHANNEL fixed-odds/eSportsをJP許可ノードから完全取得",
           "status": "fail",
           "detail": "JP fixed-odds/eSports inventory incomplete/missing",
-          "checked_at": "2026-09-28T20:55:20+09:00"
+          "checked_at": "2026-09-28T21:53:14+09:00"
         },
         {
           "id": 4,
           "title": "eSportsメニュー/ルートを再帰全巡回し未訪問0",
           "status": "fail",
           "detail": "eSports recursive menu exhaustion not proven",
-          "checked_at": "2026-09-28T20:55:20+09:00"
+          "checked_at": "2026-09-28T21:53:14+09:00"
         },
         {
           "id": 5,
           "title": "通常＋eSports complete union成立",
           "status": "fail",
           "detail": "union incomplete: fixed_odds_incomplete",
-          "checked_at": "2026-09-28T20:55:20+09:00"
+          "checked_at": "2026-09-28T21:53:14+09:00"
         },
         {
           "id": 6,
           "title": "inventory freshness（通常45分/eSports55分）",
           "status": "fail",
-          "detail": "at 2026-09-28T23:00:00+09:00: legacy age 128.1m / fixed age ∞m",
-          "checked_at": "2026-09-28T20:55:20+09:00"
+          "detail": "at 2026-09-28T23:00:00+09:00: legacy age 68.7m / fixed age ∞m",
+          "checked_at": "2026-09-28T21:53:14+09:00"
         },
         {
           "id": 7,
@@ -701,14 +701,14 @@
           "title": "全リアルスポーツを対象化",
           "status": "pass",
           "detail": "all listed real-sports menu categories captured (105)",
-          "checked_at": "2026-09-28T20:55:20+09:00"
+          "checked_at": "2026-09-28T21:53:14+09:00"
         },
         {
           "id": 9,
           "title": "全eSportsタイトルを対象化",
           "status": "fail",
           "detail": "eSports titles inventory is zero/incomplete",
-          "checked_at": "2026-09-28T20:55:20+09:00"
+          "checked_at": "2026-09-28T21:53:14+09:00"
         },
         {
           "id": 10,
@@ -942,7 +942,7 @@
         "pending": 33,
         "total": 41
       },
-      "updated_at": "2026-09-28T20:55:20+09:00"
+      "updated_at": "2026-09-28T21:53:14+09:00"
     }
   ]
 }
