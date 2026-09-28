@@ -151,7 +151,7 @@ function inferNextSlot(d=new Date()){
     }
   }
   const nearest=[...candidates].sort((a,b)=>Math.abs(a.ms-ms)-Math.abs(b.ms-ms))[0];
-  if(nearest && Math.abs(nearest.ms-ms)<=120*60000) return nearest;
+  if(nearest && Math.abs(nearest.ms-ms)<=240*60000) return nearest;
   return null;
 }
 function ageMinutes(ref,ts){return (Date.parse(ref)-Date.parse(ts))/60000}
