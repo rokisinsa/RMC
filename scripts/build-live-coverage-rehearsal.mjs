@@ -165,7 +165,7 @@ const resultChecks=[...overdue].map(id=>{
   return {
     match_id:id,
     status:"unresolved",
-    source_priority:"repository_stored_match_record",
+    source_priority:"unresolved",
     source_urls:["https://raw.githubusercontent.com/rokisinsa/RMC/main/data/matches.json"],
     verified_at:generatedAt,
     identity_ok:!!m,
