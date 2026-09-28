@@ -39,12 +39,8 @@ jobs:
               --source "BET CHANNEL scheduled inventory gate" \
               --start-sha "$(git rev-parse HEAD)"
           else
-            now_jst="$(TZ=Asia/Tokyo date '+%Y-%m-%dT%H:%M:%S+09:00')"
-            run_id="rmc-adhoc-$(TZ=Asia/Tokyo date '+%Y%m%d-%H%M%S')"
             node scripts/rmc-scheduled-checklist.mjs \
-              --run-id "$run_id" \
-              --slot "adhoc" \
-              --scheduled-for "$now_jst" \
+              --auto-next \
               --inventory \
               --source "BET CHANNEL manual full-run gate" \
               --start-sha "$(git rev-parse HEAD)"
