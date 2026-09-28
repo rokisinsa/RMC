@@ -1251,6 +1251,318 @@
         "total": 41
       },
       "updated_at": "2026-09-29T05:13:31+09:00"
+    },
+    {
+      "run_id": "rmc-20260929-2300",
+      "slot": "23:00",
+      "scheduled_for": "2026-09-29T23:00:00+09:00",
+      "started_at": "2026-09-29T05:13:55+09:00",
+      "finished_at": "2026-09-29T05:13:57+09:00",
+      "source": "RMC complete-union live production",
+      "start_sha": "76a6980bf6dde6fa3a7a4de17f908934c45c6556",
+      "end_sha": null,
+      "status": "failed",
+      "prior_blockers": [],
+      "blockers": [
+        "production_validator_failed"
+      ],
+      "checks": [
+        {
+          "id": 1,
+          "title": "run_id・開始JST・開始SHA・前回blocker記録",
+          "status": "pass",
+          "detail": "rmc-20260929-2300 / 2026-09-29T23:00:00+09:00 / start_sha 76a6980bf6dde6fa3a7a4de17f908934c45c6556 / prior_blockers none",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 2,
+          "title": "BET CHANNEL通常スポーツをメニュー終端まで完全取得",
+          "status": "pass",
+          "detail": "legacy complete: 105 categories / 221 events / 115 screening",
+          "checked_at": "2026-09-29T05:13:56+09:00"
+        },
+        {
+          "id": 3,
+          "title": "BET CHANNEL fixed-odds/eSportsをJP許可ノードから完全取得",
+          "status": "pass",
+          "detail": "JP japan_local_windows: 2274 events / 2249 screening",
+          "checked_at": "2026-09-29T05:13:56+09:00"
+        },
+        {
+          "id": 4,
+          "title": "eSportsメニュー/ルートを再帰全巡回し未訪問0",
+          "status": "pass",
+          "detail": "recursive routes 5/5, unvisited 0",
+          "checked_at": "2026-09-29T05:13:56+09:00"
+        },
+        {
+          "id": 5,
+          "title": "通常＋eSports complete union成立",
+          "status": "pass",
+          "detail": "union complete: 179 categories / 2495 events / 2364 screening",
+          "checked_at": "2026-09-29T05:13:56+09:00"
+        },
+        {
+          "id": 6,
+          "title": "inventory freshness（通常45分/eSports55分）",
+          "status": "fail",
+          "detail": "at 2026-09-29T05:13:56+09:00: legacy age 2.4m / fixed age 351.7m",
+          "checked_at": "2026-09-29T05:13:56+09:00"
+        },
+        {
+          "id": 7,
+          "title": "カジ旅・bet365・優雅堂の補助確認または取得不能理由",
+          "status": "pass",
+          "detail": "3 supplementary books checked or explicit unavailable reasons recorded",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 8,
+          "title": "全リアルスポーツを対象化",
+          "status": "pass",
+          "detail": "all listed real-sports menu categories captured (105)",
+          "checked_at": "2026-09-29T05:13:56+09:00"
+        },
+        {
+          "id": 9,
+          "title": "全eSportsタイトルを対象化",
+          "status": "pass",
+          "detail": "all discovered eSports titles/categories captured (74)",
+          "checked_at": "2026-09-29T05:13:56+09:00"
+        },
+        {
+          "id": 10,
+          "title": "①推奨が完全screening全件を独立一次走査",
+          "status": "pass",
+          "detail": "recommendations: 2364/2364 independently screened",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 11,
+          "title": "②VALUE①が完全screening全件を独立一次走査",
+          "status": "pass",
+          "detail": "value1: 2364/2364 independently screened",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 12,
+          "title": "③VALUE②が完全screening全件を独立一次走査",
+          "status": "pass",
+          "detail": "value2: 2364/2364 independently screened",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 13,
+          "title": "④PRO EDGEが完全screening全件を独立一次走査",
+          "status": "pass",
+          "detail": "pro_edge: 2364/2364 independently screened",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 14,
+          "title": "①〜④ card_idsが完全母集団と一致",
+          "status": "pass",
+          "detail": "all four card_id sets exactly equal 2364 screening IDs",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 15,
+          "title": "競技/タイトル別sport coverage監査",
+          "status": "pass",
+          "detail": "sport/title coverage present for all 179 categories",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 16,
+          "title": "各priced 24h競技/タイトルのdeep dive実施",
+          "status": "pass",
+          "detail": "all 412 eligible priced-upcoming H2H events deep-dived in all four systems",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 17,
+          "title": "priced_upcoming>0でdeep_dive=0を禁止",
+          "status": "pass",
+          "detail": "no priced-upcoming eligible category has deep_dive=0",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 18,
+          "title": "候補数上限なし・全件証跡保持",
+          "status": "pass",
+          "detail": "full-universe evidence retained; no runtime truncation",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 19,
+          "title": "各カードに具体的reason_codes",
+          "status": "pass",
+          "detail": "all non-deep cards carry concrete reason_codes",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 20,
+          "title": "deep dive完全項目（H2H/直近/共通相手比較/rating/roster/市場/EV等）",
+          "status": "pass",
+          "detail": "all deep-dive evidence has structured complete fields/source URLs",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 21,
+          "title": "eSports固有deep dive（BO/map/veto/patch/roster/LAN等）",
+          "status": "pass",
+          "detail": "eSports-specific evidence recorded for 1620 deep dives; eligible eSports events=405",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 22,
+          "title": "deep_dive対象IDとdeep_dive_evidence ID完全一致",
+          "status": "pass",
+          "detail": "deep-dive target IDs exactly match proof IDs",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 23,
+          "title": "②③④ candidate/watchの外部市場cross-check",
+          "status": "pass",
+          "detail": "②③④ candidate/watch external market cross-check complete",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 24,
+          "title": "既存①〜④＋経験値の全カード結果再照合",
+          "status": "pass",
+          "detail": "all existing pick IDs rechecked in every system",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 25,
+          "title": "結果ソース優先順位と根拠記録",
+          "status": "pass",
+          "detail": "all 5 overdue pending matches checked with source evidence",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 26,
+          "title": "日付/JST/大会/対戦相手identity照合",
+          "status": "pass",
+          "detail": "date/JST/competition/opponent identity confirmed for every result check",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 27,
+          "title": "同一match_idの全系統同時精算",
+          "status": "fail",
+          "detail": "settlement propagation not proven",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 28,
+          "title": "新規正式採用exact odds/取得時刻/stake固定",
+          "status": "fail",
+          "detail": "exact-odds evidence not proven",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 29,
+          "title": "旧移行カードだけamount_missing許可・推測補完禁止",
+          "status": "fail",
+          "detail": "legacy-only amount_missing assertion missing",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 30,
+          "title": "①戦績/投入/損益/ROI/pending/複利/1/4 Kelly再計算",
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #27,#28,#29 ／ ① profit/ROI/compound/quarter-Kelly recalculation evidence",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 31,
+          "title": "②VALUE①戦績/投入/損益/ROI/pending再計算",
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #27,#28,#29 ／ ② VALUE① recalculation evidence",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 32,
+          "title": "③VALUE②戦績/投入/損益/ROI/pending再計算",
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #27,#28,#29 ／ ③ VALUE② recalculation evidence",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 33,
+          "title": "④PRO EDGE戦績/投入/損益/ROI/CLV/pending再計算",
+          "status": "blocked",
+          "detail": "前提未PASSのため評価不能 #27,#28,#29 ／ ④ PRO EDGE/CLV recalculation evidence",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 34,
+          "title": "新規敗戦post-match review完備",
+          "status": "fail",
+          "detail": "loss-review completeness not proven",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 35,
+          "title": "future-info leakage 0",
+          "status": "fail",
+          "detail": "future-info audit not proven",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 36,
+          "title": "locked/baseline/snapshot/history保護",
+          "status": "fail",
+          "detail": "locked/history audit not proven",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 37,
+          "title": "schema/duplicate/independence/JST/profit/CLV等全tests PASS",
+          "status": "blocked",
+          "detail": "production workflow status=failure; incomplete checks are blocked",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 38,
+          "title": "GitHub main commit/push・競合再検証",
+          "status": "blocked",
+          "detail": "production workflow status=failure; incomplete checks are blocked",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 39,
+          "title": "Pages公開＋公開収支/exact odds/払戻し再計算一致",
+          "status": "blocked",
+          "detail": "production workflow status=failure; incomplete checks are blocked",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 40,
+          "title": "公開RMCに通常＋eSports両方の最新分析/採否理由表示",
+          "status": "blocked",
+          "detail": "production workflow status=failure; incomplete checks are blocked",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        },
+        {
+          "id": 41,
+          "title": "1〜40全PASSの最終報告",
+          "status": "fail",
+          "detail": "production workflow status=failure; incomplete checks are blocked",
+          "checked_at": "2026-09-29T05:13:57+09:00"
+        }
+      ],
+      "summary": {
+        "pass": 25,
+        "fail": 8,
+        "blocked": 8,
+        "pending": 0,
+        "total": 41
+      },
+      "updated_at": "2026-09-29T05:13:57+09:00"
     }
   ]
 }
