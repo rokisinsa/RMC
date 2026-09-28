@@ -4,6 +4,7 @@ import os from "node:os";
 import crypto from "node:crypto";
 
 const OUT = process.argv[2] || "data/bet-channel-fixed-odds-inventory.json";
+const DIAG_OUT = "data/bet-channel-fixed-odds-diagnostic.json";
 const SOURCE_MACHINE = process.env.RMC_SOURCE_MACHINE || (process.platform === "win32" ? "japan_local_windows" : "japan_vps_linux");
 const SOURCE_REGION = process.env.RMC_SOURCE_REGION || "JP";
 const SOURCE_REGION_EVIDENCE = process.env.RMC_SOURCE_REGION_EVIDENCE || null;
@@ -185,11 +186,38 @@ const browser=await chromium.launch({headless:true});
 const ctx=await browser.newContext({locale:"ja-JP",timezoneId:"Asia/Tokyo"});
 const events=new Map(), categoryNames=new Set(), sourceUrls=new Set(), jsonUrls=new Set(), wsUrls=new Set(), errors=[];
 let geoBlocked=false, rendererLoaded=false, menuRouteSeen=false, bodyEsportsSeen=false, routeLimitExceeded=false;
+const diagnosticResponses=[];
+const diagnosticShapes=new Map();
+const diagnosticWsFrames=[];
+
+function safeScalar(v){
+  if(v==null || ["string","number","boolean"].includes(typeof v)){
+    const s=String(v??"");
+    return s.length>120?s.slice(0,120)+"…":v;
+  }
+  return null;
+}
+function recordShape(o,path,sourceUrl,kind){
+  if(!o || typeof o!=="object" || Array.isArray(o)) return;
+  const keys=Object.keys(o).filter(k=>!/token|auth|cookie|session|password|secret|csrf/i.test(k)).sort();
+  if(keys.length<2) return;
+  const sig=keys.join("|");
+  if(diagnosticShapes.has(sig)) return;
+  const sample={};
+  for(const k of keys.slice(0,30)){
+    const v=o[k];
+    if(Array.isArray(v)) sample[k]={type:"array",length:v.length};
+    else if(v && typeof v==="object") sample[k]={type:"object",keys:Object.keys(v).slice(0,20)};
+    else sample[k]=safeScalar(v);
+  }
+  diagnosticShapes.set(sig,{kind,source_url:sourceUrl,path,keys,sample});
+}
 
 function ingestPayload(payload,sourceUrl,kind,routeHint=null) {
   const parsedStrings=new Set();
   const ingestOne=(value,prefix)=>{
     walk(value,(o,path)=>{
+      recordShape(o,`${prefix}:${path}`,sourceUrl,kind);
       const ev=eventCandidate(o,sourceUrl,`${prefix}:${path}`,routeHint);
       if(ev){ events.set(ev.event_id,mergeEvent(events.get(ev.event_id),ev)); categoryNames.add(ev.category_key); }
 
@@ -237,7 +265,19 @@ while(queue.length){
   p.on("response",async resp=>{
     const u=resp.url(), ct=(resp.headers()["content-type"]||"").toLowerCase();
     if(ct.includes("json")){
-      try{ const j=await resp.json(); jsonUrls.add(u); ingestPayload(j,u,"json",route); }catch{}
+      try{
+        const j=await resp.json();
+        jsonUrls.add(u);
+        if(diagnosticResponses.length<200){
+          diagnosticResponses.push({
+            route,url:u,
+            top_type:Array.isArray(j)?"array":typeof j,
+            top_keys:j&&typeof j==="object"&&!Array.isArray(j)?Object.keys(j).filter(k=>!/token|auth|cookie|session|password|secret|csrf/i.test(k)).slice(0,50):[],
+            top_length:Array.isArray(j)?j.length:null
+          });
+        }
+        ingestPayload(j,u,"json",route);
+      }catch{}
     }
   });
   p.on("websocket",ws=>{
@@ -246,8 +286,19 @@ while(queue.length){
       let data=ev.payload;
       if(Buffer.isBuffer(data)) data=data.toString("utf8");
       if(typeof data!=="string" || data.length>5_000_000) return;
-      try{ ingestPayload(JSON.parse(data),ws.url(),"ws",route); }catch{
-        // Ignore non-JSON protocol frames, but preserve the connection itself as evidence.
+      try{
+        const parsed=JSON.parse(data);
+        if(diagnosticWsFrames.length<50){
+          diagnosticWsFrames.push({
+            route,url:ws.url(),
+            top_type:Array.isArray(parsed)?"array":typeof parsed,
+            top_keys:parsed&&typeof parsed==="object"&&!Array.isArray(parsed)?Object.keys(parsed).filter(k=>!/token|auth|cookie|session|password|secret|csrf/i.test(k)).slice(0,50):[],
+            top_length:Array.isArray(parsed)?parsed.length:null
+          });
+        }
+        ingestPayload(parsed,ws.url(),"ws",route);
+      }catch{
+        if(diagnosticWsFrames.length<50) diagnosticWsFrames.push({route,url:ws.url(),non_json:true,length:data.length,prefix:data.slice(0,120)});
       }
     });
   });
@@ -414,5 +465,20 @@ const out={
 };
 await fs.mkdir(OUT.split(/[\\/]/).slice(0,-1).join("/")||".",{recursive:true});
 await fs.writeFile(OUT,JSON.stringify(out,null,2)+"\n");
+
+const diagnostic={
+  schema_version:1,
+  checked_at:out.checked_at,
+  access_status:out.access_status,
+  category_count:out.category_count,
+  event_count:out.event_count,
+  screening_event_count:out.screening_event_count,
+  json_hit_count:jsonUrls.size,
+  websocket_count:wsUrls.size,
+  responses:diagnosticResponses,
+  websocket_frames:diagnosticWsFrames,
+  object_shapes:[...diagnosticShapes.values()].slice(0,400)
+};
+await fs.writeFile(DIAG_OUT,JSON.stringify(diagnostic,null,2)+"\n");
 console.log(JSON.stringify({ok:complete,out:OUT,checked_at:out.checked_at,access_status:out.access_status,category_count:out.category_count,event_count:out.event_count,screening_event_count:out.screening_event_count,json_hits:out.json_hit_urls.length,websockets:out.websocket_urls.length,blockers},null,2));
 if(!complete) process.exit(2);
