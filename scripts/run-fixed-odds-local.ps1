@@ -38,7 +38,27 @@ try {
     $env:RMC_SOURCE_REGION_EVIDENCE = "local_windows_user_confirmed_japan"
 
     node scripts/scrape-bet-channel-fixed-odds-local.mjs data/bet-channel-fixed-odds-inventory.json
-    if ($LASTEXITCODE -ne 0) { throw "fixed-odds/eSports scrape did not complete" }
+    if ($LASTEXITCODE -ne 0) {
+        Write-Log "Scrape incomplete; publishing diagnostic structure"
+        if (Test-Path "data/bet-channel-fixed-odds-diagnostic.json") {
+            git add -- data/bet-channel-fixed-odds-diagnostic.json
+            git diff --cached --quiet
+            if ($LASTEXITCODE -ne 0) {
+                git config user.name "RMC Japan Local"
+                git config user.email "rmc-local@users.noreply.github.com"
+                git commit -m "Update BET CHANNEL fixed-odds diagnostic (Japan)"
+                if ($LASTEXITCODE -eq 0) {
+                    for ($i=1; $i -le 3; $i++) {
+                        git push origin HEAD:main
+                        if ($LASTEXITCODE -eq 0) { break }
+                        git pull --rebase --autostash origin main
+                        Start-Sleep -Seconds 2
+                    }
+                }
+            }
+        }
+        throw "fixed-odds/eSports scrape did not complete"
+    }
 
     node -e "const fs=require('fs');const x=JSON.parse(fs.readFileSync('data/bet-channel-fixed-odds-inventory.json','utf8'));if(x.complete!==true||x.analysis_ready!==true||x.access_status!=='direct'||x.source_machine!=='japan_local_windows'||x.self_audit?.unresolved_blockers!==0)process.exit(1);console.log('fixed complete',x.checked_at,x.event_count,x.screening_event_count)"
     if ($LASTEXITCODE -ne 0) { throw "fixed-odds/eSports final validation failed" }
