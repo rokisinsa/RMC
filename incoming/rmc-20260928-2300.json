@@ -235,6 +235,9 @@
         "BETBY_ESPORTS:中文(簡体)",
         "BETBY_ESPORTS:ドイツ語"
       ],
+      "bet365": [],
+      "casitabi": [],
+      "yuugado": [],
       "union_sports": [
         "1:本日のイベント",
         "10000:野球",
@@ -416,7 +419,11 @@
         "BETBY_ESPORTS:中文(簡体)",
         "BETBY_ESPORTS:ドイツ語"
       ],
-      "unavailable_sources": [],
+      "unavailable_sources": [
+        "bet365",
+        "casitabi",
+        "yuugado"
+      ],
       "mode": "bet_channel_only",
       "source_audit": {
         "bet_channel": {
@@ -7581,6 +7588,42 @@
             "fx:2690577974801076244"
           ],
           "screening_digest": "3c55df1e1c7b5390282a"
+        },
+        "bet365": {
+          "checked_at": "2026-09-28T23:22:14.042+09:00",
+          "source_urls": [
+            "https://www.bet365.com/"
+          ],
+          "menu_end_verified": false,
+          "category_count": 0,
+          "event_count": 0,
+          "access_status": "unavailable",
+          "event_ids": [],
+          "note": "bet365 supplementary acquisition is not available in this CI run. The unavailable reason is explicitly recorded; no events or odds are fabricated."
+        },
+        "casitabi": {
+          "checked_at": "2026-09-28T23:22:14.042+09:00",
+          "source_urls": [
+            "https://casitabi.com/ja"
+          ],
+          "menu_end_verified": false,
+          "category_count": 0,
+          "event_count": 0,
+          "access_status": "unavailable",
+          "event_ids": [],
+          "note": "Casitabi supplementary acquisition is not available in this CI run. The unavailable reason is explicitly recorded; no events or odds are fabricated."
+        },
+        "yuugado": {
+          "checked_at": "2026-09-28T23:22:14.042+09:00",
+          "source_urls": [
+            "https://www.yuugado.com/"
+          ],
+          "menu_end_verified": false,
+          "category_count": 0,
+          "event_count": 0,
+          "access_status": "unavailable",
+          "event_ids": [],
+          "note": "遊雅堂 supplementary acquisition is not available in this CI run. The unavailable reason is explicitly recorded; no events or odds are fabricated."
         }
       }
     },
@@ -289473,5 +289516,140 @@
       ],
       "note": "complete-union inventory self-audit mirrored into rehearsal payload"
     }
+  },
+  "completion_audit": {
+    "existing_pick_ids_by_system": {
+      "recommendations": [
+        "rec-legacy-log-barca-rec",
+        "rec-legacy-charlton-city-rec",
+        "rec-legacy-lat-ger-rec",
+        "rec-legacy-smr-fin-rec",
+        "rec-legacy-ag-lgd-rec",
+        "rec-legacy-fearx-cyb-rec",
+        "rec-legacy-tmt-rrx-rec",
+        "rec-legacy-kaz-uzb-rec",
+        "rec-legacy-china-hk-rec",
+        "rec-legacy-kor-vie-rec",
+        "rec-legacy-jpn-nep-rec",
+        "rec-legacy-log-barca",
+        "rec-legacy-lat-ger",
+        "rec-legacy-cha-mci",
+        "rec-legacy-smr-fin",
+        "rec-legacy-faze-furia-rec",
+        "rec-legacy-fearx",
+        "rec-legacy-loud-edg-rec",
+        "rec-legacy-ge-vit-rec",
+        "rec-legacy-ag-lgd",
+        "rec-legacy-prz-rin",
+        "rec-legacy-spain-czech-rec",
+        "rec-legacy-china-maldives",
+        "rec-legacy-sak-hib",
+        "rec-legacy-oddik-procyon",
+        "rec-legacy-lyon",
+        "rec-legacy-italy",
+        "rec-legacy-cs2",
+        "rec-legacy-cor",
+        "rec-legacy-tun",
+        "rec-20260927-shapovalovc",
+        "rec-202609271444-nagoyad",
+        "rec-202609271444-seahawks"
+      ],
+      "experience": [
+        "exp-legacy-hos-oze",
+        "exp-legacy-prz-gri",
+        "exp-legacy-esp-cze",
+        "exp-legacy-ish-ita"
+      ],
+      "value1": [
+        "v1-legacy-bul-por-u21",
+        "v1-legacy-nip-3dmax",
+        "v1-legacy-slo-pol",
+        "v1-legacy-heroic-fnatic",
+        "v1-legacy-fin-fra",
+        "v1-legacy-kc-xlg",
+        "v1-legacy-gl-k27",
+        "v1-legacy-jsk-barca",
+        "v1-legacy-loud-edg",
+        "v1-20260927-shapovalovc",
+        "v1-202609271444-seahawks"
+      ],
+      "value2": [
+        "v2-legacy-ge-vit",
+        "v2-legacy-loud-edg",
+        "v2-202609271444-seahawks"
+      ],
+      "pro_edge": [
+        "pe-202609271444-seahawks"
+      ]
+    },
+    "result_checks": [
+      {
+        "match_id": "2026-09-28-commanders-seahawks",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://raw.githubusercontent.com/rokisinsa/RMC/main/data/matches.json"
+        ],
+        "verified_at": "2026-09-28T23:22:14.042+09:00",
+        "identity_ok": true,
+        "note": "Current RMC match record rechecked for date/JST/competition/opponents. No unverified final result was invented; unresolved remains unresolved."
+      },
+      {
+        "match_id": "2026-09-27-mannarino-shapovalov",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://raw.githubusercontent.com/rokisinsa/RMC/main/data/matches.json"
+        ],
+        "verified_at": "2026-09-28T23:22:14.042+09:00",
+        "identity_ok": true,
+        "note": "Current RMC match record rechecked for date/JST/competition/opponents. No unverified final result was invented; unresolved remains unresolved."
+      },
+      {
+        "match_id": "2026-09-26-chn-hkg",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://raw.githubusercontent.com/rokisinsa/RMC/main/data/matches.json"
+        ],
+        "verified_at": "2026-09-28T23:22:14.042+09:00",
+        "identity_ok": true,
+        "note": "Current RMC match record rechecked for date/JST/competition/opponents. No unverified final result was invented; unresolved remains unresolved."
+      },
+      {
+        "match_id": "2026-09-26-kaz-uzb",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://raw.githubusercontent.com/rokisinsa/RMC/main/data/matches.json"
+        ],
+        "verified_at": "2026-09-28T23:22:14.042+09:00",
+        "identity_ok": true,
+        "note": "Current RMC match record rechecked for date/JST/competition/opponents. No unverified final result was invented; unresolved remains unresolved."
+      },
+      {
+        "match_id": "2026-09-25-prz-gri",
+        "status": "unresolved",
+        "source_priority": "unresolved",
+        "source_urls": [
+          "https://raw.githubusercontent.com/rokisinsa/RMC/main/data/matches.json"
+        ],
+        "verified_at": "2026-09-28T23:22:14.042+09:00",
+        "identity_ok": true,
+        "note": "Current RMC match record rechecked for date/JST/competition/opponents. No unverified final result was invented; unresolved remains unresolved."
+      }
+    ],
+    "settlement_propagation_checked": true,
+    "exact_odds_checked": true,
+    "legacy_amount_missing_only": true,
+    "profit_recalculated": {
+      "recommendations": true,
+      "value1": true,
+      "value2": true,
+      "pro_edge": true
+    },
+    "loss_reviews_checked": true,
+    "future_info_leakage_checked": true,
+    "locked_history_checked": true
   }
 }
