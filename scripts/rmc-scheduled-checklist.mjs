@@ -29,7 +29,7 @@ const TITLES=[
 "priced_upcoming>0でdeep_dive=0を禁止",
 "候補数上限なし・全件証跡保持",
 "各カードに具体的reason_codes",
-"deep dive完全項目（H2H/直近/rating/roster/市場/EV等）",
+"deep dive完全項目（H2H/直近/共通相手比較/rating/roster/市場/EV等）",
 "eSports固有deep dive（BO/map/veto/patch/roster/LAN等）",
 "deep_dive対象IDとdeep_dive_evidence ID完全一致",
 "②③④ candidate/watchの外部市場cross-check",
@@ -179,7 +179,11 @@ function inventoryPhase(run,root=ROOT,refTime=null){
 }
 function detailOk(d){
   const a=d?.analysis_detail;
-  return !!a&&arr(d.source_urls).length>0&&a.h2h&&a.recent_form&&a.ranking_or_rating&&a.home_away&&a.availability&&a.market&&a.sport_specific&&a.rationale&&arr(a.rationale.why).length>0&&Array.isArray(a.rationale.risks)&&a.rationale.conclusion&&Array.isArray(a.missing_information);
+  const co=a?.common_opponent_comparison;
+  const coOk=!!co&&["checked","unavailable","not_applicable"].includes(co.status)&&String(co.summary||"").trim().length>0&&Array.isArray(co.items)
+    &&(co.status!=="checked"||co.items.length>0)
+    &&co.items.every(x=>x?.opponent&&x?.side_a?.result&&x?.side_a?.performance&&x?.side_b?.result&&x?.side_b?.performance&&x?.comparison);
+  return !!a&&arr(d.source_urls).length>0&&a.h2h&&a.recent_form&&d.checks?.common_opponent_comparison&&coOk&&a.ranking_or_rating&&a.home_away&&a.availability&&a.market&&a.sport_specific&&a.rationale&&arr(a.rationale.why).length>0&&Array.isArray(a.rationale.risks)&&a.rationale.conclusion&&Array.isArray(a.missing_information);
 }
 function sourceAuditOk(a){
   if(!a||!a.checked_at||!arr(a.source_urls).length||!a.access_status)return false;
