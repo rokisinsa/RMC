@@ -1,4 +1,5 @@
 // 手順3：V2 画面（lib/view）のテスト。表示用モデルと HTML 描画だけを検査し、①②③の判定・集計ロジックには触れない。
+import fs from "node:fs";
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
