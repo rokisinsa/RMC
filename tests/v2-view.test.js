@@ -199,3 +199,10 @@ test("書式：金額の符号と日本時間", () => {
 test("旧RMCとの照合：説明できない差 0 件", () => {
   execFileSync("node", ["scripts/v2-compare-legacy.js"], { cwd: ROOT, stdio: "pipe" });
 });
+
+
+test("V2はdeep-diveで直近の共通対戦相手比較を表示する",()=>{
+  const src=fs.readFileSync("lib/view/render.js","utf8");
+  assert.match(src,/直近の共通対戦相手比較/);
+  assert.match(src,/commonOpponentBlock/);
+});
