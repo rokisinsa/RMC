@@ -159,7 +159,10 @@ function inventoryPhase(run,root=ROOT,refTime=null){
   const complete=maybe(path.join(root,"data","bet-channel-complete-summary.json"));
   const legacy=maybe(path.join(root,"data","bet-channel-inventory.json"));
   const fixed=maybe(path.join(root,"data","bet-channel-fixed-odds-inventory.json"));
-  const ref=refTime||run.scheduled_for||nowIso();
+  // Freshness is measured at the actual audit execution time when available.
+  // A delayed/manual scheduled run may legitimately collect evidence after the nominal slot,
+  // so comparing new evidence against scheduled_for can produce a false negative age.
+  const ref=refTime||nowIso();
   const legacyOk=!!legacy&&legacy.complete===true&&legacy.analysis_ready===true&&legacy.menu_end_verified===true&&(legacy.self_audit?.unresolved_blockers??1)===0&&legacy.event_count>0;
   mark(run,2,legacyOk?"pass":"fail",legacyOk?`legacy complete: ${legacy.category_count} categories / ${legacy.event_count} events / ${legacy.screening_event_count} screening`:"legacy inventory incomplete/missing");
   const fixedOk=!!fixed&&fixed.complete===true&&fixed.analysis_ready===true&&fixed.access_status==="direct"&&fixed.source_region==="JP"&&["japan_vps_linux","japan_local_windows"].includes(fixed.source_machine)&&fixed.event_count===arr(fixed.event_ids).length&&fixed.screening_event_count===arr(fixed.screening_event_ids).length&&(fixed.self_audit?.unresolved_blockers??1)===0;
