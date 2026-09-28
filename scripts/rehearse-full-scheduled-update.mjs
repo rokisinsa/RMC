@@ -84,7 +84,8 @@ write(path.join(DATA,"bet-channel-complete-summary.json"),complete);
 const detail=e=>({
   summary:`Full scheduled rehearsal deep dive for ${e.side_a} vs ${e.side_b}`,
   h2h:{status:"checked",summary:"Rehearsal fixture contains one verified H2H row.",items:[{date:"2026-09-01",label:`${e.side_a} vs ${e.side_b}`,result:"2-1",note:"synthetic rehearsal evidence"}]},
-  recent_form:{status:"checked",side_a:{label:e.side_a,summary:"Last 6 fixture form checked.",items:[{date:"2026-09-20",opponent:"Recent Opponent A",result:"W",competition:"Rehearsal Form"}]},side_b:{label:e.side_b,summary:"Last 6 fixture form checked.",items:[{date:"2026-09-20",opponent:"Recent Opponent B",result:"L",competition:"Rehearsal Form"}]}},
+  recent_form:{status:"checked",side_a:{label:e.side_a,summary:"Last 6 fixture form checked.",items:[{date:"2026-09-20",opponent:"Common Opponent X",result:"W",competition:"Rehearsal Form"}]},side_b:{label:e.side_b,summary:"Last 6 fixture form checked.",items:[{date:"2026-09-19",opponent:"Common Opponent X",result:"L",competition:"Rehearsal Form"}]}},
+  common_opponent_comparison:{status:"checked",summary:"Both sides faced Common Opponent X in the recent-form window; relative performance compared.",items:[{opponent:"Common Opponent X",side_a:{date:"2026-09-20",result:"W",performance:e.category.includes("CS2")?"2-0 maps":"3-0 score / +3 margin",competition:"Rehearsal Form",venue_context:e.category.includes("CS2")?"online":"home"},side_b:{date:"2026-09-19",result:"L",performance:e.category.includes("CS2")?"1-2 maps":"1-2 score / -1 margin",competition:"Rehearsal Form",venue_context:e.category.includes("CS2")?"online":"away"},comparison:e.category.includes("CS2")?"Side A had +3 map-difference advantage versus the same opponent.":"Side A produced a +4 goal-difference swing versus the same opponent."}]},
   ranking_or_rating:{status:"checked",text:"Synthetic rehearsal ranking/rating evidence present."},
   home_away:{status:"checked",text:e.category.includes("CS2")?"Online neutral server / side context checked.":"Home/away venue split checked."},
   availability:{status:"checked",text:e.category.includes("CS2")?"Roster and stand-in status checked.":"Starting lineup/injury availability checked."},
@@ -101,7 +102,7 @@ for(const system of systemNames){
   const deep=events.map((e,i)=>({
     event_id:e.event_id,
     source_urls:[e.source_url,"https://example.invalid/rehearsal/cross-market"],
-    checks:{h2h:"checked",recent_form:"checked",ranking_or_rating:"checked",availability:"checked",market_odds:"checked",sport_specific:"checked",market_crosscheck:"checked"},
+    checks:{h2h:"checked",recent_form:"checked",common_opponent_comparison:"checked",ranking_or_rating:"checked",availability:"checked",market_odds:"checked",sport_specific:"checked",market_crosscheck:"checked"},
     outcome:i===0?"candidate":i===1?"watch":"reject",
     note:`${system} independent rehearsal analysis`,
     analysis_detail:detail(e)
