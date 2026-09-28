@@ -690,7 +690,7 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
         if (new Set(ddIds).size!==ddIds.length || JSON.stringify([...ddIds].sort())!==JSON.stringify([...deepIds].sort())) ledger.error("coverage",system,null,"deep_dive_evidenceのevent_idがdeep_dive対象と1対1一致していない");
         for (const d of dd) {
           if (!Array.isArray(d.source_urls)||!d.source_urls.length) ledger.error("coverage",system,d.event_id,"深掘り情報源URLが無い");
-          const requiredChecks=["h2h","recent_form","ranking_or_rating","availability","market_odds","sport_specific","market_crosscheck"];
+          const requiredChecks=["h2h","recent_form","common_opponent_comparison","ranking_or_rating","availability","market_odds","sport_specific","market_crosscheck"];
           for (const k of requiredChecks) if (!d.checks?.[k]) ledger.error("coverage",system,d.event_id,`深掘りチェック ${k} の状態証跡が無い`);
           if (["value1","value2","pro_edge"].includes(system) && d.outcome==="candidate" && d.checks?.market_crosscheck!=="checked") ledger.error("coverage",system,d.event_id,"VALUE/PRO EDGE候補なのにBET CHANNEL外の市場クロスチェックが未確認");
 
@@ -700,7 +700,7 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
           if (!ad || typeof ad!=="object") ledger.error("analysis_detail",system,d.event_id,"deep_dive_evidenceにanalysis_detailが無い");
           else {
             if (!ad.summary || !String(ad.summary).trim()) ledger.error("analysis_detail",system,d.event_id,"分析要約が無い");
-            for (const k of ["h2h","recent_form","ranking_or_rating","home_away","availability","market","sport_specific","rationale"]) {
+            for (const k of ["h2h","recent_form","common_opponent_comparison","ranking_or_rating","home_away","availability","market","sport_specific","rationale"]) {
               if (!ad[k] || typeof ad[k]!=="object") ledger.error("analysis_detail",system,d.event_id,`分析詳細 ${k} が無い`);
             }
             if (ad.h2h?.status==="checked" && (!Array.isArray(ad.h2h.items)||ad.h2h.items.length===0)) ledger.error("analysis_detail",system,d.event_id,"H2Hを確認済みにしているのに対戦日・スコア明細が0件");
@@ -710,6 +710,18 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
                 const x=ad.recent_form?.[side];
                 if (!x?.label || !x?.summary) ledger.error("analysis_detail",system,d.event_id,`直近成績 ${side} の要約が無い`);
                 if (!Array.isArray(x?.items)||x.items.length===0) ledger.error("analysis_detail",system,d.event_id,`直近成績 ${side} を確認済みにしているのに試合明細が0件`);
+              }
+            }
+            const co=ad.common_opponent_comparison;
+            if (co?.status==="checked" && (!Array.isArray(co.items)||co.items.length===0)) {
+              ledger.error("analysis_detail",system,d.event_id,"共通相手比較を確認済みにしているのに共通相手明細が0件");
+            }
+            if (co?.status==="unavailable" && !String(co.summary||"").trim()) {
+              ledger.error("analysis_detail",system,d.event_id,"共通相手比較が取得不能なのに理由summaryが無い");
+            }
+            for (const item of co?.items??[]) {
+              if (!item.opponent || !item.side_a?.result || !item.side_a?.performance || !item.side_b?.result || !item.side_b?.performance || !item.comparison) {
+                ledger.error("analysis_detail",system,d.event_id,"共通相手比較のopponent/両者result/performance/comparisonが不足");
               }
             }
             if (!Array.isArray(ad.rationale?.why)||ad.rationale.why.length===0) ledger.error("analysis_detail",system,d.event_id,"採否の強い根拠が無い");
