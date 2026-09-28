@@ -18,7 +18,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: rmc-live-coverage-rehearsal
@@ -72,6 +72,51 @@ jobs:
 
       - name: Run synthetic 41-of-41 end-to-end rehearsal
         run: node scripts/rehearse-full-scheduled-update.mjs
+
+      - name: Publish complete-union payload into production pipeline
+        if: env.RMC_LIVE_MODE == 'complete_union'
+        shell: bash
+        run: |
+          set -euo pipefail
+          now_jst="$(TZ=Asia/Tokyo date '+%Y-%m-%dT%H:%M:%S+09:00')"
+          ymd="$(TZ=Asia/Tokyo date '+%Y%m%d')"
+          hhmm="$(TZ=Asia/Tokyo date '+%H%M')"
+          # This workflow is used for the 23:00 manual/full run. Keep it inside the allowed 4h audit window.
+          run_id="rmc-${ymd}-2300"
+          out="incoming/${run_id}.json"
+          mkdir -p incoming
+          RUN_ID="$run_id" NOW_JST="$now_jst" node - <<'NODE'
+          const fs=require("fs");
+          const p=JSON.parse(fs.readFileSync("tmp/live-coverage-trial.json","utf8"));
+          p.run_id=process.env.RUN_ID;
+          p.slot="23:00";
+          p.source="RMC complete-union live production";
+          // generated_at remains the actual evidence capture time from this live run.
+          fs.writeFileSync("incoming/"+process.env.RUN_ID+".json",JSON.stringify(p,null,2)+"\n");
+          console.log(JSON.stringify({run_id:p.run_id,slot:p.slot,generated_at:p.generated_at,source:p.source},null,2));
+          NODE
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          pushed=0
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp "$out" /tmp/rmc-production-payload.json
+            cp /tmp/rmc-production-payload.json "$out"
+            git add "$out"
+            if git diff --cached --quiet; then
+              pushed=1
+              break
+            fi
+            git commit -m "Queue RMC production update: $run_id"
+            if git push origin HEAD:main; then
+              pushed=1
+              break
+            fi
+            sleep 2
+          done
+          [ "$pushed" = "1" ] || exit 1
 
       - name: Assert real-event coverage evidence
         run: |
