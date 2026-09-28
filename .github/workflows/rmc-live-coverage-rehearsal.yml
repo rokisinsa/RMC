@@ -10,6 +10,7 @@ on:
     paths:
       - "scripts/build-live-coverage-rehearsal.mjs"
       - "scripts/rehearse-full-scheduled-update.mjs"
+      - "scripts/rehearsal.js"
       - "scripts/rmc-scheduled-checklist.mjs"
       - "scripts/rmc-production-update.mjs"
       - ".github/workflows/rmc-live-coverage-rehearsal.yml"
