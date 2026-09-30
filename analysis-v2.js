@@ -54,7 +54,65 @@ function safeText(v) {
   return String(v ?? "").replace(/[<>&]/g, "");
 }
 
-function renderTodayGapAnalysis(a) {
+function normalizeGapTeamName(v) {
+  return String(v ?? "").toLowerCase()
+    .replace(/\b(fc|cf|women|woman|femenino|femenina|wfc|ladies)\b/g, "")
+    .replace(/[^a-z0-9\u3040-\u30ff\u3400-\u9fff]+/g, "");
+}
+
+function findRichGapCandidate(c, recommendationCandidates = []) {
+  const parts=String(c.matchup ?? "").split(/\s+vs\s+/i);
+  if(parts.length!==2) return null;
+  const ca=normalizeGapTeamName(parts[0]), cb=normalizeGapTeamName(parts[1]);
+  return recommendationCandidates.find(x=>{
+    const xa=normalizeGapTeamName(x.side_a), xb=normalizeGapTeamName(x.side_b);
+    return (xa===ca&&xb===cb)||(xa===cb&&xb===ca);
+  }) ?? null;
+}
+
+function gapResultSummary(items = []) {
+  let w=0,d=0,l=0,forScore=0,againstScore=0,scored=0;
+  for(const x of items.slice(0,10)){
+    const r=String(x.result ?? "");
+    if(/\bW\b/.test(r)) w++;
+    else if(/\bL\b/.test(r)) l++;
+    else if(/\bD\b/.test(r)) d++;
+    const m=r.match(/(\d+)\s*[-–]\s*(\d+)/);
+    if(m){forScore+=Number(m[1]);againstScore+=Number(m[2]);scored++;}
+  }
+  const scoreText=scored ? `／スコア合計 ${forScore}-${againstScore}` : "";
+  return `${items.slice(0,10).length}試合：${w}勝${d}分${l}敗${scoreText}`;
+}
+
+function gapRecentTable(recent) {
+  if(!recent?.side_a&&!recent?.side_b) return "";
+  const side = x => {
+    if(!x) return '<div class="sub">未確認</div>';
+    const items=(x.items??[]).slice(0,10);
+    const rows=items.map(r=>`<tr><td>${safeText(r.date ?? "—")}</td><td>${safeText(r.label ?? r.opponent ?? "—")}</td><td><strong>${safeText(r.result ?? "—")}</strong></td></tr>`).join("");
+    return `<div class="analysis-side"><strong>${safeText(x.label ?? "—")}</strong><div class="sub">${safeText(x.summary ?? "")}</div><div style="margin:5px 0;font-weight:800;color:#dff8ff">${safeText(gapResultSummary(items))}</div>${rows?`<div class="table-wrap"><table class="result-table" style="min-width:520px"><thead><tr><th>日付</th><th>対戦相手</th><th>スコア / 勝敗</th></tr></thead><tbody>${rows}</tbody></table></div>`:'<div class="sub">試合明細なし</div>'}</div>`;
+  };
+  return side(recent.side_a)+side(recent.side_b);
+}
+
+function gapH2HBlock(h2h, fallback) {
+  if(!h2h?.items?.length) return `<div>${safeText(h2h?.summary ?? fallback ?? "未確認")}</div>`;
+  const rows=h2h.items.map(x=>`<tr><td>${safeText(x.date ?? "—")}</td><td>${safeText(x.label ?? "—")}</td><td><strong>${safeText(x.result ?? "—")}</strong>${x.note?`<div class="sub">${safeText(x.note)}</div>`:""}</td></tr>`).join("");
+  return `<div style="margin-bottom:7px">${safeText(h2h.summary ?? fallback ?? "")}</div><div class="table-wrap"><table class="result-table" style="min-width:520px"><thead><tr><th>日付</th><th>対戦</th><th>スコア</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function gapCommonOpponentBlock(common, fallback) {
+  if(!common?.items?.length) return `<div>${safeText(common?.summary ?? fallback ?? "直近範囲で比較可能な共通相手なし")}</div>`;
+  const rows=common.items.map(x=>`<tr>
+    <td><strong>${safeText(x.opponent ?? "—")}</strong></td>
+    <td>${safeText(x.side_a?.date ?? "—")}｜<strong>${safeText(x.side_a?.result ?? "—")}</strong>${x.side_a?.performance?`<div class="sub">得失点/SET/MAP: ${safeText(x.side_a.performance)}</div>`:""}</td>
+    <td>${safeText(x.side_b?.date ?? "—")}｜<strong>${safeText(x.side_b?.result ?? "—")}</strong>${x.side_b?.performance?`<div class="sub">得失点/SET/MAP: ${safeText(x.side_b.performance)}</div>`:""}</td>
+    <td>${safeText(x.comparison ?? "—")}</td>
+  </tr>`).join("");
+  return `<div style="margin-bottom:7px">${safeText(common.summary ?? fallback ?? "")}</div><div class="table-wrap"><table class="result-table" style="min-width:760px"><thead><tr><th>共通相手</th><th>A側のスコア・勝敗</th><th>B側のスコア・勝敗</th><th>比較</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function renderTodayGapAnalysis(a, recommendationCandidates = []) {
   if (!a?.candidates?.length) return "";
   const statusLabel = {
     candidate: "価格込み候補",
@@ -69,9 +127,16 @@ function renderTodayGapAnalysis(a) {
   const candidates = [...a.candidates].sort((x,y)=>(x.rank??999)-(y.rank??999));
   const topRows = candidates.map(c => {
     const o=c.odds ?? {};
-    return `<tr>
+    const detailId=`gap-detail-${safeText(c.rank)}`;
+    const rich=findRichGapCandidate(c,recommendationCandidates);
+    const d=rich?.analysis_detail ?? {};
+    const links=[...(rich?.source_urls??[]),...(c.sources??[])].filter((u,i,arr)=>u&&arr.indexOf(u)===i)
+      .map((u,n)=>`<a href="${safeText(u)}" target="_blank" rel="noopener" style="color:#7edcff">出典${n+1}</a>`).join(" / ");
+    const isSoccer=/サッカー|soccer|football/i.test(String(c.sport??"")+" "+String(c.competition??""));
+    const analysisLabel=isSoccer?'<span class="badge ok">①推奨・サッカー詳細</span>':'<span class="badge info">完全分析</span>';
+    const main=`<tr class="row gap-main-row" data-toggle="${detailId}" title="クリックで完全分析を開く">
       <td style="white-space:nowrap;font-weight:900">#${safeText(c.rank)}</td>
-      <td><strong>${safeText(c.matchup)}</strong><div class="sub">${safeText(c.sport)}｜${safeText(c.competition)}</div></td>
+      <td><strong>${safeText(c.matchup)}</strong> <span class="chev">▼</span><div class="sub">${safeText(c.sport)}｜${safeText(c.competition)}</div></td>
       <td style="white-space:nowrap">${safeText(c.start_jst ? c.start_jst.replace("T"," ").slice(5,16) : "—")}</td>
       <td style="white-space:nowrap"><strong>${safeText(c.gap_grade ?? "—")}</strong></td>
       <td style="white-space:nowrap"><strong>${safeText(c.price_grade ?? "—")}</strong></td>
@@ -79,35 +144,26 @@ function renderTodayGapAnalysis(a) {
       <td style="white-space:nowrap">${safeText(c.estimated_win_probability_pct ?? "—")}${c.estimated_win_probability_pct == null ? "" : "%"}</td>
       <td style="color:${statusTone[c.status] ?? "#dff8ff"};font-weight:800">${safeText(statusLabel[c.status] ?? c.status ?? "—")}</td>
     </tr>`;
-  }).join("");
-
-  const detailCards = candidates.map((c,i) => {
-    const o=c.odds ?? {};
-    const links=(c.sources ?? []).map((u,n)=>`<a href="${safeText(u)}" target="_blank" rel="noopener" style="color:#7edcff">出典${n+1}</a>`).join(" / ");
-    return `<details class="analysis-card" ${i < 4 ? "open" : ""}>
-      <summary>
-        <span style="font-weight:900;color:#8edcff">#${safeText(c.rank)}</span>
-        <span class="analysis-match">${safeText(c.matchup)}</span>
-        <span class="analysis-time">${safeText(c.start_jst ? c.start_jst.replace("T"," ").slice(5,16)+" JST" : "時刻未確認")}</span>
-        <span style="padding:3px 7px;border:1px solid rgba(255,255,255,.14);border-radius:999px;font-size:10px">格差 ${safeText(c.gap_grade ?? "—")}</span>
-        <span style="padding:3px 7px;border:1px solid rgba(255,255,255,.14);border-radius:999px;font-size:10px">価格 ${safeText(c.price_grade ?? "—")}</span>
-      </summary>
-      <div class="analysis-card-body">
-        <div class="analysis-summary"><strong>${safeText(statusLabel[c.status] ?? c.status ?? "—")}</strong>｜${safeText(c.conclusion ?? "")}</div>
-        <div class="detail-grid">
-          <div class="box"><h3>大会・条件</h3><div>${safeText(c.sport)}｜${safeText(c.competition)}</div><div class="sub">${safeText(c.venue ?? "会場未確認")}｜${safeText(c.format ?? "形式未確認")}</div></div>
-          <div class="box"><h3>市場・価格</h3><div>オッズ ${safeText(o.min ?? "—")}〜${safeText(o.max ?? "—")}</div><div>必要勝率 ${safeText(o.required_win_rate_pct ?? "—")}${typeof o.required_win_rate_pct === "string" && /\d/.test(o.required_win_rate_pct) ? "%" : ""}</div><div>推定勝率 ${safeText(c.estimated_win_probability_pct ?? "—")}${c.estimated_win_probability_pct == null ? "" : "%"}</div><div>推定EV ${safeText(c.estimated_ev_pct ?? "—")}</div><div class="sub">${safeText(o.book_examples ?? "")}</div></div>
-          <div class="box"><h3>ランキング / Rating</h3><div>${safeText(c.ranking_rating ?? "未確認")}</div></div>
-          <div class="box"><h3>H2H</h3><div>${safeText(c.h2h ?? "未確認")}</div></div>
-          <div class="box"><h3>直近成績</h3><div>${safeText(c.recent_form ?? "未確認")}</div></div>
-          <div class="box"><h3>直近の共通相手</h3><div>${safeText(c.common_opponents ?? "未確認")}</div></div>
-          <div class="box"><h3>メンバー / 欠場 / roster</h3><div>${safeText(c.roster ?? "未確認")}</div></div>
-          <div class="box"><h3>序盤傾向 / Veto</h3><div>${safeText(c.early_tendency ?? "未確認")}</div></div>
-        </div>
-        <div style="margin-top:10px;padding:9px 10px;border-left:3px solid #ffb36b;background:rgba(255,179,107,.07);font-size:11px;line-height:1.65"><strong>リスク：</strong>${safeText(c.risk ?? "特記事項なし")}</div>
-        <div class="analysis-sources" style="margin-top:9px">${links}</div>
+    const detail=`<tr class="detail-row gap-detail-row" id="${detailId}" hidden><td colspan="8" class="detail-cell">
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px">${analysisLabel}<span class="badge info">H2H</span><span class="badge info">直近10</span><span class="badge info">共通相手比較</span></div>
+      <div class="analysis-summary"><strong>${safeText(statusLabel[c.status] ?? c.status ?? "—")}</strong>｜${safeText(d.summary ?? c.conclusion ?? "")}</div>
+      <div class="detail-grid">
+        <div class="box"><h3>大会・条件</h3><div>${safeText(c.sport)}｜${safeText(c.competition)}</div><div class="sub">${safeText(c.venue ?? "会場未確認")}｜${safeText(c.format ?? "形式未確認")}</div></div>
+        <div class="box"><h3>市場・価格</h3><div>オッズ ${safeText(o.min ?? "—")}〜${safeText(o.max ?? "—")}</div><div>必要勝率 ${safeText(o.required_win_rate_pct ?? "—")}${typeof o.required_win_rate_pct === "string" && /\d/.test(o.required_win_rate_pct) ? "%" : ""}</div><div>推定勝率 ${safeText(c.estimated_win_probability_pct ?? "—")}${c.estimated_win_probability_pct == null ? "" : "%"}</div><div>推定EV ${safeText(c.estimated_ev_pct ?? "—")}</div><div class="sub">${safeText(o.book_examples ?? "")}</div></div>
+        <div class="box"><h3>ランキング / Rating</h3><div>${safeText(d.ranking_or_rating?.text ?? c.ranking_rating ?? "未確認")}</div></div>
+        <div class="box"><h3>H/A・会場</h3><div>${safeText(d.home_away?.text ?? c.venue ?? "未確認")}</div></div>
       </div>
-    </details>`;
+      <div class="box" style="margin-top:10px"><h3>H2H（確認できる限り）</h3>${gapH2HBlock(d.h2h,c.h2h)}</div>
+      <div class="box" style="margin-top:10px"><h3>直近10試合｜勝敗・スコア・得失点/SET/MAP</h3>${d.recent_form?gapRecentTable(d.recent_form):`<div>${safeText(c.recent_form ?? "未確認")}</div>`}</div>
+      <div class="box" style="margin-top:10px"><h3>直近の共通対戦相手比較｜スコア・勝敗・SET/MAP差</h3>${gapCommonOpponentBlock(d.common_opponent_comparison,c.common_opponents)}</div>
+      <div class="detail-grid" style="margin-top:10px">
+        <div class="box"><h3>メンバー / 欠場 / roster</h3><div>${safeText(d.availability?.text ?? c.roster ?? "未確認")}</div></div>
+        <div class="box"><h3>序盤傾向 / Veto / 競技固有</h3><div>${safeText(d.sport_specific?.text ?? c.early_tendency ?? "未確認")}</div></div>
+      </div>
+      <div style="margin-top:10px;padding:9px 10px;border-left:3px solid #ffb36b;background:rgba(255,179,107,.07);font-size:11px;line-height:1.65"><strong>リスク：</strong>${safeText(c.risk ?? (d.rationale?.risks??[]).join("／") ?? "特記事項なし")}</div>
+      <div class="analysis-sources" style="margin-top:9px">${links}</div>
+    </td></tr>`;
+    return main+detail;
   }).join("");
 
   const pure=(a.summary?.pure_gap_top ?? []).map(x=>safeText(x)).join(" ／ ");
@@ -123,11 +179,11 @@ function renderTodayGapAnalysis(a) {
       <div style="font-size:11px;line-height:1.7"><strong>価格込み注目：</strong>${value || "—"}</div>
       <div class="sub">${safeText(a.summary?.caution ?? "")}</div>
     </div>
+    <div class="sub" style="padding:10px 12px 0"><strong>組み合わせをクリック</strong>すると、その行の直下にH2H・直近10試合・共通対戦相手比較を展開します。下に同じ1〜11をもう一度表示しません。</div>
     <div class="table-wrap" style="margin:10px 12px"><table class="result-table">
       <thead><tr><th>#</th><th>カード / 大会</th><th>開始</th><th>格差</th><th>価格</th><th>オッズ</th><th>推定勝率</th><th>判定</th></tr></thead>
       <tbody>${topRows}</tbody>
     </table></div>
-    <div style="padding:0 12px 12px"><div class="sub" style="margin-bottom:7px">各カードを開くと、H2H・直近・共通相手・roster・序盤傾向・市場評価まで表示。</div>${detailCards}</div>
   </section>`;
 }
 
@@ -246,7 +302,7 @@ async function main() {
     assertNoDemoInProduction(mode, ds);
     const vm = buildViewModel(ds, { proEdgeConfig: cfg });
     root.innerHTML = (mode.mode === "development" ? '<div class="dev-banner">development モード（ローカル確認環境）</div>' : "")
-      + renderTodayGapAnalysis(ds.today_gap_analysis)
+      + renderTodayGapAnalysis(ds.today_gap_analysis, ds.system_analysis?.systems?.recommendations?.candidates ?? [])
       + '<details style="margin:10px 0 18px;border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:8px 10px"><summary style="cursor:pointer;font-size:12px;font-weight:800;color:#9fc9da">自動更新・41項目監査の状態（開く）</summary>'
       + completeUpdateBanner(ds)
       + '</details>'
