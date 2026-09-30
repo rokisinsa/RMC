@@ -129,7 +129,7 @@ function renderTodayGapAnalysis(a, recommendationCandidates = []) {
     const o=c.odds ?? {};
     const detailId=`gap-detail-${safeText(c.rank)}`;
     const rich=findRichGapCandidate(c,recommendationCandidates);
-    const d=rich?.analysis_detail ?? {};
+    const d=c.analysis_detail ?? rich?.analysis_detail ?? {};
     const links=[...(rich?.source_urls??[]),...(c.sources??[])].filter((u,i,arr)=>u&&arr.indexOf(u)===i)
       .map((u,n)=>`<a href="${safeText(u)}" target="_blank" rel="noopener" style="color:#7edcff">出典${n+1}</a>`).join(" / ");
     const isSoccer=/サッカー|soccer|football/i.test(String(c.sport??"")+" "+String(c.competition??""));
@@ -170,7 +170,7 @@ function renderTodayGapAnalysis(a, recommendationCandidates = []) {
   const value=(a.summary?.price_adjusted_top ?? []).map(x=>safeText(x)).join(" ／ ");
   return `<section class="analysis-panel" style="border:2px solid rgba(105,240,165,.42);margin-top:10px">
     <div class="analysis-panel-head" style="background:linear-gradient(90deg,rgba(63,203,255,.12),rgba(105,240,165,.09))">
-      <div><strong style="font-size:17px">🔥 ${safeText(a.title ?? "本日の格差試合 完全分析")}</strong>
+      <div><strong style="font-size:17px">🔥 ${safeText(a.title ?? "本日の分析")}</strong>
       <div class="sub">更新 ${safeText(a.generated_at ?? "—")}｜対象 ${safeText(a.window?.from ?? "—")} ～ ${safeText(a.window?.to ?? "—")}</div></div>
       <div class="analysis-counts"><span>候補 ${safeText(candidates.length)}件</span><span>リアル＋eSports</span></div>
     </div>
@@ -306,7 +306,7 @@ async function main() {
       + '<details style="margin:10px 0 18px;border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:8px 10px"><summary style="cursor:pointer;font-size:12px;font-weight:800;color:#9fc9da">自動更新・41項目監査の状態（開く）</summary>'
       + completeUpdateBanner(ds)
       + '</details>'
-      + '<div style="margin:18px 2px 8px;font-size:12px;color:#8fa8b5">以下は既存の①推奨・②VALUE①・③VALUE②・④PRO EDGE・経験値の取引履歴／収支。上の「本日・深夜の格差試合」が今回の最新分析です。</div>'
+      + '<div style="margin:18px 2px 8px;font-size:12px;color:#8fa8b5">以下は既存の①推奨・②VALUE①・③VALUE②・④PRO EDGE・経験値の取引履歴／収支。上の「本日の分析」が今回の最新分析です。</div>'
       + renderPage(vm, { demo: mode.demo });
     wire(root);
     window.__rmcV2 = vm;   // 確認用
