@@ -56,10 +56,15 @@ function safeText(v) {
 function completeUpdateBanner(ds) {
   const checklist = ds.scheduled_checklist;
   const latestId = checklist?.latest_run_id ?? null;
-  const run = checklist?.runs?.find(r => r.run_id === latestId) ?? checklist?.runs?.at?.(-1) ?? null;
+  const latestRun = checklist?.runs?.find(r => r.run_id === latestId) ?? checklist?.runs?.at?.(-1) ?? null;
   const c = ds.complete_summary;
   const latestAnalysis = ds.system_analysis?.meta?.generated_at ?? null;
   const publishedRuns = (ds.automation_runs?.runs ?? []).filter(r => r.pages_result === "published");
+  const publishedIds = new Set(publishedRuns.map(r => r.run_id));
+  const isCompletePass = r => r?.status === "passed" && r?.summary?.pass === 41 && r?.summary?.fail === 0 && r?.summary?.blocked === 0 && r?.summary?.pending === 0;
+  const passedRuns = (checklist?.runs ?? []).filter(r => isCompletePass(r) && (publishedIds.size === 0 || publishedIds.has(r.run_id)));
+  const run = passedRuns.at(-1) ?? latestRun;
+  const latestAttempt = latestRun && run && latestRun.run_id !== run.run_id ? latestRun : null;
   const lastPublished = publishedRuns.at(-1) ?? null;
 
   if (run) {
@@ -85,6 +90,7 @@ function completeUpdateBanner(ds) {
       <div style="font-weight:800">${headline}</div>
       ${warning}
       <div class="sub">予定：${safeText(run.scheduled_for ?? "—")} ／ slot ${safeText(run.slot ?? "—")} ／ 状態 ${safeText(run.status ?? "—")}</div>
+      ${latestAttempt ? `<div class="sub">最新試行 ${safeText(latestAttempt.run_id)} は未完了のため、最後に公開成功した完全更新を表示中。</div>` : ""}
       <div class="sub">✅ ${safeText(s.pass)} ／ ❌ ${safeText(s.fail)} ／ ⏸ ${safeText(s.blocked)} ／ … ${safeText(s.pending)} ／ 合計 ${safeText(s.total ?? 41)}</div>
       ${inventoryLine}
       <div class="sub">最終分析：${safeText(latestAnalysis ?? "未記録")} ／ 最終公開成功run：${safeText(lastPublished?.run_id ?? "未記録")}</div>
