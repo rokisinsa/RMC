@@ -81,7 +81,7 @@ jobs:
               runId=ev.client_payload?.run_id||''; source=ev.client_payload?.source||'repository_dispatch';
             }
           } catch {}
-          const scheduled=/^rmc-\d{8}-(0600|1200|1800|2300)$/.test(runId);
+          const scheduled=/^rmc-\d{8}-(0600|1700|2200)$/.test(runId);
           const esc=s=>String(s).replace(/%/g,'%25').replace(/\r/g,'%0D').replace(/\n/g,'%0A');
           const out={RMC_FAILSAFE_RUN_ID:runId,RMC_FAILSAFE_SOURCE:source,RMC_FAILSAFE_SCHEDULED:scheduled?'true':'false'};
           fs.appendFileSync(process.env.GITHUB_ENV,Object.entries(out).map(([k,v])=>k+'='+esc(v)).join('\n')+'\n');
@@ -110,7 +110,7 @@ jobs:
             runId=p.run_id||''; source=p.source||''; payloadPath=p.payload_path||''; payloadJson=p.payload ? JSON.stringify(p.payload) : ''; dry=String(p.dry_run||false);
           } else throw new Error('unsupported event: '+process.env.GITHUB_EVENT_NAME);
           if(!runId || !source) throw new Error('run_id/source missing');
-          const scheduled=/^rmc-\d{8}-(0600|1200|1800|2300)$/.test(runId);
+          const scheduled=/^rmc-\d{8}-(0600|1700|2200)$/.test(runId);
           const out={RMC_RUN_ID:runId,RMC_SOURCE:source,RMC_PAYLOAD_PATH:payloadPath,RMC_PAYLOAD_JSON:payloadJson,RMC_DRY_RUN:dry,RMC_IS_SCHEDULED:scheduled?"true":"false"};
           const esc=s=>String(s).replace(/%/g,'%25').replace(/\r/g,'%0D').replace(/\n/g,'%0A');
           fs.appendFileSync(process.env.GITHUB_ENV,Object.entries(out).map(([k,v])=>k+'='+esc(v)).join('\n')+'\n');
@@ -433,7 +433,7 @@ jobs:
           } else if(process.env.GITHUB_EVENT_NAME==='repository_dispatch'){
             runId=ev.client_payload?.run_id||'';source=ev.client_payload?.source||'repository_dispatch';
           }
-          const scheduled=/^rmc-\d{8}-(0600|1200|1800|2300)$/.test(runId);
+          const scheduled=/^rmc-\d{8}-(0600|1700|2200)$/.test(runId);
           fs.appendFileSync(process.env.GITHUB_ENV,`AUDIT_RUN_ID=${runId}\nAUDIT_SOURCE=${String(source).replace(/\n/g,' ')}\nAUDIT_SCHEDULED=${scheduled?'true':'false'}\n`);
           console.log(JSON.stringify({runId,source,scheduled,primaryResult:process.env.PRIMARY_RESULT}));
           NODE
