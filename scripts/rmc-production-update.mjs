@@ -493,7 +493,7 @@ function gitHead() {
 
 // ── 完全版の探索網羅性ゲート ──────────────────────────────────────
 function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR, allowDiagnosticFixtures = false } = {}) {
-  const scheduled = new Set(["06:00", "12:00", "18:00", "23:00"]);
+  const scheduled = new Set(["06:00", "17:00", "22:00"]);
   const isScheduled = scheduled.has(payload.slot);
   const c = payload.coverage_audit;
   // 定時更新は coverage_audit 必須。adhoc でも coverage_audit を付けた完全試走は

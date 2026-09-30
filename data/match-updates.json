@@ -20,11 +20,20 @@
           "match_id": "2026-09-26-fin-fra",
           "set": {
             "status": "final",
-            "result": { "final": { "a": 1, "b": 3 }, "text": "France 3-1 Finland（25-17, 18-25, 25-18, 25-15）" }
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 3
+              },
+              "text": "France 3-1 Finland（25-17, 18-25, 25-18, 25-15）"
+            }
           },
           "evidence": {
             "sources": [
-              { "name": "Eurosport", "url": "https://www.eurosport.fr/volleyball/championnat-d-europe/2026/euro-les-bleus-en-finale-apres-leur-victoire-contre-la-finlande-3-1_sto23340401/story.shtml" }
+              {
+                "name": "Eurosport",
+                "url": "https://www.eurosport.fr/volleyball/championnat-d-europe/2026/euro-les-bleus-en-finale-apres-leur-victoire-contre-la-finlande-3-1_sto23340401/story.shtml"
+              }
             ],
             "verified_at": "2026-09-26T19:30:00+09:00",
             "note": "情報源は1件（Eurosport の試合記事。セットスコアまで記載）。CEV公式・Olympics.com では今回確認できず"
@@ -34,11 +43,20 @@
           "match_id": "2026-09-25-esp-cze",
           "set": {
             "status": "final",
-            "result": { "final": { "a": 0, "b": 2 }, "text": "Czechia 2-0 Spain（Muchova 7-5 6-4 Bouzas Maneiro、Noskova 7-6(5) 6-2 Bucsa）" }
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 2
+              },
+              "text": "Czechia 2-0 Spain（Muchova 7-5 6-4 Bouzas Maneiro、Noskova 7-6(5) 6-2 Bucsa）"
+            }
           },
           "evidence": {
             "sources": [
-              { "name": "Dawn（AFP配信）", "url": "https://www.dawn.com/news/2032701/noskova-muchova-crush-spain-to-send-czechs-into-billie-jean-king-cup-final" }
+              {
+                "name": "Dawn（AFP配信）",
+                "url": "https://www.dawn.com/news/2032701/noskova-muchova-crush-spain-to-send-czechs-into-billie-jean-king-cup-final"
+              }
             ],
             "verified_at": "2026-09-26T19:32:00+09:00",
             "note": "BJK Cup Finals 準決勝（深圳）。スコアは国別対抗の勝ち数（2-0）"
@@ -48,11 +66,16 @@
           "match_id": "2026-09-26-jpn-nep",
           "set": {
             "status": "abandoned",
-            "result": { "text": "No result（雨天中止。Nepal 149/4・15.0オーバー）" }
+            "result": {
+              "text": "No result（雨天中止。Nepal 149/4・15.0オーバー）"
+            }
           },
           "evidence": {
             "sources": [
-              { "name": "ESPNcricinfo（ESPN）", "url": "https://www.espn.com/cricket/series/22547/game/1552770/japan-vs-nepal-5th-match-group-a-asian-games-mens-cricket-competition-2026" }
+              {
+                "name": "ESPNcricinfo（ESPN）",
+                "url": "https://www.espn.com/cricket/series/22547/game/1552770/japan-vs-nepal-5th-match-group-a-asian-games-mens-cricket-competition-2026"
+              }
             ],
             "verified_at": "2026-09-26T19:35:00+09:00",
             "note": "公式結果は No result。勝者なしのため精算上は無効（void）"
@@ -60,15 +83,51 @@
         }
       ],
       "reviews": [
-        { "match_id": "2026-09-25-prz-gri", "status": "review_required", "note": "ATP公式では 9/25 の Prizmic の準々決勝の相手は Daniil Glinka（7-6(4) 7-5 で Prizmic 勝ち）。旧データの相手表記「ダニエル・グリン」と同一人物か確認できないため結果は反映しない" },
-        { "match_id": "2026-09-26-hos-oze", "status": "unknown", "note": "公式な結果を確認できず（検索要約のみで一次情報を確認できない）" },
-        { "match_id": "2026-09-26-kaz-uzb", "status": "unknown", "note": "公式な結果を確認できず" },
-        { "match_id": "2026-09-26-chn-hkg", "status": "unknown", "note": "公式な結果を確認できず" },
-        { "match_id": "2026-09-26-kor-vie", "status": "unknown", "note": "公式な結果を確認できず" },
-        { "match_id": "2026-09-26-ge-vit", "status": "unknown", "note": "開始時刻（18:00）を過ぎているが、公式な結果を確認できず" },
-        { "match_id": "2026-09-26-ag-lgd", "status": "review_required", "note": "開始時刻が未確認のまま。結果も確認できず" },
-        { "match_id": "2026-09-26-fearx-cybme", "status": "review_required", "note": "開始時刻が未確認のまま。結果も確認できず" },
-        { "match_id": "2026-09-26-tmt-rrx", "status": "review_required", "note": "開始時刻が未確認のまま。結果も確認できず" }
+        {
+          "match_id": "2026-09-25-prz-gri",
+          "status": "review_required",
+          "note": "ATP公式では 9/25 の Prizmic の準々決勝の相手は Daniil Glinka（7-6(4) 7-5 で Prizmic 勝ち）。旧データの相手表記「ダニエル・グリン」と同一人物か確認できないため結果は反映しない"
+        },
+        {
+          "match_id": "2026-09-26-hos-oze",
+          "status": "unknown",
+          "note": "公式な結果を確認できず（検索要約のみで一次情報を確認できない）"
+        },
+        {
+          "match_id": "2026-09-26-kaz-uzb",
+          "status": "unknown",
+          "note": "公式な結果を確認できず"
+        },
+        {
+          "match_id": "2026-09-26-chn-hkg",
+          "status": "unknown",
+          "note": "公式な結果を確認できず"
+        },
+        {
+          "match_id": "2026-09-26-kor-vie",
+          "status": "unknown",
+          "note": "公式な結果を確認できず"
+        },
+        {
+          "match_id": "2026-09-26-ge-vit",
+          "status": "unknown",
+          "note": "開始時刻（18:00）を過ぎているが、公式な結果を確認できず"
+        },
+        {
+          "match_id": "2026-09-26-ag-lgd",
+          "status": "review_required",
+          "note": "開始時刻が未確認のまま。結果も確認できず"
+        },
+        {
+          "match_id": "2026-09-26-fearx-cybme",
+          "status": "review_required",
+          "note": "開始時刻が未確認のまま。結果も確認できず"
+        },
+        {
+          "match_id": "2026-09-26-tmt-rrx",
+          "status": "review_required",
+          "note": "開始時刻が未確認のまま。結果も確認できず"
+        }
       ]
     },
     {
@@ -83,15 +142,27 @@
           "set": {
             "status": "final",
             "result": {
-              "final": { "a": 1, "b": 2 },
-              "periods": { "map1": { "a": 10, "b": 13 } },
+              "final": {
+                "a": 1,
+                "b": 2
+              },
+              "periods": {
+                "map1": {
+                  "a": 10,
+                  "b": 13
+                }
+              },
               "text": "Team Vitality 2-1 Global Esports（Abyss 10-13 / Ascent 13-9 / Summit 5-13）"
             },
             "result_confirmed_at": "2026-09-26T20:00:00+09:00"
           },
           "evidence": {
             "sources": [
-              { "name": "VLR.gg 試合ページ", "url": "https://www.vlr.gg/753449/global-esports-vs-team-vitality-valorant-champions-2026-opening-b", "type": "specialist_db" }
+              {
+                "name": "VLR.gg 試合ページ",
+                "url": "https://www.vlr.gg/753449/global-esports-vs-team-vitality-valorant-champions-2026-opening-b",
+                "type": "specialist_db"
+              }
             ],
             "verified_at": "2026-09-26T20:00:00+09:00",
             "source_confidence": "specialist_db",
@@ -100,14 +171,46 @@
         }
       ],
       "reviews": [
-        { "match_id": "2026-09-25-prz-gri", "status": "review_required", "note": "ATP公式（Saint-Tropez 結果ページ）では 9/25 の Prizmic のシングルスは準々決勝の1試合のみで、相手は Daniil Glinka（Prizmic 7-6(4) 7-5）。日付・大会は一致するが、旧データの相手表記「ダニエル・グリン」・ラウンド・開始時刻 23:40 JST を公式側で照合できていないため、同一試合と断定しない" },
-        { "match_id": "2026-09-26-hos-oze", "status": "unknown", "note": "ITF公式の大会ページに結果の掲載なし。検索要約（出典不明）の結果は採用しない" },
-        { "match_id": "2026-09-26-kaz-uzb", "status": "unknown", "note": "大会公式・報道で結果を確認できず" },
-        { "match_id": "2026-09-26-chn-hkg", "status": "unknown", "note": "大会公式・報道で結果を確認できず" },
-        { "match_id": "2026-09-26-kor-vie", "status": "unknown", "note": "大会公式・報道で結果を確認できず（韓国の報道では 9/26 にベトナム戦の予定のみ）" },
-        { "match_id": "2026-09-26-ag-lgd", "status": "review_required", "note": "開始時刻が未確認のまま。Liquipedia は取得不可、結果を確認できず" },
-        { "match_id": "2026-09-26-fearx-cybme", "status": "review_required", "note": "SiegeGG では 9/26 の試合として掲載されているが「Awaiting match results」で結果未掲載。開始時刻も未確認のまま" },
-        { "match_id": "2026-09-26-tmt-rrx", "status": "review_required", "note": "SiegeGG では 9/26 の試合として掲載されているが「Awaiting match results」で結果未掲載。開始時刻も未確認のまま" }
+        {
+          "match_id": "2026-09-25-prz-gri",
+          "status": "review_required",
+          "note": "ATP公式（Saint-Tropez 結果ページ）では 9/25 の Prizmic のシングルスは準々決勝の1試合のみで、相手は Daniil Glinka（Prizmic 7-6(4) 7-5）。日付・大会は一致するが、旧データの相手表記「ダニエル・グリン」・ラウンド・開始時刻 23:40 JST を公式側で照合できていないため、同一試合と断定しない"
+        },
+        {
+          "match_id": "2026-09-26-hos-oze",
+          "status": "unknown",
+          "note": "ITF公式の大会ページに結果の掲載なし。検索要約（出典不明）の結果は採用しない"
+        },
+        {
+          "match_id": "2026-09-26-kaz-uzb",
+          "status": "unknown",
+          "note": "大会公式・報道で結果を確認できず"
+        },
+        {
+          "match_id": "2026-09-26-chn-hkg",
+          "status": "unknown",
+          "note": "大会公式・報道で結果を確認できず"
+        },
+        {
+          "match_id": "2026-09-26-kor-vie",
+          "status": "unknown",
+          "note": "大会公式・報道で結果を確認できず（韓国の報道では 9/26 にベトナム戦の予定のみ）"
+        },
+        {
+          "match_id": "2026-09-26-ag-lgd",
+          "status": "review_required",
+          "note": "開始時刻が未確認のまま。Liquipedia は取得不可、結果を確認できず"
+        },
+        {
+          "match_id": "2026-09-26-fearx-cybme",
+          "status": "review_required",
+          "note": "SiegeGG では 9/26 の試合として掲載されているが「Awaiting match results」で結果未掲載。開始時刻も未確認のまま"
+        },
+        {
+          "match_id": "2026-09-26-tmt-rrx",
+          "status": "review_required",
+          "note": "SiegeGG では 9/26 の試合として掲載されているが「Awaiting match results」で結果未掲載。開始時刻も未確認のまま"
+        }
       ]
     },
     {
@@ -535,6 +638,149 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-manual-24h-20260930-1844-result-sync",
+      "kind": "result_update",
+      "at": "2026-09-30T18:44:46+09:00",
+      "source": "ChatGPT manual 24h complete analysis result sync",
+      "note": "手動「完全分析」実行時の既存カード結果再照合。公式/専門DBで同一性を確認できたものだけ確定し、RMC戦績・収支の再計算対象へ反映。",
+      "changes": [
+        {
+          "match_id": "2026-09-26-kaz-uzb",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 35,
+                "b": 20
+              },
+              "periods": {
+                "ht": {
+                  "a": 15,
+                  "b": 9
+                }
+              },
+              "text": "カザフスタン 35-20 ウズベキスタン（前半15-9）"
+            },
+            "result_confirmed_at": "2026-09-30T18:44:46+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "日本ハンドボール協会 第20回アジア競技大会 日程・結果",
+                "url": "https://handball.or.jp/system/prog/game_event_schedule.php?ed=d&eid=402&sc=g&sd=g",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-09-30T18:44:46+09:00",
+            "source_confidence": "official",
+            "note": "2026/9/26 12:30 女子・カザフスタン35-20ウズベキスタン、前半15-9を公式日程結果で確認。"
+          }
+        },
+        {
+          "match_id": "2026-09-26-chn-hkg",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 37,
+                "b": 19
+              },
+              "periods": {
+                "ht": {
+                  "a": 19,
+                  "b": 11
+                }
+              },
+              "text": "中国 37-19 香港（前半19-11）"
+            },
+            "result_confirmed_at": "2026-09-30T18:44:46+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "日本ハンドボール協会 第20回アジア競技大会 日程・結果",
+                "url": "https://handball.or.jp/system/prog/game_event_schedule.php?ed=d&eid=402&sc=g&sd=g",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-09-30T18:44:46+09:00",
+            "source_confidence": "official",
+            "note": "2026/9/26 15:00 女子・中国37-19ホンコン・チャイナ、前半19-11を公式日程結果で確認。"
+          }
+        },
+        {
+          "match_id": "2026-09-27-mannarino-shapovalov",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 2
+              },
+              "periods": {
+                "set1": {
+                  "a": 7,
+                  "b": 6
+                }
+              },
+              "text": "Denis Shapovalov 2-1 Adrian Mannarino（6-7(6), 6-3, 6-2）"
+            },
+            "result_confirmed_at": "2026-09-30T18:44:46+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Tennis.com ATP Chengdu match page",
+                "url": "https://www.tennis.com/tournaments/chengdu-open/matches/a-mannarino-vs-d-shapovalov-2026-09-27",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-09-30T18:44:46+09:00",
+            "source_confidence": "specialist_db",
+            "note": "Completed表示とセットスコアを照合。side_a=Mannarino、side_b=Shapovalov。"
+          }
+        },
+        {
+          "match_id": "2026-09-28-commanders-seahawks",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 33,
+                "b": 31
+              },
+              "text": "Washington Commanders 33-31 Seattle Seahawks"
+            },
+            "result_confirmed_at": "2026-09-30T18:44:46+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Seattle Seahawks official Game Center",
+                "url": "https://www.seahawks.com/game-day/2026/reg-week3/seahawks-at-commanders/",
+                "type": "official"
+              },
+              {
+                "name": "Reuters NFL roundup",
+                "url": "https://www.reuters.com/sports/nfl-roundup-marcus-mariota-commanders-stun-seahawks--flm-2026-09-28/",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-09-30T18:44:46+09:00",
+            "source_confidence": "multi_source",
+            "note": "公式Game CenterとReutersでWashington 33-31 Seattleを一致確認。"
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "match_id": "2026-09-25-prz-gri",
+          "status": "review_required",
+          "note": "Saint-TropezのDino Prizmic対Daniil Glinkaは確認できるが、RMCの『ダニエル・グリン』と人物同一性を公式表記で完全固定できないため、推測でfinalにせず要確認を維持。"
+        }
+      ]
     }
   ]
 }
