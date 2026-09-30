@@ -12,6 +12,9 @@ on:
         required: true
         type: choice
         options: ["06:00","17:00","22:00"]
+  schedule:
+    # 完全run開始: JST 05:00 / 16:00 / 21:00 → 公開目標 06:00 / 17:00 / 22:00
+    - cron: "0 20,7,12 * * *"
   push:
     branches: [main]
     paths:
@@ -51,6 +54,17 @@ jobs:
           if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
             run_id='${{ inputs.run_id }}'
             slot='${{ inputs.slot }}'
+          elif [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
+            eval "$(node - <<'NODE'
+const now=new Date();
+const parts=Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",hour12:false}).formatToParts(now).filter(x=>x.type!=="literal").map(x=>[x.type,x.value]));
+const h=Number(parts.hour);
+const slot=h<10?"06:00":h<19?"17:00":"22:00";
+const hh=slot.slice(0,2), id=`rmc-${parts.year}${parts.month}${parts.day}-${hh}00`;
+console.log(`run_id=${id}`);
+console.log(`slot=${slot}`);
+NODE
+)"
           else
             run_id="$(node -e 'const x=require("./ops/cco-run.trigger");process.stdout.write(x.run_id)')"
             slot="$(node -e 'const x=require("./ops/cco-run.trigger");process.stdout.write(x.slot)')"
