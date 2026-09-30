@@ -162,7 +162,7 @@ const payload={
 };
 write(PAYLOAD_PATH,payload);
 
-const dry=runUpdate({payloadText:JSON.stringify(payload),dataDir:DATA,now:"2026-09-28T06:02:00+09:00",apply:false,startSha:"1111111111111111111111111111111111111111",startedAt:"2026-09-28T06:00:00+09:00"});
+const dry=runUpdate({payloadText:JSON.stringify(payload),dataDir:DATA,now:"2026-09-28T06:02:00+09:00",apply:false,startSha:"1111111111111111111111111111111111111111",startedAt:"2026-09-28T06:00:00+09:00",allowDiagnosticFixtures:true});
 write(REPORT_PATH,{ok:dry.ok,errors:dry.ledger.errors,warnings:dry.ledger.warnings,items:dry.ledger.items});
 if(!dry.ok){
   console.error(JSON.stringify(dry.ledger.errors,null,2));
@@ -175,7 +175,7 @@ mark(checklist,1,"pass",`${RUN_ID} / ${SCHEDULED_FOR} / rehearsal-start-sha / pr
 inventoryPhase(checklist,TMP,SCHEDULED_FOR);
 payloadPhase(checklist,PAYLOAD_PATH,REPORT_PATH,{root:TMP,dataDir:DATA});
 
-const applied=runUpdate({payloadText:JSON.stringify(payload),dataDir:DATA,now:"2026-09-28T06:02:00+09:00",apply:true,startSha:"1111111111111111111111111111111111111111",startedAt:"2026-09-28T06:00:00+09:00"});
+const applied=runUpdate({payloadText:JSON.stringify(payload),dataDir:DATA,now:"2026-09-28T06:02:00+09:00",apply:true,startSha:"1111111111111111111111111111111111111111",startedAt:"2026-09-28T06:00:00+09:00",allowDiagnosticFixtures:true});
 if(!applied.ok)throw new Error("isolated production apply failed: "+JSON.stringify(applied.ledger.errors));
 
 run(process.execPath,["scripts/validate-data.js",DATA]);
