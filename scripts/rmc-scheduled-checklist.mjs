@@ -7,7 +7,7 @@ import { buildViewModel } from "../lib/view/model.js";
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),"..");
 const DEFAULT_FILE=path.join(ROOT,"data","scheduled-update-checklist.json");
-const SLOTS=["06:00","12:00","18:00","23:00"];
+const SLOTS=["06:00","17:00","22:00"];
 const SYSTEMS=["recommendations","value1","value2","pro_edge"];
 const TITLES=[
 "run_id・開始JST・開始SHA・前回blocker記録",
@@ -77,7 +77,7 @@ function recompute(run){
   run.updated_at=nowIso();
 }
 function ensure(db,{runId,slot,scheduledFor,source,startSha}){
-  const m=String(runId||"").match(/^rmc-(\d{4})(\d{2})(\d{2})-(0600|1200|1800|2300)$/);
+  const m=String(runId||"").match(/^rmc-(\d{4})(\d{2})(\d{2})-(0600|1700|2200)$/);
   if(m){
     slot ||= m[4].slice(0,2)+":"+m[4].slice(2);
     scheduledFor ||= `${m[1]}-${m[2]}-${m[3]}T${m[4].slice(0,2)}:${m[4].slice(2)}:00+09:00`;
@@ -144,7 +144,7 @@ function inferNextSlot(d=new Date()){
   for(const dd of [-1,0,1]){
     const base=new Date(Date.UTC(y,m,day+dd,0,0,0));
     const by=base.getUTCFullYear(),bm=base.getUTCMonth(),bd=base.getUTCDate();
-    for(const sh of [6,12,18,23]){
+    for(const sh of [6,17,22]){
       const utc=Date.UTC(by,bm,bd,sh-9,0,0);
       const localDate=`${by}-${String(bm+1).padStart(2,"0")}-${String(bd).padStart(2,"0")}`;
       candidates.push({ms:utc,slot:String(sh).padStart(2,"0")+":00",scheduledFor:`${localDate}T${String(sh).padStart(2,"0")}:00:00+09:00`,runId:`rmc-${localDate.replaceAll("-","")}-${String(sh).padStart(2,"0")}00`});
