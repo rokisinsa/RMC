@@ -64,7 +64,7 @@ test("定時41項目: mergeDbは別runの失敗履歴を消さない",()=>{
   const {db,run}=makeRun();
   mark(run,1,"pass","start");mark(run,2,"fail","x");finish(run,false,"x");
   const next=makeDb();
-  const r2=ensure(next,{runId:"rmc-20260928-1200",slot:"12:00",scheduledFor:"2026-09-28T12:00:00+09:00",source:"test",startSha:"def456"});
+  const r2=ensure(next,{runId:"rmc-20260928-1700",slot:"17:00",scheduledFor:"2026-09-28T17:00:00+09:00",source:"test",startSha:"def456"});
   mark(r2,1,"pass","start");mark(r2,2,"fail","y");finish(r2,false,"y");
   const merged=mergeDb(db,next,r2.run_id);
   assert.equal(merged.runs.length,2);
