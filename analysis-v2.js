@@ -131,6 +131,21 @@ function renderTodayGapAnalysis(a) {
   </section>`;
 }
 
+function currentAnalysisBanner(ds) {
+  const m = ds.system_analysis?.meta;
+  if (!m) return "";
+  const ws = m.window_start ? safeText(m.window_start.replace("T"," ").replace("+09:00"," JST")) : "—";
+  const we = m.window_end ? safeText(m.window_end.replace("T"," ").replace("+09:00"," JST")) : "—";
+  const systems = ds.system_analysis?.systems ?? {};
+  const rec = systems.recommendations ?? {};
+  const valid = (rec.candidates ?? []).filter(c => !/rehearsal|dry[- ]?run|gate validation|mechanism test/i.test(String(c.note ?? "") + " " + String(c.analysis_detail?.summary ?? "")));
+  return `<div class="data-status" style="border:2px solid #69f0a5;padding:12px;margin:10px 0;background:rgba(105,240,165,.06)">
+    <div style="font-weight:900;color:#9ff7c0">🔎 最新24時間・格差候補分析：${safeText(m.run_id ?? "—")}</div>
+    <div class="sub">対象：${ws} → ${we} ／ 更新：${safeText(m.generated_at ?? "—")} ／ 新規deep候補 ${safeText(valid.length)}件</div>
+    <div class="sub">H2H・直近成績・共通相手・ランキング/Rating・H/A・欠場・序盤傾向・市場価格を候補ごとに表示。実力格差と価格評価は別判定。</div>
+  </div>`;
+}
+
 function completeUpdateBanner(ds) {
   const checklist = ds.scheduled_checklist;
   const latestId = checklist?.latest_run_id ?? null;
