@@ -267,8 +267,8 @@ test("経験値取引は4系統とは別に表示・集計し、VALUE①②の�
 
 
 test("本日・深夜の格差試合は上段1本化し、行クリックでH2H・直近10・共通相手を開く", () => {
-  const page=fs.readFileSync("analysis-v2.js","utf8");
-  const render=fs.readFileSync("lib/view/render.js","utf8");
+  const page=readFileSync("analysis-v2.js","utf8");
+  const render=readFileSync("lib/view/render.js","utf8");
   assert.match(page,/gap-main-row/);
   assert.match(page,/直近10試合｜勝敗・スコア・得失点\/SET\/MAP/);
   assert.match(page,/直近の共通対戦相手比較｜スコア・勝敗・SET\/MAP差/);
@@ -277,7 +277,7 @@ test("本日・深夜の格差試合は上段1本化し、行クリックでH2H�
 });
 
 test("推奨サッカー Roma-Barcelona は双方直近10と共通相手比較欄を持つ", () => {
-  const sys=JSON.parse(fs.readFileSync("data/system-analysis.json","utf8"));
+  const sys=JSON.parse(readFileSync("data/system-analysis.json","utf8"));
   const c=(sys.systems?.recommendations?.candidates??[]).find(x=>x.event_id==="web-roma-barca-20260930");
   assert.ok(c);
   assert.equal(c.analysis_detail?.recent_form?.side_a?.items?.length,10);
