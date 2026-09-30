@@ -2,20 +2,7 @@
 name: RMC Live Coverage Rehearsal
 
 on:
-  workflow_run:
-    workflows: ["BET CHANNEL complete inventory"]
-    types: [completed]
-  push:
-    branches: [main]
-    paths:
-      - "scripts/build-live-coverage-rehearsal.mjs"
-      - "scripts/rehearse-full-scheduled-update.mjs"
-      - "scripts/rehearsal.js"
-      - "scripts/rmc-scheduled-checklist.mjs"
-      - "scripts/rmc-production-update.mjs"
-      - ".github/workflows/rmc-live-coverage-rehearsal.yml"
-      - "data/bet-channel-complete-summary.json"
-      - "data/bet-channel-fixed-odds-inventory.json"
+  # Diagnostic only. Real production updates are created by the scheduled ChatGPT RMC runner.
   workflow_dispatch:
 
 permissions:
@@ -75,61 +62,9 @@ jobs:
       - name: Run synthetic 41-of-41 end-to-end rehearsal
         run: node scripts/rehearse-full-scheduled-update.mjs
 
-      - name: Publish complete-union payload into production pipeline
-        if: env.RMC_LIVE_MODE == 'complete_union'
-        shell: bash
+      - name: Production handoff disabled in rehearsal
         run: |
-          set -euo pipefail
-          now_jst="$(TZ=Asia/Tokyo date '+%Y-%m-%dT%H:%M:%S+09:00')"
-          ymd="$(TZ=Asia/Tokyo date '+%Y%m%d')"
-          hhmm="$(TZ=Asia/Tokyo date '+%H%M')"
-          # This workflow is used for the 23:00 manual/full run. Keep it inside the allowed 4h audit window.
-          run_id="rmc-${ymd}-2300"
-          out="incoming/${run_id}.json"
-          mkdir -p incoming
-          RUN_ID="$run_id" NOW_JST="$now_jst" node - <<'NODE'
-          const fs=require("fs");
-          const p=JSON.parse(fs.readFileSync("tmp/live-coverage-trial.json","utf8"));
-          p.run_id=process.env.RUN_ID;
-          p.slot="23:00";
-          p.source="RMC complete-union live production";
-          // generated_at remains the actual evidence capture time from this live run.
-          fs.writeFileSync("incoming/"+process.env.RUN_ID+".json",JSON.stringify(p,null,2)+"\n");
-          console.log(JSON.stringify({run_id:p.run_id,slot:p.slot,generated_at:p.generated_at,source:p.source},null,2));
-          NODE
-
-          # Preserve the freshly generated payload BEFORE resetting the worktree.
-          # Otherwise an older incoming/<run_id>.json already on main can overwrite the new evidence.
-          cp "$out" /tmp/rmc-production-payload.json
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          pushed=0
-          for attempt in 1 2 3 4 5; do
-            git fetch origin main
-            git reset --hard origin/main
-            cp /tmp/rmc-production-payload.json "$out"
-            git add "$out"
-            if git diff --cached --quiet; then
-              pushed=1
-              break
-            fi
-            git commit -m "Queue RMC production update: $run_id"
-            if git push origin HEAD:main; then
-              pushed=1
-              break
-            fi
-            sleep 2
-          done
-          [ "$pushed" = "1" ] || exit 1
-
-          curl -fsS -X POST \
-            -H "Authorization: Bearer ${{ github.token }}" \
-            -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/rmc-production-update.yml/dispatches" \
-            -d "{\"ref\":\"main\",\"inputs\":{\"run_id\":\"$run_id\",\"source\":\"RMC complete-union live production\",\"payload_path\":\"$out\",\"dry_run\":false}}"
-          echo "Dispatched rmc-production-update for $run_id"
+          echo "Diagnostic rehearsal only. It must not publish insufficient_data payloads or create a fake latest production run."
 
       - name: Assert real-event coverage evidence
         run: |
