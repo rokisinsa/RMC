@@ -9,5 +9,30 @@
     "note": "この系統の試合後レビュー（敗因分析・成功要因）。定時更新の □8 で追記する。記録のみで、判定ロジックは変更しない"
   },
   "system": "value2",
-  "reviews": []
+  "reviews": [
+    {
+      "pick_id": "v2-202609271444-seahawks",
+      "created_at": "2026-09-30T18:44:46+09:00",
+      "update_run": "manual-24h-20260930-1844",
+      "outcome": "loss",
+      "category": "variance",
+      "findings": "SeattleはWashingtonに31-33で敗戦。Seattle公式とReutersで、Seattleは総ヤードでは優勢だった一方、3ターンオーバーを喫し、Washingtonがそれを得点へ直結させたことを確認。低オッズ側の基礎戦力優位だけでは、この試合のターンオーバー変動を吸収できなかった。",
+      "missing_data": [
+        "closing odds / CLVの確定値",
+        "事前モデルがターンオーバー分布をどの程度織り込んでいたか"
+      ],
+      "action": "monitor",
+      "proposal": null,
+      "pre_match_hypothesis": "Seattleの戦力・直近評価・市場価格から勝率優位を想定。",
+      "actual_outcome_driver": "Seattleの3ターンオーバーとWashingtonの得点変換。最終2点差の接戦で、単発イベントの影響が大きかった。",
+      "missed_factors": [
+        "ロード戦での接戦リスク",
+        "ターンオーバーのテールリスク"
+      ],
+      "probability_overestimate": "1.29級の価格に対して安全側へ寄せすぎた可能性がある。類似NFL低オッズ候補ではQB欠場だけで相手攻撃力を過小評価しない。",
+      "variance_vs_structural": "mixed",
+      "clv_assessment": "closing odds未固定のためCLVは未評価。",
+      "prevention_hypothesis": "NFLの低オッズ候補は単純なチーム格差に加え、ターンオーバー率・スペシャルチーム・ロード/ホーム・QB代替時のゲームプラン適応を別チェックし、1.20〜1.35帯では推定勝率に安全マージンを設ける。"
+    }
+  ]
 }
