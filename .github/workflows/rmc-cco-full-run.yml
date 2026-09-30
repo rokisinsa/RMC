@@ -6,6 +6,11 @@ on:
     paths:
       - "ops/cco-run.trigger"
   workflow_dispatch:
+  schedule:
+    # JST 05:00 / 16:00 / 21:00 に開始し、06:00 / 17:00 / 22:00 枠を完成させる
+    - cron: "0 20 * * *"
+    - cron: "0 7 * * *"
+    - cron: "0 12 * * *"
 
 permissions:
   contents: write
@@ -35,7 +40,17 @@ jobs:
           set -euo pipefail
           node - <<'NODE'
           const fs=require("fs");
-          const x=JSON.parse(fs.readFileSync("ops/cco-run.trigger","utf8"));
+          let x;
+          if(process.env.GITHUB_EVENT_NAME==="schedule"){
+            const ev=JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH,"utf8"));
+            const cron=ev.schedule||"";
+            const slot=cron==="0 20 * * *"?"06:00":cron==="0 7 * * *"?"17:00":cron==="0 12 * * *"?"22:00":null;
+            if(!slot) throw new Error("unknown scheduled cron: "+cron);
+            const parts=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date()).filter(v=>v.type!=="literal").map(v=>[v.type,v.value]));
+            x={run_id:"rmc-"+parts.year+parts.month+parts.day+"-"+slot.slice(0,2)+"00",slot,mode:"full_production",engine:"CCO"};
+          }else{
+            x=JSON.parse(fs.readFileSync("ops/cco-run.trigger","utf8"));
+          }
           if(!/^rmc-\d{8}-(0600|1700|2200)$/.test(x.run_id||"")) throw new Error("invalid run_id");
           if(!["06:00","17:00","22:00"].includes(x.slot)) throw new Error("invalid slot");
           fs.appendFileSync(process.env.GITHUB_ENV,
