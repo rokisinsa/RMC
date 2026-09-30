@@ -144,6 +144,19 @@ test("定時更新：新規カードはsource_event_idで全件走査→deep_div
   }
 });
 
+test("定時更新：診断/rehearsal由来のデータ不足deep_diveは本番公開を拒否", () => {
+  const p = mutate(A, x => {
+    x.run_id = "fixture-rehearsal-leak";
+    const d=x.coverage_audit.systems.recommendations.deep_dive_evidence[0];
+    d.outcome="insufficient_data";
+    d.note="live coverage rehearsal gate validation only";
+    d.analysis_detail.summary="CI rehearsal: external research intentionally unavailable";
+  });
+  const r = run(p, tempData(), NOW_A);
+  assert.ok(!r.ok);
+  assert.ok(cats(r).includes("analysis_quality"), JSON.stringify(r.ledger.errors));
+});
+
 test("定時更新：敗戦レビューは完全構造が無ければ拒否", () => {
   const dir = withA();
   const p = mutate(B, x => {
