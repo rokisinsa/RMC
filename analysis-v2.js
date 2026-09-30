@@ -13,6 +13,7 @@ export const DATA_PATHS = {
   value2: "data/value2.json",
   pro_edge: "data/pro_edge.json",
   system_analysis: "data/system-analysis.json",
+  today_gap_analysis: "data/today-gap-analysis.json",
   complete_summary: "data/bet-channel-complete-summary.json",
   automation_runs: "data/automation-runs.json",
   scheduled_checklist: "data/scheduled-update-checklist.json",
@@ -27,7 +28,7 @@ export const DATA_PATHS = {
   post_match_pro_edge: "data/post-match-reviews/pro_edge.json",
 };
 
-const OPTIONAL = new Set(["system_analysis", "complete_summary", "automation_runs", "scheduled_checklist", "post_match_recommendations", "post_match_experience", "post_match_value1", "post_match_value2", "post_match_pro_edge"]);
+const OPTIONAL = new Set(["system_analysis", "today_gap_analysis", "complete_summary", "automation_runs", "scheduled_checklist", "post_match_recommendations", "post_match_experience", "post_match_value1", "post_match_value2", "post_match_pro_edge"]);
 
 async function getJson(path, optional = false) {
   const sep = path.includes("?") ? "&" : "?";
@@ -51,6 +52,83 @@ async function applyDemo(ds) {
 
 function safeText(v) {
   return String(v ?? "").replace(/[<>&]/g, "");
+}
+
+function renderTodayGapAnalysis(a) {
+  if (!a?.candidates?.length) return "";
+  const statusLabel = {
+    candidate: "価格込み候補",
+    watch: "監視",
+    price_reject: "格差大・価格NG"
+  };
+  const statusTone = {
+    candidate: "#69f0a5",
+    watch: "#ffd45d",
+    price_reject: "#ff8f9a"
+  };
+  const candidates = [...a.candidates].sort((x,y)=>(x.rank??999)-(y.rank??999));
+  const topRows = candidates.map(c => {
+    const o=c.odds ?? {};
+    return `<tr>
+      <td style="white-space:nowrap;font-weight:900">#${safeText(c.rank)}</td>
+      <td><strong>${safeText(c.matchup)}</strong><div class="sub">${safeText(c.sport)}｜${safeText(c.competition)}</div></td>
+      <td style="white-space:nowrap">${safeText(c.start_jst ? c.start_jst.replace("T"," ").slice(5,16) : "—")}</td>
+      <td style="white-space:nowrap"><strong>${safeText(c.gap_grade ?? "—")}</strong></td>
+      <td style="white-space:nowrap"><strong>${safeText(c.price_grade ?? "—")}</strong></td>
+      <td style="white-space:nowrap">${safeText(o.min ?? "—")}〜${safeText(o.max ?? "—")}</td>
+      <td style="white-space:nowrap">${safeText(c.estimated_win_probability_pct ?? "—")}%</td>
+      <td style="color:${statusTone[c.status] ?? "#dff8ff"};font-weight:800">${safeText(statusLabel[c.status] ?? c.status ?? "—")}</td>
+    </tr>`;
+  }).join("");
+
+  const detailCards = candidates.map((c,i) => {
+    const o=c.odds ?? {};
+    const links=(c.sources ?? []).map((u,n)=>`<a href="${safeText(u)}" target="_blank" rel="noopener" style="color:#7edcff">出典${n+1}</a>`).join(" / ");
+    return `<details class="analysis-card" ${i < 4 ? "open" : ""}>
+      <summary>
+        <span style="font-weight:900;color:#8edcff">#${safeText(c.rank)}</span>
+        <span class="analysis-match">${safeText(c.matchup)}</span>
+        <span class="analysis-time">${safeText(c.start_jst ? c.start_jst.replace("T"," ").slice(5,16)+" JST" : "時刻未確認")}</span>
+        <span style="padding:3px 7px;border:1px solid rgba(255,255,255,.14);border-radius:999px;font-size:10px">格差 ${safeText(c.gap_grade ?? "—")}</span>
+        <span style="padding:3px 7px;border:1px solid rgba(255,255,255,.14);border-radius:999px;font-size:10px">価格 ${safeText(c.price_grade ?? "—")}</span>
+      </summary>
+      <div class="analysis-card-body">
+        <div class="analysis-summary"><strong>${safeText(statusLabel[c.status] ?? c.status ?? "—")}</strong>｜${safeText(c.conclusion ?? "")}</div>
+        <div class="detail-grid">
+          <div class="box"><h3>大会・条件</h3><div>${safeText(c.sport)}｜${safeText(c.competition)}</div><div class="sub">${safeText(c.venue ?? "会場未確認")}｜${safeText(c.format ?? "形式未確認")}</div></div>
+          <div class="box"><h3>市場・価格</h3><div>オッズ ${safeText(o.min ?? "—")}〜${safeText(o.max ?? "—")}</div><div>必要勝率 ${safeText(o.required_win_rate_pct ?? "—")}%</div><div>推定勝率 ${safeText(c.estimated_win_probability_pct ?? "—")}%</div><div>推定EV ${safeText(c.estimated_ev_pct ?? "—")}</div><div class="sub">${safeText(o.book_examples ?? "")}</div></div>
+          <div class="box"><h3>ランキング / Rating</h3><div>${safeText(c.ranking_rating ?? "未確認")}</div></div>
+          <div class="box"><h3>H2H</h3><div>${safeText(c.h2h ?? "未確認")}</div></div>
+          <div class="box"><h3>直近成績</h3><div>${safeText(c.recent_form ?? "未確認")}</div></div>
+          <div class="box"><h3>直近の共通相手</h3><div>${safeText(c.common_opponents ?? "未確認")}</div></div>
+          <div class="box"><h3>メンバー / 欠場 / roster</h3><div>${safeText(c.roster ?? "未確認")}</div></div>
+          <div class="box"><h3>序盤傾向 / Veto</h3><div>${safeText(c.early_tendency ?? "未確認")}</div></div>
+        </div>
+        <div style="margin-top:10px;padding:9px 10px;border-left:3px solid #ffb36b;background:rgba(255,179,107,.07);font-size:11px;line-height:1.65"><strong>リスク：</strong>${safeText(c.risk ?? "特記事項なし")}</div>
+        <div class="analysis-sources" style="margin-top:9px">${links}</div>
+      </div>
+    </details>`;
+  }).join("");
+
+  const pure=(a.summary?.pure_gap_top ?? []).map(x=>safeText(x)).join(" ／ ");
+  const value=(a.summary?.price_adjusted_top ?? []).map(x=>safeText(x)).join(" ／ ");
+  return `<section class="analysis-panel" style="border:2px solid rgba(105,240,165,.42);margin-top:10px">
+    <div class="analysis-panel-head" style="background:linear-gradient(90deg,rgba(63,203,255,.12),rgba(105,240,165,.09))">
+      <div><strong style="font-size:17px">🔥 ${safeText(a.title ?? "本日の格差試合 完全分析")}</strong>
+      <div class="sub">更新 ${safeText(a.generated_at ?? "—")}｜対象 ${safeText(a.window?.from ?? "—")} ～ ${safeText(a.window?.to ?? "—")}</div></div>
+      <div class="analysis-counts"><span>候補 ${safeText(candidates.length)}件</span><span>リアル＋eSports</span></div>
+    </div>
+    <div style="padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.07)">
+      <div style="font-size:11px;line-height:1.7"><strong>純粋な実力格差：</strong>${pure || "—"}</div>
+      <div style="font-size:11px;line-height:1.7"><strong>価格込み注目：</strong>${value || "—"}</div>
+      <div class="sub">${safeText(a.summary?.caution ?? "")}</div>
+    </div>
+    <div class="table-wrap" style="margin:10px 12px"><table class="result-table">
+      <thead><tr><th>#</th><th>カード / 大会</th><th>開始</th><th>格差</th><th>価格</th><th>オッズ</th><th>推定勝率</th><th>判定</th></tr></thead>
+      <tbody>${topRows}</tbody>
+    </table></div>
+    <div style="padding:0 12px 12px"><div class="sub" style="margin-bottom:7px">各カードを開くと、H2H・直近・共通相手・roster・序盤傾向・市場評価まで表示。</div>${detailCards}</div>
+  </section>`;
 }
 
 function completeUpdateBanner(ds) {
@@ -153,6 +231,7 @@ async function main() {
     assertNoDemoInProduction(mode, ds);
     const vm = buildViewModel(ds, { proEdgeConfig: cfg });
     root.innerHTML = (mode.mode === "development" ? '<div class="dev-banner">development モード（ローカル確認環境）</div>' : "")
+      + renderTodayGapAnalysis(ds.today_gap_analysis)
       + completeUpdateBanner(ds)
       + renderPage(vm, { demo: mode.demo });
     wire(root);
