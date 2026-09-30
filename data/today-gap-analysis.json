@@ -25,9 +25,10 @@
       "CS2",
       "女子バレーボール",
       "ハンドボール",
-      "ホッケー"
+      "ホッケー",
+      "アジア大会・女子ホッケー"
     ],
-    "note": "現在時刻以降に開始する公開確認可能カードを世界横断で再走査。MLB Wild Card等は市場・戦力差が小さく、格差上位から除外。"
+    "note": "公開確認可能な当日残りカードを世界横断で再走査。アジア大会女子ホッケー準決勝も追加。市場・戦力差が小さいカードは候補から除外。"
   },
   "candidates": [
     {
@@ -202,6 +203,42 @@
     },
     {
       "rank": 6,
+      "sport": "女子ホッケー",
+      "competition": "20th Asian Games Aichi-Nagoya 2026 — Women Semi Final",
+      "start_jst": "2026-09-30T19:00:00+09:00",
+      "matchup": "India Women vs Korea Women",
+      "favored": "India Women",
+      "venue": "Gifu Prefectural Green Stadium / Aichi-Nagoya, Japan",
+      "format": "60分 / Semifinal",
+      "status": "watch",
+      "gap_grade": "A-",
+      "price_grade": "未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "対象4サイトの確定プレマッチ価格は今回未確認",
+        "required_win_rate_pct": "未確認"
+      },
+      "estimated_win_probability_pct": "72–78",
+      "estimated_ev_pct": "オッズ未確認のため未算定",
+      "ranking_rating": "FIH: Indiaは8位前後、Koreaは17位前後。直近大会前後の公式ランキングで約9位差。",
+      "h2h": "直近確認できたシニア公式対戦は2025 Women’s Asia Cup Super4sでIndia 4-2 Korea。過去全件は今回の公開検索で完全列挙できず、確認済み分のみ採用。",
+      "recent_form": "今大会Indiaは5戦5勝・66得点3失点（19-0 Uzbekistan, 17-1 Indonesia, 20-1 Thailand, 3-1 Japan, 7-0 Singapore）。Koreaは4勝1敗・20得点5失点（3-1 Chinese Taipei, 7-0 Kazakhstan, 8-0 Bangladesh, 0-3 China, 2-1 Malaysia）。",
+      "common_opponents": "Japan比較: Indiaは9/25 Asian GamesでJapanに3-1。Koreaは6/21 Nations CupでJapanと0-0、SO 5-4勝ち。大会条件は違うが、直近の共通相手に対する規定時間内容はIndia優勢。",
+      "roster": "大会登録メンバーは公式大会運用中。当日先発XI/欠場の最終確定は未確認。",
+      "early_tendency": "IndiaはJapan戦で前半2-0。大量得点した下位相手戦でも早い時間帯から主導。KoreaはChina戦0-3で上位相手への攻撃出力に課題。",
+      "risk": "KoreaはNations Cup 5位でJapanをSOで破る力があり、準決勝の1試合勝負。市場価格がないためVALUE判定はしない。",
+      "conclusion": "リアルスポーツの本日上位格差候補。大会成績・ランキング・共通相手はIndia優勢。ただしオッズ未確認なので正式VALUEではなくWATCH。",
+      "sources": [
+        "https://www.hockeyindia.org/schedule/matches/20th-asian-games-aichi-nagoya-2026--women-",
+        "https://www.fih.hockey/outdoor-rankings/india-women-hockey-rankings-35",
+        "https://www.fih.hockey/outdoor-rankings/korea-women-hockey-rankings-42",
+        "https://www.hockeyindia.org/schedule/matches/fih-hockey-women---s-nations-cup-2026",
+        "https://www.hockeyindia.org/news/all-round-effort-powers-india-to-4-2-win-against-korea-in-their-first-super4s-match-at-womens-asia-cup-2025"
+      ]
+    },
+    {
+      "rank": 7,
       "sport": "VALORANT",
       "competition": "VALORANT Champions 2026 — Group B Winners Match",
       "start_jst": "2026-09-30T18:00:00+09:00",
@@ -235,7 +272,7 @@
       ]
     },
     {
-      "rank": 7,
+      "rank": 8,
       "sport": "テニス",
       "competition": "ATP 500 China Open Beijing — 1回戦",
       "start_jst": "2026-09-30T20:00:00+09:00",
@@ -269,7 +306,7 @@
       ]
     },
     {
-      "rank": 8,
+      "rank": 9,
       "sport": "Dota 2",
       "competition": "BLAST SLAM VIII — Group B LB Semi Final",
       "start_jst": "2026-10-01T01:00:00+09:00",
@@ -303,7 +340,7 @@
       ]
     },
     {
-      "rank": 9,
+      "rank": 10,
       "sport": "Dota 2",
       "competition": "BLAST SLAM VIII — Group A LB Semi Final",
       "start_jst": "2026-10-01T01:00:00+09:00",
@@ -337,7 +374,7 @@
       ]
     },
     {
-      "rank": 10,
+      "rank": 11,
       "sport": "サッカー女子",
       "competition": "UEFA Women's Champions League 2026/27 — League Phase",
       "start_jst": "2026-10-01T01:45:00+09:00",
@@ -384,10 +421,11 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "Roma Women vs Barcelona Women",
+      "Roma Women vs FC Barcelona Women",
       "Team Yandex vs MOUZ",
       "PARIVISION vs LGD Gaming",
-      "Level UP vs Xtreme Gaming"
+      "Level UP vs Xtreme Gaming",
+      "India Women vs Korea Women"
     ],
     "price_adjusted_top": [
       "100 Thieves vs FUT Esports",
