@@ -160,7 +160,7 @@ export function applyPayload(current, payload, ledger) {
         (system === "value2" && isFormal && (p.odds_taken == null || p.stake == null)) ||
         (system === "pro_edge" && isFormal && (p.bet_odds == null || p.stake == null));
       if (formalPriceMissing) { ledger.reject("pl", system, p.id, "正式採用なのにexact odds/stakeが無い。結果確定後の収益を正確に計算できないため登録しない"); continue; }
-      if (isFormal && ["06:00","12:00","18:00","23:00"].includes(payload.slot)) {
+      if (isFormal && ["06:00","17:00","22:00"].includes(payload.slot)) {
         if (!p.bet_at) { ledger.reject("pl", system, p.id, "正式採用なのにbet_at（採用/購入時刻）が無い"); continue; }
         if (system !== "pro_edge") {
           const mo=p.market_odds;
@@ -340,7 +340,7 @@ export function checkNext(current, next, payload, ledger, { schemas, cfg, now })
 
   // 定時更新で新たに敗戦が確定した正式カードは、同じ更新内に系統別post-match review必須。
   // 「結果だけ更新して敗因分析を忘れる」状態を本番完了扱いしない。
-  if (["06:00","12:00","18:00","23:00"].includes(payload.slot)) {
+  if (["06:00","17:00","22:00"].includes(payload.slot)) {
     for (const system of PICK_SYSTEMS) {
       const beforeRows = new Map((vmBefore[system]?.rows ?? []).map(r => [r.id, r]));
       const supplied = new Set((payload.post_match_reviews?.[system] ?? []).map(r => r.pick_id));
@@ -643,7 +643,7 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
 
       // 新規正式/監視/除外カードを inventory event まで追跡可能にする。
       // 定時更新の①〜④ new_picks は source_event_id 必須で、全件走査かつdeep_dive済みeventからしか作れない。
-      if (["06:00","12:00","18:00","23:00"].includes(payload.slot)) {
+      if (["06:00","17:00","22:00"].includes(payload.slot)) {
         const screeningSet = new Set((inv.screening_event_ids ?? []).map(String));
         for (const system of DISCOVERY) {
           const deepSet = new Set((c.systems?.[system]?.deep_dive_evidence ?? []).map(d => String(d.event_id)));
@@ -746,7 +746,7 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
 
 // ── 定時更新の全件完了証跡ゲート ──────────────────────────────────────
 function checkCompletionAudit(current, payload, ledger, { cfg }) {
-  if (!["06:00","12:00","18:00","23:00"].includes(payload.slot)) return;
+  if (!["06:00","17:00","22:00"].includes(payload.slot)) return;
   const c = payload.completion_audit;
   if (!c) {
     ledger.error("completion", "payload", null, "定時更新は completion_audit 必須。既存カード全件・結果照合・精算・収支再計算の証拠が無い");

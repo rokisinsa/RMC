@@ -1,16 +1,16 @@
 {
   "payload_version": 1,
-  "run_id": "fixture-2026-09-27-1800",
+  "run_id": "fixture-2026-09-27-1700",
   "source": "テスト用 fixture（架空・本番データには入れない）",
-  "generated_at": "2026-09-27T18:10:00+09:00",
-  "slot": "18:00",
+  "generated_at": "2026-09-27T17:10:00+09:00",
+  "slot": "17:00",
   "note": "stage-a の後に適用する架空の定時更新（結果更新・締切オッズ・試合後レビュー）",
   "result_updates": [
     {
-      "run_id": "mr-2026-09-27-1800-fixture-result",
+      "run_id": "mr-2026-09-27-1700-fixture-result",
       "kind": "result_update",
-      "at": "2026-09-27T18:00:00+09:00",
-      "source": "テスト用 fixture 18:00",
+      "at": "2026-09-27T17:00:00+09:00",
+      "source": "テスト用 fixture 17:00",
       "note": null,
       "changes": [
         {
@@ -34,7 +34,7 @@
                 "type": "official"
               }
             ],
-            "verified_at": "2026-09-27T17:55:00+09:00",
+            "verified_at": "2026-09-27T16:55:00+09:00",
             "source_confidence": "official",
             "note": "架空"
           }
@@ -53,9 +53,9 @@
       ],
       "discovery_runs": [
         {
-          "run_id": "rec-fixture-stage-b-1800",
-          "started_at": "2026-09-27T18:00:00+09:00",
-          "slot": "18:00",
+          "run_id": "rec-fixture-stage-b-1700",
+          "started_at": "2026-09-27T17:00:00+09:00",
+          "slot": "17:00",
           "note": "fixture complete scheduled discovery"
         }
       ]
@@ -90,9 +90,9 @@
       ],
       "discovery_runs": [
         {
-          "run_id": "pe-fixture-stage-b-1800",
-          "started_at": "2026-09-27T18:00:00+09:00",
-          "slot": "18:00",
+          "run_id": "pe-fixture-stage-b-1700",
+          "started_at": "2026-09-27T17:00:00+09:00",
+          "slot": "17:00",
           "note": "fixture complete scheduled discovery"
         }
       ]
@@ -100,9 +100,9 @@
     "value1": {
       "discovery_runs": [
         {
-          "run_id": "v1-fixture-stage-b-1800",
-          "started_at": "2026-09-27T18:00:00+09:00",
-          "slot": "18:00",
+          "run_id": "v1-fixture-stage-b-1700",
+          "started_at": "2026-09-27T17:00:00+09:00",
+          "slot": "17:00",
           "note": "fixture complete scheduled discovery"
         }
       ]
@@ -110,9 +110,9 @@
     "value2": {
       "discovery_runs": [
         {
-          "run_id": "v2-fixture-stage-b-1800",
-          "started_at": "2026-09-27T18:00:00+09:00",
-          "slot": "18:00",
+          "run_id": "v2-fixture-stage-b-1700",
+          "started_at": "2026-09-27T17:00:00+09:00",
+          "slot": "17:00",
           "note": "fixture complete scheduled discovery"
         }
       ]
@@ -122,8 +122,8 @@
     "recommendations": [
       {
         "pick_id": "rec-fx-00-a",
-        "created_at": "2026-09-27T18:05:00+09:00",
-        "update_run": "fixture-2026-09-27-1800",
+        "created_at": "2026-09-27T17:05:00+09:00",
+        "update_run": "fixture-2026-09-27-1700",
         "outcome": "win",
         "category": "other",
         "findings": "事前の評価どおり（架空）",
@@ -135,8 +135,8 @@
     "pro_edge": [
       {
         "pick_id": "pe-fx-00-a",
-        "created_at": "2026-09-27T18:05:00+09:00",
-        "update_run": "fixture-2026-09-27-1800",
+        "created_at": "2026-09-27T17:05:00+09:00",
+        "update_run": "fixture-2026-09-27-1700",
         "outcome": "win",
         "category": "variance",
         "findings": "締切で価格が動き CLV プラス（架空）",
@@ -168,7 +168,7 @@
       "mode": "bet_channel_only",
       "source_audit": {
         "bet_channel": {
-          "checked_at": "2026-09-27T18:10:00+09:00",
+          "checked_at": "2026-09-27T17:10:00+09:00",
           "source_urls": [
             "https://bet-channel.com/matches?lang=ja"
           ],
@@ -252,7 +252,7 @@
           "screening_digest": "fixture-screening-digest-20260927"
         },
         "casitabi": {
-          "checked_at": "2026-09-27T18:09:00+09:00",
+          "checked_at": "2026-09-27T17:09:00+09:00",
           "source_urls": [
             "https://fixture.example/casitabi"
           ],
@@ -264,7 +264,7 @@
           "event_ids": []
         },
         "bet365": {
-          "checked_at": "2026-09-27T18:09:00+09:00",
+          "checked_at": "2026-09-27T17:09:00+09:00",
           "source_urls": [
             "https://fixture.example/bet365"
           ],
@@ -276,7 +276,7 @@
           "event_ids": []
         },
         "yuugado": {
-          "checked_at": "2026-09-27T18:09:00+09:00",
+          "checked_at": "2026-09-27T17:09:00+09:00",
           "source_urls": [
             "https://fixture.example/yuugado"
           ],
@@ -2582,7 +2582,7 @@
     },
     "coverage_scope": "bet_channel_only",
     "self_audit": {
-      "checked_at": "2026-09-27T18:10:00+09:00",
+      "checked_at": "2026-09-27T17:10:00+09:00",
       "inventory_status": "pass",
       "inventory_self_audit_digest": "fixture-self-audit-digest-20260927",
       "anomalies_found": 0,
@@ -2674,7 +2674,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-26-log-barca"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2685,7 +2685,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-26-cha-mci"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2696,7 +2696,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-27-lat-ger-u21"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2707,7 +2707,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-27-smr-fin"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2718,7 +2718,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-26-kaz-uzb"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2729,7 +2729,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-26-chn-hkg"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2740,7 +2740,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-26-kor-vie"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2751,7 +2751,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-27-faze-furia"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2762,7 +2762,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-26-loud-edg"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2773,7 +2773,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-26-ge-vit"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2784,7 +2784,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-26-hos-oze"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2795,7 +2795,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-25-prz-gri"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2806,7 +2806,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-27-gl-k27"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2817,7 +2817,7 @@
         "source_urls": [
           "https://fixture.example/result-check/2026-09-27-jsk-barca"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       },
@@ -2828,7 +2828,7 @@
         "source_urls": [
           "https://fixture.example/official/fxpa-fxpb"
         ],
-        "verified_at": "2026-09-27T18:09:00+09:00",
+        "verified_at": "2026-09-27T17:09:00+09:00",
         "identity_ok": true,
         "note": "test fixture completion audit"
       }

@@ -13,11 +13,11 @@ test("定時41項目はちょうど41件・ID/タイトルが一意", () => {
   assert.ok(TITLES.every(x => typeof x === "string" && x.trim().length > 0));
 });
 
-test("定時枠は多少遅延しても最寄り枠へ紐づく（23:05→23:00）", () => {
-  const x=inferNextSlot(new Date("2026-09-27T23:05:00+09:00"));
-  assert.equal(x.slot, "23:00");
-  assert.equal(x.runId, "rmc-20260927-2300");
-  assert.equal(x.scheduledFor, "2026-09-27T23:00:00+09:00");
+test("定時枠は多少遅延しても最寄り枠へ紐づく（22:05→22:00）", () => {
+  const x=inferNextSlot(new Date("2026-09-27T22:05:00+09:00"));
+  assert.equal(x.slot, "22:00");
+  assert.equal(x.runId, "rmc-20260927-2200");
+  assert.equal(x.scheduledFor, "2026-09-27T22:00:00+09:00");
 });
 
 test("1〜40すべてPASSした場合だけ41番とrun全体をPASSにできる", () => {
@@ -34,7 +34,7 @@ test("1〜40すべてPASSした場合だけ41番とrun全体をPASSにできる"
 
 test("1項目でもFAILなら未実行項目をPASS扱いせず最終FAIL", () => {
   const db={schema_version:1,latest_run_id:null,runs:[]};
-  const r=ensure(db,{runId:"rmc-20260928-1200",slot:"12:00",scheduledFor:"2026-09-28T12:00:00+09:00",source:"test",startSha:"abcdef0"});
+  const r=ensure(db,{runId:"rmc-20260928-1700",slot:"17:00",scheduledFor:"2026-09-28T17:00:00+09:00",source:"test",startSha:"abcdef0"});
   mark(r,1,"pass","started");
   mark(r,2,"pass","legacy ok");
   mark(r,3,"fail","fixed odds missing");
@@ -58,19 +58,19 @@ test("公開用scheduled-update-checklist.jsonはschema PASS・41項目整合", 
 });
 
 test("並行監査マージ：passedを降格させず、pendingで既存証拠を消さない", () => {
-  const base={run_id:"rmc-20260928-1800",scheduled_for:"2026-09-28T18:00:00+09:00",status:"passed",blockers:[],checks:TITLES.map((title,i)=>({id:i+1,title,status:"pass",checked_at:"2026-09-28T18:20:00+09:00"})),summary:{pass:41,fail:0,blocked:0,pending:0,total:41},updated_at:"2026-09-28T18:20:00+09:00"};
+  const base={run_id:"rmc-20260928-1700",scheduled_for:"2026-09-28T17:00:00+09:00",status:"passed",blockers:[],checks:TITLES.map((title,i)=>({id:i+1,title,status:"pass",checked_at:"2026-09-28T17:20:00+09:00"})),summary:{pass:41,fail:0,blocked:0,pending:0,total:41},updated_at:"2026-09-28T17:20:00+09:00"};
   const stale=structuredClone(base);
-  stale.status="failed"; stale.checks[2].status="fail"; stale.checks[2].checked_at="2026-09-28T18:10:00+09:00"; stale.summary={pass:40,fail:1,blocked:0,pending:0,total:41};
+  stale.status="failed"; stale.checks[2].status="fail"; stale.checks[2].checked_at="2026-09-28T17:10:00+09:00"; stale.summary={pass:40,fail:1,blocked:0,pending:0,total:41};
   assert.equal(mergeRun(base,stale).status,"passed");
 
   const running=structuredClone(base); running.status="running"; running.checks[40].status="pending"; running.summary={pass:40,fail:0,blocked:0,pending:1,total:41};
-  const incoming=structuredClone(running); incoming.checks[0].status="pending"; incoming.checks[0].checked_at="2026-09-28T18:30:00+09:00";
+  const incoming=structuredClone(running); incoming.checks[0].status="pending"; incoming.checks[0].checked_at="2026-09-28T17:30:00+09:00";
   const merged=mergeRun(running,incoming);
   assert.equal(merged.checks[0].status,"pass");
 });
 
 test("並行監査マージ：新しい再試行証拠でFAILをPASSへ更新できる", () => {
-  const mk=(status,at)=>({run_id:"rmc-20260928-2300",scheduled_for:"2026-09-28T23:00:00+09:00",status:"failed",blockers:["fixed_odds_incomplete"],checks:TITLES.map((title,i)=>({id:i+1,title,status:i===2?status:"pending",checked_at:at})),summary:{pass:0,fail:status==="fail"?1:0,blocked:0,pending:status==="fail"?40:41,total:41},updated_at:at});
+  const mk=(status,at)=>({run_id:"rmc-20260928-2200",scheduled_for:"2026-09-28T22:00:00+09:00",status:"failed",blockers:["fixed_odds_incomplete"],checks:TITLES.map((title,i)=>({id:i+1,title,status:i===2?status:"pending",checked_at:at})),summary:{pass:0,fail:status==="fail"?1:0,blocked:0,pending:status==="fail"?40:41,total:41},updated_at:at});
   const old=mk("fail","2026-09-28T22:35:00+09:00");
   const fresh=mk("pass","2026-09-28T22:50:00+09:00"); fresh.blockers=[];
   assert.equal(mergeRun(old,fresh).checks[2].status,"pass");

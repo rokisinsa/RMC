@@ -3,8 +3,8 @@ name: BET CHANNEL Japan Fixed Odds
 on:
   workflow_dispatch:
   schedule:
-    # JST 05:20 / 11:20 / 17:20 / 22:20
-    - cron: "20 20,2,8,13 * * *"
+    # JST 05:20 / 16:20 / 21:20
+    - cron: "20 20,7,12 * * *"
   push:
     branches: [main]
     paths:

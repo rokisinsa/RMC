@@ -1,9 +1,8 @@
 name: RMC scheduled 41-check audit
 
 on:
-  workflow_run:
-    workflows: ["BET CHANNEL complete inventory"]
-    types: [completed]
+  # Inventory completion alone must never create a newer "unfinished" production run.
+  # The real 41-check audit is created/finalized inside rmc-production-update.
   workflow_dispatch:
 
 permissions:
