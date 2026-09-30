@@ -160,7 +160,7 @@ export function applyPayload(current, payload, ledger) {
         (system === "value2" && isFormal && (p.odds_taken == null || p.stake == null)) ||
         (system === "pro_edge" && isFormal && (p.bet_odds == null || p.stake == null));
       if (formalPriceMissing) { ledger.reject("pl", system, p.id, "正式採用なのにexact odds/stakeが無い。結果確定後の収益を正確に計算できないため登録しない"); continue; }
-      if (isFormal && ["06:00","12:00","18:00","23:00"].includes(payload.slot)) {
+      if (isFormal && ["06:00","17:00","22:00"].includes(payload.slot)) {
         if (!p.bet_at) { ledger.reject("pl", system, p.id, "正式採用なのにbet_at（採用/購入時刻）が無い"); continue; }
         if (system !== "pro_edge") {
           const mo=p.market_odds;
