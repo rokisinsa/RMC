@@ -29,7 +29,7 @@ permissions:
 
 concurrency:
   group: rmc-cco-full-production
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   full-run:
@@ -66,8 +66,8 @@ console.log(`slot=${slot}`);
 NODE
 )"
           else
-            run_id="$(node -e 'const x=require("./ops/cco-run.trigger");process.stdout.write(x.run_id)')"
-            slot="$(node -e 'const x=require("./ops/cco-run.trigger");process.stdout.write(x.slot)')"
+            run_id="$(node -e 'const fs=require("fs");const x=JSON.parse(fs.readFileSync("ops/cco-run.trigger","utf8"));process.stdout.write(x.run_id)')"
+            slot="$(node -e 'const fs=require("fs");const x=JSON.parse(fs.readFileSync("ops/cco-run.trigger","utf8"));process.stdout.write(x.slot)')"
           fi
           echo "RMC_RUN_ID=$run_id" >> "$GITHUB_ENV"
           echo "RMC_SLOT=$slot" >> "$GITHUB_ENV"
