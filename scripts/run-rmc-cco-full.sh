@@ -9,7 +9,12 @@ RMC_SOURCE="${RMC_SOURCE:-CCO full production runner}"
 
 CCO_BIN="$(command -v cco || true)"
 if [ -z "$CCO_BIN" ]; then CCO_BIN="$(command -v claude || true)"; fi
-if [ -z "$CCO_BIN" ]; then echo "CCO/Claude Code CLI not found on PATH" >&2; exit 20; fi
+if [ -z "$CCO_BIN" ]; then
+  echo "CCO/Claude Code CLI not found; installing Claude Code CLI"
+  npm install -g @anthropic-ai/claude-code
+  CCO_BIN="$(command -v claude || true)"
+fi
+if [ -z "$CCO_BIN" ]; then echo "CCO/Claude Code CLI installation failed" >&2; exit 20; fi
 "$CCO_BIN" --version || true
 
 mkdir -p tmp incoming
