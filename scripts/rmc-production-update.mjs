@@ -49,6 +49,17 @@ const PAST_TIME_KEYS = new Set(["at", "discovered_at", "locked_at", "bet_at", "o
   "checked_at", "started_at", "set_at", "result_confirmed_at", "trained_through"]);
 const NULLISH_TEXT = new Set(["", "null", "NULL", "Null", "N/A", "n/a", "NA", "NaN", "undefined", "-", "—", "?", "不明"]);
 const ISO_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:\d{2})$/;
+const DIAGNOSTIC_ANALYSIS_RE = /(?:\bCI\b|live coverage)\s*(?:rehearsal|dry[- ]?run)|rehearsal|gate validation only|mechanism test/i;
+const diagnosticEvidenceText = d => [
+  d?.note,
+  d?.analysis_detail?.summary,
+  d?.analysis_detail?.rationale?.conclusion,
+  ...(d?.analysis_detail?.rationale?.why ?? []),
+  ...(d?.analysis_detail?.rationale?.risks ?? [])
+].filter(Boolean).map(String).join(" ");
+const isDiagnosticEvidence = d => DIAGNOSTIC_ANALYSIS_RE.test(diagnosticEvidenceText(d));
+const isDiagnosticAnalysisRun = r => DIAGNOSTIC_ANALYSIS_RE.test(String(r?.meta?.source ?? ""))
+  || Object.values(r?.systems ?? {}).some(s => (s?.candidates ?? []).some(isDiagnosticEvidence));
 
 const clone = x => structuredClone(x);
 const sha256 = text => createHash("sha256").update(text).digest("hex");
@@ -685,6 +696,14 @@ function checkCoverageAudit(payload, ledger, { dataDir = DATA_DIR } = {}) {
       if (deepCount!==x.deep_dived) ledger.error("coverage",system,null,`screening_evidenceのdeep_dive件数 ${deepCount} != deep_dived ${x.deep_dived}`);
       for (const e of evidence) if (!Array.isArray(e.reason_codes)||!e.reason_codes.length) ledger.error("coverage",system,e.event_id,"一次判定reason_codesが無い");
       const dd=x.deep_dive_evidence ?? [];
+      if (["06:00","17:00","22:00"].includes(payload.slot) && Array.isArray(dd)) {
+        const diagnostic=dd.filter(isDiagnosticEvidence);
+        if (diagnostic.length) ledger.error("analysis_quality",system,null,`診断/rehearsal由来のdeep_diveを本番公開しようとしている: ${diagnostic.length}件`);
+        const insufficient=dd.filter(d=>d?.outcome==="insufficient_data").length;
+        if (dd.length>=5 && insufficient/dd.length>0.60) {
+          ledger.error("analysis_quality",system,null,`deep_dive ${dd.length}件中 insufficient_data ${insufficient}件（60%超）。外部調査不足のため本番公開を拒否`);
+        }
+      }
       if (!Array.isArray(dd) || dd.length!==x.deep_dived) ledger.error("coverage",system,null,`deep_dive_evidence件数 ${dd?.length ?? 0} != deep_dived ${x.deep_dived}`);
       else {
         const ddIds=dd.map(e=>e.event_id);
@@ -962,13 +981,14 @@ export function runUpdate({ payloadText, dataDir = DATA_DIR, now = new Date().to
         else if (prev.meta?.run_id && prev.systems) previousRuns = [{ meta: prev.meta, systems: prev.systems }];
       } catch {}
     }
-    previousRuns = previousRuns.filter(r => r?.meta?.run_id !== payload.run_id);
+    previousRuns = previousRuns.filter(r => r?.meta?.run_id !== payload.run_id && !isDiagnosticAnalysisRun(r));
     previousRuns.push(runAnalysis);
     const systemAnalysis = {
       schema_version: 2,
       meta: runAnalysis.meta,
       systems: runAnalysis.systems,
-      runs: previousRuns.slice(-40)
+      // 履歴は実運用に必要な直近分だけ。診断runを落とし、巨大JSON化と古い「データ不足」再表示を防ぐ。
+      runs: previousRuns.slice(-8)
     };
     writes.push([analysisPath, JSON.stringify(systemAnalysis, null, 2) + "\n"]);
   }
