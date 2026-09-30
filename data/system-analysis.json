@@ -923,7 +923,7 @@
           "outcome": "candidate",
           "note": "格差S-。H2H 0-0-3、総得点1-10。Barcelonaの直近得点力も高い。",
           "analysis_detail": {
-            "summary": "UWCL League Phase Matchday 2。UEFA H2HはRoma 0勝、Barcelona 3勝、総得点1-10。Barcelonaは直近公式6試合級で大量得点が続き、Romaも国内では好調だが欧州初戦OH Leuvenと0-0。公開最良級1/14=1.0714は必要勝率93.33%で、価格はかなり厳しい。",
+            "summary": "UWCL League Phase Matchday 2。UEFA公式ではBarcelonaが過去3戦3勝、総得点10-1。直近10はRomaが7勝1分2敗相当（PK戦敗退を敗戦扱い）、Barcelonaは10勝0敗。直近10内の共通相手は確認できず、H2Hと各自の近況を重視。Barcelona 1.0714前後なら必要勝率93.33%で価格はかなり厳しい。",
             "h2h": {
               "status": "checked",
               "summary": "UEFA公式：Barcelona 3戦3勝、総得点10-1。",
@@ -951,16 +951,16 @@
               "status": "checked",
               "side_a": {
                 "label": "Roma",
-                "summary": "直近公式：Sassuolo 3-1、OH Leuven 0-0、Juventus cupはPK負け、Sassuolo 7-1、Fiorentina3-0。",
+                "summary": "公式結果ベース直近10：7勝1分2敗相当。国内では得点力がある一方、UWCL初戦OH Leuvenは0-0。PK戦敗退は最終勝敗で敗戦扱い。",
                 "items": [
                   {
                     "date": "2026-09-27",
-                    "label": "vs Sassuolo",
+                    "label": "at Sassuolo",
                     "result": "3-1 W"
                   },
                   {
                     "date": "2026-09-23",
-                    "label": "vs OH Leuven",
+                    "label": "at OH Leuven",
                     "result": "0-0 D"
                   },
                   {
@@ -970,23 +970,48 @@
                   },
                   {
                     "date": "2026-09-13",
-                    "label": "vs Sassuolo",
+                    "label": "at Sassuolo",
                     "result": "7-1 W"
                   },
                   {
                     "date": "2026-09-05",
                     "label": "vs Fiorentina",
                     "result": "3-0 W"
+                  },
+                  {
+                    "date": "2026-08-30",
+                    "label": "vs Sassuolo",
+                    "result": "0-1 L"
+                  },
+                  {
+                    "date": "2026-08-22",
+                    "label": "at Ternana",
+                    "result": "2-0 W"
+                  },
+                  {
+                    "date": "2026-05-16",
+                    "label": "vs Genoa",
+                    "result": "2-0 W"
+                  },
+                  {
+                    "date": "2026-05-10",
+                    "label": "at Sassuolo",
+                    "result": "3-0 W"
+                  },
+                  {
+                    "date": "2026-05-02",
+                    "label": "vs Ternana",
+                    "result": "2-0 W"
                   }
                 ]
               },
               "side_b": {
                 "label": "Barcelona",
-                "summary": "直近国内・欧州で高得点連続。",
+                "summary": "公式結果ベース直近10：10勝0敗。10試合で大量得点が続き、UWCL初戦Paris FCにも5-2。",
                 "items": [
                   {
-                    "date": "2026-09-27",
-                    "label": "vs Espanyol",
+                    "date": "2026-09-26",
+                    "label": "at Logroño United",
                     "result": "2-0 W"
                   },
                   {
@@ -995,31 +1020,51 @@
                     "result": "5-2 W"
                   },
                   {
-                    "date": "2026-09-21",
-                    "label": "vs Sevilla",
-                    "result": "5-0 W"
+                    "date": "2026-09-18",
+                    "label": "at Alavés",
+                    "result": "6-0 W"
                   },
                   {
                     "date": "2026-09-12",
-                    "label": "vs Logroño",
+                    "label": "vs Atlético Madrid",
+                    "result": "4-2 W"
+                  },
+                  {
+                    "date": "2026-09-05",
+                    "label": "at Sevilla",
                     "result": "4-0 W"
                   },
                   {
-                    "date": "2026-09-07",
-                    "label": "vs Athletic",
-                    "result": "8-1 W"
+                    "date": "2026-08-30",
+                    "label": "vs Tenerife",
+                    "result": "5-0 W"
                   },
                   {
-                    "date": "2026-08-30",
-                    "label": "vs Alhama",
-                    "result": "8-0 W"
+                    "date": "2026-05-31",
+                    "label": "at Madrid CFF",
+                    "result": "4-0 W"
+                  },
+                  {
+                    "date": "2026-05-27",
+                    "label": "vs Real Sociedad",
+                    "result": "2-1 W"
+                  },
+                  {
+                    "date": "2026-05-23",
+                    "label": "vs OL Lyonnes",
+                    "result": "4-0 W"
+                  },
+                  {
+                    "date": "2026-05-16",
+                    "label": "vs Atlético Madrid",
+                    "result": "3-1 W"
                   }
                 ]
               }
             },
             "common_opponent_comparison": {
               "status": "not_applicable",
-              "summary": "直近6試合内で有効な共通相手を確認できず。",
+              "summary": "双方の直近10試合を照合したが、有効な共通対戦相手は0。ここは無理に比較せず、H2H・直近10の勝敗/得失点・大会実績を優先する。",
               "items": []
             },
             "ranking_or_rating": {
@@ -1058,7 +1103,7 @@
             ]
           },
           "source_urls": [
-            "https://www.uefa.com/womenschampionsleague/history/h2h/2610208/2601945/",
+            "https://www.uefa.com/womenschampionsleague/news/02a9-21afa19319f9-958ff55d44a6-1000--women-s-champions-league-matchday-2-roma-vs-barcelona-facts/",
             "https://www.asroma.com/en/women/results",
             "https://www.fcbarcelona.com/en/football/womens-football/results",
             "https://www.oddschecker.com/football/womens-club/womens-champions-league/roma-women-v-barcelona-women/winner"
