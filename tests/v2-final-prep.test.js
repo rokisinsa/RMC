@@ -266,13 +266,15 @@ test("経験値取引は4系統とは別に表示・集計し、VALUE①②の�
 });
 
 
-test("本日・深夜の格差試合は上段1本化し、行クリックでH2H・直近10・共通相手を開く", () => {
+test("本日の分析は上段1本化し、行クリックでH2H・直近10・共通相手を開く", () => {
   const page=readFileSync("analysis-v2.js","utf8");
   const render=readFileSync("lib/view/render.js","utf8");
   assert.match(page,/gap-main-row/);
   assert.match(page,/直近10試合｜勝敗・スコア・得失点\/SET\/MAP/);
   assert.match(page,/直近の共通対戦相手比較｜スコア・勝敗・SET\/MAP差/);
+  assert.match(page,/本日の分析/);
   assert.match(page,/下に同じ1〜11をもう一度表示しません/);
+  assert.equal((render.match(/renderInlineLatestAnalysis\(r\.latest_analysis\)/g) ?? []).length,0);
   assert.doesNotMatch(render,/\$\{renderSystemAnalysis\(analysis, "24時間以内の格差候補"\)\}/);
 });
 
