@@ -184,7 +184,7 @@ test("V2 は旧 analysis.html を取得しない（コード上に取得処理�
 
 test("V2 の描画に必要な情報がすべてデータから揃う（①②③④・経験値・旧分析メモ）", () => {
   const html = renderPage(vmOf(fresh()));
-  for (const id of ["sec-rec", "sec-v1", "sec-v2", "sec-pe", "sec-exp"]) assert.ok(html.includes(`id="${id}"`), id);
+  for (const id of ["sec-rec", "sec-v1", "sec-v2", "sec-pe"]) assert.ok(html.includes(`id="${id}"`), id);
   assert.ok(html.includes("<td>2021/6/11</td>"));                                         // 中国–モルディブの H2H
   assert.ok(html.includes("3DMAXが圧倒的に強いからではなく"));                              // VALUE① NiP の分析本文
   assert.ok(!html.includes("data-legacy-key"));                                           // 旧ファイルからの差し込み枠は無い
@@ -256,10 +256,10 @@ test("複利の監査スクリプトが両方の計算過程を出す", () => {
 });
 
 // ── その他の維持事項 ───────────────────────────────────────
-test("経験値取引は4系統とは別に表示・集計し、VALUE①②の並び順は旧表のまま", () => {
+test("経験値取引は公開画面に表示せず、VALUE①②の並び順は旧表のまま", () => {
   const vm = vmOf(fresh());
   const html = renderPage(vm);
-  assert.ok(html.indexOf('id="sec-exp"') > html.indexOf('id="sec-pe"'));
+  assert.ok(!html.includes('id="sec-exp"'));
   assert.deepEqual(vm.value1.rows.map(r => r.legacy.row_index), [0, 1, 2, 3, 4, 5, 6, 7, 8]);
   assert.deepEqual(vm.value2.rows.map(r => r.legacy.row_index), [0, 1]);
   assert.equal(vm.recommendations.duplicates.groups, 6);
