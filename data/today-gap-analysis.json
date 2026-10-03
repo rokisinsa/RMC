@@ -992,5 +992,407 @@
       "価格は開始前再確認。今回の更新はH2H・直近10・共通相手比較を主目的とする"
     ],
     "caution": "格差と価格は別判定。未確認の直近10/H2Hは推測で埋めず、そのまま未確認表示。"
+  },
+  "previous_analysis": {
+    "generated_at": "2026-09-30T17:39:31+09:00",
+    "window": {
+      "from": "2026-09-30T17:39:31+09:00",
+      "to": "2026-10-01T09:30:00+09:00",
+      "timezone": "Asia/Tokyo",
+      "note": "9/30 JSTの残り時間を主対象とし、欧州9/30開催でJST日付またぎになる深夜カードも併記"
+    },
+    "candidates": [
+      {
+        "rank": 1,
+        "sport": "Dota 2",
+        "competition": "BLAST SLAM VIII — Group C UB Semi Final",
+        "start_jst": "2026-09-30T19:00:00+09:00",
+        "matchup": "Team Yandex vs MOUZ",
+        "favored": "Team Yandex",
+        "venue": "BLAST Arena Studios, Malta",
+        "format": "BO3 / LAN",
+        "status": "price_reject",
+        "gap_grade": "S-",
+        "price_grade": "D",
+        "odds": {
+          "min": 1.03,
+          "max": 1.06,
+          "book_examples": "Stake 1.03–1.06 / CyberScore 1.05",
+          "required_win_rate_pct": "94.34–97.09"
+        },
+        "estimated_win_probability_pct": "88–91",
+        "estimated_ev_pct": "-6.7〜-3.5（1.06基準）",
+        "ranking_rating": "外部ELOモデルでYandex 89%対MOUZ 11%。",
+        "h2h": "直近確認5シリーズはYandex 4勝1敗。スコア: 2-1, 2-0, 2-1, 0-1, 1-0（合計マップ7-3）。",
+        "recent_form": "Yandex直近5: NAVI 3-0, LGD 2-0, Aurora 2-1, 1win 2-0, NAVI 2-0＝5連勝。MOUZ直近5: LGD 0-2, Hokori 2-0, Nemesis 0-2, Pibbles 2-0, Yandex 1-2＝2勝3敗。",
+        "common_opponents": "LGD比較: YandexはLGDに2-0、MOUZはLGDに0-2。同一相手への直近結果はYandex優勢。",
+        "roster": "Yandex: watson / CHIRA_JUNIOR / ATF / Saksa / Malady。MOUZ: 423 / Supream / BOOM / mrls / MoOz。",
+        "early_tendency": "事前draft/vetoは未確定。LAN BO3のためMap1固定評価は行わない。",
+        "risk": "実力差は大きいが1.03–1.06は必要勝率が高すぎる。『強い=価格が良い』ではない。",
+        "conclusion": "格差そのものは本日最上位級。ただし勝者市場は価格NG。RMCでは格差候補として残し、正式VALUEからは除外。",
+        "sources": [
+          "https://blast.tv/dota/tournaments/blast-slam-viii/series/62e32ac8/yandex-mouz",
+          "https://bo3.gg/dota2/matches/team-yandex-vs-mouz-dota2-30-09-2026",
+          "https://stake.bet/sports/dota-2/international-2/blast-slam-viii-t1"
+        ]
+      },
+      {
+        "rank": 2,
+        "sport": "VALORANT",
+        "competition": "VALORANT Champions 2026 — Group A Winners Match",
+        "start_jst": "2026-09-30T21:00:00+09:00",
+        "matchup": "100 Thieves vs FUT Esports",
+        "favored": "100 Thieves",
+        "venue": "Champions 2026",
+        "format": "BO3 / Patch 13.05",
+        "status": "candidate",
+        "gap_grade": "A",
+        "price_grade": "A-",
+        "odds": {
+          "min": 1.34,
+          "max": 1.4,
+          "book_examples": "Stake 1.38 / VLR 1.34–1.40",
+          "required_win_rate_pct": "71.43–74.63"
+        },
+        "estimated_win_probability_pct": "75–79",
+        "estimated_ev_pct": "+3.5〜+9.0（1.38基準）",
+        "ranking_rating": "Tips.GG rating: 100T #9 / FUT #18。直近30日勝率表示は100T 100%、FUT 50%。",
+        "h2h": "確認4シリーズ: 100T 3勝1敗。2024 Masters Shanghai 2-0、2023 Red Bull 0-1、LOCK//IN 2-1、2022 Red Bull 2-0。",
+        "recent_form": "100T: T1 2-0, LOUD 3-2, NRG 2-0, LEVIATÁN 2-0, LOUD 2-0＝5連勝。FUT: JDG 2-0, Team Liquid 0-3, Karmine Corp 0-2, BBL 2-1, Team Liquid 2-0＝3勝2敗。",
+        "common_opponents": "直近5の双方に完全一致する相手は確認できず。共通相手比較は未成立。",
+        "roster": "当日確定roster/Map vetoは試合直前更新待ち。Patch 13.05は確認済み。",
+        "early_tendency": "Map veto未確定のためMap1勝率の断定はしない。",
+        "risk": "FUTは直近でJDGを2-0。古いH2Hだけで過大評価しない。",
+        "conclusion": "本日の『格差＋価格』の両立候補。100T側は単なる低オッズではなく、直近連勝・H2H・rating差が同方向。",
+        "sources": [
+          "https://www.vlr.gg/753446/100-thieves-vs-fut-esports-valorant-champions-2026-winners-a",
+          "https://stake.com/ja/sports/valorant/international-13/valorant-champions-2026-t2/854993-100-thieves-fut-esports",
+          "https://tips.gg/matches/valorant/30-09-2026/100-thieves-vs-fut-esports/10-00/"
+        ]
+      },
+      {
+        "rank": 3,
+        "sport": "Dota 2",
+        "competition": "BLAST SLAM VIII — Group C UB Semi Final",
+        "start_jst": "2026-09-30T19:00:00+09:00",
+        "matchup": "BetBoom Team vs OG",
+        "favored": "BetBoom Team",
+        "venue": "BLAST Arena Studios, Malta",
+        "format": "BO3 / LAN",
+        "status": "watch",
+        "gap_grade": "A",
+        "price_grade": "C",
+        "odds": {
+          "min": 1.22,
+          "max": 1.25,
+          "book_examples": "Stake 1.22 / 21.com 1.25",
+          "required_win_rate_pct": "80.00–81.97"
+        },
+        "estimated_win_probability_pct": "78–82",
+        "estimated_ev_pct": "-4.8〜0.0（1.22基準）",
+        "ranking_rating": "外部ELOモデル79%対21%。D2PT長期データ: BetBoom 57.7% / OG 43.4%。",
+        "h2h": "BLAST公式の直近5はBetBoom 4勝1敗。2-0, 1-0, 2-0, 2-1, 0-2。",
+        "recent_form": "BetBoomはTI直近でSpiritに0-2、Nigmaに2-1、1winに2-1、PARIに1-2、Auroraに2-0。OGは直近でGamerLegion 0-2、HULIGANI 2-1、Resilience 0-2、Nigma 0-2、BetBoom 0-2。",
+        "common_opponents": "直近5内で完全な同一相手比較は限定的。直接H2Hの情報量を優先。",
+        "roster": "BetBoom: Kiritych / Save- / MieRo / swedenstrong / Kataomi。OG: Natsumi / Topson / SSS / OneJey / skem。",
+        "early_tendency": "draft未確定。D2PT長期値ではBetBoomのlane advantage・lead conversionがOGを上回る。",
+        "risk": "BetBoomはroster変更あり。1.22では必要勝率82%近く、価格余裕が薄い。",
+        "conclusion": "実力差A。ただし価格面はWATCH。1.25以上なら再評価、1.22以下なら見送り寄り。",
+        "sources": [
+          "https://blast.tv/dota/tournaments/blast-slam-viii/series/3640a19c/BetBoom-og",
+          "https://dota2protracker.com/teams/betboom-team-8255888/compare/og-2586976",
+          "https://cyberscore.live/en/matches/betboom-team-vs-og-179567/"
+        ]
+      },
+      {
+        "rank": 4,
+        "sport": "Dota 2",
+        "competition": "BLAST SLAM VIII — Group A Winners Match",
+        "start_jst": "2026-09-30T22:00:00+09:00",
+        "matchup": "PARIVISION vs LGD Gaming",
+        "favored": "PARIVISION",
+        "venue": "BLAST Arena Studios, Malta",
+        "format": "BO3 / LAN / Patch 7.41f",
+        "status": "price_reject",
+        "gap_grade": "A+",
+        "price_grade": "D",
+        "odds": {
+          "min": 1.08,
+          "max": 1.11,
+          "book_examples": "EGW 1.08 / VBET 1.11",
+          "required_win_rate_pct": "90.09–92.59"
+        },
+        "estimated_win_probability_pct": "82–86",
+        "estimated_ev_pct": "-9.0〜-4.5（1.11基準）",
+        "ranking_rating": "EGamersWorld rating #6 vs #19。",
+        "h2h": "公式確認1回はLGD 1-0 PARIVISION（BLAST Slam VII）。ただし現LGDはThiolicor以外が大きく入れ替わっている。",
+        "recent_form": "PARI直近5は5勝、直近10は9勝。LGD直近5は3勝、直近10は6勝。PARIは初戦Level UPを2-0、LGDはXtremeを2-1。",
+        "common_opponents": "Team Yandex: PARIはTIで2-1勝利、LGDはWallachiaで0-2敗戦。MOUZ: PARI 2-0、LGD 2-0で互角。",
+        "roster": "PARI: Satanic / No[o]ne- / Noticed / 9Class / Dukalis。LGD: Wits / SumaiL- / Davai / Thiolicor / Sneyking。",
+        "early_tendency": "Patch 7.41f。veto/draftは未確定。LGDは新rosterで変動幅が大きい。",
+        "risk": "唯一のH2HはLGD勝ち。BO3で1.08–1.11は価格が極端。",
+        "conclusion": "純粋な格差候補A+だが、勝者オッズは価格NG。正式VALUEには入れない。",
+        "sources": [
+          "https://egamersworld.com/dota2/tip/a-kpz7LXO/parivision-vs-lgd-gaming-QvMo8Hc9D",
+          "https://blast.tv/dota/news/blast-slam-VIII-team-rosters",
+          "https://www.vbet.com/es/esports"
+        ]
+      },
+      {
+        "rank": 5,
+        "sport": "Dota 2",
+        "competition": "BLAST SLAM VIII — Group B UB Final",
+        "start_jst": "2026-09-30T22:00:00+09:00",
+        "matchup": "Team Spirit vs 1win",
+        "favored": "Team Spirit",
+        "venue": "BLAST Arena Studios, Malta",
+        "format": "BO3 / LAN",
+        "status": "candidate",
+        "gap_grade": "A",
+        "price_grade": "B+",
+        "odds": {
+          "min": 1.38,
+          "max": 1.44,
+          "book_examples": "21.com 1.38 / VBET 1.44",
+          "required_win_rate_pct": "69.44–72.46"
+        },
+        "estimated_win_probability_pct": "72–77",
+        "estimated_ev_pct": "+3.7〜+10.9（1.44基準）",
+        "ranking_rating": "SpiritはTI 2026王者。1winは強い個人名を持つが新編成。",
+        "h2h": "BLAST公式の現カードではSpirit 2勝0敗。TI 2026 2-0、DreamLeague Season 22 2-0。",
+        "recent_form": "Spiritは9/29 Nemesisに2-1。1winは9/29 NAVIに2-1。両者とも初戦勝利。",
+        "common_opponents": "直近の完全一致比較は十分な同期間サンプルを確認できず。直接H2Hを優先。",
+        "roster": "Spirit: Yatoro / Larl / Batyuk / not me / rue。1win: Pure / bzm / 33 / Ari / Whitemon。",
+        "early_tendency": "当日Picks/Bansは未確定。",
+        "risk": "1winはNAVIを2-1で破っており、rosterの個人火力は高い。旧H2Hの比重を上げすぎない。",
+        "conclusion": "格差A＋価格は本日比較的まとも。1.38より1.44側を優先して評価。",
+        "sources": [
+          "https://blast.tv/dota/tournaments/blast-slam-viii/series/0f3c19a3/spirit-1win",
+          "https://blast.tv/dota/news/blast-slam-VIII-team-rosters",
+          "https://www.vbet.com/es/esports"
+        ]
+      },
+      {
+        "rank": 6,
+        "sport": "女子ホッケー",
+        "competition": "20th Asian Games Aichi-Nagoya 2026 — Women Semi Final",
+        "start_jst": "2026-09-30T19:00:00+09:00",
+        "matchup": "India Women vs Korea Women",
+        "favored": "India Women",
+        "venue": "Gifu Prefectural Green Stadium / Aichi-Nagoya, Japan",
+        "format": "60分 / Semifinal",
+        "status": "watch",
+        "gap_grade": "A-",
+        "price_grade": "未確認",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "対象4サイトの確定プレマッチ価格は今回未確認",
+          "required_win_rate_pct": "未確認"
+        },
+        "estimated_win_probability_pct": "72–78",
+        "estimated_ev_pct": "オッズ未確認のため未算定",
+        "ranking_rating": "FIH: Indiaは8位前後、Koreaは17位前後。直近大会前後の公式ランキングで約9位差。",
+        "h2h": "直近確認できたシニア公式対戦は2025 Women’s Asia Cup Super4sでIndia 4-2 Korea。過去全件は今回の公開検索で完全列挙できず、確認済み分のみ採用。",
+        "recent_form": "今大会Indiaは5戦5勝・66得点3失点（19-0 Uzbekistan, 17-1 Indonesia, 20-1 Thailand, 3-1 Japan, 7-0 Singapore）。Koreaは4勝1敗・20得点5失点（3-1 Chinese Taipei, 7-0 Kazakhstan, 8-0 Bangladesh, 0-3 China, 2-1 Malaysia）。",
+        "common_opponents": "Japan比較: Indiaは9/25 Asian GamesでJapanに3-1。Koreaは6/21 Nations CupでJapanと0-0、SO 5-4勝ち。大会条件は違うが、直近の共通相手に対する規定時間内容はIndia優勢。",
+        "roster": "大会登録メンバーは公式大会運用中。当日先発XI/欠場の最終確定は未確認。",
+        "early_tendency": "IndiaはJapan戦で前半2-0。大量得点した下位相手戦でも早い時間帯から主導。KoreaはChina戦0-3で上位相手への攻撃出力に課題。",
+        "risk": "KoreaはNations Cup 5位でJapanをSOで破る力があり、準決勝の1試合勝負。市場価格がないためVALUE判定はしない。",
+        "conclusion": "リアルスポーツの本日上位格差候補。大会成績・ランキング・共通相手はIndia優勢。ただしオッズ未確認なので正式VALUEではなくWATCH。",
+        "sources": [
+          "https://www.hockeyindia.org/schedule/matches/20th-asian-games-aichi-nagoya-2026--women-",
+          "https://www.fih.hockey/outdoor-rankings/india-women-hockey-rankings-35",
+          "https://www.fih.hockey/outdoor-rankings/korea-women-hockey-rankings-42",
+          "https://www.hockeyindia.org/schedule/matches/fih-hockey-women---s-nations-cup-2026",
+          "https://www.hockeyindia.org/news/all-round-effort-powers-india-to-4-2-win-against-korea-in-their-first-super4s-match-at-womens-asia-cup-2025"
+        ]
+      },
+      {
+        "rank": 7,
+        "sport": "VALORANT",
+        "competition": "VALORANT Champions 2026 — Group B Winners Match",
+        "start_jst": "2026-09-30T18:00:00+09:00",
+        "matchup": "Team Vitality vs LOUD",
+        "favored": "LOUD",
+        "venue": "VALORANT Champions 2026",
+        "format": "BO3 / Patch 13.05",
+        "status": "candidate",
+        "gap_grade": "B+",
+        "price_grade": "B+",
+        "odds": {
+          "min": 1.63,
+          "max": 1.72,
+          "book_examples": "VLR 1.63–1.67 / Stake 1.68",
+          "required_win_rate_pct": "58.14–61.35"
+        },
+        "estimated_win_probability_pct": "62–66",
+        "estimated_ev_pct": "+4.2〜+10.9（1.68基準）",
+        "ranking_rating": "Tips.GG rating: Vitality #20 / LOUD #6。",
+        "h2h": "公式確認できる過去対戦は0。",
+        "recent_form": "Vitality: Global 2-1, Fire Flux 1-2, Enterprise 1-2, FUT 2-1, Gentle Mates 2-1。LOUD: EDG 2-0, 100T 2-3, NRG 3-2, G2 2-0, MIBR 2-0。",
+        "common_opponents": "直近5で完全一致する共通相手は確認できず。",
+        "roster": "当日Map veto未確定。Patch 13.05確認済み。",
+        "early_tendency": "LOUDはChampions初戦EDGを2-0、ラウンド26-13。VitalityはGlobal戦2-1、ラウンド35-34で僅差。",
+        "risk": "格差はS級ではなくB+。開始直前カードでオッズ変動リスクあり。",
+        "conclusion": "大格差ではないが、rating・直近の勝ち方・価格を合わせると本日のVALUE候補。",
+        "sources": [
+          "https://www.vlr.gg/753451/team-vitality-vs-loud-valorant-champions-2026-winners-b/",
+          "https://stake.com/sports/valorant/international-13",
+          "https://tips.gg/matches/valorant/30-09-2026/team-vitality-vs-loud/01-00/"
+        ]
+      },
+      {
+        "rank": 8,
+        "sport": "テニス",
+        "competition": "ATP 500 China Open Beijing — 1回戦",
+        "start_jst": "2026-09-30T20:00:00+09:00",
+        "matchup": "Nuno Borges vs Novak Djokovic",
+        "favored": "Novak Djokovic",
+        "venue": "Beijing / hard",
+        "format": "Best of 3 sets",
+        "status": "watch",
+        "gap_grade": "B+",
+        "price_grade": "B",
+        "odds": {
+          "min": 1.44,
+          "max": 1.44,
+          "book_examples": "Betfair 1.44 / AgentBets best -225相当約1.44",
+          "required_win_rate_pct": "69.44"
+        },
+        "estimated_win_probability_pct": "69–73",
+        "estimated_ev_pct": "-0.6〜+5.1",
+        "ranking_rating": "ATP ranking: Djokovic #11 / Borges #49。",
+        "h2h": "1回。2025 AthensでDjokovic 7-6(1), 6-4 Borges＝2-0。",
+        "recent_form": "両者とも直近10は6勝4敗。Borges直近5は3勝2敗、Djokovic直近5は2勝3敗。BorgesはCincinnatiでRublevとCerundoloに勝利。",
+        "common_opponents": "直近10の取得範囲で、比較に十分な同一相手サンプルは確認できず。",
+        "roster": "個人競技。DjokovicはUS Open時に肩・背中の問題があったが、9/29本人は北京で身体の状態が良いとコメント。",
+        "early_tendency": "Djokovicは北京ATP500で過去29勝0敗。直近健康状態には不確実性。",
+        "risk": "Borgesのハード成績が悪くなく、Djokovicは39歳で直近2大会初戦敗退。S級格差ではない。",
+        "conclusion": "ランキング/H2HはDjokovicだが『圧倒的』ではない。1.44ならWATCH。",
+        "sources": [
+          "https://www.reuters.com/sports/tennis/djokovic-says-body-feeling-good-ahead-china-open-comeback-2026-09-29/",
+          "https://www.tennis.com/tournaments/china-open-atp/matches/n-borges-vs-n-djokovic-2026-09-30",
+          "https://agentbets.ai/odds/atp-china-open/novak-djokovic-vs-nuno-borges/"
+        ]
+      },
+      {
+        "rank": 9,
+        "sport": "Dota 2",
+        "competition": "BLAST SLAM VIII — Group B LB Semi Final",
+        "start_jst": "2026-10-01T01:00:00+09:00",
+        "matchup": "Team Nemesis vs Natus Vincere",
+        "favored": "Natus Vincere",
+        "venue": "BLAST Arena Studios, Malta",
+        "format": "BO3 / LAN",
+        "status": "candidate",
+        "gap_grade": "A",
+        "price_grade": "B",
+        "odds": {
+          "min": 1.24,
+          "max": 1.27,
+          "book_examples": "21.com 1.24 / VBET 1.27 / Betfair 1.25",
+          "required_win_rate_pct": "78.74–80.65"
+        },
+        "estimated_win_probability_pct": "78–82",
+        "estimated_ev_pct": "-0.9〜+4.1（1.27基準）",
+        "ranking_rating": "Tips.GG rating: Nemesis #138 / NAVI #11。",
+        "h2h": "直近公式1回: 2026/9/25 PGL Wallachia S9でNAVI 2-1 Nemesis。",
+        "recent_form": "9/29はNemesisがSpiritに1-2、NAVIが1winに1-2。両者敗者側へ。",
+        "common_opponents": "Xtreme Gaming比較: Nemesisは0-2敗戦、NAVIは2-0勝利（直近Wallachia）。同一相手比較はNAVI優勢。",
+        "roster": "Nemesis: JaCkky / Ken / Jabz / Jhocam / NARMAN。NAVI: gotthejuice / Niku / pma / Daze / Riddys。",
+        "early_tendency": "Picks/Bans未確定。",
+        "risk": "5日前の直接対決も2-1で接戦。NAVIも前日に1winへ敗れている。",
+        "conclusion": "rating・直接対決・共通相手の3軸がNAVI側。価格は1.27なら候補、1.24以下は余裕小。",
+        "sources": [
+          "https://blast.tv/dota/tournaments/blast-slam-viii/series/bf5707b9/nemesis-navi",
+          "https://liquipedia.net/dota2/Match%3AID_xHpm1txH7L_R01-M005",
+          "https://www.betfair.com/apuestas/es/esports/dota-2-blast-slam/team-nemesis-natus-vincere/e-36133595"
+        ]
+      },
+      {
+        "rank": 10,
+        "sport": "Dota 2",
+        "competition": "BLAST SLAM VIII — Group A LB Semi Final",
+        "start_jst": "2026-10-01T01:00:00+09:00",
+        "matchup": "Level UP vs Xtreme Gaming",
+        "favored": "Xtreme Gaming",
+        "venue": "BLAST Arena Studios, Malta",
+        "format": "BO3 / LAN",
+        "status": "price_reject",
+        "gap_grade": "A+",
+        "price_grade": "C-",
+        "odds": {
+          "min": 1.09,
+          "max": 1.13,
+          "book_examples": "EGW 1.09–1.099 / VBET 1.13",
+          "required_win_rate_pct": "88.50–91.74"
+        },
+        "estimated_win_probability_pct": "86–90",
+        "estimated_ev_pct": "-2.8〜+1.7（1.13基準）",
+        "ranking_rating": "EGW rating Xtreme #5 / Level UP #63。Tips.GG別集計ではXtreme #12 / Level UP #159。",
+        "h2h": "過去公式対戦は確認できず。",
+        "recent_form": "Level UPは直近5で1勝4敗、Xtremeは直近8で5勝3敗の集計。9/29はLevel UP 0-2 PARI、Xtreme 1-2 LGD。",
+        "common_opponents": "直近取得範囲で比較可能な完全一致相手の信頼できる対照が不足。推測で補完しない。",
+        "roster": "Level UP: WoE / Ainkrad / bb3px / queezy / Htrd。Xtreme: Ame / Setsuまたは当日登録mid / Zeal / XinQ / BoBoKa。mid表記に情報源差があり当日確定待ち。",
+        "early_tendency": "veto/draft未確定。",
+        "risk": "Xtremeも直近2連敗表示。roster情報源にmid表記差があるため、S確定ではなくA+。",
+        "conclusion": "格差は大きいが1.09付近は短すぎる。1.13でも価格余裕は小さい。",
+        "sources": [
+          "https://sv.egamersworld.com/dota2/match/a-kpz7LXO/level-up-vs-xtreme-gaming-TrDsj4P5az",
+          "https://blast.tv/dota/news/blast-slam-VIII-team-rosters",
+          "https://tips.gg/archive/level-up-dota2-vs-xtreme-gaming-dota2/"
+        ]
+      },
+      {
+        "rank": 11,
+        "sport": "サッカー女子",
+        "competition": "UEFA Women's Champions League 2026/27 — League Phase",
+        "start_jst": "2026-10-01T01:45:00+09:00",
+        "matchup": "Roma Women vs FC Barcelona Women",
+        "favored": "FC Barcelona Women",
+        "venue": "Stadio Tre Fontane, Rome",
+        "format": "90分 1X2",
+        "status": "watch",
+        "gap_grade": "S",
+        "price_grade": "C-",
+        "odds": {
+          "min": 1.05,
+          "max": 1.07,
+          "book_examples": "bet365 1.07 / Interwetten 1.05（9/27更新値）",
+          "required_win_rate_pct": "93.46–95.24"
+        },
+        "estimated_win_probability_pct": "91–94",
+        "estimated_ev_pct": "-2.6〜+0.6（1.07基準）",
+        "ranking_rating": "クラブ世界ランキングの同一基準値は今回未採用。成績/H2H/攻撃力で評価。",
+        "h2h": "確認3試合はBarcelona 3勝0敗。直近2025/10/15 Roma 0-4 Barcelona。",
+        "recent_form": "Roma直近5: 4勝1分、平均2.0得点。Barcelona直近5: 5勝0敗、2-0,5-2,6-0,4-2,4-0で平均4.2得点。",
+        "common_opponents": "今回確認した直近5の双方に同一相手なし。",
+        "roster": "先発は試合45–60分前確定。事前予想lineupはあるが正式扱いしない。",
+        "early_tendency": "UWCL今季: Roma 0-0 OH Leuven、Barcelona 5-2 Paris FC。攻撃出力差が大きい。",
+        "risk": "Roma自身も4勝1分で好調。1.05–1.07は必要勝率が高すぎる。",
+        "conclusion": "純粋格差S。ただし勝者市場は価格面でWATCH/見送り寄り。より良い価格が出ない限りVALUE扱いしない。",
+        "sources": [
+          "https://www.fcbarcelona.com/en/football/womens-football/schedule",
+          "https://www.apwin.com/predictions/roma-women-vs-barcelona-women-prediction-uefa-womens-champions-league-30-09-2026/"
+        ]
+      }
+    ],
+    "summary": {
+      "pure_gap_top": [
+        "Roma Women vs FC Barcelona Women",
+        "Team Yandex vs MOUZ",
+        "PARIVISION vs LGD Gaming",
+        "Level UP vs Xtreme Gaming",
+        "India Women vs Korea Women"
+      ],
+      "price_adjusted_top": [
+        "100 Thieves vs FUT Esports",
+        "Team Spirit vs 1win",
+        "Team Nemesis vs Natus Vincere",
+        "Team Vitality vs LOUD"
+      ],
+      "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
+    }
   }
 }
