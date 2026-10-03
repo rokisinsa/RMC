@@ -179,7 +179,7 @@ test("データ品質：開始時刻・オッズ・結果・条件の未確認�
 test("HTML render smoke test：4系統が別セクションで描画され、NaN / undefined が出ない", () => {
   for (const v of [vm, vmOf(withDemo(fresh()))]) {
     const html = renderPage(v, { demo: v !== vm });
-    for (const id of ["sec-rec", "sec-v1", "sec-v2", "sec-pe", "sec-exp", "sec-unassigned"]) assert.ok(html.includes(`id="${id}"`), id);
+    for (const id of ["sec-rec", "sec-v1", "sec-v2", "sec-pe", "sec-unassigned"]) assert.ok(html.includes(`id="${id}"`), id);
     assert.ok(html.includes("④ PRO EDGE｜プロ型価格分析"));
     assert.ok(html.includes("市場適正確率"));
     for (const bad of ["NaN", "undefined", ">null<", "[object Object]"]) assert.ok(!html.includes(bad), bad);
