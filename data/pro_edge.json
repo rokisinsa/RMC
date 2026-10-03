@@ -232,7 +232,7 @@
       "match_id": "2026-10-04-texas-tech-colorado",
       "run_id": "pe-user-approved-20261003-2142",
       "analysis_id": "pe-an-20261003-texas-tech-colorado",
-      "market": "match_1x2",
+      "market": "match_winner",
       "selection": "side_a",
       "selection_label": "Texas Tech Red Raiders",
       "discovered_at": "2026-10-03T21:42:37+09:00",
@@ -244,7 +244,7 @@
           "snapshot_id": "ps-fanduel-ttu-cu-20261003-2142",
           "kind": "analysis",
           "bookmaker": "FanDuel",
-          "market": "match_1x2",
+          "market": "match_winner",
           "outcomes": {
             "side_a": 1.2079002079,
             "side_b": 4.6
@@ -395,7 +395,7 @@
       "recalculated_reference": [],
       "settlement_override": null,
       "flags": [],
-      "note": "RMC正式採用の想定取引。bet_oddsは分析時FanDuel提示価格を固定したRMC追跡価格で、外部実ベット実行の主張ではない。"
+      "note": "RMC正式採用の想定取引。bet_oddsは分析時FanDuel提示価格を固定したRMC追跡価格で、外部実ベット実行の主張ではない。 初回登録でNCAAの2-way市場をmatch_1x2と誤表記したため、検証失敗直後にmatch_winnerへ訂正。価格・推定値・選択は変更なし。"
     },
     {
       "id": "pe-20261003-byu-tcu",
@@ -403,7 +403,7 @@
       "match_id": "2026-10-04-byu-tcu",
       "run_id": "pe-user-approved-20261003-2142",
       "analysis_id": "pe-an-20261003-byu-tcu",
-      "market": "match_1x2",
+      "market": "match_winner",
       "selection": "side_a",
       "selection_label": "BYU Cougars",
       "discovered_at": "2026-10-03T21:42:37+09:00",
@@ -415,7 +415,7 @@
           "snapshot_id": "ps-fanduel-byu-tcu-20261003-2142",
           "kind": "analysis",
           "bookmaker": "FanDuel",
-          "market": "match_1x2",
+          "market": "match_winner",
           "outcomes": {
             "side_a": 1.4347826087,
             "side_b": 2.88
@@ -567,7 +567,7 @@
       "recalculated_reference": [],
       "settlement_override": null,
       "flags": [],
-      "note": "RMC正式採用の想定取引。bet_oddsは分析時FanDuel提示価格を固定したRMC追跡価格で、外部実ベット実行の主張ではない。"
+      "note": "RMC正式採用の想定取引。bet_oddsは分析時FanDuel提示価格を固定したRMC追跡価格で、外部実ベット実行の主張ではない。 初回登録でNCAAの2-way市場をmatch_1x2と誤表記したため、検証失敗直後にmatch_winnerへ訂正。価格・推定値・選択は変更なし。"
     }
   ]
 }
