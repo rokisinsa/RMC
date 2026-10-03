@@ -6,7 +6,7 @@
     "legacy_commit": "02e5167",
     "as_of": "2026-10-03T20:55:00+09:00",
     "status": "active",
-    "note": "ユーザー承認カードを正式推奨として管理。1件$100。終了済みは結果・収支まで反映。"
+    "note": "ユーザー承認カードを正式推奨として管理。1件$100。終了済みは結果・収支まで反映。正式推奨にはH2H・直近10・共通対戦相手比較の分析スナップショットを保存し、カードクリックで表示。"
   },
   "system": "recommendations",
   "discovery_runs": [
@@ -2089,7 +2089,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "直近確認5シリーズはYandex 4勝1敗。スコア: 2-1, 2-0, 2-1, 0-1, 1-0（合計マップ7-3）。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "Yandex直近5: NAVI 3-0, LGD 2-0, Aurora 2-1, 1win 2-0, NAVI 2-0＝5連勝。MOUZ直近5: LGD 0-2, Hokori 2-0, Nemesis 0-2, Pibbles 2-0, Yandex 1-2＝2勝3敗。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "LGD比較: YandexはLGDに2-0、MOUZはLGDに0-2。同一相手への直近結果はYandex優勢。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20260930-100t-fut",
@@ -2121,7 +2143,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "確認4シリーズ: 100T 3勝1敗。2024 Masters Shanghai 2-0、2023 Red Bull 0-1、LOCK//IN 2-1、2022 Red Bull 2-0。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "100T: T1 2-0, LOUD 3-2, NRG 2-0, LEVIATÁN 2-0, LOUD 2-0＝5連勝。FUT: JDG 2-0, Team Liquid 0-3, Karmine Corp 0-2, BBL 2-1, Team Liquid 2-0＝3勝2敗。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "直近5の双方に完全一致する相手は確認できず。共通相手比較は未成立。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20260930-betboom-og",
@@ -2153,7 +2197,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "BLAST公式の直近5はBetBoom 4勝1敗。2-0, 1-0, 2-0, 2-1, 0-2。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "BetBoomはTI直近でSpiritに0-2、Nigmaに2-1、1winに2-1、PARIに1-2、Auroraに2-0。OGは直近でGamerLegion 0-2、HULIGANI 2-1、Resilience 0-2、Nigma 0-2、BetBoom 0-2。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "直近5内で完全な同一相手比較は限定的。直接H2Hの情報量を優先。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20260930-parivision-lgd",
@@ -2185,7 +2251,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "公式確認1回はLGD 1-0 PARIVISION（BLAST Slam VII）。ただし現LGDはThiolicor以外が大きく入れ替わっている。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "PARI直近5は5勝、直近10は9勝。LGD直近5は3勝、直近10は6勝。PARIは初戦Level UPを2-0、LGDはXtremeを2-1。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "Team Yandex: PARIはTIで2-1勝利、LGDはWallachiaで0-2敗戦。MOUZ: PARI 2-0、LGD 2-0で互角。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20260930-spirit-1win",
@@ -2217,7 +2305,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "BLAST公式の現カードではSpirit 2勝0敗。TI 2026 2-0、DreamLeague Season 22 2-0。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "Spiritは9/29 Nemesisに2-1。1winは9/29 NAVIに2-1。両者とも初戦勝利。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "直近の完全一致比較は十分な同期間サンプルを確認できず。直接H2Hを優先。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20260930-india-korea",
@@ -2249,7 +2359,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "直近確認できたシニア公式対戦は2025 Women’s Asia Cup Super4sでIndia 4-2 Korea。過去全件は今回の公開検索で完全列挙できず、確認済み分のみ採用。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "今大会Indiaは5戦5勝・66得点3失点（19-0 Uzbekistan, 17-1 Indonesia, 20-1 Thailand, 3-1 Japan, 7-0 Singapore）。Koreaは4勝1敗・20得点5失点（3-1 Chinese Taipei, 7-0 Kazakhstan, 8-0 Bangladesh, 0-3 China, 2-1 Malaysia）。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "Japan比較: Indiaは9/25 Asian GamesでJapanに3-1。Koreaは6/21 Nations CupでJapanと0-0、SO 5-4勝ち。大会条件は違うが、直近の共通相手に対する規定時間内容はIndia優勢。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20260930-loud-vitality",
@@ -2281,7 +2413,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "公式確認できる過去対戦は0。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "Vitality: Global 2-1, Fire Flux 1-2, Enterprise 1-2, FUT 2-1, Gentle Mates 2-1。LOUD: EDG 2-0, 100T 2-3, NRG 3-2, G2 2-0, MIBR 2-0。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "直近5で完全一致する共通相手は確認できず。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20260930-djokovic-borges",
@@ -2313,7 +2467,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "1回。2025 AthensでDjokovic 7-6(1), 6-4 Borges＝2-0。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "両者とも直近10は6勝4敗。Borges直近5は3勝2敗、Djokovic直近5は2勝3敗。BorgesはCincinnatiでRublevとCerundoloに勝利。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "直近10の取得範囲で、比較に十分な同一相手サンプルは確認できず。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20261001-navi-nemesis",
@@ -2345,7 +2521,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "直近公式1回: 2026/9/25 PGL Wallachia S9でNAVI 2-1 Nemesis。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "9/29はNemesisがSpiritに1-2、NAVIが1winに1-2。両者敗者側へ。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "Xtreme Gaming比較: Nemesisは0-2敗戦、NAVIは2-0勝利（直近Wallachia）。同一相手比較はNAVI優勢。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20261001-xtreme-levelup",
@@ -2377,7 +2575,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "過去公式対戦は確認できず。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "Level UPは直近5で1勝4敗、Xtremeは直近8で5勝3敗の集計。9/29はLevel UP 0-2 PARI、Xtreme 1-2 LGD。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "直近取得範囲で比較可能な完全一致相手の信頼できる対照が不足。推測で補完しない。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20261001-barca-roma",
@@ -2409,7 +2629,29 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "確認3試合はBarcelona 3勝0敗。直近2025/10/15 Roma 0-4 Barcelona。",
+          "items": []
+        },
+        "recent_form": {
+          "summary": "Roma直近5: 4勝1分、平均2.0得点。Barcelona直近5: 5勝0敗、2-0,5-2,6-0,4-2,4-0で平均4.2得点。",
+          "side_a": null,
+          "side_b": null
+        },
+        "common_opponent_comparison": {
+          "summary": "今回確認した直近5の双方に同一相手なし。",
+          "items": []
+        },
+        "captured_at": "2026-09-30T17:39:31+09:00",
+        "completeness": {
+          "h2h": "summary_only",
+          "recent10": "summary_only",
+          "common_opponents": "summary_only"
+        },
+        "note": "前回分析時に保存された確認済み要約。今後の正式採用は明細構造まで必須保存。"
+      }
     },
     {
       "id": "rec-20261004-georgia-vandy",
@@ -2441,7 +2683,173 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "今回5件をユーザー承認により正式推奨化。"
+      "note": "今回5件をユーザー承認により正式推奨化。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "通算61-20-2でGeorgia。直近4戦4勝0敗、合計184-26。",
+          "items": [
+            {
+              "date": "2023",
+              "label": "Vanderbilt vs Georgia",
+              "result": "Georgia 37-20 Vanderbilt"
+            },
+            {
+              "date": "2022",
+              "label": "Georgia vs Vanderbilt",
+              "result": "Georgia 55-0 Vanderbilt"
+            },
+            {
+              "date": "2021",
+              "label": "Vanderbilt vs Georgia",
+              "result": "Georgia 62-0 Vanderbilt"
+            },
+            {
+              "date": "2019",
+              "label": "Vanderbilt vs Georgia",
+              "result": "Georgia 30-6 Vanderbilt"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Georgia",
+            "summary": "直近10: 9勝1敗 / 合計408-142 / 平均40.8得点・14.2失点",
+            "items": [
+              {
+                "date": "2026-09-26",
+                "opponent": "Oklahoma",
+                "result": "W 41-13"
+              },
+              {
+                "date": "2026-09-19",
+                "opponent": "Arkansas",
+                "result": "W 45-17"
+              },
+              {
+                "date": "2026-09-12",
+                "opponent": "WKU",
+                "result": "W 70-20"
+              },
+              {
+                "date": "2026-09-05",
+                "opponent": "Tennessee State",
+                "result": "W 63-3"
+              },
+              {
+                "date": "2026-01-01",
+                "opponent": "Ole Miss",
+                "result": "L 34-39"
+              },
+              {
+                "date": "2025-12-06",
+                "opponent": "Alabama",
+                "result": "W 28-7"
+              },
+              {
+                "date": "2025-11-28",
+                "opponent": "Georgia Tech",
+                "result": "W 16-9"
+              },
+              {
+                "date": "2025",
+                "opponent": "Charlotte",
+                "result": "W 35-3"
+              },
+              {
+                "date": "2025",
+                "opponent": "Texas",
+                "result": "W 35-10"
+              },
+              {
+                "date": "2025",
+                "opponent": "Mississippi State",
+                "result": "W 41-21"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Vanderbilt",
+            "summary": "直近10: 7勝3敗",
+            "items": [
+              {
+                "date": "2026",
+                "opponent": "Auburn",
+                "result": "L 15-21"
+              },
+              {
+                "date": "2026",
+                "opponent": "NC State",
+                "result": "W 35-31"
+              },
+              {
+                "date": "2026",
+                "opponent": "Delaware",
+                "result": "W 35-26"
+              },
+              {
+                "date": "2026",
+                "opponent": "Austin Peay",
+                "result": "W 28-9"
+              },
+              {
+                "date": "2025",
+                "opponent": "Iowa",
+                "result": "L 27-34"
+              },
+              {
+                "date": "2025",
+                "opponent": "Tennessee",
+                "result": "W 45-24"
+              },
+              {
+                "date": "2025",
+                "opponent": "Kentucky",
+                "result": "W 45-17"
+              },
+              {
+                "date": "2025",
+                "opponent": "Auburn",
+                "result": "W 45-38"
+              },
+              {
+                "date": "2025",
+                "opponent": "Texas",
+                "result": "L 31-34"
+              },
+              {
+                "date": "2025",
+                "opponent": "Missouri",
+                "result": "W 17-10"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "直近比較で明確な共通相手はTexas。Georgiaの方が28点分良い得失点差。",
+          "items": [
+            {
+              "opponent": "Texas",
+              "side_a": {
+                "date": "2025",
+                "result": "Georgia W 35-10",
+                "performance": "+25"
+              },
+              "side_b": {
+                "date": "2025",
+                "result": "Vanderbilt L 31-34",
+                "performance": "-3"
+              },
+              "comparison": "Georgiaが得失点差で28点上"
+            }
+          ]
+        },
+        "captured_at": "2026-10-03T20:27:00+09:00",
+        "completeness": {
+          "h2h": "confirmed_scope",
+          "recent10": "complete",
+          "common_opponents": "checked"
+        }
+      }
     },
     {
       "id": "rec-20261004-nd-unc",
@@ -2473,7 +2881,202 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "今回5件をユーザー承認により正式推奨化。"
+      "note": "今回5件をユーザー承認により正式推奨化。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "確認直近7戦はNotre Dame 6勝1敗。直近5戦は5連勝。",
+          "items": [
+            {
+              "date": "2022",
+              "label": "UNC vs Notre Dame",
+              "result": "Notre Dame 45-32 UNC"
+            },
+            {
+              "date": "2021",
+              "label": "Notre Dame vs UNC",
+              "result": "Notre Dame 44-34 UNC"
+            },
+            {
+              "date": "2020",
+              "label": "UNC vs Notre Dame",
+              "result": "Notre Dame 31-17 UNC"
+            },
+            {
+              "date": "2017",
+              "label": "UNC vs Notre Dame",
+              "result": "Notre Dame 33-10 UNC"
+            },
+            {
+              "date": "2014",
+              "label": "Notre Dame vs UNC",
+              "result": "Notre Dame 50-43 UNC"
+            },
+            {
+              "date": "2008",
+              "label": "UNC vs Notre Dame",
+              "result": "UNC 29-24 Notre Dame"
+            },
+            {
+              "date": "2006",
+              "label": "Notre Dame vs UNC",
+              "result": "Notre Dame 45-26 UNC"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Notre Dame",
+            "summary": "直近10: 10勝0敗 / 合計433-119 / 平均43.3-11.9",
+            "items": [
+              {
+                "date": "2026",
+                "opponent": "Purdue",
+                "result": "W 49-10"
+              },
+              {
+                "date": "2026",
+                "opponent": "Michigan State",
+                "result": "W 27-10"
+              },
+              {
+                "date": "2026",
+                "opponent": "Rice",
+                "result": "W 52-0"
+              },
+              {
+                "date": "2025",
+                "opponent": "Wisconsin",
+                "result": "W 41-13"
+              },
+              {
+                "date": "2025",
+                "opponent": "Stanford",
+                "result": "W 49-20"
+              },
+              {
+                "date": "2025",
+                "opponent": "Syracuse",
+                "result": "W 70-7"
+              },
+              {
+                "date": "2025",
+                "opponent": "Pittsburgh",
+                "result": "W 37-15"
+              },
+              {
+                "date": "2025",
+                "opponent": "Navy",
+                "result": "W 49-10"
+              },
+              {
+                "date": "2025",
+                "opponent": "Boston College",
+                "result": "W 25-10"
+              },
+              {
+                "date": "2025",
+                "opponent": "USC",
+                "result": "W 34-24"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "North Carolina",
+            "summary": "直近10: 4勝6敗",
+            "items": [
+              {
+                "date": "2026",
+                "opponent": "Clemson",
+                "result": "L 20-28"
+              },
+              {
+                "date": "2026",
+                "opponent": "ETSU",
+                "result": "W 35-3"
+              },
+              {
+                "date": "2026",
+                "opponent": "TCU",
+                "result": "W 15-10"
+              },
+              {
+                "date": "2025",
+                "opponent": "NC State",
+                "result": "L 19-42"
+              },
+              {
+                "date": "2025",
+                "opponent": "Duke",
+                "result": "L 25-32"
+              },
+              {
+                "date": "2025",
+                "opponent": "Wake Forest",
+                "result": "L 12-28"
+              },
+              {
+                "date": "2025",
+                "opponent": "Stanford",
+                "result": "W 20-15"
+              },
+              {
+                "date": "2025",
+                "opponent": "Syracuse",
+                "result": "W 27-10"
+              },
+              {
+                "date": "2025",
+                "opponent": "Virginia",
+                "result": "L 16-17"
+              },
+              {
+                "date": "2025",
+                "opponent": "California",
+                "result": "L 18-21"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "StanfordとSyracuseの2共通相手でNotre Dame +92、UNC +22。",
+          "items": [
+            {
+              "opponent": "Stanford",
+              "side_a": {
+                "date": "2025",
+                "result": "Notre Dame W 49-20",
+                "performance": "+29"
+              },
+              "side_b": {
+                "date": "2025",
+                "result": "UNC W 20-15",
+                "performance": "+5"
+              },
+              "comparison": "Notre Dameが24点分上"
+            },
+            {
+              "opponent": "Syracuse",
+              "side_a": {
+                "date": "2025",
+                "result": "Notre Dame W 70-7",
+                "performance": "+63"
+              },
+              "side_b": {
+                "date": "2025",
+                "result": "UNC W 27-10",
+                "performance": "+17"
+              },
+              "comparison": "Notre Dameが46点分上"
+            }
+          ]
+        },
+        "captured_at": "2026-10-03T20:27:00+09:00",
+        "completeness": {
+          "h2h": "confirmed_scope",
+          "recent10": "complete",
+          "common_opponents": "checked"
+        }
+      }
     },
     {
       "id": "rec-20261004-lsu-mcneese",
@@ -2505,7 +3108,148 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "今回5件をユーザー承認により正式推奨化。"
+      "note": "今回5件をユーザー承認により正式推奨化。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "成立した近年2戦はLSU 2勝0敗、合計66-17。",
+          "items": [
+            {
+              "date": "2021",
+              "label": "LSU vs McNeese",
+              "result": "LSU 34-7 McNeese"
+            },
+            {
+              "date": "2010",
+              "label": "LSU vs McNeese",
+              "result": "LSU 32-10 McNeese"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "LSU",
+            "summary": "直近10: 5勝5敗。ただしClemson/Ole Miss/Oklahoma/Alabama/Texas A&Mなど強豪中心。",
+            "items": [
+              {
+                "date": "2026",
+                "opponent": "Texas A&M",
+                "result": "W 35-6"
+              },
+              {
+                "date": "2026",
+                "opponent": "Ole Miss",
+                "result": "L 24-32"
+              },
+              {
+                "date": "2026",
+                "opponent": "Louisiana Tech",
+                "result": "W 45-14"
+              },
+              {
+                "date": "2026",
+                "opponent": "Clemson",
+                "result": "W 51-10"
+              },
+              {
+                "date": "2025",
+                "opponent": "Houston",
+                "result": "L 35-38"
+              },
+              {
+                "date": "2025",
+                "opponent": "Oklahoma",
+                "result": "L 13-17"
+              },
+              {
+                "date": "2025",
+                "opponent": "WKU",
+                "result": "W 13-10"
+              },
+              {
+                "date": "2025",
+                "opponent": "Arkansas",
+                "result": "W 23-22"
+              },
+              {
+                "date": "2025",
+                "opponent": "Alabama",
+                "result": "L 9-20"
+              },
+              {
+                "date": "2025",
+                "opponent": "Texas A&M",
+                "result": "L 25-49"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "McNeese",
+            "summary": "直近10: 5勝5敗。主にFCS帯。",
+            "items": [
+              {
+                "date": "2026",
+                "opponent": "Texas A&M-Commerce",
+                "result": "W 27-24"
+              },
+              {
+                "date": "2026",
+                "opponent": "UTRGV",
+                "result": "L 10-27"
+              },
+              {
+                "date": "2026",
+                "opponent": "Tarleton State",
+                "result": "L 24-27"
+              },
+              {
+                "date": "2026",
+                "opponent": "Texas Wesleyan",
+                "result": "W 52-0"
+              },
+              {
+                "date": "2025",
+                "opponent": "Stephen F. Austin",
+                "result": "L 27-38"
+              },
+              {
+                "date": "2025",
+                "opponent": "Lamar",
+                "result": "W 21-19"
+              },
+              {
+                "date": "2025",
+                "opponent": "UTRGV",
+                "result": "L 13-28"
+              },
+              {
+                "date": "2025",
+                "opponent": "Texas A&M-Commerce",
+                "result": "W 35-20"
+              },
+              {
+                "date": "2025",
+                "opponent": "Northwestern State",
+                "result": "W 50-3"
+              },
+              {
+                "date": "2025",
+                "opponent": "Nicholls",
+                "result": "L 7-31"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "直近10で直接比較可能な共通相手は確認できず。無理に作らず対戦カテゴリー差を採用。",
+          "items": []
+        },
+        "captured_at": "2026-10-03T20:27:00+09:00",
+        "completeness": {
+          "h2h": "confirmed_scope",
+          "recent10": "complete",
+          "common_opponents": "checked"
+        }
+      }
     },
     {
       "id": "rec-20261004-smu-bc",
@@ -2537,7 +3281,168 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "今回5件をユーザー承認により正式推奨化。"
+      "note": "今回5件をユーザー承認により正式推奨化。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "全3戦SMU 2勝1敗。直近2戦はSMU連勝。",
+          "items": [
+            {
+              "date": "2025",
+              "label": "Boston College vs SMU",
+              "result": "SMU 45-13 Boston College"
+            },
+            {
+              "date": "2024",
+              "label": "SMU vs Boston College",
+              "result": "SMU 38-28 Boston College"
+            },
+            {
+              "date": "2023",
+              "label": "Boston College vs SMU",
+              "result": "Boston College 23-14 SMU"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "SMU",
+            "summary": "直近10: 7勝3敗",
+            "items": [
+              {
+                "date": "2026",
+                "opponent": "Missouri State",
+                "result": "W 34-24"
+              },
+              {
+                "date": "2026",
+                "opponent": "Louisville",
+                "result": "L 31-41"
+              },
+              {
+                "date": "2026",
+                "opponent": "UC Davis",
+                "result": "W 56-10"
+              },
+              {
+                "date": "2026",
+                "opponent": "Florida State",
+                "result": "W 27-24"
+              },
+              {
+                "date": "2025",
+                "opponent": "Arizona",
+                "result": "W 24-19"
+              },
+              {
+                "date": "2025",
+                "opponent": "California",
+                "result": "L 35-38"
+              },
+              {
+                "date": "2025",
+                "opponent": "Louisville",
+                "result": "W 38-6"
+              },
+              {
+                "date": "2025",
+                "opponent": "Boston College",
+                "result": "W 45-13"
+              },
+              {
+                "date": "2025",
+                "opponent": "Miami",
+                "result": "W 26-20"
+              },
+              {
+                "date": "2025",
+                "opponent": "Wake Forest",
+                "result": "L 12-13"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Boston College",
+            "summary": "直近10: 3勝7敗",
+            "items": [
+              {
+                "date": "2026",
+                "opponent": "Virginia Tech",
+                "result": "L 14-21"
+              },
+              {
+                "date": "2026",
+                "opponent": "Maine",
+                "result": "W 22-16"
+              },
+              {
+                "date": "2026",
+                "opponent": "Rutgers",
+                "result": "W 28-21"
+              },
+              {
+                "date": "2026",
+                "opponent": "Cincinnati",
+                "result": "L 15-34"
+              },
+              {
+                "date": "2025",
+                "opponent": "Syracuse",
+                "result": "W 34-12"
+              },
+              {
+                "date": "2025",
+                "opponent": "Georgia Tech",
+                "result": "L 34-36"
+              },
+              {
+                "date": "2025",
+                "opponent": "SMU",
+                "result": "L 13-45"
+              },
+              {
+                "date": "2025",
+                "opponent": "Notre Dame",
+                "result": "L 10-25"
+              },
+              {
+                "date": "2025",
+                "opponent": "Louisville",
+                "result": "L 24-38"
+              },
+              {
+                "date": "2025",
+                "opponent": "UConn",
+                "result": "L 23-38"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "Louisville比較ではSMUに38-6勝利実績、BCは24-38敗戦。",
+          "items": [
+            {
+              "opponent": "Louisville",
+              "side_a": {
+                "date": "2025/2026",
+                "result": "SMU W 38-6 / L 31-41",
+                "performance": "最高+32"
+              },
+              "side_b": {
+                "date": "2025",
+                "result": "Boston College L 24-38",
+                "performance": "-14"
+              },
+              "comparison": "SMUは同相手に大勝実績あり"
+            }
+          ]
+        },
+        "captured_at": "2026-10-03T20:27:00+09:00",
+        "completeness": {
+          "h2h": "confirmed_scope",
+          "recent10": "complete",
+          "common_opponents": "checked"
+        }
+      }
     },
     {
       "id": "rec-20261004-fener-manisa",
@@ -2569,7 +3474,82 @@
       },
       "settlement_override": null,
       "flags": [],
-      "note": "今回5件をユーザー承認により正式推奨化。"
+      "note": "今回5件をユーザー承認により正式推奨化。",
+      "analysis_snapshot": {
+        "h2h": {
+          "summary": "十分な公式H2Hは未確認。データ不足を推測で補完しない。",
+          "items": []
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Fenerbahçe Medicana",
+            "summary": "直近10試合の完全な公開一覧は今回未確認。確認済み最新: 10/1 Turan VCに3-1。昨季リーグ全体22勝4敗。",
+            "items": [
+              {
+                "date": "2026-10-01",
+                "opponent": "Turan VC（親善）",
+                "result": "W 3-1"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Manisa BBSK",
+            "summary": "公開確認できた直近5: 1勝1分3敗。10試合分は未確認。",
+            "items": [
+              {
+                "date": "2026-09-29",
+                "opponent": "Kuzeyboru",
+                "result": "L 2-3"
+              },
+              {
+                "date": "2026-09-28",
+                "opponent": "THY",
+                "result": "L 0-3"
+              },
+              {
+                "date": "2026-09-24",
+                "opponent": "Göztepe",
+                "result": "D 2-2"
+              },
+              {
+                "date": "2026-04-05",
+                "opponent": "Ankara PTT",
+                "result": "W 3-2"
+              },
+              {
+                "date": "2026-04-04",
+                "opponent": "Afyon Bld. Yuntaş",
+                "result": "L 0-3"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "直接同期間の十分な共通相手データは不足。Göztepe比較は時期が違うため参考値。",
+          "items": [
+            {
+              "opponent": "Göztepe",
+              "side_a": {
+                "date": "2026-03-07",
+                "result": "Fenerbahçe W 3-2",
+                "performance": "+1 set"
+              },
+              "side_b": {
+                "date": "2026-09-24",
+                "result": "Manisa D 2-2",
+                "performance": "0 set"
+              },
+              "comparison": "Fenerbahçe優勢だが時期・試合条件が違うため補助材料"
+            }
+          ]
+        },
+        "captured_at": "2026-10-03T20:27:00+09:00",
+        "completeness": {
+          "h2h": "confirmed_scope",
+          "recent10": "partial_or_unconfirmed",
+          "common_opponents": "checked"
+        }
+      }
     }
   ]
 }
