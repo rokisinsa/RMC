@@ -187,6 +187,28 @@ function renderTodayGapAnalysis(a, recommendationCandidates = []) {
   </section>`;
 }
 
+
+function renderPreviousGapAnalysis(prev) {
+  if (!prev?.candidates?.length) return "";
+  const rows = [...prev.candidates]
+    .sort((a,b)=>(a.rank??999)-(b.rank??999))
+    .map(c=>`<tr>
+      <td style="white-space:nowrap;font-weight:900">#${safeText(c.rank ?? "—")}</td>
+      <td><strong>${safeText(c.matchup ?? "—")}</strong><div class="sub">${safeText(c.sport ?? "—")}｜${safeText(c.competition ?? "—")}</div></td>
+      <td style="white-space:nowrap">${safeText(c.start_jst ? c.start_jst.replace("T"," ").slice(5,16) : "—")}</td>
+      <td style="white-space:nowrap">${safeText(c.gap_grade ?? "—")}</td>
+      <td>${safeText(c.conclusion ?? c.risk ?? "—")}</td>
+    </tr>`).join("");
+  return `<details style="margin:14px 0 18px;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px 10px">
+    <summary style="cursor:pointer;font-size:12px;font-weight:800;color:#9fc9da">前回までの分析（${safeText(prev.generated_at ?? "—")}・${safeText(prev.candidates.length)}件）</summary>
+    <div class="sub" style="margin:8px 2px">以前の分析を消さずに保存しています。現在の「本日の分析」とは分けて表示します。</div>
+    <div class="table-wrap"><table class="result-table">
+      <thead><tr><th>#</th><th>カード / 大会</th><th>開始</th><th>格差</th><th>当時の判断</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>
+  </details>`;
+}
+
 function currentAnalysisBanner(ds) {
   const m = ds.system_analysis?.meta;
   if (!m) return "";
@@ -303,6 +325,7 @@ async function main() {
     const vm = buildViewModel(ds, { proEdgeConfig: cfg });
     root.innerHTML = (mode.mode === "development" ? '<div class="dev-banner">development モード（ローカル確認環境）</div>' : "")
       + renderTodayGapAnalysis(ds.today_gap_analysis, ds.system_analysis?.systems?.recommendations?.candidates ?? [])
+      + renderPreviousGapAnalysis(ds.today_gap_analysis?.previous_analysis)
       + '<details style="margin:10px 0 18px;border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:8px 10px"><summary style="cursor:pointer;font-size:12px;font-weight:800;color:#9fc9da">自動更新・41項目監査の状態（開く）</summary>'
       + completeUpdateBanner(ds)
       + '</details>'
