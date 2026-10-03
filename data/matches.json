@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-09-26T06:45:58+09:00",
+    "as_of": "2026-10-03T20:55:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -36,6 +36,13 @@
       "at": "2026-09-27T14:44:07.844+09:00",
       "source": "BET CHANNEL live inventory + official league/team sources",
       "note": "14時台完全試走で新規候補の試合事実を確認"
+    },
+    {
+      "run_id": "mr-user-approved-20261003",
+      "kind": "human_review",
+      "at": "2026-10-03T20:55:00+09:00",
+      "source": "User approval + prior/current RMC analysis",
+      "note": "前回11件を結果付き、今回5件を試合前として正式推奨基準へ登録"
     }
   ],
   "matches": [
@@ -1449,6 +1456,638 @@
       "verified_at": "2026-09-27T14:44:07.844+09:00",
       "flags": [],
       "note": "BET CHANNEL event_id 220230"
+    },
+    {
+      "id": "2026-09-30-yandex-mouz",
+      "sport": "Dota 2",
+      "competition": "BLAST SLAM VIII — Group C UB Semi Final",
+      "side_a": "Team Yandex",
+      "side_b": "MOUZ",
+      "home_side": "unknown",
+      "venue": "BLAST Arena Studios, Malta",
+      "start_at": "2026-09-30T19:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 2,
+          "b": 0
+        },
+        "text": "Team Yandex 2-0 MOUZ"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://blast.tv/dota/tournaments/blast-slam-viii/series?view=results",
+        "https://blast.tv/dota/tournaments/blast-slam-viii/series/62e32ac8/yandex-mouz",
+        "https://bo3.gg/dota2/matches/team-yandex-vs-mouz-dota2-30-09-2026",
+        "https://stake.bet/sports/dota-2/international-2/blast-slam-viii-t1"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-09-30-100t-fut",
+      "sport": "VALORANT",
+      "competition": "VALORANT Champions 2026 — Group A Winners Match",
+      "side_a": "100 Thieves",
+      "side_b": "FUT Esports",
+      "home_side": "unknown",
+      "venue": "Champions 2026",
+      "start_at": "2026-09-30T21:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 2,
+          "b": 0
+        },
+        "text": "100 Thieves 2-0 FUT Esports"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://valorantesports.com/en-GB",
+        "https://www.vlr.gg/753446/100-thieves-vs-fut-esports-valorant-champions-2026-winners-a",
+        "https://stake.com/ja/sports/valorant/international-13/valorant-champions-2026-t2/854993-100-thieves-fut-esports",
+        "https://tips.gg/matches/valorant/30-09-2026/100-thieves-vs-fut-esports/10-00/"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-09-30-betboom-og",
+      "sport": "Dota 2",
+      "competition": "BLAST SLAM VIII — Group C UB Semi Final",
+      "side_a": "BetBoom Team",
+      "side_b": "OG",
+      "home_side": "unknown",
+      "venue": "BLAST Arena Studios, Malta",
+      "start_at": "2026-09-30T19:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 2,
+          "b": 1
+        },
+        "text": "BetBoom Team 2-1 OG"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://www.offstage.gg/dota2/matches/betboom-team-vs-og-2026-09-30",
+        "https://blast.tv/dota/tournaments/blast-slam-viii/series/3640a19c/BetBoom-og",
+        "https://dota2protracker.com/teams/betboom-team-8255888/compare/og-2586976",
+        "https://cyberscore.live/en/matches/betboom-team-vs-og-179567/"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-09-30-parivision-lgd",
+      "sport": "Dota 2",
+      "competition": "BLAST SLAM VIII — Group A Winners Match",
+      "side_a": "PARIVISION",
+      "side_b": "LGD Gaming",
+      "home_side": "unknown",
+      "venue": "BLAST Arena Studios, Malta",
+      "start_at": "2026-09-30T22:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 2,
+          "b": 0
+        },
+        "text": "PARIVISION 2-0 LGD Gaming"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://blast.tv/dota/tournaments/blast-slam-viii/series?view=results",
+        "https://egamersworld.com/dota2/tip/a-kpz7LXO/parivision-vs-lgd-gaming-QvMo8Hc9D",
+        "https://blast.tv/dota/news/blast-slam-VIII-team-rosters",
+        "https://www.vbet.com/es/esports"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-09-30-spirit-1win",
+      "sport": "Dota 2",
+      "competition": "BLAST SLAM VIII — Group B UB Final",
+      "side_a": "Team Spirit",
+      "side_b": "1win",
+      "home_side": "unknown",
+      "venue": "BLAST Arena Studios, Malta",
+      "start_at": "2026-09-30T22:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 2,
+          "b": 0
+        },
+        "text": "Team Spirit 2-0 1win"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://dota2protracker.com/series/1148733",
+        "https://blast.tv/dota/tournaments/blast-slam-viii/series/0f3c19a3/spirit-1win",
+        "https://blast.tv/dota/news/blast-slam-VIII-team-rosters",
+        "https://www.vbet.com/es/esports"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-09-30-india-korea-hockey",
+      "sport": "女子ホッケー",
+      "competition": "20th Asian Games Aichi-Nagoya 2026 — Women Semi Final",
+      "side_a": "India Women",
+      "side_b": "Korea Women",
+      "home_side": "unknown",
+      "venue": "Gifu Prefectural Green Stadium / Aichi-Nagoya, Japan",
+      "start_at": "2026-09-30T19:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 2,
+          "b": 0
+        },
+        "text": "India Women 2-0 Korea Women"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://khelnow.com/asian-games/day-11-september-30-live-asian-games-202609",
+        "https://www.hockeyindia.org/schedule/matches/20th-asian-games-aichi-nagoya-2026--women-",
+        "https://www.fih.hockey/outdoor-rankings/india-women-hockey-rankings-35",
+        "https://www.fih.hockey/outdoor-rankings/korea-women-hockey-rankings-42",
+        "https://www.hockeyindia.org/schedule/matches/fih-hockey-women---s-nations-cup-2026",
+        "https://www.hockeyindia.org/news/all-round-effort-powers-india-to-4-2-win-against-korea-in-their-first-super4s-match-at-womens-asia-cup-2025"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-09-30-vitality-loud",
+      "sport": "VALORANT",
+      "competition": "VALORANT Champions 2026 — Group B Winners Match",
+      "side_a": "Team Vitality",
+      "side_b": "LOUD",
+      "home_side": "unknown",
+      "venue": "VALORANT Champions 2026",
+      "start_at": "2026-09-30T18:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 2,
+          "b": 0
+        },
+        "text": "Team Vitality 2-0 LOUD"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://www.vlr.gg/753451/team-vitality-vs-loud-valorant-champions-2026-winners-b/",
+        "https://www.vlr.gg/753451/team-vitality-vs-loud-valorant-champions-2026-winners-b/",
+        "https://stake.com/sports/valorant/international-13",
+        "https://tips.gg/matches/valorant/30-09-2026/team-vitality-vs-loud/01-00/"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-09-30-borges-djokovic",
+      "sport": "テニス",
+      "competition": "ATP 500 China Open Beijing — 1回戦",
+      "side_a": "Nuno Borges",
+      "side_b": "Novak Djokovic",
+      "home_side": "unknown",
+      "venue": "Beijing / hard",
+      "start_at": "2026-09-30T20:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 0,
+          "b": 2
+        },
+        "text": "Novak Djokovic 2-0 Nuno Borges（6-3, 7-6(2)）"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://www.reuters.com/sports/tennis/djokovic-beats-borges-stay-perfect-china-open-2026-09-30/",
+        "https://www.reuters.com/sports/tennis/djokovic-says-body-feeling-good-ahead-china-open-comeback-2026-09-29/",
+        "https://www.tennis.com/tournaments/china-open-atp/matches/n-borges-vs-n-djokovic-2026-09-30",
+        "https://agentbets.ai/odds/atp-china-open/novak-djokovic-vs-nuno-borges/"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-10-01-nemesis-navi",
+      "sport": "Dota 2",
+      "competition": "BLAST SLAM VIII — Group B LB Semi Final",
+      "side_a": "Team Nemesis",
+      "side_b": "Natus Vincere",
+      "home_side": "unknown",
+      "venue": "BLAST Arena Studios, Malta",
+      "start_at": "2026-10-01T01:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 2,
+          "b": 1
+        },
+        "text": "Team Nemesis 2-1 Natus Vincere"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://blast.tv/dota/tournaments/blast-slam-viii/series?view=results",
+        "https://blast.tv/dota/tournaments/blast-slam-viii/series/bf5707b9/nemesis-navi",
+        "https://liquipedia.net/dota2/Match%3AID_xHpm1txH7L_R01-M005",
+        "https://www.betfair.com/apuestas/es/esports/dota-2-blast-slam/team-nemesis-natus-vincere/e-36133595"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-10-01-levelup-xtreme",
+      "sport": "Dota 2",
+      "competition": "BLAST SLAM VIII — Group A LB Semi Final",
+      "side_a": "Level UP",
+      "side_b": "Xtreme Gaming",
+      "home_side": "unknown",
+      "venue": "BLAST Arena Studios, Malta",
+      "start_at": "2026-10-01T01:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 0,
+          "b": 2
+        },
+        "text": "Level UP 0-2 Xtreme Gaming"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://blast.tv/dota/tournaments/blast-slam-viii/series?view=results",
+        "https://sv.egamersworld.com/dota2/match/a-kpz7LXO/level-up-vs-xtreme-gaming-TrDsj4P5az",
+        "https://blast.tv/dota/news/blast-slam-VIII-team-rosters",
+        "https://tips.gg/archive/level-up-dota2-vs-xtreme-gaming-dota2/"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-10-01-roma-barcelona-w",
+      "sport": "サッカー女子",
+      "competition": "UEFA Women's Champions League 2026/27 — League Phase",
+      "side_a": "Roma Women",
+      "side_b": "FC Barcelona Women",
+      "home_side": "unknown",
+      "venue": "Stadio Tre Fontane, Rome",
+      "start_at": "2026-10-01T01:45:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 0,
+          "b": 6
+        },
+        "text": "Roma Women 0-6 FC Barcelona Women"
+      },
+      "result_confirmed_at": "2026-10-03T20:55:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User-approved RMC recommendation baseline; prior analysis result verified."
+        }
+      ],
+      "sources": [
+        "https://www.uefa.com/womenschampionsleague/news/02a9-21848dfb62c3-1313bc23426c-1000--2026-27-women-s-champions-league-all-the-league-phase-fixtu/",
+        "https://www.fcbarcelona.com/en/football/womens-football/schedule",
+        "https://www.apwin.com/predictions/roma-women-vs-barcelona-women-prediction-uefa-womens-champions-league-30-09-2026/"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "前回11件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-10-04-georgia-vanderbilt",
+      "sport": "NCAAアメリカンフットボール",
+      "competition": "NCAA Football — SEC",
+      "side_a": "Georgia Bulldogs",
+      "side_b": "Vanderbilt Commodores",
+      "home_side": "unknown",
+      "venue": "Sanford Stadium, Athens, Georgia",
+      "start_at": "2026-10-04T01:45:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User approved for formal recommendation."
+        }
+      ],
+      "sources": [
+        "https://www.covers.com/sport/football/ncaaf/teams/main/georgia-bulldogs",
+        "https://georgiadogs.com/game-center/26391",
+        "https://www.legalsportsbetting.com/news/georgia-favored-by-25-over-vanderbilt-total-drops-7-10-01-2026/"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "今回5件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-10-04-notredame-unc",
+      "sport": "NCAAアメリカンフットボール",
+      "competition": "NCAA Football",
+      "side_a": "Notre Dame Fighting Irish",
+      "side_b": "North Carolina Tar Heels",
+      "home_side": "unknown",
+      "venue": "Kenan Stadium, Chapel Hill",
+      "start_at": "2026-10-04T01:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User approved for formal recommendation."
+        }
+      ],
+      "sources": [
+        "https://goheels.com/news/2026/9/26/notre-dame-football-game-set-for-noon-on-espn",
+        "https://www.foxsports.com/college-football/notre-dame-fighting-irish-vs-north-carolina-tar-heels-oct-03-2026-game-boxscore-43436"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "今回5件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-10-04-lsu-mcneese",
+      "sport": "NCAAアメリカンフットボール",
+      "competition": "NCAA Football",
+      "side_a": "LSU Tigers",
+      "side_b": "McNeese Cowboys",
+      "home_side": "unknown",
+      "venue": "Tiger Stadium, Baton Rouge",
+      "start_at": "2026-10-04T08:45:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User approved for formal recommendation."
+        }
+      ],
+      "sources": [
+        "https://lsusports.net/sports/fb/schedule/season/2026"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "今回5件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-10-04-smu-bc",
+      "sport": "NCAAアメリカンフットボール",
+      "competition": "NCAA Football — ACC",
+      "side_a": "SMU Mustangs",
+      "side_b": "Boston College Eagles",
+      "home_side": "unknown",
+      "venue": "Gerald J. Ford Stadium, Dallas",
+      "start_at": "2026-10-04T01:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User approved for formal recommendation."
+        }
+      ],
+      "sources": [
+        "https://www.underdogdynasty.com/acc/46491/2026-week-5-preview-boston-college-eagles-smu-mustangs",
+        "https://www.fanduel.com/research/smu-vs-boston-college-college-football-odds-picks-best-bets-for-10-3-2026",
+        "https://smumustangs.com/game-center/14451"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "今回5件を正式推奨化するため登録"
+    },
+    {
+      "id": "2026-10-04-fenerbahce-manisa",
+      "sport": "女子バレーボール",
+      "competition": "Vodafone Sultanlar Ligi 2026-27 — 第1節",
+      "side_a": "Fenerbahçe Medicana Women",
+      "side_b": "Manisa Büyükşehir Belediye Spor Women",
+      "home_side": "unknown",
+      "venue": "TVF Burhan Felek Vestel Voleybol Salonu, Istanbul",
+      "start_at": "2026-10-04T19:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261003",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "User approved for formal recommendation."
+        }
+      ],
+      "sources": [
+        "https://tvf.org.tr/icerik/vodafone-sultanlar-liginde-2026-27-sezonu-basliyor",
+        "https://fikstur.tvf.org.tr/Fikst%C3%BCr",
+        "https://www.fener.org/index.php/2026/10/01/hazirlik-maci-fenerbahce-medicana-3-1-turan-vc/",
+        "https://www.live-result.com/volleyball/teams/Manisa-Bb-W",
+        "https://www.aiscore.com/head-to-head/volleyball/goztepe-women-vs-manisa-bb-women"
+      ],
+      "verified_at": "2026-10-03T20:55:00+09:00",
+      "flags": [],
+      "note": "今回5件を正式推奨化するため登録"
     }
   ]
 }
