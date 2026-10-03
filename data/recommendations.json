@@ -4,9 +4,9 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-09-26T21:00:00+09:00",
+    "as_of": "2026-10-03T20:55:00+09:00",
     "status": "active",
-    "note": "推奨取引：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
+    "note": "ユーザー承認カードを正式推奨として管理。1件$100。終了済みは結果・収支まで反映。"
   },
   "system": "recommendations",
   "discovery_runs": [
@@ -75,6 +75,12 @@
       "started_at": "2026-09-28T23:22:14.042+09:00",
       "slot": "adhoc",
       "note": "BET CHANNEL complete union（通常+fixed-odds/eSports）全eventを使うライブcoverage dry-run。候補の最終採否・本番pick追加は行わない。"
+    },
+    {
+      "run_id": "rec-user-approved-20261003",
+      "started_at": "2026-10-03T20:55:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー明示指示：RMCへ反映OKを出したカードは正式な推奨取引として登録。前回11件＋今回5件。"
     }
   ],
   "picks": [
@@ -2052,6 +2058,518 @@
       "settlement_override": null,
       "flags": [],
       "note": "①独立全186件走査から採用。$100想定取引。"
+    },
+    {
+      "id": "rec-20260930-yandex-mouz",
+      "system": "recommendations",
+      "match_id": "2026-09-30-yandex-mouz",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Team Yandex",
+      "selection": "side_a",
+      "selection_label": "Team Yandex",
+      "market_odds": {
+        "text": "Team Yandex 1.05",
+        "min": 1.05,
+        "max": 1.05,
+        "observed_at": "2026-09-30T17:39:31+09:00",
+        "source": "CyberScore 1.05"
+      },
+      "odds_taken": 1.05,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.895,
+        "gap_score": 80,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。格差そのものは本日最上位級。ただし勝者市場は価格NG。RMCでは格差候補として残し、正式VALUEからは除外。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20260930-100t-fut",
+      "system": "recommendations",
+      "match_id": "2026-09-30-100t-fut",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：100 Thieves",
+      "selection": "side_a",
+      "selection_label": "100 Thieves",
+      "market_odds": {
+        "text": "100 Thieves 1.38",
+        "min": 1.38,
+        "max": 1.38,
+        "observed_at": "2026-09-30T17:39:31+09:00",
+        "source": "Stake 1.38"
+      },
+      "odds_taken": 1.38,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.75,
+        "gap_score": 85,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。本日の『格差＋価格』の両立候補。100T側は単なる低オッズではなく、直近連勝・H2H・rating差が同方向。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20260930-betboom-og",
+      "system": "recommendations",
+      "match_id": "2026-09-30-betboom-og",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：BetBoom Team",
+      "selection": "side_a",
+      "selection_label": "BetBoom Team",
+      "market_odds": {
+        "text": "BetBoom Team 1.22",
+        "min": 1.22,
+        "max": 1.22,
+        "observed_at": "2026-09-30T17:39:31+09:00",
+        "source": "Stake 1.22"
+      },
+      "odds_taken": 1.22,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.84,
+        "gap_score": 85,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。実力差A。ただし価格面はWATCH。1.25以上なら再評価、1.22以下なら見送り寄り。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20260930-parivision-lgd",
+      "system": "recommendations",
+      "match_id": "2026-09-30-parivision-lgd",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：PARIVISION",
+      "selection": "side_a",
+      "selection_label": "PARIVISION",
+      "market_odds": {
+        "text": "PARIVISION 1.08",
+        "min": 1.08,
+        "max": 1.08,
+        "observed_at": "2026-09-30T17:39:31+09:00",
+        "source": "EGW 1.08"
+      },
+      "odds_taken": 1.08,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.93,
+        "gap_score": 80,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。純粋な格差候補A+だが、勝者オッズは価格NG。正式VALUEには入れない。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20260930-spirit-1win",
+      "system": "recommendations",
+      "match_id": "2026-09-30-spirit-1win",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Team Spirit",
+      "selection": "side_a",
+      "selection_label": "Team Spirit",
+      "market_odds": {
+        "text": "Team Spirit 1.38",
+        "min": 1.38,
+        "max": 1.38,
+        "observed_at": "2026-09-30T17:39:31+09:00",
+        "source": "21.com 1.38"
+      },
+      "odds_taken": 1.38,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.75,
+        "gap_score": 85,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。格差A＋価格は本日比較的まとも。1.38より1.44側を優先して評価。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20260930-india-korea",
+      "system": "recommendations",
+      "match_id": "2026-09-30-india-korea-hockey",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：India Women",
+      "selection": "side_a",
+      "selection_label": "India Women",
+      "market_odds": {
+        "text": "オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "当時の確定プレマッチ価格は未確認"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.82,
+        "gap_score": 80,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。リアルスポーツの本日上位格差候補。大会成績・ランキング・共通相手はIndia優勢。ただしオッズ未確認なので正式VALUEではなくWATCH。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20260930-loud-vitality",
+      "system": "recommendations",
+      "match_id": "2026-09-30-vitality-loud",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：LOUD",
+      "selection": "side_b",
+      "selection_label": "LOUD",
+      "market_odds": {
+        "text": "LOUD 1.68",
+        "min": 1.68,
+        "max": 1.68,
+        "observed_at": "2026-09-30T17:39:31+09:00",
+        "source": "Stake 1.68"
+      },
+      "odds_taken": 1.68,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.6,
+        "gap_score": 80,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。大格差ではないが、rating・直近の勝ち方・価格を合わせると本日のVALUE候補。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20260930-djokovic-borges",
+      "system": "recommendations",
+      "match_id": "2026-09-30-borges-djokovic",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Novak Djokovic",
+      "selection": "side_b",
+      "selection_label": "Novak Djokovic",
+      "market_odds": {
+        "text": "Novak Djokovic 1.44",
+        "min": 1.44,
+        "max": 1.44,
+        "observed_at": "2026-09-30T17:39:31+09:00",
+        "source": "Betfair 1.44"
+      },
+      "odds_taken": 1.44,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.75,
+        "gap_score": 80,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。ランキング/H2HはDjokovicだが『圧倒的』ではない。1.44ならWATCH。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20261001-navi-nemesis",
+      "system": "recommendations",
+      "match_id": "2026-10-01-nemesis-navi",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Natus Vincere",
+      "selection": "side_b",
+      "selection_label": "Natus Vincere",
+      "market_odds": {
+        "text": "Natus Vincere 1.25",
+        "min": 1.25,
+        "max": 1.25,
+        "observed_at": "2026-09-30T17:39:31+09:00",
+        "source": "Betfair 1.25"
+      },
+      "odds_taken": 1.25,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.8,
+        "gap_score": 85,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。rating・直接対決・共通相手の3軸がNAVI側。価格は1.27なら候補、1.24以下は余裕小。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20261001-xtreme-levelup",
+      "system": "recommendations",
+      "match_id": "2026-10-01-levelup-xtreme",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Xtreme Gaming",
+      "selection": "side_b",
+      "selection_label": "Xtreme Gaming",
+      "market_odds": {
+        "text": "Xtreme Gaming 1.09",
+        "min": 1.09,
+        "max": 1.09,
+        "observed_at": "2026-09-30T17:39:31+09:00",
+        "source": "EGW 1.09"
+      },
+      "odds_taken": 1.09,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.91,
+        "gap_score": 80,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。格差は大きいが1.09付近は短すぎる。1.13でも価格余裕は小さい。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20261001-barca-roma",
+      "system": "recommendations",
+      "match_id": "2026-10-01-roma-barcelona-w",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：FC Barcelona Women",
+      "selection": "side_b",
+      "selection_label": "FC Barcelona Women",
+      "market_odds": {
+        "text": "FC Barcelona Women 1.07",
+        "min": 1.07,
+        "max": 1.07,
+        "observed_at": "2026-09-30T17:39:31+09:00",
+        "source": "bet365 1.07"
+      },
+      "odds_taken": 1.07,
+      "stake": 100,
+      "discovered_at": "2026-09-30T17:39:31+09:00",
+      "bet_at": "2026-09-30T17:39:31+09:00",
+      "locked_at": "2026-09-30T17:39:31+09:00",
+      "locked": {
+        "prob": 0.96,
+        "gap_score": 95,
+        "confidence": "high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。純粋格差S。ただし勝者市場は価格面でWATCH/見送り寄り。より良い価格が出ない限りVALUE扱いしない。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "前回11件をユーザー承認により正式推奨化。結果まで収支反映。"
+    },
+    {
+      "id": "rec-20261004-georgia-vandy",
+      "system": "recommendations",
+      "match_id": "2026-10-04-georgia-vanderbilt",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Georgia Bulldogs",
+      "selection": "side_a",
+      "selection_label": "Georgia Bulldogs",
+      "market_odds": {
+        "text": "Georgia Bulldogs 1.025",
+        "min": 1.025,
+        "max": 1.025,
+        "observed_at": "2026-10-03T20:55:00+09:00",
+        "source": "FanDuel -4000（decimal 1.025）"
+      },
+      "odds_taken": 1.025,
+      "stake": 100,
+      "discovered_at": "2026-10-03T20:55:00+09:00",
+      "bet_at": "2026-10-03T20:55:00+09:00",
+      "locked_at": "2026-10-03T20:55:00+09:00",
+      "locked": {
+        "prob": 0.965,
+        "gap_score": 95,
+        "confidence": "high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。H2H・直近10・共通相手が同方向。純粋な格差は本日最上位級。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "今回5件をユーザー承認により正式推奨化。"
+    },
+    {
+      "id": "rec-20261004-nd-unc",
+      "system": "recommendations",
+      "match_id": "2026-10-04-notredame-unc",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Notre Dame",
+      "selection": "side_a",
+      "selection_label": "Notre Dame",
+      "market_odds": {
+        "text": "Notre Dame 1.0606",
+        "min": 1.0606,
+        "max": 1.0606,
+        "observed_at": "2026-10-03T20:55:00+09:00",
+        "source": "VegasInsider consensus -1650（decimal 1.0606）"
+      },
+      "odds_taken": 1.0606,
+      "stake": 100,
+      "discovered_at": "2026-10-03T20:55:00+09:00",
+      "bet_at": "2026-10-03T20:55:00+09:00",
+      "locked_at": "2026-10-03T20:55:00+09:00",
+      "locked": {
+        "prob": 0.955,
+        "gap_score": 95,
+        "confidence": "high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。H2H、直近10、共通相手比較がすべてNotre Dame側。今回最も形がきれいな格差の一つ。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "今回5件をユーザー承認により正式推奨化。"
+    },
+    {
+      "id": "rec-20261004-lsu-mcneese",
+      "system": "recommendations",
+      "match_id": "2026-10-04-lsu-mcneese",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：LSU",
+      "selection": "side_a",
+      "selection_label": "LSU",
+      "market_odds": {
+        "text": "オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "通常ブックのML提示を確認できず。Spread -53.5のみ確認"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-03T20:55:00+09:00",
+      "bet_at": "2026-10-03T20:55:00+09:00",
+      "locked_at": "2026-10-03T20:55:00+09:00",
+      "locked": {
+        "prob": 0.985,
+        "gap_score": 95,
+        "confidence": "high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。直近勝敗数は同じでも対戦相手レベルが別世界。純粋な勝敗格差は最大級。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "今回5件をユーザー承認により正式推奨化。"
+    },
+    {
+      "id": "rec-20261004-smu-bc",
+      "system": "recommendations",
+      "match_id": "2026-10-04-smu-bc",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：SMU",
+      "selection": "side_a",
+      "selection_label": "SMU",
+      "market_odds": {
+        "text": "SMU 1.056",
+        "min": 1.056,
+        "max": 1.056,
+        "observed_at": "2026-10-03T20:55:00+09:00",
+        "source": "FanDuel -1786（decimal約1.056）"
+      },
+      "odds_taken": 1.056,
+      "stake": 100,
+      "discovered_at": "2026-10-03T20:55:00+09:00",
+      "bet_at": "2026-10-03T20:55:00+09:00",
+      "locked_at": "2026-10-03T20:55:00+09:00",
+      "locked": {
+        "prob": 0.94,
+        "gap_score": 85,
+        "confidence": "medium-high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。H2H・直近10・共通相手はSMU側。ただし自滅要因があるためGeorgia/ND/LSUより一段下。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "今回5件をユーザー承認により正式推奨化。"
+    },
+    {
+      "id": "rec-20261004-fener-manisa",
+      "system": "recommendations",
+      "match_id": "2026-10-04-fenerbahce-manisa",
+      "run_id": "rec-user-approved-20261003",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Fenerbahçe Medicana Women",
+      "selection": "side_a",
+      "selection_label": "Fenerbahçe Medicana Women",
+      "market_odds": {
+        "text": "Fenerbahçe Medicana Women 1.02",
+        "min": 1.02,
+        "max": 1.02,
+        "observed_at": "2026-10-03T20:55:00+09:00",
+        "source": "Sportingbet 1.02"
+      },
+      "odds_taken": 1.02,
+      "stake": 100,
+      "discovered_at": "2026-10-03T20:55:00+09:00",
+      "bet_at": "2026-10-03T20:55:00+09:00",
+      "locked_at": "2026-10-03T20:55:00+09:00",
+      "locked": {
+        "prob": 0.97,
+        "gap_score": 95,
+        "confidence": "high",
+        "model_version": "rmc-user-approved-20261003",
+        "summary": "ユーザーがRMC反映を承認したため正式推奨。リーグ階層・昨季実績差は非常に大きい。ただしH2HとManisaの10試合分は不足しているため、確認済み範囲だけ表示。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "今回5件をユーザー承認により正式推奨化。"
     }
   ]
 }
