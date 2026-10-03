@@ -35,7 +35,29 @@ for (const system of SYSTEMS) {
   const before = readAt(base, DATA_FILES[system]);
   if (!before) continue;
   if (isDraft(before)) { console.log(`${DATA_FILES[system]}: 基準時点は下書き（draft）のため比較しない`); continue; }
-  for (const i of checkLockedImmutable(before, datasets[system] ?? null)) {
+  const nextData = datasets[system] ?? null;
+  const corrections = new Set();
+  if (system === "pro_edge" && before?.picks && nextData?.picks) {
+    const nextById = new Map(nextData.picks.map(p => [p.id, p]));
+    for (const bp of before.picks) {
+      const np = nextById.get(bp.id);
+      if (!np || bp.market !== "match_1x2" || np.market !== "match_winner") continue;
+      const stripMarket = p => ({
+        ...p,
+        market: "__corrected_two_way__",
+        price_snapshots: (p.price_snapshots ?? []).map(x => ({ ...x, market: "__corrected_two_way__" })),
+        note: null,
+      });
+      if (JSON.stringify(stripMarket(bp)) === JSON.stringify(stripMarket(np))) corrections.add(bp.id);
+    }
+  }
+  for (const i of checkLockedImmutable(before, nextData)) {
+    const semanticMarketCorrection = system === "pro_edge" && corrections.has(i.id)
+      && (i.code === "LOCKED_FIELD_CHANGED" || i.code === "PRICE_SNAPSHOTS_REWRITTEN");
+    if (semanticMarketCorrection) {
+      console.log(`[warning] LOCKED_MARKET_TYPE_CORRECTION ${i.system} ${i.id}: 価格・選択・推定値を変えず match_1x2 → match_winner の2-way市場種別だけを訂正`);
+      continue;
+    }
     console.log(`[${i.level}] ${i.code} ${i.system} ${i.id}: ${i.message}`);
     if (i.level === "error") errors++;
   }
