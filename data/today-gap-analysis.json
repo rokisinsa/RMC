@@ -786,43 +786,146 @@
       "estimated_win_probability_pct": "未固定",
       "estimated_ev_pct": "未算定",
       "ranking_rating": "未固定",
-      "h2h": "UEFA公式確認範囲でBelarus 2勝0分0敗、総得点7-0。",
-      "recent_form": "Belarus優位。詳細は追加深掘り対象。",
-      "common_opponents": "未確認／データ不足",
+      "h2h": "確認済み2試合はBelarus 2勝0分0敗、総得点7-0。2018/09/08 Belarus 5-0 San Marino、2018/11/18 San Marino 0-2 Belarus。",
+      "recent_form": "直近確認分: Belarusは2026/09/26 Albaniaに0-2、09/29 Finlandと0-0、06/09 Burkina Fasoと2-2、06/05 Syriaに4-1、03/29 Armeniaに2-1。San Marinoは2026/09/26 Finlandに0-7、09/29 Albaniaに0-3。2025年後半もAustria 0-10、Cyprus 0-4、Romania 1-7など大敗が多い。",
+      "common_opponents": "直近60日の共通相手はFinlandとAlbania。BelarusはFinlandと0-0、Albaniaに0-2。San MarinoはFinlandに0-7、Albaniaに0-3。同じ2相手でBelarusは0得点2失点、San Marinoは0得点10失点で、失点内容はBelarusが大幅優位。",
       "roster": "直前メンバー未確認",
       "early_tendency": "過去H2HはBelarusが2戦2勝・無失点。",
       "risk": "中立地開催。直前スタメン確認が必要。",
-      "conclusion": "H2Hと直近傾向からBelarus側を本日の分析へ追加。",
+      "conclusion": "H2H 2戦2勝・7-0、直近60日の共通相手2件でも失点差が大きくBelarus優位。中立地開催はあるが、格差根拠はH2Hと同一相手比較の両方で一致。",
       "sources": [
         "https://www.uefa.com/uefanationsleague/match/2047973--belarus-vs-san-marino/"
       ],
       "analysis_detail": {
-        "summary": "Belarus 2勝0敗、総得点7-0のH2H。",
+        "summary": "H2HはBelarus 2戦2勝・7-0。直近60日では共通相手Finland/Albaniaに対し、Belarus合計0-2、San Marino合計0-10で内容差が大きい。",
         "h2h": {
-          "summary": "確認済み2試合、Belarus 2勝0敗・7-0。",
-          "items": []
+          "summary": "確認済み2試合。Belarus 2勝0分0敗、7得点0失点。",
+          "items": [
+            {
+              "date": "2018-09-08",
+              "label": "Belarus vs San Marino",
+              "result": "Belarus 5-0 San Marino"
+            },
+            {
+              "date": "2018-11-18",
+              "label": "San Marino vs Belarus",
+              "result": "San Marino 0-2 Belarus"
+            }
+          ]
         },
         "recent_form": {
           "side_a": {
             "label": "Belarus",
-            "summary": "詳細深掘り対象",
-            "items": []
+            "summary": "直近確認5試合: 2勝2分1敗、得点8・失点6。",
+            "items": [
+              {
+                "date": "2026-09-29",
+                "opponent": "Finland",
+                "result": "D 0-0"
+              },
+              {
+                "date": "2026-09-26",
+                "opponent": "Albania",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026-06-09",
+                "opponent": "Burkina Faso",
+                "result": "D 2-2"
+              },
+              {
+                "date": "2026-06-05",
+                "opponent": "Syria",
+                "result": "W 4-1"
+              },
+              {
+                "date": "2026-03-29",
+                "opponent": "Armenia",
+                "result": "W 2-1"
+              }
+            ]
           },
           "side_b": {
             "label": "San Marino",
-            "summary": "詳細深掘り対象",
-            "items": []
+            "summary": "直近確認分は敗戦が続き、2026 Nations League開幕2戦で0得点10失点。",
+            "items": [
+              {
+                "date": "2026-09-29",
+                "opponent": "Albania",
+                "result": "L 0-3"
+              },
+              {
+                "date": "2026-09-26",
+                "opponent": "Finland",
+                "result": "L 0-7"
+              },
+              {
+                "date": "2025-11-18",
+                "opponent": "Romania",
+                "result": "L 1-7"
+              },
+              {
+                "date": "2025-11-13",
+                "opponent": "Czechia",
+                "result": "L 0-1"
+              },
+              {
+                "date": "2025-10-12",
+                "opponent": "Cyprus",
+                "result": "L 0-4"
+              },
+              {
+                "date": "2025-10-09",
+                "opponent": "Austria",
+                "result": "L 0-10"
+              }
+            ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "未確認／データ不足",
-          "items": []
+          "summary": "直近60日の共通相手2件。Belarusは2試合合計0-2、San Marinoは0-10。失点差でBelarusが8点分上。",
+          "items": [
+            {
+              "opponent": "Finland",
+              "side_a": {
+                "date": "2026-09-29",
+                "result": "Belarus D 0-0",
+                "performance": "0"
+              },
+              "side_b": {
+                "date": "2026-09-26",
+                "result": "San Marino L 0-7",
+                "performance": "-7"
+              },
+              "comparison": "Belarusが得失点差で7点上"
+            },
+            {
+              "opponent": "Albania",
+              "side_a": {
+                "date": "2026-09-26",
+                "result": "Belarus L 0-2",
+                "performance": "-2"
+              },
+              "side_b": {
+                "date": "2026-09-29",
+                "result": "San Marino L 0-3",
+                "performance": "-3"
+              },
+              "comparison": "Belarusが得失点差で1点上"
+            }
+          ]
+        },
+        "season_flow": {
+          "text": "2026/27 Nations LeagueはBelarusが1分1敗・0得点2失点、San Marinoが2敗・0得点10失点。同組相手への守備内容で大差。"
+        },
+        "year_flow": {
+          "text": "Belarusは2026年にArmenia 2-1、Syria 4-1など勝利あり。San Marinoは2025後半から大敗が多く、守備面の不安が継続。"
         },
         "availability": {
-          "text": "直前メンバー未確認。"
+          "text": "直前スタメンは未確認。"
         },
         "sport_specific": {
-          "text": "国代表戦・中立地開催。"
+          "text": "Belarus名義ホームだがBudapest開催のため通常ホーム補正は弱める。"
         }
       }
     },
@@ -846,45 +949,134 @@
       },
       "estimated_win_probability_pct": "未固定",
       "estimated_ev_pct": "未算定",
-      "ranking_rating": "OL Lyonnesはリーグ開幕3戦3勝、得失点差+19で首位。",
-      "h2h": "未確認／データ不足",
-      "recent_form": "OL Lyonnesはリーグ開幕3戦で7-1、7-1、8-1。欧州戦でもServetteに8-0、Chelseaと0-0。",
-      "common_opponents": "未確認／データ不足",
+      "ranking_rating": "OL LyonnesはArkema Première Ligue開幕3戦3勝、22得点3失点、得失点差+19で首位。Toulouseは3戦0勝1分2敗・勝点1で11位相当/前日公式では前から11番目（avant-dernier）。",
+      "h2h": "確認できた直近3回はいずれもOL Lyonnes勝利。2018年Coupe de France 11-0、2012-13リーグで7-0、11-1。合計29-1。",
+      "recent_form": "OL Lyonnesは今季リーグ3戦でFleury 7-1、Paris FC 7-1、Le Havre 8-1の3連勝。さらにServette 8-0、Chelsea 0-0。ToulouseはリーグでMontpellierに1-5、Le Havreに1-2、Lensと2-2で3戦0勝1分2敗。Coupe LFFPでもMarseilleに0-3、Evianに0-1。",
+      "common_opponents": "直近60日の明確な共通相手はLe Havre。OL LyonnesはLe Havreに8-1勝利、ToulouseはLe Havreに1-2敗戦。得失点差はOL +7、Toulouse -1で8点差。",
       "roster": "直前メンバー未確認",
       "early_tendency": "開幕から大量得点、直近5戦で3失点。",
       "risk": "欧州戦から間隔が短く、ローテーション注意。",
-      "conclusion": "今季序盤の得失点差と順位差からOL Lyonnes側を本日の分析へ追加。",
+      "conclusion": "H2H、今季成績、直近5、共通相手Le HavreのすべてでOL Lyonnesが大幅優位。最大の注意はChelsea戦直後のローテーション。",
       "sources": [
         "https://www.ol-lyonnes.com/",
         "https://www.ol-lyonnes.com/actualites/infos-match-ol-lyonnes-vs-toulouse/"
       ],
       "analysis_detail": {
-        "summary": "OL Lyonnesはリーグ3戦全勝、得失点差+19。",
+        "summary": "OL Lyonnesは今季リーグ3戦で22得点3失点。Toulouseは0勝1分2敗。H2H直近3回はOLが29-1、共通相手Le Havreでも8点分の内容差。",
         "h2h": {
-          "summary": "未確認／データ不足",
-          "items": []
+          "summary": "確認できた直近3回はOL Lyonnes 3勝0敗、合計29-1。",
+          "items": [
+            {
+              "date": "2018",
+              "label": "OL Lyonnes vs Toulouse",
+              "result": "OL Lyonnes 11-0 Toulouse（Coupe de France）"
+            },
+            {
+              "date": "2012-13",
+              "label": "OL Lyonnes vs Toulouse",
+              "result": "OL Lyonnes 7-0 Toulouse"
+            },
+            {
+              "date": "2012-13",
+              "label": "Toulouse vs OL Lyonnes",
+              "result": "Toulouse 1-11 OL Lyonnes"
+            }
+          ]
         },
         "recent_form": {
           "side_a": {
             "label": "OL Lyonnes",
-            "summary": "7-1, 7-1, 8-1, 8-0, 0-0",
-            "items": []
+            "summary": "直近5: 4勝1分、30得点3失点。",
+            "items": [
+              {
+                "date": "2026-09-05",
+                "opponent": "Fleury",
+                "result": "W 7-1"
+              },
+              {
+                "date": "2026-09-12",
+                "opponent": "Paris FC",
+                "result": "W 7-1"
+              },
+              {
+                "date": "2026-09-18",
+                "opponent": "Le Havre",
+                "result": "W 8-1"
+              },
+              {
+                "date": "2026-09-23",
+                "opponent": "Servette",
+                "result": "W 8-0"
+              },
+              {
+                "date": "2026-09-30",
+                "opponent": "Chelsea",
+                "result": "D 0-0"
+              }
+            ]
           },
           "side_b": {
             "label": "Toulouse FC Women",
-            "summary": "詳細深掘り対象",
-            "items": []
+            "summary": "直近確認5: 0勝1分4敗。リーグ3戦は0勝1分2敗。",
+            "items": [
+              {
+                "date": "2026-09",
+                "opponent": "Montpellier",
+                "result": "L 1-5"
+              },
+              {
+                "date": "2026-09-12",
+                "opponent": "Le Havre",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026-09-19",
+                "opponent": "Lens",
+                "result": "D 2-2"
+              },
+              {
+                "date": "2026-09",
+                "opponent": "Marseille",
+                "result": "L 0-3（Coupe LFFP）"
+              },
+              {
+                "date": "2026-09",
+                "opponent": "Evian",
+                "result": "L 0-1（Coupe LFFP）"
+              }
+            ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "未確認／データ不足",
-          "items": []
+          "summary": "直近60日の明確な共通相手はLe Havre。OLが8-1、Toulouseが1-2。得失点差はOL +7、Toulouse -1。",
+          "items": [
+            {
+              "opponent": "Le Havre",
+              "side_a": {
+                "date": "2026-09-18",
+                "result": "OL Lyonnes W 8-1",
+                "performance": "+7"
+              },
+              "side_b": {
+                "date": "2026-09-12",
+                "result": "Toulouse L 1-2",
+                "performance": "-1"
+              },
+              "comparison": "OL Lyonnesが得失点差で8点上"
+            }
+          ]
+        },
+        "season_flow": {
+          "text": "OL Lyonnesはリーグ3戦3勝・22得点3失点・+19で首位。Toulouseは昇格初年度で3戦0勝1分2敗・勝点1。"
+        },
+        "year_flow": {
+          "text": "OL Lyonnesは2025-26にArkema Première Ligueを5季連続で制覇。Toulouseは2025-26 Seconde Ligue優勝で13年ぶりに1部復帰。カテゴリー差の背景が大きい。"
         },
         "availability": {
-          "text": "直前メンバー未確認。"
+          "text": "OL公式監督コメントでローテーションの可能性が明言されているため、先発変更は主要リスク。"
         },
         "sport_specific": {
-          "text": "リーグ3試合で22得点3失点。"
+          "text": "OLはChelsea戦から短い間隔。戦力差は大きいが、ローテーションで得点期待値は下振れし得る。"
         }
       }
     }
