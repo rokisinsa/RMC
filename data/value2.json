@@ -1,15 +1,250 @@
 {
   "schema_version": 1,
   "meta": {
-    "generated_by": "RMC cleanup 2026-10-03",
-    "legacy_source": null,
-    "legacy_commit": null,
-    "as_of": "2026-10-03T20:27:00+09:00",
+    "generated_by": "migration/migrate.js",
+    "legacy_source": "analysis.html",
+    "legacy_commit": "02e5167",
+    "as_of": "2026-09-26T21:00:00+09:00",
     "status": "active",
-    "note": "2026-09-28以前の旧VALUE②データをユーザー指示で全削除。"
+    "note": "VALUE②：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
   "system": "value2",
-  "discovery_runs": [],
+  "discovery_runs": [
+    {
+      "run_id": "v2-legacy-import",
+      "started_at": "2026-09-26T06:45:58+09:00",
+      "slot": "adhoc",
+      "note": "VALUE②：旧RMC（02e5167）からの一括移行用。実際の探索回・探索時刻は記録がない。系統ごとに別の移行用探索回として扱う（他系統と共有しない）"
+    },
+    {
+      "run_id": "v2-20260926-live-trial",
+      "started_at": "2026-09-26T21:00:00+09:00",
+      "slot": "adhoc",
+      "note": "本番即時試走。VALUE②として独立探索。市場候補を確認したが、calibration/SoS/upset risk等を含む独立事前評価を満たさないため新規acceptedなし。"
+    },
+    {
+      "run_id": "v2-20260926-2258",
+      "started_at": "2026-09-26T22:58:00+09:00",
+      "slot": "adhoc",
+      "note": "独立探索。実市場候補を確認したが、calibration/SoS/upset risk等を含む独立評価が不足し、新規acceptedなし。"
+    },
+    {
+      "run_id": "v2-fulltrial-20260926-2254c",
+      "started_at": "2026-09-26T22:54:00+09:00",
+      "slot": "adhoc",
+      "note": "独立VALUE②探索。Shapovalov、Rublev、FUT、100T等を検討したが、現時点の校正済みモデル/SoS/upset-risk条件を満たす十分な独立サンプルがなく新規adoptedなし。無理な採用をしない。"
+    },
+    {
+      "run_id": "v2-wide-20260926-2359",
+      "started_at": "2026-09-26T23:59:00+09:00",
+      "slot": "adhoc",
+      "note": "Independent full-category scan. Reviewed broad current/next-day card universe including niche categories and esports. No new adopted card because calibrated independent probability + verified offered odds + SoS/Upset Risk package was not complete enough for a locked long-run ROI decision. No logic changes."
+    },
+    {
+      "run_id": "v2-complete-20260927-0003",
+      "started_at": "2026-09-27T00:03:00+09:00",
+      "slot": "adhoc",
+      "note": "Independent full-category scan. No new adopted card without complete calibrated probability, verified offered price, SoS/freshness/Upset Risk package. Existing logic unchanged."
+    },
+    {
+      "run_id": "v2-coverage-gate-20260927-0021",
+      "started_at": "2026-09-27T00:21:00+09:00",
+      "slot": "23:00",
+      "note": "mechanism test"
+    },
+    {
+      "run_id": "v2-rmc-20260927-bc-202609271444",
+      "started_at": "2026-09-27T14:44:07.844+09:00",
+      "slot": "12:00",
+      "note": "BET CHANNEL最新screening_event_ids 186件をvalue2ロジックで独立全件一次走査。共通候補プール不使用。"
+    },
+    {
+      "run_id": "v2-rmc-20260927-bc-202609271509-marketcheck",
+      "started_at": "2026-09-27T15:09:30+09:00",
+      "slot": "12:00",
+      "note": "BET CHANNEL screening_event_ids 186件を独立再走査。外部市場クロスチェック追加後の完全再監査。"
+    },
+    {
+      "run_id": "v2-manual-full-v3-20260927-2126",
+      "started_at": "2026-09-27T21:26:30+09:00",
+      "slot": "adhoc",
+      "note": "最新JSTインベントリ全件を独立一次走査。"
+    },
+    {
+      "run_id": "v2-live-coverage-202609282322-3c55df",
+      "started_at": "2026-09-28T23:22:14.042+09:00",
+      "slot": "adhoc",
+      "note": "BET CHANNEL complete union（通常+fixed-odds/eSports）全eventを使うライブcoverage dry-run。候補の最終採否・本番pick追加は行わない。"
+    }
+  ],
   "excluded_log": [],
-  "picks": []
+  "picks": [
+    {
+      "id": "v2-legacy-ge-vit",
+      "system": "value2",
+      "match_id": "2026-09-26-ge-vit",
+      "market": "match_winner",
+      "market_label": "VALORANT Champions 2026 Group Stage Opening B / 選択：Team Vitality / BO3 LAN",
+      "selection": "side_b",
+      "selection_label": "Team Vitality",
+      "market_odds": null,
+      "odds_taken": 1.76,
+      "stake": 100,
+      "discovered_at": null,
+      "run_id": "v2-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-26T01:59:41+09:00",
+      "locked": {
+        "verdict": "adopted",
+        "prob_lo": 0.6,
+        "prob_hi": 0.63,
+        "prob_point": null,
+        "required_prob": 0.568,
+        "market_gap_lo": 3.2,
+        "market_gap_hi": 6.2,
+        "upset_risk": "mid",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable2",
+        "row_index": 0,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-26T01:59:41+09:00",
+        "first_seen_commit": "7640655",
+        "lock_evidence": "現在の事前値は 7640655（2026-09-26T01:59:41+09:00）から基準点まで不変。試合開始 2026-09-26T18:00:00+09:00 より前",
+        "raw": {
+          "verdict_label": "VALUE②採用",
+          "date_and_start_text": "試合開始 18:00 JST",
+          "market_texts": [
+            "VALORANT Champions 2026 Group Stage Opening B / 選択：Team Vitality / BO3 LAN"
+          ],
+          "odds_text": "1.76",
+          "required_prob_text": "56.8%",
+          "estimated_prob_text": "60〜63%",
+          "ev_or_gap_text": "+3.2〜+6.2pt",
+          "upset_risk_text": "中",
+          "stake_text": "$100"
+        }
+      }
+    },
+    {
+      "id": "v2-legacy-loud-edg",
+      "system": "value2",
+      "match_id": "2026-09-26-loud-edg",
+      "market": "match_winner",
+      "market_label": "VALORANT Champions 2026 Group Stage Opening B / 選択候補：LOUD / BO3 LAN",
+      "selection": "side_a",
+      "selection_label": "LOUD",
+      "market_odds": {
+        "text": "1.37〜1.43",
+        "min": 1.37,
+        "max": 1.43,
+        "observed_at": null,
+        "source": "旧analysis.html"
+      },
+      "odds_taken": null,
+      "stake": null,
+      "discovered_at": null,
+      "run_id": "v2-legacy-import",
+      "bet_at": null,
+      "locked_at": "2026-09-26T01:59:41+09:00",
+      "locked": {
+        "verdict": "watch",
+        "prob_lo": 0.72,
+        "prob_hi": 0.75,
+        "prob_point": null,
+        "required_prob": null,
+        "market_gap_lo": -1,
+        "market_gap_hi": 5.1,
+        "upset_risk": "mid_high",
+        "model_version": null,
+        "summary": null
+      },
+      "closing_odds": null,
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [
+        "legacy_import",
+        "odds_unverified",
+        "analysis_independence_review"
+      ],
+      "detail_ref": null,
+      "note": null,
+      "legacy": {
+        "source": "analysis.html",
+        "commit": "02e5167",
+        "table": "oddsTestTable2",
+        "row_index": 1,
+        "detail_id": null,
+        "data_ts": null,
+        "sort_at": null,
+        "first_seen_at": "2026-09-26T01:59:41+09:00",
+        "first_seen_commit": "7640655",
+        "lock_evidence": "現在の事前値は 7640655（2026-09-26T01:59:41+09:00）から基準点まで不変。試合開始 2026-09-26T21:00:00+09:00 より前",
+        "raw": {
+          "verdict_label": "VALUE②監視",
+          "date_and_start_text": "試合開始 21:00 JST",
+          "market_texts": [
+            "VALORANT Champions 2026 Group Stage Opening B / 選択候補：LOUD / BO3 LAN"
+          ],
+          "odds_text": "1.37〜1.43",
+          "required_prob_text": "69.9〜73.0%",
+          "estimated_prob_text": "72〜75%",
+          "ev_or_gap_text": "価格次第 -1.0〜+5.1pt",
+          "upset_risk_text": "中〜高",
+          "stake_text": "—"
+        }
+      }
+    },
+    {
+      "id": "v2-202609271444-seahawks",
+      "system": "value2",
+      "match_id": "2026-09-28-commanders-seahawks",
+      "run_id": "v2-rmc-20260927-bc-202609271444",
+      "market": "match_1x2",
+      "market_label": "BET CHANNEL 3-way 最終結果",
+      "selection": "side_b",
+      "selection_label": "シーホークス",
+      "market_odds": {
+        "text": "Seahawks 1.29",
+        "min": 1.29,
+        "max": 1.29,
+        "observed_at": "2026-09-27T14:33:16.617+09:00",
+        "source": "BET CHANNEL event 220230"
+      },
+      "odds_taken": null,
+      "stake": null,
+      "discovered_at": "2026-09-27T14:44:07.844+09:00",
+      "bet_at": null,
+      "locked_at": "2026-09-27T14:44:07.844+09:00",
+      "locked": {
+        "verdict": "watch",
+        "prob_lo": 0.785,
+        "prob_hi": 0.825,
+        "prob_point": 0.8,
+        "required_prob": 0.775194,
+        "market_gap_lo": 0.98,
+        "market_gap_hi": 4.98,
+        "upset_risk": "mid",
+        "model_version": "rmc-v2-nfl-20260927",
+        "summary": "VALUE②は早期シーズン2試合サンプルとSeattle守備欠場を重く見て採用ではなく監視。市場必要勝率に対し独立推定は小幅上。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "③VALUE②独立186件走査。監視。"
+    }
+  ]
 }
