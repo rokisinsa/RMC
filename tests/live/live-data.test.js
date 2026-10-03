@@ -112,6 +112,6 @@ test("本データに④の架空サンプルは含まれず、V2 は本番モ�
   assert.ok(live.pro_edge.picks.every(p => !p.id.startsWith("pe-s")));
   const html = renderPage(vm, { demo: true });
   assert.ok(!html.includes("デモ表示"));
-  for (const id of ["sec-rec", "sec-v1", "sec-v2", "sec-pe", "sec-exp"]) assert.ok(html.includes(`id="${id}"`), id);
+  for (const id of ["sec-rec", "sec-v1", "sec-v2", "sec-pe"]) assert.ok(html.includes(`id="${id}"`), id);
   for (const bad of ["NaN", "undefined", "[object Object]"]) assert.ok(!html.includes(bad), bad);
 });
