@@ -50,6 +50,29 @@ async function applyDemo(ds) {
   };
 }
 
+const DISPLAY_RESET_CUTOFF = Date.parse("2026-09-29T00:00:00+09:00");
+function displayPickAfterReset(pick, matchesById) {
+  const m=matchesById.get(pick.match_id);
+  const idDate=String(pick.match_id??"").match(/^(\d{4}-\d{2}-\d{2})/)?.[1] ?? null;
+  const raw=m?.start_at ?? (idDate ? idDate+"T00:00:00+09:00" : pick.locked_at ?? pick.discovered_at ?? null);
+  const t=raw ? Date.parse(raw) : NaN;
+  return Number.isFinite(t) && t>=DISPLAY_RESET_CUTOFF;
+}
+function applyProductionDisplayReset(ds) {
+  const matchesById=new Map((ds.matches?.matches??[]).map(m=>[m.id,m]));
+  const trim=data=>data ? {...data,picks:(data.picks??[]).filter(p=>displayPickAfterReset(p,matchesById))} : data;
+  return {
+    ...ds,
+    recommendations:trim(ds.recommendations),
+    experience:trim(ds.experience),
+    value1:trim(ds.value1),
+    value2:trim(ds.value2),
+    pro_edge:trim(ds.pro_edge),
+    legacy_unassigned:ds.legacy_unassigned ? {...ds.legacy_unassigned,excluded_log:[]} : ds.legacy_unassigned,
+    matches:ds.matches ? {...ds.matches,meta:{...ds.matches.meta,as_of:ds.today_gap_analysis?.generated_at ?? ds.matches.meta?.as_of,note:"公開画面は2026-09-29以降を新基準として表示・収支集計"}} : ds.matches
+  };
+}
+
 function safeText(v) {
   return String(v ?? "").replace(/[<>&]/g, "");
 }
@@ -328,6 +351,7 @@ async function main() {
     let ds = Object.fromEntries(entries.filter(([, v]) => v != null));
     const cfg = await getJson("config/pro-edge.config.json");
     if (mode.demo) ds = await applyDemo(ds);                 // development のときだけ
+    if (!mode.demo) ds = applyProductionDisplayReset(ds);     // 公開画面は9/29以降だけを表示・収支集計
     assertNoDemoInProduction(mode, ds);
     const vm = buildViewModel(ds, { proEdgeConfig: cfg });
     root.innerHTML = (mode.mode === "development" ? '<div class="dev-banner">development モード（ローカル確認環境）</div>' : "")
