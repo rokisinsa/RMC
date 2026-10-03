@@ -386,10 +386,12 @@ async function main() {
     root.innerHTML = (mode.mode === "development" ? '<div class="dev-banner">development モード（ローカル確認環境）</div>' : "")
       + renderTodayGapAnalysis(ds.today_gap_analysis, ds.system_analysis?.systems?.recommendations?.candidates ?? [])
       + renderPreviousGapAnalysis(ds.today_gap_analysis?.previous_analysis)
-      + '<details style="margin:10px 0 18px;border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:8px 10px"><summary style="cursor:pointer;font-size:12px;font-weight:800;color:#9fc9da">自動更新・41項目監査の状態（開く）</summary>'
-      + completeUpdateBanner(ds)
-      + '</details>'
-      + '<div style="margin:18px 2px 8px;font-size:12px;color:#8fa8b5">以下は既存の①推奨・②VALUE①・③VALUE②・④PRO EDGE・経験値の取引履歴／収支。上の「本日の分析」が今回の最新分析です。</div>'
+      + (mode.mode === "development"
+          ? '<details style="margin:10px 0 18px;border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:8px 10px"><summary style="cursor:pointer;font-size:12px;font-weight:800;color:#9fc9da">自動更新・41項目監査の状態（オーナー確認用）</summary>'
+            + completeUpdateBanner(ds)
+            + '</details>'
+          : '')
+      + '<div style="margin:18px 2px 8px;font-size:12px;color:#8fa8b5">以下は既存の①推奨・②VALUE①・③VALUE②・④PRO EDGEの取引履歴／収支。上の「本日の分析」が今回の最新分析です。</div>'
       + renderPage(vm, { demo: mode.demo });
     wire(root);
     window.__rmcV2 = vm;   // 確認用
