@@ -4,9 +4,9 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-09-26T21:00:00+09:00",
+    "as_of": "2026-10-03T21:42:37+09:00",
     "status": "active",
-    "note": "④ PRO EDGE：新設の独立分析系統。旧RMCに対応するデータは無いため空。候補は④自身の探索回（pe-…）で独立に追加する。"
+    "note": "④PRO EDGE正式採用2件を追加。ユーザー承認カードはRMC想定$100エントリーで追跡し、結果時に収支反映。"
   },
   "system": "pro_edge",
   "discovery_runs": [
@@ -69,6 +69,12 @@
       "started_at": "2026-09-28T23:22:14.042+09:00",
       "slot": "adhoc",
       "note": "BET CHANNEL complete union（通常+fixed-odds/eSports）全eventを使うライブcoverage dry-run。候補の最終採否・本番pick追加は行わない。"
+    },
+    {
+      "run_id": "pe-user-approved-20261003-2142",
+      "started_at": "2026-10-03T21:42:37+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー承認によりTexas Tech-Colorado、BYU-TCUを④PRO EDGE正式採用。市場価格と独立推定勝率を別管理。"
     }
   ],
   "picks": [
@@ -219,6 +225,349 @@
       "settlement_override": null,
       "flags": [],
       "note": "④PRO EDGE独立186件走査。"
+    },
+    {
+      "id": "pe-20261003-texas-tech-colorado",
+      "system": "pro_edge",
+      "match_id": "2026-10-04-texas-tech-colorado",
+      "run_id": "pe-user-approved-20261003-2142",
+      "analysis_id": "pe-an-20261003-texas-tech-colorado",
+      "market": "match_1x2",
+      "selection": "side_a",
+      "selection_label": "Texas Tech Red Raiders",
+      "discovered_at": "2026-10-03T21:42:37+09:00",
+      "locked_at": "2026-10-03T21:42:37+09:00",
+      "bet_at": "2026-10-03T21:42:37+09:00",
+      "live": false,
+      "price_snapshots": [
+        {
+          "snapshot_id": "ps-fanduel-ttu-cu-20261003-2142",
+          "kind": "analysis",
+          "bookmaker": "FanDuel",
+          "market": "match_1x2",
+          "outcomes": {
+            "side_a": 1.2079002079,
+            "side_b": 4.6
+          },
+          "observed_at": "2026-10-03T21:42:37+09:00",
+          "source": "https://www.fanduel.com/research/texas-tech-vs-colorado-college-football-odds-picks-best-bets-for-10-3-2026"
+        }
+      ],
+      "bet_odds": 1.2079002079,
+      "bet_bookmaker": "FanDuel（RMC正式想定エントリー価格）",
+      "stake": 100,
+      "locked": {
+        "decision": "accepted",
+        "decision_reason": "独立推定94.0%に対し、FanDuel -481/+360のno-vig市場確率を上回り、提示価格EVも3%基準を大幅超過。ユーザーが④正式採用を承認。",
+        "required_ev": 0.03,
+        "market_reference": {
+          "snapshot_ids": [
+            "ps-fanduel-ttu-cu-20261003-2142"
+          ],
+          "method": "single_book"
+        },
+        "offered_price": {
+          "snapshot_id": "ps-fanduel-ttu-cu-20261003-2142"
+        },
+        "model": {
+          "model_id": "rmc-ncaaf-public-rating-benchmark-v1",
+          "model_version": "1.0",
+          "sport_module": "other",
+          "method": "rating_logistic",
+          "trained_through": "2026-10-01T00:00:00+09:00"
+        },
+        "base_probability": 0.94,
+        "expert_adjustments": [],
+        "features": [
+          {
+            "name": "independent_model_probability",
+            "status": "present",
+            "value": 0.94,
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://www.fanduel.com/research/texas-tech-vs-colorado-college-football-odds-picks-best-bets-for-10-3-2026",
+            "note": "FanDuel Research掲載のnumberFire勝率94%。市場オッズとは別入力。"
+          },
+          {
+            "name": "h2h_all_confirmed",
+            "status": "present",
+            "value": {
+              "series": "Texas Tech 5勝 / Colorado 6勝",
+              "last4": [
+                "2024 Colorado 41-27 Texas Tech",
+                "2010 Texas Tech 27-24 Colorado",
+                "2007 Colorado 31-26 Texas Tech",
+                "2006 Colorado 30-6 Texas Tech"
+              ]
+            },
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://texastech.com/game-center/21729",
+            "note": "公式確認範囲。"
+          },
+          {
+            "name": "recent10_texas_tech",
+            "status": "present",
+            "value": [
+              "W 49-14 Sam Houston",
+              "W 28-26 Houston",
+              "W 35-24 Oregon State",
+              "W 33-10 Abilene Christian",
+              "L 0-23 Oregon",
+              "W 34-7 BYU",
+              "W 49-0 West Virginia",
+              "W 48-9 UCF",
+              "W 29-7 BYU",
+              "W 43-20 Kansas State"
+            ],
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://texastech.com/sports/football/schedule/2025",
+            "note": "2026直近4＋2025末6。9勝1敗。"
+          },
+          {
+            "name": "recent10_colorado",
+            "status": "present",
+            "value": [
+              "L 13-23 Baylor",
+              "L 7-41 Northwestern",
+              "W 52-21 Weber State",
+              "W 14-13 Georgia Tech",
+              "L 14-24 Kansas State",
+              "L 17-42 Arizona State",
+              "L 22-29 West Virginia",
+              "L 17-52 Arizona",
+              "L 7-53 Utah",
+              "W 24-17 Iowa State"
+            ],
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://cubuffs.com/sports/football/schedule/2025",
+            "note": "2026直近4＋2025末6。3勝7敗。"
+          },
+          {
+            "name": "common_opponents",
+            "status": "present",
+            "value": [
+              {
+                "opponent": "BYU",
+                "texas_tech": "2025 W 29-7（Big 12 Championshipでも34-7）",
+                "colorado": "2025 L 21-24",
+                "comparison": "Texas Tech優勢"
+              },
+              {
+                "opponent": "Houston",
+                "texas_tech": "2025 W 35-11 / 2026 W 28-26",
+                "colorado": "2025 L 20-36",
+                "comparison": "Texas Tech優勢"
+              }
+            ],
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://texastech.com/sports/football/schedule/2025",
+            "note": "異なる日付を含むため補助比較。"
+          },
+          {
+            "name": "current_record",
+            "status": "present",
+            "value": {
+              "texas_tech": "4-0",
+              "colorado": "2-2"
+            },
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://texastech.com/sports/football/schedule",
+            "note": null
+          }
+        ],
+        "data_confidence": "high",
+        "price_gap_factors": [
+          "Texas Tech 4-0",
+          "直近10で9-1対3-7",
+          "得失点プロフィール差",
+          "独立モデル94%"
+        ],
+        "disagreement_reasons": [
+          "Coloradoホーム",
+          "2024直近H2HはColorado勝利",
+          "Texas Techの市場価格は短い"
+        ],
+        "missing_information": [
+          "closing_price",
+          "最終injury report"
+        ],
+        "summary": "Texas Tech正式PRO EDGE。独立推定94.0%。H2HはColoradoが通算6-5だが、現在フォームと共通相手比較はTexas Tech優勢。"
+      },
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [],
+      "note": "RMC正式採用の想定取引。bet_oddsは分析時FanDuel提示価格を固定したRMC追跡価格で、外部実ベット実行の主張ではない。"
+    },
+    {
+      "id": "pe-20261003-byu-tcu",
+      "system": "pro_edge",
+      "match_id": "2026-10-04-byu-tcu",
+      "run_id": "pe-user-approved-20261003-2142",
+      "analysis_id": "pe-an-20261003-byu-tcu",
+      "market": "match_1x2",
+      "selection": "side_a",
+      "selection_label": "BYU Cougars",
+      "discovered_at": "2026-10-03T21:42:37+09:00",
+      "locked_at": "2026-10-03T21:42:37+09:00",
+      "bet_at": "2026-10-03T21:42:37+09:00",
+      "live": false,
+      "price_snapshots": [
+        {
+          "snapshot_id": "ps-fanduel-byu-tcu-20261003-2142",
+          "kind": "analysis",
+          "bookmaker": "FanDuel",
+          "market": "match_1x2",
+          "outcomes": {
+            "side_a": 1.4347826087,
+            "side_b": 2.88
+          },
+          "observed_at": "2026-10-03T21:42:37+09:00",
+          "source": "https://www.fanduel.com/research/byu-vs-tcu-college-football-odds-picks-best-bets-for-10-3-2026"
+        }
+      ],
+      "bet_odds": 1.4347826087,
+      "bet_bookmaker": "FanDuel（RMC正式想定エントリー価格）",
+      "stake": 100,
+      "locked": {
+        "decision": "accepted",
+        "decision_reason": "独立推定71.7%に対してFanDuel -230/+188のno-vig市場確率を上回る。提示価格EVは約2.9%で通常3%基準を僅かに下回るが、ユーザーが上位2件とも正式採用を明示したため、このカードは承認時2.5%閾値で固定。",
+        "required_ev": 0.025,
+        "market_reference": {
+          "snapshot_ids": [
+            "ps-fanduel-byu-tcu-20261003-2142"
+          ],
+          "method": "single_book"
+        },
+        "offered_price": {
+          "snapshot_id": "ps-fanduel-byu-tcu-20261003-2142"
+        },
+        "model": {
+          "model_id": "rmc-ncaaf-public-rating-benchmark-v1",
+          "model_version": "1.0",
+          "sport_module": "other",
+          "method": "rating_logistic",
+          "trained_through": "2026-10-01T00:00:00+09:00"
+        },
+        "base_probability": 0.717,
+        "expert_adjustments": [],
+        "features": [
+          {
+            "name": "independent_model_probability",
+            "status": "present",
+            "value": 0.717,
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://www.fanduel.com/research/byu-vs-tcu-college-football-odds-picks-best-bets-for-10-3-2026",
+            "note": "numberFire勝率71.7%。市場オッズとは別入力。"
+          },
+          {
+            "name": "h2h_all_confirmed",
+            "status": "present",
+            "value": {
+              "series": "TCU 7勝 / BYU 6勝",
+              "latest": "2025 BYU 44-13 TCU"
+            },
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://gofrogs.com/sports/football/schedule/2025",
+            "note": "通算シリーズはTCU 7-6。最新はBYU大勝。"
+          },
+          {
+            "name": "recent10_byu",
+            "status": "present",
+            "value": [
+              "W 41-23 Colorado State",
+              "W 28-17 Arizona",
+              "W 63-7 Utah Tech",
+              "W 25-21 Georgia Tech",
+              "L 7-34 Texas Tech",
+              "W 41-21 UCF",
+              "W 26-14 Cincinnati",
+              "W 44-13 TCU",
+              "L 7-29 Texas Tech",
+              "W 41-27 Iowa State"
+            ],
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://byucougars.com/sports/football/schedule/season/2025",
+            "note": "2026直近3＋2025末7。8勝2敗。"
+          },
+          {
+            "name": "recent10_tcu",
+            "status": "present",
+            "value": [
+              "L 13-21 UCF",
+              "W 31-7 Arkansas State",
+              "W 63-7 Grambling State",
+              "L 10-15 North Carolina",
+              "W 30-27 USC",
+              "W 45-23 Cincinnati",
+              "W 17-14 Houston",
+              "L 13-44 BYU",
+              "L 17-20 Iowa State",
+              "W 23-17 West Virginia"
+            ],
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://gofrogs.com/sports/football/schedule/text/2025",
+            "note": "2026直近4＋2025末6。6勝4敗。"
+          },
+          {
+            "name": "common_opponents",
+            "status": "present",
+            "value": [
+              {
+                "opponent": "Colorado",
+                "byu": "2025 W 24-21",
+                "tcu": "2025 W 35-21",
+                "comparison": "TCUの得失点差が上"
+              },
+              {
+                "opponent": "UCF",
+                "byu": "2025 W 41-21",
+                "tcu": "2026 L 13-21",
+                "comparison": "BYU優勢"
+              },
+              {
+                "opponent": "Cincinnati",
+                "byu": "2025 W 26-14",
+                "tcu": "2025 W 45-23",
+                "comparison": "両者勝利、TCUの得失点差が上"
+              }
+            ],
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://byucougars.com/sports/football/schedule/season/2025",
+            "note": "時期が異なる比較を含むため補助材料。"
+          },
+          {
+            "name": "current_record",
+            "status": "present",
+            "value": {
+              "byu": "3-0",
+              "tcu": "2-2"
+            },
+            "observed_at": "2026-10-03T21:42:37+09:00",
+            "source": "https://byucougars.com/sports/football/schedule",
+            "note": null
+          }
+        ],
+        "data_confidence": "medium",
+        "price_gap_factors": [
+          "BYU 3-0",
+          "直近10で8-2対6-4",
+          "2025最新H2H 44-13",
+          "独立モデル71.7%"
+        ],
+        "disagreement_reasons": [
+          "TCUホーム",
+          "通算H2HはTCU 7-6",
+          "共通相手Colorado/CincinnatiではTCUが良い比較もある"
+        ],
+        "missing_information": [
+          "closing_price",
+          "最終injury report"
+        ],
+        "summary": "BYU正式PRO EDGE。EVは通常基準3%付近の境界だが、ユーザー承認で正式採用。共通相手比較にはTCU側材料もありTexas Techほど強くない。"
+      },
+      "recalculated_reference": [],
+      "settlement_override": null,
+      "flags": [],
+      "note": "RMC正式採用の想定取引。bet_oddsは分析時FanDuel提示価格を固定したRMC追跡価格で、外部実ベット実行の主張ではない。"
     }
   ]
 }
