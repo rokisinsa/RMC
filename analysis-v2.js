@@ -332,6 +332,35 @@ function wire(root) {
   });
 }
 
+
+function attachFormalRecommendationAnalysis(vm, today) {
+  const all=[...(today?.previous_analysis?.candidates??[]),...(today?.candidates??[])];
+  const norm=v=>String(v??"").toLowerCase().replace(/[‐‑–—]/g,"-").replace(/\s+/g," ").trim();
+  const byCard=new Map();
+  for(const c of all){
+    const d=c.analysis_detail??{};
+    byCard.set(norm(c.matchup),{
+      h2h:d.h2h??{summary:c.h2h??"未確認／データ不足",items:[]},
+      recent_form:d.recent_form??{summary:c.recent_form??"未確認／データ不足"},
+      common_opponent_comparison:d.common_opponent_comparison??{summary:c.common_opponents??"確認範囲で共通相手0件／未確認",items:[]},
+      captured_at:(today?.previous_analysis?.candidates??[]).includes(c)?today?.previous_analysis?.generated_at:today?.generated_at
+    });
+  }
+  const seen=new Set();
+  for(const group of [vm?.recommendations?.rows??[],vm?.recommendations?.current_rows??[],vm?.recommendations?.legacy_rows??[]]){
+    for(const r of group){
+      if(seen.has(r)) continue; seen.add(r);
+      const key=norm(r.match?.card);
+      r.analysis_snapshot=byCard.get(key)??{
+        h2h:{summary:"未確認／データ不足",items:[]},
+        recent_form:{summary:"未確認／データ不足"},
+        common_opponent_comparison:{summary:"確認範囲で共通相手0件／未確認",items:[]}
+      };
+    }
+  }
+  return vm;
+}
+
 async function main() {
   const cb = Date.now();
   const [modelMod, renderMod, modeMod] = await Promise.all([
@@ -353,7 +382,7 @@ async function main() {
     if (mode.demo) ds = await applyDemo(ds);                 // development のときだけ
     if (!mode.demo) ds = applyProductionDisplayReset(ds);     // 公開画面は9/29以降だけを表示・収支集計
     assertNoDemoInProduction(mode, ds);
-    const vm = buildViewModel(ds, { proEdgeConfig: cfg });
+    const vm = attachFormalRecommendationAnalysis(buildViewModel(ds, { proEdgeConfig: cfg }), ds.today_gap_analysis);
     root.innerHTML = (mode.mode === "development" ? '<div class="dev-banner">development モード（ローカル確認環境）</div>' : "")
       + renderTodayGapAnalysis(ds.today_gap_analysis, ds.system_analysis?.systems?.recommendations?.candidates ?? [])
       + renderPreviousGapAnalysis(ds.today_gap_analysis?.previous_analysis)
