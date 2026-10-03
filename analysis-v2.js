@@ -192,18 +192,25 @@ function renderPreviousGapAnalysis(prev) {
   if (!prev?.candidates?.length) return "";
   const rows = [...prev.candidates]
     .sort((a,b)=>(a.rank??999)-(b.rank??999))
-    .map(c=>`<tr>
-      <td style="white-space:nowrap;font-weight:900">#${safeText(c.rank ?? "—")}</td>
-      <td><strong>${safeText(c.matchup ?? "—")}</strong><div class="sub">${safeText(c.sport ?? "—")}｜${safeText(c.competition ?? "—")}</div></td>
-      <td style="white-space:nowrap">${safeText(c.start_jst ? c.start_jst.replace("T"," ").slice(5,16) : "—")}</td>
-      <td style="white-space:nowrap">${safeText(c.gap_grade ?? "—")}</td>
-      <td>${safeText(c.conclusion ?? c.risk ?? "—")}</td>
-    </tr>`).join("");
+    .map(c=>{
+      const mark=c.favored_result==="win"?"○":c.favored_result==="loss"?"×":"△";
+      const tone=c.favored_result==="win"?"#69f0a5":c.favored_result==="loss"?"#ff7b87":"#ffd45d";
+      return `<tr>
+        <td style="white-space:nowrap;font-weight:900">#${safeText(c.rank ?? "—")}</td>
+        <td><strong>${safeText(c.matchup ?? "—")}</strong><div class="sub">${safeText(c.sport ?? "—")}｜${safeText(c.competition ?? "—")}</div></td>
+        <td style="white-space:nowrap">${safeText(c.start_jst ? c.start_jst.replace("T"," ").slice(5,16) : "—")}</td>
+        <td style="white-space:nowrap">${safeText(c.gap_grade ?? "—")}</td>
+        <td style="white-space:nowrap;color:${tone};font-weight:900;font-size:18px">${mark}</td>
+        <td><strong>${safeText(c.result ?? "未確定")}</strong><div class="sub">事前優勢: ${safeText(c.favored ?? "—")}</div></td>
+        <td>${safeText(c.conclusion ?? c.risk ?? "—")}</td>
+      </tr>`;
+    }).join("");
+  const rs=prev.result_summary;
   return `<details style="margin:14px 0 18px;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px 10px">
-    <summary style="cursor:pointer;font-size:12px;font-weight:800;color:#9fc9da">前回までの分析（${safeText(prev.generated_at ?? "—")}・${safeText(prev.candidates.length)}件）</summary>
-    <div class="sub" style="margin:8px 2px">以前の分析を消さずに保存しています。現在の「本日の分析」とは分けて表示します。</div>
+    <summary style="cursor:pointer;font-size:12px;font-weight:800;color:#9fc9da">前回11件の分析・結果（${safeText(prev.generated_at ?? "—")}）</summary>
+    <div class="sub" style="margin:8px 2px">前回分析を結果付きで保存。事前優勢側：${safeText(rs?.favored_wins ?? "—")}勝 ${safeText(rs?.favored_losses ?? "—")}敗 ／ 未確定 ${safeText(rs?.pending ?? "—")}件。実投入記録のない分析候補は収支には算入しません。</div>
     <div class="table-wrap"><table class="result-table">
-      <thead><tr><th>#</th><th>カード / 大会</th><th>開始</th><th>格差</th><th>当時の判断</th></tr></thead>
+      <thead><tr><th>#</th><th>カード / 大会</th><th>開始</th><th>格差</th><th>判定</th><th>結果</th><th>当時の判断</th></tr></thead>
       <tbody>${rows}</tbody>
     </table></div>
   </details>`;
