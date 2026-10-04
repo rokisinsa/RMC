@@ -92,6 +92,13 @@
       "at": "2026-10-04T22:50:00+09:00",
       "source": "User approval + current public sources",
       "note": "Wolves/Gauff/Swiatek/Vitality/JDGを正式推奨候補へ、日本vsニュージーランドを深掘り分析対象へ登録"
+    },
+    {
+      "run_id": "mr-results-20261004-2250b",
+      "kind": "result_update",
+      "at": "2026-10-04T22:50:00+09:00",
+      "source": "Official/major result sources",
+      "note": "本日の分析で終了済みのFenerbahce/Belarus/OL Lyonnes/TLPH/宮崎-大宮を確定。日本-NZを翌日分析カードとして登録。"
     }
   ],
   "matches": [
@@ -2247,8 +2254,14 @@
       "venue": "TVF Burhan Felek Vestel Voleybol Salonu, Istanbul",
       "start_at": "2026-10-04T19:00:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 3,
+          "b": 0
+        },
+        "text": "Fenerbahçe Medicana Women 3-0 Manisa Büyükşehir Belediye Spor Women"
+      },
       "provenance": [
         {
           "update_run_id": "mr-user-approved-20261003",
@@ -2267,11 +2280,13 @@
         "https://fikstur.tvf.org.tr/Fikst%C3%BCr",
         "https://www.fener.org/index.php/2026/10/01/hazirlik-maci-fenerbahce-medicana-3-1-turan-vc/",
         "https://www.live-result.com/volleyball/teams/Manisa-Bb-W",
-        "https://www.aiscore.com/head-to-head/volleyball/goztepe-women-vs-manisa-bb-women"
+        "https://www.aiscore.com/head-to-head/volleyball/goztepe-women-vs-manisa-bb-women",
+        "https://www.haberturk.com/spor/fenerbahce-medicana-3-manisa-buyuksehir-belediyespor-0-mac-sonucu-3917151"
       ],
-      "verified_at": "2026-10-04T09:53:00+09:00",
+      "verified_at": "2026-10-04T22:50:00+09:00",
       "flags": [],
-      "note": "今回5件を正式推奨化するため登録"
+      "note": "今回5件を正式推奨化するため登録",
+      "result_confirmed_at": "2026-10-04T22:50:00+09:00"
     },
     {
       "id": "2026-10-04-texas-tech-colorado",
@@ -2471,8 +2486,14 @@
       "venue": "LAN / venue detail未確認",
       "start_at": "2026-10-04T18:00:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 2,
+          "b": 0
+        },
+        "text": "Team Liquid PH 2-0 AP.Bren"
+      },
       "provenance": [
         {
           "update_run_id": "mr-user-approved-20261004-1058",
@@ -2490,10 +2511,12 @@
         "https://bo3.gg/mlbb/teams/team-liquid-ph/matches",
         "https://bo3.gg/mlbb/tournaments/mpl-philippines-season-18",
         "https://www.cybersport.ru/matches/mlbb/10096624",
-        "https://stake3041.com/ko/sports/mobile-legends/international-31/mpl-philippines-season-18-t9"
+        "https://stake3041.com/ko/sports/mobile-legends/international-31/mpl-philippines-season-18-t9",
+        "https://mlbbhub.com/mpl/ph/match/tlph-apbr-20261004"
       ],
-      "verified_at": "2026-10-04T10:58:00+09:00",
-      "flags": []
+      "verified_at": "2026-10-04T22:50:00+09:00",
+      "flags": [],
+      "result_confirmed_at": "2026-10-04T22:50:00+09:00"
     },
     {
       "id": "2026-10-04-lit-ank",
@@ -2575,8 +2598,14 @@
       "venue": "いちご宮崎新富サッカー場",
       "start_at": "2026-10-04T19:00:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 1,
+          "b": 1
+        },
+        "text": "テゲバジャーロ宮崎 1-1 RB大宮アルディージャ"
+      },
       "provenance": [
         {
           "update_run_id": "mr-user-approved-20261004-1114",
@@ -2592,11 +2621,13 @@
       ],
       "sources": [
         "https://www.jleague.jp/match/j2/2026/100406/",
-        "https://www.article-sportslottery.com.tw/2026-10-04-omiya-ardija-tegevajaro-miyazaki-j2-analysis/"
+        "https://www.article-sportslottery.com.tw/2026-10-04-omiya-ardija-tegevajaro-miyazaki-j2-analysis/",
+        "https://www.jleague.jp/club/omiya/"
       ],
-      "verified_at": "2026-10-04T11:14:00+09:00",
+      "verified_at": "2026-10-04T22:50:00+09:00",
       "flags": [],
-      "note": "台湾運彩で当該カードの取扱を確認。"
+      "note": "台湾運彩で当該カードの取扱を確認。",
+      "result_confirmed_at": "2026-10-04T22:50:00+09:00"
     },
     {
       "id": "2026-10-05-wolves-edgm",
@@ -2787,19 +2818,94 @@
               "after": "registered"
             }
           ],
-          "note": "ユーザー指示で深掘り分析対象として登録。"
+          "note": "ユーザー指示で本日の分析へ追加。"
         }
       ],
       "sources": [
         "https://www.jfa.jp/eng/samuraiblue/kirincupsoccer_2026/",
-        "https://www.nzfootball.co.nz/newsarticle/170803",
-        "https://www.11v11.com/teams/japan/tab/matches/",
-        "https://www.11v11.com/teams/new-zealand/tab/matches/"
+        "https://jfa.jp/eng/national_team_2026/news/00036851/",
+        "https://www.11v11.com/teams/japan/tab/opposingTeams/opposition/New%20Zealand/"
       ],
       "verified_at": "2026-10-04T22:50:00+09:00",
-      "flags": [
-        "odds_unverified"
-      ]
+      "flags": []
+    },
+    {
+      "id": "2026-10-03-belarus-san-marino",
+      "sport": "サッカー男子",
+      "competition": "UEFA Nations League C — Group 1",
+      "side_a": "Belarus",
+      "side_b": "San Marino",
+      "home_side": "side_a",
+      "region": "Europe",
+      "venue": "Illovszky Rudolf Stadion, Budapest, Hungary",
+      "start_at": "2026-10-04T01:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 4,
+          "b": 0
+        },
+        "text": "Belarus 4-0 San Marino"
+      },
+      "result_confirmed_at": "2026-10-04T22:50:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-results-20261004-2250b",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered_with_final"
+            }
+          ],
+          "note": "本日の分析結果確定に伴い登録。"
+        }
+      ],
+      "sources": [
+        "https://eng.belta.by/sport/view/belarus-claim-first-victory-in-uefa-nations-league-186932-2026/"
+      ],
+      "verified_at": "2026-10-04T22:50:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-03-ol-toulouse-w",
+      "sport": "女子サッカー",
+      "competition": "Arkema Première Ligue — 第4節",
+      "side_a": "OL Lyonnes",
+      "side_b": "Toulouse FC Women",
+      "home_side": "side_a",
+      "region": "France",
+      "venue": "Groupama Stadium, Décines-Charpieu, France",
+      "start_at": "2026-10-04T01:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 5,
+          "b": 0
+        },
+        "text": "OL Lyonnes 5-0 Toulouse FC Women"
+      },
+      "result_confirmed_at": "2026-10-04T22:50:00+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-results-20261004-2250b",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered_with_final"
+            }
+          ],
+          "note": "本日の分析結果確定に伴い登録。"
+        }
+      ],
+      "sources": [
+        "https://www.ol-lyonnes.com/actualites/ol-lyonnes-toulouse-la-vie-en-rose-5-0/"
+      ],
+      "verified_at": "2026-10-04T22:50:00+09:00",
+      "flags": []
     }
   ]
 }
