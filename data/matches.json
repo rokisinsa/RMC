@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-03T21:42:37+09:00",
+    "as_of": "2026-10-04T09:53:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -1937,8 +1937,14 @@
       "venue": "Sanford Stadium, Athens, Georgia",
       "start_at": "2026-10-04T01:45:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 38,
+          "b": 14
+        },
+        "text": "Georgia Bulldogs 38-14 Vanderbilt Commodores"
+      },
       "provenance": [
         {
           "update_run_id": "mr-user-approved-20261003",
@@ -1957,9 +1963,10 @@
         "https://georgiadogs.com/game-center/26391",
         "https://www.legalsportsbetting.com/news/georgia-favored-by-25-over-vanderbilt-total-drops-7-10-01-2026/"
       ],
-      "verified_at": "2026-10-03T20:55:00+09:00",
+      "verified_at": "2026-10-04T09:53:00+09:00",
       "flags": [],
-      "note": "今回5件を正式推奨化するため登録"
+      "note": "今回5件を正式推奨化するため登録",
+      "result_confirmed_at": "2026-10-04T09:53:00+09:00"
     },
     {
       "id": "2026-10-04-notredame-unc",
@@ -1971,8 +1978,14 @@
       "venue": "Kenan Stadium, Chapel Hill",
       "start_at": "2026-10-04T01:00:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 37,
+          "b": 26
+        },
+        "text": "Notre Dame Fighting Irish 37-26 North Carolina Tar Heels"
+      },
       "provenance": [
         {
           "update_run_id": "mr-user-approved-20261003",
@@ -1990,9 +2003,10 @@
         "https://goheels.com/news/2026/9/26/notre-dame-football-game-set-for-noon-on-espn",
         "https://www.foxsports.com/college-football/notre-dame-fighting-irish-vs-north-carolina-tar-heels-oct-03-2026-game-boxscore-43436"
       ],
-      "verified_at": "2026-10-03T20:55:00+09:00",
+      "verified_at": "2026-10-04T09:53:00+09:00",
       "flags": [],
-      "note": "今回5件を正式推奨化するため登録"
+      "note": "今回5件を正式推奨化するため登録",
+      "result_confirmed_at": "2026-10-04T09:53:00+09:00"
     },
     {
       "id": "2026-10-04-lsu-mcneese",
@@ -2004,7 +2018,7 @@
       "venue": "Tiger Stadium, Baton Rouge",
       "start_at": "2026-10-04T08:45:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
+      "status": "live",
       "result": null,
       "provenance": [
         {
@@ -2022,9 +2036,16 @@
       "sources": [
         "https://lsusports.net/sports/fb/schedule/season/2026"
       ],
-      "verified_at": "2026-10-03T20:55:00+09:00",
+      "verified_at": "2026-10-04T09:53:00+09:00",
       "flags": [],
-      "note": "今回5件を正式推奨化するため登録"
+      "note": "今回5件を正式推奨化するため登録",
+      "live_result": {
+        "a": 0,
+        "b": 0,
+        "text": "LSU 0-0 McNeese（1Q 10:46時点）",
+        "period": "1Q",
+        "checked_at": "2026-10-04T09:53:00+09:00"
+      }
     },
     {
       "id": "2026-10-04-smu-bc",
@@ -2092,7 +2113,7 @@
         "https://www.live-result.com/volleyball/teams/Manisa-Bb-W",
         "https://www.aiscore.com/head-to-head/volleyball/goztepe-women-vs-manisa-bb-women"
       ],
-      "verified_at": "2026-10-03T20:55:00+09:00",
+      "verified_at": "2026-10-04T09:53:00+09:00",
       "flags": [],
       "note": "今回5件を正式推奨化するため登録"
     },
@@ -2107,7 +2128,7 @@
       "venue": "Folsom Field, Boulder, Colorado",
       "start_at": "2026-10-04T08:30:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
+      "status": "live",
       "result": null,
       "provenance": [
         {
@@ -2126,9 +2147,16 @@
         "https://texastech.com/game-center/21729",
         "https://www.fanduel.com/research/texas-tech-vs-colorado-college-football-odds-picks-best-bets-for-10-3-2026"
       ],
-      "verified_at": "2026-10-03T21:42:37+09:00",
+      "verified_at": "2026-10-04T09:53:00+09:00",
       "flags": [],
-      "note": "④PRO EDGE正式採用"
+      "note": "④PRO EDGE正式採用",
+      "live_result": {
+        "a": 3,
+        "b": 7,
+        "text": "Texas Tech 3-7 Colorado（1Q 3:12時点）",
+        "period": "1Q",
+        "checked_at": "2026-10-04T09:53:00+09:00"
+      }
     },
     {
       "id": "2026-10-04-byu-tcu",
@@ -2141,7 +2169,7 @@
       "venue": "Amon G. Carter Stadium, Fort Worth, Texas",
       "start_at": "2026-10-04T08:00:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
+      "status": "live",
       "result": null,
       "provenance": [
         {
@@ -2161,9 +2189,117 @@
         "https://gofrogs.com/sports/football/schedule/text",
         "https://www.fanduel.com/research/byu-vs-tcu-college-football-odds-picks-best-bets-for-10-3-2026"
       ],
-      "verified_at": "2026-10-03T21:42:37+09:00",
+      "verified_at": "2026-10-04T09:53:00+09:00",
       "flags": [],
-      "note": "④PRO EDGE正式採用"
+      "note": "④PRO EDGE正式採用",
+      "live_result": {
+        "a": 0,
+        "b": 0,
+        "text": "BYU 0-0 TCU（1Q終了時点）",
+        "period": "End 1Q",
+        "checked_at": "2026-10-04T09:53:00+09:00"
+      }
+    },
+    {
+      "id": "2026-10-04-westham-chelsea-w",
+      "sport": "女子サッカー",
+      "competition": "Barclays Women's Super League 2026/27",
+      "side_a": "West Ham United Women",
+      "side_b": "Chelsea Women",
+      "home_side": "side_a",
+      "region": "England",
+      "venue": "Chigwell Construction Stadium, Dagenham",
+      "start_at": "2026-10-04T22:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-0953",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示承認で推奨取引に正式登録。"
+        }
+      ],
+      "sources": [
+        "https://www.chelseafc.com/en/news/article/west-ham-united-vs-chelsea-women-how-to-watch-kick-off-time-live-stream",
+        "https://www.oddschecker.com/football/womens-club/england/womens-super-league/west-ham-united-women-v-chelsea-women/winner"
+      ],
+      "verified_at": "2026-10-04T09:53:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-04-magdeburg-erlangen",
+      "sport": "男子ハンドボール",
+      "competition": "Opel Handball-Bundesliga 2026/27",
+      "side_a": "SC Magdeburg",
+      "side_b": "HC Erlangen",
+      "home_side": "side_a",
+      "region": "Germany",
+      "venue": "GETEC Arena, Magdeburg",
+      "start_at": "2026-10-04T22:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-0953",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示承認で推奨取引に正式登録。"
+        }
+      ],
+      "sources": [
+        "https://www.scm-handball.de/",
+        "https://www.bwin.com/en/sports/events/sc-magdeburg-hc-erlangen-5%3A1256697"
+      ],
+      "verified_at": "2026-10-04T09:53:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-04-solary-barca",
+      "sport": "League of Legends",
+      "competition": "EMEA Masters 2026 Summer",
+      "side_a": "Solary",
+      "side_b": "Barça eSports",
+      "home_side": "unknown",
+      "region": "Europe",
+      "venue": "Online / event venue未確認",
+      "start_at": "2026-10-04T23:00:00+09:00",
+      "start_time_status": "time_source_conflict",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-0953",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示承認で推奨取引に正式登録。開始時刻は公開ソース表示差異あり。"
+        }
+      ],
+      "sources": [
+        "https://egamersworld.com/lol/match/z27dDLdCP/barca-esports-vs-solary-s3zNM8euN",
+        "https://bo3.gg/lol/teams/barca-esports-lol/matches"
+      ],
+      "verified_at": "2026-10-04T09:53:00+09:00",
+      "flags": [
+        "start_time_source_conflict"
+      ]
     }
   ]
 }
