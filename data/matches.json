@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-04T09:53:00+09:00",
+    "as_of": "2026-10-04T10:58:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -2280,6 +2280,76 @@
         "time_unverified"
       ],
       "note": "ユーザー承認で正式推奨。公開ソース間で開始時刻表示に差異があるため要再確認。"
+    },
+    {
+      "id": "2026-10-04-tlph-apbren",
+      "sport": "Mobile Legends: Bang Bang",
+      "competition": "MPL Philippines Season 18 — Regular Season",
+      "side_a": "Team Liquid PH",
+      "side_b": "AP.Bren",
+      "home_side": "unknown",
+      "region": "Philippines",
+      "venue": "LAN / venue detail未確認",
+      "start_at": "2026-10-04T18:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-1058",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示承認で推奨取引に正式登録。"
+        }
+      ],
+      "sources": [
+        "https://bo3.gg/mlbb/teams/team-liquid-ph/matches",
+        "https://bo3.gg/mlbb/tournaments/mpl-philippines-season-18",
+        "https://www.cybersport.ru/matches/mlbb/10096624",
+        "https://stake3041.com/ko/sports/mobile-legends/international-31/mpl-philippines-season-18-t9"
+      ],
+      "verified_at": "2026-10-04T10:58:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-04-lit-ank",
+      "sport": "Arena of Valor",
+      "competition": "Garena Challenger Series Summer 2026 — Group Stage",
+      "side_a": "LIT Team",
+      "side_b": "ANK Gaming",
+      "home_side": "unknown",
+      "region": "Taiwan",
+      "venue": "Offline / venue detail未確認",
+      "start_at": "2026-10-04T16:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-1058",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示承認で推奨取引に正式登録。"
+        }
+      ],
+      "sources": [
+        "https://tips.gg/team/ank-gaming-aov/",
+        "https://liquipedia.net/honorofkings/LIT_Team/Played_Matches",
+        "https://stake3061.com/ja/sports/upcoming/arena-of-valor",
+        "https://polymarket.com/ja/event/hok-littea-ankgam-2026-10-04"
+      ],
+      "verified_at": "2026-10-04T10:58:00+09:00",
+      "flags": []
     }
   ]
 }
