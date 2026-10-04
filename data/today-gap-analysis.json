@@ -662,7 +662,7 @@
       "favored": "Fenerbahçe Medicana Women",
       "venue": "TVF Burhan Felek Vestel Voleybol Salonu, Istanbul",
       "format": "Best of 5 sets",
-      "status": "watch",
+      "status": "final",
       "gap_grade": "S",
       "price_grade": "C-",
       "odds": {
@@ -769,7 +769,10 @@
         "sport_specific": {
           "text": "Fenerbahçeは昨季73-23セット。Manisaは直近THY 0-3、Kuzeyboru 2-3。"
         }
-      }
+      },
+      "final_result": "Fenerbahçe Medicana Women 3-0 Manisa Büyükşehir Belediye Spor Women",
+      "result_judgement": "WIN",
+      "result_note": "25-12, 25-17, 25-14のストレート勝ち。"
     },
     {
       "rank": 5,
@@ -780,7 +783,7 @@
       "favored": "Belarus",
       "venue": "Illovszky Rudolf Stadion, Budapest, Hungary",
       "format": "90分＋AT",
-      "status": "watch",
+      "status": "final",
       "gap_grade": "A",
       "price_grade": "未確認",
       "odds": {
@@ -933,7 +936,9 @@
         "sport_specific": {
           "text": "Belarus名義ホームだがBudapest開催のため通常ホーム補正は弱める。"
         }
-      }
+      },
+      "final_result": "Belarus 4-0 San Marino",
+      "result_judgement": "WIN"
     },
     {
       "rank": 6,
@@ -944,7 +949,7 @@
       "favored": "OL Lyonnes",
       "venue": "Groupama Stadium, Décines-Charpieu, France",
       "format": "90分＋AT",
-      "status": "watch",
+      "status": "final",
       "gap_grade": "S",
       "price_grade": "未確認",
       "odds": {
@@ -1084,7 +1089,9 @@
         "sport_specific": {
           "text": "OLはChelsea戦から短い間隔。戦力差は大きいが、ローテーションで得点期待値は下振れし得る。"
         }
-      }
+      },
+      "final_result": "OL Lyonnes 5-0 Toulouse FC Women",
+      "result_judgement": "WIN"
     },
     {
       "sport": "女子サッカー",
@@ -1399,7 +1406,7 @@
       "favored": "Team Liquid PH",
       "venue": "LAN / venue detail未確認",
       "format": "Bo3",
-      "status": "formal",
+      "status": "final",
       "gap_grade": "S",
       "price_grade": "A-",
       "odds": {
@@ -1580,7 +1587,9 @@
           "text": "Bo3。Game1のブレよりシリーズ全体の層・マクロ差を重視。"
         }
       },
-      "rank": 10
+      "rank": 10,
+      "final_result": "Team Liquid PH 2-0 AP.Bren",
+      "result_judgement": "WIN"
     },
     {
       "sport": "Arena of Valor（伝説対決）",
@@ -1967,7 +1976,7 @@
       "favored": "RB大宮アルディージャ",
       "venue": "いちご宮崎新富サッカー場",
       "format": "サッカー 90分",
-      "status": "recommended",
+      "status": "final",
       "gap_grade": "B+",
       "price_grade": "未判定",
       "recommended_market": "ダブルチャンス：RB大宮または引き分け（X2）",
@@ -2078,7 +2087,9 @@
         "sport_specific": {
           "text": "推奨市場は90分ダブルチャンス X2（RB大宮勝ち または 引き分け）。延長戦は対象外。"
         }
-      }
+      },
+      "final_result": "テゲバジャーロ宮崎 1-1 RB大宮アルディージャ",
+      "result_judgement": "WIN（推奨市場: RB大宮または引き分け X2）"
     },
     {
       "sport": "Honor of Kings（王者栄耀）",
@@ -2419,7 +2430,7 @@
       "favored": "日本",
       "venue": "国立競技場, 東京",
       "format": "90分→同点ならPK",
-      "status": "candidate",
+      "status": "recommended",
       "gap_grade": "S-",
       "price_grade": "未判定",
       "odds": {
@@ -2431,39 +2442,43 @@
       "estimated_win_probability_pct": "88〜91",
       "estimated_ev_pct": "未算出",
       "ranking_rating": "FIFA公式最新: 日本17位、ニュージーランド86位。69位差。",
-      "h2h": "確認3試合は日本3勝0分0敗、得点9-3。2017年2-1、2014年4-2、2003年3-0。",
+      "h2h": "男子A代表の確認4試合は日本3勝0分1敗。1981年NZ 1-0日本、2003年NZ 0-3日本、2014年日本4-2NZ、2017年日本2-1NZ。直近3回は日本3連勝。",
       "recent_form": "日本直近10は6勝3分1敗。直近3戦はウルグアイ3-1、ベネズエラ2-1、エクアドル0-0(PK勝ち)。NZ直近10は2勝3分5敗。直近3戦はパレスチナ2-2、中国3-0、パナマ1-1(PK勝ち)。",
       "common_opponents": "直近60日で完全一致する共通相手は乏しい。代わりに対戦相手強度は日本がウルグアイ/エクアドル級を相手に好成績。",
       "roster": "日本は鈴木彩艶、板倉滉、伊藤洋輝、久保建英、堂安律、鎌田大地、上田綺世ら。NZはChris Wood、Marko Stamenic、Alex Paulsen、Tyler Bindonら。",
       "risk": "NZは4試合無敗中で、中国に3-0、パナマをPKで突破。Chris Woodの空中戦・セットプレー。日本もエクアドル戦は0-0。",
-      "conclusion": "深掘り分析上は日本大幅優位。ただし最新1X2価格未確認のため正式推奨は保留。",
+      "conclusion": "本日の分析へ追加。ランキング差・直近3回H2H・直近フォーム・ホーム条件で日本優位。ただしNZは直近4戦無敗で、Chris Woodの空中戦とセットプレーは警戒。最新1X2価格未確認のため価格評価は保留。",
       "sources": [
         "https://www.jfa.jp/eng/samuraiblue/kirincupsoccer_2026/",
-        "https://www.jfa.jp/eng/samuraiblue/20260924/news/00036759/",
-        "https://www.jfa.jp/eng/national_team_2026/news/00036835/",
-        "https://www.11v11.com/teams/japan/tab/matches/",
-        "https://www.11v11.com/teams/new-zealand/tab/matches/",
-        "https://fbref.com/en/stathead/matchup/teams/ffcf1690/259855f0/Japan-vs-New-Zealand-History"
+        "https://jfa.jp/eng/national_team_2026/news/00036851/",
+        "https://op.jfa.jp/samuraiblue20261005/",
+        "https://www.11v11.com/teams/japan/tab/opposingTeams/opposition/New%20Zealand/",
+        "https://www.besoccer.com/match/seleccion-japon/seleccion-nueva-zelanda/2026355413/analysis"
       ],
       "analysis_detail": {
         "summary": "ランキング69位差、H2H3-0、直近10と対戦相手強度で日本優位。NZは直近4戦無敗で過小評価禁物。",
         "h2h": {
-          "summary": "確認3試合: 日本3勝0敗、得点9-3。",
+          "summary": "男子A代表の確認4試合: 日本3勝0分1敗。直近3回は日本3連勝。",
           "items": [
             {
-              "date": "2017-10-06",
-              "label": "日本 vs ニュージーランド",
-              "result": "日本 2-1 NZ"
-            },
-            {
-              "date": "2014-03-05",
-              "label": "日本 vs ニュージーランド",
-              "result": "日本 4-2 NZ"
+              "date": "1981-09-12",
+              "label": "New Zealand vs Japan",
+              "result": "New Zealand 1-0 Japan"
             },
             {
               "date": "2003-06-18",
-              "label": "ニュージーランド vs 日本",
-              "result": "NZ 0-3 日本"
+              "label": "New Zealand vs Japan",
+              "result": "New Zealand 0-3 Japan"
+            },
+            {
+              "date": "2014-03-05",
+              "label": "Japan vs New Zealand",
+              "result": "Japan 4-2 New Zealand"
+            },
+            {
+              "date": "2017-10-06",
+              "label": "Japan vs New Zealand",
+              "result": "Japan 2-1 New Zealand"
             }
           ]
         },
