@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-03T20:27:00+09:00",
+  "generated_at": "2026-10-04T11:14:00+09:00",
   "window": {
     "from": "2026-10-03T20:27:00+09:00",
     "to": "2026-10-04T20:27:00+09:00",
@@ -1951,6 +1951,128 @@
         }
       },
       "rank": 12
+    },
+    {
+      "rank": 13,
+      "sport": "男子サッカー",
+      "competition": "明治安田J2リーグ 2026/27・第9節",
+      "start_jst": "2026-10-04T19:00:00+09:00",
+      "matchup": "テゲバジャーロ宮崎 vs RB大宮アルディージャ",
+      "favored": "RB大宮アルディージャ",
+      "venue": "いちご宮崎新富サッカー場",
+      "format": "サッカー 90分",
+      "status": "recommended",
+      "gap_grade": "B+",
+      "price_grade": "未判定",
+      "recommended_market": "ダブルチャンス：RB大宮または引き分け（X2）",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "台湾運彩で当該カード取扱確認済み。X2の実オッズは未取得。",
+        "required_win_rate_pct": "実オッズ未取得のため未算定"
+      },
+      "estimated_win_probability_pct": "大宮単勝ではなく非敗戦方向を推奨。厳密確率はX2実オッズ取得後に更新",
+      "estimated_ev_pct": "X2実オッズ未取得のため未算定",
+      "ranking_rating": "宮崎 8試合3勝2分3敗・10位 / RB大宮 8試合4勝4分0敗・2位。",
+      "h2h": "確認できる公式H2Hは2試合。2024/3/23 大宮3-1宮崎、2024/7/27 宮崎0-2大宮。大宮2勝0敗、合計5-1。",
+      "recent_form": "大宮はリーグ8試合4勝4分0敗・16得点7失点。宮崎は3勝2分3敗・12得点12失点で直近3連勝。",
+      "common_opponents": "札幌・藤枝・湘南・甲府の共通相手比較では両者2勝2分0敗。ただし得失点差は大宮+7、宮崎+2。",
+      "roster": "当日最終メンバー・欠場は試合直前更新対象。",
+      "early_tendency": "大宮は8試合無敗だが4分。宮崎は直近3連勝で、単勝より大宮非敗戦（X2）の方が分析と整合。",
+      "risk": "宮崎ホーム、宮崎直近3連勝、大宮は引き分け4試合。『大宮圧勝』扱いはしない。X2実オッズ未取得。",
+      "conclusion": "正式推奨市場：RB大宮または引き分け（ダブルチャンス／X2）。大宮単勝ではなく非敗戦を採用。",
+      "sources": [
+        "https://www.jleague.jp/match/j2/2026/100406/",
+        "https://www.jleague.jp/j2/match/search-list/?category=j2&enddate=2026-11-05&period=custom&startdate=2026-09-18",
+        "https://www.article-sportslottery.com.tw/2026-10-04-omiya-ardija-tegevajaro-miyazaki-j2-analysis/"
+      ],
+      "analysis_detail": {
+        "summary": "順位・無敗・H2H・得失点は大宮優位。ただし宮崎3連勝と大宮4分を考慮し、推奨は大宮単勝ではなくX2。",
+        "ranking_or_rating": {
+          "text": "RB大宮 2位・4勝4分0敗 / 宮崎 10位・3勝2分3敗"
+        },
+        "home_away": {
+          "text": "宮崎ホーム。大宮は今季アウェイでも無敗。"
+        },
+        "h2h": {
+          "summary": "公式確認2戦は大宮2勝0敗、合計5-1。",
+          "items": [
+            {
+              "date": "2024-03-23",
+              "label": "RB大宮 vs 宮崎",
+              "result": "RB大宮 3-1 宮崎"
+            },
+            {
+              "date": "2024-07-27",
+              "label": "宮崎 vs RB大宮",
+              "result": "宮崎 0-2 RB大宮"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "宮崎",
+            "summary": "8試合3勝2分3敗・12得点12失点。直近3連勝。",
+            "items": []
+          },
+          "side_b": {
+            "label": "RB大宮",
+            "summary": "8試合4勝4分0敗・16得点7失点。リーグ無敗。",
+            "items": []
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "共通相手4チームでは両者2勝2分0敗。得失点差は大宮+7、宮崎+2。",
+          "items": [
+            {
+              "opponent": "札幌",
+              "side_a": {
+                "result": "宮崎 W 3-2"
+              },
+              "side_b": {
+                "result": "大宮 W 4-1"
+              },
+              "comparison": "両者勝利、大宮は3点差"
+            },
+            {
+              "opponent": "藤枝",
+              "side_a": {
+                "result": "宮崎 W 3-2"
+              },
+              "side_b": {
+                "result": "大宮 D 1-1"
+              },
+              "comparison": "結果は宮崎が上"
+            },
+            {
+              "opponent": "湘南",
+              "side_a": {
+                "result": "宮崎 D 0-0"
+              },
+              "side_b": {
+                "result": "大宮 D 2-2"
+              },
+              "comparison": "両者引き分け"
+            },
+            {
+              "opponent": "甲府",
+              "side_a": {
+                "result": "宮崎 D 1-1"
+              },
+              "side_b": {
+                "result": "大宮 W 5-1"
+              },
+              "comparison": "大宮が大幅優位"
+            }
+          ]
+        },
+        "availability": {
+          "text": "当日最終先発・欠場は未確定。"
+        },
+        "sport_specific": {
+          "text": "推奨市場は90分ダブルチャンス X2（RB大宮勝ち または 引き分け）。延長戦は対象外。"
+        }
+      }
     }
   ],
   "rejected_examples": [
