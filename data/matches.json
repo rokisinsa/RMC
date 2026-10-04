@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-04T17:34:00+09:00",
+    "as_of": "2026-10-04T22:50:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -85,6 +85,13 @@
       "at": "2026-10-04T12:43:00+09:00",
       "source": "Official/major score sources",
       "note": "本日の分析で終了済みNCAA4試合の最終結果を反映"
+    },
+    {
+      "run_id": "mr-user-approved-20261004-2250",
+      "kind": "human_review",
+      "at": "2026-10-04T22:50:00+09:00",
+      "source": "User approval + current public sources",
+      "note": "Wolves/Gauff/Swiatek/Vitality/JDGを正式推奨候補へ、日本vsニュージーランドを深掘り分析対象へ登録"
     }
   ],
   "matches": [
@@ -2590,6 +2597,209 @@
       "verified_at": "2026-10-04T11:14:00+09:00",
       "flags": [],
       "note": "台湾運彩で当該カードの取扱を確認。"
+    },
+    {
+      "id": "2026-10-05-wolves-edgm",
+      "sport": "Honor of Kings（王者栄耀）",
+      "competition": "King Pro League Grand Finals 2026 — Challenge Stage",
+      "side_a": "Wolves",
+      "side_b": "EDward Gaming",
+      "home_side": "unknown",
+      "region": "China",
+      "venue": "China / event venue detail未確認",
+      "start_at": "2026-10-05T21:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-2250",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー承認で登録。"
+        }
+      ],
+      "sources": [
+        "https://esportbet.com/odds/",
+        "https://liquipedia.net/honorofkings/QGhappy",
+        "https://polymarket.com/esports/honor-of-kings/king-pro-league/hok-wol-edg-2026-10-05"
+      ],
+      "verified_at": "2026-10-04T22:50:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-05-gauff-sun",
+      "sport": "女子テニス",
+      "competition": "WTA China Open 2026 — Round 3",
+      "side_a": "Coco Gauff",
+      "side_b": "Xinran Sun",
+      "home_side": "unknown",
+      "region": "China",
+      "venue": "Beijing, China",
+      "start_at": "2026-10-05T12:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-2250",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー承認で登録。"
+        }
+      ],
+      "sources": [
+        "https://www.tennis.com/tournaments/china-open-wta/matches/c-gauff-vs-x-sun-2026-10-05",
+        "https://www.betfair.com/exchange/plus/en/tennis/wta-beijing-2026/c-gauff-v-xin-sun-betting-36147445"
+      ],
+      "verified_at": "2026-10-04T22:50:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-05-swiatek-vekic",
+      "sport": "女子テニス",
+      "competition": "WTA China Open 2026 — Round 3",
+      "side_a": "Donna Vekić",
+      "side_b": "Iga Świątek",
+      "home_side": "unknown",
+      "region": "China",
+      "venue": "Beijing, China",
+      "start_at": "2026-10-05T12:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-2250",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー承認で登録。"
+        }
+      ],
+      "sources": [
+        "https://www.tennis.com/tournaments/china-open-wta/matches/d-vekic-vs-i-swiatek-2026-10-05",
+        "https://agentbets.ai/odds/wta-china-open/iga-swiatek-vs-donna-vekic/"
+      ],
+      "verified_at": "2026-10-04T22:50:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-05-gam-vitality",
+      "sport": "League of Legends（LoL）",
+      "competition": "Demacia Cup Global Invitational 2026 — Group Stage",
+      "side_a": "GAM Esports",
+      "side_b": "Team Vitality",
+      "home_side": "unknown",
+      "region": "International",
+      "venue": "Event venue未確認",
+      "start_at": "2026-10-05T18:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-2250",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー承認で登録。"
+        }
+      ],
+      "sources": [
+        "https://egamersworld.com/lol/match/FqxSssBfV/gam-esports-vs-team-vitality-FZq7tJw_kv",
+        "https://polymarket.com/ja/event/lol-gam-vit-2026-10-05"
+      ],
+      "verified_at": "2026-10-04T22:50:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-05-shopify-jdg",
+      "sport": "League of Legends（LoL）",
+      "competition": "Demacia Cup Global Invitational 2026 — Group Stage",
+      "side_a": "Shopify Rebellion",
+      "side_b": "JD Gaming",
+      "home_side": "unknown",
+      "region": "International",
+      "venue": "Event venue未確認",
+      "start_at": "2026-10-05T20:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-2250",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー承認で登録。"
+        }
+      ],
+      "sources": [
+        "https://egamersworld.com/lol/event/2026-demacia-cup-global-invitational-FqxSssBfV",
+        "https://polymarket.us/sports/league-of-legends/lol-sr-jdg-2026-10-05"
+      ],
+      "verified_at": "2026-10-04T22:50:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-05-japan-newzealand",
+      "sport": "サッカー男子",
+      "competition": "キリンカップサッカー2026 — 決勝",
+      "side_a": "日本",
+      "side_b": "ニュージーランド",
+      "home_side": "side_a",
+      "region": "Japan",
+      "venue": "国立競技場, 東京",
+      "start_at": "2026-10-05T19:30:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-2250",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指示で深掘り分析対象として登録。"
+        }
+      ],
+      "sources": [
+        "https://www.jfa.jp/eng/samuraiblue/kirincupsoccer_2026/",
+        "https://www.nzfootball.co.nz/newsarticle/170803",
+        "https://www.11v11.com/teams/japan/tab/matches/",
+        "https://www.11v11.com/teams/new-zealand/tab/matches/"
+      ],
+      "verified_at": "2026-10-04T22:50:00+09:00",
+      "flags": [
+        "odds_unverified"
+      ]
     }
   ]
 }
