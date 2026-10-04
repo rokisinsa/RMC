@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-04T11:14:00+09:00",
+    "as_of": "2026-10-04T12:43:00+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
@@ -2463,7 +2463,14 @@
         "model_version": "rmc-user-approved-20261003",
         "summary": "ユーザーがRMC反映を承認したため正式推奨。H2H・直近10・共通相手が同方向。純粋な格差は本日最上位級。"
       },
-      "settlement_override": null,
+      "settlement_override": {
+        "status": "win",
+        "settled_at": "2026-10-04T12:43:00+09:00",
+        "result_text": "Georgia Bulldogs 38-14 Vanderbilt Commodores",
+        "payout": 102.5,
+        "profit": 2.5,
+        "note": "マッチウィナー的中。採用時オッズで払戻・利益を計算。"
+      },
       "flags": [],
       "note": "今回5件をユーザー承認により正式推奨化。"
     },
@@ -2495,7 +2502,14 @@
         "model_version": "rmc-user-approved-20261003",
         "summary": "ユーザーがRMC反映を承認したため正式推奨。H2H、直近10、共通相手比較がすべてNotre Dame側。今回最も形がきれいな格差の一つ。"
       },
-      "settlement_override": null,
+      "settlement_override": {
+        "status": "win",
+        "settled_at": "2026-10-04T12:43:00+09:00",
+        "result_text": "Notre Dame 37-26 North Carolina",
+        "payout": 106.06,
+        "profit": 6.06,
+        "note": "マッチウィナー的中。採用時オッズで払戻・利益を計算。"
+      },
       "flags": [],
       "note": "今回5件をユーザー承認により正式推奨化。"
     },
@@ -2527,7 +2541,14 @@
         "model_version": "rmc-user-approved-20261003",
         "summary": "ユーザーがRMC反映を承認したため正式推奨。直近勝敗数は同じでも対戦相手レベルが別世界。純粋な勝敗格差は最大級。"
       },
-      "settlement_override": null,
+      "settlement_override": {
+        "status": "win",
+        "settled_at": "2026-10-04T12:43:00+09:00",
+        "result_text": "LSU 63-14 McNeese",
+        "payout": null,
+        "profit": null,
+        "note": "勝敗は的中。採用時オッズ未確認のため収益額は未算定。"
+      },
       "flags": [],
       "note": "今回5件をユーザー承認により正式推奨化。"
     },
@@ -2559,7 +2580,14 @@
         "model_version": "rmc-user-approved-20261003",
         "summary": "ユーザーがRMC反映を承認したため正式推奨。H2H・直近10・共通相手はSMU側。ただし自滅要因があるためGeorgia/ND/LSUより一段下。"
       },
-      "settlement_override": null,
+      "settlement_override": {
+        "status": "win",
+        "settled_at": "2026-10-04T12:43:00+09:00",
+        "result_text": "SMU 25-16 Boston College",
+        "payout": 105.6,
+        "profit": 5.6,
+        "note": "マッチウィナー的中。採用時オッズで払戻・利益を計算。"
+      },
       "flags": [],
       "note": "今回5件をユーザー承認により正式推奨化。"
     },
