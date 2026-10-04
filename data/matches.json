@@ -2038,14 +2038,7 @@
       ],
       "verified_at": "2026-10-04T09:53:00+09:00",
       "flags": [],
-      "note": "今回5件を正式推奨化するため登録",
-      "live_result": {
-        "a": 0,
-        "b": 0,
-        "text": "LSU 0-0 McNeese（1Q 10:46時点）",
-        "period": "1Q",
-        "checked_at": "2026-10-04T09:53:00+09:00"
-      }
+      "note": "今回5件を正式推奨化するため登録"
     },
     {
       "id": "2026-10-04-smu-bc",
@@ -2149,14 +2142,7 @@
       ],
       "verified_at": "2026-10-04T09:53:00+09:00",
       "flags": [],
-      "note": "④PRO EDGE正式採用",
-      "live_result": {
-        "a": 3,
-        "b": 7,
-        "text": "Texas Tech 3-7 Colorado（1Q 3:12時点）",
-        "period": "1Q",
-        "checked_at": "2026-10-04T09:53:00+09:00"
-      }
+      "note": "④PRO EDGE正式採用"
     },
     {
       "id": "2026-10-04-byu-tcu",
@@ -2191,14 +2177,7 @@
       ],
       "verified_at": "2026-10-04T09:53:00+09:00",
       "flags": [],
-      "note": "④PRO EDGE正式採用",
-      "live_result": {
-        "a": 0,
-        "b": 0,
-        "text": "BYU 0-0 TCU（1Q終了時点）",
-        "period": "End 1Q",
-        "checked_at": "2026-10-04T09:53:00+09:00"
-      }
+      "note": "④PRO EDGE正式採用"
     },
     {
       "id": "2026-10-04-westham-chelsea-w",
@@ -2276,7 +2255,7 @@
       "region": "Europe",
       "venue": "Online / event venue未確認",
       "start_at": "2026-10-04T23:00:00+09:00",
-      "start_time_status": "time_source_conflict",
+      "start_time_status": "review_required",
       "status": "scheduled",
       "result": null,
       "provenance": [
@@ -2298,8 +2277,9 @@
       ],
       "verified_at": "2026-10-04T09:53:00+09:00",
       "flags": [
-        "start_time_source_conflict"
-      ]
+        "time_unverified"
+      ],
+      "note": "ユーザー承認で正式推奨。公開ソース間で開始時刻表示に差異があるため要再確認。"
     }
   ]
 }
