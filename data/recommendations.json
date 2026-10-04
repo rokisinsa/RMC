@@ -4,9 +4,9 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-03T20:55:00+09:00",
+    "as_of": "2026-10-04T09:53:00+09:00",
     "status": "active",
-    "note": "ユーザー承認カードを正式推奨として管理。1件$100。終了済みは結果・収支まで反映。"
+    "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
   "system": "recommendations",
   "discovery_runs": [
@@ -81,6 +81,12 @@
       "started_at": "2026-10-03T20:55:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー明示指示：RMCへ反映OKを出したカードは正式な推奨取引として登録。前回11件＋今回5件。"
+    },
+    {
+      "run_id": "rec-user-approved-20261004-0953",
+      "started_at": "2026-10-04T09:53:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー明示指示によりChelsea Women、SC Magdeburg、Solaryの3件のみを推奨取引として正式採用。各$100。"
     }
   ],
   "picks": [
@@ -2570,6 +2576,104 @@
       "settlement_override": null,
       "flags": [],
       "note": "今回5件をユーザー承認により正式推奨化。"
+    },
+    {
+      "id": "rec-20261004-westham-chelsea",
+      "system": "recommendations",
+      "match_id": "2026-10-04-westham-chelsea-w",
+      "run_id": "rec-user-approved-20261004-0953",
+      "market": "match_1x2",
+      "market_label": "マッチウィナー：Chelsea Women",
+      "selection": "side_b",
+      "selection_label": "Chelsea Women",
+      "market_odds": {
+        "text": "Chelsea Women 2/11（decimal 1.1818）",
+        "min": 1.1818,
+        "max": 1.1818,
+        "observed_at": "2026-10-04T09:53:00+09:00",
+        "source": "Oddschecker best price"
+      },
+      "odds_taken": 1.1818,
+      "stake": 100,
+      "discovered_at": "2026-10-04T09:53:00+09:00",
+      "bet_at": "2026-10-04T09:53:00+09:00",
+      "locked_at": "2026-10-04T09:53:00+09:00",
+      "locked": {
+        "prob": 0.905,
+        "gap_score": 94,
+        "confidence": "high",
+        "model_version": "rmc-rec-20261004",
+        "summary": "H2H長期無敗、直近内容、Manchester United共通相手比較、戦力層がChelsea側。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "ユーザー承認で正式推奨。"
+    },
+    {
+      "id": "rec-20261004-magdeburg-erlangen",
+      "system": "recommendations",
+      "match_id": "2026-10-04-magdeburg-erlangen",
+      "run_id": "rec-user-approved-20261004-0953",
+      "market": "match_1x2",
+      "market_label": "マッチウィナー：SC Magdeburg",
+      "selection": "side_a",
+      "selection_label": "SC Magdeburg",
+      "market_odds": {
+        "text": "SC Magdeburg 1.025 / Draw 23.00 / HC Erlangen 21.00",
+        "min": 1.025,
+        "max": 1.025,
+        "observed_at": "2026-10-04T09:53:00+09:00",
+        "source": "bwin"
+      },
+      "odds_taken": 1.025,
+      "stake": 100,
+      "discovered_at": "2026-10-04T09:53:00+09:00",
+      "bet_at": "2026-10-04T09:53:00+09:00",
+      "locked_at": "2026-10-04T09:53:00+09:00",
+      "locked": {
+        "prob": 0.94,
+        "gap_score": 92,
+        "confidence": "high",
+        "model_version": "rmc-rec-20261004",
+        "summary": "H2H通算優勢、直近7対戦6勝1分、直近11とホーム条件がMagdeburg側。ただしErlangen上昇中。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "ユーザー承認で正式推奨。価格妙味は薄いが正式追跡。"
+    },
+    {
+      "id": "rec-20261004-solary-barca",
+      "system": "recommendations",
+      "match_id": "2026-10-04-solary-barca",
+      "run_id": "rec-user-approved-20261004-0953",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Solary",
+      "selection": "side_a",
+      "selection_label": "Solary",
+      "market_odds": {
+        "text": "Solary 1.04 / Barça eSports 9.98",
+        "min": 1.04,
+        "max": 1.04,
+        "observed_at": "2026-10-04T09:53:00+09:00",
+        "source": "EGamersWorld"
+      },
+      "odds_taken": 1.04,
+      "stake": 100,
+      "discovered_at": "2026-10-04T09:53:00+09:00",
+      "bet_at": "2026-10-04T09:53:00+09:00",
+      "locked_at": "2026-10-04T09:53:00+09:00",
+      "locked": {
+        "prob": 0.87,
+        "gap_score": 86,
+        "confidence": "medium-high",
+        "model_version": "rmc-rec-20261004",
+        "summary": "H2Hなし、60日共通相手なし。期間拡張のUCAM比較と大会実績はSolary優位だが価格は短い。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "start_time_source_conflict"
+      ],
+      "note": "ユーザー承認で正式推奨。開始時刻の公開ソース表示に差異あり。"
     }
   ]
 }
