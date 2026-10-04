@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-04T22:50:00+09:00",
+    "as_of": "2026-10-05T01:17:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -2406,8 +2406,14 @@
       "venue": "Chigwell Construction Stadium, Dagenham",
       "start_at": "2026-10-04T22:00:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 0,
+          "b": 3
+        },
+        "text": "West Ham United Women 0-3 Chelsea Women"
+      },
       "provenance": [
         {
           "update_run_id": "mr-user-approved-20261004-0953",
@@ -2423,10 +2429,12 @@
       ],
       "sources": [
         "https://www.chelseafc.com/en/news/article/west-ham-united-vs-chelsea-women-how-to-watch-kick-off-time-live-stream",
-        "https://www.oddschecker.com/football/womens-club/england/womens-super-league/west-ham-united-women-v-chelsea-women/winner"
+        "https://www.oddschecker.com/football/womens-club/england/womens-super-league/west-ham-united-women-v-chelsea-women/winner",
+        "https://weaintgotnohistory.sbnation.com/chelsea-fc-women/172793/west-ham-wfc-0-3-chelsea-fcw-womens-super-league-post-match-reaction"
       ],
-      "verified_at": "2026-10-04T09:53:00+09:00",
-      "flags": []
+      "verified_at": "2026-10-05T01:17:00+09:00",
+      "flags": [],
+      "result_confirmed_at": "2026-10-05T01:17:00+09:00"
     },
     {
       "id": "2026-10-04-magdeburg-erlangen",
@@ -2439,8 +2447,14 @@
       "venue": "GETEC Arena, Magdeburg",
       "start_at": "2026-10-04T22:00:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 35,
+          "b": 28
+        },
+        "text": "SC Magdeburg 35-28 HC Erlangen"
+      },
       "provenance": [
         {
           "update_run_id": "mr-user-approved-20261004-0953",
@@ -2458,8 +2472,9 @@
         "https://www.scm-handball.de/",
         "https://www.bwin.com/en/sports/events/sc-magdeburg-hc-erlangen-5%3A1256697"
       ],
-      "verified_at": "2026-10-04T09:53:00+09:00",
-      "flags": []
+      "verified_at": "2026-10-05T01:17:00+09:00",
+      "flags": [],
+      "result_confirmed_at": "2026-10-05T01:17:00+09:00"
     },
     {
       "id": "2026-10-04-solary-barca",
