@@ -99,6 +99,13 @@
       "at": "2026-10-04T22:50:00+09:00",
       "source": "Official/major result sources",
       "note": "本日の分析で終了済みのFenerbahce/Belarus/OL Lyonnes/TLPH/宮崎-大宮を確定。日本-NZを翌日分析カードとして登録。"
+    },
+    {
+      "run_id": "mr-results-20261005-0117",
+      "kind": "result_update",
+      "at": "2026-10-05T01:17:00+09:00",
+      "source": "Chelsea match report + SC Magdeburg official match center",
+      "note": "終了済み正式推奨の結果確認と収支再計算用更新"
     }
   ],
   "matches": [
@@ -2425,6 +2432,28 @@
             }
           ],
           "note": "ユーザー明示承認で推奨取引に正式登録。"
+        },
+        {
+          "update_run_id": "mr-results-20261005-0117",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 0,
+                  "b": 3
+                },
+                "text": "West Ham United Women 0-3 Chelsea Women"
+              }
+            }
+          ],
+          "note": "最終結果を確認して正式反映"
         }
       ],
       "sources": [
@@ -2466,6 +2495,28 @@
             }
           ],
           "note": "ユーザー明示承認で推奨取引に正式登録。"
+        },
+        {
+          "update_run_id": "mr-results-20261005-0117",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 35,
+                  "b": 28
+                },
+                "text": "SC Magdeburg 35-28 HC Erlangen"
+              }
+            }
+          ],
+          "note": "最終結果を確認して正式反映"
         }
       ],
       "sources": [
