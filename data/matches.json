@@ -64,6 +64,13 @@
       "at": "2026-10-04T10:58:00+09:00",
       "source": "User approval + current RMC/web analysis",
       "note": "Team Liquid PH・ANK Gamingを正式推奨基準へ登録"
+    },
+    {
+      "run_id": "mr-user-approved-20261004-1058b",
+      "kind": "human_review",
+      "at": "2026-10-04T10:58:00+09:00",
+      "source": "User approval + current web/RMC analysis",
+      "note": "Saigon Phantom vs One Star Esports を正式推奨基準へ登録"
     }
   ],
   "matches": [
@@ -2361,6 +2368,40 @@
         "https://liquipedia.net/honorofkings/LIT_Team/Played_Matches",
         "https://stake3061.com/ja/sports/upcoming/arena-of-valor",
         "https://polymarket.com/ja/event/hok-littea-ankgam-2026-10-04"
+      ],
+      "verified_at": "2026-10-04T10:58:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-04-onestar-sgp",
+      "sport": "Arena of Valor",
+      "competition": "Arena of Glory Winter 2026 — Group Stage Second Leg",
+      "side_a": "One Star Esports",
+      "side_b": "Saigon Phantom",
+      "home_side": "unknown",
+      "region": "Vietnam",
+      "venue": "Vietnam / event venue detail未確認",
+      "start_at": "2026-10-04T14:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-1058b",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示承認で推奨取引に正式登録。"
+        }
+      ],
+      "sources": [
+        "https://tips.gg/matches/arena-of-valor/04-10-2026/one-star-esports-vs-saigon-phantom/10-00/",
+        "https://www.ggcombat.com/en/aov",
+        "https://mx0.betmonitor.com/odds-comparison/esports/arena-of-glory/10015723"
       ],
       "verified_at": "2026-10-04T10:58:00+09:00",
       "flags": []
