@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-04T10:58:00+09:00",
+    "as_of": "2026-10-04T11:14:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -71,6 +71,13 @@
       "at": "2026-10-04T10:58:00+09:00",
       "source": "User approval + current web/RMC analysis",
       "note": "Saigon Phantom vs One Star Esports を正式推奨基準へ登録"
+    },
+    {
+      "run_id": "mr-user-approved-20261004-1114",
+      "kind": "human_review",
+      "at": "2026-10-04T11:14:00+09:00",
+      "source": "User approval + J.LEAGUE official + Taiwan Sports Lottery official analysis",
+      "note": "宮崎 vs RB大宮を登録。推奨市場は大宮または引き分け（X2）。"
     }
   ],
   "matches": [
@@ -2405,6 +2412,40 @@
       ],
       "verified_at": "2026-10-04T10:58:00+09:00",
       "flags": []
+    },
+    {
+      "id": "2026-10-04-miyazaki-omiya",
+      "sport": "男子サッカー",
+      "competition": "明治安田J2リーグ 2026/27・第9節",
+      "side_a": "テゲバジャーロ宮崎",
+      "side_b": "RB大宮アルディージャ",
+      "home_side": "side_a",
+      "region": "Japan",
+      "venue": "いちご宮崎新富サッカー場",
+      "start_at": "2026-10-04T19:00:00+09:00",
+      "start_time_status": "verified",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261004-1114",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示指示で本日の分析・推奨取引へ登録。"
+        }
+      ],
+      "sources": [
+        "https://www.jleague.jp/match/j2/2026/100406/",
+        "https://www.article-sportslottery.com.tw/2026-10-04-omiya-ardija-tegevajaro-miyazaki-j2-analysis/"
+      ],
+      "verified_at": "2026-10-04T11:14:00+09:00",
+      "flags": [],
+      "note": "台湾運彩で当該カードの取扱を確認。"
     }
   ]
 }
