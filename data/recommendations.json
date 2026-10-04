@@ -111,6 +111,12 @@
       "started_at": "2026-10-04T22:50:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー明示指示によりWolves/Gauff/Swiatek/Vitality/JDGの5件を正式推奨へ追加。日本vsニュージーランドは価格未確認のため正式推奨保留。"
+    },
+    {
+      "run_id": "rec-user-approved-20261004-jpn-nzl",
+      "started_at": "2026-10-04T22:50:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー明示指示により日本 vs ニュージーランドを正式推奨へ追加。最新1X2オッズ未確認のため価格評価保留。"
     }
   ],
   "picks": [
@@ -3008,6 +3014,40 @@
       "settlement_override": null,
       "flags": [],
       "note": "ユーザー承認で正式推奨。価格は短め。"
+    },
+    {
+      "id": "rec-20261005-japan-newzealand",
+      "system": "recommendations",
+      "match_id": "2026-10-05-japan-newzealand",
+      "run_id": "rec-user-approved-20261004-jpn-nzl",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：日本",
+      "selection": "side_a",
+      "selection_label": "日本",
+      "market_odds": {
+        "text": "最新1X2オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "公開ソースで正確な最新1X2を確認できず"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-04T22:50:00+09:00",
+      "bet_at": "2026-10-04T22:50:00+09:00",
+      "locked_at": "2026-10-04T22:50:00+09:00",
+      "locked": {
+        "prob": 0.895,
+        "gap_score": 90,
+        "confidence": "high",
+        "model_version": "rmc-rec-20261004",
+        "summary": "FIFAランク17位対86位、H2H直近3連勝、直近10と対戦相手強度、国立ホームで日本優位。NZは直近4戦無敗とChris Woodの空中戦がリスク。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー承認で正式推奨。価格評価はオッズ確認後に更新。"
     }
   ]
 }
