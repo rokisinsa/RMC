@@ -93,6 +93,12 @@
       "started_at": "2026-10-04T10:58:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー明示指示によりTeam Liquid PHとANK Gamingを推奨取引へ正式追加。各$100。"
+    },
+    {
+      "run_id": "rec-user-approved-20261004-1058b",
+      "started_at": "2026-10-04T10:58:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー明示指示によりSaigon Phantomを推奨取引へ正式追加。$100。"
     }
   ],
   "picks": [
@@ -2740,6 +2746,38 @@
         "confidence": "high",
         "model_version": "rmc-rec-20261004",
         "summary": "最新H2H 3-0。LITは今大会連敗かつマップ取得極少、直近60日の共通相手FW/HKA/DCG/ONEでANKが大幅優位。"
+      },
+      "settlement_override": null,
+      "flags": [],
+      "note": "ユーザー承認で正式推奨。"
+    },
+    {
+      "id": "rec-20261004-sgp-onestar",
+      "system": "recommendations",
+      "match_id": "2026-10-04-onestar-sgp",
+      "run_id": "rec-user-approved-20261004-1058b",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Saigon Phantom",
+      "selection": "side_b",
+      "selection_label": "Saigon Phantom",
+      "market_odds": {
+        "text": "Saigon Phantom 1.147",
+        "min": 1.147,
+        "max": 1.147,
+        "observed_at": "2026-10-04T10:58:00+09:00",
+        "source": "Betmonitor odds comparison"
+      },
+      "odds_taken": 1.147,
+      "stake": 100,
+      "discovered_at": "2026-10-04T10:58:00+09:00",
+      "bet_at": "2026-10-04T10:58:00+09:00",
+      "locked_at": "2026-10-04T10:58:00+09:00",
+      "locked": {
+        "prob": 0.84,
+        "gap_score": 88,
+        "confidence": "medium-high",
+        "model_version": "rmc-rec-20261004",
+        "summary": "H2H通算は4-4だが、直近SGP 7連勝級・One Star 4-4。BOX/GAM/Team Flash共通相手でSGPの勝ち方が明確に上。"
       },
       "settlement_override": null,
       "flags": [],
