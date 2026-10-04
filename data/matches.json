@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-04T11:14:00+09:00",
+    "as_of": "2026-10-04T12:43:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -78,6 +78,13 @@
       "at": "2026-10-04T11:14:00+09:00",
       "source": "User approval + J.LEAGUE official + Taiwan Sports Lottery official analysis",
       "note": "宮崎 vs RB大宮を登録。推奨市場は大宮または引き分け（X2）。"
+    },
+    {
+      "run_id": "mr-results-20261004-1243",
+      "kind": "result_update",
+      "at": "2026-10-04T12:43:00+09:00",
+      "source": "Official/major score sources",
+      "note": "本日の分析で終了済みNCAA4試合の最終結果を反映"
     }
   ],
   "matches": [
@@ -1984,14 +1991,43 @@
             }
           ],
           "note": "User approved for formal recommendation."
+        },
+        {
+          "update_run_id": "mr-results-20261004-1243",
+          "changes": [
+            {
+              "field": "status",
+              "before": "final",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": {
+                "final": {
+                  "a": 38,
+                  "b": 14
+                },
+                "text": "Georgia Bulldogs 38-14 Vanderbilt Commodores"
+              },
+              "after": {
+                "final": {
+                  "a": 38,
+                  "b": 14
+                },
+                "text": "Georgia Bulldogs 38-14 Vanderbilt Commodores"
+              }
+            }
+          ],
+          "note": "最終スコア確認により結果確定"
         }
       ],
       "sources": [
         "https://www.covers.com/sport/football/ncaaf/teams/main/georgia-bulldogs",
         "https://georgiadogs.com/game-center/26391",
-        "https://www.legalsportsbetting.com/news/georgia-favored-by-25-over-vanderbilt-total-drops-7-10-01-2026/"
+        "https://www.legalsportsbetting.com/news/georgia-favored-by-25-over-vanderbilt-total-drops-7-10-01-2026/",
+        "https://georgiadogs.com/news/2026/10/3/football-passing-game-powers-bulldogs-past-vandy"
       ],
-      "verified_at": "2026-10-04T09:53:00+09:00",
+      "verified_at": "2026-10-04T12:43:00+09:00",
       "flags": [],
       "note": "今回5件を正式推奨化するため登録",
       "result_confirmed_at": "2026-10-04T09:53:00+09:00"
@@ -2012,7 +2048,7 @@
           "a": 37,
           "b": 26
         },
-        "text": "Notre Dame Fighting Irish 37-26 North Carolina Tar Heels"
+        "text": "Notre Dame 37-26 North Carolina"
       },
       "provenance": [
         {
@@ -2025,13 +2061,42 @@
             }
           ],
           "note": "User approved for formal recommendation."
+        },
+        {
+          "update_run_id": "mr-results-20261004-1243",
+          "changes": [
+            {
+              "field": "status",
+              "before": "final",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": {
+                "final": {
+                  "a": 37,
+                  "b": 26
+                },
+                "text": "Notre Dame Fighting Irish 37-26 North Carolina Tar Heels"
+              },
+              "after": {
+                "final": {
+                  "a": 37,
+                  "b": 26
+                },
+                "text": "Notre Dame 37-26 North Carolina"
+              }
+            }
+          ],
+          "note": "最終スコア確認により結果確定"
         }
       ],
       "sources": [
         "https://goheels.com/news/2026/9/26/notre-dame-football-game-set-for-noon-on-espn",
-        "https://www.foxsports.com/college-football/notre-dame-fighting-irish-vs-north-carolina-tar-heels-oct-03-2026-game-boxscore-43436"
+        "https://www.foxsports.com/college-football/notre-dame-fighting-irish-vs-north-carolina-tar-heels-oct-03-2026-game-boxscore-43436",
+        "https://www.cbssports.com/college-football/gametracker/recap/NCAAF_20261003_ND%40UNC/"
       ],
-      "verified_at": "2026-10-04T09:53:00+09:00",
+      "verified_at": "2026-10-04T12:43:00+09:00",
       "flags": [],
       "note": "今回5件を正式推奨化するため登録",
       "result_confirmed_at": "2026-10-04T09:53:00+09:00"
@@ -2046,8 +2111,14 @@
       "venue": "Tiger Stadium, Baton Rouge",
       "start_at": "2026-10-04T08:45:00+09:00",
       "start_time_status": "recorded",
-      "status": "live",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 63,
+          "b": 14
+        },
+        "text": "LSU 63-14 McNeese"
+      },
       "provenance": [
         {
           "update_run_id": "mr-user-approved-20261003",
@@ -2059,12 +2130,35 @@
             }
           ],
           "note": "User approved for formal recommendation."
+        },
+        {
+          "update_run_id": "mr-results-20261004-1243",
+          "changes": [
+            {
+              "field": "status",
+              "before": "live",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 63,
+                  "b": 14
+                },
+                "text": "LSU 63-14 McNeese"
+              }
+            }
+          ],
+          "note": "最終スコア確認により結果確定"
         }
       ],
       "sources": [
-        "https://lsusports.net/sports/fb/schedule/season/2026"
+        "https://lsusports.net/sports/fb/schedule/season/2026",
+        "https://www.kalb.com/2026/10/03/lsu-vs-mcneese-no-11-tigers-host-cowboys-tiger-stadium/"
       ],
-      "verified_at": "2026-10-04T09:53:00+09:00",
+      "verified_at": "2026-10-04T12:43:00+09:00",
       "flags": [],
       "note": "今回5件を正式推奨化するため登録"
     },
@@ -2078,8 +2172,14 @@
       "venue": "Gerald J. Ford Stadium, Dallas",
       "start_at": "2026-10-04T01:00:00+09:00",
       "start_time_status": "recorded",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 25,
+          "b": 16
+        },
+        "text": "SMU 25-16 Boston College"
+      },
       "provenance": [
         {
           "update_run_id": "mr-user-approved-20261003",
@@ -2091,14 +2191,37 @@
             }
           ],
           "note": "User approved for formal recommendation."
+        },
+        {
+          "update_run_id": "mr-results-20261004-1243",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 25,
+                  "b": 16
+                },
+                "text": "SMU 25-16 Boston College"
+              }
+            }
+          ],
+          "note": "最終スコア確認により結果確定"
         }
       ],
       "sources": [
         "https://www.underdogdynasty.com/acc/46491/2026-week-5-preview-boston-college-eagles-smu-mustangs",
         "https://www.fanduel.com/research/smu-vs-boston-college-college-football-odds-picks-best-bets-for-10-3-2026",
-        "https://smumustangs.com/game-center/14451"
+        "https://smumustangs.com/game-center/14451",
+        "https://theacc.com/boxscore.aspx?id=7ltyipP022aUJKmSgYVs3wXi7up73ghniwD5ElWyd07J7BNseBaMQePf0fY%2F3yUPx0so0P1IxcXRPH9rihqIPyHHBL%2FBUAynZH%2BGvpbzjypkFID%2BUwbKy%2FfhOS883DV5fVOfEjWVRqJzJ3ESgzprIqRybBFgGXpv7dAvl9dDhaU%3D&path=football"
       ],
-      "verified_at": "2026-10-03T20:55:00+09:00",
+      "verified_at": "2026-10-04T12:43:00+09:00",
       "flags": [],
       "note": "今回5件を正式推奨化するため登録"
     },
