@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-05T14:44:00+09:00",
+    "as_of": "2026-10-05T17:01:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -113,6 +113,13 @@
       "at": "2026-10-05T14:44:00+09:00",
       "source": "Current official/credible result verification",
       "note": "10/5 14:44 JST 終了済み正式推奨カードの結果更新"
+    },
+    {
+      "run_id": "mr-user-approved-20261005-1701",
+      "kind": "human_review",
+      "at": "2026-10-05T17:01:00+09:00",
+      "source": "User approval + FAP/Sporting official + Strafe/Ensigame",
+      "note": "Sporting CP vs Vitória SC handball and Uwinks vs VARREL Overwatch added as formal recommendations."
     }
   ],
   "matches": [
@@ -3108,6 +3115,79 @@
       ],
       "verified_at": "2026-10-04T22:50:00+09:00",
       "flags": []
+    },
+    {
+      "id": "2026-10-06-sporting-vitoria-handball",
+      "sport": "男子ハンドボール",
+      "competition": "Campeonato Betclic Masculino 2026/27 — 第8節",
+      "side_a": "Sporting CP",
+      "side_b": "Vitória SC",
+      "home_side": "side_a",
+      "region": "Portugal",
+      "venue": "Pavilhão João Rocha, Lisboa",
+      "start_at": "2026-10-06T02:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261005-1701",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示承認で正式推奨に追加。"
+        }
+      ],
+      "sources": [
+        "https://portal.fpa.pt/jogo/323284/",
+        "https://www.sporting.pt/en/agenda/calendar?d=2026-10&recinto%3Destadio=",
+        "https://www.sporting.pt/en/games/handball/seniors/2026-03-01/sporting-cp-vitoria-sc"
+      ],
+      "verified_at": "2026-10-05T17:01:00+09:00",
+      "flags": [
+        "odds_unverified"
+      ]
+    },
+    {
+      "id": "2026-10-05-uwinks-varrel",
+      "sport": "Overwatch 2",
+      "competition": "Overwatch Champions Series 2026 — Stage 3 Japan Group Stage",
+      "side_a": "Uwinks",
+      "side_b": "VARREL",
+      "home_side": "unknown",
+      "region": "Japan",
+      "venue": "Online",
+      "start_at": "2026-10-05T18:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261005-1701",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示承認で正式推奨に追加。"
+        }
+      ],
+      "sources": [
+        "https://www.strafe.com/match/uwinks-vs-varrel-group-stage-ocs-japan-stage-3-a82f93/",
+        "https://ensigame.com/teams/overwatch/varrel-varrel",
+        "https://tips.gg/matches/overwatch/05-10-2026/uwinks-vs-varrel/10-00/",
+        "https://polymarket.com/esports/overwatch/ocs/ow-uwi-var-2026-10-05"
+      ],
+      "verified_at": "2026-10-05T17:01:00+09:00",
+      "flags": [
+        "odds_unverified"
+      ]
     }
   ]
 }
