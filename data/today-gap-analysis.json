@@ -1,19 +1,20 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-04T12:43:00+09:00",
+  "generated_at": "2026-10-06T00:22:13.588+09:00",
   "window": {
-    "from": "2026-10-03T20:27:00+09:00",
-    "to": "2026-10-04T20:27:00+09:00",
+    "from": "2026-10-06T00:22:13.588+09:00",
+    "to": "2026-10-07T00:22:13.588+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "今から24時間以内。ユーザー指定により Team Yandex vs Team Spirit と Kuzeyboru vs Afyon は掲載対象外。"
+    "note": "今後24時間を基本。明示指定のSolaryは24時間外の先行登録、テニス1件は指定例外。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
     "双方が直近に対戦した共通対戦相手を抽出し、勝敗・スコア・得失点差を比較",
     "相手レベルが大きく違う場合は単純な勝率比較をしない",
     "実力格差と市場価格を分離し、低オッズだけを格差根拠にしない",
-    "未確認項目は推測で埋めず未確認と表示"
+    "未確認項目は推測で埋めず未確認と表示",
+    "今後の新規探索はOverwatchとテニスを除外。ただしKraus–Bartůňkováはユーザー明示指定により今回のみ追加。既存取引の結果履歴は保持。"
   ],
   "coverage": {
     "checked": [
@@ -25,1140 +26,6 @@
     "note": "本日の深掘り対象から、指定された5番と7番を除き、Georgia–Vanderbilt / Notre Dame–UNC / LSU–McNeese / SMU–Boston College / Fenerbahçe–Manisa を反映。"
   },
   "candidates": [
-    {
-      "sport": "女子サッカー",
-      "competition": "Barclays Women's Super League 2026/27",
-      "start_jst": "2026-10-04T22:00:00+09:00",
-      "matchup": "West Ham United Women vs Chelsea Women",
-      "favored": "Chelsea Women",
-      "venue": "Chigwell Construction Stadium, Dagenham",
-      "format": "90分＋AT",
-      "status": "formal",
-      "gap_grade": "S",
-      "price_grade": "A",
-      "odds": {
-        "min": 1.1818,
-        "max": 1.1818,
-        "book_examples": "Chelsea 2/11",
-        "required_win_rate_pct": "84.62"
-      },
-      "estimated_win_probability_pct": "90.5",
-      "estimated_ev_pct": "+6.95",
-      "ranking_rating": "H2Hと直近内容でChelsea優位。",
-      "h2h": "確認できた16試合でChelsea 14勝2分0敗。",
-      "recent_form": "Chelseaは直近守備が安定。West Hamは上位相手で苦戦。",
-      "common_opponents": "Manchester United比較でChelsea 5-0勝、West Ham 1-2敗。",
-      "roster": "Chelsea/West Hamとも欠場者あり。戦力層はChelsea優位。",
-      "risk": "過密日程・欠場。",
-      "conclusion": "正式推奨。$100。",
-      "sources": [
-        "https://www.oddschecker.com/football/womens-club/england/womens-super-league/west-ham-united-women-v-chelsea-women/winner",
-        "https://www.forebet.com/en/football/matches/west-ham-w-chelsea-w-2529935"
-      ],
-      "analysis_detail": {
-        "summary": "H2H確認16試合でChelsea 14勝2分0敗。直近の直接対決も大差勝ちが多い。",
-        "h2h": {
-          "summary": "確認16試合: Chelsea 14勝2分0敗。",
-          "items": [
-            {
-              "date": "2026-01-11",
-              "label": "Chelsea Women vs West Ham Women",
-              "result": "Chelsea 5-0 West Ham"
-            },
-            {
-              "date": "2025-09-28",
-              "label": "West Ham Women vs Chelsea Women",
-              "result": "West Ham 0-4 Chelsea"
-            },
-            {
-              "date": "2025-03-30",
-              "label": "Chelsea Women vs West Ham Women",
-              "result": "2-2"
-            },
-            {
-              "date": "2025-01-19",
-              "label": "West Ham Women vs Chelsea Women",
-              "result": "West Ham 0-5 Chelsea"
-            },
-            {
-              "date": "2024-03-24",
-              "label": "West Ham Women vs Chelsea Women",
-              "result": "West Ham 0-2 Chelsea"
-            },
-            {
-              "date": "2023-10-14",
-              "label": "Chelsea Women vs West Ham Women",
-              "result": "Chelsea 2-0 West Ham"
-            },
-            {
-              "date": "2023-05-17",
-              "label": "West Ham Women vs Chelsea Women",
-              "result": "West Ham 0-4 Chelsea"
-            },
-            {
-              "date": "2022-09-28",
-              "label": "Chelsea Women vs West Ham Women",
-              "result": "Chelsea 3-1 West Ham"
-            },
-            {
-              "date": "2022-03-10",
-              "label": "West Ham Women vs Chelsea Women",
-              "result": "West Ham 1-4 Chelsea"
-            },
-            {
-              "date": "2022-01-26",
-              "label": "Chelsea Women vs West Ham Women",
-              "result": "Chelsea 2-0 West Ham"
-            },
-            {
-              "date": "2021-03-07",
-              "label": "West Ham Women vs Chelsea Women",
-              "result": "West Ham 0-2 Chelsea"
-            },
-            {
-              "date": "2020-12-06",
-              "label": "Chelsea Women vs West Ham Women",
-              "result": "Chelsea 3-2 West Ham"
-            },
-            {
-              "date": "2020-02-02",
-              "label": "Chelsea Women vs West Ham Women",
-              "result": "Chelsea 8-0 West Ham"
-            },
-            {
-              "date": "2019-10-27",
-              "label": "West Ham Women vs Chelsea Women",
-              "result": "West Ham 1-3 Chelsea"
-            },
-            {
-              "date": "2019-03-31",
-              "label": "Chelsea Women vs West Ham Women",
-              "result": "1-1"
-            },
-            {
-              "date": "2018-11-04",
-              "label": "West Ham Women vs Chelsea Women",
-              "result": "West Ham 0-2 Chelsea"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "West Ham Women",
-            "summary": "直近詳細は一部確認。上位相手で苦戦。",
-            "items": []
-          },
-          "side_b": {
-            "label": "Chelsea Women",
-            "summary": "直近は守備安定。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "Manchester UnitedでChelseaが大幅優位。",
-          "items": [
-            {
-              "opponent": "Manchester United",
-              "side_a": {
-                "result": "West Ham L 1-2"
-              },
-              "side_b": {
-                "result": "Chelsea W 5-0"
-              },
-              "comparison": "Chelseaが得失点差で6点上"
-            }
-          ]
-        },
-        "availability": {
-          "text": "両軍欠場者あり。戦力層はChelsea優位。"
-        }
-      },
-      "rank": 1
-    },
-    {
-      "sport": "男子ハンドボール",
-      "competition": "Opel Handball-Bundesliga 2026/27",
-      "start_jst": "2026-10-04T22:00:00+09:00",
-      "matchup": "SC Magdeburg vs HC Erlangen",
-      "favored": "SC Magdeburg",
-      "venue": "GETEC Arena, Magdeburg",
-      "format": "60分",
-      "status": "formal",
-      "gap_grade": "S-",
-      "price_grade": "C",
-      "odds": {
-        "min": 1.025,
-        "max": 1.025,
-        "book_examples": "SC Magdeburg 1.025",
-        "required_win_rate_pct": "97.56"
-      },
-      "estimated_win_probability_pct": "94.0",
-      "estimated_ev_pct": "-3.65",
-      "ranking_rating": "Magdeburg上位。Erlangenも今季上昇中。",
-      "h2h": "通算確認でMagdeburg 19勝3敗1分。直近5は4勝1分。",
-      "recent_form": "Magdeburg直近11は10勝1敗。Erlangen直近7は4勝1分2敗。",
-      "common_opponents": "直近60日では十分な共通相手比較データ不足。",
-      "roster": "当日最終メンバーは直前確認対象。",
-      "risk": "Erlangenの直近上昇、価格が短い。",
-      "conclusion": "ユーザー承認により正式推奨。$100。",
-      "sources": [
-        "https://www.scm-handball.de/",
-        "https://www.bwin.com/en/sports/events/sc-magdeburg-hc-erlangen-5%3A1256697",
-        "https://ran.joyn.de/sports/ticker/ma11405897-sc-magdeburg-hc-erlangen"
-      ],
-      "analysis_detail": {
-        "summary": "通算H2HはMagdeburg 19勝3敗1分。直近11は10勝1敗。",
-        "h2h": {
-          "summary": "通算23試合: Magdeburg 19勝3敗1分。",
-          "items": [
-            {
-              "date": "2026-04-12",
-              "label": "SC Magdeburg vs HC Erlangen",
-              "result": "35-31"
-            },
-            {
-              "date": "2025-09-20",
-              "label": "HC Erlangen vs SC Magdeburg",
-              "result": "31-31"
-            },
-            {
-              "date": "2025-05-28",
-              "label": "HC Erlangen vs SC Magdeburg",
-              "result": "23-34"
-            },
-            {
-              "date": "2025-04-10",
-              "label": "SC Magdeburg vs HC Erlangen",
-              "result": "30-19"
-            },
-            {
-              "date": "2024-05-18",
-              "label": "HC Erlangen vs SC Magdeburg",
-              "result": "27-32"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "SC Magdeburg",
-            "summary": "直近11: 10勝1敗。",
-            "items": []
-          },
-          "side_b": {
-            "label": "HC Erlangen",
-            "summary": "直近7: 4勝1分2敗。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "直近60日では十分な比較データ不足。",
-          "items": []
-        },
-        "availability": {
-          "text": "最終メンバーは試合直前確認。"
-        }
-      },
-      "rank": 2
-    },
-    {
-      "sport": "League of Legends",
-      "competition": "EMEA Masters 2026 Summer",
-      "start_jst": "2026-10-04T23:00:00+09:00",
-      "matchup": "Solary vs Barça eSports",
-      "favored": "Solary",
-      "venue": "Online / event venue未確認",
-      "format": "Bo5",
-      "status": "formal",
-      "gap_grade": "A+",
-      "price_grade": "C",
-      "odds": {
-        "min": 1.04,
-        "max": 1.04,
-        "book_examples": "Solary 1.04",
-        "required_win_rate_pct": "96.15"
-      },
-      "estimated_win_probability_pct": "87.0",
-      "estimated_ev_pct": "-9.52",
-      "ranking_rating": "EGamersWorld表示ではSolary直近10は7勝、Barça 6勝。H2Hなし。",
-      "h2h": "直接対戦は確認できず、H2H 0件。",
-      "recent_form": "Solary直近10は7勝3敗、Barçaは6勝4敗。",
-      "common_opponents": "直近60日では共通相手0件。期間拡張ではUCAMに対しSolary 3-0、Barçaは直近0-3。",
-      "roster": "公開ロスター確認済み。",
-      "risk": "H2Hなし、60日共通相手なし、価格が極端に短い。",
-      "conclusion": "ユーザー承認により正式推奨。$100。",
-      "sources": [
-        "https://egamersworld.com/lol/match/z27dDLdCP/barca-esports-vs-solary-s3zNM8euN",
-        "https://bo3.gg/lol/teams/solary-lol/matches",
-        "https://bo3.gg/lol/teams/barca-esports-lol/matches"
-      ],
-      "analysis_detail": {
-        "summary": "H2Hなし。直近10はSolary 7勝、Barça 6勝。60日共通相手は0件。",
-        "h2h": {
-          "summary": "確認できる直接対戦なし。",
-          "items": []
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Solary",
-            "summary": "直近10: 7勝3敗。",
-            "items": []
-          },
-          "side_b": {
-            "label": "Barça eSports",
-            "summary": "直近10: 6勝4敗。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "直近60日: 0件。参考として期間拡張UCAM比較ではSolary 3-0、Barça直近0-3。",
-          "items": [
-            {
-              "opponent": "UCAM Esports",
-              "side_a": {
-                "result": "Solary W 3-0（期間拡張）"
-              },
-              "side_b": {
-                "result": "Barça L 0-3（期間拡張）"
-              },
-              "comparison": "60日外の参考比較ではSolary優位"
-            }
-          ]
-        },
-        "availability": {
-          "text": "ロスター公開情報を確認。"
-        }
-      },
-      "rank": 3
-    },
-    {
-      "sport": "Arena of Valor（伝説対決）",
-      "competition": "Garena Challenger Series Summer 2026 — Group Stage",
-      "start_jst": "2026-10-04T16:00:00+09:00",
-      "matchup": "LIT Team vs ANK Gaming",
-      "favored": "ANK Gaming",
-      "venue": "Taiwan / Offline",
-      "format": "Bo5",
-      "status": "formal",
-      "gap_grade": "S",
-      "price_grade": "A",
-      "odds": {
-        "min": 1.08,
-        "max": 1.08,
-        "book_examples": "LIT 6.30 / ANK 1.08",
-        "required_win_rate_pct": "92.59"
-      },
-      "estimated_win_probability_pct": "94.0",
-      "estimated_ev_pct": "+1.52",
-      "ranking_rating": "GCS Summerの最新スナップショットでANK 7勝2敗・24-15 maps、LIT 0勝9敗・2-27 maps。",
-      "h2h": "2026年確認H2HはANK優勢。直近は2026/09/04にANK 3-0 LIT、3/1にもANK 3-1 LIT。LIT勝利例もあるため全件では一方通行ではない。",
-      "recent_form": "LITはGCS Summerで0-9、maps 2-27。直近8戦級でもほぼストレート負け。ANKは上位陣相手にもHKA/DCG/ONE/FWと競れる。",
-      "common_opponents": "FW/HKA/DCG/ONE/BMGで比較すると、ANKは勝ちまたは接戦、LITは0-3/1-3が多く、共通相手比較は大幅にANK優勢。",
-      "roster": "最新ロスターは大会登録メンバー基準。直前変更は再確認対象。",
-      "early_tendency": "LITはストレート負け頻度が高く、ANKのGame1/シリーズ先行期待が高い。",
-      "risk": "過去にLITがANKへ勝った例はあり、1.08は必要勝率92.59%と高い。Bo5でも油断不可。",
-      "conclusion": "正式推奨。$100。今大会成績・最新H2H・共通相手のすべてがANK側。",
-      "sources": [
-        "https://tips.gg/tournament/aov-garena-challenger-summer-2026/",
-        "https://tips.gg/team/ank-gaming-aov/",
-        "https://tips.gg/es/archive/ank-gaming-aov-vs-lit-team-aov/",
-        "https://liquipedia.net/honorofkings/LIT_Team/Played_Matches",
-        "https://stake3061.com/ja/sports/upcoming/arena-of-valor"
-      ],
-      "analysis_detail": {
-        "summary": "最新大会スナップショットでANK 7-2 / 24-15 maps、LIT 0-9 / 2-27 maps。直近H2HもANK 3-0。",
-        "h2h": {
-          "summary": "2026年確認分ではANK優勢。",
-          "items": [
-            {
-              "date": "2026-09-04",
-              "label": "ANK Gaming vs LIT Team",
-              "result": "ANK 3-0 LIT"
-            },
-            {
-              "date": "2026-03-01",
-              "label": "ANK Gaming vs LIT Team",
-              "result": "ANK 3-1 LIT"
-            },
-            {
-              "date": "2026-03",
-              "label": "LIT Team vs ANK Gaming",
-              "result": "LIT勝利例あり（詳細要再確認）"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "LIT Team",
-            "summary": "GCS Summer 0勝9敗・2-27 maps。",
-            "items": [
-              {
-                "opponent": "Deep Cross Gaming",
-                "result": "L 1-3"
-              },
-              {
-                "opponent": "Hong Kong Attitude",
-                "result": "L 0-3"
-              },
-              {
-                "opponent": "Flash Wolves",
-                "result": "L 0-3"
-              },
-              {
-                "opponent": "BanMei Gaming",
-                "result": "L 0-3"
-              },
-              {
-                "opponent": "ONE Team",
-                "result": "L 1-3"
-              },
-              {
-                "opponent": "ANK Gaming",
-                "result": "L 0-3"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "ANK Gaming",
-            "summary": "GCS Summer 7勝2敗・24-15 maps。",
-            "items": [
-              {
-                "opponent": "LIT Team",
-                "result": "W 3-0"
-              },
-              {
-                "opponent": "Flash Wolves",
-                "result": "W 3-2"
-              },
-              {
-                "opponent": "Hong Kong Attitude",
-                "result": "W 3-1"
-              },
-              {
-                "opponent": "Deep Cross Gaming",
-                "result": "上位対戦・詳細は大会ページ参照"
-              },
-              {
-                "opponent": "ONE Team",
-                "result": "上位対戦・詳細は大会ページ参照"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "FW/HKA/DCG/ONE/BMGでANKが大幅優位。",
-          "items": [
-            {
-              "opponent": "Flash Wolves",
-              "side_a": {
-                "result": "LIT L 0-3（複数）"
-              },
-              "side_b": {
-                "result": "ANK W 3-2ほか"
-              },
-              "comparison": "ANK優位"
-            },
-            {
-              "opponent": "Hong Kong Attitude",
-              "side_a": {
-                "result": "LIT L 0-3（複数）"
-              },
-              "side_b": {
-                "result": "ANK W 3-1"
-              },
-              "comparison": "ANK優位"
-            },
-            {
-              "opponent": "Deep Cross Gaming",
-              "side_a": {
-                "result": "LIT L 1-3 / 0-3"
-              },
-              "side_b": {
-                "result": "ANKは上位争い"
-              },
-              "comparison": "ANK優位"
-            },
-            {
-              "opponent": "ONE Team",
-              "side_a": {
-                "result": "LIT L 1-3"
-              },
-              "side_b": {
-                "result": "ANKは勝利実績あり"
-              },
-              "comparison": "ANK優位"
-            },
-            {
-              "opponent": "BanMei Gaming",
-              "side_a": {
-                "result": "LIT L 0-3"
-              },
-              "side_b": {
-                "result": "ANKに勝利実績あり"
-              },
-              "comparison": "ANK優位"
-            }
-          ]
-        },
-        "season_flow": {
-          "text": "GCS Summer最新スナップショット: ANK 7-2 / LIT 0-9。"
-        },
-        "year_flow": {
-          "text": "ANKはGCS Spring 2026準優勝。LITはSummerで極端な不振。"
-        },
-        "availability": {
-          "text": "大会登録ロスター。直前変更は未確認。"
-        },
-        "sport_specific": {
-          "text": "Bo5。マップ差とストレート負け頻度を重視。"
-        }
-      },
-      "rank": 4
-    },
-    {
-      "sport": "Arena of Valor（伝説対決）",
-      "competition": "Arena of Glory Winter 2026 — Group Stage Second Leg",
-      "start_jst": "2026-10-04T14:00:00+09:00",
-      "matchup": "One Star Esports vs Saigon Phantom",
-      "favored": "Saigon Phantom",
-      "venue": "Vietnam / event venue detail未確認",
-      "format": "Bo5",
-      "status": "formal",
-      "gap_grade": "A+",
-      "price_grade": "B",
-      "odds": {
-        "min": 1.147,
-        "max": 1.147,
-        "book_examples": "Saigon Phantom 1.147",
-        "required_win_rate_pct": "87.18"
-      },
-      "estimated_win_probability_pct": "84.0",
-      "estimated_ev_pct": "-3.65",
-      "ranking_rating": "直近30日: One Star 4勝4敗、Saigon Phantom 7勝0敗。直近フォームはSGPが大幅優位。",
-      "h2h": "確認8試合は4勝4敗で互角。直近2回はSaigon Phantomが3-1、3-0で連勝。",
-      "recent_form": "Saigon Phantomは直近7連勝級。Team Secret 3-0、BOX 3-0、Team Flash 3-0、GAM 3-0、One Star 3-1など。One Starは直近4勝4敗前後。",
-      "common_opponents": "BOX、GAM、Team FlashでSaigon Phantomの勝ち方が明確に上。SGPはそれぞれ3-0級、One Starは敗戦または接戦が多い。",
-      "roster": "大会登録ロスター基準。直前変更は再確認対象。",
-      "early_tendency": "SGPは直近で3-0が多く、Game1先行傾向も強い。",
-      "risk": "H2H通算は4-4で完全な一方通行ではない。1.147は必要勝率87.18%で、独立推定84%なら価格面はやや厳しい。",
-      "conclusion": "ユーザー承認により正式推奨。$100。実力差はA+だが価格余裕は小さい。",
-      "sources": [
-        "https://tips.gg/archive/one-star-esports-aov-vs-saigon-phantom-aov/",
-        "https://tips.gg/matches/arena-of-valor/04-10-2026/one-star-esports-vs-saigon-phantom/10-00/",
-        "https://www.ggcombat.com/en/aov",
-        "https://mx0.betmonitor.com/odds-comparison/esports/arena-of-glory/10015723"
-      ],
-      "analysis_detail": {
-        "summary": "H2H通算4-4。ただし直近2回はSGP連勝、直近30日もSGP 7-0に対しOne Star 4-4で現在値はSGP優勢。",
-        "h2h": {
-          "summary": "確認8試合: 4勝4敗。直近2回はSaigon Phantom勝利。",
-          "items": [
-            {
-              "date": "2026-09-06",
-              "label": "One Star Esports vs Saigon Phantom",
-              "result": "Saigon Phantom 3-1 One Star"
-            },
-            {
-              "date": "2026-04-21",
-              "label": "One Star Esports vs Saigon Phantom",
-              "result": "Saigon Phantom 3-0 One Star"
-            },
-            {
-              "date": "2026-03-29",
-              "label": "One Star Esports vs Saigon Phantom",
-              "result": "One Star 3-0 Saigon Phantom"
-            },
-            {
-              "date": "2026-03-01",
-              "label": "One Star Esports vs Saigon Phantom",
-              "result": "One Star 3-0 Saigon Phantom"
-            },
-            {
-              "date": "2025-11-22",
-              "label": "One Star Esports vs Saigon Phantom",
-              "result": "Saigon Phantom 2-0 One Star"
-            },
-            {
-              "date": "2025-04-19",
-              "label": "One Star Esports vs Saigon Phantom",
-              "result": "Saigon Phantom 3-0 One Star"
-            },
-            {
-              "date": "2025-03-23",
-              "label": "One Star Esports vs Saigon Phantom",
-              "result": "One Star 3-0 Saigon Phantom"
-            },
-            {
-              "date": "2025-03-07",
-              "label": "One Star Esports vs Saigon Phantom",
-              "result": "One Star 3-0 Saigon Phantom"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "One Star Esports",
-            "summary": "直近30日 4勝4敗。",
-            "items": [
-              {
-                "opponent": "BOOM Esports VN",
-                "result": "W 3-1"
-              },
-              {
-                "opponent": "GAM Esports",
-                "result": "L 1-3"
-              },
-              {
-                "opponent": "BOX Gaming",
-                "result": "L 1-3"
-              },
-              {
-                "opponent": "FPT Polytechnic",
-                "result": "L 0-3"
-              },
-              {
-                "opponent": "Saigon Phantom",
-                "result": "L 1-3"
-              },
-              {
-                "opponent": "Team Flash",
-                "result": "W 3-2"
-              },
-              {
-                "opponent": "Team Secret",
-                "result": "W 3-1"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Saigon Phantom",
-            "summary": "直近30日 7勝0敗。",
-            "items": [
-              {
-                "opponent": "Team Secret",
-                "result": "W 3-0"
-              },
-              {
-                "opponent": "BOX Gaming",
-                "result": "W 3-0"
-              },
-              {
-                "opponent": "Team Flash",
-                "result": "W 3-0"
-              },
-              {
-                "opponent": "GAM Esports",
-                "result": "W 3-0"
-              },
-              {
-                "opponent": "One Star Esports",
-                "result": "W 3-1"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "BOX/GAM/Team FlashでSGPが優位。",
-          "items": [
-            {
-              "opponent": "BOX Gaming",
-              "side_a": {
-                "result": "One Star L 1-3"
-              },
-              "side_b": {
-                "result": "SGP W 3-0"
-              },
-              "comparison": "SGP大幅優位"
-            },
-            {
-              "opponent": "GAM Esports",
-              "side_a": {
-                "result": "One Star L 1-3"
-              },
-              "side_b": {
-                "result": "SGP W 3-0"
-              },
-              "comparison": "SGP大幅優位"
-            },
-            {
-              "opponent": "Team Flash",
-              "side_a": {
-                "result": "One Star W 3-2"
-              },
-              "side_b": {
-                "result": "SGP W 3-0"
-              },
-              "comparison": "SGPの勝ち方が上"
-            }
-          ]
-        },
-        "season_flow": {
-          "text": "Arena of Glory Winter 2026の直近区間でSGPは連勝中。One Starは勝敗が拮抗。"
-        },
-        "year_flow": {
-          "text": "直近12か月H2HはSGP 3勝、One Star 2勝。現在値ではSGP寄り。"
-        },
-        "availability": {
-          "text": "直前ロスター変更は未確認。"
-        },
-        "sport_specific": {
-          "text": "Bo5。短期の1マップ事故よりシリーズ全体のフォーム差を重視。"
-        }
-      },
-      "rank": 5
-    },
-    {
-      "sport": "Honor of Kings（王者栄耀）",
-      "competition": "King Pro League Grand Finals 2026 — Challenge Stage",
-      "start_jst": "2026-10-05T21:00:00+09:00",
-      "matchup": "Wolves vs EDward Gaming",
-      "favored": "Wolves",
-      "venue": "China / event venue detail未確認",
-      "format": "Bo5",
-      "status": "formal",
-      "gap_grade": "S",
-      "price_grade": "A",
-      "odds": {
-        "min": 1.32,
-        "max": 1.32,
-        "book_examples": "Wolves 1.32",
-        "required_win_rate_pct": "75.76"
-      },
-      "estimated_win_probability_pct": "86.5",
-      "estimated_ev_pct": "+14.18",
-      "ranking_rating": "Wolvesは2026 Challenger Cup優勝級。EDG.Mより直近大会実績・シリーズ安定度が上。",
-      "h2h": "2026年確認分はWolves 3-0、4-0で2戦2勝・games 7-0。",
-      "recent_form": "Wolves直近11は9勝2敗級。EDward Gamingは直近10で6勝4敗級。",
-      "common_opponents": "TES.AではWolves 4-3勝、EDG.M 2-4敗。LGD.NBW/Rogue Warriorsでも総合的にWolves優位。",
-      "roster": "最新登録ロスター基準。直前変更は再確認対象。",
-      "risk": "市場によってWolves評価に差があり、過信は禁物。",
-      "conclusion": "正式推奨。$100。",
-      "sources": [
-        "https://esportbet.com/odds/",
-        "https://liquipedia.net/honorofkings/QGhappy",
-        "https://polymarket.com/esports/honor-of-kings/king-pro-league/hok-wol-edg-2026-10-05"
-      ],
-      "analysis_detail": {
-        "summary": "直接対戦7-0 games、直近11、共通相手、タイトル実績の4軸でWolves優位。",
-        "h2h": {
-          "summary": "2026確認2シリーズ: Wolves 2勝0敗、games 7-0。",
-          "items": [
-            {
-              "date": "2026-07-10",
-              "label": "Wolves vs EDward Gaming",
-              "result": "Wolves 3-0 EDG.M"
-            },
-            {
-              "date": "2026-04-25",
-              "label": "Wolves vs EDward Gaming",
-              "result": "Wolves 4-0 EDG.M"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Wolves",
-            "summary": "直近11で9勝2敗級。",
-            "items": []
-          },
-          "side_b": {
-            "label": "EDward Gaming",
-            "summary": "直近10で6勝4敗級。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "TES.AなどでWolves優位。",
-          "items": [
-            {
-              "opponent": "TES.A",
-              "side_a": {
-                "result": "Wolves W 4-3"
-              },
-              "side_b": {
-                "result": "EDG.M L 2-4"
-              },
-              "comparison": "Wolves優位"
-            }
-          ]
-        },
-        "season_flow": {
-          "text": "Wolvesは2026 Challenger Cup優勝。EDG.MはSummer 5〜6位級。"
-        },
-        "availability": {
-          "text": "直前ロスター変更は再確認。"
-        },
-        "sport_specific": {
-          "text": "Bo5。シリーズ全体のゲーム差と共通相手内容を重視。"
-        }
-      },
-      "rank": 6
-    },
-    {
-      "sport": "女子テニス",
-      "competition": "WTA China Open 2026 — Round 3",
-      "start_jst": "2026-10-05T12:00:00+09:00",
-      "matchup": "Coco Gauff vs Xinran Sun",
-      "favored": "Coco Gauff",
-      "venue": "Beijing, China",
-      "format": "Best of 3 sets",
-      "status": "formal",
-      "gap_grade": "A+",
-      "price_grade": "C",
-      "odds": {
-        "min": 1.03,
-        "max": 1.03,
-        "book_examples": "Gauff 1.03",
-        "required_win_rate_pct": "97.09"
-      },
-      "estimated_win_probability_pct": "95.0",
-      "estimated_ev_pct": "-2.15",
-      "ranking_rating": "Gauff世界4位。Sunは大幅下位。",
-      "h2h": "初対戦。H2Hなし。",
-      "recent_form": "Gauff 2026年46-14、ハード31-8。Sun 12-7、ハード5-1だが対戦レベル差が大きい。",
-      "common_opponents": "直近60日で十分な同一相手比較データ不足。",
-      "roster": "個人競技。直近RET/MTOは大きな警戒情報未確認。",
-      "risk": "H2Hなし、Sunが北京で好調、1.03は必要勝率97.09%で価格が非常に短い。",
-      "conclusion": "正式推奨。$100。ただし価格妙味は低い。",
-      "sources": [
-        "https://www.tennis.com/tournaments/china-open-wta/matches/c-gauff-vs-x-sun-2026-10-05",
-        "https://www.betfair.com/exchange/plus/en/tennis/wta-beijing-2026/c-gauff-v-xin-sun-betting-36147445"
-      ],
-      "analysis_detail": {
-        "summary": "ランキング・ハード実績はGauff大幅優位。H2Hなしのためテニス厳格基準ではSに上げない。",
-        "h2h": {
-          "summary": "初対戦。",
-          "items": []
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Coco Gauff",
-            "summary": "2026年46勝14敗、ハード31勝8敗。",
-            "items": []
-          },
-          "side_b": {
-            "label": "Xinran Sun",
-            "summary": "2026年12勝7敗、ハード5勝1敗。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "直近60日では十分な比較不足。",
-          "items": []
-        },
-        "availability": {
-          "text": "直前の負傷・棄権情報は再確認対象。"
-        },
-        "sport_specific": {
-          "text": "テニス厳格基準。H2Hなしと価格の短さを減点。"
-        }
-      },
-      "rank": 7
-    },
-    {
-      "sport": "女子テニス",
-      "competition": "WTA China Open 2026 — Round 3",
-      "start_jst": "2026-10-05T12:00:00+09:00",
-      "matchup": "Donna Vekić vs Iga Świątek",
-      "favored": "Iga Świątek",
-      "venue": "Beijing, China",
-      "format": "Best of 3 sets",
-      "status": "formal",
-      "gap_grade": "A+",
-      "price_grade": "A-",
-      "odds": {
-        "min": 1.111,
-        "max": 1.111,
-        "book_examples": "Świątek 1.111",
-        "required_win_rate_pct": "90.01"
-      },
-      "estimated_win_probability_pct": "93.0",
-      "estimated_ev_pct": "+3.32",
-      "ranking_rating": "Świątek世界9位、Vekić40位。",
-      "h2h": "Świątek 4勝0敗。ハード3勝0敗。",
-      "recent_form": "直近10はŚwiątek 8勝2敗、Vekić 3勝7敗級。2026ハードはŚwiątek26-8、Vekić9-12。",
-      "common_opponents": "直近60日の共通相手比較は一部不足だが、対戦レベルとハード実績はŚwiątek優位。",
-      "roster": "個人競技。",
-      "risk": "Vekićの一発力、低オッズ市場。",
-      "conclusion": "正式推奨。$100。",
-      "sources": [
-        "https://www.tennis.com/tournaments/china-open-wta/matches/d-vekic-vs-i-swiatek-2026-10-05",
-        "https://agentbets.ai/odds/wta-china-open/iga-swiatek-vs-donna-vekic/"
-      ],
-      "analysis_detail": {
-        "summary": "H2H4-0、ハード勝率差、直近10、前戦疲労の全てでŚwiątek優位。",
-        "h2h": {
-          "summary": "Świątek 4勝0敗。",
-          "items": []
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Donna Vekić",
-            "summary": "直近10 3勝7敗級、2026ハード9-12。",
-            "items": []
-          },
-          "side_b": {
-            "label": "Iga Świątek",
-            "summary": "直近10 8勝2敗級、2026ハード26-8。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "十分な60日比較は限定的。",
-          "items": []
-        },
-        "availability": {
-          "text": "前戦Vekićは3セット、Świątekはストレート勝ちで疲労面もŚwiątek優位。"
-        },
-        "sport_specific": {
-          "text": "テニス厳格基準でH2H・サーフェス・直近・疲労を加点。"
-        }
-      },
-      "rank": 8
-    },
-    {
-      "sport": "League of Legends（LoL）",
-      "competition": "Demacia Cup Global Invitational 2026 — Group Stage",
-      "start_jst": "2026-10-05T18:00:00+09:00",
-      "matchup": "GAM Esports vs Team Vitality",
-      "favored": "Team Vitality",
-      "venue": "Event venue未確認",
-      "format": "Bo3",
-      "status": "formal",
-      "gap_grade": "A",
-      "price_grade": "A-",
-      "odds": {
-        "min": 1.3,
-        "max": 1.3,
-        "book_examples": "Vitality 1.30",
-        "required_win_rate_pct": "76.92"
-      },
-      "estimated_win_probability_pct": "80.0",
-      "estimated_ev_pct": "+4.00",
-      "ranking_rating": "地域強度・ロスター層でVitality優位。",
-      "h2h": "現ロスターで有効なH2Hは十分なデータなし。",
-      "recent_form": "Vitality直近10は7勝3敗級、GAMは4勝6敗級。",
-      "common_opponents": "国際大会で完全な60日共通相手比較は限定的。",
-      "roster": "GAM: Kiaya/Artemis/Draktharr/Taki/Gloryy。Vitality: FIESTA/Naak Nako/Lyncas/Carzzy/Fleshy系。",
-      "risk": "Bo3、国際戦、GAMのアップセット能力。",
-      "conclusion": "正式推奨。$100。",
-      "sources": [
-        "https://egamersworld.com/lol/match/FqxSssBfV/gam-esports-vs-team-vitality-FZq7tJw_kv",
-        "https://polymarket.com/ja/event/lol-gam-vit-2026-10-05"
-      ],
-      "analysis_detail": {
-        "summary": "直近フォームと地域強度でVitality優位。H2H/共通相手不足のためA止まり。",
-        "h2h": {
-          "summary": "現ロスター有効H2H不足。",
-          "items": []
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "GAM Esports",
-            "summary": "直近10 4勝6敗級。",
-            "items": []
-          },
-          "side_b": {
-            "label": "Team Vitality",
-            "summary": "直近10 7勝3敗級。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "60日共通相手は限定的。",
-          "items": []
-        },
-        "availability": {
-          "text": "大会登録ロスター基準。"
-        },
-        "sport_specific": {
-          "text": "Bo3。地域強度と現行ロスター、Game1傾向を重視。"
-        }
-      },
-      "rank": 9
-    },
-    {
-      "sport": "League of Legends（LoL）",
-      "competition": "Demacia Cup Global Invitational 2026 — Group Stage",
-      "start_jst": "2026-10-05T20:00:00+09:00",
-      "matchup": "Shopify Rebellion vs JD Gaming",
-      "favored": "JD Gaming",
-      "venue": "Event venue未確認",
-      "format": "Bo3",
-      "status": "formal",
-      "gap_grade": "A",
-      "price_grade": "C+",
-      "odds": {
-        "min": 1.17,
-        "max": 1.17,
-        "book_examples": "JDG 1.17",
-        "required_win_rate_pct": "85.47"
-      },
-      "estimated_win_probability_pct": "83.5",
-      "estimated_ev_pct": "-2.31",
-      "ranking_rating": "国際/地域レベルとランキングでJDG優位。",
-      "h2h": "初対戦。",
-      "recent_form": "Shopify直近6は2勝4敗級。JDGも直近フォームは不振で、ブランド差ほど絶対ではない。",
-      "common_opponents": "有効な60日共通相手比較は限定的。",
-      "roster": "大会登録ロスター基準。",
-      "risk": "JDG自身の直近不振、1.17は価格が短い。",
-      "conclusion": "ユーザー承認により正式推奨。$100。ただし価格面は見送り寄り。",
-      "sources": [
-        "https://polymarket.us/sports/league-of-legends/lol-sr-jdg-2026-10-05",
-        "https://egamersworld.com/lol/event/2026-demacia-cup-global-invitational-FqxSssBfV"
-      ],
-      "analysis_detail": {
-        "summary": "格差はJDG方向だが、直近不振と価格の短さで評価抑制。",
-        "h2h": {
-          "summary": "初対戦。",
-          "items": []
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Shopify Rebellion",
-            "summary": "直近6で2勝4敗級。",
-            "items": []
-          },
-          "side_b": {
-            "label": "JD Gaming",
-            "summary": "直近は負け越し気味。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "十分な60日比較不足。",
-          "items": []
-        },
-        "availability": {
-          "text": "直前ロスター変更は再確認。"
-        },
-        "sport_specific": {
-          "text": "Bo3。地域強度はJDG、直近フォームは減点。"
-        }
-      },
-      "rank": 10
-    },
-    {
-      "sport": "サッカー男子",
-      "competition": "キリンカップサッカー2026 — 決勝",
-      "start_jst": "2026-10-05T19:30:00+09:00",
-      "matchup": "日本 vs ニュージーランド",
-      "favored": "日本",
-      "venue": "国立競技場, 東京",
-      "format": "90分→同点ならPK",
-      "status": "recommended",
-      "gap_grade": "S-",
-      "price_grade": "未判定",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "最新1X2未確認",
-        "required_win_rate_pct": null
-      },
-      "estimated_win_probability_pct": "88〜91",
-      "estimated_ev_pct": "未算出",
-      "ranking_rating": "FIFA公式最新: 日本17位、ニュージーランド86位。69位差。",
-      "h2h": "男子A代表の確認4試合は日本3勝0分1敗。1981年NZ 1-0日本、2003年NZ 0-3日本、2014年日本4-2NZ、2017年日本2-1NZ。直近3回は日本3連勝。",
-      "recent_form": "日本直近10は6勝3分1敗。直近3戦はウルグアイ3-1、ベネズエラ2-1、エクアドル0-0(PK勝ち)。NZ直近10は2勝3分5敗。直近3戦はパレスチナ2-2、中国3-0、パナマ1-1(PK勝ち)。",
-      "common_opponents": "直近60日で完全一致する共通相手は乏しい。代わりに対戦相手強度は日本がウルグアイ/エクアドル級を相手に好成績。",
-      "roster": "日本は鈴木彩艶、板倉滉、伊藤洋輝、久保建英、堂安律、鎌田大地、上田綺世ら。NZはChris Wood、Marko Stamenic、Alex Paulsen、Tyler Bindonら。",
-      "risk": "NZは4試合無敗中で、中国に3-0、パナマをPKで突破。Chris Woodの空中戦・セットプレー。日本もエクアドル戦は0-0。",
-      "conclusion": "本日の分析へ追加。ランキング差・直近3回H2H・直近フォーム・ホーム条件で日本優位。ただしNZは直近4戦無敗で、Chris Woodの空中戦とセットプレーは警戒。最新1X2価格未確認のため価格評価は保留。",
-      "sources": [
-        "https://www.jfa.jp/eng/samuraiblue/kirincupsoccer_2026/",
-        "https://jfa.jp/eng/national_team_2026/news/00036851/",
-        "https://op.jfa.jp/samuraiblue20261005/",
-        "https://www.11v11.com/teams/japan/tab/opposingTeams/opposition/New%20Zealand/",
-        "https://www.besoccer.com/match/seleccion-japon/seleccion-nueva-zelanda/2026355413/analysis"
-      ],
-      "analysis_detail": {
-        "summary": "ランキング69位差、H2H3-0、直近10と対戦相手強度で日本優位。NZは直近4戦無敗で過小評価禁物。",
-        "h2h": {
-          "summary": "男子A代表の確認4試合: 日本3勝0分1敗。直近3回は日本3連勝。",
-          "items": [
-            {
-              "date": "1981-09-12",
-              "label": "New Zealand vs Japan",
-              "result": "New Zealand 1-0 Japan"
-            },
-            {
-              "date": "2003-06-18",
-              "label": "New Zealand vs Japan",
-              "result": "New Zealand 0-3 Japan"
-            },
-            {
-              "date": "2014-03-05",
-              "label": "Japan vs New Zealand",
-              "result": "Japan 4-2 New Zealand"
-            },
-            {
-              "date": "2017-10-06",
-              "label": "Japan vs New Zealand",
-              "result": "Japan 2-1 New Zealand"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "日本",
-            "summary": "直近10: 6勝3分1敗。",
-            "items": [
-              {
-                "opponent": "Ecuador",
-                "result": "D 0-0 / PK 5-4勝"
-              },
-              {
-                "opponent": "Venezuela",
-                "result": "W 2-1"
-              },
-              {
-                "opponent": "Uruguay",
-                "result": "W 3-1"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "ニュージーランド",
-            "summary": "直近10: 2勝3分5敗。",
-            "items": [
-              {
-                "opponent": "Panama",
-                "result": "D 1-1 / PK 5-3勝"
-              },
-              {
-                "opponent": "China PR",
-                "result": "W 3-0"
-              },
-              {
-                "opponent": "Palestine",
-                "result": "D 2-2"
-              },
-              {
-                "opponent": "Belgium",
-                "result": "L 1-5"
-              },
-              {
-                "opponent": "Egypt",
-                "result": "L 1-3"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "直近60日で十分な共通相手なし。対戦相手強度は日本側が上。",
-          "items": []
-        },
-        "season_flow": {
-          "text": "日本はW杯後の9月窓でウルグアイ、ベネズエラに連勝し、キリン杯準決勝はエクアドルにPK勝ち。NZは直近4戦無敗。"
-        },
-        "availability": {
-          "text": "日本は欧州組多数。Tomiyasuは欠場情報あり。NZはChris Woodを含む主力招集。"
-        },
-        "sport_specific": {
-          "text": "国立競技場の日本ホーム。90分同点なら延長なしでPK。セットプレーとローテーションに注意。"
-        }
-      },
-      "rank": 11
-    },
     {
       "sport": "男子ハンドボール",
       "competition": "Campeonato Betclic Masculino 2026/27 — 第8節",
@@ -1230,80 +97,261 @@
           "text": "前回平均得失点差+13。前半から7点差を作っており、60分通した層の差を評価。"
         }
       },
-      "rank": 12
+      "rank": 1
     },
     {
-      "sport": "Overwatch 2",
-      "competition": "Overwatch Champions Series 2026 — Stage 3 Japan Group Stage",
-      "start_jst": "2026-10-05T18:00:00+09:00",
-      "matchup": "Uwinks vs VARREL",
-      "favored": "VARREL",
-      "venue": "Online",
-      "format": "Bo5 / FT3",
-      "status": "formal",
-      "gap_grade": "S",
-      "price_grade": "未判定",
+      "matchup": "Italy vs Turkey",
+      "favored": "Italy",
+      "sport": "サッカー",
+      "competition": "UEFA Nations League",
+      "start_jst": "2026-10-06T03:45:00+09:00",
+      "status": "watch",
+      "gap_grade": "未判定",
+      "price_grade": "未確認",
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "最新シリーズ勝者実オッズ未確認",
+        "book_examples": "採用オッズ未登録",
         "required_win_rate_pct": null
       },
-      "estimated_win_probability_pct": "93.0",
-      "estimated_ev_pct": "未算出",
-      "ranking_rating": "StrafeではVARREL #1、Uwinks #4。Tips.ggではVARREL #35、Uwinks #326で大差。",
-      "h2h": "確認H2Hは2026/06/15にVARREL 3-0 Uwinks。VARREL 1勝0敗。",
-      "recent_form": "VARREL直近10は8勝2敗。Uwinksは3勝7敗。VARRELは直近30日勝率87%級、Uwinksは直近フォームで大きく劣る。",
-      "common_opponents": "共通相手詳細は公開取得不足。ただしVARRELはPlease Not Hero Ban 6-0、99DIVINE 6-0、INSOMNIA 6-0など国内同格以下へ高い安定性。",
-      "roster": "VARREL: Qloud / Topdragon / Sley / Nico / KSG / qki。現行6名ロスター確認。",
-      "early_tendency": "前回直接対決は3-0でVARRELストレート。Bo5でもマップ取りこぼしリスクは相対的に低い。",
-      "risk": "オンライン戦・パッチ差・Uwinksの短期アップセット。シリーズ勝者の最新実オッズ未確認。",
-      "conclusion": "正式推奨。$100。H2H・直近フォーム・ランキングの3軸でVARREL優勢。",
-      "sources": [
-        "https://www.strafe.com/match/uwinks-vs-varrel-group-stage-ocs-japan-stage-3-a82f93/",
-        "https://ensigame.com/teams/overwatch/varrel-varrel",
-        "https://tips.gg/matches/overwatch/05-10-2026/uwinks-vs-varrel/10-00/",
-        "https://polymarket.com/esports/overwatch/ocs/ow-uwi-var-2026-10-05"
-      ],
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "conclusion": "イタリア優位の分析候補。直近対戦4-1。Kean欠場とローテーションを直前確認。価格未登録。",
       "analysis_detail": {
-        "summary": "H2H 3-0、直近10はVARREL 8-2対Uwinks 3-7。ランキング・安定性もVARREL優位。",
-        "h2h": {
-          "summary": "確認1回: VARREL 1勝0敗、maps 3-0。",
-          "items": [
-            {
-              "date": "2026-06-15",
-              "label": "Uwinks vs VARREL",
-              "result": "VARREL 3-0 Uwinks"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Uwinks",
-            "summary": "直近10 3勝7敗級。直近5は2勝3敗。",
-            "items": []
-          },
-          "side_b": {
-            "label": "VARREL",
-            "summary": "直近10 8勝2敗。直近5は3勝2敗、30日勝率87%級。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "完全な60日共通相手明細は不足。VARRELは国内複数チームに高勝率。",
-          "items": []
-        },
-        "season_flow": {
-          "text": "OCS Japan Stage 3 Group Stage。VARRELはStage 2でもUwinksに3-0。"
-        },
-        "availability": {
-          "text": "VARREL現行6名ロスター確認。直前変更は再確認。"
-        },
-        "sport_specific": {
-          "text": "Bo5/FT3。H2Hマップ差・直近シリーズ勝率を重視。"
-        }
+        "summary": "イタリア優位の分析候補。直近対戦4-1。Kean欠場とローテーションを直前確認。価格未登録。"
       },
-      "rank": 13
+      "sources": [
+        "https://blog.ke.sportpesa.com/2026/10/05/italy-vs-turkey/"
+      ],
+      "added_at": "2026-10-06T00:22:13.588+09:00",
+      "market": "match_1x2",
+      "selection_label": "Italy勝利",
+      "h2h": "直近6対戦はイタリア3勝3分。2026/9/28は4-1。",
+      "risk": "代表戦ローテーション・欠場。",
+      "rank": 2
+    },
+    {
+      "matchup": "Montenegro vs Armenia",
+      "favored": "Montenegro",
+      "sport": "サッカー",
+      "competition": "UEFA Nations League",
+      "start_jst": "2026-10-06T03:45:00+09:00",
+      "status": "watch",
+      "gap_grade": "未判定",
+      "price_grade": "未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録",
+        "required_win_rate_pct": null
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "conclusion": "モンテネグロ優位の分析候補。直近5試合4勝1分、アルメニア1勝2分2敗。前回3-2は接戦で過信しない。",
+      "analysis_detail": {
+        "summary": "モンテネグロ優位の分析候補。直近5試合4勝1分、アルメニア1勝2分2敗。前回3-2は接戦で過信しない。"
+      },
+      "sources": [
+        "https://www.fotmob.com/matches/armenia-vs-montenegro/py8fl5"
+      ],
+      "added_at": "2026-10-06T00:22:13.588+09:00",
+      "market": "match_1x2",
+      "selection_label": "Montenegro勝利",
+      "risk": "Marušić出場可否、僅差の前回対戦。",
+      "rank": 3
+    },
+    {
+      "matchup": "India vs West Indies",
+      "favored": "India",
+      "sport": "クリケット",
+      "competition": "T20I 第1戦",
+      "start_jst": "2026-10-06T22:30:00+09:00",
+      "status": "watch",
+      "gap_grade": "未判定",
+      "price_grade": "未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録",
+        "required_win_rate_pct": null
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "conclusion": "インド寄りの分析候補。T20I通算20勝10敗1無結果。最終XI・トス・ピッチを確認して再評価。",
+      "analysis_detail": {
+        "summary": "インド寄りの分析候補。T20I通算20勝10敗1無結果。最終XI・トス・ピッチを確認して再評価。"
+      },
+      "sources": [
+        "https://www.gujarattitansipl.com/news/india-vs-west-indies-t20i-series-preview-head-to-head-record-telecast-watch-live-streaming"
+      ],
+      "added_at": "2026-10-06T00:22:13.588+09:00",
+      "market": "match_winner",
+      "selection_label": "India勝利",
+      "venue": "Lucknow / Ekana",
+      "risk": "XI・トス未確定。",
+      "rank": 4
+    },
+    {
+      "matchup": "KT Wiz vs Kiwoom Heroes",
+      "favored": "KT Wiz",
+      "sport": "野球",
+      "competition": "KBO",
+      "start_jst": "2026-10-06T18:30:00+09:00",
+      "status": "watch",
+      "gap_grade": "未判定",
+      "price_grade": "未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録",
+        "required_win_rate_pct": null
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "conclusion": "ユーザー指定候補：KT Wiz勝利。順位1位対10位、今季H2HはKT 10勝4敗1分。先発・打順の最終確認とオッズ評価は未完了。",
+      "analysis_detail": {
+        "summary": "ユーザー指定候補：KT Wiz勝利。順位1位対10位、今季H2HはKT 10勝4敗1分。先発・打順の最終確認とオッズ評価は未完了。"
+      },
+      "sources": [
+        "https://mykbostats.com/games/14019-KT-vs-Kiwoom-20261006"
+      ],
+      "added_at": "2026-10-06T00:22:13.588+09:00",
+      "market": "match_winner",
+      "selection_label": "KT Wiz勝利",
+      "venue": "Gocheok Sky Dome（Kiwoomホーム）",
+      "h2h": "今季KT 10勝4敗1分。",
+      "ranking_rating": "KT 86勝49敗5分・1位。Kiwoom 49勝89敗4分・10位。",
+      "risk": "先発変更・最終打順・終盤戦の起用。",
+      "rank": 5
+    },
+    {
+      "matchup": "Solary vs Valerion",
+      "favored": "Solary",
+      "sport": "League of Legends（LoL）",
+      "competition": "EMEA Masters Summer 2026 — Round of 16",
+      "start_jst": "2026-10-07T01:00:00+09:00",
+      "status": "watch",
+      "gap_grade": "未判定",
+      "price_grade": "未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録",
+        "required_win_rate_pct": null
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "conclusion": "ユーザー指定候補：Solary勝利。日本時間10月7日01:00予定で現在の24時間窓外。先行登録。",
+      "analysis_detail": {
+        "summary": "ユーザー指定候補：Solary勝利。日本時間10月7日01:00予定で現在の24時間窓外。先行登録。"
+      },
+      "sources": [
+        "https://www.sheepesports.com/en/all/matches/EMEA%20Masters%2F2026%20Season%2FSummer%20Main%20Event_Round%20of%2016_1"
+      ],
+      "added_at": "2026-10-06T00:22:13.588+09:00",
+      "market": "match_winner",
+      "selection_label": "Solary勝利",
+      "format": "Bo5",
+      "scope": "outside_24h",
+      "recent_form": "SolaryはBarça 3-0、T1 Academy 2-3、DN SOOPers Challengers 3-0、Movistar KOI Fénix 3-1。",
+      "risk": "移動・休養・ロスターと価格評価未完了。",
+      "rank": 6
+    },
+    {
+      "matchup": "Itambé Minas vs JF Vôlei",
+      "favored": "Minas",
+      "sport": "男子バレーボール",
+      "competition": "Campeonato Mineiro 2026",
+      "start_jst": "2026-10-06T07:30:00+09:00",
+      "status": "watch",
+      "gap_grade": "未判定",
+      "price_grade": "未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録",
+        "required_win_rate_pct": null
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "conclusion": "ユーザー指定候補：Minas勝利。Minasは首位確定、JFは進出不可。Minasのローテーション予定が大きな注意点。",
+      "analysis_detail": {
+        "summary": "ユーザー指定候補：Minas勝利。Minasは首位確定、JFは進出不可。Minasのローテーション予定が大きな注意点。"
+      },
+      "sources": [
+        "https://webvolei.com.br/jogos-de-volei-hoje-05-10-2026/"
+      ],
+      "added_at": "2026-10-06T00:22:13.588+09:00",
+      "market": "match_winner",
+      "selection_label": "Minas勝利",
+      "venue": "Arena UniBH, Belo Horizonte",
+      "risk": "順位確定後の消化試合。混成メンバー起用予定。",
+      "rank": 7
+    },
+    {
+      "matchup": "Grenada vs Bonaire",
+      "favored": "Grenada",
+      "sport": "サッカー",
+      "competition": "Concacaf Nations League B — Group C",
+      "start_jst": "2026-10-06T09:00:00+09:00",
+      "status": "watch",
+      "gap_grade": "未判定",
+      "price_grade": "未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録",
+        "required_win_rate_pct": null
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "conclusion": "ユーザー指定候補：Grenada DNB。Grenada勝ちで的中、引分は返金、負けは不的中。DNB価格は未確認。",
+      "analysis_detail": {
+        "summary": "ユーザー指定候補：Grenada DNB。Grenada勝ちで的中、引分は返金、負けは不的中。DNB価格は未確認。"
+      },
+      "sources": [
+        "https://drealfmgrenada.com/index.php/2026/09/16/grenada-forced-to-move-concacaf-nations-league-home-fixtures/"
+      ],
+      "added_at": "2026-10-06T00:22:13.588+09:00",
+      "market": "dnb",
+      "selection_label": "Grenada DNB（引分返金）",
+      "venue": "Hasely Crawford Stadium, Trinidad and Tobago",
+      "risk": "開催地移転で本来のホーム優位なし。勝率・DNB価格の評価未完了。",
+      "rank": 8
+    },
+    {
+      "matchup": "Sinja Kraus vs Nikola Bartůňková",
+      "favored": "Nikola Bartůňková",
+      "sport": "女子テニス",
+      "competition": "WTA China Open 2026 — Round of 16",
+      "start_jst": null,
+      "status": "watch",
+      "gap_grade": "未判定",
+      "price_grade": "未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録",
+        "required_win_rate_pct": null
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "conclusion": "ユーザー指定候補：Bartůňková勝利。10月6日LOTUSのMuchová–Osaka戦終了後。開始時刻は固定せず、テニス除外ルールの今回の明示例外として登録。",
+      "analysis_detail": {
+        "summary": "ユーザー指定候補：Bartůňková勝利。10月6日LOTUSのMuchová–Osaka戦終了後。開始時刻は固定せず、テニス除外ルールの今回の明示例外として登録。"
+      },
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf"
+      ],
+      "added_at": "2026-10-06T00:22:13.588+09:00",
+      "market": "match_winner",
+      "selection_label": "Nikola Bartůňková勝利",
+      "start_date_jst": "2026-10-06",
+      "venue": "Beijing / LOTUS（10月6日、前試合終了後）",
+      "format": "Best of 3 sets",
+      "exception_to_sport_exclusion": true,
+      "risk": "正確な開始時刻・直近10戦比較・最新オッズの確認未完了。",
+      "rank": 9
     }
   ],
   "rejected_examples": [
@@ -1319,17 +367,9 @@
     }
   ],
   "summary": {
-    "pure_gap_top": [
-      "Georgia Bulldogs vs Vanderbilt Commodores",
-      "Notre Dame Fighting Irish vs North Carolina Tar Heels",
-      "LSU Tigers vs McNeese Cowboys",
-      "Fenerbahçe Medicana Women vs Manisa Büyükşehir Belediye Spor Women",
-      "SMU Mustangs vs Boston College Eagles"
-    ],
-    "price_adjusted_top": [
-      "価格は開始前再確認。今回の更新はH2H・直近10・共通相手比較を主目的とする"
-    ],
-    "caution": "格差と価格は別判定。未確認の直近10/H2Hは推測で埋めず、そのまま未確認表示。"
+    "pure_gap_top": [],
+    "price_adjusted_top": [],
+    "caution": "追加8件は分析・ユーザー指定候補。採用オッズ未登録のため正式取引・収支に加算していません。終了/過去日付カードは履歴へ移動。Gauff・VARRELは結果確認待ち。"
   },
   "previous_analysis": {
     "generated_at": "2026-09-30T17:39:31+09:00",
@@ -1780,6 +820,1281 @@
         "favored_result": "win",
         "result_verified_at": "2026-10-03T21:00:00+09:00",
         "result_source": "https://www.uefa.com/womenschampionsleague/news/02a9-21848dfb62c3-1313bc23426c-1000--2026-27-women-s-champions-league-all-the-league-phase-fixtu/"
+      },
+      {
+        "sport": "女子サッカー",
+        "competition": "Barclays Women's Super League 2026/27",
+        "start_jst": "2026-10-04T22:00:00+09:00",
+        "matchup": "West Ham United Women vs Chelsea Women",
+        "favored": "Chelsea Women",
+        "venue": "Chigwell Construction Stadium, Dagenham",
+        "format": "90分＋AT",
+        "status": "formal",
+        "gap_grade": "S",
+        "price_grade": "A",
+        "odds": {
+          "min": 1.1818,
+          "max": 1.1818,
+          "book_examples": "Chelsea 2/11",
+          "required_win_rate_pct": "84.62"
+        },
+        "estimated_win_probability_pct": "90.5",
+        "estimated_ev_pct": "+6.95",
+        "ranking_rating": "H2Hと直近内容でChelsea優位。",
+        "h2h": "確認できた16試合でChelsea 14勝2分0敗。",
+        "recent_form": "Chelseaは直近守備が安定。West Hamは上位相手で苦戦。",
+        "common_opponents": "Manchester United比較でChelsea 5-0勝、West Ham 1-2敗。",
+        "roster": "Chelsea/West Hamとも欠場者あり。戦力層はChelsea優位。",
+        "risk": "過密日程・欠場。",
+        "conclusion": "正式推奨。$100。",
+        "sources": [
+          "https://www.oddschecker.com/football/womens-club/england/womens-super-league/west-ham-united-women-v-chelsea-women/winner",
+          "https://www.forebet.com/en/football/matches/west-ham-w-chelsea-w-2529935"
+        ],
+        "analysis_detail": {
+          "summary": "H2H確認16試合でChelsea 14勝2分0敗。直近の直接対決も大差勝ちが多い。",
+          "h2h": {
+            "summary": "確認16試合: Chelsea 14勝2分0敗。",
+            "items": [
+              {
+                "date": "2026-01-11",
+                "label": "Chelsea Women vs West Ham Women",
+                "result": "Chelsea 5-0 West Ham"
+              },
+              {
+                "date": "2025-09-28",
+                "label": "West Ham Women vs Chelsea Women",
+                "result": "West Ham 0-4 Chelsea"
+              },
+              {
+                "date": "2025-03-30",
+                "label": "Chelsea Women vs West Ham Women",
+                "result": "2-2"
+              },
+              {
+                "date": "2025-01-19",
+                "label": "West Ham Women vs Chelsea Women",
+                "result": "West Ham 0-5 Chelsea"
+              },
+              {
+                "date": "2024-03-24",
+                "label": "West Ham Women vs Chelsea Women",
+                "result": "West Ham 0-2 Chelsea"
+              },
+              {
+                "date": "2023-10-14",
+                "label": "Chelsea Women vs West Ham Women",
+                "result": "Chelsea 2-0 West Ham"
+              },
+              {
+                "date": "2023-05-17",
+                "label": "West Ham Women vs Chelsea Women",
+                "result": "West Ham 0-4 Chelsea"
+              },
+              {
+                "date": "2022-09-28",
+                "label": "Chelsea Women vs West Ham Women",
+                "result": "Chelsea 3-1 West Ham"
+              },
+              {
+                "date": "2022-03-10",
+                "label": "West Ham Women vs Chelsea Women",
+                "result": "West Ham 1-4 Chelsea"
+              },
+              {
+                "date": "2022-01-26",
+                "label": "Chelsea Women vs West Ham Women",
+                "result": "Chelsea 2-0 West Ham"
+              },
+              {
+                "date": "2021-03-07",
+                "label": "West Ham Women vs Chelsea Women",
+                "result": "West Ham 0-2 Chelsea"
+              },
+              {
+                "date": "2020-12-06",
+                "label": "Chelsea Women vs West Ham Women",
+                "result": "Chelsea 3-2 West Ham"
+              },
+              {
+                "date": "2020-02-02",
+                "label": "Chelsea Women vs West Ham Women",
+                "result": "Chelsea 8-0 West Ham"
+              },
+              {
+                "date": "2019-10-27",
+                "label": "West Ham Women vs Chelsea Women",
+                "result": "West Ham 1-3 Chelsea"
+              },
+              {
+                "date": "2019-03-31",
+                "label": "Chelsea Women vs West Ham Women",
+                "result": "1-1"
+              },
+              {
+                "date": "2018-11-04",
+                "label": "West Ham Women vs Chelsea Women",
+                "result": "West Ham 0-2 Chelsea"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "West Ham Women",
+              "summary": "直近詳細は一部確認。上位相手で苦戦。",
+              "items": []
+            },
+            "side_b": {
+              "label": "Chelsea Women",
+              "summary": "直近は守備安定。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "Manchester UnitedでChelseaが大幅優位。",
+            "items": [
+              {
+                "opponent": "Manchester United",
+                "side_a": {
+                  "result": "West Ham L 1-2"
+                },
+                "side_b": {
+                  "result": "Chelsea W 5-0"
+                },
+                "comparison": "Chelseaが得失点差で6点上"
+              }
+            ]
+          },
+          "availability": {
+            "text": "両軍欠場者あり。戦力層はChelsea優位。"
+          }
+        },
+        "rank": 1,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "win",
+        "result": "West Ham United Women 0-3 Chelsea Women",
+        "match_id": "2026-10-04-westham-chelsea-w",
+        "match_status": "final"
+      },
+      {
+        "sport": "男子ハンドボール",
+        "competition": "Opel Handball-Bundesliga 2026/27",
+        "start_jst": "2026-10-04T22:00:00+09:00",
+        "matchup": "SC Magdeburg vs HC Erlangen",
+        "favored": "SC Magdeburg",
+        "venue": "GETEC Arena, Magdeburg",
+        "format": "60分",
+        "status": "formal",
+        "gap_grade": "S-",
+        "price_grade": "C",
+        "odds": {
+          "min": 1.025,
+          "max": 1.025,
+          "book_examples": "SC Magdeburg 1.025",
+          "required_win_rate_pct": "97.56"
+        },
+        "estimated_win_probability_pct": "94.0",
+        "estimated_ev_pct": "-3.65",
+        "ranking_rating": "Magdeburg上位。Erlangenも今季上昇中。",
+        "h2h": "通算確認でMagdeburg 19勝3敗1分。直近5は4勝1分。",
+        "recent_form": "Magdeburg直近11は10勝1敗。Erlangen直近7は4勝1分2敗。",
+        "common_opponents": "直近60日では十分な共通相手比較データ不足。",
+        "roster": "当日最終メンバーは直前確認対象。",
+        "risk": "Erlangenの直近上昇、価格が短い。",
+        "conclusion": "ユーザー承認により正式推奨。$100。",
+        "sources": [
+          "https://www.scm-handball.de/",
+          "https://www.bwin.com/en/sports/events/sc-magdeburg-hc-erlangen-5%3A1256697",
+          "https://ran.joyn.de/sports/ticker/ma11405897-sc-magdeburg-hc-erlangen"
+        ],
+        "analysis_detail": {
+          "summary": "通算H2HはMagdeburg 19勝3敗1分。直近11は10勝1敗。",
+          "h2h": {
+            "summary": "通算23試合: Magdeburg 19勝3敗1分。",
+            "items": [
+              {
+                "date": "2026-04-12",
+                "label": "SC Magdeburg vs HC Erlangen",
+                "result": "35-31"
+              },
+              {
+                "date": "2025-09-20",
+                "label": "HC Erlangen vs SC Magdeburg",
+                "result": "31-31"
+              },
+              {
+                "date": "2025-05-28",
+                "label": "HC Erlangen vs SC Magdeburg",
+                "result": "23-34"
+              },
+              {
+                "date": "2025-04-10",
+                "label": "SC Magdeburg vs HC Erlangen",
+                "result": "30-19"
+              },
+              {
+                "date": "2024-05-18",
+                "label": "HC Erlangen vs SC Magdeburg",
+                "result": "27-32"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "SC Magdeburg",
+              "summary": "直近11: 10勝1敗。",
+              "items": []
+            },
+            "side_b": {
+              "label": "HC Erlangen",
+              "summary": "直近7: 4勝1分2敗。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "直近60日では十分な比較データ不足。",
+            "items": []
+          },
+          "availability": {
+            "text": "最終メンバーは試合直前確認。"
+          }
+        },
+        "rank": 2,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "win",
+        "result": "SC Magdeburg 35-28 HC Erlangen",
+        "match_id": "2026-10-04-magdeburg-erlangen",
+        "match_status": "final"
+      },
+      {
+        "sport": "League of Legends",
+        "competition": "EMEA Masters 2026 Summer",
+        "start_jst": "2026-10-04T23:00:00+09:00",
+        "matchup": "Solary vs Barça eSports",
+        "favored": "Solary",
+        "venue": "Online / event venue未確認",
+        "format": "Bo5",
+        "status": "formal",
+        "gap_grade": "A+",
+        "price_grade": "C",
+        "odds": {
+          "min": 1.04,
+          "max": 1.04,
+          "book_examples": "Solary 1.04",
+          "required_win_rate_pct": "96.15"
+        },
+        "estimated_win_probability_pct": "87.0",
+        "estimated_ev_pct": "-9.52",
+        "ranking_rating": "EGamersWorld表示ではSolary直近10は7勝、Barça 6勝。H2Hなし。",
+        "h2h": "直接対戦は確認できず、H2H 0件。",
+        "recent_form": "Solary直近10は7勝3敗、Barçaは6勝4敗。",
+        "common_opponents": "直近60日では共通相手0件。期間拡張ではUCAMに対しSolary 3-0、Barçaは直近0-3。",
+        "roster": "公開ロスター確認済み。",
+        "risk": "H2Hなし、60日共通相手なし、価格が極端に短い。",
+        "conclusion": "ユーザー承認により正式推奨。$100。",
+        "sources": [
+          "https://egamersworld.com/lol/match/z27dDLdCP/barca-esports-vs-solary-s3zNM8euN",
+          "https://bo3.gg/lol/teams/solary-lol/matches",
+          "https://bo3.gg/lol/teams/barca-esports-lol/matches"
+        ],
+        "analysis_detail": {
+          "summary": "H2Hなし。直近10はSolary 7勝、Barça 6勝。60日共通相手は0件。",
+          "h2h": {
+            "summary": "確認できる直接対戦なし。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Solary",
+              "summary": "直近10: 7勝3敗。",
+              "items": []
+            },
+            "side_b": {
+              "label": "Barça eSports",
+              "summary": "直近10: 6勝4敗。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "直近60日: 0件。参考として期間拡張UCAM比較ではSolary 3-0、Barça直近0-3。",
+            "items": [
+              {
+                "opponent": "UCAM Esports",
+                "side_a": {
+                  "result": "Solary W 3-0（期間拡張）"
+                },
+                "side_b": {
+                  "result": "Barça L 0-3（期間拡張）"
+                },
+                "comparison": "60日外の参考比較ではSolary優位"
+              }
+            ]
+          },
+          "availability": {
+            "text": "ロスター公開情報を確認。"
+          }
+        },
+        "rank": 3,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "win",
+        "result": "Solary 3-0 Barça eSports",
+        "match_id": "2026-10-04-solary-barca",
+        "match_status": "final"
+      },
+      {
+        "sport": "Arena of Valor（伝説対決）",
+        "competition": "Garena Challenger Series Summer 2026 — Group Stage",
+        "start_jst": "2026-10-04T16:00:00+09:00",
+        "matchup": "LIT Team vs ANK Gaming",
+        "favored": "ANK Gaming",
+        "venue": "Taiwan / Offline",
+        "format": "Bo5",
+        "status": "formal",
+        "gap_grade": "S",
+        "price_grade": "A",
+        "odds": {
+          "min": 1.08,
+          "max": 1.08,
+          "book_examples": "LIT 6.30 / ANK 1.08",
+          "required_win_rate_pct": "92.59"
+        },
+        "estimated_win_probability_pct": "94.0",
+        "estimated_ev_pct": "+1.52",
+        "ranking_rating": "GCS Summerの最新スナップショットでANK 7勝2敗・24-15 maps、LIT 0勝9敗・2-27 maps。",
+        "h2h": "2026年確認H2HはANK優勢。直近は2026/09/04にANK 3-0 LIT、3/1にもANK 3-1 LIT。LIT勝利例もあるため全件では一方通行ではない。",
+        "recent_form": "LITはGCS Summerで0-9、maps 2-27。直近8戦級でもほぼストレート負け。ANKは上位陣相手にもHKA/DCG/ONE/FWと競れる。",
+        "common_opponents": "FW/HKA/DCG/ONE/BMGで比較すると、ANKは勝ちまたは接戦、LITは0-3/1-3が多く、共通相手比較は大幅にANK優勢。",
+        "roster": "最新ロスターは大会登録メンバー基準。直前変更は再確認対象。",
+        "early_tendency": "LITはストレート負け頻度が高く、ANKのGame1/シリーズ先行期待が高い。",
+        "risk": "過去にLITがANKへ勝った例はあり、1.08は必要勝率92.59%と高い。Bo5でも油断不可。",
+        "conclusion": "正式推奨。$100。今大会成績・最新H2H・共通相手のすべてがANK側。",
+        "sources": [
+          "https://tips.gg/tournament/aov-garena-challenger-summer-2026/",
+          "https://tips.gg/team/ank-gaming-aov/",
+          "https://tips.gg/es/archive/ank-gaming-aov-vs-lit-team-aov/",
+          "https://liquipedia.net/honorofkings/LIT_Team/Played_Matches",
+          "https://stake3061.com/ja/sports/upcoming/arena-of-valor"
+        ],
+        "analysis_detail": {
+          "summary": "最新大会スナップショットでANK 7-2 / 24-15 maps、LIT 0-9 / 2-27 maps。直近H2HもANK 3-0。",
+          "h2h": {
+            "summary": "2026年確認分ではANK優勢。",
+            "items": [
+              {
+                "date": "2026-09-04",
+                "label": "ANK Gaming vs LIT Team",
+                "result": "ANK 3-0 LIT"
+              },
+              {
+                "date": "2026-03-01",
+                "label": "ANK Gaming vs LIT Team",
+                "result": "ANK 3-1 LIT"
+              },
+              {
+                "date": "2026-03",
+                "label": "LIT Team vs ANK Gaming",
+                "result": "LIT勝利例あり（詳細要再確認）"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "LIT Team",
+              "summary": "GCS Summer 0勝9敗・2-27 maps。",
+              "items": [
+                {
+                  "opponent": "Deep Cross Gaming",
+                  "result": "L 1-3"
+                },
+                {
+                  "opponent": "Hong Kong Attitude",
+                  "result": "L 0-3"
+                },
+                {
+                  "opponent": "Flash Wolves",
+                  "result": "L 0-3"
+                },
+                {
+                  "opponent": "BanMei Gaming",
+                  "result": "L 0-3"
+                },
+                {
+                  "opponent": "ONE Team",
+                  "result": "L 1-3"
+                },
+                {
+                  "opponent": "ANK Gaming",
+                  "result": "L 0-3"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "ANK Gaming",
+              "summary": "GCS Summer 7勝2敗・24-15 maps。",
+              "items": [
+                {
+                  "opponent": "LIT Team",
+                  "result": "W 3-0"
+                },
+                {
+                  "opponent": "Flash Wolves",
+                  "result": "W 3-2"
+                },
+                {
+                  "opponent": "Hong Kong Attitude",
+                  "result": "W 3-1"
+                },
+                {
+                  "opponent": "Deep Cross Gaming",
+                  "result": "上位対戦・詳細は大会ページ参照"
+                },
+                {
+                  "opponent": "ONE Team",
+                  "result": "上位対戦・詳細は大会ページ参照"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "FW/HKA/DCG/ONE/BMGでANKが大幅優位。",
+            "items": [
+              {
+                "opponent": "Flash Wolves",
+                "side_a": {
+                  "result": "LIT L 0-3（複数）"
+                },
+                "side_b": {
+                  "result": "ANK W 3-2ほか"
+                },
+                "comparison": "ANK優位"
+              },
+              {
+                "opponent": "Hong Kong Attitude",
+                "side_a": {
+                  "result": "LIT L 0-3（複数）"
+                },
+                "side_b": {
+                  "result": "ANK W 3-1"
+                },
+                "comparison": "ANK優位"
+              },
+              {
+                "opponent": "Deep Cross Gaming",
+                "side_a": {
+                  "result": "LIT L 1-3 / 0-3"
+                },
+                "side_b": {
+                  "result": "ANKは上位争い"
+                },
+                "comparison": "ANK優位"
+              },
+              {
+                "opponent": "ONE Team",
+                "side_a": {
+                  "result": "LIT L 1-3"
+                },
+                "side_b": {
+                  "result": "ANKは勝利実績あり"
+                },
+                "comparison": "ANK優位"
+              },
+              {
+                "opponent": "BanMei Gaming",
+                "side_a": {
+                  "result": "LIT L 0-3"
+                },
+                "side_b": {
+                  "result": "ANKに勝利実績あり"
+                },
+                "comparison": "ANK優位"
+              }
+            ]
+          },
+          "season_flow": {
+            "text": "GCS Summer最新スナップショット: ANK 7-2 / LIT 0-9。"
+          },
+          "year_flow": {
+            "text": "ANKはGCS Spring 2026準優勝。LITはSummerで極端な不振。"
+          },
+          "availability": {
+            "text": "大会登録ロスター。直前変更は未確認。"
+          },
+          "sport_specific": {
+            "text": "Bo5。マップ差とストレート負け頻度を重視。"
+          }
+        },
+        "rank": 4,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "win",
+        "result": "ANK Gaming勝利（ユーザー報告・スコア未記録）",
+        "match_id": "2026-10-04-lit-ank",
+        "match_status": "final"
+      },
+      {
+        "sport": "Arena of Valor（伝説対決）",
+        "competition": "Arena of Glory Winter 2026 — Group Stage Second Leg",
+        "start_jst": "2026-10-04T14:00:00+09:00",
+        "matchup": "One Star Esports vs Saigon Phantom",
+        "favored": "Saigon Phantom",
+        "venue": "Vietnam / event venue detail未確認",
+        "format": "Bo5",
+        "status": "formal",
+        "gap_grade": "A+",
+        "price_grade": "B",
+        "odds": {
+          "min": 1.147,
+          "max": 1.147,
+          "book_examples": "Saigon Phantom 1.147",
+          "required_win_rate_pct": "87.18"
+        },
+        "estimated_win_probability_pct": "84.0",
+        "estimated_ev_pct": "-3.65",
+        "ranking_rating": "直近30日: One Star 4勝4敗、Saigon Phantom 7勝0敗。直近フォームはSGPが大幅優位。",
+        "h2h": "確認8試合は4勝4敗で互角。直近2回はSaigon Phantomが3-1、3-0で連勝。",
+        "recent_form": "Saigon Phantomは直近7連勝級。Team Secret 3-0、BOX 3-0、Team Flash 3-0、GAM 3-0、One Star 3-1など。One Starは直近4勝4敗前後。",
+        "common_opponents": "BOX、GAM、Team FlashでSaigon Phantomの勝ち方が明確に上。SGPはそれぞれ3-0級、One Starは敗戦または接戦が多い。",
+        "roster": "大会登録ロスター基準。直前変更は再確認対象。",
+        "early_tendency": "SGPは直近で3-0が多く、Game1先行傾向も強い。",
+        "risk": "H2H通算は4-4で完全な一方通行ではない。1.147は必要勝率87.18%で、独立推定84%なら価格面はやや厳しい。",
+        "conclusion": "ユーザー承認により正式推奨。$100。実力差はA+だが価格余裕は小さい。",
+        "sources": [
+          "https://tips.gg/archive/one-star-esports-aov-vs-saigon-phantom-aov/",
+          "https://tips.gg/matches/arena-of-valor/04-10-2026/one-star-esports-vs-saigon-phantom/10-00/",
+          "https://www.ggcombat.com/en/aov",
+          "https://mx0.betmonitor.com/odds-comparison/esports/arena-of-glory/10015723"
+        ],
+        "analysis_detail": {
+          "summary": "H2H通算4-4。ただし直近2回はSGP連勝、直近30日もSGP 7-0に対しOne Star 4-4で現在値はSGP優勢。",
+          "h2h": {
+            "summary": "確認8試合: 4勝4敗。直近2回はSaigon Phantom勝利。",
+            "items": [
+              {
+                "date": "2026-09-06",
+                "label": "One Star Esports vs Saigon Phantom",
+                "result": "Saigon Phantom 3-1 One Star"
+              },
+              {
+                "date": "2026-04-21",
+                "label": "One Star Esports vs Saigon Phantom",
+                "result": "Saigon Phantom 3-0 One Star"
+              },
+              {
+                "date": "2026-03-29",
+                "label": "One Star Esports vs Saigon Phantom",
+                "result": "One Star 3-0 Saigon Phantom"
+              },
+              {
+                "date": "2026-03-01",
+                "label": "One Star Esports vs Saigon Phantom",
+                "result": "One Star 3-0 Saigon Phantom"
+              },
+              {
+                "date": "2025-11-22",
+                "label": "One Star Esports vs Saigon Phantom",
+                "result": "Saigon Phantom 2-0 One Star"
+              },
+              {
+                "date": "2025-04-19",
+                "label": "One Star Esports vs Saigon Phantom",
+                "result": "Saigon Phantom 3-0 One Star"
+              },
+              {
+                "date": "2025-03-23",
+                "label": "One Star Esports vs Saigon Phantom",
+                "result": "One Star 3-0 Saigon Phantom"
+              },
+              {
+                "date": "2025-03-07",
+                "label": "One Star Esports vs Saigon Phantom",
+                "result": "One Star 3-0 Saigon Phantom"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "One Star Esports",
+              "summary": "直近30日 4勝4敗。",
+              "items": [
+                {
+                  "opponent": "BOOM Esports VN",
+                  "result": "W 3-1"
+                },
+                {
+                  "opponent": "GAM Esports",
+                  "result": "L 1-3"
+                },
+                {
+                  "opponent": "BOX Gaming",
+                  "result": "L 1-3"
+                },
+                {
+                  "opponent": "FPT Polytechnic",
+                  "result": "L 0-3"
+                },
+                {
+                  "opponent": "Saigon Phantom",
+                  "result": "L 1-3"
+                },
+                {
+                  "opponent": "Team Flash",
+                  "result": "W 3-2"
+                },
+                {
+                  "opponent": "Team Secret",
+                  "result": "W 3-1"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Saigon Phantom",
+              "summary": "直近30日 7勝0敗。",
+              "items": [
+                {
+                  "opponent": "Team Secret",
+                  "result": "W 3-0"
+                },
+                {
+                  "opponent": "BOX Gaming",
+                  "result": "W 3-0"
+                },
+                {
+                  "opponent": "Team Flash",
+                  "result": "W 3-0"
+                },
+                {
+                  "opponent": "GAM Esports",
+                  "result": "W 3-0"
+                },
+                {
+                  "opponent": "One Star Esports",
+                  "result": "W 3-1"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "BOX/GAM/Team FlashでSGPが優位。",
+            "items": [
+              {
+                "opponent": "BOX Gaming",
+                "side_a": {
+                  "result": "One Star L 1-3"
+                },
+                "side_b": {
+                  "result": "SGP W 3-0"
+                },
+                "comparison": "SGP大幅優位"
+              },
+              {
+                "opponent": "GAM Esports",
+                "side_a": {
+                  "result": "One Star L 1-3"
+                },
+                "side_b": {
+                  "result": "SGP W 3-0"
+                },
+                "comparison": "SGP大幅優位"
+              },
+              {
+                "opponent": "Team Flash",
+                "side_a": {
+                  "result": "One Star W 3-2"
+                },
+                "side_b": {
+                  "result": "SGP W 3-0"
+                },
+                "comparison": "SGPの勝ち方が上"
+              }
+            ]
+          },
+          "season_flow": {
+            "text": "Arena of Glory Winter 2026の直近区間でSGPは連勝中。One Starは勝敗が拮抗。"
+          },
+          "year_flow": {
+            "text": "直近12か月H2HはSGP 3勝、One Star 2勝。現在値ではSGP寄り。"
+          },
+          "availability": {
+            "text": "直前ロスター変更は未確認。"
+          },
+          "sport_specific": {
+            "text": "Bo5。短期の1マップ事故よりシリーズ全体のフォーム差を重視。"
+          }
+        },
+        "rank": 5,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "win",
+        "result": "One Star Esports 1-3 Saigon Phantom",
+        "match_id": "2026-10-04-onestar-sgp",
+        "match_status": "final"
+      },
+      {
+        "sport": "Honor of Kings（王者栄耀）",
+        "competition": "King Pro League Grand Finals 2026 — Challenge Stage",
+        "start_jst": "2026-10-05T21:00:00+09:00",
+        "matchup": "Wolves vs EDward Gaming",
+        "favored": "Wolves",
+        "venue": "China / event venue detail未確認",
+        "format": "Bo5",
+        "status": "formal",
+        "gap_grade": "S",
+        "price_grade": "A",
+        "odds": {
+          "min": 1.32,
+          "max": 1.32,
+          "book_examples": "Wolves 1.32",
+          "required_win_rate_pct": "75.76"
+        },
+        "estimated_win_probability_pct": "86.5",
+        "estimated_ev_pct": "+14.18",
+        "ranking_rating": "Wolvesは2026 Challenger Cup優勝級。EDG.Mより直近大会実績・シリーズ安定度が上。",
+        "h2h": "2026年確認分はWolves 3-0、4-0で2戦2勝・games 7-0。",
+        "recent_form": "Wolves直近11は9勝2敗級。EDward Gamingは直近10で6勝4敗級。",
+        "common_opponents": "TES.AではWolves 4-3勝、EDG.M 2-4敗。LGD.NBW/Rogue Warriorsでも総合的にWolves優位。",
+        "roster": "最新登録ロスター基準。直前変更は再確認対象。",
+        "risk": "市場によってWolves評価に差があり、過信は禁物。",
+        "conclusion": "正式推奨。$100。",
+        "sources": [
+          "https://esportbet.com/odds/",
+          "https://liquipedia.net/honorofkings/QGhappy",
+          "https://polymarket.com/esports/honor-of-kings/king-pro-league/hok-wol-edg-2026-10-05"
+        ],
+        "analysis_detail": {
+          "summary": "直接対戦7-0 games、直近11、共通相手、タイトル実績の4軸でWolves優位。",
+          "h2h": {
+            "summary": "2026確認2シリーズ: Wolves 2勝0敗、games 7-0。",
+            "items": [
+              {
+                "date": "2026-07-10",
+                "label": "Wolves vs EDward Gaming",
+                "result": "Wolves 3-0 EDG.M"
+              },
+              {
+                "date": "2026-04-25",
+                "label": "Wolves vs EDward Gaming",
+                "result": "Wolves 4-0 EDG.M"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Wolves",
+              "summary": "直近11で9勝2敗級。",
+              "items": []
+            },
+            "side_b": {
+              "label": "EDward Gaming",
+              "summary": "直近10で6勝4敗級。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "TES.AなどでWolves優位。",
+            "items": [
+              {
+                "opponent": "TES.A",
+                "side_a": {
+                  "result": "Wolves W 4-3"
+                },
+                "side_b": {
+                  "result": "EDG.M L 2-4"
+                },
+                "comparison": "Wolves優位"
+              }
+            ]
+          },
+          "season_flow": {
+            "text": "Wolvesは2026 Challenger Cup優勝。EDG.MはSummer 5〜6位級。"
+          },
+          "availability": {
+            "text": "直前ロスター変更は再確認。"
+          },
+          "sport_specific": {
+            "text": "Bo5。シリーズ全体のゲーム差と共通相手内容を重視。"
+          }
+        },
+        "rank": 6,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "win",
+        "result": "Wolves勝利（ユーザー報告・スコア未記録）",
+        "match_id": "2026-10-05-wolves-edgm",
+        "match_status": "final"
+      },
+      {
+        "sport": "女子テニス",
+        "competition": "WTA China Open 2026 — Round 3",
+        "start_jst": "2026-10-05T12:00:00+09:00",
+        "matchup": "Coco Gauff vs Xinran Sun",
+        "favored": "Coco Gauff",
+        "venue": "Beijing, China",
+        "format": "Best of 3 sets",
+        "status": "formal",
+        "gap_grade": "A+",
+        "price_grade": "C",
+        "odds": {
+          "min": 1.03,
+          "max": 1.03,
+          "book_examples": "Gauff 1.03",
+          "required_win_rate_pct": "97.09"
+        },
+        "estimated_win_probability_pct": "95.0",
+        "estimated_ev_pct": "-2.15",
+        "ranking_rating": "Gauff世界4位。Sunは大幅下位。",
+        "h2h": "初対戦。H2Hなし。",
+        "recent_form": "Gauff 2026年46-14、ハード31-8。Sun 12-7、ハード5-1だが対戦レベル差が大きい。",
+        "common_opponents": "直近60日で十分な同一相手比較データ不足。",
+        "roster": "個人競技。直近RET/MTOは大きな警戒情報未確認。",
+        "risk": "H2Hなし、Sunが北京で好調、1.03は必要勝率97.09%で価格が非常に短い。",
+        "conclusion": "正式推奨。$100。ただし価格妙味は低い。",
+        "sources": [
+          "https://www.tennis.com/tournaments/china-open-wta/matches/c-gauff-vs-x-sun-2026-10-05",
+          "https://www.betfair.com/exchange/plus/en/tennis/wta-beijing-2026/c-gauff-v-xin-sun-betting-36147445"
+        ],
+        "analysis_detail": {
+          "summary": "ランキング・ハード実績はGauff大幅優位。H2Hなしのためテニス厳格基準ではSに上げない。",
+          "h2h": {
+            "summary": "初対戦。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Coco Gauff",
+              "summary": "2026年46勝14敗、ハード31勝8敗。",
+              "items": []
+            },
+            "side_b": {
+              "label": "Xinran Sun",
+              "summary": "2026年12勝7敗、ハード5勝1敗。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "直近60日では十分な比較不足。",
+            "items": []
+          },
+          "availability": {
+            "text": "直前の負傷・棄権情報は再確認対象。"
+          },
+          "sport_specific": {
+            "text": "テニス厳格基準。H2Hなしと価格の短さを減点。"
+          }
+        },
+        "rank": 7,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "pending",
+        "result": "結果未確認（確認待ち）"
+      },
+      {
+        "sport": "女子テニス",
+        "competition": "WTA China Open 2026 — Round 3",
+        "start_jst": "2026-10-05T12:00:00+09:00",
+        "matchup": "Donna Vekić vs Iga Świątek",
+        "favored": "Iga Świątek",
+        "venue": "Beijing, China",
+        "format": "Best of 3 sets",
+        "status": "formal",
+        "gap_grade": "A+",
+        "price_grade": "A-",
+        "odds": {
+          "min": 1.111,
+          "max": 1.111,
+          "book_examples": "Świątek 1.111",
+          "required_win_rate_pct": "90.01"
+        },
+        "estimated_win_probability_pct": "93.0",
+        "estimated_ev_pct": "+3.32",
+        "ranking_rating": "Świątek世界9位、Vekić40位。",
+        "h2h": "Świątek 4勝0敗。ハード3勝0敗。",
+        "recent_form": "直近10はŚwiątek 8勝2敗、Vekić 3勝7敗級。2026ハードはŚwiątek26-8、Vekić9-12。",
+        "common_opponents": "直近60日の共通相手比較は一部不足だが、対戦レベルとハード実績はŚwiątek優位。",
+        "roster": "個人競技。",
+        "risk": "Vekićの一発力、低オッズ市場。",
+        "conclusion": "正式推奨。$100。",
+        "sources": [
+          "https://www.tennis.com/tournaments/china-open-wta/matches/d-vekic-vs-i-swiatek-2026-10-05",
+          "https://agentbets.ai/odds/wta-china-open/iga-swiatek-vs-donna-vekic/"
+        ],
+        "analysis_detail": {
+          "summary": "H2H4-0、ハード勝率差、直近10、前戦疲労の全てでŚwiątek優位。",
+          "h2h": {
+            "summary": "Świątek 4勝0敗。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Donna Vekić",
+              "summary": "直近10 3勝7敗級、2026ハード9-12。",
+              "items": []
+            },
+            "side_b": {
+              "label": "Iga Świątek",
+              "summary": "直近10 8勝2敗級、2026ハード26-8。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "十分な60日比較は限定的。",
+            "items": []
+          },
+          "availability": {
+            "text": "前戦Vekićは3セット、Świątekはストレート勝ちで疲労面もŚwiątek優位。"
+          },
+          "sport_specific": {
+            "text": "テニス厳格基準でH2H・サーフェス・直近・疲労を加点。"
+          }
+        },
+        "rank": 8,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "win",
+        "result": "Iga Świątek勝利（ユーザー報告・スコア未記録）",
+        "match_id": "2026-10-05-swiatek-vekic",
+        "match_status": "final"
+      },
+      {
+        "sport": "League of Legends（LoL）",
+        "competition": "Demacia Cup Global Invitational 2026 — Group Stage",
+        "start_jst": "2026-10-05T18:00:00+09:00",
+        "matchup": "GAM Esports vs Team Vitality",
+        "favored": "Team Vitality",
+        "venue": "Event venue未確認",
+        "format": "Bo3",
+        "status": "formal",
+        "gap_grade": "A",
+        "price_grade": "A-",
+        "odds": {
+          "min": 1.3,
+          "max": 1.3,
+          "book_examples": "Vitality 1.30",
+          "required_win_rate_pct": "76.92"
+        },
+        "estimated_win_probability_pct": "80.0",
+        "estimated_ev_pct": "+4.00",
+        "ranking_rating": "地域強度・ロスター層でVitality優位。",
+        "h2h": "現ロスターで有効なH2Hは十分なデータなし。",
+        "recent_form": "Vitality直近10は7勝3敗級、GAMは4勝6敗級。",
+        "common_opponents": "国際大会で完全な60日共通相手比較は限定的。",
+        "roster": "GAM: Kiaya/Artemis/Draktharr/Taki/Gloryy。Vitality: FIESTA/Naak Nako/Lyncas/Carzzy/Fleshy系。",
+        "risk": "Bo3、国際戦、GAMのアップセット能力。",
+        "conclusion": "正式推奨。$100。",
+        "sources": [
+          "https://egamersworld.com/lol/match/FqxSssBfV/gam-esports-vs-team-vitality-FZq7tJw_kv",
+          "https://polymarket.com/ja/event/lol-gam-vit-2026-10-05"
+        ],
+        "analysis_detail": {
+          "summary": "直近フォームと地域強度でVitality優位。H2H/共通相手不足のためA止まり。",
+          "h2h": {
+            "summary": "現ロスター有効H2H不足。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "GAM Esports",
+              "summary": "直近10 4勝6敗級。",
+              "items": []
+            },
+            "side_b": {
+              "label": "Team Vitality",
+              "summary": "直近10 7勝3敗級。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "60日共通相手は限定的。",
+            "items": []
+          },
+          "availability": {
+            "text": "大会登録ロスター基準。"
+          },
+          "sport_specific": {
+            "text": "Bo3。地域強度と現行ロスター、Game1傾向を重視。"
+          }
+        },
+        "rank": 9,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "win",
+        "result": "GAM Esports 0-2 Team Vitality",
+        "match_id": "2026-10-05-gam-vitality",
+        "match_status": "final"
+      },
+      {
+        "sport": "League of Legends（LoL）",
+        "competition": "Demacia Cup Global Invitational 2026 — Group Stage",
+        "start_jst": "2026-10-05T20:00:00+09:00",
+        "matchup": "Shopify Rebellion vs JD Gaming",
+        "favored": "JD Gaming",
+        "venue": "Event venue未確認",
+        "format": "Bo3",
+        "status": "formal",
+        "gap_grade": "A",
+        "price_grade": "C+",
+        "odds": {
+          "min": 1.17,
+          "max": 1.17,
+          "book_examples": "JDG 1.17",
+          "required_win_rate_pct": "85.47"
+        },
+        "estimated_win_probability_pct": "83.5",
+        "estimated_ev_pct": "-2.31",
+        "ranking_rating": "国際/地域レベルとランキングでJDG優位。",
+        "h2h": "初対戦。",
+        "recent_form": "Shopify直近6は2勝4敗級。JDGも直近フォームは不振で、ブランド差ほど絶対ではない。",
+        "common_opponents": "有効な60日共通相手比較は限定的。",
+        "roster": "大会登録ロスター基準。",
+        "risk": "JDG自身の直近不振、1.17は価格が短い。",
+        "conclusion": "ユーザー承認により正式推奨。$100。ただし価格面は見送り寄り。",
+        "sources": [
+          "https://polymarket.us/sports/league-of-legends/lol-sr-jdg-2026-10-05",
+          "https://egamersworld.com/lol/event/2026-demacia-cup-global-invitational-FqxSssBfV"
+        ],
+        "analysis_detail": {
+          "summary": "格差はJDG方向だが、直近不振と価格の短さで評価抑制。",
+          "h2h": {
+            "summary": "初対戦。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Shopify Rebellion",
+              "summary": "直近6で2勝4敗級。",
+              "items": []
+            },
+            "side_b": {
+              "label": "JD Gaming",
+              "summary": "直近は負け越し気味。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "十分な60日比較不足。",
+            "items": []
+          },
+          "availability": {
+            "text": "直前ロスター変更は再確認。"
+          },
+          "sport_specific": {
+            "text": "Bo3。地域強度はJDG、直近フォームは減点。"
+          }
+        },
+        "rank": 10,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "win",
+        "result": "JD Gaming勝利（ユーザー報告・スコア未記録）",
+        "match_id": "2026-10-05-shopify-jdg",
+        "match_status": "final"
+      },
+      {
+        "sport": "サッカー男子",
+        "competition": "キリンカップサッカー2026 — 決勝",
+        "start_jst": "2026-10-05T19:30:00+09:00",
+        "matchup": "日本 vs ニュージーランド",
+        "favored": "日本",
+        "venue": "国立競技場, 東京",
+        "format": "90分→同点ならPK",
+        "status": "recommended",
+        "gap_grade": "S-",
+        "price_grade": "未判定",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "最新1X2未確認",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": "88〜91",
+        "estimated_ev_pct": "未算出",
+        "ranking_rating": "FIFA公式最新: 日本17位、ニュージーランド86位。69位差。",
+        "h2h": "男子A代表の確認4試合は日本3勝0分1敗。1981年NZ 1-0日本、2003年NZ 0-3日本、2014年日本4-2NZ、2017年日本2-1NZ。直近3回は日本3連勝。",
+        "recent_form": "日本直近10は6勝3分1敗。直近3戦はウルグアイ3-1、ベネズエラ2-1、エクアドル0-0(PK勝ち)。NZ直近10は2勝3分5敗。直近3戦はパレスチナ2-2、中国3-0、パナマ1-1(PK勝ち)。",
+        "common_opponents": "直近60日で完全一致する共通相手は乏しい。代わりに対戦相手強度は日本がウルグアイ/エクアドル級を相手に好成績。",
+        "roster": "日本は鈴木彩艶、板倉滉、伊藤洋輝、久保建英、堂安律、鎌田大地、上田綺世ら。NZはChris Wood、Marko Stamenic、Alex Paulsen、Tyler Bindonら。",
+        "risk": "NZは4試合無敗中で、中国に3-0、パナマをPKで突破。Chris Woodの空中戦・セットプレー。日本もエクアドル戦は0-0。",
+        "conclusion": "本日の分析へ追加。ランキング差・直近3回H2H・直近フォーム・ホーム条件で日本優位。ただしNZは直近4戦無敗で、Chris Woodの空中戦とセットプレーは警戒。最新1X2価格未確認のため価格評価は保留。",
+        "sources": [
+          "https://www.jfa.jp/eng/samuraiblue/kirincupsoccer_2026/",
+          "https://jfa.jp/eng/national_team_2026/news/00036851/",
+          "https://op.jfa.jp/samuraiblue20261005/",
+          "https://www.11v11.com/teams/japan/tab/opposingTeams/opposition/New%20Zealand/",
+          "https://www.besoccer.com/match/seleccion-japon/seleccion-nueva-zelanda/2026355413/analysis"
+        ],
+        "analysis_detail": {
+          "summary": "ランキング69位差、H2H3-0、直近10と対戦相手強度で日本優位。NZは直近4戦無敗で過小評価禁物。",
+          "h2h": {
+            "summary": "男子A代表の確認4試合: 日本3勝0分1敗。直近3回は日本3連勝。",
+            "items": [
+              {
+                "date": "1981-09-12",
+                "label": "New Zealand vs Japan",
+                "result": "New Zealand 1-0 Japan"
+              },
+              {
+                "date": "2003-06-18",
+                "label": "New Zealand vs Japan",
+                "result": "New Zealand 0-3 Japan"
+              },
+              {
+                "date": "2014-03-05",
+                "label": "Japan vs New Zealand",
+                "result": "Japan 4-2 New Zealand"
+              },
+              {
+                "date": "2017-10-06",
+                "label": "Japan vs New Zealand",
+                "result": "Japan 2-1 New Zealand"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "日本",
+              "summary": "直近10: 6勝3分1敗。",
+              "items": [
+                {
+                  "opponent": "Ecuador",
+                  "result": "D 0-0 / PK 5-4勝"
+                },
+                {
+                  "opponent": "Venezuela",
+                  "result": "W 2-1"
+                },
+                {
+                  "opponent": "Uruguay",
+                  "result": "W 3-1"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "ニュージーランド",
+              "summary": "直近10: 2勝3分5敗。",
+              "items": [
+                {
+                  "opponent": "Panama",
+                  "result": "D 1-1 / PK 5-3勝"
+                },
+                {
+                  "opponent": "China PR",
+                  "result": "W 3-0"
+                },
+                {
+                  "opponent": "Palestine",
+                  "result": "D 2-2"
+                },
+                {
+                  "opponent": "Belgium",
+                  "result": "L 1-5"
+                },
+                {
+                  "opponent": "Egypt",
+                  "result": "L 1-3"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "直近60日で十分な共通相手なし。対戦相手強度は日本側が上。",
+            "items": []
+          },
+          "season_flow": {
+            "text": "日本はW杯後の9月窓でウルグアイ、ベネズエラに連勝し、キリン杯準決勝はエクアドルにPK勝ち。NZは直近4戦無敗。"
+          },
+          "availability": {
+            "text": "日本は欧州組多数。Tomiyasuは欠場情報あり。NZはChris Woodを含む主力招集。"
+          },
+          "sport_specific": {
+            "text": "国立競技場の日本ホーム。90分同点なら延長なしでPK。セットプレーとローテーションに注意。"
+          }
+        },
+        "rank": 11,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "win",
+        "result": "日本勝利（ユーザー報告・スコア未記録）",
+        "match_id": "2026-10-05-japan-newzealand",
+        "match_status": "final"
+      },
+      {
+        "sport": "Overwatch 2",
+        "competition": "Overwatch Champions Series 2026 — Stage 3 Japan Group Stage",
+        "start_jst": "2026-10-05T18:00:00+09:00",
+        "matchup": "Uwinks vs VARREL",
+        "favored": "VARREL",
+        "venue": "Online",
+        "format": "Bo5 / FT3",
+        "status": "formal",
+        "gap_grade": "S",
+        "price_grade": "未判定",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "最新シリーズ勝者実オッズ未確認",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": "93.0",
+        "estimated_ev_pct": "未算出",
+        "ranking_rating": "StrafeではVARREL #1、Uwinks #4。Tips.ggではVARREL #35、Uwinks #326で大差。",
+        "h2h": "確認H2Hは2026/06/15にVARREL 3-0 Uwinks。VARREL 1勝0敗。",
+        "recent_form": "VARREL直近10は8勝2敗。Uwinksは3勝7敗。VARRELは直近30日勝率87%級、Uwinksは直近フォームで大きく劣る。",
+        "common_opponents": "共通相手詳細は公開取得不足。ただしVARRELはPlease Not Hero Ban 6-0、99DIVINE 6-0、INSOMNIA 6-0など国内同格以下へ高い安定性。",
+        "roster": "VARREL: Qloud / Topdragon / Sley / Nico / KSG / qki。現行6名ロスター確認。",
+        "early_tendency": "前回直接対決は3-0でVARRELストレート。Bo5でもマップ取りこぼしリスクは相対的に低い。",
+        "risk": "オンライン戦・パッチ差・Uwinksの短期アップセット。シリーズ勝者の最新実オッズ未確認。",
+        "conclusion": "正式推奨。$100。H2H・直近フォーム・ランキングの3軸でVARREL優勢。",
+        "sources": [
+          "https://www.strafe.com/match/uwinks-vs-varrel-group-stage-ocs-japan-stage-3-a82f93/",
+          "https://ensigame.com/teams/overwatch/varrel-varrel",
+          "https://tips.gg/matches/overwatch/05-10-2026/uwinks-vs-varrel/10-00/",
+          "https://polymarket.com/esports/overwatch/ocs/ow-uwi-var-2026-10-05"
+        ],
+        "analysis_detail": {
+          "summary": "H2H 3-0、直近10はVARREL 8-2対Uwinks 3-7。ランキング・安定性もVARREL優位。",
+          "h2h": {
+            "summary": "確認1回: VARREL 1勝0敗、maps 3-0。",
+            "items": [
+              {
+                "date": "2026-06-15",
+                "label": "Uwinks vs VARREL",
+                "result": "VARREL 3-0 Uwinks"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Uwinks",
+              "summary": "直近10 3勝7敗級。直近5は2勝3敗。",
+              "items": []
+            },
+            "side_b": {
+              "label": "VARREL",
+              "summary": "直近10 8勝2敗。直近5は3勝2敗、30日勝率87%級。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "完全な60日共通相手明細は不足。VARRELは国内複数チームに高勝率。",
+            "items": []
+          },
+          "season_flow": {
+            "text": "OCS Japan Stage 3 Group Stage。VARRELはStage 2でもUwinksに3-0。"
+          },
+          "availability": {
+            "text": "VARREL現行6名ロスター確認。直前変更は再確認。"
+          },
+          "sport_specific": {
+            "text": "Bo5/FT3。H2Hマップ差・直近シリーズ勝率を重視。"
+          }
+        },
+        "rank": 13,
+        "archived_at": "2026-10-06T00:22:13.588+09:00",
+        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
+        "favored_result": "pending",
+        "result": "結果未確認（確認待ち）"
       }
     ],
     "summary": {
@@ -1799,11 +2114,9 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "total": 11,
-      "favored_wins": 9,
+      "favored_wins": 19,
       "favored_losses": 2,
-      "pending": 0,
-      "note": "前回11件は全件結果確定。分析時の優勢側は9勝2敗。分析候補のため、実投入記録がないカードは収支へ算入しない。"
+      "pending": 2
     }
   },
   "history_policy": {
@@ -1811,7 +2124,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-05T17:01:00+09:00",
-    "note": "ユーザー指示により本日の分析4番「SMU Mustangs vs Boston College Eagles」を削除。 運用ルール: 分析更新時は終了済み(final)カードを本日の一覧から除外し、結果・収支履歴は別データに保持。"
+    "as_of": "2026-10-06T00:22:13.588+09:00",
+    "note": "ユーザー指定の結果5件、新規候補5件、直前に検討した3候補を追加。旧カード12件は分析履歴へ移動。"
   }
 }

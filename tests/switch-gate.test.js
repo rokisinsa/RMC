@@ -215,8 +215,10 @@ test("GPT 定時更新をまねて新しい試合・推奨カード・結果を�
     });
     wr("recommendations.json", rec);
     const u = rd("match-updates.json");
-    u.runs.push(run("mr-2026-10-03-0600-gpt", "2026-10-03T06:05:00+09:00", [
-      { match_id: "2026-10-02-new-match", set: { status: "final", result: { final: { a: 2, b: 0 }, text: "2-0" }, result_confirmed_at: "2026-10-02T21:00:00+09:00" }, evidence: ev({ verified_at: "2026-10-03T06:00:00+09:00" }) },
+    // 本番データが増えても、模擬更新は必ず既存ログより後に追記する。
+    const nextAt = new Date(Math.max(Date.parse("2026-10-03T06:05:00+09:00"), ...u.runs.map(x => Date.parse(x.at) + 1000)) + 9 * 3600e3).toISOString().replace("Z", "+09:00");
+    u.runs.push(run("mr-2026-10-03-0600-gpt", nextAt, [
+      { match_id: "2026-10-02-new-match", set: { status: "final", result: { final: { a: 2, b: 0 }, text: "2-0" }, result_confirmed_at: "2026-10-02T21:00:00+09:00" }, evidence: ev({ verified_at: nextAt }) },
     ]));
     wr("match-updates.json", u);
   });

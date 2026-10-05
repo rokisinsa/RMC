@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-09-26T19:37:00+09:00",
+    "as_of": "2026-10-06T00:22:13.588+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -779,6 +779,173 @@
           "match_id": "2026-09-25-prz-gri",
           "status": "review_required",
           "note": "Saint-TropezのDino Prizmic対Daniil Glinkaは確認できるが、RMCの『ダニエル・グリン』と人物同一性を公式表記で完全固定できないため、推測でfinalにせず要確認を維持。"
+        }
+      ]
+    },
+    {
+      "run_id": "mr-user-results-20261006",
+      "kind": "result_update",
+      "at": "2026-10-06T00:22:13.588+09:00",
+      "source": "ユーザー指定5件＋専門結果DB",
+      "note": "指定された勝ち5件とVitality戦を追記。採用時のオッズ・stake・lockedは変更しない。",
+      "changes": [
+        {
+          "match_id": "2026-10-05-wolves-edgm",
+          "set": {
+            "status": "final",
+            "result": {
+              "winners": {
+                "final": "side_a"
+              },
+              "text": "Wolves勝利（ユーザー報告・スコア未記録）"
+            },
+            "result_confirmed_at": "2026-10-06T00:22:13.588+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ユーザーからの勝利報告",
+                "type": "user_confirmed"
+              }
+            ],
+            "verified_at": "2026-10-06T00:22:13.588+09:00",
+            "source_confidence": "user_confirmed",
+            "note": "当該登録カードを照合しユーザー指示で勝者を反映。公式スコアは未確認。"
+          }
+        },
+        {
+          "match_id": "2026-10-05-shopify-jdg",
+          "set": {
+            "status": "final",
+            "result": {
+              "winners": {
+                "final": "side_b"
+              },
+              "text": "JD Gaming勝利（ユーザー報告・スコア未記録）"
+            },
+            "result_confirmed_at": "2026-10-06T00:22:13.588+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ユーザーからの勝利報告",
+                "type": "user_confirmed"
+              }
+            ],
+            "verified_at": "2026-10-06T00:22:13.588+09:00",
+            "source_confidence": "user_confirmed",
+            "note": "当該登録カードを照合しユーザー指示で勝者を反映。公式スコアは未確認。"
+          }
+        },
+        {
+          "match_id": "2026-10-05-japan-newzealand",
+          "set": {
+            "status": "final",
+            "result": {
+              "winners": {
+                "final": "side_a"
+              },
+              "text": "日本勝利（ユーザー報告・スコア未記録）"
+            },
+            "result_confirmed_at": "2026-10-06T00:22:13.588+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ユーザーからの勝利報告",
+                "type": "user_confirmed"
+              }
+            ],
+            "verified_at": "2026-10-06T00:22:13.588+09:00",
+            "source_confidence": "user_confirmed",
+            "note": "当該登録カードを照合しユーザー指示で勝者を反映。公式スコアは未確認。"
+          }
+        },
+        {
+          "match_id": "2026-10-05-swiatek-vekic",
+          "set": {
+            "status": "final",
+            "result": {
+              "winners": {
+                "final": "side_b"
+              },
+              "text": "Iga Świątek勝利（ユーザー報告・スコア未記録）"
+            },
+            "result_confirmed_at": "2026-10-06T00:22:13.588+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ユーザーからの勝利報告",
+                "type": "user_confirmed"
+              }
+            ],
+            "verified_at": "2026-10-06T00:22:13.588+09:00",
+            "source_confidence": "user_confirmed",
+            "note": "当該登録カードを照合しユーザー指示で勝者を反映。公式スコアは未確認。"
+          }
+        },
+        {
+          "match_id": "2026-10-04-lit-ank",
+          "set": {
+            "status": "final",
+            "result": {
+              "winners": {
+                "final": "side_b"
+              },
+              "text": "ANK Gaming勝利（ユーザー報告・スコア未記録）"
+            },
+            "result_confirmed_at": "2026-10-06T00:22:13.588+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ユーザーからの勝利報告",
+                "type": "user_confirmed"
+              }
+            ],
+            "verified_at": "2026-10-06T00:22:13.588+09:00",
+            "source_confidence": "user_confirmed",
+            "note": "当該登録カードを照合しユーザー指示で勝者を反映。公式スコアは未確認。"
+          }
+        },
+        {
+          "match_id": "2026-10-05-gam-vitality",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 2
+              },
+              "text": "GAM Esports 0-2 Team Vitality"
+            },
+            "result_confirmed_at": "2026-10-06T00:22:13.588+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Sheep Esports 試合結果",
+                "url": "https://www.sheepesports.com/en/lol/matches/2026%20Demacia%20Cup%20Global%20Invitational_Round%202_4",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-06T00:22:13.588+09:00",
+            "source_confidence": "specialist_db",
+            "note": "Finished表記・GAM 0:2 Vitality・10月5日大会カードを確認。"
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "match_id": "2026-10-05-gauff-sun",
+          "status": "review_required",
+          "note": "結果ページが0-0/予定表示のため勝敗未確認。過去日付の分析からは移動し、未精算のまま保持。"
+        },
+        {
+          "match_id": "2026-10-05-uwinks-varrel",
+          "status": "review_required",
+          "note": "結果DBに最終スコアが出ていないため勝敗未確認。過去日付の分析から移動し未精算のまま保持。"
         }
       ]
     }
