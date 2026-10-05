@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-04T22:50:00+09:00",
+    "as_of": "2026-10-05T17:01:00+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
@@ -117,6 +117,12 @@
       "started_at": "2026-10-04T22:50:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー明示指示により日本 vs ニュージーランドを正式推奨へ追加。最新1X2オッズ未確認のため価格評価保留。"
+    },
+    {
+      "run_id": "rec-user-approved-20261005-1701",
+      "started_at": "2026-10-05T17:01:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー明示指示によりSporting CP handballとVARREL Overwatchを正式推奨へ追加。各$100。"
     }
   ],
   "picks": [
@@ -3048,6 +3054,74 @@
         "odds_unverified"
       ],
       "note": "ユーザー承認で正式推奨。価格評価はオッズ確認後に更新。"
+    },
+    {
+      "id": "rec-20261006-sporting-vitoria-handball",
+      "system": "recommendations",
+      "match_id": "2026-10-06-sporting-vitoria-handball",
+      "run_id": "rec-user-approved-20261005-1701",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：Sporting CP",
+      "selection": "side_a",
+      "selection_label": "Sporting CP",
+      "market_odds": {
+        "text": "最新マッチウィナー実オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "FAP/Sporting公式で試合確認、価格は未確認"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-05T17:01:00+09:00",
+      "bet_at": "2026-10-05T17:01:00+09:00",
+      "locked_at": "2026-10-05T17:01:00+09:00",
+      "locked": {
+        "prob": 0.96,
+        "gap_score": 96,
+        "confidence": "high",
+        "model_version": "rmc-rec-20261005",
+        "summary": "前回H2HでSporting 40-27。ホームPavilhão João Rocha、国内最上位級SportingとVitória SCの戦力差を評価。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー承認で正式推奨。価格は確認後更新。"
+    },
+    {
+      "id": "rec-20261005-varrel-uwinks",
+      "system": "recommendations",
+      "match_id": "2026-10-05-uwinks-varrel",
+      "run_id": "rec-user-approved-20261005-1701",
+      "market": "match_winner",
+      "market_label": "マッチウィナー：VARREL",
+      "selection": "side_b",
+      "selection_label": "VARREL",
+      "market_odds": {
+        "text": "最新シリーズ勝者実オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": "Strafe/Polymarketでカード確認、価格は未確認"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-05T17:01:00+09:00",
+      "bet_at": "2026-10-05T17:01:00+09:00",
+      "locked_at": "2026-10-05T17:01:00+09:00",
+      "locked": {
+        "prob": 0.93,
+        "gap_score": 94,
+        "confidence": "high",
+        "model_version": "rmc-rec-20261005",
+        "summary": "H2HはVARREL 3-0。直近10はVARREL 8-2、Uwinks 3-7。Strafe #1 vs #4、Ensigame直近30日VARREL勝率87%。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー承認で正式推奨。価格は確認後更新。"
     }
   ]
 }
