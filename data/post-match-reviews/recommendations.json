@@ -33,6 +33,22 @@
       "variance_vs_structural": "mixed",
       "clv_assessment": "closing odds未固定のためCLVは未評価。",
       "prevention_hypothesis": "NFLの低オッズ候補は単純なチーム格差に加え、ターンオーバー率・スペシャルチーム・ロード/ホーム・QB代替時のゲームプラン適応を別チェックし、1.20〜1.35帯では推定勝率に安全マージンを設ける。"
+    },
+    {
+      "pick_id": "rec-20261006-grenada-bonaire",
+      "created_at": "2026-10-06T11:42:27+09:00",
+      "update_run": "mr-grenada-result-20261006-1142",
+      "outcome": "loss",
+      "category": "information_missing",
+      "findings": "ユーザー報告でDNB不的中。公式スコア・試合展開未確認のため競技上の敗因は断定不能。事前候補では開催地移転・価格評価不足が残り、集計対象への登録も漏れていた。",
+      "missing_data": [
+        "公式スコア",
+        "試合展開",
+        "当日メンバー",
+        "購入オッズ"
+      ],
+      "action": "propose_change",
+      "proposal": "候補の採用時に推奨取引への登録を照合し、終了後は勝敗・勝率算入を確認する。開催地移転とデータ不足を採用判断前に明示する。"
     }
   ]
 }

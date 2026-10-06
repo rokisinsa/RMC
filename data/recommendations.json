@@ -123,6 +123,12 @@
       "started_at": "2026-10-05T17:01:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー明示指示によりSporting CP handballとVARREL Overwatchを正式推奨へ追加。各$100。"
+    },
+    {
+      "run_id": "rec-grenada-reconcile-20261006",
+      "started_at": "2026-10-06T11:42:27+09:00",
+      "slot": "adhoc",
+      "note": "既存候補の集計漏れをユーザー指示で補完。試合後の新規予測ではない。"
     }
   ],
   "picks": [
@@ -3122,6 +3128,34 @@
         "odds_unverified"
       ],
       "note": "ユーザー承認で正式推奨。価格は確認後更新。"
+    },
+    {
+      "id": "rec-20261006-grenada-bonaire",
+      "system": "recommendations",
+      "match_id": "2026-10-06-grenada-bonaire",
+      "run_id": "rec-grenada-reconcile-20261006",
+      "market": "dnb",
+      "market_label": "引分返金：Grenada",
+      "selection": "side_a",
+      "selection_label": "Grenada DNB",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-06T00:22:13.588+09:00",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": null,
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定の既存候補を敗戦として勝率へ算入。RMC統一基準100USD。購入オッズ・購入日時・公式スコアは未確認。試合前推定値を事後作成しない。"
     }
   ]
 }

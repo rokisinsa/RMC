@@ -120,6 +120,13 @@
       "at": "2026-10-05T17:01:00+09:00",
       "source": "User approval + FAP/Sporting official + Strafe/Ensigame",
       "note": "Sporting CP vs Vitória SC handball and Uwinks vs VARREL Overwatch added as formal recommendations."
+    },
+    {
+      "run_id": "mr-grenada-result-20261006-1142",
+      "kind": "human_review",
+      "at": "2026-10-06T11:42:27+09:00",
+      "source": "ユーザー指定の結果反映",
+      "note": "候補のみの登録漏れを補完。ユーザーがGrenada DNB不的中を報告。"
     }
   ],
   "matches": [
@@ -3188,6 +3195,44 @@
       "flags": [
         "odds_unverified"
       ]
+    },
+    {
+      "id": "2026-10-06-grenada-bonaire",
+      "sport": "サッカー",
+      "competition": "Concacaf Nations League B — Group C",
+      "side_a": "Grenada",
+      "side_b": "Bonaire",
+      "home_side": "neutral",
+      "region": "CONCACAF",
+      "venue": "Hasely Crawford Stadium, Trinidad and Tobago",
+      "start_at": "2026-10-06T09:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "final",
+      "result": {
+        "winners": {
+          "final": "side_b"
+        },
+        "text": "Grenada DNB不的中・Bonaire勝利（ユーザー報告、公式スコア未確認）"
+      },
+      "result_confirmed_at": "2026-10-06T11:42:27+09:00",
+      "provenance": [
+        {
+          "update_run_id": "mr-grenada-result-20261006-1142",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "既存候補から登録。ユーザー報告に基づき勝敗反映。"
+        }
+      ],
+      "sources": [
+        "ユーザー報告：Grenada DNB不的中（2026-10-06 11:42 JST）"
+      ],
+      "verified_at": "2026-10-06T11:42:27+09:00",
+      "flags": []
     }
   ]
 }
