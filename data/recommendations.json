@@ -129,6 +129,12 @@
       "started_at": "2026-10-06T11:42:27+09:00",
       "slot": "adhoc",
       "note": "既存候補の集計漏れをユーザー指示で補完。試合後の新規予測ではない。"
+    },
+    {
+      "run_id": "rec-spirit-cs2-approved-20261006",
+      "started_at": "2026-10-06T12:06:16+09:00",
+      "slot": "adhoc",
+      "note": "ユーザーによるSpiritシリーズ勝利の正式採用。"
     }
   ],
   "picks": [
@@ -3156,6 +3162,41 @@
         "odds_unverified"
       ],
       "note": "ユーザー指定の既存候補を敗戦として勝率へ算入。RMC統一基準100USD。購入オッズ・購入日時・公式スコアは未確認。試合前推定値を事後作成しない。"
+    },
+    {
+      "id": "rec-20261006-spirit-1win-cs2",
+      "system": "recommendations",
+      "match_id": "2026-10-06-spirit-1win-cs2",
+      "run_id": "rec-spirit-cs2-approved-20261006",
+      "source_event_id": "web-cs2-spirit-1win-2398742",
+      "market": "match_winner",
+      "market_label": "シリーズ勝者：Spirit",
+      "selection": "side_a",
+      "selection_label": "Spirit",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-06T12:06:16+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-06T12:06:16+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": 88,
+        "confidence": "A+（格差評価）",
+        "model_version": "user-approved-analysis-20261006",
+        "summary": "ユーザー承認でSpiritのシリーズ勝利を正式採用（100USD基準）。評価88/A+。直近10戦9勝1敗・20勝6敗MAP。1winの今大会好調を考慮。Veto未確定。1winは今大会G2・Legacyに勝利。共通相手は対戦日・大会条件が異なるためスコア差だけで断定しない。購入オッズ・推定勝率・期待値は未確認。88は格差評価点で勝率88%ではない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "正式採用。購入実行の記録ではない。購入価格・Veto未確定。"
     }
   ]
 }

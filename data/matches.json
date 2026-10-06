@@ -127,6 +127,13 @@
       "at": "2026-10-06T11:42:27+09:00",
       "source": "ユーザー指定の結果反映",
       "note": "候補のみの登録漏れを補完。ユーザーがGrenada DNB不的中を報告。"
+    },
+    {
+      "run_id": "mr-spirit-cs2-approved-20261006",
+      "kind": "human_review",
+      "at": "2026-10-06T12:06:16+09:00",
+      "source": "ユーザー正式採用指示・HLTV",
+      "note": "CS2 Spirit対1winを新規登録。Dota2の同名カードとは別試合。"
     }
   ],
   "matches": [
@@ -3232,6 +3239,38 @@
         "ユーザー報告：Grenada DNB不的中（2026-10-06 11:42 JST）"
       ],
       "verified_at": "2026-10-06T11:42:27+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-06-spirit-1win-cs2",
+      "sport": "Counter-Strike 2",
+      "competition": "ESL Pro League Season 24 — Swiss Round 4 (2-1)",
+      "side_a": "Spirit",
+      "side_b": "1win",
+      "home_side": "neutral",
+      "venue": "LAN",
+      "start_at": "2026-10-06T21:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-spirit-cs2-approved-20261006",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "HLTVと12:00UTC掲載の専門DBを照合し21:00JSTで登録。"
+        }
+      ],
+      "sources": [
+        "https://www.hltv.org/matches/2398742/spirit-vs-1win-esl-pro-league-season-24",
+        "https://ensigame.com/matches/cs-2/2147635-team-spirit-spirit-vs-1w-team-1win-esl-pro-06-10-26"
+      ],
+      "verified_at": "2026-10-06T12:06:16+09:00",
       "flags": []
     }
   ]
