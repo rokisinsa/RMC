@@ -141,6 +141,13 @@
       "at": "2026-10-06T21:48:42+09:00",
       "source": "ユーザー採用指示・クラブ公式",
       "note": "現地18時＝00時JST。"
+    },
+    {
+      "run_id": "mr-user-wins-20261006-2157registry",
+      "kind": "human_review",
+      "at": "2026-10-06T21:57:43+09:00",
+      "source": "ユーザー勝利報告・収支反映指示",
+      "note": "既存候補2番・5番を結果台帳へ追加。"
     }
   ],
   "matches": [
@@ -3311,6 +3318,68 @@
         "https://womanleagues.com/tr/volleyball/turkish-super-cup-women/match/90e43729-8b65-4d9c-b7a3-2e535f7fa5cd"
       ],
       "verified_at": "2026-10-06T21:48:42+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-06-kt-kiwoom",
+      "sport": "野球",
+      "competition": "KBO",
+      "side_a": "KT Wiz",
+      "side_b": "Kiwoom Heroes",
+      "home_side": "side_b",
+      "venue": "Gocheok Sky Dome（Kiwoomホーム）",
+      "start_at": "2026-10-06T18:30:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-wins-20261006-2157registry",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "既存候補からの転記。"
+        }
+      ],
+      "sources": [
+        "https://mykbostats.com/games/14019-KT-vs-Kiwoom-20261006"
+      ],
+      "verified_at": "2026-10-06T21:57:43+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-06-kraus-bartunkova",
+      "sport": "女子テニス",
+      "competition": "WTA China Open 2026 — Round of 16",
+      "side_a": "Sinja Kraus",
+      "side_b": "Nikola Bartůňková",
+      "home_side": "unknown",
+      "venue": "Beijing / LOTUS（10月6日、前試合終了後）",
+      "start_at": null,
+      "start_time_status": "unknown",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-wins-20261006-2157registry",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "既存候補からの転記。"
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf"
+      ],
+      "verified_at": "2026-10-06T21:57:43+09:00",
       "flags": []
     }
   ]

@@ -141,6 +141,12 @@
       "started_at": "2026-10-06T21:48:42+09:00",
       "slot": "adhoc",
       "note": "VakıfBank勝利をユーザー指定で正式採用。"
+    },
+    {
+      "run_id": "rec-user-wins-20261006-2157",
+      "started_at": "2026-10-06T21:57:43+09:00",
+      "slot": "adhoc",
+      "note": "既存の事前候補をユーザー指示で結果集計へ追加。事後の推奨分析ではない。"
     }
   ],
   "picks": [
@@ -3238,6 +3244,62 @@
         "odds_unverified"
       ],
       "note": "ユーザー指定でVakıfBankの試合勝利を正式採用（100USD基準）。アンタルヤ中立地。前季H2H確認5件4勝1敗・セット13–7。当日メンバー・欠場・オッズ・推定勝率・EV未確認。直近10戦は各1件のみ確認、共通相手比較はデータ不足。正式採用は購入実行を意味しません。"
+    },
+    {
+      "id": "rec-2026-10-06-kt-kiwoom",
+      "system": "recommendations",
+      "match_id": "2026-10-06-kt-kiwoom",
+      "run_id": "rec-user-wins-20261006-2157",
+      "market": "match_winner",
+      "market_label": "試合勝者：KT Wiz",
+      "selection": "side_a",
+      "selection_label": "KT Wiz",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-06T00:22:13.588+09:00",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": null,
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "既存候補をユーザー報告の勝利で集計。100USD基準。購入オッズ・購入日時・公式スコア未確認。事前推定値を事後作成しない。"
+    },
+    {
+      "id": "rec-2026-10-06-kraus-bartunkova",
+      "system": "recommendations",
+      "match_id": "2026-10-06-kraus-bartunkova",
+      "run_id": "rec-user-wins-20261006-2157",
+      "market": "match_winner",
+      "market_label": "試合勝者：Nikola Bartůňková",
+      "selection": "side_b",
+      "selection_label": "Nikola Bartůňková",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-06T00:22:13.588+09:00",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": null,
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "既存候補をユーザー報告の勝利で集計。100USD基準。購入オッズ・購入日時・公式スコア未確認。事前推定値を事後作成しない。"
     }
   ]
 }

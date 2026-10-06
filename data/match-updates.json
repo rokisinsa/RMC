@@ -982,6 +982,64 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-user-wins-20261006-2157",
+      "kind": "result_update",
+      "at": "2026-10-06T21:57:43+09:00",
+      "source": "ユーザー勝利報告",
+      "note": "KT WizとNikola Bartůňkováの勝利。購入オッズ未確認。",
+      "changes": [
+        {
+          "match_id": "2026-10-06-kt-kiwoom",
+          "set": {
+            "status": "final",
+            "result": {
+              "winners": {
+                "final": "side_a"
+              },
+              "text": "KT Wiz勝利（ユーザー報告・公式スコア未確認）"
+            },
+            "result_confirmed_at": "2026-10-06T21:57:43+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ユーザーによる本日の分析2番・5番の勝利報告",
+                "type": "user_confirmed"
+              }
+            ],
+            "verified_at": "2026-10-06T21:57:43+09:00",
+            "source_confidence": "user_confirmed",
+            "note": "番号と対戦カードを照合。スコア・実際の終了時刻未確認。"
+          }
+        },
+        {
+          "match_id": "2026-10-06-kraus-bartunkova",
+          "set": {
+            "status": "final",
+            "result": {
+              "winners": {
+                "final": "side_b"
+              },
+              "text": "Nikola Bartůňková勝利（ユーザー報告・公式スコア未確認）"
+            },
+            "result_confirmed_at": "2026-10-06T21:57:43+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ユーザーによる本日の分析2番・5番の勝利報告",
+                "type": "user_confirmed"
+              }
+            ],
+            "verified_at": "2026-10-06T21:57:43+09:00",
+            "source_confidence": "user_confirmed",
+            "note": "番号と対戦カードを照合。スコア・実際の終了時刻未確認。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }
