@@ -134,6 +134,13 @@
       "at": "2026-10-06T12:06:16+09:00",
       "source": "ユーザー正式採用指示・HLTV",
       "note": "CS2 Spirit対1winを新規登録。Dota2の同名カードとは別試合。"
+    },
+    {
+      "run_id": "mr-vakifbank-approved-20261006",
+      "kind": "human_review",
+      "at": "2026-10-06T21:48:42+09:00",
+      "source": "ユーザー採用指示・クラブ公式",
+      "note": "現地18時＝00時JST。"
     }
   ],
   "matches": [
@@ -3271,6 +3278,39 @@
         "https://ensigame.com/matches/cs-2/2147635-team-spirit-spirit-vs-1w-team-1win-esl-pro-06-10-26"
       ],
       "verified_at": "2026-10-06T12:06:16+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-07-vakifbank-eczacibasi",
+      "sport": "女子バレーボール",
+      "competition": "トルコ女子スーパーカップ 2026",
+      "side_a": "VakıfBank",
+      "side_b": "Eczacıbaşı",
+      "home_side": "neutral",
+      "venue": "Antalya Spor Salonu",
+      "start_at": "2026-10-07T00:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-vakifbank-approved-20261006",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "最新両クラブ告知18時を採用。旧告知19時から変更。"
+        }
+      ],
+      "sources": [
+        "https://www.vakifbanksporkulubu.com/tr/mac-fiksturu/axa-sigorta-sampiyonlar-kupasi2026-2027-sezonu-t54",
+        "https://www.eczacibasisporkulubu.org.tr/haberler/kupa-icin-sahaya-ckyoruz",
+        "https://womanleagues.com/tr/volleyball/turkish-super-cup-women/match/90e43729-8b65-4d9c-b7a3-2e535f7fa5cd"
+      ],
+      "verified_at": "2026-10-06T21:48:42+09:00",
       "flags": []
     }
   ]

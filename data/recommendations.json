@@ -135,6 +135,12 @@
       "started_at": "2026-10-06T12:06:16+09:00",
       "slot": "adhoc",
       "note": "ユーザーによるSpiritシリーズ勝利の正式採用。"
+    },
+    {
+      "run_id": "rec-vakifbank-approved-20261006",
+      "started_at": "2026-10-06T21:48:42+09:00",
+      "slot": "adhoc",
+      "note": "VakıfBank勝利をユーザー指定で正式採用。"
     }
   ],
   "picks": [
@@ -3197,6 +3203,41 @@
         "odds_unverified"
       ],
       "note": "正式採用。購入実行の記録ではない。購入価格・Veto未確定。"
+    },
+    {
+      "id": "rec-20261007-vakifbank-eczacibasi",
+      "system": "recommendations",
+      "match_id": "2026-10-07-vakifbank-eczacibasi",
+      "run_id": "rec-vakifbank-approved-20261006",
+      "source_event_id": "web-vakifbank-eczacibasi-supercup-20261007",
+      "market": "match_winner",
+      "market_label": "試合勝者：VakıfBank",
+      "selection": "side_a",
+      "selection_label": "VakıfBank",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-06T21:48:42+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-06T21:48:42+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "未判定（ユーザー正式採用）",
+        "model_version": "user-approved-analysis-20261006",
+        "summary": "ユーザー指定でVakıfBankの試合勝利を正式採用（100USD基準）。アンタルヤ中立地。前季H2H確認5件4勝1敗・セット13–7。当日メンバー・欠場・オッズ・推定勝率・EV未確認。直近10戦は各1件のみ確認、共通相手比較はデータ不足。正式採用は購入実行を意味しません。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定でVakıfBankの試合勝利を正式採用（100USD基準）。アンタルヤ中立地。前季H2H確認5件4勝1敗・セット13–7。当日メンバー・欠場・オッズ・推定勝率・EV未確認。直近10戦は各1件のみ確認、共通相手比較はデータ不足。正式採用は購入実行を意味しません。"
     }
   ]
 }
