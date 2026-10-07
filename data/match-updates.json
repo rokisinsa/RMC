@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-06T11:40:03+09:00",
+    "as_of": "2026-10-07T17:39:30+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -1036,6 +1036,146 @@
             "verified_at": "2026-10-06T21:57:43+09:00",
             "source_confidence": "user_confirmed",
             "note": "番号と対戦カードを照合。スコア・実際の終了時刻未確認。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-results-20261007-1739",
+      "kind": "result_update",
+      "at": "2026-10-07T17:39:30+09:00",
+      "source": "公式・専門結果DB・試合報告",
+      "note": "終了済み5件を精算。既存のlocked・購入価格は保持。",
+      "changes": [
+        {
+          "match_id": "2026-10-06-sporting-vitoria-handball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 51,
+                "b": 23
+              },
+              "text": "Sporting CP vs Vitória SC: 51–23"
+            },
+            "result_confirmed_at": "2026-10-07T17:39:30+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Sporting公式試合報告",
+                "url": "https://www.sporting.pt/pt/noticias/modalidades/andebol/2026-10-05/de-vitoria-em-vitoria",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-07T17:39:30+09:00",
+            "source_confidence": "official",
+            "note": "当該大会・日付・終了結果を本文で確認。購入オッズは補完しない。"
+          }
+        },
+        {
+          "match_id": "2026-10-07-solary-valerion",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 0
+              },
+              "text": "Solary vs Valerion: 3–0"
+            },
+            "result_confirmed_at": "2026-10-07T17:39:30+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "EsportsResults確定結果",
+                "url": "https://esportsresults.com/match/lol/1698595/solary-vs-valerion",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-07T17:39:30+09:00",
+            "source_confidence": "specialist_db",
+            "note": "当該大会・日付・終了結果を本文で確認。購入オッズは補完しない。"
+          }
+        },
+        {
+          "match_id": "2026-10-06-minas-jf",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 3
+              },
+              "text": "Itambé Minas vs JF Vôlei: 2–3"
+            },
+            "result_confirmed_at": "2026-10-07T17:39:30+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "WebVolei試合報告",
+                "url": "https://webvolei.com.br/minas-x-jf-volei-virada-campeonato-mineiro/",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-10-07T17:39:30+09:00",
+            "source_confidence": "single_source",
+            "note": "当該大会・日付・終了結果を本文で確認。購入オッズは補完しない。"
+          }
+        },
+        {
+          "match_id": "2026-10-06-spirit-1win-cs2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 2
+              },
+              "text": "Spirit vs 1win: 0–2"
+            },
+            "result_confirmed_at": "2026-10-07T17:39:30+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "HLTV試合報告",
+                "url": "https://www.hltv.org/news/45620/1win-stun-spirit-to-reach-esl-pro-league-playoffs",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-07T17:39:30+09:00",
+            "source_confidence": "specialist_db",
+            "note": "当該大会・日付・終了結果を本文で確認。購入オッズは補完しない。"
+          }
+        },
+        {
+          "match_id": "2026-10-07-vakifbank-eczacibasi",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 2
+              },
+              "text": "VakıfBank vs Eczacıbaşı: 3–2"
+            },
+            "result_confirmed_at": "2026-10-07T17:39:30+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Anadolu Agency試合報告",
+                "url": "https://m.aa.com.tr/tr/spor/2026-voleybol-kadinlar-axa-sigorta-sampiyonlar-kupasi-vakifbankin/4080148",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-10-07T17:39:30+09:00",
+            "source_confidence": "single_source",
+            "note": "当該大会・日付・終了結果を本文で確認。購入オッズは補完しない。"
           }
         }
       ],

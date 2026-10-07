@@ -148,6 +148,13 @@
       "at": "2026-10-06T21:57:43+09:00",
       "source": "ユーザー勝利報告・収支反映指示",
       "note": "既存候補2番・5番を結果台帳へ追加。"
+    },
+    {
+      "run_id": "mr-user-approved-20261007-1739",
+      "kind": "human_review",
+      "at": "2026-10-07T17:39:30+09:00",
+      "source": "ユーザー正式採用・結果反映指示",
+      "note": "新規2件と既存候補2件の登録漏れを補完。過去の推定・購入価格は作成しない。"
     }
   ],
   "matches": [
@@ -3380,6 +3387,130 @@
         "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf"
       ],
       "verified_at": "2026-10-06T21:57:43+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-07-solary-valerion",
+      "sport": "League of Legends（LoL）",
+      "competition": "EMEA Masters Summer 2026 — Round of 16",
+      "side_a": "Solary",
+      "side_b": "Valerion",
+      "home_side": "unknown",
+      "venue": null,
+      "start_at": "2026-10-07T01:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261007-1739",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "既存の事前候補を結果集計のため登録"
+        }
+      ],
+      "sources": [
+        "https://www.sheepesports.com/en/all/matches/EMEA%20Masters%2F2026%20Season%2FSummer%20Main%20Event_Round%20of%2016_1"
+      ],
+      "verified_at": "2026-10-07T17:39:30+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-06-minas-jf",
+      "sport": "男子バレーボール",
+      "competition": "Campeonato Mineiro 2026",
+      "side_a": "Itambé Minas",
+      "side_b": "JF Vôlei",
+      "home_side": "unknown",
+      "venue": "Arena UniBH, Belo Horizonte",
+      "start_at": "2026-10-06T07:30:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261007-1739",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "既存の事前候補を結果集計のため登録"
+        }
+      ],
+      "sources": [
+        "https://webvolei.com.br/jogos-de-volei-hoje-05-10-2026/"
+      ],
+      "verified_at": "2026-10-07T17:39:30+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-08-kcb-skillcamp",
+      "sport": "League of Legends（LoL）",
+      "competition": "EMEAマスターズ 2026 夏季・ベスト16",
+      "side_a": "Karmine Corp Blue",
+      "side_b": "Skillcamp",
+      "home_side": "unknown",
+      "venue": "オンライン（開催詳細未確認）",
+      "start_at": "2026-10-08T01:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261007-1739",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示指示で試合前に正式登録"
+        }
+      ],
+      "sources": [
+        "https://ensigame.com/matches/lol/2138255-karmine-corp-blue-kcb-vs-skillcamp-sc-emea-07-10-26"
+      ],
+      "verified_at": "2026-10-07T17:39:30+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-08-partizan-veszprem",
+      "sport": "男子ハンドボール",
+      "competition": "EHFチャンピオンズリーグ 2026/27・グループA 第3節",
+      "side_a": "Partizan",
+      "side_b": "Veszprém",
+      "home_side": "side_a",
+      "venue": "ベオグラード（Partizanホーム）",
+      "start_at": "2026-10-08T01:45:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261007-1739",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー明示指示で試合前に正式登録"
+        }
+      ],
+      "sources": [
+        "https://ehfeuro.eurohandball.com/men/2026/news/en/final-rematch-at-kielce-sporting-aim-to-conquer-szeged-s-fortress-in-round-3/"
+      ],
+      "verified_at": "2026-10-07T17:39:30+09:00",
       "flags": []
     }
   ]

@@ -147,6 +147,12 @@
       "started_at": "2026-10-06T21:57:43+09:00",
       "slot": "adhoc",
       "note": "既存の事前候補をユーザー指示で結果集計へ追加。事後の推奨分析ではない。"
+    },
+    {
+      "run_id": "rec-user-approved-20261007-1739",
+      "started_at": "2026-10-07T17:39:30+09:00",
+      "slot": "adhoc",
+      "note": "KCB・Veszprémを試合前に正式採用。Solary・Minasは既存候補の結果集計登録。"
     }
   ],
   "picks": [
@@ -3300,6 +3306,132 @@
         "odds_unverified"
       ],
       "note": "既存候補をユーザー報告の勝利で集計。100USD基準。購入オッズ・購入日時・公式スコア未確認。事前推定値を事後作成しない。"
+    },
+    {
+      "id": "rec-2026-10-07-solary-valerion",
+      "system": "recommendations",
+      "match_id": "2026-10-07-solary-valerion",
+      "run_id": "rec-user-approved-20261007-1739",
+      "market": "match_winner",
+      "market_label": "試合勝者：Solary",
+      "selection": "side_a",
+      "selection_label": "Solary",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-06T00:22:13.588+09:00",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": null,
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "既存の事前候補を今回の指示で結果集計へ登録。100USD基準。事前推定・購入記録は事後作成しない。"
+    },
+    {
+      "id": "rec-2026-10-06-minas-jf",
+      "system": "recommendations",
+      "match_id": "2026-10-06-minas-jf",
+      "run_id": "rec-user-approved-20261007-1739",
+      "market": "match_winner",
+      "market_label": "試合勝者：Minas",
+      "selection": "side_a",
+      "selection_label": "Minas",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-06T00:22:13.588+09:00",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": null,
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "既存の事前候補を今回の指示で結果集計へ登録。100USD基準。事前推定・購入記録は事後作成しない。"
+    },
+    {
+      "id": "rec-2026-10-08-kcb-skillcamp",
+      "system": "recommendations",
+      "match_id": "2026-10-08-kcb-skillcamp",
+      "run_id": "rec-user-approved-20261007-1739",
+      "source_event_id": "web-kcb-skillcamp-20261008",
+      "market": "match_winner",
+      "market_label": "試合勝者：Karmine Corp Blue",
+      "selection": "side_a",
+      "selection_label": "Karmine Corp Blue",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-07T17:39:30+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-07T17:39:30+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "有力候補（ユーザー正式採用）",
+        "model_version": "user-approved-analysis-20261007",
+        "summary": "KCBのシリーズ勝利を正式採用。最近の複数ゲーム制H2Hは2–0、3–0。3–0のスコア予想ではない。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
+    },
+    {
+      "id": "rec-2026-10-08-partizan-veszprem",
+      "system": "recommendations",
+      "match_id": "2026-10-08-partizan-veszprem",
+      "run_id": "rec-user-approved-20261007-1739",
+      "source_event_id": "web-partizan-veszprem-20261008",
+      "market": "match_winner",
+      "market_label": "試合勝者：Veszprém",
+      "selection": "side_b",
+      "selection_label": "Veszprém",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-07T17:39:30+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-07T17:39:30+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "有力候補（ユーザー正式採用）",
+        "model_version": "user-approved-analysis-20261007",
+        "summary": "Veszprém勝利を正式採用。同じ今季CLのPorto・Berlin比較が支持。遠征とクラブ世界選手権後の疲労を警戒。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-06T00:22:13.588+09:00",
+  "generated_at": "2026-10-07T17:39:30+09:00",
   "window": {
-    "from": "2026-10-06T00:22:13.588+09:00",
-    "to": "2026-10-07T00:22:13.588+09:00",
+    "from": "2026-10-07T17:39:30+09:00",
+    "to": "2026-10-08T17:39:30+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "今後24時間を基本。明示指定のSolaryは24時間外の先行登録、テニス1件は指定例外。"
+    "note": "ユーザー指定2件。終了済み試合は履歴へ移動。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -27,463 +27,240 @@
   },
   "candidates": [
     {
-      "sport": "男子ハンドボール",
-      "competition": "Campeonato Betclic Masculino 2026/27 — 第8節",
-      "start_jst": "2026-10-06T02:00:00+09:00",
-      "matchup": "Sporting CP vs Vitória SC",
-      "favored": "Sporting CP",
-      "venue": "Pavilhão João Rocha, Lisboa",
-      "format": "60分",
+      "matchup": "Karmine Corp Blue vs Skillcamp",
+      "favored": "Karmine Corp Blue",
+      "sport": "League of Legends（LoL）",
+      "competition": "EMEAマスターズ 2026 夏季・ベスト16",
+      "start_jst": "2026-10-08T01:00:00+09:00",
+      "venue": "オンライン（開催詳細未確認）",
+      "format": "BO5",
       "status": "formal",
-      "gap_grade": "S",
-      "price_grade": "未判定",
+      "gap_grade": "有力候補",
+      "price_grade": "未確認",
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "最新実オッズ未確認",
+        "book_examples": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
         "required_win_rate_pct": null
       },
-      "estimated_win_probability_pct": "96.0",
-      "estimated_ev_pct": "未算出",
-      "ranking_rating": "Sporting CPは国内最上位級。Vitória SCとの前回直接対戦を13点差で勝利。",
-      "h2h": "直近確認H2Hは2026/03/01 Sporting CP 40-27 Vitória SC。前半19-12、後半21-15で両ハーフともSporting優位。",
-      "recent_form": "Sportingは10/2にMarítimo戦後、10/5ホームでVitória SC。国内戦とChampions Leagueを並行する上位クラブ。Vitória SCの直近詳細は公開取得不足。",
-      "common_opponents": "直近60日の十分な共通相手比較は未確認。ここはデータ不足として扱う。",
-      "roster": "Sporting前回H2HではÞorkelsson 8点、Salvador 6点、Martim Costa 6点など複数得点源。最終登録メンバーは直前確認対象。",
-      "early_tendency": "前回H2Hは前半19-12でSportingが7点先行。序盤から差を作れる傾向。",
-      "risk": "Sportingは過密日程。Vitória SCの直近状態・最新欠場・実オッズ未確認。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-      "conclusion": "正式推奨。$100。価格は未確認のため収益性評価は保留。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-      "sources": [
-        "https://portal.fpa.pt/jogo/323284/",
-        "https://www.sporting.pt/en/agenda/calendar?d=2026-10&recinto%3Destadio=",
-        "https://www.sporting.pt/en/games/handball/seniors/2026-03-01/sporting-cp-vitoria-sc",
-        "https://si.fpa.pt/fap_sa/usrpck_print.print_boletim?P_ID_PROVA_JOGO=301271&p_layout=P300632&p_sessao=1"
-      ],
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "conclusion": "KCBのシリーズ勝利を正式採用。最近の複数ゲーム制H2Hは2–0、3–0。3–0のスコア予想ではない。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
       "analysis_detail": {
-        "summary": "正式推奨。$100。価格は未確認のため収益性評価は保留。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
+        "summary": "KCBのシリーズ勝利を正式採用。最近の複数ゲーム制H2Hは2–0、3–0。3–0のスコア予想ではない。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
         "h2h": {
-          "summary": "確認できた直近H2H: Sporting CP 40-27 Vitória SC。",
+          "summary": "確認4件はKCB3勝1敗。8月のBO3/BO5は計5–0。",
           "items": [
             {
-              "date": "2026-03-01",
-              "label": "Sporting CP vs Vitória SC",
-              "result": "Sporting CP 40-27 Vitória SC（前半19-12）"
+              "date": "2026-08-27",
+              "label": "KCB vs Skillcamp / BO5",
+              "result": "3-0 W"
+            },
+            {
+              "date": "2026-08-13",
+              "label": "KCB vs Skillcamp / BO3",
+              "result": "2-0 W"
+            },
+            {
+              "date": "2026-08-06",
+              "label": "KCB vs Skillcamp / BO1",
+              "result": "0-1 L"
+            },
+            {
+              "date": "2026-04-15",
+              "label": "KCB vs Skillcamp / BO1",
+              "result": "1-0 W"
             }
           ]
         },
         "recent_form": {
           "side_a": {
-            "label": "Sporting CP",
-            "summary": "国内最上位級。10/2 Marítimo戦から中2日。",
-            "items": []
+            "label": "KCB",
+            "summary": "掲載直近10シリーズ7勝3敗。今大会4連勝。10件の全明細は未取得。",
+            "items": [
+              {
+                "date": "2026-09-29",
+                "label": "Heretics Academy",
+                "result": "2-1 W"
+              },
+              {
+                "date": "2026-09-28",
+                "label": "Nightbirds",
+                "result": "1-0 W"
+              },
+              {
+                "date": "2026-09-27",
+                "label": "UCAM",
+                "result": "1-0 W"
+              }
+            ]
           },
           "side_b": {
-            "label": "Vitória SC",
-            "summary": "直近詳細は公開取得不足。",
+            "label": "Skillcamp",
+            "summary": "掲載直近10シリーズ6勝4敗。直近5はKHK勝、Anubis負、Valerion負、JSK勝、BOMBA勝。全明細・平均マップ差未確認。",
             "items": []
           }
         },
         "common_opponent_comparison": {
-          "summary": "直近60日で十分な比較データ不足。",
+          "summary": "取得ページの直近60日比較は共通相手なし。網羅確認は未完了。",
           "items": []
         },
-        "season_flow": {
-          "text": "Campeonato Betclic Masculino第8節。SportingはChampions League並行の国内強豪。"
+        "ranking_or_rating": {
+          "text": "ENSI独自ランキングKCB17位・Skillcamp56位。公式世界ランキングではない。"
+        },
+        "home_away": {
+          "text": "オンライン。ホーム優位は加点しない。"
         },
         "availability": {
-          "text": "最終メンバー/欠場は試合直前確認対象。"
+          "text": "掲載ロスター KCB: Prime/Yukino/Kamiloo/Looki/Tao。Skillcamp: Steeelback/Spooky/Nafkelah/Yeti/Exofeng。当日確定メンバー・欠場未確認。"
         },
         "sport_specific": {
-          "text": "前回平均得失点差+13。前半から7点差を作っており、60分通した層の差を評価。"
+          "text": "BO5シリーズ勝者のみ。ドラフト・パッチ・ゲームハンデは別評価。"
+        },
+        "risk": "ロスター・パッチ変化、価格未確認。直近10全明細と平均マップ差はデータ不足。",
+        "market": {
+          "text": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
         }
       },
+      "sources": [
+        "https://ensigame.com/matches/lol/2138255-karmine-corp-blue-kcb-vs-skillcamp-sc-emea-07-10-26"
+      ],
+      "added_at": "2026-10-07T17:39:30+09:00",
+      "market": "match_winner",
+      "selection_label": "Karmine Corp Blue勝利",
+      "risk": "ロスター・パッチ変化、価格未確認。直近10全明細と平均マップ差はデータ不足。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+      "event_id": "web-kcb-skillcamp-20261008",
+      "match_id": "2026-10-08-kcb-skillcamp",
       "rank": 1
     },
     {
-      "matchup": "Solary vs Valerion",
-      "favored": "Solary",
-      "sport": "League of Legends（LoL）",
-      "competition": "EMEA Masters Summer 2026 — Round of 16",
-      "start_jst": "2026-10-07T01:00:00+09:00",
-      "status": "watch",
-      "gap_grade": "未判定",
-      "price_grade": "未確認",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "採用オッズ未登録",
-        "required_win_rate_pct": null
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "conclusion": "Solary勝利方向。10月7日01:00 JST、10月6日11:40時点から24時間以内。直近10戦は9勝1敗だがBO1/BO3/BO5混在。オッズ・当日選手変更・過去60日の共通相手比較は未確認。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-      "analysis_detail": {
-        "summary": "Solary勝利方向。10月7日01:00 JST、10月6日11:40時点から24時間以内。直近10戦は9勝1敗だがBO1/BO3/BO5混在。オッズ・当日選手変更・過去60日の共通相手比較は未確認。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。"
-      },
-      "sources": [
-        "https://www.sheepesports.com/en/all/matches/EMEA%20Masters%2F2026%20Season%2FSummer%20Main%20Event_Round%20of%2016_1"
-      ],
-      "added_at": "2026-10-06T00:22:13.588+09:00",
-      "market": "match_winner",
-      "selection_label": "Solary勝利",
-      "format": "Bo5",
-      "scope": "outside_24h",
-      "recent_form": "SolaryはBarça 3-0、T1 Academy 2-3、DN SOOPers Challengers 3-0、Movistar KOI Fénix 3-1。",
-      "risk": "移動・休養・ロスターと価格評価未完了。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-      "rank": 2
-    },
-    {
-      "matchup": "Itambé Minas vs JF Vôlei",
-      "favored": "Minas",
-      "sport": "男子バレーボール",
-      "competition": "Campeonato Mineiro 2026",
-      "start_jst": "2026-10-06T07:30:00+09:00",
-      "status": "watch",
-      "gap_grade": "未判定",
-      "price_grade": "未確認",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "採用オッズ未登録",
-        "required_win_rate_pct": null
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "conclusion": "ユーザー指定候補：Minas勝利。Minasは首位確定、JFは進出不可。Minasのローテーション予定が大きな注意点。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-      "analysis_detail": {
-        "summary": "ユーザー指定候補：Minas勝利。Minasは首位確定、JFは進出不可。Minasのローテーション予定が大きな注意点。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。"
-      },
-      "sources": [
-        "https://webvolei.com.br/jogos-de-volei-hoje-05-10-2026/"
-      ],
-      "added_at": "2026-10-06T00:22:13.588+09:00",
-      "market": "match_winner",
-      "selection_label": "Minas勝利",
-      "venue": "Arena UniBH, Belo Horizonte",
-      "risk": "順位確定後の消化試合。混成メンバー起用予定。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-      "rank": 3
-    },
-    {
-      "rank": 4,
-      "sport": "Counter-Strike 2",
-      "competition": "ESL Pro League Season 24 — Swiss Round 4",
-      "start_jst": "2026-10-06T21:00:00+09:00",
-      "matchup": "Spirit vs 1win",
-      "favored": "Spirit",
-      "venue": "LAN",
-      "format": "BO3",
+      "matchup": "Partizan vs Veszprém",
+      "favored": "Veszprém",
+      "sport": "男子ハンドボール",
+      "competition": "EHFチャンピオンズリーグ 2026/27・グループA 第3節",
+      "start_jst": "2026-10-08T01:45:00+09:00",
+      "venue": "ベオグラード（Partizanホーム）",
+      "format": "リーグ戦・60分",
       "status": "formal",
-      "gap_grade": "A+（88点）",
+      "gap_grade": "有力候補",
       "price_grade": "未確認",
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "購入オッズ未確認",
+        "book_examples": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
         "required_win_rate_pct": null
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "conclusion": "ユーザー承認でSpiritのシリーズ勝利を正式採用（100USD基準）。評価88/A+。直近10戦9勝1敗・20勝6敗MAP。1winの今大会好調を考慮。Veto未確定。1winは今大会G2・Legacyに勝利。共通相手は対戦日・大会条件が異なるためスコア差だけで断定しない。購入オッズ・推定勝率・期待値は未確認。88は格差評価点で勝率88%ではない。",
-      "risk": "Veto未確定。1winは今大会G2・Legacyに勝利。共通相手は対戦日・大会条件が異なるためスコア差だけで断定しない。購入オッズ・推定勝率・期待値は未確認。88は格差評価点で勝率88%ではない。",
+      "conclusion": "Veszprém勝利を正式採用。同じ今季CLのPorto・Berlin比較が支持。遠征とクラブ世界選手権後の疲労を警戒。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
       "analysis_detail": {
-        "summary": "ユーザー承認でSpiritのシリーズ勝利を正式採用（100USD基準）。評価88/A+。直近10戦9勝1敗・20勝6敗MAP。1winの今大会好調を考慮。Veto未確定。1winは今大会G2・Legacyに勝利。共通相手は対戦日・大会条件が異なるためスコア差だけで断定しない。購入オッズ・推定勝率・期待値は未確認。88は格差評価点で勝率88%ではない。",
+        "summary": "Veszprém勝利を正式採用。同じ今季CLのPorto・Berlin比較が支持。遠征とクラブ世界選手権後の疲労を警戒。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
         "h2h": {
-          "summary": "現ロスター同士の有効なH2Hは確認できず。評価材料に含めない。",
-          "items": []
+          "summary": "EHF記録1勝1敗、1999年の対戦。現戦力評価に加点しない。",
+          "items": [
+            {
+              "date": "1999-11-28",
+              "label": "Veszprém vs Partizan",
+              "result": "24-17",
+              "note": "他1件はPartizanホーム勝利。スコア未確認。"
+            }
+          ]
         },
         "recent_form": {
           "side_a": {
-            "label": "Spirit",
-            "summary": "直近10シリーズ9勝1敗、MAP20勝6敗、平均MAP差+1.4。日付未確認分は空欄。",
+            "label": "Partizan",
+            "summary": "今季CL0勝2敗。61得点76失点、平均30.5得点38失点、平均差−7.5。国内4連勝。直近10全明細は不足。",
             "items": [
               {
-                "date": null,
-                "label": "MOUZ",
-                "result": "0-2 L"
+                "label": "Berlin / CL",
+                "result": "33-44 L"
               },
               {
-                "date": null,
-                "label": "PARIVISION",
-                "result": "2-1 W"
+                "label": "Porto / CL",
+                "result": "28-32 L"
               },
               {
-                "date": null,
-                "label": "ShindeN",
-                "result": "2-1 W"
-              },
-              {
-                "date": null,
-                "label": "MOUZ",
-                "result": "3-1 W"
-              },
-              {
-                "date": null,
-                "label": "Falcons",
-                "result": "2-0 W"
-              },
-              {
-                "date": null,
-                "label": "FURIA",
-                "result": "2-0 W"
-              },
-              {
-                "date": null,
-                "label": "G2",
-                "result": "2-0 W"
-              },
-              {
-                "date": null,
-                "label": "DENDELE",
-                "result": "2-0 W"
-              },
-              {
-                "date": null,
-                "label": "FUT",
-                "result": "3-1 W"
-              },
-              {
-                "date": null,
-                "label": "Legacy",
-                "result": "2-0 W"
+                "label": "Jugovic / 国内",
+                "result": "34-24 W"
               }
             ]
           },
           "side_b": {
-            "label": "1win",
-            "summary": "直近10シリーズ5勝5敗、MAP11勝13敗、平均MAP差−0.2。日付未確認分は空欄。",
+            "label": "Veszprém",
+            "summary": "今季CL2勝0敗。71得点57失点、平均35.5得点28.5失点、平均差+7。直近10全明細は不足。",
             "items": [
               {
-                "date": null,
-                "label": "Legacy",
-                "result": "2-0 W"
+                "label": "Porto / CL",
+                "result": "36-28 W"
               },
               {
-                "date": null,
-                "label": "G2",
-                "result": "2-1 W"
+                "label": "Berlin / CL",
+                "result": "35-29 W"
               },
               {
-                "date": null,
-                "label": "Vitality",
-                "result": "0-2 L"
-              },
-              {
-                "date": null,
-                "label": "HEROIC",
-                "result": "1-2 L"
-              },
-              {
-                "date": null,
-                "label": "B8",
-                "result": "0-2 L"
-              },
-              {
-                "date": null,
-                "label": "Ninjas in Pyjamas",
-                "result": "2-1 W"
-              },
-              {
-                "date": null,
-                "label": "Nemiga",
-                "result": "0-2 L"
-              },
-              {
-                "date": null,
-                "label": "FOKUS",
-                "result": "0-2 L"
-              },
-              {
-                "date": null,
-                "label": "B8",
-                "result": "2-0 W"
-              },
-              {
-                "date": null,
-                "label": "INFINITE",
-                "result": "2-1 W"
+                "label": "Barcelona / クラブ世界選手権決勝",
+                "result": "42-33 W"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "直近約6週間の比較可能な3相手。対戦時期・条件の差あり。",
+          "summary": "同じ今季CLで共通相手2件。会場差あり。",
           "items": [
             {
-              "opponent": "G2",
+              "opponent": "Porto",
               "side_a": {
-                "date": null,
-                "result": "2-0 W"
+                "result": "28-32 L",
+                "performance": "−4"
               },
               "side_b": {
-                "date": null,
-                "result": "2-1 W"
+                "result": "36-28 W",
+                "performance": "+8"
               },
-              "comparison": "Spirit寄り"
+              "comparison": "Veszprém優位"
             },
             {
-              "opponent": "Legacy",
+              "opponent": "Berlin",
               "side_a": {
-                "date": null,
-                "result": "2-0 W"
+                "result": "33-44 L",
+                "performance": "−11"
               },
               "side_b": {
-                "date": null,
-                "result": "2-0 W"
+                "result": "35-29 W",
+                "performance": "+6"
               },
-              "comparison": "スコア上は互角"
-            },
-            {
-              "opponent": "Vitality",
-              "side_a": {
-                "date": null,
-                "result": "2-1 W"
-              },
-              "side_b": {
-                "date": null,
-                "result": "0-2 L"
-              },
-              "comparison": "Spirit寄り"
+              "comparison": "Veszprém優位"
             }
           ]
         },
         "ranking_or_rating": {
-          "text": "HLTV Spirit #1／1win #33。VRS #1／#23。"
+          "text": "CLグループA: Veszprém4ポイントで首位、Partizan0ポイント。"
         },
         "home_away": {
-          "text": "BO3 LAN。通常のホーム・アウェイ差なし。"
+          "text": "Partizanホーム、Veszprém遠征。"
         },
         "availability": {
-          "text": "Spirit: magixx/tN1R/sh1ro/donk/zont1x。1win: Ax1Le/ArtFr0st/fame/nafany/BELCHONOKK。当日変更は未確認。"
+          "text": "当日登録・欠場未確認。世界選手権後の疲労とローテーションを確認。"
         },
         "sport_specific": {
-          "text": "3マップともTBA、Veto前。donk対Ax1Le：Rating1.42対1.15、ADR94.3対81.3（過去3か月）。序盤の優劣は未判定。"
+          "text": "勝利のみ採用。大差ハンデ・前半市場は未採用。"
         },
+        "risk": "遠征・疲労・起用変更。H2Hが古く現ロスター比較に不適切。",
         "market": {
-          "text": "購入オッズ未確認。実際の取得価格を推測登録しない。必要勝率・期待値・利益額は未計算。"
-        },
-        "rationale": {
-          "why": [
-            "直近10戦9勝1敗",
-            "共通相手G2・Vitalityで優勢を示唆"
-          ],
-          "risks": [
-            "Veto未確定。1winは今大会G2・Legacyに勝利。共通相手は対戦日・大会条件が異なるためスコア差だけで断定しない。購入オッズ・推定勝率・期待値は未確認。88は格差評価点で勝率88%ではない。"
-          ],
-          "conclusion": "ユーザー承認でSpiritのシリーズ勝利を正式採用（100USD基準）。評価88/A+。直近10戦9勝1敗・20勝6敗MAP。1winの今大会好調を考慮。Veto未確定。1winは今大会G2・Legacyに勝利。共通相手は対戦日・大会条件が異なるためスコア差だけで断定しない。購入オッズ・推定勝率・期待値は未確認。88は格差評価点で勝率88%ではない。"
-        },
-        "missing_information": [
-          "購入オッズ",
-          "最終Veto",
-          "当日選手変更",
-          "独立した推定勝率"
-        ]
-      },
-      "sources": [
-        "https://www.hltv.org/matches/2398742/spirit-vs-1win-esl-pro-league-season-24"
-      ],
-      "added_at": "2026-10-06T12:06:16+09:00"
-    },
-    {
-      "rank": 5,
-      "sport": "女子バレーボール",
-      "competition": "トルコ女子スーパーカップ 2026",
-      "start_jst": "2026-10-07T00:00:00+09:00",
-      "matchup": "VakıfBank vs Eczacıbaşı",
-      "favored": "VakıfBank",
-      "venue": "Antalya Spor Salonu（中立地）",
-      "format": "BO5",
-      "status": "formal",
-      "gap_grade": "未判定",
-      "price_grade": "未確認",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "購入オッズ未確認",
-        "required_win_rate_pct": null
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "conclusion": "ユーザー指定でVakıfBankの試合勝利を正式採用（100USD基準）。アンタルヤ中立地。前季H2H確認5件4勝1敗・セット13–7。当日メンバー・欠場・オッズ・推定勝率・EV未確認。直近10戦は各1件のみ確認、共通相手比較はデータ不足。正式採用は購入実行を意味しません。",
-      "risk": "ユーザー指定でVakıfBankの試合勝利を正式採用（100USD基準）。アンタルヤ中立地。前季H2H確認5件4勝1敗・セット13–7。当日メンバー・欠場・オッズ・推定勝率・EV未確認。直近10戦は各1件のみ確認、共通相手比較はデータ不足。正式採用は購入実行を意味しません。",
-      "analysis_detail": {
-        "summary": "ユーザー指定でVakıfBankの試合勝利を正式採用（100USD基準）。アンタルヤ中立地。前季H2H確認5件4勝1敗・セット13–7。当日メンバー・欠場・オッズ・推定勝率・EV未確認。直近10戦は各1件のみ確認、共通相手比較はデータ不足。正式採用は購入実行を意味しません。",
-        "h2h": {
-          "summary": "前季確認5件4勝1敗、セット13–7、平均セット差+1.2。",
-          "items": [
-            {
-              "date": "2026-05-03",
-              "label": "VakıfBank側のスコア vs Eczacıbaşı",
-              "result": "3-1 W"
-            },
-            {
-              "date": "2026-04-02",
-              "label": "VakıfBank側のスコア vs Eczacıbaşı",
-              "result": "3-2 W"
-            },
-            {
-              "date": "2026-03-30",
-              "label": "VakıfBank側のスコア vs Eczacıbaşı",
-              "result": "3-0 W"
-            },
-            {
-              "date": "2026-03-25",
-              "label": "VakıfBank側のスコア vs Eczacıbaşı",
-              "result": "3-1 W"
-            },
-            {
-              "date": "2026-01-18",
-              "label": "VakıfBank側のスコア vs Eczacıbaşı",
-              "result": "1-3 L"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "VakıfBank",
-            "summary": "今季確認1件。直近10件は不足。",
-            "items": [
-              {
-                "date": "2026-10-03",
-                "label": "Beşiktaş",
-                "result": "3-1 W"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Eczacıbaşı",
-            "summary": "今季確認1件。0–2から逆転。直近10件は不足。",
-            "items": [
-              {
-                "date": "2026-10-03",
-                "label": "Nilüfer",
-                "result": "3-2 W"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "確認した今季各1試合では共通相手0件。直近60日全体は未確認。",
-          "items": []
-        },
-        "availability": {
-          "text": "当日先発・欠場未確認。"
-        },
-        "home_away": {
-          "text": "Antalya Spor Salonu、中立地。"
-        },
-        "market": {
-          "text": "オッズ・必要勝率・推定勝率・EV未確認。"
-        },
-        "sport_specific": {
-          "text": "BO5。試合勝者のみ採用。3–0やセットハンディではない。"
+          "text": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
         }
       },
       "sources": [
-        "https://www.vakifbanksporkulubu.com/tr/mac-fiksturu/axa-sigorta-sampiyonlar-kupasi2026-2027-sezonu-t54",
-        "https://www.eczacibasisporkulubu.org.tr/haberler/kupa-icin-sahaya-ckyoruz",
-        "https://womanleagues.com/tr/volleyball/turkish-super-cup-women/match/90e43729-8b65-4d9c-b7a3-2e535f7fa5cd"
+        "https://ehfeuro.eurohandball.com/men/2026/news/en/final-rematch-at-kielce-sporting-aim-to-conquer-szeged-s-fortress-in-round-3/"
       ],
-      "added_at": "2026-10-06T21:48:42+09:00"
+      "added_at": "2026-10-07T17:39:30+09:00",
+      "market": "match_winner",
+      "selection_label": "Veszprém勝利",
+      "risk": "遠征・疲労・起用変更。H2Hが古く現ロスター比較に不適切。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+      "home_side": "side_a",
+      "event_id": "web-partizan-veszprem-20261008",
+      "match_id": "2026-10-08-partizan-veszprem",
+      "rank": 2
     }
   ],
   "rejected_examples": [
@@ -499,9 +276,12 @@
     }
   ],
   "summary": {
-    "pure_gap_top": [],
+    "pure_gap_top": [
+      "Karmine Corp Blue vs Skillcamp",
+      "Partizan vs Veszprém"
+    ],
     "price_adjusted_top": [],
-    "caution": "追加8件は分析・ユーザー指定候補。採用オッズ未登録のため正式取引・収支に加算していません。終了/過去日付カードは履歴へ移動。Gauff・VARRELは結果確認待ち。"
+    "caution": "正式採用2件は各100USD基準。購入オッズ未確認・収益性未判定。終了済み5件は結果履歴と収支へ反映。"
   },
   "previous_analysis": {
     "generated_at": "2026-09-30T17:39:31+09:00",
@@ -2343,6 +2123,520 @@
         "result_updated_at": "2026-10-06T21:57:43+09:00",
         "archived_at": "2026-10-06T21:57:43+09:00",
         "archive_reason": "終了済み・ユーザー指示で勝利反映"
+      },
+      {
+        "sport": "男子ハンドボール",
+        "competition": "Campeonato Betclic Masculino 2026/27 — 第8節",
+        "start_jst": "2026-10-06T02:00:00+09:00",
+        "matchup": "Sporting CP vs Vitória SC",
+        "favored": "Sporting CP",
+        "venue": "Pavilhão João Rocha, Lisboa",
+        "format": "60分",
+        "status": "formal",
+        "gap_grade": "S",
+        "price_grade": "未判定",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "最新実オッズ未確認",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": "96.0",
+        "estimated_ev_pct": "未算出",
+        "ranking_rating": "Sporting CPは国内最上位級。Vitória SCとの前回直接対戦を13点差で勝利。",
+        "h2h": "直近確認H2Hは2026/03/01 Sporting CP 40-27 Vitória SC。前半19-12、後半21-15で両ハーフともSporting優位。",
+        "recent_form": "Sportingは10/2にMarítimo戦後、10/5ホームでVitória SC。国内戦とChampions Leagueを並行する上位クラブ。Vitória SCの直近詳細は公開取得不足。",
+        "common_opponents": "直近60日の十分な共通相手比較は未確認。ここはデータ不足として扱う。",
+        "roster": "Sporting前回H2HではÞorkelsson 8点、Salvador 6点、Martim Costa 6点など複数得点源。最終登録メンバーは直前確認対象。",
+        "early_tendency": "前回H2Hは前半19-12でSportingが7点先行。序盤から差を作れる傾向。",
+        "risk": "Sportingは過密日程。Vitória SCの直近状態・最新欠場・実オッズ未確認。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
+        "conclusion": "○ Sporting CP vs Vitória SC: 51–23。購入オッズ未登録のため利益額未計算。",
+        "sources": [
+          "https://portal.fpa.pt/jogo/323284/",
+          "https://www.sporting.pt/en/agenda/calendar?d=2026-10&recinto%3Destadio=",
+          "https://www.sporting.pt/en/games/handball/seniors/2026-03-01/sporting-cp-vitoria-sc",
+          "https://si.fpa.pt/fap_sa/usrpck_print.print_boletim?P_ID_PROVA_JOGO=301271&p_layout=P300632&p_sessao=1"
+        ],
+        "analysis_detail": {
+          "summary": "正式推奨。$100。価格は未確認のため収益性評価は保留。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
+          "h2h": {
+            "summary": "確認できた直近H2H: Sporting CP 40-27 Vitória SC。",
+            "items": [
+              {
+                "date": "2026-03-01",
+                "label": "Sporting CP vs Vitória SC",
+                "result": "Sporting CP 40-27 Vitória SC（前半19-12）"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Sporting CP",
+              "summary": "国内最上位級。10/2 Marítimo戦から中2日。",
+              "items": []
+            },
+            "side_b": {
+              "label": "Vitória SC",
+              "summary": "直近詳細は公開取得不足。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "直近60日で十分な比較データ不足。",
+            "items": []
+          },
+          "season_flow": {
+            "text": "Campeonato Betclic Masculino第8節。SportingはChampions League並行の国内強豪。"
+          },
+          "availability": {
+            "text": "最終メンバー/欠場は試合直前確認対象。"
+          },
+          "sport_specific": {
+            "text": "前回平均得失点差+13。前半から7点差を作っており、60分通した層の差を評価。"
+          }
+        },
+        "rank": 1,
+        "match_id": "2026-10-06-sporting-vitoria-handball",
+        "favored_result": "win",
+        "result": "○ Sporting CP vs Vitória SC: 51–23",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-07T17:39:30+09:00",
+        "archived_at": "2026-10-07T17:39:30+09:00",
+        "archive_reason": "終了済み・結果と収支集計へ反映",
+        "result_sources": [
+          "https://www.sporting.pt/pt/noticias/modalidades/andebol/2026-10-05/de-vitoria-em-vitoria"
+        ]
+      },
+      {
+        "matchup": "Solary vs Valerion",
+        "favored": "Solary",
+        "sport": "League of Legends（LoL）",
+        "competition": "EMEA Masters Summer 2026 — Round of 16",
+        "start_jst": "2026-10-07T01:00:00+09:00",
+        "status": "formal",
+        "gap_grade": "未判定",
+        "price_grade": "未確認",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "採用オッズ未登録",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "conclusion": "○ Solary vs Valerion: 3–0。購入オッズ未登録のため利益額未計算。",
+        "analysis_detail": {
+          "summary": "Solary勝利方向。10月7日01:00 JST、10月6日11:40時点から24時間以内。直近10戦は9勝1敗だがBO1/BO3/BO5混在。オッズ・当日選手変更・過去60日の共通相手比較は未確認。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。"
+        },
+        "sources": [
+          "https://www.sheepesports.com/en/all/matches/EMEA%20Masters%2F2026%20Season%2FSummer%20Main%20Event_Round%20of%2016_1"
+        ],
+        "added_at": "2026-10-06T00:22:13.588+09:00",
+        "market": "match_winner",
+        "selection_label": "Solary勝利",
+        "format": "Bo5",
+        "scope": "outside_24h",
+        "recent_form": "SolaryはBarça 3-0、T1 Academy 2-3、DN SOOPers Challengers 3-0、Movistar KOI Fénix 3-1。",
+        "risk": "移動・休養・ロスターと価格評価未完了。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
+        "rank": 2,
+        "match_id": "2026-10-07-solary-valerion",
+        "favored_result": "win",
+        "result": "○ Solary vs Valerion: 3–0",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-07T17:39:30+09:00",
+        "archived_at": "2026-10-07T17:39:30+09:00",
+        "archive_reason": "終了済み・結果と収支集計へ反映",
+        "result_sources": [
+          "https://esportsresults.com/match/lol/1698595/solary-vs-valerion"
+        ]
+      },
+      {
+        "matchup": "Itambé Minas vs JF Vôlei",
+        "favored": "Minas",
+        "sport": "男子バレーボール",
+        "competition": "Campeonato Mineiro 2026",
+        "start_jst": "2026-10-06T07:30:00+09:00",
+        "status": "formal",
+        "gap_grade": "未判定",
+        "price_grade": "未確認",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "採用オッズ未登録",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "conclusion": "× Itambé Minas vs JF Vôlei: 2–3。100USD基準の損失−100USD。",
+        "analysis_detail": {
+          "summary": "ユーザー指定候補：Minas勝利。Minasは首位確定、JFは進出不可。Minasのローテーション予定が大きな注意点。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。"
+        },
+        "sources": [
+          "https://webvolei.com.br/jogos-de-volei-hoje-05-10-2026/"
+        ],
+        "added_at": "2026-10-06T00:22:13.588+09:00",
+        "market": "match_winner",
+        "selection_label": "Minas勝利",
+        "venue": "Arena UniBH, Belo Horizonte",
+        "risk": "順位確定後の消化試合。混成メンバー起用予定。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
+        "rank": 3,
+        "match_id": "2026-10-06-minas-jf",
+        "favored_result": "loss",
+        "result": "× Itambé Minas vs JF Vôlei: 2–3",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-07T17:39:30+09:00",
+        "archived_at": "2026-10-07T17:39:30+09:00",
+        "archive_reason": "終了済み・結果と収支集計へ反映",
+        "result_sources": [
+          "https://webvolei.com.br/minas-x-jf-volei-virada-campeonato-mineiro/"
+        ]
+      },
+      {
+        "rank": 4,
+        "sport": "Counter-Strike 2",
+        "competition": "ESL Pro League Season 24 — Swiss Round 4",
+        "start_jst": "2026-10-06T21:00:00+09:00",
+        "matchup": "Spirit vs 1win",
+        "favored": "Spirit",
+        "venue": "LAN",
+        "format": "BO3",
+        "status": "formal",
+        "gap_grade": "A+（88点）",
+        "price_grade": "未確認",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "購入オッズ未確認",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "conclusion": "× Spirit vs 1win: 0–2。100USD基準の損失−100USD。",
+        "risk": "Veto未確定。1winは今大会G2・Legacyに勝利。共通相手は対戦日・大会条件が異なるためスコア差だけで断定しない。購入オッズ・推定勝率・期待値は未確認。88は格差評価点で勝率88%ではない。",
+        "analysis_detail": {
+          "summary": "ユーザー承認でSpiritのシリーズ勝利を正式採用（100USD基準）。評価88/A+。直近10戦9勝1敗・20勝6敗MAP。1winの今大会好調を考慮。Veto未確定。1winは今大会G2・Legacyに勝利。共通相手は対戦日・大会条件が異なるためスコア差だけで断定しない。購入オッズ・推定勝率・期待値は未確認。88は格差評価点で勝率88%ではない。",
+          "h2h": {
+            "summary": "現ロスター同士の有効なH2Hは確認できず。評価材料に含めない。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Spirit",
+              "summary": "直近10シリーズ9勝1敗、MAP20勝6敗、平均MAP差+1.4。日付未確認分は空欄。",
+              "items": [
+                {
+                  "date": null,
+                  "label": "MOUZ",
+                  "result": "0-2 L"
+                },
+                {
+                  "date": null,
+                  "label": "PARIVISION",
+                  "result": "2-1 W"
+                },
+                {
+                  "date": null,
+                  "label": "ShindeN",
+                  "result": "2-1 W"
+                },
+                {
+                  "date": null,
+                  "label": "MOUZ",
+                  "result": "3-1 W"
+                },
+                {
+                  "date": null,
+                  "label": "Falcons",
+                  "result": "2-0 W"
+                },
+                {
+                  "date": null,
+                  "label": "FURIA",
+                  "result": "2-0 W"
+                },
+                {
+                  "date": null,
+                  "label": "G2",
+                  "result": "2-0 W"
+                },
+                {
+                  "date": null,
+                  "label": "DENDELE",
+                  "result": "2-0 W"
+                },
+                {
+                  "date": null,
+                  "label": "FUT",
+                  "result": "3-1 W"
+                },
+                {
+                  "date": null,
+                  "label": "Legacy",
+                  "result": "2-0 W"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "1win",
+              "summary": "直近10シリーズ5勝5敗、MAP11勝13敗、平均MAP差−0.2。日付未確認分は空欄。",
+              "items": [
+                {
+                  "date": null,
+                  "label": "Legacy",
+                  "result": "2-0 W"
+                },
+                {
+                  "date": null,
+                  "label": "G2",
+                  "result": "2-1 W"
+                },
+                {
+                  "date": null,
+                  "label": "Vitality",
+                  "result": "0-2 L"
+                },
+                {
+                  "date": null,
+                  "label": "HEROIC",
+                  "result": "1-2 L"
+                },
+                {
+                  "date": null,
+                  "label": "B8",
+                  "result": "0-2 L"
+                },
+                {
+                  "date": null,
+                  "label": "Ninjas in Pyjamas",
+                  "result": "2-1 W"
+                },
+                {
+                  "date": null,
+                  "label": "Nemiga",
+                  "result": "0-2 L"
+                },
+                {
+                  "date": null,
+                  "label": "FOKUS",
+                  "result": "0-2 L"
+                },
+                {
+                  "date": null,
+                  "label": "B8",
+                  "result": "2-0 W"
+                },
+                {
+                  "date": null,
+                  "label": "INFINITE",
+                  "result": "2-1 W"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "直近約6週間の比較可能な3相手。対戦時期・条件の差あり。",
+            "items": [
+              {
+                "opponent": "G2",
+                "side_a": {
+                  "date": null,
+                  "result": "2-0 W"
+                },
+                "side_b": {
+                  "date": null,
+                  "result": "2-1 W"
+                },
+                "comparison": "Spirit寄り"
+              },
+              {
+                "opponent": "Legacy",
+                "side_a": {
+                  "date": null,
+                  "result": "2-0 W"
+                },
+                "side_b": {
+                  "date": null,
+                  "result": "2-0 W"
+                },
+                "comparison": "スコア上は互角"
+              },
+              {
+                "opponent": "Vitality",
+                "side_a": {
+                  "date": null,
+                  "result": "2-1 W"
+                },
+                "side_b": {
+                  "date": null,
+                  "result": "0-2 L"
+                },
+                "comparison": "Spirit寄り"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "HLTV Spirit #1／1win #33。VRS #1／#23。"
+          },
+          "home_away": {
+            "text": "BO3 LAN。通常のホーム・アウェイ差なし。"
+          },
+          "availability": {
+            "text": "Spirit: magixx/tN1R/sh1ro/donk/zont1x。1win: Ax1Le/ArtFr0st/fame/nafany/BELCHONOKK。当日変更は未確認。"
+          },
+          "sport_specific": {
+            "text": "3マップともTBA、Veto前。donk対Ax1Le：Rating1.42対1.15、ADR94.3対81.3（過去3か月）。序盤の優劣は未判定。"
+          },
+          "market": {
+            "text": "購入オッズ未確認。実際の取得価格を推測登録しない。必要勝率・期待値・利益額は未計算。"
+          },
+          "rationale": {
+            "why": [
+              "直近10戦9勝1敗",
+              "共通相手G2・Vitalityで優勢を示唆"
+            ],
+            "risks": [
+              "Veto未確定。1winは今大会G2・Legacyに勝利。共通相手は対戦日・大会条件が異なるためスコア差だけで断定しない。購入オッズ・推定勝率・期待値は未確認。88は格差評価点で勝率88%ではない。"
+            ],
+            "conclusion": "ユーザー承認でSpiritのシリーズ勝利を正式採用（100USD基準）。評価88/A+。直近10戦9勝1敗・20勝6敗MAP。1winの今大会好調を考慮。Veto未確定。1winは今大会G2・Legacyに勝利。共通相手は対戦日・大会条件が異なるためスコア差だけで断定しない。購入オッズ・推定勝率・期待値は未確認。88は格差評価点で勝率88%ではない。"
+          },
+          "missing_information": [
+            "購入オッズ",
+            "最終Veto",
+            "当日選手変更",
+            "独立した推定勝率"
+          ]
+        },
+        "sources": [
+          "https://www.hltv.org/matches/2398742/spirit-vs-1win-esl-pro-league-season-24"
+        ],
+        "added_at": "2026-10-06T12:06:16+09:00",
+        "match_id": "2026-10-06-spirit-1win-cs2",
+        "favored_result": "loss",
+        "result": "× Spirit vs 1win: 0–2",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-07T17:39:30+09:00",
+        "archived_at": "2026-10-07T17:39:30+09:00",
+        "archive_reason": "終了済み・結果と収支集計へ反映",
+        "result_sources": [
+          "https://www.hltv.org/news/45620/1win-stun-spirit-to-reach-esl-pro-league-playoffs"
+        ]
+      },
+      {
+        "rank": 5,
+        "sport": "女子バレーボール",
+        "competition": "トルコ女子スーパーカップ 2026",
+        "start_jst": "2026-10-07T00:00:00+09:00",
+        "matchup": "VakıfBank vs Eczacıbaşı",
+        "favored": "VakıfBank",
+        "venue": "Antalya Spor Salonu（中立地）",
+        "format": "BO5",
+        "status": "formal",
+        "gap_grade": "未判定",
+        "price_grade": "未確認",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "購入オッズ未確認",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "conclusion": "○ VakıfBank vs Eczacıbaşı: 3–2。購入オッズ未登録のため利益額未計算。",
+        "risk": "ユーザー指定でVakıfBankの試合勝利を正式採用（100USD基準）。アンタルヤ中立地。前季H2H確認5件4勝1敗・セット13–7。当日メンバー・欠場・オッズ・推定勝率・EV未確認。直近10戦は各1件のみ確認、共通相手比較はデータ不足。正式採用は購入実行を意味しません。",
+        "analysis_detail": {
+          "summary": "ユーザー指定でVakıfBankの試合勝利を正式採用（100USD基準）。アンタルヤ中立地。前季H2H確認5件4勝1敗・セット13–7。当日メンバー・欠場・オッズ・推定勝率・EV未確認。直近10戦は各1件のみ確認、共通相手比較はデータ不足。正式採用は購入実行を意味しません。",
+          "h2h": {
+            "summary": "前季確認5件4勝1敗、セット13–7、平均セット差+1.2。",
+            "items": [
+              {
+                "date": "2026-05-03",
+                "label": "VakıfBank側のスコア vs Eczacıbaşı",
+                "result": "3-1 W"
+              },
+              {
+                "date": "2026-04-02",
+                "label": "VakıfBank側のスコア vs Eczacıbaşı",
+                "result": "3-2 W"
+              },
+              {
+                "date": "2026-03-30",
+                "label": "VakıfBank側のスコア vs Eczacıbaşı",
+                "result": "3-0 W"
+              },
+              {
+                "date": "2026-03-25",
+                "label": "VakıfBank側のスコア vs Eczacıbaşı",
+                "result": "3-1 W"
+              },
+              {
+                "date": "2026-01-18",
+                "label": "VakıfBank側のスコア vs Eczacıbaşı",
+                "result": "1-3 L"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "VakıfBank",
+              "summary": "今季確認1件。直近10件は不足。",
+              "items": [
+                {
+                  "date": "2026-10-03",
+                  "label": "Beşiktaş",
+                  "result": "3-1 W"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Eczacıbaşı",
+              "summary": "今季確認1件。0–2から逆転。直近10件は不足。",
+              "items": [
+                {
+                  "date": "2026-10-03",
+                  "label": "Nilüfer",
+                  "result": "3-2 W"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "確認した今季各1試合では共通相手0件。直近60日全体は未確認。",
+            "items": []
+          },
+          "availability": {
+            "text": "当日先発・欠場未確認。"
+          },
+          "home_away": {
+            "text": "Antalya Spor Salonu、中立地。"
+          },
+          "market": {
+            "text": "オッズ・必要勝率・推定勝率・EV未確認。"
+          },
+          "sport_specific": {
+            "text": "BO5。試合勝者のみ採用。3–0やセットハンディではない。"
+          }
+        },
+        "sources": [
+          "https://www.vakifbanksporkulubu.com/tr/mac-fiksturu/axa-sigorta-sampiyonlar-kupasi2026-2027-sezonu-t54",
+          "https://www.eczacibasisporkulubu.org.tr/haberler/kupa-icin-sahaya-ckyoruz",
+          "https://womanleagues.com/tr/volleyball/turkish-super-cup-women/match/90e43729-8b65-4d9c-b7a3-2e535f7fa5cd"
+        ],
+        "added_at": "2026-10-06T21:48:42+09:00",
+        "match_id": "2026-10-07-vakifbank-eczacibasi",
+        "favored_result": "win",
+        "result": "○ VakıfBank vs Eczacıbaşı: 3–2",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-07T17:39:30+09:00",
+        "archived_at": "2026-10-07T17:39:30+09:00",
+        "archive_reason": "終了済み・結果と収支集計へ反映",
+        "result_sources": [
+          "https://m.aa.com.tr/tr/spor/2026-voleybol-kadinlar-axa-sigorta-sampiyonlar-kupasi-vakifbankin/4080148"
+        ]
       }
     ],
     "summary": {
@@ -2362,9 +2656,9 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 19,
-      "favored_losses": 2,
-      "pending": 2
+      "favored_wins": 25,
+      "favored_losses": 5,
+      "pending": 1
     }
   },
   "history_policy": {
@@ -2372,7 +2666,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-06T00:22:13.588+09:00",
-    "note": "ユーザー指示でItaly–Turkey、Montenegro–Armenia、India–West Indiesを本日の分析から削除（2026-10-06 11:10 JST）。"
+    "as_of": "2026-10-07T17:39:30+09:00",
+    "note": "新規2件正式採用・終了5件を履歴/結果/収支へ移動"
   }
 }
