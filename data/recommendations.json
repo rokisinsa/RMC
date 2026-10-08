@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-05T17:01:00+09:00",
+    "as_of": "2026-10-08T17:35:00+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
@@ -153,6 +153,12 @@
       "started_at": "2026-10-07T17:39:30+09:00",
       "slot": "adhoc",
       "note": "KCB・Veszprémを試合前に正式採用。Solary・Minasは既存候補の結果集計登録。"
+    },
+    {
+      "run_id": "rec-user-approved-20261008-1735",
+      "started_at": "2026-10-08T17:35:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー指定3カードを正式台帳に登録。正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
     }
   ],
   "picks": [
@@ -3432,6 +3438,111 @@
         "odds_unverified"
       ],
       "note": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
+    },
+    {
+      "id": "rec-2026-10-09-berlin-porto",
+      "system": "recommendations",
+      "match_id": "2026-10-09-berlin-porto",
+      "run_id": "rec-user-approved-20261008-1735",
+      "source_event_id": "web-2026-10-09-berlin-porto",
+      "market": "match_winner",
+      "market_label": "試合勝者：Füchse Berlin",
+      "selection": "side_a",
+      "selection_label": "Füchse Berlin",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-08T17:10:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-08T17:35:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "有力候補（ユーザー正式採用）",
+        "model_version": "user-approved-analysis-20261008",
+        "summary": "Füchse Berlinの勝利をユーザー指定で正式採用。正式採用は購入実行の記録ではない。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
+    },
+    {
+      "id": "rec-2026-10-08-jdt-svay-rieng",
+      "system": "recommendations",
+      "match_id": "2026-10-08-jdt-svay-rieng",
+      "run_id": "rec-user-approved-20261008-1735",
+      "source_event_id": "web-2026-10-08-jdt-svay-rieng",
+      "market": "match_winner",
+      "market_label": "試合勝者：Johor Darul Ta'zim",
+      "selection": "side_a",
+      "selection_label": "Johor Darul Ta'zim",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-08T17:10:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-08T17:35:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "有力候補（ユーザー正式採用）",
+        "model_version": "user-approved-analysis-20261008",
+        "summary": "Johor Darul Ta'zimの勝利をユーザー指定で正式採用。正式採用は購入実行の記録ではない。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
+    },
+    {
+      "id": "rec-2026-10-09-barca-dinamo",
+      "system": "recommendations",
+      "match_id": "2026-10-09-barca-dinamo",
+      "run_id": "rec-user-approved-20261008-1735",
+      "source_event_id": "web-2026-10-09-barca-dinamo",
+      "market": "match_winner",
+      "market_label": "試合勝者：Barça",
+      "selection": "side_a",
+      "selection_label": "Barça",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-08T17:35:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-08T17:35:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "有力候補（ユーザー正式採用）",
+        "model_version": "user-approved-analysis-20261008",
+        "summary": "Barça勝利を正式採用。CLの出足とホーム開催を評価。ただし直近の強豪戦敗北、当日メンバー、価格は要注意。 正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
     }
   ]
 }

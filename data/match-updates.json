@@ -1180,6 +1180,68 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-results-20261008-1735",
+      "kind": "result_update",
+      "at": "2026-10-08T17:35:00+09:00",
+      "source": "試合結果本文の照合",
+      "note": "履歴表示の確定結果を精算・週次集計元にも反映。利益はオッズ未確認で未計算。",
+      "changes": [
+        {
+          "match_id": "2026-10-08-kcb-skillcamp",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 0
+              },
+              "text": "3–0"
+            },
+            "result_confirmed_at": "2026-10-08T17:35:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Sheep Esports",
+                "url": "https://www.sheepesports.com/en/cs/matches/EMEA%20Masters%2F2026%20Season%2FSummer%20Main%20Event_Round%20of%2016_6",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-08T17:35:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "終了済みスコアを本文確認。購入オッズは補完しない。"
+          }
+        },
+        {
+          "match_id": "2026-10-08-partizan-veszprem",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 26,
+                "b": 37
+              },
+              "text": "26–37"
+            },
+            "result_confirmed_at": "2026-10-08T17:35:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "EHF公式試合報告",
+                "url": "https://ehfeuro.eurohandball.com/men/2026/news/en/veszprem-and-magdeburg-keep-perfect-records-kriens-luzern-take-first-points-ever/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-08T17:35:00+09:00",
+            "source_confidence": "official",
+            "note": "終了済みスコアを本文確認。購入オッズは補完しない。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }
