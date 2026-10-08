@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-07T17:39:30+09:00",
+  "generated_at": "2026-10-08T17:10:00+09:00",
   "window": {
-    "from": "2026-10-07T17:39:30+09:00",
-    "to": "2026-10-08T17:39:30+09:00",
+    "from": "2026-10-08T17:10:00+09:00",
+    "to": "2026-10-09T17:10:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "ユーザー指定2件。終了済み試合は履歴へ移動。"
+    "note": "ユーザー指定Berlin/JDTの2件を正式追加。KCB・Partizan終了済みを結果履歴へ移動。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -27,240 +27,124 @@
   },
   "candidates": [
     {
-      "matchup": "Karmine Corp Blue vs Skillcamp",
-      "favored": "Karmine Corp Blue",
-      "sport": "League of Legends（LoL）",
-      "competition": "EMEAマスターズ 2026 夏季・ベスト16",
-      "start_jst": "2026-10-08T01:00:00+09:00",
-      "venue": "オンライン（開催詳細未確認）",
-      "format": "BO5",
+      "matchup": "Füchse Berlin vs FC Porto",
+      "favored": "Füchse Berlin",
+      "sport": "男子ハンドボール",
+      "competition": "EHFチャンピオンズリーグ 2026/27 グループA 第3節",
+      "start_jst": "2026-10-09T01:45:00+09:00",
+      "venue": "Berlinホーム",
+      "format": "60分・勝敗市場",
       "status": "formal",
-      "gap_grade": "有力候補",
+      "gap_grade": "A",
       "price_grade": "未確認",
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+        "book_examples": "正式採用は購入実行の記録ではない。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。",
         "required_win_rate_pct": null
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "conclusion": "KCBのシリーズ勝利を正式採用。最近の複数ゲーム制H2Hは2–0、3–0。3–0のスコア予想ではない。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+      "conclusion": "Füchse Berlinの勝利をユーザー指定で正式採用。正式採用は購入実行の記録ではない。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。",
       "analysis_detail": {
-        "summary": "KCBのシリーズ勝利を正式採用。最近の複数ゲーム制H2Hは2–0、3–0。3–0のスコア予想ではない。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+        "summary": "Füchse Berlin優勢。正式採用は購入実行の記録ではない。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。",
         "h2h": {
-          "summary": "確認4件はKCB3勝1敗。8月のBO3/BO5は計5–0。",
-          "items": [
-            {
-              "date": "2026-08-27",
-              "label": "KCB vs Skillcamp / BO5",
-              "result": "3-0 W"
-            },
-            {
-              "date": "2026-08-13",
-              "label": "KCB vs Skillcamp / BO3",
-              "result": "2-0 W"
-            },
-            {
-              "date": "2026-08-06",
-              "label": "KCB vs Skillcamp / BO1",
-              "result": "0-1 L"
-            },
-            {
-              "date": "2026-04-15",
-              "label": "KCB vs Skillcamp / BO1",
-              "result": "1-0 W"
-            }
-          ]
+          "summary": "EHF記録：Berlin 5勝0敗。最終2019年24-20。",
+          "items": []
         },
         "recent_form": {
           "side_a": {
-            "label": "KCB",
-            "summary": "掲載直近10シリーズ7勝3敗。今大会4連勝。10件の全明細は未取得。",
-            "items": [
-              {
-                "date": "2026-09-29",
-                "label": "Heretics Academy",
-                "result": "2-1 W"
-              },
-              {
-                "date": "2026-09-28",
-                "label": "Nightbirds",
-                "result": "1-0 W"
-              },
-              {
-                "date": "2026-09-27",
-                "label": "UCAM",
-                "result": "1-0 W"
-              }
-            ]
+            "label": "Füchse Berlin",
+            "summary": "今季CL Berlin1勝1敗73得点68失点、Porto1勝1敗60得点64失点。Gidsel出場未確認。",
+            "items": []
           },
           "side_b": {
-            "label": "Skillcamp",
-            "summary": "掲載直近10シリーズ6勝4敗。直近5はKHK勝、Anubis負、Valerion負、JSK勝、BOMBA勝。全明細・平均マップ差未確認。",
+            "label": "FC Porto",
+            "summary": "直近10全件未確認",
             "items": []
           }
         },
         "common_opponent_comparison": {
-          "summary": "取得ページの直近60日比較は共通相手なし。網羅確認は未完了。",
+          "summary": "今季CL共通相手：Partizan Berlin44-33 / Porto32-28、Veszprém Berlin29-35 / Porto28-36。両方Berlinが得失点差で上。",
           "items": []
         },
-        "ranking_or_rating": {
-          "text": "ENSI独自ランキングKCB17位・Skillcamp56位。公式世界ランキングではない。"
-        },
-        "home_away": {
-          "text": "オンライン。ホーム優位は加点しない。"
-        },
         "availability": {
-          "text": "掲載ロスター KCB: Prime/Yukino/Kamiloo/Looki/Tao。Skillcamp: Steeelback/Spooky/Nafkelah/Yeti/Exofeng。当日確定メンバー・欠場未確認。"
+          "text": "当日出場・欠場未確認"
         },
-        "sport_specific": {
-          "text": "BO5シリーズ勝者のみ。ドラフト・パッチ・ゲームハンデは別評価。"
-        },
-        "risk": "ロスター・パッチ変化、価格未確認。直近10全明細と平均マップ差はデータ不足。",
         "market": {
-          "text": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
+          "text": "正式採用は購入実行の記録ではない。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
         }
       },
       "sources": [
-        "https://ensigame.com/matches/lol/2138255-karmine-corp-blue-kcb-vs-skillcamp-sc-emea-07-10-26"
+        "https://portal.fpa.pt/2026/10/ehf-champions-league-dragoes-procuram-vitoria-inedita-frente-ao-fuchse-berlin/"
       ],
-      "added_at": "2026-10-07T17:39:30+09:00",
+      "added_at": "2026-10-08T17:10:00+09:00",
       "market": "match_winner",
-      "selection_label": "Karmine Corp Blue勝利",
-      "risk": "ロスター・パッチ変化、価格未確認。直近10全明細と平均マップ差はデータ不足。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
-      "event_id": "web-kcb-skillcamp-20261008",
-      "match_id": "2026-10-08-kcb-skillcamp",
-      "rank": 1
+      "selection_label": "Füchse Berlin勝利",
+      "match_id": "2026-10-09-berlin-porto",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "購入オッズ未確認・損益未確定"
     },
     {
-      "matchup": "Partizan vs Veszprém",
-      "favored": "Veszprém",
-      "sport": "男子ハンドボール",
-      "competition": "EHFチャンピオンズリーグ 2026/27・グループA 第3節",
-      "start_jst": "2026-10-08T01:45:00+09:00",
-      "venue": "ベオグラード（Partizanホーム）",
-      "format": "リーグ戦・60分",
+      "matchup": "Johor Darul Ta'zim vs PKR Svay Rieng",
+      "favored": "Johor Darul Ta'zim",
+      "sport": "サッカー",
+      "competition": "ASEANクラブ選手権 2026/27",
+      "start_jst": "2026-10-08T21:00:00+09:00",
+      "venue": "Sultan Ibrahim Stadium・JDTホーム",
+      "format": "90分・勝敗市場",
       "status": "formal",
-      "gap_grade": "有力候補",
+      "gap_grade": "B+",
       "price_grade": "未確認",
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+        "book_examples": "正式採用は購入実行の記録ではない。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。",
         "required_win_rate_pct": null
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "conclusion": "Veszprém勝利を正式採用。同じ今季CLのPorto・Berlin比較が支持。遠征とクラブ世界選手権後の疲労を警戒。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+      "conclusion": "Johor Darul Ta'zimの勝利をユーザー指定で正式採用。正式採用は購入実行の記録ではない。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。",
       "analysis_detail": {
-        "summary": "Veszprém勝利を正式採用。同じ今季CLのPorto・Berlin比較が支持。遠征とクラブ世界選手権後の疲労を警戒。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+        "summary": "Johor Darul Ta'zim優勢。正式採用は購入実行の記録ではない。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。",
         "h2h": {
-          "summary": "EHF記録1勝1敗、1999年の対戦。現戦力評価に加点しない。",
-          "items": [
-            {
-              "date": "1999-11-28",
-              "label": "Veszprém vs Partizan",
-              "result": "24-17",
-              "note": "他1件はPartizanホーム勝利。スコア未確認。"
-            }
-          ]
+          "summary": "2025-12-04 Svay Rieng 2-2 JDT、確認1試合0勝1分0敗。",
+          "items": []
         },
         "recent_form": {
           "side_a": {
-            "label": "Partizan",
-            "summary": "今季CL0勝2敗。61得点76失点、平均30.5得点38失点、平均差−7.5。国内4連勝。直近10全明細は不足。",
-            "items": [
-              {
-                "label": "Berlin / CL",
-                "result": "33-44 L"
-              },
-              {
-                "label": "Porto / CL",
-                "result": "28-32 L"
-              },
-              {
-                "label": "Jugovic / 国内",
-                "result": "34-24 W"
-              }
-            ]
+            "label": "Johor Darul Ta'zim",
+            "summary": "JDT最近確認5試合4勝1分、24得点3失点。Svay Riengの直近10全件未確認。",
+            "items": []
           },
           "side_b": {
-            "label": "Veszprém",
-            "summary": "今季CL2勝0敗。71得点57失点、平均35.5得点28.5失点、平均差+7。直近10全明細は不足。",
-            "items": [
-              {
-                "label": "Porto / CL",
-                "result": "36-28 W"
-              },
-              {
-                "label": "Berlin / CL",
-                "result": "35-29 W"
-              },
-              {
-                "label": "Barcelona / クラブ世界選手権決勝",
-                "result": "42-33 W"
-              }
-            ]
+            "label": "PKR Svay Rieng",
+            "summary": "直近10全件未確認",
+            "items": []
           }
         },
         "common_opponent_comparison": {
-          "summary": "同じ今季CLで共通相手2件。会場差あり。",
-          "items": [
-            {
-              "opponent": "Porto",
-              "side_a": {
-                "result": "28-32 L",
-                "performance": "−4"
-              },
-              "side_b": {
-                "result": "36-28 W",
-                "performance": "+8"
-              },
-              "comparison": "Veszprém優位"
-            },
-            {
-              "opponent": "Berlin",
-              "side_a": {
-                "result": "33-44 L",
-                "performance": "−11"
-              },
-              "side_b": {
-                "result": "35-29 W",
-                "performance": "+6"
-              },
-              "comparison": "Veszprém優位"
-            }
-          ]
-        },
-        "ranking_or_rating": {
-          "text": "CLグループA: Veszprém4ポイントで首位、Partizan0ポイント。"
-        },
-        "home_away": {
-          "text": "Partizanホーム、Veszprém遠征。"
+          "summary": "直近同条件の共通対戦相手比較はデータ不足。国内リーグの大量得点は相手のレベル差に注意。",
+          "items": []
         },
         "availability": {
-          "text": "当日登録・欠場未確認。世界選手権後の疲労とローテーションを確認。"
+          "text": "当日出場・欠場未確認"
         },
-        "sport_specific": {
-          "text": "勝利のみ採用。大差ハンデ・前半市場は未採用。"
-        },
-        "risk": "遠征・疲労・起用変更。H2Hが古く現ロスター比較に不適切。",
         "market": {
-          "text": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
+          "text": "正式採用は購入実行の記録ではない。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
         }
       },
       "sources": [
-        "https://ehfeuro.eurohandball.com/men/2026/news/en/final-rematch-at-kielce-sporting-aim-to-conquer-szeged-s-fortress-in-round-3/"
+        "https://johorsoutherntigers.my/team/johor-darul-tazim-fc/results/"
       ],
-      "added_at": "2026-10-07T17:39:30+09:00",
+      "added_at": "2026-10-08T17:10:00+09:00",
       "market": "match_winner",
-      "selection_label": "Veszprém勝利",
-      "risk": "遠征・疲労・起用変更。H2Hが古く現ロスター比較に不適切。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
-      "home_side": "side_a",
-      "event_id": "web-partizan-veszprem-20261008",
-      "match_id": "2026-10-08-partizan-veszprem",
-      "rank": 2
+      "selection_label": "Johor Darul Ta'zim勝利",
+      "match_id": "2026-10-08-jdt-svay-rieng",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "購入オッズ未確認・損益未確定"
     }
   ],
   "rejected_examples": [
@@ -277,11 +161,11 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "Karmine Corp Blue vs Skillcamp",
-      "Partizan vs Veszprém"
+      "Füchse Berlin vs FC Porto",
+      "Johor Darul Ta'zim vs PKR Svay Rieng"
     ],
     "price_adjusted_top": [],
-    "caution": "正式採用2件は各100USD基準。購入オッズ未確認・収益性未判定。終了済み5件は結果履歴と収支へ反映。"
+    "caution": "新規2件は100USD基準、購入オッズ未確認。終了済みKCB 3-0・Veszprém 37-26を的中として履歴へ。実現損益・累計損益はオッズ未確認につき算出不能。"
   },
   "previous_analysis": {
     "generated_at": "2026-09-30T17:39:31+09:00",
@@ -2637,6 +2521,266 @@
         "result_sources": [
           "https://m.aa.com.tr/tr/spor/2026-voleybol-kadinlar-axa-sigorta-sampiyonlar-kupasi-vakifbankin/4080148"
         ]
+      },
+      {
+        "matchup": "Karmine Corp Blue vs Skillcamp",
+        "favored": "Karmine Corp Blue",
+        "sport": "League of Legends（LoL）",
+        "competition": "EMEAマスターズ 2026 夏季・ベスト16",
+        "start_jst": "2026-10-08T01:00:00+09:00",
+        "venue": "オンライン（開催詳細未確認）",
+        "format": "BO5",
+        "status": "formal",
+        "gap_grade": "有力候補",
+        "price_grade": "未確認",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "conclusion": "KCBのシリーズ勝利を正式採用。最近の複数ゲーム制H2Hは2–0、3–0。3–0のスコア予想ではない。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+        "analysis_detail": {
+          "summary": "KCBのシリーズ勝利を正式採用。最近の複数ゲーム制H2Hは2–0、3–0。3–0のスコア予想ではない。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+          "h2h": {
+            "summary": "確認4件はKCB3勝1敗。8月のBO3/BO5は計5–0。",
+            "items": [
+              {
+                "date": "2026-08-27",
+                "label": "KCB vs Skillcamp / BO5",
+                "result": "3-0 W"
+              },
+              {
+                "date": "2026-08-13",
+                "label": "KCB vs Skillcamp / BO3",
+                "result": "2-0 W"
+              },
+              {
+                "date": "2026-08-06",
+                "label": "KCB vs Skillcamp / BO1",
+                "result": "0-1 L"
+              },
+              {
+                "date": "2026-04-15",
+                "label": "KCB vs Skillcamp / BO1",
+                "result": "1-0 W"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "KCB",
+              "summary": "掲載直近10シリーズ7勝3敗。今大会4連勝。10件の全明細は未取得。",
+              "items": [
+                {
+                  "date": "2026-09-29",
+                  "label": "Heretics Academy",
+                  "result": "2-1 W"
+                },
+                {
+                  "date": "2026-09-28",
+                  "label": "Nightbirds",
+                  "result": "1-0 W"
+                },
+                {
+                  "date": "2026-09-27",
+                  "label": "UCAM",
+                  "result": "1-0 W"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Skillcamp",
+              "summary": "掲載直近10シリーズ6勝4敗。直近5はKHK勝、Anubis負、Valerion負、JSK勝、BOMBA勝。全明細・平均マップ差未確認。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "取得ページの直近60日比較は共通相手なし。網羅確認は未完了。",
+            "items": []
+          },
+          "ranking_or_rating": {
+            "text": "ENSI独自ランキングKCB17位・Skillcamp56位。公式世界ランキングではない。"
+          },
+          "home_away": {
+            "text": "オンライン。ホーム優位は加点しない。"
+          },
+          "availability": {
+            "text": "掲載ロスター KCB: Prime/Yukino/Kamiloo/Looki/Tao。Skillcamp: Steeelback/Spooky/Nafkelah/Yeti/Exofeng。当日確定メンバー・欠場未確認。"
+          },
+          "sport_specific": {
+            "text": "BO5シリーズ勝者のみ。ドラフト・パッチ・ゲームハンデは別評価。"
+          },
+          "risk": "ロスター・パッチ変化、価格未確認。直近10全明細と平均マップ差はデータ不足。",
+          "market": {
+            "text": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
+          }
+        },
+        "sources": [
+          "https://ensigame.com/matches/lol/2138255-karmine-corp-blue-kcb-vs-skillcamp-sc-emea-07-10-26"
+        ],
+        "added_at": "2026-10-07T17:39:30+09:00",
+        "market": "match_winner",
+        "selection_label": "Karmine Corp Blue勝利",
+        "risk": "ロスター・パッチ変化、価格未確認。直近10全明細と平均マップ差はデータ不足。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+        "event_id": "web-kcb-skillcamp-20261008",
+        "match_id": "2026-10-08-kcb-skillcamp",
+        "rank": 1,
+        "favored_result": "win",
+        "result": "○ Karmine Corp Blue 3-0 Skillcamp",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-08T17:10:00+09:00",
+        "archived_at": "2026-10-08T17:10:00+09:00",
+        "archive_reason": "終了済み・結果確定、購入オッズ未確認のため利益未確定",
+        "result_sources": [
+          "https://www.sheepesports.com/en/cs/matches/EMEA%20Masters%2F2026%20Season%2FSummer%20Main%20Event_Round%20of%2016_6"
+        ],
+        "profit_usd": null,
+        "profit_status": "購入オッズ未確認"
+      },
+      {
+        "matchup": "Partizan vs Veszprém",
+        "favored": "Veszprém",
+        "sport": "男子ハンドボール",
+        "competition": "EHFチャンピオンズリーグ 2026/27・グループA 第3節",
+        "start_jst": "2026-10-08T01:45:00+09:00",
+        "venue": "ベオグラード（Partizanホーム）",
+        "format": "リーグ戦・60分",
+        "status": "formal",
+        "gap_grade": "有力候補",
+        "price_grade": "未確認",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "conclusion": "Veszprém勝利を正式採用。同じ今季CLのPorto・Berlin比較が支持。遠征とクラブ世界選手権後の疲労を警戒。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+        "analysis_detail": {
+          "summary": "Veszprém勝利を正式採用。同じ今季CLのPorto・Berlin比較が支持。遠征とクラブ世界選手権後の疲労を警戒。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+          "h2h": {
+            "summary": "EHF記録1勝1敗、1999年の対戦。現戦力評価に加点しない。",
+            "items": [
+              {
+                "date": "1999-11-28",
+                "label": "Veszprém vs Partizan",
+                "result": "24-17",
+                "note": "他1件はPartizanホーム勝利。スコア未確認。"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Partizan",
+              "summary": "今季CL0勝2敗。61得点76失点、平均30.5得点38失点、平均差−7.5。国内4連勝。直近10全明細は不足。",
+              "items": [
+                {
+                  "label": "Berlin / CL",
+                  "result": "33-44 L"
+                },
+                {
+                  "label": "Porto / CL",
+                  "result": "28-32 L"
+                },
+                {
+                  "label": "Jugovic / 国内",
+                  "result": "34-24 W"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Veszprém",
+              "summary": "今季CL2勝0敗。71得点57失点、平均35.5得点28.5失点、平均差+7。直近10全明細は不足。",
+              "items": [
+                {
+                  "label": "Porto / CL",
+                  "result": "36-28 W"
+                },
+                {
+                  "label": "Berlin / CL",
+                  "result": "35-29 W"
+                },
+                {
+                  "label": "Barcelona / クラブ世界選手権決勝",
+                  "result": "42-33 W"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "同じ今季CLで共通相手2件。会場差あり。",
+            "items": [
+              {
+                "opponent": "Porto",
+                "side_a": {
+                  "result": "28-32 L",
+                  "performance": "−4"
+                },
+                "side_b": {
+                  "result": "36-28 W",
+                  "performance": "+8"
+                },
+                "comparison": "Veszprém優位"
+              },
+              {
+                "opponent": "Berlin",
+                "side_a": {
+                  "result": "33-44 L",
+                  "performance": "−11"
+                },
+                "side_b": {
+                  "result": "35-29 W",
+                  "performance": "+6"
+                },
+                "comparison": "Veszprém優位"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "CLグループA: Veszprém4ポイントで首位、Partizan0ポイント。"
+          },
+          "home_away": {
+            "text": "Partizanホーム、Veszprém遠征。"
+          },
+          "availability": {
+            "text": "当日登録・欠場未確認。世界選手権後の疲労とローテーションを確認。"
+          },
+          "sport_specific": {
+            "text": "勝利のみ採用。大差ハンデ・前半市場は未採用。"
+          },
+          "risk": "遠征・疲労・起用変更。H2Hが古く現ロスター比較に不適切。",
+          "market": {
+            "text": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
+          }
+        },
+        "sources": [
+          "https://ehfeuro.eurohandball.com/men/2026/news/en/final-rematch-at-kielce-sporting-aim-to-conquer-szeged-s-fortress-in-round-3/"
+        ],
+        "added_at": "2026-10-07T17:39:30+09:00",
+        "market": "match_winner",
+        "selection_label": "Veszprém勝利",
+        "risk": "遠征・疲労・起用変更。H2Hが古く現ロスター比較に不適切。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
+        "home_side": "side_a",
+        "event_id": "web-partizan-veszprem-20261008",
+        "match_id": "2026-10-08-partizan-veszprem",
+        "rank": 2,
+        "favored_result": "win",
+        "result": "○ Partizan 26-37 Veszprém",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-08T17:10:00+09:00",
+        "archived_at": "2026-10-08T17:10:00+09:00",
+        "archive_reason": "終了済み・結果確定、購入オッズ未確認のため利益未確定",
+        "result_sources": [
+          "https://ehfcl.eurohandball.com/men/2026-27/news/en/veszprem-and-magdeburg-keep-perfect-records-kriens-luzern-take-first-points-ever/"
+        ],
+        "profit_usd": null,
+        "profit_status": "購入オッズ未確認"
       }
     ],
     "summary": {
@@ -2666,7 +2810,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-07T17:39:30+09:00",
-    "note": "新規2件正式採用・終了5件を履歴/結果/収支へ移動"
+    "as_of": "2026-10-08T17:10:00+09:00",
+    "note": "ユーザー指定2件追加、終了2件の公式結果を履歴へ。未確認の収益は0扱いせず未確定。"
   }
 }
