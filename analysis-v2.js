@@ -211,6 +211,26 @@ function renderTodayGapAnalysis(a, recommendationCandidates = []) {
 }
 
 
+function renderArchivedGapDetail(c) {
+  if (!c.analysis_reviewed_at || !c.analysis_detail) return "";
+  const d=c.analysis_detail;
+  const links=[...new Set([...(c.sources??[]),...(c.result_sources??[])])]
+    .filter(url=>/^https?:\/\//i.test(url))
+    .map((url,i)=>`<a href="${safeText(url)}" target="_blank" rel="noopener noreferrer">出典${i+1}</a>`).join(" ／ ");
+  return `<details style="margin-top:8px"><summary>詳細分析・確定結果を開く</summary>
+    <div class="sub">履歴追記：${safeText(c.analysis_reviewed_at)}</div>
+    <p>${safeText(d.summary)}</p>
+    <h4>試合前の大会成績</h4><p>${safeText(d.season_flow?.text??c.ranking_rating)}</p>
+    <h4>試合前H2H</h4>${gapH2HBlock(d.h2h,c.h2h)}
+    <h4>試合前の直近成績（確認できた範囲）</h4>${gapRecentTable(d.recent_form)}
+    <h4>共通対戦相手</h4>${gapCommonOpponentBlock(d.common_opponent_comparison,c.common_opponents)}
+    <h4>メンバー・競技固有の条件</h4><p>${safeText(d.availability?.text??c.roster)}</p><p>${safeText(d.sport_specific?.text??c.early_tendency)}</p>
+    <h4>不確実性・価格</h4><p>${safeText(c.risk)}</p><p>${safeText(c.estimated_ev_pct)}。購入オッズ未登録のため利益額未計算。</p>
+    <h4>事後の確定結果</h4><p>${safeText(d.post_match?.text??c.result)}</p>
+    <div class="analysis-sources">${links}</div>
+  </details>`;
+}
+
 function renderPreviousGapAnalysis(prev) {
   if (!prev?.candidates?.length) return "";
   const rows = [...prev.candidates]
@@ -225,12 +245,12 @@ function renderPreviousGapAnalysis(prev) {
         <td style="white-space:nowrap">${safeText(c.gap_grade ?? "—")}</td>
         <td style="white-space:nowrap;color:${tone};font-weight:900;font-size:18px">${mark}</td>
         <td><strong>${safeText(c.result ?? "未確定")}</strong><div class="sub">事前優勢: ${safeText(c.favored ?? "—")}</div></td>
-        <td>${safeText(c.conclusion ?? c.risk ?? "—")}</td>
+        <td>${safeText(c.conclusion ?? c.risk ?? "—")}${renderArchivedGapDetail(c)}</td>
       </tr>`;
     }).join("");
   const rs=prev.result_summary;
   return `<details style="margin:14px 0 18px;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px 10px">
-    <summary style="cursor:pointer;font-size:12px;font-weight:800;color:#9fc9da">前回11件の分析・結果（${safeText(prev.generated_at ?? "—")}）</summary>
+    <summary style="cursor:pointer;font-size:12px;font-weight:800;color:#9fc9da">分析履歴・結果（${prev.candidates.length}件）</summary>
     <div class="sub" style="margin:8px 2px">前回分析を結果付きで保存。事前優勢側：${safeText(rs?.favored_wins ?? "—")}勝 ${safeText(rs?.favored_losses ?? "—")}敗 ／ 未確定 ${safeText(rs?.pending ?? "—")}件。実投入記録のない分析候補は収支には算入しません。</div>
     <div class="table-wrap"><table class="result-table">
       <thead><tr><th>#</th><th>カード / 大会</th><th>開始</th><th>格差</th><th>判定</th><th>結果</th><th>当時の判断</th></tr></thead>
