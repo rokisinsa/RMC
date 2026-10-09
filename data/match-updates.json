@@ -1242,6 +1242,94 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-results-20261009-2046",
+      "kind": "result_update",
+      "at": "2026-10-09T20:46:10+09:00",
+      "source": "公式試合報告の本文照合",
+      "note": "ユーザー指示：終了済み3件を精算と週次勝率へ反映。購入オッズ未確認のため利益額は補完しない。",
+      "changes": [
+        {
+          "match_id": "2026-10-09-berlin-porto",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 40,
+                "b": 32
+              },
+              "text": "40–32"
+            },
+            "result_confirmed_at": "2026-10-09T20:46:10+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ポルトガルハンドボール連盟",
+                "url": "https://portal.fpa.pt/2026/10/ehf-champions-league-fc-porto-nao-consegue-travar-fuchse-berlin/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-09T20:46:10+09:00",
+            "source_confidence": "official",
+            "note": "公式試合報告で勝者とスコアを確認。"
+          }
+        },
+        {
+          "match_id": "2026-10-08-jdt-svay-rieng",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 6,
+                "b": 0
+              },
+              "text": "6–0"
+            },
+            "result_confirmed_at": "2026-10-09T20:46:10+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ASEANサッカー連盟",
+                "url": "https://www.aseanfootball.org/v3/jdt-power-past-pkr-svay-rieng-in-group-b-opener-2026-27-asean-club-championship-shopee-cup/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-09T20:46:10+09:00",
+            "source_confidence": "official",
+            "note": "公式試合報告で勝者とスコアを確認。"
+          }
+        },
+        {
+          "match_id": "2026-10-09-barca-dinamo",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 34,
+                "b": 27
+              },
+              "text": "34–27"
+            },
+            "result_confirmed_at": "2026-10-09T20:46:10+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "FC Barcelona公式",
+                "url": "https://www.fcbarcelona.es/es/balonmano/primer-equipo/noticias/4588885/barca-dinamo-oficio-para-sumar-la-tercera-victoria-en-europa-34-27",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-09T20:46:10+09:00",
+            "source_confidence": "official",
+            "note": "公式試合報告で勝者とスコアを確認。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }
