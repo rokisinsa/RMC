@@ -162,6 +162,13 @@
       "at": "2026-10-08T17:35:00+09:00",
       "source": "ユーザー正式採用指示",
       "note": "Berlin/JDTの台帳登録漏れを補い、Barçaを追加。"
+    },
+    {
+      "run_id": "mr-user-approved-20261009-2115",
+      "kind": "human_review",
+      "at": "2026-10-09T21:15:00+09:00",
+      "source": "ユーザー指定2カードの正式採用・公式日程と成績照合",
+      "note": "推奨側は今回の深掘りでNAVI、Marquette。過去の採用側が確認できたとの主張はしない。"
     }
   ],
   "matches": [
@@ -3612,6 +3619,75 @@
         "https://ehfeuro.eurohandball.com/men/2026/news/en/final-rematch-at-kielce-sporting-aim-to-conquer-szeged-s-fortress-in-round-3/"
       ],
       "verified_at": "2026-10-08T17:35:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-09-dewa-navi",
+      "sport": "MLBB",
+      "competition": "MPL Indonesia Season 18 2026 Regular Season",
+      "side_a": "DEWA United Esports",
+      "side_b": "NAVI",
+      "home_side": "neutral",
+      "venue": "Jakarta（LAN）",
+      "start_at": "2026-10-09T22:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261009-2115",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定カードを正式登録"
+        }
+      ],
+      "sources": [
+        "https://id-mpl.com/s18/en/schedule",
+        "https://navi.gg/en/tournaments/mpl-indonesia-season-18/matches",
+        "https://esportsresults.com/h2h/mlbb/135293-136562/dewa-united-esports-vs-natus-vincere",
+        "https://esportsresults.com/match/mlbb/1624813/dewa-united-esports-vs-natus-vincere"
+      ],
+      "verified_at": "2026-10-09T21:15:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-10-marquette-georgetown",
+      "sport": "女子バレーボール",
+      "competition": "NCAA / BIG EAST",
+      "side_a": "Marquette",
+      "side_b": "Georgetown",
+      "home_side": "side_a",
+      "venue": "Al McGuire Center, Milwaukee",
+      "start_at": "2026-10-10T09:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261009-2115",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定カードを正式登録"
+        }
+      ],
+      "sources": [
+        "https://gomarquette.com/sports/womens-volleyball/schedule/text",
+        "https://guhoyas.com/sports/womens-volleyball/schedule/2026",
+        "https://gomarquette.com/sports/wvball/opponent-history/georgetown-fanatic-friday-faculty-appreciation/48",
+        "https://gomarquette.com/news/2026/10/8/womens-volleyball-vb-hosts-georgetown-and-villanova-in-first-big-east-homestand",
+        "https://guhoyas.com/news/2026/10/8/womens-volleyball-hoyas-hit-the-road-for-marquette-depaul.aspx"
+      ],
+      "verified_at": "2026-10-09T21:15:00+09:00",
       "flags": []
     }
   ]

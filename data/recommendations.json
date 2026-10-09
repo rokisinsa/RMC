@@ -159,6 +159,12 @@
       "started_at": "2026-10-08T17:35:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー指定3カードを正式台帳に登録。正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
+    },
+    {
+      "run_id": "rec-user-approved-20261009-2115",
+      "started_at": "2026-10-09T21:15:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー指定DEWA–NAVI、Marquette–Georgetownを深掘り後に正式採用。正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
     }
   ],
   "picks": [
@@ -3543,6 +3549,76 @@
         "odds_unverified"
       ],
       "note": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため利益・累計損益は未確定。"
+    },
+    {
+      "id": "rec-2026-10-09-dewa-navi",
+      "system": "recommendations",
+      "match_id": "2026-10-09-dewa-navi",
+      "run_id": "rec-user-approved-20261009-2115",
+      "source_event_id": "web-2026-10-09-dewa-navi",
+      "market": "match_winner",
+      "market_label": "試合勝者：NAVI",
+      "selection": "side_b",
+      "selection_label": "NAVI",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-09T21:15:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-09T21:15:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A（ユーザー指定カードの正式採用）",
+        "model_version": "user-approved-analysis-20261009",
+        "summary": "今回の深掘り結論はNAVI勝利寄り。今季10勝3敗・MAP21–9に対しDEWAは5勝8敗・13–19。直近対決と共通相手比較がNAVIを支持する一方、過去のH2HはDEWA優勢。Aは定性的な候補評価であり勝率や価格優位を保証しない。 正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
+    },
+    {
+      "id": "rec-2026-10-10-marquette-georgetown",
+      "system": "recommendations",
+      "match_id": "2026-10-10-marquette-georgetown",
+      "run_id": "rec-user-approved-20261009-2115",
+      "source_event_id": "web-2026-10-10-marquette-georgetown",
+      "market": "match_winner",
+      "market_label": "試合勝者：Marquette",
+      "selection": "side_a",
+      "selection_label": "Marquette",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-09T21:15:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-09T21:15:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "有力候補（ユーザー指定カードの正式採用）",
+        "model_version": "user-approved-analysis-20261009",
+        "summary": "Marquette勝利が有力。今季8–6だけを見るとGeorgetown10–5より劣るが、強豪相手の敗戦を含み、ホーム3–0と共通相手へのアウェー連勝を評価。直近H2Hの敗戦とGeorgetownの中央攻撃が主な反証。 正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
     }
   ]
 }
