@@ -408,6 +408,40 @@
           ],
           "minLength": 1,
           "description": "BET CHANNEL complete inventoryの元event_id。旧移行カードはnull可。定時更新で追加する新規①〜③カードはproduction gateで必須。"
+        },
+        "settlement_odds_reports": {
+          "type": "array",
+          "description": "試合前記録を保存したまま追記するユーザー申告の概算精算オッズ。購入オッズ未登録時だけ使用。",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "odds",
+              "estimated",
+              "reported_at",
+              "source",
+              "note"
+            ],
+            "properties": {
+              "odds": {
+                "type": "number",
+                "exclusiveMinimum": 1
+              },
+              "estimated": {
+                "const": true
+              },
+              "reported_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "source": {
+                "const": "user_reported"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     },

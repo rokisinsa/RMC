@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-09T21:15:00+09:00",
+  "generated_at": "2026-10-09T21:22:19+09:00",
   "window": {
     "from": "2026-10-09T21:15:00+09:00",
     "to": "2026-10-10T21:15:00+09:00",
@@ -569,7 +569,7 @@
       "reason": "ユーザー指定により今回のRMC反映対象から除外。"
     }
   ],
-  "summary": "NAVI勝利・Marquette勝利を正式登録（各100USD基準）。Berlin40–32・JDT6–0・Barça34–27は○、本日欄から除外し結果・週次に反映済み。購入オッズ未確認の利益は未確定として保持。",
+  "summary": "NAVI・Marquetteを正式登録中。終了済みBerlin○約1.13倍 +13USD、JDT○約1.25倍 +25USD、Barça○約1.12倍 +12USD。各100USD基準、3件の概算純利益合計+50USD（ユーザー申告・購入伝票未照合）。",
   "previous_analysis": {
     "generated_at": "2026-09-30T17:39:31+09:00",
     "window": {
@@ -3480,8 +3480,8 @@
         "selection_label": "Füchse Berlin勝利",
         "match_id": "2026-10-09-berlin-porto",
         "stake_usd_reference": 100,
-        "profit_usd": null,
-        "profit_status": "購入オッズ未確認・利益額未確定",
+        "profit_usd": 13.0,
+        "profit_status": "ユーザー申告の概算オッズによる参考収支",
         "rank": 1,
         "event_id": "web-2026-10-09-berlin-porto",
         "favored_result": "win",
@@ -3490,10 +3490,12 @@
         "match_status": "final",
         "result_updated_at": "2026-10-09T20:46:10+09:00",
         "archived_at": "2026-10-09T20:46:10+09:00",
-        "archive_reason": "終了済み・結果確定。購入オッズ未確認のため利益額未確定。",
+        "archive_reason": "終了済み・勝利確定。利益はユーザー申告オッズによる概算。",
         "result_sources": [
           "https://portal.fpa.pt/2026/10/ehf-champions-league-fc-porto-nao-consegue-travar-fuchse-berlin/"
-        ]
+        ],
+        "settlement_odds_estimate": 1.13,
+        "settlement_note": "10/9申告・購入伝票未照合。各100USD基準。"
       },
       {
         "matchup": "Johor Darul Ta'zim vs PKR Svay Rieng",
@@ -3552,8 +3554,8 @@
         "selection_label": "Johor Darul Ta'zim勝利",
         "match_id": "2026-10-08-jdt-svay-rieng",
         "stake_usd_reference": 100,
-        "profit_usd": null,
-        "profit_status": "購入オッズ未確認・利益額未確定",
+        "profit_usd": 25.0,
+        "profit_status": "ユーザー申告の概算オッズによる参考収支",
         "rank": 2,
         "event_id": "web-2026-10-08-jdt-svay-rieng",
         "favored_result": "win",
@@ -3562,10 +3564,12 @@
         "match_status": "final",
         "result_updated_at": "2026-10-09T20:46:10+09:00",
         "archived_at": "2026-10-09T20:46:10+09:00",
-        "archive_reason": "終了済み・結果確定。購入オッズ未確認のため利益額未確定。",
+        "archive_reason": "終了済み・勝利確定。利益はユーザー申告オッズによる概算。",
         "result_sources": [
           "https://www.aseanfootball.org/v3/jdt-power-past-pkr-svay-rieng-in-group-b-opener-2026-27-asean-club-championship-shopee-cup/"
-        ]
+        ],
+        "settlement_odds_estimate": 1.25,
+        "settlement_note": "10/9申告・購入伝票未照合。各100USD基準。"
       },
       {
         "matchup": "Barça vs Dinamo București",
@@ -3659,8 +3663,8 @@
         "selection_label": "Barça勝利",
         "match_id": "2026-10-09-barca-dinamo",
         "stake_usd_reference": 100,
-        "profit_usd": null,
-        "profit_status": "購入オッズ未確認・利益額未確定",
+        "profit_usd": 12.0,
+        "profit_status": "ユーザー申告の概算オッズによる参考収支",
         "rank": 3,
         "event_id": "web-2026-10-09-barca-dinamo",
         "favored_result": "win",
@@ -3669,10 +3673,12 @@
         "match_status": "final",
         "result_updated_at": "2026-10-09T20:46:10+09:00",
         "archived_at": "2026-10-09T20:46:10+09:00",
-        "archive_reason": "終了済み・結果確定。購入オッズ未確認のため利益額未確定。",
+        "archive_reason": "終了済み・勝利確定。利益はユーザー申告オッズによる概算。",
         "result_sources": [
           "https://www.fcbarcelona.es/es/balonmano/primer-equipo/noticias/4588885/barca-dinamo-oficio-para-sumar-la-tercera-victoria-en-europa-34-27"
-        ]
+        ],
+        "settlement_odds_estimate": 1.12,
+        "settlement_note": "10/9申告・購入伝票未照合。各100USD基準。"
       }
     ],
     "summary": {
@@ -3702,7 +3708,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-09T21:15:00+09:00",
+    "as_of": "2026-10-09T21:22:19+09:00",
     "note": "ユーザー指定2件追加、終了2件の公式結果を履歴へ。未確認の収益は0扱いせず未確定。"
   }
 }

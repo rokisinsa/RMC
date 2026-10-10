@@ -111,3 +111,16 @@ test("並び順キーは試合開始時刻（無ければ bet_at → locked_at �
   assert.equal(settle("rec-r1").orderKey, "2026-09-20T20:00:00+09:00");
   assert.equal(settlePick(recPick("rec-r1"), undefined).orderKey, recPick("rec-r1").locked_at);
 });
+
+test("申告概算は未登録オッズだけ補完し、確定購入オッズと事前記録を保護", () => {
+  const p = structuredClone(recPick('rec-r1'));
+  p.odds_taken = null;
+  p.settlement_odds_reports = [{ odds: 1.13, estimated: true, source: 'user_reported', reported_at: '2026-10-09T21:22:19+09:00', note: '概算' }];
+  const before = structuredClone(p);
+  const r = settlePick(p, M.get(p.match_id));
+  assert.equal(r.profit, 13); assert.equal(r.amountEstimated, true);
+  assert.deepEqual(p, before);
+  p.odds_taken = 1.20;
+  const exact = settlePick(p, M.get(p.match_id));
+  assert.equal(exact.profit, 20); assert.equal(exact.amountEstimated, undefined);
+});
