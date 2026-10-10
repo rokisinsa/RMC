@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-08T17:35:00+09:00",
+    "as_of": "2026-10-11T00:53:10+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -169,6 +169,13 @@
       "at": "2026-10-09T21:15:00+09:00",
       "source": "ユーザー指定2カードの正式採用・公式日程と成績照合",
       "note": "推奨側は今回の深掘りでNAVI、Marquette。過去の採用側が確認できたとの主張はしない。"
+    },
+    {
+      "run_id": "mr-user-approved-20261011-0053",
+      "kind": "human_review",
+      "at": "2026-10-11T00:53:10+09:00",
+      "source": "ユーザー指定正式採用・公式日程照合",
+      "note": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
     }
   ],
   "matches": [
@@ -3688,6 +3695,72 @@
         "https://guhoyas.com/news/2026/10/8/womens-volleyball-hoyas-hit-the-road-for-marquette-depaul.aspx"
       ],
       "verified_at": "2026-10-09T21:15:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-11-aurora-twisted-ph",
+      "sport": "MLBB",
+      "competition": "MPLフィリピン シーズン18・レギュラーシーズン",
+      "side_a": "Aurora Gaming PH",
+      "side_b": "Twisted Minds PH",
+      "home_side": "neutral",
+      "venue": "フィリピン（LAN・ホーム差は加点しない）",
+      "start_at": "2026-10-11T18:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261011-0053",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "試合前のユーザー指定正式登録"
+        }
+      ],
+      "sources": [
+        "https://ph-mpl.com/schedule",
+        "https://www.gosugamers.net/mobile-legends/tournaments/63110-mpl-philippines-season-18/matches/659062-aurora-gaming-ph-vs-twisted-minds-ph"
+      ],
+      "verified_at": "2026-10-11T00:53:10+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-11-psg-toulouse-handball",
+      "sport": "男子ハンドボール",
+      "competition": "フランス1部・ダイキン スターリーグ 第6節",
+      "side_a": "PSG",
+      "side_b": "Toulouse",
+      "home_side": "side_a",
+      "venue": "Stade Pierre de Coubertin・PSGホーム",
+      "start_at": "2026-10-11T02:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261011-0053",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "試合前のユーザー指定正式登録"
+        }
+      ],
+      "sources": [
+        "https://billetterie.psg.fr/fr/hand",
+        "https://www.psg.fr/en/handball/fixtures",
+        "https://www.psg.fr/content/la-preview-paris-toulouse-daikin-starligue-journee-6-2026-2027",
+        "https://www.psg.fr/en/content/paris-a-la-fete-avant-la-treve-internationale-cr-paris-saint-germain-toulouse-liqui-moly-starligue-2025-2026"
+      ],
+      "verified_at": "2026-10-11T00:53:10+09:00",
       "flags": []
     }
   ]

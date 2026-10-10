@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-09T21:22:19+09:00",
+  "generated_at": "2026-10-11T00:53:10+09:00",
   "window": {
-    "from": "2026-10-09T21:15:00+09:00",
-    "to": "2026-10-10T21:15:00+09:00",
+    "from": "2026-10-11T00:53:10+09:00",
+    "to": "2026-10-12T00:53:10+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "指定2件を正式採用。終了済みは結果履歴に保持し本日欄から除外。"
+    "note": "指定2件を正式採用。終了済み2件は結果履歴へ移動。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -18,543 +18,308 @@
   ],
   "coverage": {
     "checked": [
-      "MLBB｜MPL Indonesia",
-      "女子バレー｜NCAA BIG EAST"
+      "MLBB｜MPLフィリピン",
+      "男子ハンドボール｜フランス1部"
     ],
-    "note": "今回はユーザー指定2カードを深掘り。全世界の網羅探索ではない。"
+    "note": "ユーザー指定2件の追加と掲載済み終了2件の精算。"
   },
   "candidates": [
     {
-      "rank": 1,
-      "matchup": "DEWA United Esports vs NAVI",
-      "favored": "NAVI",
-      "sport": "MLBB",
-      "competition": "MPL Indonesia Season 18 2026 Regular Season",
-      "start_jst": "2026-10-09T22:00:00+09:00",
-      "venue": "Jakarta（LAN）",
-      "format": "BO3 / LAN",
-      "status": "formal",
-      "gap_grade": "A",
-      "price_grade": "未確認",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。",
-        "required_win_rate_pct": null
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "conclusion": "今回の深掘り結論はNAVI勝利寄り。今季10勝3敗・MAP21–9に対しDEWAは5勝8敗・13–19。直近対決と共通相手比較がNAVIを支持する一方、過去のH2HはDEWA優勢。Aは定性的な候補評価であり勝率や価格優位を保証しない。",
-      "analysis_detail": {
-        "summary": "今回の深掘り結論はNAVI勝利寄り。今季10勝3敗・MAP21–9に対しDEWAは5勝8敗・13–19。直近対決と共通相手比較がNAVIを支持する一方、過去のH2HはDEWA優勢。Aは定性的な候補評価であり勝率や価格優位を保証しない。",
-        "h2h": {
-          "summary": "個別掲載を確認できる5戦はDEWA 4勝1敗。ただし今季9/4はNAVI 2–0。試合プレビューの「6戦・DEWA5–1」と専用H2Hページの「5戦・4–1」は不一致のため、確認できる5戦だけ採用。古いロスターの結果を今季と同じ重みで扱わない。",
-          "items": [
-            {
-              "date": "2026-09-04",
-              "label": "DEWA vs NAVI",
-              "result": "0-2 ●"
-            },
-            {
-              "date": "2026-05-01",
-              "label": "DEWA vs NAVI",
-              "result": "2-1 ○"
-            },
-            {
-              "date": "2026-04-03",
-              "label": "DEWA vs NAVI",
-              "result": "2-0 ○"
-            },
-            {
-              "date": "2025-09-26",
-              "label": "DEWA vs NAVI",
-              "result": "2-0 ○"
-            },
-            {
-              "date": "2025-08-29",
-              "label": "DEWA vs NAVI",
-              "result": "2-0 ○"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "DEWA",
-            "summary": "直近10試合：5勝5敗、MAP/SET 12–13。スコアは当該チーム視点。",
-            "items": [
-              {
-                "date": "2026-10-08",
-                "label": "EVOS",
-                "result": "1-2 ●"
-              },
-              {
-                "date": "2026-10-03",
-                "label": "GEEK",
-                "result": "1-2 ●"
-              },
-              {
-                "date": "2026-10-02",
-                "label": "TLID",
-                "result": "2-1 ○"
-              },
-              {
-                "date": "2026-09-20",
-                "label": "AE",
-                "result": "2-0 ○"
-              },
-              {
-                "date": "2026-09-18",
-                "label": "RRQ（20:00 WIB）",
-                "result": "2-1 ○"
-              },
-              {
-                "date": "2026-09-18",
-                "label": "EVOS（17:00 WIB）",
-                "result": "0-2 ●"
-              },
-              {
-                "date": "2026-09-05",
-                "label": "ONIC",
-                "result": "2-1 ○"
-              },
-              {
-                "date": "2026-09-04",
-                "label": "NAVI",
-                "result": "0-2 ●"
-              },
-              {
-                "date": "2026-08-28",
-                "label": "GEEK",
-                "result": "2-0 ○"
-              },
-              {
-                "date": "2026-08-23",
-                "label": "AE",
-                "result": "0-2 ●"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "NAVI",
-            "summary": "直近10試合：8勝2敗、MAP/SET 17–6。スコアは当該チーム視点。",
-            "items": [
-              {
-                "date": "2026-10-08",
-                "label": "TLID",
-                "result": "2-0 ○"
-              },
-              {
-                "date": "2026-10-04",
-                "label": "ONIC",
-                "result": "1-2 ●"
-              },
-              {
-                "date": "2026-10-03",
-                "label": "AE",
-                "result": "2-1 ○"
-              },
-              {
-                "date": "2026-09-19",
-                "label": "GEEK",
-                "result": "2-0 ○"
-              },
-              {
-                "date": "2026-09-12",
-                "label": "EVOS",
-                "result": "2-0 ○"
-              },
-              {
-                "date": "2026-09-06",
-                "label": "RRQ",
-                "result": "2-0 ○"
-              },
-              {
-                "date": "2026-09-04",
-                "label": "DEWA",
-                "result": "2-0 ○"
-              },
-              {
-                "date": "2026-08-30",
-                "label": "ONIC",
-                "result": "2-0 ○"
-              },
-              {
-                "date": "2026-08-28",
-                "label": "BTR",
-                "result": "0-2 ●"
-              },
-              {
-                "date": "2026-08-22",
-                "label": "GEEK",
-                "result": "2-1 ○"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "各相手への直近対戦を比較。TLID・GEEK・EVOS・RRQはNAVI寄り、AE・ONICはDEWA側の材料。対戦日・ドラフトが異なるため、項目数を勝率へ直接変換しない。",
-          "items": [
-            {
-              "opponent": "TLID",
-              "side_a": {
-                "result": "10/2 2–1",
-                "performance": "10/2 2–1"
-              },
-              "side_b": {
-                "result": "10/8 2–0",
-                "performance": "10/8 2–0"
-              },
-              "comparison": "両者勝利。NAVIの方が失MAPなし。"
-            },
-            {
-              "opponent": "GEEK",
-              "side_a": {
-                "result": "10/3 1–2",
-                "performance": "10/3 1–2"
-              },
-              "side_b": {
-                "result": "9/19 2–0",
-                "performance": "9/19 2–0"
-              },
-              "comparison": "NAVIを支持。"
-            },
-            {
-              "opponent": "EVOS",
-              "side_a": {
-                "result": "10/8 1–2",
-                "performance": "10/8 1–2"
-              },
-              "side_b": {
-                "result": "9/12 2–0",
-                "performance": "9/12 2–0"
-              },
-              "comparison": "NAVIを支持。ただし約4週間差。"
-            },
-            {
-              "opponent": "RRQ",
-              "side_a": {
-                "result": "9/18 2–1",
-                "performance": "9/18 2–1"
-              },
-              "side_b": {
-                "result": "9/6 2–0",
-                "performance": "9/6 2–0"
-              },
-              "comparison": "両者勝利、NAVIやや優勢。"
-            },
-            {
-              "opponent": "AE",
-              "side_a": {
-                "result": "9/20 2–0",
-                "performance": "9/20 2–0"
-              },
-              "side_b": {
-                "result": "10/3 2–1",
-                "performance": "10/3 2–1"
-              },
-              "comparison": "DEWAの反証材料。"
-            },
-            {
-              "opponent": "ONIC",
-              "side_a": {
-                "result": "9/5 2–1",
-                "performance": "9/5 2–1"
-              },
-              "side_b": {
-                "result": "10/4 1–2",
-                "performance": "10/4 1–2"
-              },
-              "comparison": "DEWA側。ただし約1か月差。"
-            }
-          ]
-        },
-        "ranking_or_rating": {
-          "text": "今季公式成績：NAVI10–3（MAP21–9）、DEWA5–8（13–19）。直近10はNAVI8–2、DEWA5–5。世界ランキングや外部予測65%は独立したRMC勝率として採用しない。"
-        },
-        "home_away": {
-          "text": "Jakarta LAN、BO3。通常のホーム・アウェー差は加点しない。主催者時刻20:00 WIB＝22:00 JSTを採用。前試合次第で遅延の可能性。"
-        },
-        "availability": {
-          "text": "当日の確定先発・ロール・交代は未確認。専門DBに変更注記があるため、過去H2Hを現ロスター同士の成績とは扱わない。"
-        },
-        "sport_specific": {
-          "text": "両者とも10/8に試合。NAVIはTLIDを2–0、DEWAはEVOSに1–2。ドラフト、サイド選択、序盤オブジェクト率、当日パッチ別ヒーロー成績は未確認。シリーズ勝者を対象とし2–0やMAP1勝利まで拡張しない。"
-        },
-        "market": {
-          "text": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
-        },
-        "risk": "DEWAはAE・TLIDを倒しており、過去H2Hも優勢。BO3のドラフト差・先発未確認・オッズ不明が残る。NAVI優勢と無条件の購入価値は別。"
-      },
-      "sources": [
-        "https://id-mpl.com/s18/en/schedule",
-        "https://navi.gg/en/tournaments/mpl-indonesia-season-18/matches",
-        "https://esportsresults.com/h2h/mlbb/135293-136562/dewa-united-esports-vs-natus-vincere",
-        "https://esportsresults.com/match/mlbb/1624813/dewa-united-esports-vs-natus-vincere"
-      ],
-      "added_at": "2026-10-09T21:15:00+09:00",
-      "market": "match_winner",
-      "selection_label": "NAVI",
-      "risk": "DEWAはAE・TLIDを倒しており、過去H2Hも優勢。BO3のドラフト差・先発未確認・オッズ不明が残る。NAVI優勢と無条件の購入価値は別。",
-      "match_id": "2026-10-09-dewa-navi",
-      "event_id": "web-2026-10-09-dewa-navi",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "購入オッズ未確認・損益未確定"
-    },
-    {
-      "rank": 2,
-      "matchup": "Marquette vs Georgetown",
-      "favored": "Marquette",
-      "sport": "女子バレーボール",
-      "competition": "NCAA / BIG EAST",
-      "start_jst": "2026-10-10T09:00:00+09:00",
-      "venue": "Al McGuire Center, Milwaukee",
-      "format": "5セット制（3セット先取）",
       "status": "formal",
       "gap_grade": "有力候補",
       "price_grade": "未確認",
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。",
+        "book_examples": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。",
         "required_win_rate_pct": null
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "conclusion": "Marquette勝利が有力。今季8–6だけを見るとGeorgetown10–5より劣るが、強豪相手の敗戦を含み、ホーム3–0と共通相手へのアウェー連勝を評価。直近H2Hの敗戦とGeorgetownの中央攻撃が主な反証。",
+      "added_at": "2026-10-11T00:53:10+09:00",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・購入オッズ未確認",
+      "rank": 1,
+      "match_id": "2026-10-11-aurora-twisted-ph",
+      "event_id": "web-2026-10-11-aurora-twisted-ph",
+      "matchup": "Aurora Gaming PH vs Twisted Minds PH",
+      "favored": "Aurora Gaming PH",
+      "selection_label": "Aurora Gaming PH",
+      "sport": "MLBB",
+      "competition": "MPLフィリピン シーズン18・レギュラーシーズン",
+      "start_jst": "2026-10-11T18:00:00+09:00",
+      "venue": "フィリピン（LAN・ホーム差は加点しない）",
+      "format": "BO3",
+      "conclusion": "Aurora勝利を正式採用。直近6は5勝1敗・10–4マップ、Twisted Mindsは0勝6敗・0–12。9月4日のH2HはAurora2–0。価格優位は未判定。",
+      "risk": "当日先発・ドラフト・購入オッズ未確認。シリーズ勝利のみを採用し、2–0指定に拡張しない。",
+      "sources": [
+        "https://ph-mpl.com/schedule",
+        "https://www.gosugamers.net/mobile-legends/tournaments/63110-mpl-philippines-season-18/matches/659062-aurora-gaming-ph-vs-twisted-minds-ph"
+      ],
       "analysis_detail": {
-        "summary": "Marquette勝利が有力。今季8–6だけを見るとGeorgetown10–5より劣るが、強豪相手の敗戦を含み、ホーム3–0と共通相手へのアウェー連勝を評価。直近H2Hの敗戦とGeorgetownの中央攻撃が主な反証。",
+        "summary": "Aurora勝利を正式採用。直近6は5勝1敗・10–4マップ、Twisted Mindsは0勝6敗・0–12。9月4日のH2HはAurora2–0。価格優位は未判定。",
         "h2h": {
-          "summary": "公式対戦履歴26勝5敗、ホーム14勝1敗、直近10は9勝1敗。直近2025/10/24はアウェーで2–3敗戦。大学プレビューの通算25–5・ホーム11–1とは不一致のため個別履歴を優先。古い対戦は現戦力評価の補助に留める。",
+          "summary": "今季確認済み1戦：2026/9/4 Aurora2–0。旧シーズン全件は未確認。",
           "items": [
             {
-              "date": "2025-10-24",
-              "label": "Marquette @ Georgetown",
-              "result": "2-3 ●"
-            },
-            {
-              "date": "2024-11-15",
-              "label": "Marquette home",
-              "result": "3-0 ○"
-            },
-            {
-              "date": "2024-10-27",
-              "label": "Marquette away",
-              "result": "3-0 ○"
-            },
-            {
-              "date": "2023-11-10",
-              "label": "Marquette away",
-              "result": "3-0 ○"
-            },
-            {
-              "date": "2023-09-23",
-              "label": "Marquette home",
-              "result": "3-0 ○"
-            },
-            {
-              "date": "2022-11-04",
-              "label": "Marquette home",
-              "result": "3-0 ○"
-            },
-            {
-              "date": "2021-11-19",
-              "label": "Marquette home",
-              "result": "3-0 ○"
-            },
-            {
-              "date": "2021-09-25",
-              "label": "Marquette away",
-              "result": "3-0 ○"
-            },
-            {
-              "date": "2019-11-15",
-              "label": "Marquette home",
-              "result": "3-1 ○"
-            },
-            {
-              "date": "2019-10-19",
-              "label": "Marquette away",
-              "result": "3-0 ○"
+              "date": "2026-09-04",
+              "label": "Aurora vs Twisted Minds",
+              "result": "2–0 ○"
             }
           ]
         },
         "recent_form": {
           "side_a": {
-            "label": "Marquette",
-            "summary": "直近10試合：6勝4敗、MAP/SET 24–16。スコアは当該チーム視点。",
+            "label": "Aurora",
+            "summary": "直近6：5勝1敗、10–4マップ、平均マップ差+1.00。",
             "items": [
               {
-                "date": "2026-10-04",
-                "label": "@ Creighton",
-                "result": "3-2 ○"
+                "date": "2026-10-03",
+                "label": "ONIC",
+                "result": "2–1 ○"
               },
               {
-                "date": "2026-09-30",
-                "label": "@ DePaul",
-                "result": "2-3 ●"
+                "date": "2026-10-02",
+                "label": "TNC",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "2026-09-27",
+                "label": "Falcons",
+                "result": "0–2 ●"
               },
               {
                 "date": "2026-09-26",
-                "label": "@ Providence",
-                "result": "3-0 ○"
-              },
-              {
-                "date": "2026-09-25",
-                "label": "@ UConn",
-                "result": "3-0 ○"
-              },
-              {
-                "date": "2026-09-20",
-                "label": "Milwaukee",
-                "result": "3-0 ○"
+                "label": "AP.Bren",
+                "result": "2–0 ○"
               },
               {
                 "date": "2026-09-19",
-                "label": "St. Thomas",
-                "result": "3-2 ○"
+                "label": "Liquid PH",
+                "result": "2–0 ○"
               },
               {
-                "date": "2026-09-17",
-                "label": "@ #6 Wisconsin",
-                "result": "1-3 ●"
-              },
-              {
-                "date": "2026-09-13",
-                "label": "@ Illinois",
-                "result": "2-3 ●"
-              },
-              {
-                "date": "2026-09-11",
-                "label": "Illinois",
-                "result": "3-0 ○"
-              },
-              {
-                "date": "2026-09-06",
-                "label": "@ #4 Stanford",
-                "result": "1-3 ●"
+                "date": "2026-09-18",
+                "label": "Omega",
+                "result": "2–0 ○"
               }
             ]
           },
           "side_b": {
-            "label": "Georgetown",
-            "summary": "直近10試合：7勝3敗、MAP/SET 23–11。スコアは当該チーム視点。",
+            "label": "Twisted Minds",
+            "summary": "直近6：0勝6敗、0–12マップ、平均マップ差−2.00。",
             "items": [
               {
+                "date": "2026-10-08",
+                "label": "Liquid PH",
+                "result": "0–2 ●"
+              },
+              {
                 "date": "2026-10-03",
-                "label": "Providence",
-                "result": "3-1 ○"
+                "label": "Omega",
+                "result": "0–2 ●"
               },
               {
                 "date": "2026-10-02",
-                "label": "UConn",
-                "result": "3-0 ○"
+                "label": "ONIC",
+                "result": "0–2 ●"
               },
               {
                 "date": "2026-09-26",
-                "label": "@ Butler",
-                "result": "1-3 ●"
+                "label": "TNC",
+                "result": "0–2 ●"
               },
               {
                 "date": "2026-09-25",
-                "label": "@ Xavier",
-                "result": "0-3 ●"
+                "label": "AP.Bren",
+                "result": "0–2 ●"
               },
               {
-                "date": "2026-09-18",
-                "label": "George Washington",
-                "result": "3-0 ○"
-              },
-              {
-                "date": "2026-09-17",
-                "label": "@ Howard",
-                "result": "3-0 ○"
-              },
-              {
-                "date": "2026-09-13",
-                "label": "@ UMBC",
-                "result": "1-3 ●"
-              },
-              {
-                "date": "2026-09-12",
-                "label": "Loyola MD",
-                "result": "3-0 ○"
-              },
-              {
-                "date": "2026-09-11",
-                "label": "@ Morgan State",
-                "result": "3-0 ○"
-              },
-              {
-                "date": "2026-09-06",
-                "label": "@ Wake Forest",
-                "result": "3-1 ○"
+                "date": "2026-09-19",
+                "label": "Falcons",
+                "result": "0–2 ●"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "UConn・Providenceの2相手で比較。Marquetteは両方アウェーで3–0、Georgetownはホームで3–0・3–1。会場差込みでMarquette寄り。ただしサンプル2相手。",
+          "summary": "同じリーグの共通相手比較。Falconsには両者敗戦。それ以外の直近比較はAuroraを支持。対戦日・ドラフト差あり。",
           "items": [
             {
-              "opponent": "UConn",
+              "opponent": "ONIC",
               "side_a": {
-                "result": "9/25 away 3–0",
-                "performance": "9/25 away 3–0"
+                "result": "2–1",
+                "performance": "2–1"
               },
               "side_b": {
-                "result": "10/2 home 3–0",
-                "performance": "10/2 home 3–0"
+                "result": "0–2",
+                "performance": "0–2"
               },
-              "comparison": "同スコアだがMarquetteは遠征。"
+              "comparison": "Aurora寄り"
             },
             {
-              "opponent": "Providence",
+              "opponent": "TNC",
               "side_a": {
-                "result": "9/26 away 3–0",
-                "performance": "9/26 away 3–0"
+                "result": "2–1",
+                "performance": "2–1"
               },
               "side_b": {
-                "result": "10/3 home 3–1",
-                "performance": "10/3 home 3–1"
+                "result": "0–2",
+                "performance": "0–2"
               },
-              "comparison": "Marquetteに小幅優位。"
+              "comparison": "Aurora寄り"
+            },
+            {
+              "opponent": "Liquid PH",
+              "side_a": {
+                "result": "2–0",
+                "performance": "2–0"
+              },
+              "side_b": {
+                "result": "0–2",
+                "performance": "0–2"
+              },
+              "comparison": "Aurora寄り"
+            },
+            {
+              "opponent": "Falcons",
+              "side_a": {
+                "result": "0–2",
+                "performance": "0–2"
+              },
+              "side_b": {
+                "result": "0–2",
+                "performance": "0–2"
+              },
+              "comparison": "差なし"
             }
           ]
         },
         "ranking_or_rating": {
-          "text": "Marquette8–6・BIG EAST3–1、Georgetown10–5・同2–2。MUのシーズン前予想3位は現在の順位ではない。直近10の単純勝率はMU60%、GU70%だが、対戦相手の水準が異なる。"
+          "text": "GosuGamers掲載順位16位対86位。公式世界ランキングではないため補助情報。"
         },
         "home_away": {
-          "text": "Marquetteホーム、MilwaukeeのAl McGuire Center。今季ホーム3–0（小標本）。現地10/9 19:00 CDT＝10/10 09:00 JST。Georgetownは直近カンファレンス遠征でXavier・Butlerに敗戦。"
+          "text": "主催者10/11 17:00 PHT＝18:00 JST。BO3 LAN。"
         },
         "availability": {
-          "text": "両校の当日先発・欠場情報は未確認。前の試合結果だけで全員健康とは判断しない。"
+          "text": "当日出場5人・交代・欠場は未確認。"
         },
         "sport_specific": {
-          "text": "MUのCarson Tylerは4.35 kills/set、29サービスエース。直近Creighton戦21kills・7aces。GeorgetownはLee-Caracciの攻撃成功率.452、Ploder.445と中央が強い。MUがサーブで相手の返球を崩し速攻を制限できるかが鍵。Tyler依存、長いラリー、フルセット化はリスク。試合勝者の評価であり3–0予想ではない。"
+          "text": "BO3シリーズ勝者。ドラフトとサイド選択で変動。直近の実績勝率を将来の勝率へ直接置換しない。"
         },
         "market": {
-          "text": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
+          "text": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
         },
-        "risk": "昨季の直接対決はGeorgetownが3–2勝利。GUの中央攻撃と2連勝を軽視しない。価格・先発未確認につき推定勝率やEVは提示しない。"
+        "risk": "当日先発・ドラフト・購入オッズ未確認。シリーズ勝利のみを採用し、2–0指定に拡張しない。"
+      }
+    },
+    {
+      "status": "formal",
+      "gap_grade": "有力候補",
+      "price_grade": "未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。",
+        "required_win_rate_pct": null
       },
-      "sources": [
-        "https://gomarquette.com/sports/womens-volleyball/schedule/text",
-        "https://guhoyas.com/sports/womens-volleyball/schedule/2026",
-        "https://gomarquette.com/sports/wvball/opponent-history/georgetown-fanatic-friday-faculty-appreciation/48",
-        "https://gomarquette.com/news/2026/10/8/womens-volleyball-vb-hosts-georgetown-and-villanova-in-first-big-east-homestand",
-        "https://guhoyas.com/news/2026/10/8/womens-volleyball-hoyas-hit-the-road-for-marquette-depaul.aspx"
-      ],
-      "added_at": "2026-10-09T21:15:00+09:00",
-      "market": "match_winner",
-      "selection_label": "Marquette",
-      "risk": "昨季の直接対決はGeorgetownが3–2勝利。GUの中央攻撃と2連勝を軽視しない。価格・先発未確認につき推定勝率やEVは提示しない。",
-      "match_id": "2026-10-10-marquette-georgetown",
-      "event_id": "web-2026-10-10-marquette-georgetown",
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-11T00:53:10+09:00",
+      "market": "match_1x2",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "購入オッズ未確認・損益未確定"
+      "profit_status": "試合前・購入オッズ未確認",
+      "rank": 2,
+      "match_id": "2026-10-11-psg-toulouse-handball",
+      "event_id": "web-2026-10-11-psg-toulouse-handball",
+      "matchup": "PSG vs Toulouse",
+      "favored": "PSG",
+      "selection_label": "PSG",
+      "sport": "男子ハンドボール",
+      "competition": "フランス1部・ダイキン スターリーグ 第6節",
+      "start_jst": "2026-10-11T02:00:00+09:00",
+      "venue": "Stade Pierre de Coubertin・PSGホーム",
+      "format": "60分・勝敗市場",
+      "conclusion": "PSG勝利を正式採用。リーグ開幕5連勝とホームを評価。ただしToulouseもカップ戦を含め3連勝、Nantes撃破が反証。大差勝利は別評価。",
+      "risk": "PSGは10/7に欧州CL。選手起用・欠場・購入オッズ未確認。Toulouseの改善を織り込み、大きなハンデは採用しない。",
+      "sources": [
+        "https://billetterie.psg.fr/fr/hand",
+        "https://www.psg.fr/en/handball/fixtures",
+        "https://www.psg.fr/content/la-preview-paris-toulouse-daikin-starligue-journee-6-2026-2027",
+        "https://www.psg.fr/en/content/paris-a-la-fete-avant-la-treve-internationale-cr-paris-saint-germain-toulouse-liqui-moly-starligue-2025-2026"
+      ],
+      "analysis_detail": {
+        "summary": "PSG勝利を正式採用。リーグ開幕5連勝とホームを評価。ただしToulouseもカップ戦を含め3連勝、Nantes撃破が反証。大差勝利は別評価。",
+        "h2h": {
+          "summary": "確認済み2026/3/15 PSG39–21。前シーズンのため同じ点差を予測しない。全件未確認。",
+          "items": [
+            {
+              "date": "2026-03-15",
+              "label": "PSG vs Toulouse",
+              "result": "39–21 ○"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "PSG",
+            "summary": "リーグ開幕5連勝。個別スコアを再確認できた直近2戦を掲載。6〜10戦全件は未確認。",
+            "items": [
+              {
+                "date": "2026-10-07",
+                "label": "Celje・欧州CL",
+                "result": "46–35 ○"
+              },
+              {
+                "date": "2026-10-01",
+                "label": "Saran・リーグ",
+                "result": "36–27 ○"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Toulouse",
+            "summary": "直近6戦3勝3敗。新しい順にChartres30–28、Nantes30–29、Saran（杯）36–28、Sélestat24–25、Caen31–32、Saran25–27。平均29.3得点・28.2失点、差+1.2。日付の全件照合は未完了。",
+            "items": []
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "Saran比較はPSG寄りだが、Toulouseも直近カップ戦では快勝。",
+          "items": [
+            {
+              "opponent": "Saran",
+              "side_a": {
+                "result": "リーグ36–27",
+                "performance": "リーグ36–27"
+              },
+              "side_b": {
+                "result": "リーグ25–27／カップ36–28",
+                "performance": "リーグ25–27／カップ36–28"
+              },
+              "comparison": "Toulouseの改善も評価"
+            }
+          ]
+        },
+        "ranking_or_rating": {
+          "text": "開幕5戦：PSG5勝0敗、Toulouse2勝3敗。"
+        },
+        "home_away": {
+          "text": "Parisホーム。公式チケット10/10 19:00 CEST＝10/11 02:00 JST。"
+        },
+        "availability": {
+          "text": "当日出場・全欠場者未確認。"
+        },
+        "sport_specific": {
+          "text": "通常時間のPSG勝利を追跡。引分は勝利扱いしない。欧州CLからの試合間隔と選手起用に注意。"
+        },
+        "market": {
+          "text": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
+        },
+        "risk": "PSGは10/7に欧州CL。選手起用・欠場・購入オッズ未確認。Toulouseの改善を織り込み、大きなハンデは採用しない。"
+      }
     }
   ],
   "rejected_examples": [
@@ -569,7 +334,7 @@
       "reason": "ユーザー指定により今回のRMC反映対象から除外。"
     }
   ],
-  "summary": "NAVI・Marquetteを正式登録中。終了済みBerlin○約1.13倍 +13USD、JDT○約1.25倍 +25USD、Barça○約1.12倍 +12USD。各100USD基準、3件の概算純利益合計+50USD（ユーザー申告・購入伝票未照合）。",
+  "summary": "正式：Aurora Gaming PH勝利（11日18:00 JST）、PSG勝利（11日02:00 JST）。NAVI○2–0、Marquette○3–0を結果・週次勝率・収支台帳へ反映。本日欄から除外。終了2件は購入オッズ不明のため利益未確定。既存Berlin/JDT/Barçaの概算+50USDは維持。",
   "previous_analysis": {
     "generated_at": "2026-09-30T17:39:31+09:00",
     "window": {
@@ -3679,6 +3444,558 @@
         ],
         "settlement_odds_estimate": 1.12,
         "settlement_note": "10/9申告・購入伝票未照合。各100USD基準。"
+      },
+      {
+        "rank": 1,
+        "matchup": "DEWA United Esports vs NAVI",
+        "favored": "NAVI",
+        "sport": "MLBB",
+        "competition": "MPL Indonesia Season 18 2026 Regular Season",
+        "start_jst": "2026-10-09T22:00:00+09:00",
+        "venue": "Jakarta（LAN）",
+        "format": "BO3 / LAN",
+        "status": "formal",
+        "gap_grade": "A",
+        "price_grade": "未確認",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "conclusion": "今回の深掘り結論はNAVI勝利寄り。今季10勝3敗・MAP21–9に対しDEWAは5勝8敗・13–19。直近対決と共通相手比較がNAVIを支持する一方、過去のH2HはDEWA優勢。Aは定性的な候補評価であり勝率や価格優位を保証しない。",
+        "analysis_detail": {
+          "summary": "今回の深掘り結論はNAVI勝利寄り。今季10勝3敗・MAP21–9に対しDEWAは5勝8敗・13–19。直近対決と共通相手比較がNAVIを支持する一方、過去のH2HはDEWA優勢。Aは定性的な候補評価であり勝率や価格優位を保証しない。",
+          "h2h": {
+            "summary": "個別掲載を確認できる5戦はDEWA 4勝1敗。ただし今季9/4はNAVI 2–0。試合プレビューの「6戦・DEWA5–1」と専用H2Hページの「5戦・4–1」は不一致のため、確認できる5戦だけ採用。古いロスターの結果を今季と同じ重みで扱わない。",
+            "items": [
+              {
+                "date": "2026-09-04",
+                "label": "DEWA vs NAVI",
+                "result": "0-2 ●"
+              },
+              {
+                "date": "2026-05-01",
+                "label": "DEWA vs NAVI",
+                "result": "2-1 ○"
+              },
+              {
+                "date": "2026-04-03",
+                "label": "DEWA vs NAVI",
+                "result": "2-0 ○"
+              },
+              {
+                "date": "2025-09-26",
+                "label": "DEWA vs NAVI",
+                "result": "2-0 ○"
+              },
+              {
+                "date": "2025-08-29",
+                "label": "DEWA vs NAVI",
+                "result": "2-0 ○"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "DEWA",
+              "summary": "直近10試合：5勝5敗、MAP/SET 12–13。スコアは当該チーム視点。",
+              "items": [
+                {
+                  "date": "2026-10-08",
+                  "label": "EVOS",
+                  "result": "1-2 ●"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "GEEK",
+                  "result": "1-2 ●"
+                },
+                {
+                  "date": "2026-10-02",
+                  "label": "TLID",
+                  "result": "2-1 ○"
+                },
+                {
+                  "date": "2026-09-20",
+                  "label": "AE",
+                  "result": "2-0 ○"
+                },
+                {
+                  "date": "2026-09-18",
+                  "label": "RRQ（20:00 WIB）",
+                  "result": "2-1 ○"
+                },
+                {
+                  "date": "2026-09-18",
+                  "label": "EVOS（17:00 WIB）",
+                  "result": "0-2 ●"
+                },
+                {
+                  "date": "2026-09-05",
+                  "label": "ONIC",
+                  "result": "2-1 ○"
+                },
+                {
+                  "date": "2026-09-04",
+                  "label": "NAVI",
+                  "result": "0-2 ●"
+                },
+                {
+                  "date": "2026-08-28",
+                  "label": "GEEK",
+                  "result": "2-0 ○"
+                },
+                {
+                  "date": "2026-08-23",
+                  "label": "AE",
+                  "result": "0-2 ●"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "NAVI",
+              "summary": "直近10試合：8勝2敗、MAP/SET 17–6。スコアは当該チーム視点。",
+              "items": [
+                {
+                  "date": "2026-10-08",
+                  "label": "TLID",
+                  "result": "2-0 ○"
+                },
+                {
+                  "date": "2026-10-04",
+                  "label": "ONIC",
+                  "result": "1-2 ●"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "AE",
+                  "result": "2-1 ○"
+                },
+                {
+                  "date": "2026-09-19",
+                  "label": "GEEK",
+                  "result": "2-0 ○"
+                },
+                {
+                  "date": "2026-09-12",
+                  "label": "EVOS",
+                  "result": "2-0 ○"
+                },
+                {
+                  "date": "2026-09-06",
+                  "label": "RRQ",
+                  "result": "2-0 ○"
+                },
+                {
+                  "date": "2026-09-04",
+                  "label": "DEWA",
+                  "result": "2-0 ○"
+                },
+                {
+                  "date": "2026-08-30",
+                  "label": "ONIC",
+                  "result": "2-0 ○"
+                },
+                {
+                  "date": "2026-08-28",
+                  "label": "BTR",
+                  "result": "0-2 ●"
+                },
+                {
+                  "date": "2026-08-22",
+                  "label": "GEEK",
+                  "result": "2-1 ○"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "各相手への直近対戦を比較。TLID・GEEK・EVOS・RRQはNAVI寄り、AE・ONICはDEWA側の材料。対戦日・ドラフトが異なるため、項目数を勝率へ直接変換しない。",
+            "items": [
+              {
+                "opponent": "TLID",
+                "side_a": {
+                  "result": "10/2 2–1",
+                  "performance": "10/2 2–1"
+                },
+                "side_b": {
+                  "result": "10/8 2–0",
+                  "performance": "10/8 2–0"
+                },
+                "comparison": "両者勝利。NAVIの方が失MAPなし。"
+              },
+              {
+                "opponent": "GEEK",
+                "side_a": {
+                  "result": "10/3 1–2",
+                  "performance": "10/3 1–2"
+                },
+                "side_b": {
+                  "result": "9/19 2–0",
+                  "performance": "9/19 2–0"
+                },
+                "comparison": "NAVIを支持。"
+              },
+              {
+                "opponent": "EVOS",
+                "side_a": {
+                  "result": "10/8 1–2",
+                  "performance": "10/8 1–2"
+                },
+                "side_b": {
+                  "result": "9/12 2–0",
+                  "performance": "9/12 2–0"
+                },
+                "comparison": "NAVIを支持。ただし約4週間差。"
+              },
+              {
+                "opponent": "RRQ",
+                "side_a": {
+                  "result": "9/18 2–1",
+                  "performance": "9/18 2–1"
+                },
+                "side_b": {
+                  "result": "9/6 2–0",
+                  "performance": "9/6 2–0"
+                },
+                "comparison": "両者勝利、NAVIやや優勢。"
+              },
+              {
+                "opponent": "AE",
+                "side_a": {
+                  "result": "9/20 2–0",
+                  "performance": "9/20 2–0"
+                },
+                "side_b": {
+                  "result": "10/3 2–1",
+                  "performance": "10/3 2–1"
+                },
+                "comparison": "DEWAの反証材料。"
+              },
+              {
+                "opponent": "ONIC",
+                "side_a": {
+                  "result": "9/5 2–1",
+                  "performance": "9/5 2–1"
+                },
+                "side_b": {
+                  "result": "10/4 1–2",
+                  "performance": "10/4 1–2"
+                },
+                "comparison": "DEWA側。ただし約1か月差。"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "今季公式成績：NAVI10–3（MAP21–9）、DEWA5–8（13–19）。直近10はNAVI8–2、DEWA5–5。世界ランキングや外部予測65%は独立したRMC勝率として採用しない。"
+          },
+          "home_away": {
+            "text": "Jakarta LAN、BO3。通常のホーム・アウェー差は加点しない。主催者時刻20:00 WIB＝22:00 JSTを採用。前試合次第で遅延の可能性。"
+          },
+          "availability": {
+            "text": "当日の確定先発・ロール・交代は未確認。専門DBに変更注記があるため、過去H2Hを現ロスター同士の成績とは扱わない。"
+          },
+          "sport_specific": {
+            "text": "両者とも10/8に試合。NAVIはTLIDを2–0、DEWAはEVOSに1–2。ドラフト、サイド選択、序盤オブジェクト率、当日パッチ別ヒーロー成績は未確認。シリーズ勝者を対象とし2–0やMAP1勝利まで拡張しない。"
+          },
+          "market": {
+            "text": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
+          },
+          "risk": "DEWAはAE・TLIDを倒しており、過去H2Hも優勢。BO3のドラフト差・先発未確認・オッズ不明が残る。NAVI優勢と無条件の購入価値は別。"
+        },
+        "sources": [
+          "https://id-mpl.com/s18/en/schedule",
+          "https://navi.gg/en/tournaments/mpl-indonesia-season-18/matches",
+          "https://esportsresults.com/h2h/mlbb/135293-136562/dewa-united-esports-vs-natus-vincere",
+          "https://esportsresults.com/match/mlbb/1624813/dewa-united-esports-vs-natus-vincere"
+        ],
+        "added_at": "2026-10-09T21:15:00+09:00",
+        "market": "match_winner",
+        "selection_label": "NAVI",
+        "risk": "DEWAはAE・TLIDを倒しており、過去H2Hも優勢。BO3のドラフト差・先発未確認・オッズ不明が残る。NAVI優勢と無条件の購入価値は別。",
+        "match_id": "2026-10-09-dewa-navi",
+        "event_id": "web-2026-10-09-dewa-navi",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "勝利確定・購入オッズ未確認のため利益未確定",
+        "favored_result": "win",
+        "result": "○ NAVI勝利 0–2",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-11T00:53:10+09:00",
+        "archived_at": "2026-10-11T00:53:10+09:00",
+        "archive_reason": "試合終了・勝利確定。結果履歴と収支台帳へ移動。",
+        "result_sources": [
+          "https://id-mpl.com/s18/en/schedule"
+        ]
+      },
+      {
+        "rank": 2,
+        "matchup": "Marquette vs Georgetown",
+        "favored": "Marquette",
+        "sport": "女子バレーボール",
+        "competition": "NCAA / BIG EAST",
+        "start_jst": "2026-10-10T09:00:00+09:00",
+        "venue": "Al McGuire Center, Milwaukee",
+        "format": "5セット制（3セット先取）",
+        "status": "formal",
+        "gap_grade": "有力候補",
+        "price_grade": "未確認",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。",
+          "required_win_rate_pct": null
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "conclusion": "Marquette勝利が有力。今季8–6だけを見るとGeorgetown10–5より劣るが、強豪相手の敗戦を含み、ホーム3–0と共通相手へのアウェー連勝を評価。直近H2Hの敗戦とGeorgetownの中央攻撃が主な反証。",
+        "analysis_detail": {
+          "summary": "Marquette勝利が有力。今季8–6だけを見るとGeorgetown10–5より劣るが、強豪相手の敗戦を含み、ホーム3–0と共通相手へのアウェー連勝を評価。直近H2Hの敗戦とGeorgetownの中央攻撃が主な反証。",
+          "h2h": {
+            "summary": "公式対戦履歴26勝5敗、ホーム14勝1敗、直近10は9勝1敗。直近2025/10/24はアウェーで2–3敗戦。大学プレビューの通算25–5・ホーム11–1とは不一致のため個別履歴を優先。古い対戦は現戦力評価の補助に留める。",
+            "items": [
+              {
+                "date": "2025-10-24",
+                "label": "Marquette @ Georgetown",
+                "result": "2-3 ●"
+              },
+              {
+                "date": "2024-11-15",
+                "label": "Marquette home",
+                "result": "3-0 ○"
+              },
+              {
+                "date": "2024-10-27",
+                "label": "Marquette away",
+                "result": "3-0 ○"
+              },
+              {
+                "date": "2023-11-10",
+                "label": "Marquette away",
+                "result": "3-0 ○"
+              },
+              {
+                "date": "2023-09-23",
+                "label": "Marquette home",
+                "result": "3-0 ○"
+              },
+              {
+                "date": "2022-11-04",
+                "label": "Marquette home",
+                "result": "3-0 ○"
+              },
+              {
+                "date": "2021-11-19",
+                "label": "Marquette home",
+                "result": "3-0 ○"
+              },
+              {
+                "date": "2021-09-25",
+                "label": "Marquette away",
+                "result": "3-0 ○"
+              },
+              {
+                "date": "2019-11-15",
+                "label": "Marquette home",
+                "result": "3-1 ○"
+              },
+              {
+                "date": "2019-10-19",
+                "label": "Marquette away",
+                "result": "3-0 ○"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Marquette",
+              "summary": "直近10試合：6勝4敗、MAP/SET 24–16。スコアは当該チーム視点。",
+              "items": [
+                {
+                  "date": "2026-10-04",
+                  "label": "@ Creighton",
+                  "result": "3-2 ○"
+                },
+                {
+                  "date": "2026-09-30",
+                  "label": "@ DePaul",
+                  "result": "2-3 ●"
+                },
+                {
+                  "date": "2026-09-26",
+                  "label": "@ Providence",
+                  "result": "3-0 ○"
+                },
+                {
+                  "date": "2026-09-25",
+                  "label": "@ UConn",
+                  "result": "3-0 ○"
+                },
+                {
+                  "date": "2026-09-20",
+                  "label": "Milwaukee",
+                  "result": "3-0 ○"
+                },
+                {
+                  "date": "2026-09-19",
+                  "label": "St. Thomas",
+                  "result": "3-2 ○"
+                },
+                {
+                  "date": "2026-09-17",
+                  "label": "@ #6 Wisconsin",
+                  "result": "1-3 ●"
+                },
+                {
+                  "date": "2026-09-13",
+                  "label": "@ Illinois",
+                  "result": "2-3 ●"
+                },
+                {
+                  "date": "2026-09-11",
+                  "label": "Illinois",
+                  "result": "3-0 ○"
+                },
+                {
+                  "date": "2026-09-06",
+                  "label": "@ #4 Stanford",
+                  "result": "1-3 ●"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Georgetown",
+              "summary": "直近10試合：7勝3敗、MAP/SET 23–11。スコアは当該チーム視点。",
+              "items": [
+                {
+                  "date": "2026-10-03",
+                  "label": "Providence",
+                  "result": "3-1 ○"
+                },
+                {
+                  "date": "2026-10-02",
+                  "label": "UConn",
+                  "result": "3-0 ○"
+                },
+                {
+                  "date": "2026-09-26",
+                  "label": "@ Butler",
+                  "result": "1-3 ●"
+                },
+                {
+                  "date": "2026-09-25",
+                  "label": "@ Xavier",
+                  "result": "0-3 ●"
+                },
+                {
+                  "date": "2026-09-18",
+                  "label": "George Washington",
+                  "result": "3-0 ○"
+                },
+                {
+                  "date": "2026-09-17",
+                  "label": "@ Howard",
+                  "result": "3-0 ○"
+                },
+                {
+                  "date": "2026-09-13",
+                  "label": "@ UMBC",
+                  "result": "1-3 ●"
+                },
+                {
+                  "date": "2026-09-12",
+                  "label": "Loyola MD",
+                  "result": "3-0 ○"
+                },
+                {
+                  "date": "2026-09-11",
+                  "label": "@ Morgan State",
+                  "result": "3-0 ○"
+                },
+                {
+                  "date": "2026-09-06",
+                  "label": "@ Wake Forest",
+                  "result": "3-1 ○"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "UConn・Providenceの2相手で比較。Marquetteは両方アウェーで3–0、Georgetownはホームで3–0・3–1。会場差込みでMarquette寄り。ただしサンプル2相手。",
+            "items": [
+              {
+                "opponent": "UConn",
+                "side_a": {
+                  "result": "9/25 away 3–0",
+                  "performance": "9/25 away 3–0"
+                },
+                "side_b": {
+                  "result": "10/2 home 3–0",
+                  "performance": "10/2 home 3–0"
+                },
+                "comparison": "同スコアだがMarquetteは遠征。"
+              },
+              {
+                "opponent": "Providence",
+                "side_a": {
+                  "result": "9/26 away 3–0",
+                  "performance": "9/26 away 3–0"
+                },
+                "side_b": {
+                  "result": "10/3 home 3–1",
+                  "performance": "10/3 home 3–1"
+                },
+                "comparison": "Marquetteに小幅優位。"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "Marquette8–6・BIG EAST3–1、Georgetown10–5・同2–2。MUのシーズン前予想3位は現在の順位ではない。直近10の単純勝率はMU60%、GU70%だが、対戦相手の水準が異なる。"
+          },
+          "home_away": {
+            "text": "Marquetteホーム、MilwaukeeのAl McGuire Center。今季ホーム3–0（小標本）。現地10/9 19:00 CDT＝10/10 09:00 JST。Georgetownは直近カンファレンス遠征でXavier・Butlerに敗戦。"
+          },
+          "availability": {
+            "text": "両校の当日先発・欠場情報は未確認。前の試合結果だけで全員健康とは判断しない。"
+          },
+          "sport_specific": {
+            "text": "MUのCarson Tylerは4.35 kills/set、29サービスエース。直近Creighton戦21kills・7aces。GeorgetownはLee-Caracciの攻撃成功率.452、Ploder.445と中央が強い。MUがサーブで相手の返球を崩し速攻を制限できるかが鍵。Tyler依存、長いラリー、フルセット化はリスク。試合勝者の評価であり3–0予想ではない。"
+          },
+          "market": {
+            "text": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
+          },
+          "risk": "昨季の直接対決はGeorgetownが3–2勝利。GUの中央攻撃と2連勝を軽視しない。価格・先発未確認につき推定勝率やEVは提示しない。"
+        },
+        "sources": [
+          "https://gomarquette.com/sports/womens-volleyball/schedule/text",
+          "https://guhoyas.com/sports/womens-volleyball/schedule/2026",
+          "https://gomarquette.com/sports/wvball/opponent-history/georgetown-fanatic-friday-faculty-appreciation/48",
+          "https://gomarquette.com/news/2026/10/8/womens-volleyball-vb-hosts-georgetown-and-villanova-in-first-big-east-homestand",
+          "https://guhoyas.com/news/2026/10/8/womens-volleyball-hoyas-hit-the-road-for-marquette-depaul.aspx"
+        ],
+        "added_at": "2026-10-09T21:15:00+09:00",
+        "market": "match_winner",
+        "selection_label": "Marquette",
+        "risk": "昨季の直接対決はGeorgetownが3–2勝利。GUの中央攻撃と2連勝を軽視しない。価格・先発未確認につき推定勝率やEVは提示しない。",
+        "match_id": "2026-10-10-marquette-georgetown",
+        "event_id": "web-2026-10-10-marquette-georgetown",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "勝利確定・購入オッズ未確認のため利益未確定",
+        "favored_result": "win",
+        "result": "○ Marquette勝利 3–0",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-11T00:53:10+09:00",
+        "archived_at": "2026-10-11T00:53:10+09:00",
+        "archive_reason": "試合終了・勝利確定。結果履歴と収支台帳へ移動。",
+        "result_sources": [
+          "https://gomarquette.com/news/2026/10/9/womens-volleyball-vb-downs-georgetown-in-straight-sets-friday-evening"
+        ]
       }
     ],
     "summary": {
@@ -3697,18 +4014,14 @@
       ],
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
-    "result_summary": {
-      "favored_wins": 28,
-      "favored_losses": 5,
-      "pending": 0
-    }
+    "result_summary": "NAVI○2–0、Marquette○3–0追加。購入オッズ未確認のため2件の利益未確定。既存結果と概算収支は維持。"
   },
   "history_policy": {
     "cutoff": "2026-09-28T23:59:59+09:00",
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-09T21:22:19+09:00",
-    "note": "ユーザー指定2件追加、終了2件の公式結果を履歴へ。未確認の収益は0扱いせず未確定。"
+    "as_of": "2026-10-11T00:53:10+09:00",
+    "note": "結果履歴・事前予想は保持。終了2件の勝利は反映済み、利益未確定を0扱いしない。"
   }
 }

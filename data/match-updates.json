@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-07T17:39:30+09:00",
+    "as_of": "2026-10-11T00:53:10+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -1326,6 +1326,68 @@
             "verified_at": "2026-10-09T20:46:10+09:00",
             "source_confidence": "official",
             "note": "公式試合報告で勝者とスコアを確認。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-results-20261011-0053",
+      "kind": "result_update",
+      "at": "2026-10-11T00:53:10+09:00",
+      "source": "主催者・大学公式最終結果",
+      "note": "本日欄の終了2件を勝率・週次集計・収支台帳に反映。オッズ不明を利益0や仮オッズで補完しない。",
+      "changes": [
+        {
+          "match_id": "2026-10-09-dewa-navi",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 2
+              },
+              "text": "0–2（NAVI勝利）"
+            },
+            "result_confirmed_at": "2026-10-11T00:53:10+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "MPL Indonesia公式",
+                "url": "https://id-mpl.com/s18/en/schedule",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-11T00:53:10+09:00",
+            "source_confidence": "official",
+            "note": "公式最終結果を照合。既存の選択と100USDを維持。購入オッズ未確認のため勝率のみ確定、金額は未確定。"
+          }
+        },
+        {
+          "match_id": "2026-10-10-marquette-georgetown",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 0
+              },
+              "text": "3–0（Marquette勝利）"
+            },
+            "result_confirmed_at": "2026-10-11T00:53:10+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Marquette大学公式",
+                "url": "https://gomarquette.com/news/2026/10/9/womens-volleyball-vb-downs-georgetown-in-straight-sets-friday-evening",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-11T00:53:10+09:00",
+            "source_confidence": "official",
+            "note": "公式最終結果を照合。既存の選択と100USDを維持。購入オッズ未確認のため勝率のみ確定、金額は未確定。"
           }
         }
       ],

@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-08T17:35:00+09:00",
+    "as_of": "2026-10-11T00:53:10+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
@@ -165,6 +165,12 @@
       "started_at": "2026-10-09T21:15:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー指定DEWA–NAVI、Marquette–Georgetownを深掘り後に正式採用。正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
+    },
+    {
+      "run_id": "rec-user-approved-20261011-0053",
+      "started_at": "2026-10-11T00:53:10+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
     }
   ],
   "picks": [
@@ -3646,6 +3652,76 @@
         "odds_unverified"
       ],
       "note": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
+    },
+    {
+      "id": "rec-2026-10-11-aurora-twisted-ph",
+      "system": "recommendations",
+      "match_id": "2026-10-11-aurora-twisted-ph",
+      "run_id": "rec-user-approved-20261011-0053",
+      "source_event_id": "web-2026-10-11-aurora-twisted-ph",
+      "market": "match_winner",
+      "market_label": "試合勝者：Aurora Gaming PH",
+      "selection": "side_a",
+      "selection_label": "Aurora Gaming PH",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-11T00:53:10+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-11T00:53:10+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "有力候補（ユーザー正式採用）",
+        "model_version": "user-approved-analysis-20261011",
+        "summary": "Aurora勝利を正式採用。直近6は5勝1敗・10–4マップ、Twisted Mindsは0勝6敗・0–12。9月4日のH2HはAurora2–0。価格優位は未判定。 ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
+    },
+    {
+      "id": "rec-2026-10-11-psg-toulouse-handball",
+      "system": "recommendations",
+      "match_id": "2026-10-11-psg-toulouse-handball",
+      "run_id": "rec-user-approved-20261011-0053",
+      "source_event_id": "web-2026-10-11-psg-toulouse-handball",
+      "market": "match_1x2",
+      "market_label": "試合勝者：PSG",
+      "selection": "side_a",
+      "selection_label": "PSG",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-11T00:53:10+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-11T00:53:10+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "有力候補（ユーザー正式採用）",
+        "model_version": "user-approved-analysis-20261011",
+        "summary": "PSG勝利を正式採用。リーグ開幕5連勝とホームを評価。ただしToulouseもカップ戦を含め3連勝、Nantes撃破が反証。大差勝利は別評価。 ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
     }
   ]
 }
