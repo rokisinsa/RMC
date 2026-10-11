@@ -1392,6 +1392,68 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-results-20261011-evening",
+      "kind": "result_update",
+      "at": "2026-10-11T20:08:38+09:00",
+      "source": "公式・報道の最終結果",
+      "note": "PSG29–23、水原4–1を反映。本日欄から除外。Aurora PHは専門DB2–1と公式1–1が不一致のため未確定。Barçaは前半15–22で試合中。",
+      "changes": [
+        {
+          "match_id": "2026-10-11-psg-toulouse-handball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 29,
+                "b": 23
+              },
+              "text": "29–23（PSG勝利）"
+            },
+            "result_confirmed_at": "2026-10-11T20:08:38+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "PSG公式",
+                "url": "https://www.psg.fr/en/content/paris-voit-la-vie-en-rose-contre-toulouse-compte-rendu-paris-saint-germain-handball-fenix-toulouse-handball-journee-6-daikin-starligue-2026-2027",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-11T20:08:38+09:00",
+            "source_confidence": "official",
+            "note": "購入オッズ未確認。勝率・週次結果へ反映し、利益額は未確定を維持。参考オッズを購入価格として代用しない。"
+          }
+        },
+        {
+          "match_id": "2026-10-11-suwon-bluewings-ansan",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 4,
+                "b": 1
+              },
+              "text": "4–1（Suwon Samsung Bluewings勝利）"
+            },
+            "result_confirmed_at": "2026-10-11T20:08:38+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "News1",
+                "url": "https://www.news1.kr/sports/soccer/6316002",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-10-11T20:08:38+09:00",
+            "source_confidence": "single_source",
+            "note": "購入オッズ未確認。勝率・週次結果へ反映し、利益額は未確定を維持。参考オッズを購入価格として代用しない。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }
