@@ -138,11 +138,13 @@ function gapCommonOpponentBlock(common, fallback) {
 function renderTodayGapAnalysis(a, recommendationCandidates = []) {
   if (!a?.candidates?.length) return "";
   const statusLabel = {
+    formal: "正式採用",
     candidate: "価格込み候補",
     watch: "監視",
     price_reject: "格差大・価格NG"
   };
   const statusTone = {
+    formal: "#69f0a5",
     candidate: "#69f0a5",
     watch: "#ffd45d",
     price_reject: "#ff8f9a"

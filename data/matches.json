@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-11T00:53:10+09:00",
+    "as_of": "2026-10-11T12:58:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -176,6 +176,13 @@
       "at": "2026-10-11T00:53:10+09:00",
       "source": "ユーザー指定正式採用・公式日程照合",
       "note": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
+    },
+    {
+      "run_id": "mr-user-approved-20261011-1258",
+      "kind": "human_review",
+      "at": "2026-10-11T12:58:00+09:00",
+      "source": "ユーザー指定3件・出典照合",
+      "note": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
     }
   ],
   "matches": [
@@ -3761,6 +3768,112 @@
         "https://www.psg.fr/en/content/paris-a-la-fete-avant-la-treve-internationale-cr-paris-saint-germain-toulouse-liqui-moly-starligue-2025-2026"
       ],
       "verified_at": "2026-10-11T00:53:10+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-11-aranda-barcelona-handball",
+      "sport": "男子ハンドボール",
+      "competition": "スペイン1部・リーガASOBAL（リーガ・ネクサス・エネルヒア）第5節",
+      "side_a": "Tubos Aranda",
+      "side_b": "Barça",
+      "home_side": "side_a",
+      "venue": "サンティアゴ・マングアン／アランダホーム",
+      "start_at": "2026-10-11T19:30:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261011-1258",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定カードの試合前登録"
+        }
+      ],
+      "sources": [
+        "https://www.fcbarcelona.com/en/handball/first-team/results",
+        "https://www.bmvilladearanda.com/calendario/",
+        "https://www.bmvilladearanda.com/el-tubos-aranda-afronta-un-reto-mayusculo-ante-el-barca/",
+        "https://scores24.live/es/handball/m-10-10-2026-villa-de-aranda-barcelona",
+        "https://cadenaser.com/castillayleon/2026/05/22/el-villa-de-aranda-logra-la-permanencia-en-asobal-pese-a-caer-en-el-ultimo-segundo-ante-puente-genil-radio-aranda/"
+      ],
+      "verified_at": "2026-10-11T12:58:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-12-nantes-caen-handball",
+      "sport": "男子ハンドボール",
+      "competition": "フランス1部・ダイキン スターリーグ 第6節",
+      "side_a": "Nantes",
+      "side_b": "Caen",
+      "home_side": "side_a",
+      "venue": "Hアリーナ／ナントホーム",
+      "start_at": "2026-10-12T00:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261011-1258",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定カードの試合前登録"
+        }
+      ],
+      "sources": [
+        "https://hbcnantes.com/actualites/hbc-nantes-vikings-de-caen-les-journees-de-larbitrage-jna/",
+        "https://www.lnh.fr/daikin-starligue/equipes/hbc-nantes",
+        "https://www.lnh.fr/daikin-starligue/equipes/caen-handball",
+        "https://scores24.live/fr/handball/m-09-10-2026-nantes-caen-handball",
+        "https://hbcnantes.com/actualites/carton-plein-pour-la-prepa/",
+        "https://hbcnantes.com/actualites/le-hbc-nantes-sincline-dans-le-money-time-face-a-melsungen-28-23/",
+        "https://hbcnantes.com/actualites/?page=2"
+      ],
+      "verified_at": "2026-10-11T12:58:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-11-suwon-bluewings-ansan",
+      "sport": "サッカー",
+      "competition": "韓国2部・Kリーグ2 第28節",
+      "side_a": "Suwon Samsung Bluewings",
+      "side_b": "Ansan Greeners",
+      "home_side": "side_a",
+      "venue": "水原ワールドカップ競技場／水原三星ホーム",
+      "start_at": "2026-10-11T14:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261011-1258",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定カードの試合前登録"
+        }
+      ],
+      "sources": [
+        "https://www.fotmob.com/en-GB/matches/suwon-samsung-bluewings-vs-ansan-greeners/5adjfif5",
+        "https://www.soccerstats.com/pmatch.asp?league=southkorea2&stats=224-3-2-2026",
+        "https://www.telefootball.net/SG/Suwon-Bluewings-Ansan-Greeners-2026-10-11-674502.html",
+        "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=98969"
+      ],
+      "verified_at": "2026-10-11T12:58:00+09:00",
       "flags": []
     }
   ]

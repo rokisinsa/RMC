@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-11T00:53:10+09:00",
+  "generated_at": "2026-10-11T12:58:00+09:00",
   "window": {
     "from": "2026-10-11T00:53:10+09:00",
-    "to": "2026-10-12T00:53:10+09:00",
+    "to": "2026-10-12T12:58:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "指定2件を正式採用。終了済み2件は結果履歴へ移動。"
+    "note": "既存掲載を保持し、ユーザー指定3件を追加。今回確認対象は10/11 12:48〜10/12 12:48 JST。既存PSGの結果確認は今回の作業対象外。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -19,9 +19,11 @@
   "coverage": {
     "checked": [
       "MLBB｜MPLフィリピン",
-      "男子ハンドボール｜フランス1部"
+      "男子ハンドボール｜フランス1部",
+      "男子ハンドボール｜スペイン1部",
+      "サッカー｜韓国2部"
     ],
-    "note": "ユーザー指定2件の追加と掲載済み終了2件の精算。"
+    "note": "指定3カードの追加・詳細分析。全競技の再探索や既存カード精算は実施対象外。"
   },
   "candidates": [
     {
@@ -320,6 +322,603 @@
         },
         "risk": "PSGは10/7に欧州CL。選手起用・欠場・購入オッズ未確認。Toulouseの改善を織り込み、大きなハンデは採用しない。"
       }
+    },
+    {
+      "match_id": "2026-10-11-aranda-barcelona-handball",
+      "event_id": "web-2026-10-11-aranda-barcelona-handball",
+      "matchup": "Tubos Aranda vs Barça",
+      "favored": "Barça",
+      "selection_label": "Barça",
+      "sport": "男子ハンドボール",
+      "competition": "スペイン1部・リーガASOBAL（リーガ・ネクサス・エネルヒア）第5節",
+      "start_jst": "2026-10-11T19:30:00+09:00",
+      "venue": "サンティアゴ・マングアン／アランダホーム",
+      "format": "60分・引分を含む1X2",
+      "status": "formal",
+      "gap_grade": "優勢（価格評価別）",
+      "price_grade": "未確認",
+      "market": "match_1x2",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・購入オッズ未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "required_win_rate_pct": null,
+        "book_examples": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-11T12:58:00+09:00",
+      "analysis_reviewed_at": "2026-10-11T12:58:00+09:00",
+      "conclusion": "バルサの通常時間勝利を正式採用。国内3連勝、平均14.3点差。今季の共通相手は未成立で、昨季を含む比較は補助材料。",
+      "risk": "欧州大会を挟むアウェー、ローテーション。当日登録・価格未確認。大幅ハンディや前半勝利は採用対象外。",
+      "analysis_detail": {
+        "summary": "バルサの通常時間勝利を正式採用。国内3連勝、平均14.3点差。今季の共通相手は未成立で、昨季を含む比較は補助材料。",
+        "availability": {
+          "text": "アランダ公式プレビュー：Mehran Rahnama欠場、バルサGK Hallgrímsson復帰情報。当日登録リストは未確認。"
+        },
+        "home_away": {
+          "text": "サンティアゴ・マングアン／アランダホーム"
+        },
+        "market": {
+          "text": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+        },
+        "ranking_or_rating": {
+          "text": "国内：バルサ3勝0敗133–90（平均44.3得点30.0失点）、アランダ0勝1分3敗109–131（27.3得点32.8失点）。消化数が異なる。順位の同時点全件照合は未完了。"
+        },
+        "h2h": {
+          "summary": "確認済み直近5戦はバルサ5勝。以下バルサ視点。平均40.2得点27.8失点。全件網羅は未確認。",
+          "items": [
+            {
+              "date": "2026-02-20",
+              "label": "バルサ H",
+              "result": "41-27 W"
+            },
+            {
+              "date": "2025-12-10",
+              "label": "バルサ A",
+              "result": "34-28 W"
+            },
+            {
+              "date": "2025-11-05",
+              "label": "バルサ H・カップ",
+              "result": "39-30 W"
+            },
+            {
+              "date": "2025-05-23",
+              "label": "バルサ H",
+              "result": "45-27 W"
+            },
+            {
+              "date": "2024-12-17",
+              "label": "バルサ A",
+              "result": "42-27 W"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "アランダ",
+            "summary": "今季リーグ全4戦：0勝1分3敗、109–131。旧シーズンで6戦に水増ししない。",
+            "items": [
+              {
+                "date": "2026-10-03",
+                "label": "トレラベガ A",
+                "result": "21-28 L"
+              },
+              {
+                "date": "2026-09-26",
+                "label": "ビダソア H",
+                "result": "32-39 L"
+              },
+              {
+                "date": "2026-09-19",
+                "label": "バジャドリード A",
+                "result": "26-34 L"
+              },
+              {
+                "date": "2026-09-13",
+                "label": "カセリオ H",
+                "result": "30-30 D"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "バルサ",
+            "summary": "直近公式6戦5勝1敗247–177、平均41.2得点29.5失点。大会・相手水準が異なるため国内予測に直結させない。",
+            "items": [
+              {
+                "date": "2026-10-08",
+                "label": "ディナモ・ブカレスト／欧州CL",
+                "result": "34-27 W"
+              },
+              {
+                "date": "2026-10-03",
+                "label": "アリカンテ／リーグ",
+                "result": "46-31 W"
+              },
+              {
+                "date": "2026-10-01",
+                "label": "ヴェスプレーム／世界大会",
+                "result": "33-42 L"
+              },
+              {
+                "date": "2026-09-29",
+                "label": "Montada／世界大会",
+                "result": "51-15 W"
+              },
+              {
+                "date": "2026-09-27",
+                "label": "ザマレク／世界大会",
+                "result": "39-29 W"
+              },
+              {
+                "date": "2026-09-25",
+                "label": "ピニェイロス／世界大会",
+                "result": "44-33 W"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "A＝アランダ、B＝バルサ。今季リーグの消化済み相手に重複なし。下表は前季を含む補助比較であり直近同条件比較とは扱わない。",
+          "items": [
+            {
+              "opponent": "プエンテ・ヘニル",
+              "side_a": {
+                "date": "2026-05-22",
+                "result": "27-28 L（A）"
+              },
+              "side_b": {
+                "date": "2026-09-20",
+                "result": "39-27 W（A）"
+              },
+              "comparison": "双方アウェー。得失点差はバルサが13点上。ただし約4か月とシーズン変更を挟む。"
+            }
+          ]
+        },
+        "sport_specific": {
+          "text": "バルサ国内：9/11ログローニョ48–32、9/20プエンテ39–27、10/3アリカンテ46–31。勝敗と大差勝利は別評価。"
+        }
+      },
+      "sources": [
+        "https://www.fcbarcelona.com/en/handball/first-team/results",
+        "https://www.bmvilladearanda.com/calendario/",
+        "https://www.bmvilladearanda.com/el-tubos-aranda-afronta-un-reto-mayusculo-ante-el-barca/",
+        "https://scores24.live/es/handball/m-10-10-2026-villa-de-aranda-barcelona",
+        "https://cadenaser.com/castillayleon/2026/05/22/el-villa-de-aranda-logra-la-permanencia-en-asobal-pese-a-caer-en-el-ultimo-segundo-ante-puente-genil-radio-aranda/"
+      ],
+      "rank": 3
+    },
+    {
+      "match_id": "2026-10-12-nantes-caen-handball",
+      "event_id": "web-2026-10-12-nantes-caen-handball",
+      "matchup": "Nantes vs Caen",
+      "favored": "Nantes",
+      "selection_label": "Nantes",
+      "sport": "男子ハンドボール",
+      "competition": "フランス1部・ダイキン スターリーグ 第6節",
+      "start_jst": "2026-10-12T00:00:00+09:00",
+      "venue": "Hアリーナ／ナントホーム",
+      "format": "60分・引分を含む1X2",
+      "status": "formal",
+      "gap_grade": "優勢（価格評価別）",
+      "price_grade": "未確認",
+      "market": "match_1x2",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・購入オッズ未確認",
+      "odds": {
+        "min": null,
+        "max": null,
+        "required_win_rate_pct": null,
+        "book_examples": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-11T12:58:00+09:00",
+      "analysis_reviewed_at": "2026-10-11T12:58:00+09:00",
+      "conclusion": "ナントの通常時間勝利を正式採用。リーグ4勝1敗対3勝2敗。共通相手Aix・Dunkerqueはナント寄り、ToulouseはCaen寄り。",
+      "risk": "ナントは10/8ドイツ遠征で敗戦。Caenは10/2以降休養。親善試合H2Hを公式戦と同じ重みで扱わない。",
+      "analysis_detail": {
+        "summary": "ナントの通常時間勝利を正式採用。リーグ4勝1敗対3勝2敗。共通相手Aix・Dunkerqueはナント寄り、ToulouseはCaen寄り。",
+        "availability": {
+          "text": "当日先発・全欠場者未確認。"
+        },
+        "home_away": {
+          "text": "Hアリーナ／ナントホーム"
+        },
+        "market": {
+          "text": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+        },
+        "ranking_or_rating": {
+          "text": "リーグ5試合：ナント4勝1敗172–141（平均34.4–28.2）、Caen3勝2敗139–155（27.8–31.0）。順位は他カード消化で変動するため勝敗を比較。"
+        },
+        "h2h": {
+          "summary": "確認済み最新対戦は2026/8/26親善試合ナント34–22。前半22–11。公式戦の全履歴は未確認。",
+          "items": [
+            {
+              "date": "2026-08-26",
+              "label": "ナント vs Caen／親善試合",
+              "result": "34-22 W（ナント）"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "ナント",
+            "summary": "直近公式6戦4勝2敗190–173、平均31.7–28.8。欧州CLを含む。",
+            "items": [
+              {
+                "date": "2026-10-08",
+                "label": "Melsungen A／欧州CL",
+                "result": "23-28 L"
+              },
+              {
+                "date": "2026-10-03",
+                "label": "Dunkerque A／リーグ",
+                "result": "31-24 W"
+              },
+              {
+                "date": "2026-09-27",
+                "label": "Toulouse H／リーグ",
+                "result": "29-30 L"
+              },
+              {
+                "date": "2026-09-20",
+                "label": "Montpellier A／リーグ",
+                "result": "36-31 W"
+              },
+              {
+                "date": "2026-09-16",
+                "label": "Vardar A／欧州CL",
+                "result": "33-32 W"
+              },
+              {
+                "date": "2026-09-12",
+                "label": "Aix H／リーグ",
+                "result": "38-28 W"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Caen",
+            "summary": "今季リーグ5戦3勝2敗139–155、平均27.8–31.0。6戦目の親善試合はH2H欄に分離。",
+            "items": [
+              {
+                "date": "2026-10-02",
+                "label": "Saint-Raphaël H",
+                "result": "33-30 W"
+              },
+              {
+                "date": "2026-09-25",
+                "label": "Aix A",
+                "result": "25-32 L"
+              },
+              {
+                "date": "2026-09-18",
+                "label": "Limoges H",
+                "result": "23-38 L"
+              },
+              {
+                "date": "2026-09-11",
+                "label": "Toulouse A",
+                "result": "32-31 W"
+              },
+              {
+                "date": "2026-09-06",
+                "label": "Dunkerque H",
+                "result": "26-24 W"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "A＝ナント、B＝Caen。直近リーグの共通相手3件。開催地差と少数サンプルに注意。",
+          "items": [
+            {
+              "opponent": "Aix",
+              "side_a": {
+                "date": "2026-09-12",
+                "result": "38-28 W（H）"
+              },
+              "side_b": {
+                "date": "2026-09-25",
+                "result": "25-32 L（A）"
+              },
+              "comparison": "ナント+10、Caen−7。得失点差17点。会場条件はナント有利。"
+            },
+            {
+              "opponent": "Dunkerque",
+              "side_a": {
+                "date": "2026-10-03",
+                "result": "31-24 W（A）"
+              },
+              "side_b": {
+                "date": "2026-09-06",
+                "result": "26-24 W（H）"
+              },
+              "comparison": "双方勝利。ナントはアウェーでも7点差、Caenは2点差。"
+            },
+            {
+              "opponent": "Toulouse",
+              "side_a": {
+                "date": "2026-09-27",
+                "result": "29-30 L（H）"
+              },
+              "side_b": {
+                "date": "2026-09-11",
+                "result": "32-31 W（A）"
+              },
+              "comparison": "反証：ナントはホーム敗戦、Caenはアウェー勝利。"
+            }
+          ]
+        },
+        "sport_specific": {
+          "text": "通常時間勝者のみ。引分は的中にしない。欧州CLの疲労を考慮し、大幅ハンディ・前半勝利は未採用。"
+        }
+      },
+      "sources": [
+        "https://hbcnantes.com/actualites/hbc-nantes-vikings-de-caen-les-journees-de-larbitrage-jna/",
+        "https://www.lnh.fr/daikin-starligue/equipes/hbc-nantes",
+        "https://www.lnh.fr/daikin-starligue/equipes/caen-handball",
+        "https://scores24.live/fr/handball/m-09-10-2026-nantes-caen-handball",
+        "https://hbcnantes.com/actualites/carton-plein-pour-la-prepa/",
+        "https://hbcnantes.com/actualites/le-hbc-nantes-sincline-dans-le-money-time-face-a-melsungen-28-23/",
+        "https://hbcnantes.com/actualites/?page=2"
+      ],
+      "rank": 4
+    },
+    {
+      "match_id": "2026-10-11-suwon-bluewings-ansan",
+      "event_id": "web-2026-10-11-suwon-bluewings-ansan",
+      "matchup": "Suwon Samsung Bluewings vs Ansan Greeners",
+      "favored": "Suwon Samsung Bluewings",
+      "selection_label": "Suwon Samsung Bluewings",
+      "sport": "サッカー",
+      "competition": "韓国2部・Kリーグ2 第28節",
+      "start_jst": "2026-10-11T14:00:00+09:00",
+      "venue": "水原ワールドカップ競技場／水原三星ホーム",
+      "format": "90分・引分を含む1X2",
+      "status": "formal",
+      "gap_grade": "優勢（価格評価別）",
+      "price_grade": "未確認",
+      "market": "match_1x2",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・購入オッズ未確認",
+      "odds": {
+        "min": 1.2,
+        "max": 1.2,
+        "required_win_rate_pct": "83.33",
+        "book_examples": "Telefootball掲載BETHUB：水原1.20／引分6.25／安山10.75。更新時刻・購入可能価格未保証。購入オッズには未登録。ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-11T12:58:00+09:00",
+      "analysis_reviewed_at": "2026-10-11T12:58:00+09:00",
+      "conclusion": "水原三星勝利を正式採用。直近8戦6勝2分対安山1勝2分5敗。共通相手への内容も水原寄り。ただし直近H2H敗戦と休止明け、ホーム引分率を反証として掲載。",
+      "risk": "水原FCとは別チーム。7/11のH2Hは水原1–2敗戦。約1か月の実戦空白。ホーム12戦4分、安山はアウェー10戦4勝。1.20参考価格では83.3%が必要でEV優位は未確認。",
+      "analysis_detail": {
+        "summary": "水原三星勝利を正式採用。直近8戦6勝2分対安山1勝2分5敗。共通相手への内容も水原寄り。ただし直近H2H敗戦と休止明け、ホーム引分率を反証として掲載。",
+        "availability": {
+          "text": "当日先発・全欠場者未確認。"
+        },
+        "home_away": {
+          "text": "水原ホーム12戦7勝4分1敗16–8、安山アウェー10戦4勝2分4敗10–16。順位差だけで安山の遠征力を過小評価しない。"
+        },
+        "market": {
+          "text": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+        },
+        "ranking_or_rating": {
+          "text": "水原1位53点／25戦16勝5分4敗39–20。安山16位22点／26戦6勝4分16敗27–49。勝点差31。"
+        },
+        "h2h": {
+          "summary": "FotMob通算表示：水原6勝2分1敗。個別確認できた直近6件を水原視点で列挙。全9件の明細照合は未完了。",
+          "items": [
+            {
+              "date": "2026-07-11",
+              "label": "水原 A",
+              "result": "1-2 L"
+            },
+            {
+              "date": "2025-11-09",
+              "label": "水原 A",
+              "result": "1-1 D"
+            },
+            {
+              "date": "2025-08-09",
+              "label": "水原 H",
+              "result": "3-1 W"
+            },
+            {
+              "date": "2025-02-22",
+              "label": "水原 A",
+              "result": "1-0 W"
+            },
+            {
+              "date": "2024-11-03",
+              "label": "水原 H",
+              "result": "2-1 W"
+            },
+            {
+              "date": "2024-06-30",
+              "label": "水原 H",
+              "result": "1-1 D"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "水原三星",
+            "summary": "直近8戦6勝2分0敗17–6。平均2.13得点0.75失点。最後の公式戦9/12から約1か月。",
+            "items": [
+              {
+                "date": "2026-09-12",
+                "label": "ソウルEランド A",
+                "result": "1-0 W"
+              },
+              {
+                "date": "2026-09-06",
+                "label": "忠南牙山 H",
+                "result": "2-0 W"
+              },
+              {
+                "date": "2026-08-29",
+                "label": "金浦 A",
+                "result": "4-1 W"
+              },
+              {
+                "date": "2026-08-22",
+                "label": "天安 A",
+                "result": "1-0 W"
+              },
+              {
+                "date": "2026-08-15",
+                "label": "水原FC H",
+                "result": "2-2 D"
+              },
+              {
+                "date": "2026-08-07",
+                "label": "金海 H",
+                "result": "1-0 W"
+              },
+              {
+                "date": "2026-08-01",
+                "label": "忠北清州 A",
+                "result": "2-2 D"
+              },
+              {
+                "date": "2026-07-25",
+                "label": "釜山 A",
+                "result": "4-1 W"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "安山",
+            "summary": "直近8戦1勝2分5敗9–15。平均1.13得点1.88失点。Telefootballには9/20清州戦・9/5釜山戦が欠落しており、FotMob・SoccerSTATSで補完。",
+            "items": [
+              {
+                "date": "2026-09-20",
+                "label": "忠北清州 H",
+                "result": "2-3 L"
+              },
+              {
+                "date": "2026-09-12",
+                "label": "華城 H",
+                "result": "0-2 L"
+              },
+              {
+                "date": "2026-09-05",
+                "label": "釜山 A",
+                "result": "1-0 W"
+              },
+              {
+                "date": "2026-08-28",
+                "label": "大邱 H",
+                "result": "1-2 L"
+              },
+              {
+                "date": "2026-08-22",
+                "label": "城南 H",
+                "result": "1-2 L"
+              },
+              {
+                "date": "2026-08-16",
+                "label": "ソウルEランド A",
+                "result": "1-3 L"
+              },
+              {
+                "date": "2026-08-07",
+                "label": "忠南牙山 A",
+                "result": "1-1 D"
+              },
+              {
+                "date": "2026-08-02",
+                "label": "金海 H",
+                "result": "2-2 D"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "A＝水原三星、B＝安山。双方の直近8戦から5相手。得失点差の比較であり、予測点差への加算はしない。",
+          "items": [
+            {
+              "opponent": "ソウルEランド",
+              "side_a": {
+                "date": "2026-09-12",
+                "result": "1-0 W（A）"
+              },
+              "side_b": {
+                "date": "2026-08-16",
+                "result": "1-3 L（A）"
+              },
+              "comparison": "同じアウェー条件。水原を支持。"
+            },
+            {
+              "opponent": "忠南牙山",
+              "side_a": {
+                "date": "2026-09-06",
+                "result": "2-0 W（H）"
+              },
+              "side_b": {
+                "date": "2026-08-07",
+                "result": "1-1 D（A）"
+              },
+              "comparison": "水原寄りだが会場差あり。"
+            },
+            {
+              "opponent": "金海",
+              "side_a": {
+                "date": "2026-08-07",
+                "result": "1-0 W（H）"
+              },
+              "side_b": {
+                "date": "2026-08-02",
+                "result": "2-2 D（H）"
+              },
+              "comparison": "近い日付・同じホーム条件で水原を支持。"
+            },
+            {
+              "opponent": "忠北清州",
+              "side_a": {
+                "date": "2026-08-01",
+                "result": "2-2 D（A）"
+              },
+              "side_b": {
+                "date": "2026-09-20",
+                "result": "2-3 L（H）"
+              },
+              "comparison": "水原寄り。約7週間の間隔あり。"
+            },
+            {
+              "opponent": "釜山",
+              "side_a": {
+                "date": "2026-07-25",
+                "result": "4-1 W（A）"
+              },
+              "side_b": {
+                "date": "2026-09-05",
+                "result": "1-0 W（A）"
+              },
+              "comparison": "双方アウェー勝利。安山にも勝ち切る実績がある。"
+            }
+          ]
+        },
+        "sport_specific": {
+          "text": "水原ホーム前半リードは12戦4回、前半0–0は6回。試合勝利の評価を前半勝利に流用しない。90分勝利を追跡し、引分は負け。"
+        }
+      },
+      "sources": [
+        "https://www.fotmob.com/en-GB/matches/suwon-samsung-bluewings-vs-ansan-greeners/5adjfif5",
+        "https://www.soccerstats.com/pmatch.asp?league=southkorea2&stats=224-3-2-2026",
+        "https://www.telefootball.net/SG/Suwon-Bluewings-Ansan-Greeners-2026-10-11-674502.html",
+        "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=98969"
+      ],
+      "rank": 5
     }
   ],
   "rejected_examples": [
@@ -334,7 +933,17 @@
       "reason": "ユーザー指定により今回のRMC反映対象から除外。"
     }
   ],
-  "summary": "正式：Aurora Gaming PH勝利（11日18:00 JST）、PSG勝利（11日02:00 JST）。NAVI○2–0、Marquette○3–0を結果・週次勝率・収支台帳へ反映。本日欄から除外。終了2件は購入オッズ不明のため利益未確定。既存Berlin/JDT/Barçaの概算+50USDは維持。",
+  "summary": {
+    "pure_gap_top": [
+      "Barça",
+      "Aurora Gaming PH",
+      "Nantes",
+      "Suwon Samsung Bluewings"
+    ],
+    "price_adjusted_top": [],
+    "caution": "今回指定3件を正式追加。購入オッズ未確認・利益未確定。水原の参考1.20倍は価格優位未判定。既存PSGは開始時刻経過・結果未確認。",
+    "previous_note": "正式：Aurora Gaming PH勝利（11日18:00 JST）、PSG勝利（11日02:00 JST）。NAVI○2–0、Marquette○3–0を結果・週次勝率・収支台帳へ反映。本日欄から除外。終了2件は購入オッズ不明のため利益未確定。既存Berlin/JDT/Barçaの概算+50USDは維持。"
+  },
   "previous_analysis": {
     "generated_at": "2026-09-30T17:39:31+09:00",
     "window": {
@@ -3245,7 +3854,7 @@
         "selection_label": "Füchse Berlin勝利",
         "match_id": "2026-10-09-berlin-porto",
         "stake_usd_reference": 100,
-        "profit_usd": 13.0,
+        "profit_usd": 13,
         "profit_status": "ユーザー申告の概算オッズによる参考収支",
         "rank": 1,
         "event_id": "web-2026-10-09-berlin-porto",
@@ -3319,7 +3928,7 @@
         "selection_label": "Johor Darul Ta'zim勝利",
         "match_id": "2026-10-08-jdt-svay-rieng",
         "stake_usd_reference": 100,
-        "profit_usd": 25.0,
+        "profit_usd": 25,
         "profit_status": "ユーザー申告の概算オッズによる参考収支",
         "rank": 2,
         "event_id": "web-2026-10-08-jdt-svay-rieng",
@@ -3428,7 +4037,7 @@
         "selection_label": "Barça勝利",
         "match_id": "2026-10-09-barca-dinamo",
         "stake_usd_reference": 100,
-        "profit_usd": 12.0,
+        "profit_usd": 12,
         "profit_status": "ユーザー申告の概算オッズによる参考収支",
         "rank": 3,
         "event_id": "web-2026-10-09-barca-dinamo",
