@@ -411,7 +411,7 @@
         },
         "settlement_odds_reports": {
           "type": "array",
-          "description": "試合前記録を保存したまま追記するユーザー申告の概算精算オッズ。購入オッズ未登録時だけ使用。",
+          "description": "購入価格未登録時に使用する、出典と方法を明記した概算精算価格の追記履歴。",
           "items": {
             "type": "object",
             "additionalProperties": false,
@@ -435,7 +435,11 @@
                 "format": "date-time"
               },
               "source": {
-                "const": "user_reported"
+                "enum": [
+                  "user_reported",
+                  "reference_estimate",
+                  "assistant_estimate"
+                ]
               },
               "note": {
                 "type": "string"

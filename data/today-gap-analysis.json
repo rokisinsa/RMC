@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-11T20:08:38+09:00",
+  "generated_at": "2026-10-11T20:22:30+09:00",
   "window": {
     "from": "2026-10-11T19:59:27+09:00",
     "to": "2026-10-12T19:59:27+09:00",
@@ -29,12 +29,12 @@
     {
       "status": "formal",
       "gap_grade": "有力候補",
-      "price_grade": "未確認",
+      "price_grade": "推定価格・EV未判定",
       "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。",
-        "required_win_rate_pct": null
+        "min": 1.1,
+        "max": 1.1,
+        "required_win_rate_pct": 90.91,
+        "book_examples": "推定・計算用 1.10倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
@@ -42,7 +42,7 @@
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "結果照合待ち：専門DB2–1／公式1–1で不一致",
+      "profit_status": "未決着・勝利時の概算利益 +10.0USD（収支未計上）",
       "rank": 1,
       "match_id": "2026-10-11-aurora-twisted-ph",
       "event_id": "web-2026-10-11-aurora-twisted-ph",
@@ -212,9 +212,16 @@
           "text": "BO3シリーズ勝者。ドラフトとサイド選択で変動。直近の実績勝率を将来の勝率へ直接置換しない。"
         },
         "market": {
-          "text": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
+          "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.10倍。"
         },
         "risk": "当日先発・ドラフト・購入オッズ未確認。シリーズ勝利のみを採用し、2–0指定に拡張しない。"
+      },
+      "estimated_settlement_odds": {
+        "odds": 1.1,
+        "estimated": true,
+        "reported_at": "2026-10-11T20:22:30+09:00",
+        "source": "assistant_estimate",
+        "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
       }
     },
     {
@@ -230,16 +237,16 @@
       "format": "60分・引分を含む1X2",
       "status": "formal",
       "gap_grade": "優勢（価格評価別）",
-      "price_grade": "未確認",
+      "price_grade": "推定価格・EV未判定",
       "market": "match_1x2",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "試合中・前半Aranda15–22Barça。最終結果未確定。",
+      "profit_status": "未決着・勝利時の概算利益 +2.0USD（収支未計上）",
       "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+        "min": 1.02,
+        "max": 1.02,
+        "required_win_rate_pct": 98.04,
+        "book_examples": "推定・計算用 1.02倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
@@ -256,7 +263,7 @@
           "text": "サンティアゴ・マングアン／アランダホーム"
         },
         "market": {
-          "text": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+          "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.02倍。"
         },
         "ranking_or_rating": {
           "text": "国内：バルサ3勝0敗133–90（平均44.3得点30.0失点）、アランダ0勝1分3敗109–131（27.3得点32.8失点）。消化数が異なる。順位の同時点全件照合は未完了。"
@@ -383,7 +390,14 @@
         "https://scores24.live/es/handball/m-10-10-2026-villa-de-aranda-barcelona",
         "https://cadenaser.com/castillayleon/2026/05/22/el-villa-de-aranda-logra-la-permanencia-en-asobal-pese-a-caer-en-el-ultimo-segundo-ante-puente-genil-radio-aranda/"
       ],
-      "rank": 2
+      "rank": 2,
+      "estimated_settlement_odds": {
+        "odds": 1.02,
+        "estimated": true,
+        "reported_at": "2026-10-11T20:22:30+09:00",
+        "source": "assistant_estimate",
+        "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+      }
     },
     {
       "match_id": "2026-10-12-nantes-caen-handball",
@@ -398,16 +412,16 @@
       "format": "60分・引分を含む1X2",
       "status": "formal",
       "gap_grade": "優勢（価格評価別）",
-      "price_grade": "未確認",
+      "price_grade": "推定価格・EV未判定",
       "market": "match_1x2",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "試合前・購入オッズ未確認",
+      "profit_status": "未決着・勝利時の概算利益 +4.0USD（収支未計上）",
       "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+        "min": 1.04,
+        "max": 1.04,
+        "required_win_rate_pct": 96.15,
+        "book_examples": "推定・計算用 1.04倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。公開参考価格1/25を小数1.04へ換算。https://oddsdigger.com/handball/hbc-nantes-vs-caen-hb-8688775 （購入価格未確認） 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
@@ -424,7 +438,7 @@
           "text": "Hアリーナ／ナントホーム"
         },
         "market": {
-          "text": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+          "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。公開参考価格1/25を小数1.04へ換算。https://oddsdigger.com/handball/hbc-nantes-vs-caen-hb-8688775 （購入価格未確認） 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.04倍。"
         },
         "ranking_or_rating": {
           "text": "リーグ5試合：ナント4勝1敗172–141（平均34.4–28.2）、Caen3勝2敗139–155（27.8–31.0）。順位は他カード消化で変動するため勝敗を比較。"
@@ -635,7 +649,14 @@
         "https://www.lnh.fr/la-ligue/news/2026-06-07/caen-accede-pour-premiere-fois-liqui-moly-starligue",
         "https://www.lnh.fr/lnh/news/saint-raphael-nantes-match-guichets-fermes"
       ],
-      "rank": 3
+      "rank": 3,
+      "estimated_settlement_odds": {
+        "odds": 1.04,
+        "estimated": true,
+        "reported_at": "2026-10-11T20:22:30+09:00",
+        "source": "reference_estimate",
+        "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。公開参考価格1/25を小数1.04へ換算。https://oddsdigger.com/handball/hbc-nantes-vs-caen-hb-8688775 （購入価格未確認） 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+      }
     },
     {
       "match_id": "2026-10-11-goztepe-vakifbank",
@@ -650,16 +671,16 @@
       "format": "5セット制・3セット先取",
       "status": "formal",
       "gap_grade": "VakıfBank優勢（価格評価別）",
-      "price_grade": "未確認",
+      "price_grade": "推定価格・EV未判定",
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "試合前・購入オッズ未確認",
+      "profit_status": "未決着・勝利時の概算利益 +5.0USD（収支未計上）",
       "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "ユーザー指定で試合勝者VakıfBankを正式採用。1件100USD基準の成績追跡。購入実行の記録ではない。購入オッズ未確認のため利益額・必要勝率・推定勝率・EVは未確定。 外部ページの1.00表示は丸め・取得不備を除外できず採用しない。"
+        "min": 1.05,
+        "max": 1.05,
+        "required_win_rate_pct": 95.24,
+        "book_examples": "推定・計算用 1.05倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
@@ -911,10 +932,17 @@
           "text": "開幕Beşiktaş戦25–16、25–18、23–25、25–19（98–78）。10/6スーパーカップは25–21、25–23、19–25、17–25、15–10（101–104）で勝利。総得点の多寡と試合勝利は一致しない。1stセット・3–0・ハンディは未採用。"
         },
         "market": {
-          "text": "ユーザー指定で試合勝者VakıfBankを正式採用。1件100USD基準の成績追跡。購入実行の記録ではない。購入オッズ未確認のため利益額・必要勝率・推定勝率・EVは未確定。"
+          "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.05倍。"
         }
       },
-      "rank": 4
+      "rank": 4,
+      "estimated_settlement_odds": {
+        "odds": 1.05,
+        "estimated": true,
+        "reported_at": "2026-10-11T20:22:30+09:00",
+        "source": "assistant_estimate",
+        "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+      }
     }
   ],
   "rejected_examples": [
@@ -935,7 +963,7 @@
       "Nantes"
     ],
     "price_adjusted_top": [],
-    "caution": "価格優位は未判定。PSG・水原の勝利を結果台帳に反映して本日欄から除外。購入オッズ不明につき利益未確定。Aurora PHは結果ソース不一致、Barçaは試合中。",
+    "caution": "ユーザー承認で推定価格を概算収支へ使用。保存済み参考価格・申告値を優先し、根拠不足は計算用仮置きと表示。実購入利益ではない。未決着分は予定利益のみ。",
     "previous_note": "正式：Aurora Gaming PH勝利（11日18:00 JST）、PSG勝利（11日02:00 JST）。NAVI○2–0、Marquette○3–0を結果・週次勝率・収支台帳へ反映。本日欄から除外。終了2件は購入オッズ不明のため利益未確定。既存Berlin/JDT/Barçaの概算+50USDは維持。"
   },
   "previous_analysis": {
@@ -2469,12 +2497,12 @@
         "format": "90分→同点ならPK",
         "status": "recommended",
         "gap_grade": "S-",
-        "price_grade": "未判定",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "最新1X2未確認",
-          "required_win_rate_pct": null
+          "min": 1.07,
+          "max": 1.07,
+          "required_win_rate_pct": 93.46,
+          "book_examples": "推定・計算用 1.07倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。保存済み事前確率0.895から1/(p×1.04)で作成した計算用価格。4%は仮定。事前確率自体の校正・実勢価格は未検証。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": "88〜91",
         "estimated_ev_pct": "未算出",
@@ -2585,7 +2613,16 @@
         "favored_result": "win",
         "result": "日本勝利（ユーザー報告・スコア未記録）",
         "match_id": "2026-10-05-japan-newzealand",
-        "match_status": "final"
+        "match_status": "final",
+        "estimated_settlement_odds": {
+          "odds": 1.07,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "assistant_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。保存済み事前確率0.895から1/(p×1.04)で作成した計算用価格。4%は仮定。事前確率自体の校正・実勢価格は未検証。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        },
+        "profit_usd": 7.0,
+        "profit_status": "勝利・概算利益（推定オッズ、100USD基準）"
       },
       {
         "sport": "Overwatch 2",
@@ -2861,12 +2898,12 @@
         "format": "60分",
         "status": "formal",
         "gap_grade": "S",
-        "price_grade": "未判定",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "最新実オッズ未確認",
-          "required_win_rate_pct": null
+          "min": 1.01,
+          "max": 1.01,
+          "required_win_rate_pct": 99.01,
+          "book_examples": "推定・計算用 1.01倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。保存済み事前確率0.96から1/(p×1.04)で作成した計算用価格。4%は仮定。事前確率自体の校正・実勢価格は未検証。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": "未算定（検証済み勝率・購入オッズなし）",
@@ -3099,7 +3136,16 @@
           "https://www.sporting.pt/pt/noticias/modalidades/andebol/2026-10-05/de-vitoria-em-vitoria"
         ],
         "analysis_reviewed_at": "2026-10-08T17:31:01+09:00",
-        "analysis_basis": "2026-10-05の調査資料を2026-10-08に履歴へ追記。事前比較と事後の確定結果を分離。"
+        "analysis_basis": "2026-10-05の調査資料を2026-10-08に履歴へ追記。事前比較と事後の確定結果を分離。",
+        "estimated_settlement_odds": {
+          "odds": 1.01,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "assistant_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。保存済み事前確率0.96から1/(p×1.04)で作成した計算用価格。4%は仮定。事前確率自体の校正・実勢価格は未検証。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        },
+        "profit_usd": 1.0,
+        "profit_status": "勝利・概算利益（推定オッズ、100USD基準）"
       },
       {
         "matchup": "Solary vs Valerion",
@@ -3109,12 +3155,12 @@
         "start_jst": "2026-10-07T01:00:00+09:00",
         "status": "formal",
         "gap_grade": "未判定",
-        "price_grade": "未確認",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "採用オッズ未登録",
-          "required_win_rate_pct": null
+          "min": 1.25,
+          "max": 1.25,
+          "required_win_rate_pct": 80.0,
+          "book_examples": "推定・計算用 1.25倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": null,
@@ -3143,7 +3189,16 @@
         "archive_reason": "終了済み・結果と収支集計へ反映",
         "result_sources": [
           "https://esportsresults.com/match/lol/1698595/solary-vs-valerion"
-        ]
+        ],
+        "estimated_settlement_odds": {
+          "odds": 1.25,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "assistant_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        },
+        "profit_usd": 25.0,
+        "profit_status": "勝利・概算利益（推定オッズ、100USD基準）"
       },
       {
         "matchup": "Itambé Minas vs JF Vôlei",
@@ -3153,12 +3208,12 @@
         "start_jst": "2026-10-06T07:30:00+09:00",
         "status": "formal",
         "gap_grade": "未判定",
-        "price_grade": "未確認",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "採用オッズ未登録",
-          "required_win_rate_pct": null
+          "min": 1.1,
+          "max": 1.1,
+          "required_win_rate_pct": 90.91,
+          "book_examples": "推定・計算用 1.10倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": null,
@@ -3185,7 +3240,16 @@
         "archive_reason": "終了済み・結果と収支集計へ反映",
         "result_sources": [
           "https://webvolei.com.br/minas-x-jf-volei-virada-campeonato-mineiro/"
-        ]
+        ],
+        "estimated_settlement_odds": {
+          "odds": 1.1,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "assistant_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        },
+        "profit_usd": -100,
+        "profit_status": "敗戦・100USD基準"
       },
       {
         "rank": 4,
@@ -3198,12 +3262,12 @@
         "format": "BO3",
         "status": "formal",
         "gap_grade": "A+（88点）",
-        "price_grade": "未確認",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "購入オッズ未確認",
-          "required_win_rate_pct": null
+          "min": 1.15,
+          "max": 1.15,
+          "required_win_rate_pct": 86.96,
+          "book_examples": "推定・計算用 1.15倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": null,
@@ -3383,7 +3447,7 @@
             "text": "3マップともTBA、Veto前。donk対Ax1Le：Rating1.42対1.15、ADR94.3対81.3（過去3か月）。序盤の優劣は未判定。"
           },
           "market": {
-            "text": "購入オッズ未確認。実際の取得価格を推測登録しない。必要勝率・期待値・利益額は未計算。"
+            "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.15倍。"
           },
           "rationale": {
             "why": [
@@ -3416,7 +3480,16 @@
         "archive_reason": "終了済み・結果と収支集計へ反映",
         "result_sources": [
           "https://www.hltv.org/news/45620/1win-stun-spirit-to-reach-esl-pro-league-playoffs"
-        ]
+        ],
+        "estimated_settlement_odds": {
+          "odds": 1.15,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "assistant_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        },
+        "profit_usd": -100,
+        "profit_status": "敗戦・100USD基準"
       },
       {
         "rank": 5,
@@ -3429,12 +3502,12 @@
         "format": "BO5",
         "status": "formal",
         "gap_grade": "未判定",
-        "price_grade": "未確認",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "購入オッズ未確認",
-          "required_win_rate_pct": null
+          "min": 1.4,
+          "max": 1.4,
+          "required_win_rate_pct": 71.43,
+          "book_examples": "推定・計算用 1.40倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": null,
@@ -3507,7 +3580,7 @@
             "text": "Antalya Spor Salonu、中立地。"
           },
           "market": {
-            "text": "オッズ・必要勝率・推定勝率・EV未確認。"
+            "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.40倍。"
           },
           "sport_specific": {
             "text": "BO5。試合勝者のみ採用。3–0やセットハンディではない。"
@@ -3529,7 +3602,16 @@
         "archive_reason": "終了済み・結果と収支集計へ反映",
         "result_sources": [
           "https://m.aa.com.tr/tr/spor/2026-voleybol-kadinlar-axa-sigorta-sampiyonlar-kupasi-vakifbankin/4080148"
-        ]
+        ],
+        "estimated_settlement_odds": {
+          "odds": 1.4,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "assistant_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        },
+        "profit_usd": 40.0,
+        "profit_status": "勝利・概算利益（推定オッズ、100USD基準）"
       },
       {
         "matchup": "Karmine Corp Blue vs Skillcamp",
@@ -3541,12 +3623,12 @@
         "format": "BO5",
         "status": "formal",
         "gap_grade": "有力候補",
-        "price_grade": "未確認",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
-          "required_win_rate_pct": null
+          "min": 1.15,
+          "max": 1.15,
+          "required_win_rate_pct": 86.96,
+          "book_examples": "推定・計算用 1.15倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": null,
@@ -3624,7 +3706,7 @@
           },
           "risk": "ロスター・パッチ変化、価格未確認。直近10全明細と平均マップ差はデータ不足。",
           "market": {
-            "text": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
+            "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.15倍。"
           }
         },
         "sources": [
@@ -3647,8 +3729,15 @@
         "result_sources": [
           "https://www.sheepesports.com/en/cs/matches/EMEA%20Masters%2F2026%20Season%2FSummer%20Main%20Event_Round%20of%2016_6"
         ],
-        "profit_usd": null,
-        "profit_status": "購入オッズ未確認"
+        "profit_usd": 15.0,
+        "profit_status": "勝利・概算利益（推定オッズ、100USD基準）",
+        "estimated_settlement_odds": {
+          "odds": 1.15,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "assistant_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        }
       },
       {
         "matchup": "Partizan vs Veszprém",
@@ -3660,12 +3749,12 @@
         "format": "リーグ戦・60分",
         "status": "formal",
         "gap_grade": "有力候補",
-        "price_grade": "未確認",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
-          "required_win_rate_pct": null
+          "min": 1.13,
+          "max": 1.13,
+          "required_win_rate_pct": 88.5,
+          "book_examples": "推定・計算用 1.13倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。ユーザーの既存申告：約1.13倍。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": null,
@@ -3764,7 +3853,7 @@
           },
           "risk": "遠征・疲労・起用変更。H2Hが古く現ロスター比較に不適切。",
           "market": {
-            "text": "正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。"
+            "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。ユーザーの既存申告：約1.13倍。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.13倍。"
           }
         },
         "sources": [
@@ -3788,8 +3877,15 @@
         "result_sources": [
           "https://ehfcl.eurohandball.com/men/2026-27/news/en/veszprem-and-magdeburg-keep-perfect-records-kriens-luzern-take-first-points-ever/"
         ],
-        "profit_usd": null,
-        "profit_status": "購入オッズ未確認"
+        "profit_usd": 13.0,
+        "profit_status": "勝利・概算利益（推定オッズ、100USD基準）",
+        "estimated_settlement_odds": {
+          "odds": 1.13,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "user_reported",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。ユーザーの既存申告：約1.13倍。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        }
       },
       {
         "matchup": "Füchse Berlin vs FC Porto",
@@ -4059,12 +4155,12 @@
         "format": "BO3 / LAN",
         "status": "formal",
         "gap_grade": "A",
-        "price_grade": "未確認",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。",
-          "required_win_rate_pct": null
+          "min": 1.35,
+          "max": 1.35,
+          "required_win_rate_pct": 74.07,
+          "book_examples": "推定・計算用 1.35倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": null,
@@ -4305,7 +4401,7 @@
             "text": "両者とも10/8に試合。NAVIはTLIDを2–0、DEWAはEVOSに1–2。ドラフト、サイド選択、序盤オブジェクト率、当日パッチ別ヒーロー成績は未確認。シリーズ勝者を対象とし2–0やMAP1勝利まで拡張しない。"
           },
           "market": {
-            "text": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
+            "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.35倍。"
           },
           "risk": "DEWAはAE・TLIDを倒しており、過去H2Hも優勢。BO3のドラフト差・先発未確認・オッズ不明が残る。NAVI優勢と無条件の購入価値は別。"
         },
@@ -4322,8 +4418,8 @@
         "match_id": "2026-10-09-dewa-navi",
         "event_id": "web-2026-10-09-dewa-navi",
         "stake_usd_reference": 100,
-        "profit_usd": null,
-        "profit_status": "勝利確定・購入オッズ未確認のため利益未確定",
+        "profit_usd": 35.0,
+        "profit_status": "勝利・概算利益（推定オッズ、100USD基準）",
         "favored_result": "win",
         "result": "○ NAVI勝利 0–2",
         "result_status": "final",
@@ -4333,7 +4429,14 @@
         "archive_reason": "試合終了・勝利確定。結果履歴と収支台帳へ移動。",
         "result_sources": [
           "https://id-mpl.com/s18/en/schedule"
-        ]
+        ],
+        "estimated_settlement_odds": {
+          "odds": 1.35,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "assistant_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        }
       },
       {
         "rank": 2,
@@ -4346,12 +4449,12 @@
         "format": "5セット制（3セット先取）",
         "status": "formal",
         "gap_grade": "有力候補",
-        "price_grade": "未確認",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。",
-          "required_win_rate_pct": null
+          "min": 1.25,
+          "max": 1.25,
+          "required_win_rate_pct": 80.0,
+          "book_examples": "推定・計算用 1.25倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": null,
@@ -4569,7 +4672,7 @@
             "text": "MUのCarson Tylerは4.35 kills/set、29サービスエース。直近Creighton戦21kills・7aces。GeorgetownはLee-Caracciの攻撃成功率.452、Ploder.445と中央が強い。MUがサーブで相手の返球を崩し速攻を制限できるかが鍵。Tyler依存、長いラリー、フルセット化はリスク。試合勝者の評価であり3–0予想ではない。"
           },
           "market": {
-            "text": "正式採用は購入実行の記録ではありません。1件100USD基準。購入オッズ未確認のため払戻・純利益・EVは未確定。"
+            "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.25倍。"
           },
           "risk": "昨季の直接対決はGeorgetownが3–2勝利。GUの中央攻撃と2連勝を軽視しない。価格・先発未確認につき推定勝率やEVは提示しない。"
         },
@@ -4587,8 +4690,8 @@
         "match_id": "2026-10-10-marquette-georgetown",
         "event_id": "web-2026-10-10-marquette-georgetown",
         "stake_usd_reference": 100,
-        "profit_usd": null,
-        "profit_status": "勝利確定・購入オッズ未確認のため利益未確定",
+        "profit_usd": 25.0,
+        "profit_status": "勝利・概算利益（推定オッズ、100USD基準）",
         "favored_result": "win",
         "result": "○ Marquette勝利 3–0",
         "result_status": "final",
@@ -4598,25 +4701,32 @@
         "archive_reason": "試合終了・勝利確定。結果履歴と収支台帳へ移動。",
         "result_sources": [
           "https://gomarquette.com/news/2026/10/9/womens-volleyball-vb-downs-georgetown-in-straight-sets-friday-evening"
-        ]
+        ],
+        "estimated_settlement_odds": {
+          "odds": 1.25,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "assistant_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        }
       },
       {
         "status": "formal",
         "gap_grade": "有力候補",
-        "price_grade": "未確認",
+        "price_grade": "推定価格・EV未判定",
         "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。",
-          "required_win_rate_pct": null
+          "min": 1.12,
+          "max": 1.12,
+          "required_win_rate_pct": 89.29,
+          "book_examples": "推定・計算用 1.12倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": null,
         "added_at": "2026-10-11T00:53:10+09:00",
         "market": "match_1x2",
         "stake_usd_reference": 100,
-        "profit_usd": null,
-        "profit_status": "勝利確定・購入オッズ不明のため利益未確定",
+        "profit_usd": 12.0,
+        "profit_status": "勝利・概算利益（推定オッズ、100USD基準）",
         "rank": 2,
         "match_id": "2026-10-11-psg-toulouse-handball",
         "event_id": "web-2026-10-11-psg-toulouse-handball",
@@ -4701,7 +4811,7 @@
             "text": "通常時間のPSG勝利を追跡。引分は勝利扱いしない。欧州CLからの試合間隔と選手起用に注意。"
           },
           "market": {
-            "text": "ユーザー指定で正式採用。1件100USD基準。購入実行の記録ではありません。購入オッズ未確認のため必要勝率・推定勝率・EV・利益額は未確定。"
+            "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.12倍。"
           },
           "risk": "PSGは10/7に欧州CL。選手起用・欠場・購入オッズ未確認。Toulouseの改善を織り込み、大きなハンデは採用しない。"
         },
@@ -4710,7 +4820,14 @@
         "result_winner": "PSG",
         "favored_result": "win",
         "result_verified_at": "2026-10-11T20:08:38+09:00",
-        "result_source": "https://www.psg.fr/en/content/paris-voit-la-vie-en-rose-contre-toulouse-compte-rendu-paris-saint-germain-handball-fenix-toulouse-handball-journee-6-daikin-starligue-2026-2027"
+        "result_source": "https://www.psg.fr/en/content/paris-voit-la-vie-en-rose-contre-toulouse-compte-rendu-paris-saint-germain-handball-fenix-toulouse-handball-journee-6-daikin-starligue-2026-2027",
+        "estimated_settlement_odds": {
+          "odds": 1.12,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "assistant_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        }
       },
       {
         "match_id": "2026-10-11-suwon-bluewings-ansan",
@@ -4725,16 +4842,16 @@
         "format": "90分・引分を含む1X2",
         "status": "formal",
         "gap_grade": "優勢（価格評価別）",
-        "price_grade": "未確認",
+        "price_grade": "推定価格・EV未判定",
         "market": "match_1x2",
         "stake_usd_reference": 100,
-        "profit_usd": null,
-        "profit_status": "勝利確定・購入オッズ不明のため利益未確定",
+        "profit_usd": 20.0,
+        "profit_status": "勝利・概算利益（推定オッズ、100USD基準）",
         "odds": {
           "min": 1.2,
           "max": 1.2,
-          "required_win_rate_pct": "83.33",
-          "book_examples": "Telefootball掲載BETHUB：水原1.20／引分6.25／安山10.75。更新時刻・購入可能価格未保証。購入オッズには未登録。ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+          "required_win_rate_pct": 83.33,
+          "book_examples": "推定・計算用 1.20倍。2026/10/11ユーザーが推定オッズによる概算収支を承認。保存済み参考オッズの中間値。出典：https://www.telefootball.net/SG/Suwon-Bluewings-Ansan-Greeners-2026-10-11-674502.html 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
         },
         "estimated_win_probability_pct": null,
         "estimated_ev_pct": null,
@@ -4751,7 +4868,7 @@
             "text": "水原ホーム12戦7勝4分1敗16–8、安山アウェー10戦4勝2分4敗10–16。順位差だけで安山の遠征力を過小評価しない。"
           },
           "market": {
-            "text": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+            "text": "2026/10/11ユーザーが推定オッズによる概算収支を承認。保存済み参考オッズの中間値。出典：https://www.telefootball.net/SG/Suwon-Bluewings-Ansan-Greeners-2026-10-11-674502.html 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。 概算精算価格1.20倍。"
           },
           "ranking_or_rating": {
             "text": "水原1位53点／25戦16勝5分4敗39–20。安山16位22点／26戦6勝4分16敗27–49。勝点差31。"
@@ -4966,7 +5083,14 @@
         "result_winner": "Suwon Samsung Bluewings",
         "favored_result": "win",
         "result_verified_at": "2026-10-11T20:08:38+09:00",
-        "result_source": "https://www.news1.kr/sports/soccer/6316002"
+        "result_source": "https://www.news1.kr/sports/soccer/6316002",
+        "estimated_settlement_odds": {
+          "odds": 1.2,
+          "estimated": true,
+          "reported_at": "2026-10-11T20:22:30+09:00",
+          "source": "reference_estimate",
+          "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。保存済み参考オッズの中間値。出典：https://www.telefootball.net/SG/Suwon-Bluewings-Ansan-Greeners-2026-10-11-674502.html 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        }
       }
     ],
     "summary": {
@@ -4992,7 +5116,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-11T20:08:38+09:00",
-    "note": "10/11夜更新：結果と資金損益の確定を分離。テニス・Overwatch新規除外。"
+    "as_of": "2026-10-11T20:22:30+09:00",
+    "note": "ユーザー承認で推定価格を概算収支へ使用。保存済み参考価格・申告値を優先し、根拠不足は計算用仮置きと表示。実購入利益ではない。未決着分は予定利益のみ。"
   }
 }
