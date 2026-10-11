@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-11T12:58:00+09:00",
+    "as_of": "2026-10-11T13:05:24.553+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
@@ -177,6 +177,12 @@
       "started_at": "2026-10-11T12:58:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+    },
+    {
+      "run_id": "rec-user-approved-20261011-vakifbank",
+      "started_at": "2026-10-11T13:05:24.553+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー指定で試合勝者VakıfBankを正式採用。1件100USD基準の成績追跡。購入実行の記録ではない。購入オッズ未確認のため利益額・必要勝率・推定勝率・EVは未確定。"
     }
   ],
   "picks": [
@@ -3833,6 +3839,41 @@
         "odds_unverified"
       ],
       "note": "ユーザー指定で正式採用。従来の1件100USD基準で成績追跡。購入実行の記録ではない。購入オッズ・推定勝率・EV・利益額は未確定。"
+    },
+    {
+      "id": "rec-2026-10-11-goztepe-vakifbank",
+      "system": "recommendations",
+      "match_id": "2026-10-11-goztepe-vakifbank",
+      "run_id": "rec-user-approved-20261011-vakifbank",
+      "source_event_id": "web-2026-10-11-goztepe-vakifbank",
+      "market": "match_winner",
+      "market_label": "試合勝者：VakıfBank",
+      "selection": "side_b",
+      "selection_label": "VakıfBank",
+      "market_odds": {
+        "text": "購入オッズ未確認",
+        "min": null,
+        "max": null,
+        "observed_at": null,
+        "source": null
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-11T13:05:24.553+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-11T13:05:24.553+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー指定・正式採用（価格未判定）",
+        "model_version": "user-approved-analysis-20261011",
+        "summary": "VakıfBank試合勝利を正式採用。H2H2勝0敗・6–1セット、今季はBeşiktaşとEczacıbaşıに勝利。ただし共通相手7件は前季を含む補助比較で、3–0勝利やセットハンディには拡張しない。 ユーザー指定で試合勝者VakıfBankを正式採用。1件100USD基準の成績追跡。購入実行の記録ではない。購入オッズ未確認のため利益額・必要勝率・推定勝率・EVは未確定。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定で試合勝者VakıfBankを正式採用。1件100USD基準の成績追跡。購入実行の記録ではない。購入オッズ未確認のため利益額・必要勝率・推定勝率・EVは未確定。"
     }
   ]
 }
