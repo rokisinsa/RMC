@@ -227,7 +227,7 @@ function renderArchivedGapDetail(c) {
     <h4>試合前の直近成績（確認できた範囲）</h4>${gapRecentTable(d.recent_form)}
     <h4>共通対戦相手</h4>${gapCommonOpponentBlock(d.common_opponent_comparison,c.common_opponents)}
     <h4>メンバー・競技固有の条件</h4><p>${safeText(d.availability?.text??c.roster)}</p><p>${safeText(d.sport_specific?.text??c.early_tendency)}</p>
-    <h4>不確実性・価格</h4><p>${safeText(c.risk)}</p><p>${safeText(c.estimated_ev_pct)}。購入オッズ未登録のため利益額未計算。</p>
+    <h4>不確実性・価格</h4><p>${safeText(c.risk)}</p><p>${safeText(c.profit_status ?? "購入オッズ未登録のため利益額未計算。")}</p><p>${safeText(c.odds?.book_examples ?? "")}</p>
     <h4>事後の確定結果</h4><p>${safeText(d.post_match?.text??c.result)}</p>
     <div class="analysis-sources">${links}</div>
   </details>`;

@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-11T13:05:24.553+09:00",
+    "as_of": "2026-10-12T12:24:19+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -190,6 +190,13 @@
       "at": "2026-10-11T13:05:24.553+09:00",
       "source": "ユーザー指定・公式日程および結果照合",
       "note": "ユーザー指定で試合勝者VakıfBankを正式採用。1件100USD基準の成績追跡。購入実行の記録ではない。購入オッズ未確認のため利益額・必要勝率・推定勝率・EVは未確定。"
+    },
+    {
+      "run_id": "mr-user-approved-20261012-1218",
+      "kind": "human_review",
+      "at": "2026-10-12T12:24:19+09:00",
+      "source": "ユーザー指定・公開試合記録の再確認",
+      "note": "NiP勝利・BNK FEARX勝利を試合前正式登録。各100USD基準。"
     }
   ],
   "matches": [
@@ -3918,6 +3925,76 @@
         "https://scores24.live/pt/volleyball/m-11-10-2026-goztepe-vakifbank-sk-prediction"
       ],
       "verified_at": "2026-10-11T13:05:24.553+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-12-nip-betclic-cs2",
+      "sport": "CS2",
+      "competition": "Stake Pulse Beat III・グループA初戦",
+      "side_a": "Ninjas in Pyjamas",
+      "side_b": "Betclic",
+      "home_side": "neutral",
+      "venue": "スウェーデン・ストックホルム／LAN（ホーム差は加点しない）",
+      "start_at": "2026-10-12T19:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261012-1218",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定・試合前の正式登録"
+        }
+      ],
+      "sources": [
+        "https://www.hltv.org/matches/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii",
+        "https://www.hltv.org/results?team=4411",
+        "https://www.hltv.org/team/12916/betclic",
+        "https://tips.gg/archive/apogee-esports-csgo-vs-ninjas-in-pyjamas-csgo/",
+        "https://www.hltv.org/betting/analytics/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii"
+      ],
+      "verified_at": "2026-10-12T12:24:19+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-12-bnk-fearx-jdg-lol",
+      "sport": "LoL",
+      "competition": "デマーシアカップ・グローバル招待大会2026・準々決勝",
+      "side_a": "BNK FEARX",
+      "side_b": "JD Gaming",
+      "home_side": "neutral",
+      "venue": "中国開催／会場詳細・ホーム効果未確認",
+      "start_at": "2026-10-12T18:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261012-1218",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定・試合前の正式登録"
+        }
+      ],
+      "sources": [
+        "https://ensigame.com/matches/lol/2159969-bnk-fearx-bfx-vs-jd-gaming-jdg-dcgi-12-10-26",
+        "https://ensigame.com/teams/lol/fearx-fox",
+        "https://ensigame.com/teams/lol/jd-gaming-jdg",
+        "https://esportsresults.com/match/lol/1694369/bnk-fearx-vs-jd-gaming",
+        "https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/"
+      ],
+      "verified_at": "2026-10-12T12:24:19+09:00",
       "flags": []
     }
   ]

@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-11T13:05:24.553+09:00",
+    "as_of": "2026-10-12T12:24:19+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
@@ -183,6 +183,12 @@
       "started_at": "2026-10-11T13:05:24.553+09:00",
       "slot": "adhoc",
       "note": "ユーザー指定で試合勝者VakıfBankを正式採用。1件100USD基準の成績追跡。購入実行の記録ではない。購入オッズ未確認のため利益額・必要勝率・推定勝率・EVは未確定。"
+    },
+    {
+      "run_id": "rec-user-approved-20261012-1218",
+      "started_at": "2026-10-12T12:24:19+09:00",
+      "slot": "adhoc",
+      "note": "指定2件のH2H・両者直近10・共通相手を再確認。参考価格で概算精算、購入実行ではない。"
     }
   ],
   "picks": [
@@ -4259,6 +4265,94 @@
           "reported_at": "2026-10-11T20:22:30+09:00",
           "source": "assistant_estimate",
           "note": "2026/10/11ユーザーが推定オッズによる概算収支を承認。実勢価格の根拠不足。既存の定性的分析を参照した計算用の仮置き。 試合後追加分を含む。実購入・実現利益・事前の価格優位を示さない。"
+        }
+      ]
+    },
+    {
+      "id": "rec-2026-10-12-nip-betclic-cs2",
+      "system": "recommendations",
+      "match_id": "2026-10-12-nip-betclic-cs2",
+      "run_id": "rec-user-approved-20261012-1218",
+      "source_event_id": "web-2026-10-12-nip-betclic-cs2",
+      "market": "match_winner",
+      "market_label": "試合勝者：Ninjas in Pyjamas",
+      "selection": "side_a",
+      "selection_label": "Ninjas in Pyjamas",
+      "market_odds": {
+        "text": "参考・概算用1.29倍（購入価格ではない）",
+        "min": 1.29,
+        "max": 1.29,
+        "observed_at": "2026-10-12T12:24:19+09:00",
+        "source": "https://www.hltv.org/betting/analytics/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-12T12:24:19+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-12T12:24:19+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "優勢（価格評価別）・ユーザー正式採用",
+        "model_version": "user-approved-analysis-20261012",
+        "summary": "NiP勝利を正式採用。直近10は9勝1敗・15–3マップ対4勝6敗・9–13マップ。共通相手5種類を比較するが、旧ロスター・古い試合の重みを下げる。1.29倍の必要勝率77.52%を満たすかは未判定。 ユーザー指定の正式追跡、各100USD基準。購入実行の記録ではない。推定・参考オッズによる概算精算はユーザー承認済み。未決着の利益は計上しない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定の正式追跡、各100USD基準。購入実行の記録ではない。推定・参考オッズによる概算精算はユーザー承認済み。未決着の利益は計上しない。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.29,
+          "estimated": true,
+          "reported_at": "2026-10-12T12:24:19+09:00",
+          "source": "reference_estimate",
+          "note": "概算精算用1.29倍。公開参考価格を使用。購入オッズではない。出典：https://www.hltv.org/betting/analytics/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii ユーザー承認の概算精算用。実購入・実利益とは区別。"
+        }
+      ]
+    },
+    {
+      "id": "rec-2026-10-12-bnk-fearx-jdg-lol",
+      "system": "recommendations",
+      "match_id": "2026-10-12-bnk-fearx-jdg-lol",
+      "run_id": "rec-user-approved-20261012-1218",
+      "source_event_id": "web-2026-10-12-bnk-fearx-jdg-lol",
+      "market": "match_winner",
+      "market_label": "試合勝者：BNK FEARX",
+      "selection": "side_a",
+      "selection_label": "BNK FEARX",
+      "market_odds": {
+        "text": "参考・概算用1.35倍（購入価格ではない）",
+        "min": 1.35,
+        "max": 1.35,
+        "observed_at": "2026-10-12T12:24:19+09:00",
+        "source": "https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-12T12:24:19+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-12T12:24:19+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "BNKやや優勢（大格差ではない）・ユーザー正式採用",
+        "model_version": "user-approved-analysis-20261012",
+        "summary": "BNK FEARX勝利をユーザー指定で正式採用。直近10は6勝4敗18–16対5勝5敗13–15。今大会LGD比較はBNKを支持。共通相手はLGDとBRIONの2種類のみ確認、5種類未達。BNKやや優勢と評価するが参考1.35倍の価格優位は未判定。 ユーザー指定の正式追跡、各100USD基準。購入実行の記録ではない。推定・参考オッズによる概算精算はユーザー承認済み。未決着の利益は計上しない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定の正式追跡、各100USD基準。購入実行の記録ではない。推定・参考オッズによる概算精算はユーザー承認済み。未決着の利益は計上しない。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.35,
+          "estimated": true,
+          "reported_at": "2026-10-12T12:24:19+09:00",
+          "source": "reference_estimate",
+          "note": "概算精算用1.35倍。公開参考価格を使用。購入オッズではない。出典：https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/ ユーザー承認の概算精算用。実購入・実利益とは区別。"
         }
       ]
     }

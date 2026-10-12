@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-11T00:53:10+09:00",
+    "as_of": "2026-10-12T12:24:19+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -1450,6 +1450,125 @@
             "verified_at": "2026-10-11T20:08:38+09:00",
             "source_confidence": "single_source",
             "note": "購入オッズ未確認。勝率・週次結果へ反映し、利益額は未確定を維持。参考オッズを購入価格として代用しない。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-results-20261012-1218",
+      "kind": "result_update",
+      "at": "2026-10-12T12:24:19+09:00",
+      "source": "クラブ・リーグ公式と専門DB・試合後報道",
+      "note": "本日欄の既存4件すべて終了・勝利。概算精算価格を維持して合計+21USD。新規2件は未決着で収支未計上。",
+      "changes": [
+        {
+          "match_id": "2026-10-11-aurora-twisted-ph",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 1
+              },
+              "text": "2–1（Aurora Gaming PH勝利）"
+            },
+            "result_confirmed_at": "2026-10-12T12:24:19+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "GosuGamers",
+                "url": "https://www.gosugamers.net/mobile-legends/tournaments/63110-mpl-philippines-season-18/matches/659062-aurora-gaming-ph-vs-twisted-minds-ph",
+                "type": "specialist_db"
+              },
+              {
+                "name": "Dugout Philippines試合記事",
+                "url": "https://www.dugout.ph/2026/10/mpl-ph-aurora-ph-pulls-off-reverse.html",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-10-12T12:24:19+09:00",
+            "source_confidence": "specialist_db",
+            "note": "最終結果確認。既存の100USDと概算精算オッズを維持して勝率・週次・概算収支へ反映。 前回の公式速報1–1との不一致は、GosuGamers確定2–1と試合後報道の逆転勝利で解消。"
+          }
+        },
+        {
+          "match_id": "2026-10-11-aranda-barcelona-handball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 33,
+                "b": 40
+              },
+              "text": "33–40（Barça勝利）"
+            },
+            "result_confirmed_at": "2026-10-12T12:24:19+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "FC Barcelona公式",
+                "url": "https://www.fcbarcelona.com/en/news/4590496/tubos-aranda-33-40-barca-another-league-victory",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-12T12:24:19+09:00",
+            "source_confidence": "official",
+            "note": "最終結果確認。既存の100USDと概算精算オッズを維持して勝率・週次・概算収支へ反映。"
+          }
+        },
+        {
+          "match_id": "2026-10-12-nantes-caen-handball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 38,
+                "b": 31
+              },
+              "text": "38–31（Nantes勝利）"
+            },
+            "result_confirmed_at": "2026-10-12T12:24:19+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "HBC Nantes公式",
+                "url": "https://hbcnantes.com/actualites/succes-face-aux-vikings-de-caen-38-31/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-12T12:24:19+09:00",
+            "source_confidence": "official",
+            "note": "最終結果確認。既存の100USDと概算精算オッズを維持して勝率・週次・概算収支へ反映。"
+          }
+        },
+        {
+          "match_id": "2026-10-11-goztepe-vakifbank",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 3
+              },
+              "text": "0–3（VakıfBank勝利）"
+            },
+            "result_confirmed_at": "2026-10-12T12:24:19+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "トルコリーグ公式VolleyStation",
+                "url": "https://sultanlar.volleystation.com/tr/teams/2110023-27593/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-12T12:24:19+09:00",
+            "source_confidence": "official",
+            "note": "最終結果確認。既存の100USDと概算精算オッズを維持して勝率・週次・概算収支へ反映。"
           }
         }
       ],
