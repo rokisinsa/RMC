@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-12T12:24:19+09:00",
+    "as_of": "2026-10-12T17:33:28+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
@@ -189,6 +189,12 @@
       "started_at": "2026-10-12T12:24:19+09:00",
       "slot": "adhoc",
       "note": "指定2件のH2H・両者直近10・共通相手を再確認。参考価格で概算精算、購入実行ではない。"
+    },
+    {
+      "run_id": "rec-user-approved-20261012-jovic",
+      "started_at": "2026-10-12T17:33:28+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー事前指定の正式履歴追加。対戦変更確認後の登録で無効精算。"
     }
   ],
   "picks": [
@@ -4353,6 +4359,50 @@
           "reported_at": "2026-10-12T12:24:19+09:00",
           "source": "reference_estimate",
           "note": "概算精算用1.35倍。公開参考価格を使用。購入オッズではない。出典：https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/ ユーザー承認の概算精算用。実購入・実利益とは区別。"
+        }
+      ]
+    },
+    {
+      "id": "rec-2026-10-12-jovic-pohankova-wta",
+      "system": "recommendations",
+      "match_id": "2026-10-12-jovic-pohankova-wta",
+      "run_id": "rec-user-approved-20261012-jovic",
+      "source_event_id": "web-2026-10-12-jovic-pohankova-wta",
+      "market": "match_winner",
+      "market_label": "試合勝者：Iva Jovic",
+      "selection": "side_a",
+      "selection_label": "Iva Jovic",
+      "market_odds": {
+        "text": "変更前参考1.14倍・無効精算",
+        "min": 1.14,
+        "max": 1.14,
+        "observed_at": "2026-10-12T17:33:28+09:00",
+        "source": "https://www.wincomparator.com/predictions/iva-jovic-mia-pohankova-8886969/"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-12T12:33:08+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-12T12:33:08+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー指定・対戦変更無効",
+        "model_version": "user-approved-analysis-20261012-jovic",
+        "summary": "公式ドロー変更でジョビッチは1回戦免除、ポハンコバの相手はAnna Bondarへ変更。指定カードは開催されず無効。勝敗対象外・概算純損益0USD。別カードの1–6,3–6をジョビッチの敗戦として転記しない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "追加指示は開始予定前。保存は17時台の対戦変更確認後。購入実行ではなく100USD基準の正式追跡履歴。公式ドロー変更でジョビッチは1回戦免除、ポハンコバの相手はAnna Bondarへ変更。指定カードは開催されず無効。勝敗対象外・概算純損益0USD。別カードの1–6,3–6をジョビッチの敗戦として転記しない。 locked_atは会話内のユーザー指定確定時刻（12:33:08 JST）、discovered_atも会話内確認時刻。実登録はdiscovery_runs.started_at（17時台）。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.14,
+          "estimated": true,
+          "reported_at": "2026-10-12T17:33:28+09:00",
+          "source": "reference_estimate",
+          "note": "変更前の公開参考1.14倍（Wincomparator掲載Bet365）。購入価格ではない。対戦変更につき概算精算は無効・0USD。"
         }
       ]
     }

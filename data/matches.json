@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-12T12:24:19+09:00",
+    "as_of": "2026-10-12T17:33:28+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -197,6 +197,13 @@
       "at": "2026-10-12T12:24:19+09:00",
       "source": "ユーザー指定・公開試合記録の再確認",
       "note": "NiP勝利・BNK FEARX勝利を試合前正式登録。各100USD基準。"
+    },
+    {
+      "run_id": "mr-user-approved-20261012-jovic",
+      "kind": "human_review",
+      "at": "2026-10-12T17:33:28+09:00",
+      "source": "ユーザー事前指定・WTA公式ドロー確認",
+      "note": "公式ドロー変更でジョビッチは1回戦免除、ポハンコバの相手はAnna Bondarへ変更。指定カードは開催されず無効。勝敗対象外・概算純損益0USD。別カードの1–6,3–6をジョビッチの敗戦として転記しない。 追加指示は開始予定前、実登録は対戦変更確認後。"
     }
   ],
   "matches": [
@@ -3995,6 +4002,42 @@
         "https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/"
       ],
       "verified_at": "2026-10-12T12:24:19+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-12-jovic-pohankova-wta",
+      "sport": "テニス",
+      "competition": "WTA1000・武漢オープン女子シングルス1回戦",
+      "side_a": "Iva Jovic",
+      "side_b": "Mia Pohankova",
+      "home_side": "neutral",
+      "venue": "中国・武漢／屋外ハード",
+      "start_at": "2026-10-12T13:10:00+09:00",
+      "start_time_status": "recorded",
+      "status": "cancelled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261012-jovic",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "公式ドロー変更でジョビッチは1回戦免除、ポハンコバの相手はAnna Bondarへ変更。指定カードは開催されず無効。勝敗対象外・概算純損益0USD。別カードの1–6,3–6をジョビッチの敗戦として転記しない。"
+        }
+      ],
+      "sources": [
+        "https://wtafiles.wtatennis.com/pdf/draws/2026/1075/MDS.pdf",
+        "https://www.wincomparator.com/predictions/iva-jovic-mia-pohankova-8886969/",
+        "https://www.tennislive.net/wta/match/iva-jovic-VS-mia-pohankova/wuhan-open-wuhan-2026/",
+        "https://www.wtaschedule.com/players/334183/mia-pohankova",
+        "https://ausopen.com/match/2026-iva-jovic-vs-katie-volynets-ws113",
+        "https://scores24.live/en/tennis/m-12-10-2026-jovic-iva-pohankova-mia"
+      ],
+      "verified_at": "2026-10-12T17:33:28+09:00",
       "flags": []
     }
   ]

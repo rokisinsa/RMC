@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-12T12:24:19+09:00",
+  "generated_at": "2026-10-12T17:33:28+09:00",
   "window": {
     "from": "2026-10-12T12:24:19+09:00",
     "to": "2026-10-13T12:18:49+09:00",
@@ -14,7 +14,8 @@
     "相手レベルが大きく違う場合は単純な勝率比較をしない",
     "実力格差と市場価格を分離し、低オッズだけを格差根拠にしない",
     "未確認項目は推測で埋めず未確認と表示",
-    "今後の新規探索はOverwatchとテニスを除外。ただしKraus–Bartůňkováはユーザー明示指定により今回のみ追加。既存取引の結果履歴は保持。"
+    "今後の新規探索はOverwatchとテニスを除外。ただしKraus–Bartůňkováはユーザー明示指定により今回のみ追加。既存取引の結果履歴は保持。",
+    "Jovic–Pohankovaはユーザー明示指定のテニス例外として正式履歴へ保存。ただし公式ドロー変更で不成立、当日候補には掲載せず無効精算。"
   ],
   "coverage": {
     "checked": [
@@ -24,7 +25,7 @@
       "男子ハンドボール｜フランス・スペイン",
       "女子バレー｜トルコ"
     ],
-    "note": "指定2カード各チーム直近10件、NiP H2H3シリーズ・共通5種類、BNK H2H記録なし・共通2種類。終了4件精算。"
+    "note": "指定2カード各チーム直近10件、NiP H2H3シリーズ・共通5種類、BNK H2H記録なし・共通2種類。終了4件精算。 WTA指定1件はドロー変更で無効・履歴保存。"
   },
   "candidates": [
     {
@@ -507,7 +508,7 @@
     ],
     "price_adjusted_top": [],
     "caution": "各100USD基準で正式追跡。参考オッズNiP1.29・BNK1.35を概算精算用に保存、実購入価格ではない。両者未決着で利益未計上。BNK共通相手2種類の不足を注記。",
-    "previous_note": "終了4件は全勝。推定オッズ据え置きで概算合計+21USD。"
+    "previous_note": "終了4件は全勝。推定オッズ据え置きで概算合計+21USD。 ジョビッチ–ポハンコバは対戦変更による無効。概算0USD・勝率対象外。"
   },
   "previous_analysis": {
     "generated_at": "2026-09-30T17:39:31+09:00",
@@ -5605,6 +5606,248 @@
         "result_sources": [
           "https://sultanlar.volleystation.com/tr/teams/2110023-27593/"
         ]
+      },
+      {
+        "rank": 3,
+        "match_id": "2026-10-12-jovic-pohankova-wta",
+        "event_id": "web-2026-10-12-jovic-pohankova-wta",
+        "matchup": "Iva Jovic vs Mia Pohankova",
+        "favored": "Iva Jovic",
+        "selection_label": "Iva Jovic",
+        "sport": "テニス",
+        "competition": "WTA1000・武漢オープン女子シングルス1回戦",
+        "start_jst": "2026-10-12T13:10:00+09:00",
+        "venue": "中国・武漢／屋外ハード",
+        "format": "BO3",
+        "status": "formal",
+        "gap_grade": "無効（対戦変更）",
+        "price_grade": "変更前参考価格・精算無効",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": 0,
+        "profit_status": "無効・概算純損益0USD（100USD基準の返還扱い）",
+        "odds": {
+          "min": 1.14,
+          "max": 1.14,
+          "required_win_rate_pct": 87.72,
+          "book_examples": "変更前の公開参考1.14倍（Wincomparator掲載Bet365）。購入価格ではない。対戦変更につき概算精算は無効・0USD。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-12T17:33:28+09:00",
+        "analysis_reviewed_at": "2026-10-12T17:33:28+09:00",
+        "conclusion": "公式ドロー変更でジョビッチは1回戦免除、ポハンコバの相手はAnna Bondarへ変更。指定カードは開催されず無効。勝敗対象外・概算純損益0USD。別カードの1–6,3–6をジョビッチの敗戦として転記しない。",
+        "risk": "ユーザー指定のテニス例外。開始予定13:10 JSTは旧カード情報。正式台帳への保存は対戦変更確認後。勝率・EVは算出しない。共通相手4種類のみ確認、5種類未達。",
+        "sources": [
+          "https://wtafiles.wtatennis.com/pdf/draws/2026/1075/MDS.pdf",
+          "https://www.wincomparator.com/predictions/iva-jovic-mia-pohankova-8886969/",
+          "https://www.tennislive.net/wta/match/iva-jovic-VS-mia-pohankova/wuhan-open-wuhan-2026/",
+          "https://www.wtaschedule.com/players/334183/mia-pohankova",
+          "https://ausopen.com/match/2026-iva-jovic-vs-katie-volynets-ws113",
+          "https://scores24.live/en/tennis/m-12-10-2026-jovic-iva-pohankova-mia"
+        ],
+        "favored_result": "void",
+        "result": "無効／対戦変更",
+        "result_status": "cancelled",
+        "match_status": "cancelled",
+        "result_updated_at": "2026-10-12T17:33:28+09:00",
+        "archived_at": "2026-10-12T17:33:28+09:00",
+        "archive_reason": "公式ドロー変更でジョビッチは1回戦免除、ポハンコバの相手はAnna Bondarへ変更。指定カードは開催されず無効。勝敗対象外・概算純損益0USD。別カードの1–6,3–6をジョビッチの敗戦として転記しない。",
+        "result_sources": [
+          "https://wtafiles.wtatennis.com/pdf/draws/2026/1075/MDS.pdf"
+        ],
+        "analysis_detail": {
+          "summary": "公式ドロー変更でジョビッチは1回戦免除、ポハンコバの相手はAnna Bondarへ変更。指定カードは開催されず無効。勝敗対象外・概算純損益0USD。別カードの1–6,3–6をジョビッチの敗戦として転記しない。",
+          "ranking_or_rating": {
+            "text": "旧対戦プレビューはジョビッチ13位／ポハンコバ193位。更新ランキングと混在するため日付差に注意。順位差を勝率へ変換しない。"
+          },
+          "h2h": {
+            "summary": "旧カードの試合前照合では過去対戦の掲載なし。今回も対戦不成立。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Iva Jovic",
+              "summary": "当該カード予定前の10試合：8勝2敗、16–6セット、平均セット差+1.0。日付はTennisLive表示基準でJSTでは翌日となる場合あり。",
+              "items": [
+                {
+                  "date": "2026-10-07",
+                  "label": "Iga Swiatek",
+                  "result": "0–2 ×（1–6,3–6）"
+                },
+                {
+                  "date": "2026-10-05",
+                  "label": "Kamilla Rakhimova",
+                  "result": "2–0 ○（6–1,7–5）"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "Harriet Dart",
+                  "result": "2–1 ○（2–6,6–3,6–3）"
+                },
+                {
+                  "date": "2026-09-19",
+                  "label": "Peyton Stearns",
+                  "result": "2–0 ○（6–4,6–2）"
+                },
+                {
+                  "date": "2026-09-18",
+                  "label": "Cristina Bucsa",
+                  "result": "2–0 ○（6–4,6–1）"
+                },
+                {
+                  "date": "2026-09-17",
+                  "label": "Magdalena Frech",
+                  "result": "2–0 ○（6–2,6–1）"
+                },
+                {
+                  "date": "2026-09-16",
+                  "label": "Zeynep Sonmez",
+                  "result": "2–0 ○（7–6,6–4）"
+                },
+                {
+                  "date": "2026-09-07",
+                  "label": "Coco Gauff",
+                  "result": "0–2 ×（1–6,4–6）"
+                },
+                {
+                  "date": "2026-09-05",
+                  "label": "Alexandra Eala",
+                  "result": "2–1 ○（7–5,3–6,7–5）"
+                },
+                {
+                  "date": "2026-09-03",
+                  "label": "Francesca Jones",
+                  "result": "2–0 ○（6–4,6–4）"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Mia Pohankova",
+              "summary": "当該カード予定前の10試合：7勝3敗、16–7セット、平均セット差+0.9。WTA125等を含み大会水準が異なる。",
+              "items": [
+                {
+                  "date": "2026-09-26",
+                  "label": "Maria Timofeeva",
+                  "result": "1–2 ×（2–6,7–6,3–6）"
+                },
+                {
+                  "date": "2026-09-25",
+                  "label": "Katie Swan",
+                  "result": "2–1 ○（3–6,7–5,6–1）"
+                },
+                {
+                  "date": "2026-09-24",
+                  "label": "Veronika Podrez",
+                  "result": "2–0 ○（6–3,6–4）"
+                },
+                {
+                  "date": "2026-09-22",
+                  "label": "Francisca Jorge",
+                  "result": "2–0 ○（6–2,6–1）"
+                },
+                {
+                  "date": "2026-09-19",
+                  "label": "Gabriela Knutson",
+                  "result": "1–2 ×（5–7,7–5,3–6）"
+                },
+                {
+                  "date": "2026-09-18",
+                  "label": "Kylie Collins",
+                  "result": "2–0 ○（7–6,6–4）"
+                },
+                {
+                  "date": "2026-09-16",
+                  "label": "Matilde Jorge",
+                  "result": "2–0 ○（6–4,6–1）"
+                },
+                {
+                  "date": "2026-09-14",
+                  "label": "Sinja Kraus",
+                  "result": "2–0 ○（6–1,6–1）"
+                },
+                {
+                  "date": "2026-08-25",
+                  "label": "Katie Volynets",
+                  "result": "0–2 ×（1–6,1–6）"
+                },
+                {
+                  "date": "2026-08-23",
+                  "label": "Mell Reasco Gonzalez",
+                  "result": "2–0 ○（6–3,6–3）"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "4種類確認、5種類未達。双方の直近10内だけで成立する比較ではなく、過去へ遡った参考比較。サーフェス・時期差があるため同一条件として扱わない。",
+            "items": [
+              {
+                "opponent": "Francesca Jones",
+                "side_a": {
+                  "date": "2026-09-03",
+                  "result": "ハード2–0 ○"
+                },
+                "side_b": {
+                  "date": "2026-05-02",
+                  "result": "クレー2–1 ○"
+                },
+                "comparison": "双方勝利。コートと時期が異なり単純な優劣にはしない。"
+              },
+              {
+                "opponent": "Tamara Korpatsch",
+                "side_a": {
+                  "date": "2026-08-16",
+                  "result": "ハード2–0 ○"
+                },
+                "side_b": {
+                  "date": "2026-06-13",
+                  "result": "芝2–0 ○"
+                },
+                "comparison": "双方ストレート。コート差あり。"
+              },
+              {
+                "opponent": "Magda Linette",
+                "side_a": {
+                  "date": "2026-08-05",
+                  "result": "ハード2–0 ○"
+                },
+                "side_b": {
+                  "date": "2026-06-11",
+                  "result": "芝0–2 ×"
+                },
+                "comparison": "方向はジョビッチ側だがコート差あり。"
+              },
+              {
+                "opponent": "Katie Volynets",
+                "side_a": {
+                  "date": "2026-01-19",
+                  "result": "ハード2–0 ○（6–2,6–3）"
+                },
+                "side_b": {
+                  "date": "2026-08-25",
+                  "result": "ハード0–2 ×（1–6,1–6）"
+                },
+                "comparison": "同じハードで方向はジョビッチ側。ただし約7か月差。"
+              }
+            ]
+          },
+          "availability": {
+            "text": "公式ドロー10月12日15:37現地公開版でJovicはBye、PohankovaはBondarと対戦。ジョビッチの欠場とは判断しない。"
+          },
+          "home_away": {
+            "text": "中国開催、両者ホームではない。"
+          },
+          "sport_specific": {
+            "text": "変更前比較ではジョビッチのツアー実績を評価したが、今回は対戦不成立。ポハンコバがボンダルに6–1,6–3で勝った結果は別カード。"
+          },
+          "market": {
+            "text": "変更前の公開参考1.14倍（Wincomparator掲載Bet365）。購入価格ではない。対戦変更につき概算精算は無効・0USD。"
+          },
+          "post_match": {
+            "text": "公式ドロー変更でジョビッチは1回戦免除、ポハンコバの相手はAnna Bondarへ変更。指定カードは開催されず無効。勝敗対象外・概算純損益0USD。別カードの1–6,3–6をジョビッチの敗戦として転記しない。"
+          }
+        }
       }
     ],
     "summary": {
@@ -5627,7 +5870,7 @@
       "favored_wins": 39,
       "favored_losses": 5,
       "pending": 0,
-      "note": "今回4勝・概算+21USD追加。正式成績は台帳から別途集計。"
+      "note": "今回4勝・概算+21USD追加。正式成績は台帳から別途集計。 Jovicカード無効1件追加。"
     }
   },
   "history_policy": {
@@ -5635,7 +5878,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-12T12:24:19+09:00",
+    "as_of": "2026-10-12T17:33:28+09:00",
     "note": "各100USD基準で正式追跡。参考オッズNiP1.29・BNK1.35を概算精算用に保存、実購入価格ではない。両者未決着で利益未計上。BNK共通相手2種類の不足を注記。"
   }
 }
