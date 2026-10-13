@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-12T17:33:28+09:00",
+  "generated_at": "2026-10-13T13:08:28+09:00",
   "window": {
-    "from": "2026-10-12T12:24:19+09:00",
-    "to": "2026-10-13T12:18:49+09:00",
+    "from": "2026-10-13T13:08:28+09:00",
+    "to": "2026-10-14T13:08:28+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "ユーザー指定2カードの正式追加。既存4件は全件終了し結果履歴へ移動。"
+    "note": "指定2カードを試合前正式採用。終了済みNiP・BNKは結果履歴へ移動。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -19,472 +19,408 @@
   ],
   "coverage": {
     "checked": [
-      "CS2｜Stake Pulse Beat III",
-      "LoL｜デマーシアカップ",
-      "MLBB｜MPLフィリピン",
-      "男子ハンドボール｜フランス・スペイン",
-      "女子バレー｜トルコ"
+      "男子ハンドボール｜EHFヨーロピアンリーグ",
+      "サッカー｜AFCチャンピオンズリーグ・エリート",
+      "既掲載CS2・LoL・既存Overwatch結果精算"
     ],
-    "note": "指定2カード各チーム直近10件、NiP H2H3シリーズ・共通5種類、BNK H2H記録なし・共通2種類。終了4件精算。 WTA指定1件はドロー変更で無効・履歴保存。"
+    "note": "2カード各チーム10試合、H2H掲載なし、共通相手Flensburg2組・ガンバ1組。ガンバはDNB。Overwatchの新規採用なし。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-10-12-nip-betclic-cs2",
-      "event_id": "web-2026-10-12-nip-betclic-cs2",
-      "matchup": "Ninjas in Pyjamas vs Betclic",
-      "favored": "Ninjas in Pyjamas",
-      "selection_label": "Ninjas in Pyjamas",
-      "sport": "CS2",
-      "competition": "Stake Pulse Beat III・グループA初戦",
-      "start_jst": "2026-10-12T19:00:00+09:00",
-      "venue": "スウェーデン・ストックホルム／LAN（ホーム差は加点しない）",
-      "format": "BO3",
+      "match_id": "2026-10-14-flensburg-buzau-handball",
+      "event_id": "web-2026-10-14-flensburg-buzau-handball",
+      "matchup": "SG Flensburg-Handewitt vs HC Buzau",
+      "favored": "SG Flensburg-Handewitt",
+      "selection_label": "SG Flensburg-Handewitt",
+      "sport": "男子ハンドボール",
+      "competition": "EHFヨーロピアンリーグ・グループE第3節",
+      "start_jst": "2026-10-14T03:45:00+09:00",
+      "venue": "ドイツ・フレンスブルク／GGWアレーナ（Flensburgホーム）",
+      "format": "規定時間",
       "status": "formal",
       "gap_grade": "優勢（価格評価別）",
-      "price_grade": "参考価格・概算精算用",
-      "market": "match_winner",
+      "price_grade": "公開参考価格・概算精算用",
+      "market": "match_1x2",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "未決着・勝利時の概算利益 +29.00USD（未計上）",
+      "profit_status": "未決着・勝利時の概算利益 +1.00USD（未計上）",
       "odds": {
-        "min": 1.29,
-        "max": 1.29,
-        "required_win_rate_pct": 77.52,
-        "book_examples": "概算精算用1.29倍。公開参考価格を使用。購入オッズではない。出典：https://www.hltv.org/betting/analytics/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii"
+        "min": 1.01,
+        "max": 1.01,
+        "required_win_rate_pct": 99.01,
+        "book_examples": "公開参考1.01倍を概算精算用に保存。実購入価格ではない。出典：https://www.olimp.bet/line/gandbol-9/european-league-gruppovoy-etap-6709109/flensburg-khandevitt-buzeu-13-10-2026-86053309"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-12T12:24:19+09:00",
-      "analysis_reviewed_at": "2026-10-12T12:24:19+09:00",
-      "conclusion": "NiP勝利を正式採用。直近10は9勝1敗・15–3マップ対4勝6敗・9–13マップ。共通相手5種類を比較するが、旧ロスター・古い試合の重みを下げる。1.29倍の必要勝率77.52%を満たすかは未判定。",
-      "risk": "NiPの直近10にはBO1が5件。9勝1敗を今回90%の勝率とはしない。Betclicの8月前半はultimate加入前。旧H2H3件は2025年で現ロスター同士ではない。Veto・最終出場者未確定。日付は直近表ではHLTV現地表示に統一し、JSTでは翌日になる試合あり。",
+      "added_at": "2026-10-13T13:08:28+09:00",
+      "analysis_reviewed_at": "2026-10-13T13:08:28+09:00",
       "sources": [
-        "https://www.hltv.org/matches/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii",
-        "https://www.hltv.org/results?team=4411",
-        "https://www.hltv.org/team/12916/betclic",
-        "https://tips.gg/archive/apogee-esports-csgo-vs-ninjas-in-pyjamas-csgo/",
-        "https://www.hltv.org/betting/analytics/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii"
+        "https://www.sg-flensburg-handewitt.de/en/news/article/mit-16-spielern-international",
+        "https://hcbuzau.ro/2026-2027-ehf-european-league/",
+        "https://www.liveresult.ru/handball/matches/match173703_Flensborg-Buzau-online",
+        "https://www.vitisport.cz/index.php?clanek=hazena-match-detail&fixture_id=199210&lang=cs&liga=145&sekce=hazena",
+        "https://www.olimp.bet/line/gandbol-9/european-league-gruppovoy-etap-6709109/flensburg-khandevitt-buzeu-13-10-2026-86053309"
       ],
+      "conclusion": "Flensburgの規定時間勝利を正式採用。直近10は9勝1分、同大会の共通相手2組でも優勢。ただし参考1.01倍の必要勝率99.01%を満たす根拠は未確立。実力優位と価格優位を分離。",
+      "risk": "H2H掲載なし、共通相手2組で5組未達。Buzauの直近10には親善・プレシーズン3件と前季を含む。規定時間引分は不的中。1.01倍は100USDで勝利利益1USDに対し敗戦100USD。大差ハンデは未採用。",
       "analysis_detail": {
-        "summary": "NiP勝利を正式採用。直近10は9勝1敗・15–3マップ対4勝6敗・9–13マップ。共通相手5種類を比較するが、旧ロスター・古い試合の重みを下げる。1.29倍の必要勝率77.52%を満たすかは未判定。",
+        "summary": "Flensburgの規定時間勝利を正式採用。直近10は9勝1分、同大会の共通相手2組でも優勢。ただし参考1.01倍の必要勝率99.01%を満たす根拠は未確立。実力優位と価格優位を分離。",
         "ranking_or_rating": {
-          "text": "HLTV：NiP26位／Betclic65位。VRS22位／53位（確認時点）。ランキング差だけを勝率へ変換しない。"
+          "text": "同大会2試合：Flensburg 2勝、76–53（+23）、Buzau 0勝1分1敗、61–67（−6）。異なる国内リーグの順位を世界順位差に換算しない。"
         },
         "h2h": {
-          "summary": "チーム履歴3シリーズ：NiP2勝1敗、マップ5–2。すべて2025年の旧メンバーで参考扱い。HLTV現ロスター比較の掲載なしと区別。以下日付はTips.GG表示。",
-          "items": [
-            {
-              "date": "2025-03-10",
-              "label": "NiP側／PGLブカレスト予選・旧ロスター",
-              "result": "1–2 ×"
-            },
-            {
-              "date": "2025-02-23",
-              "label": "NiP側／CCT欧州シリーズ19・旧ロスター",
-              "result": "2–0 ○"
-            },
-            {
-              "date": "2025-02-19",
-              "label": "NiP側／CCT欧州シリーズ19・旧ロスター",
-              "result": "2–0 ○"
-            }
-          ]
+          "summary": "確認したデータベースに過去対戦の掲載なし。評価材料なし。",
+          "items": []
         },
         "recent_form": {
           "side_a": {
-            "label": "NiP",
-            "summary": "10試合9勝1敗、15–3マップ、平均マップ差+1.2。BO1を含む。日付HLTV表示。",
+            "label": "Flensburg",
+            "summary": "9勝1分、364–304。平均得点36.4／失点30.4／差+6.0。取得ページのJST日付。",
             "items": [
               {
-                "date": "2026-10-03",
-                "label": "Eternal Fire／BO3",
-                "result": "2–0 ○"
+                "date": "2026-10-10",
+                "label": "Hannover／A",
+                "result": "39–32 ○"
               },
               {
-                "date": "2026-10-03",
-                "label": "BBL／BO3",
-                "result": "2–0 ○"
+                "date": "2026-10-07",
+                "label": "Aguas Santas／A・EHF",
+                "result": "36–22 ○"
               },
               {
-                "date": "2026-10-03",
-                "label": "SINNERS／BO3",
-                "result": "2–1 ○"
+                "date": "2026-10-04",
+                "label": "Göppingen／H",
+                "result": "32–27 ○"
               },
               {
-                "date": "2026-10-02",
-                "label": "Johnny Speeds／BO3",
-                "result": "2–0 ○"
+                "date": "2026-10-01",
+                "label": "Granollers／H・EHF",
+                "result": "40–31 ○"
               },
               {
-                "date": "2026-10-02",
-                "label": "BBL／BO1",
-                "result": "16–12 ○（1マップ）"
+                "date": "2026-09-27",
+                "label": "Kiel／A",
+                "result": "31–31 △"
               },
               {
-                "date": "2026-10-02",
-                "label": "SportsBetExpert／BO1",
-                "result": "13–1 ○（1マップ）"
+                "date": "2026-09-24",
+                "label": "Lübeck-Schwartau／A・カップ",
+                "result": "38–35 ○"
               },
               {
-                "date": "2026-10-02",
-                "label": "HAVU／BO1",
-                "result": "13–10 ○（1マップ）"
+                "date": "2026-09-21",
+                "label": "Hamburg／H",
+                "result": "37–34 ○"
               },
               {
-                "date": "2026-10-02",
-                "label": "Sangal／BO1",
-                "result": "4–13 ×（1マップ）"
+                "date": "2026-09-11",
+                "label": "Lemgo／A",
+                "result": "39–30 ○"
               },
               {
-                "date": "2026-10-02",
-                "label": "XEPT／BO1",
-                "result": "13–2 ○（1マップ）"
+                "date": "2026-09-06",
+                "label": "Erlangen／H",
+                "result": "38–33 ○"
               },
               {
-                "date": "2026-09-28",
-                "label": "GamerLegion／BO5",
-                "result": "3–1 ○"
+                "date": "2026-09-03",
+                "label": "Bergischer／A",
+                "result": "34–29 ○"
               }
             ]
           },
           "side_b": {
-            "label": "Betclic",
-            "summary": "10試合4勝6敗、9–13マップ、平均マップ差−0.4。8月前半旧ロスター。日付HLTV表示。",
+            "label": "Buzau",
+            "summary": "4勝1分5敗、317–309。平均31.7／30.9／差+0.8。ただし親善等3件を含む。直近公式戦6件は1勝1分4敗、179–196、平均差−2.83。",
             "items": [
               {
-                "date": "2026-10-08",
-                "label": "PRIVATE／BO3",
-                "result": "0–2 ×"
+                "date": "2026-10-07",
+                "label": "Granollers／A・EHF",
+                "result": "31–37 ×"
               },
               {
-                "date": "2026-09-25",
-                "label": "Astralis／BO3",
-                "result": "1–2 ×"
+                "date": "2026-10-04",
+                "label": "Vaslui／A",
+                "result": "29–35 ×"
               },
               {
-                "date": "2026-09-24",
-                "label": "Eternal Fire／BO3",
-                "result": "2–1 ○"
+                "date": "2026-09-30",
+                "label": "Aguas Santas／H・EHF",
+                "result": "30–30 △"
               },
               {
-                "date": "2026-09-24",
-                "label": "JiJieHao／BO3",
-                "result": "0–2 ×"
+                "date": "2026-09-26",
+                "label": "Dinamo Bucuresti／H",
+                "result": "28–33 ×"
               },
               {
-                "date": "2026-09-24",
-                "label": "ASTRAL／BO3",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "2026-09-08",
-                "label": "HOTU／BO3",
-                "result": "0–2 ×"
+                "date": "2026-09-12",
+                "label": "Timisoara／A",
+                "result": "26–32 ×"
               },
               {
                 "date": "2026-09-04",
-                "label": "Nemiga／BO1",
-                "result": "11–13 ×（1マップ）"
+                "label": "Steaua／A",
+                "result": "35–29 ○"
               },
               {
-                "date": "2026-08-09",
-                "label": "Sashi／BO3・旧ロスター",
-                "result": "0–2 ×"
+                "date": "2026-08-23",
+                "label": "Dinamo Bucuresti／A・プレシーズン",
+                "result": "25–33 ×"
               },
               {
-                "date": "2026-08-09",
-                "label": "Prestige／BO3・旧ロスター",
-                "result": "2–0 ○"
+                "date": "2026-08-22",
+                "label": "Bucuresti／A・プレシーズン",
+                "result": "34–33 ○"
               },
               {
-                "date": "2026-08-07",
-                "label": "INFINITE／BO3・旧ロスター",
-                "result": "2–0 ○"
+                "date": "2026-08-08",
+                "label": "Potaissa Turda／H・親善",
+                "result": "32–23 ○"
+              },
+              {
+                "date": "2026-05-24",
+                "label": "Cluj／H",
+                "result": "47–24 ○"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "5種類を照合。Eternal FireはNiP優位、同スコア3件。LiquidはBetclic側だがNiPの3月記録で重みが非常に低い。直近10内の共通相手はEternal Fireのみ。",
+          "summary": "同大会・近い時期で2種類確認。5種類には届かず水増ししない。いずれもFlensburg方向。",
           "items": [
             {
-              "opponent": "Eternal Fire",
+              "opponent": "Granollers／EHFヨーロピアンリーグ",
               "side_a": {
-                "date": "2026-10-03",
-                "result": "2–0 ○"
+                "date": "2026-10-01",
+                "result": "H 40–31 ○（+9）"
               },
               "side_b": {
-                "date": "2026-09-24",
-                "result": "2–1 ○"
+                "date": "2026-10-07",
+                "result": "A 31–37 ×（−6）"
               },
-              "comparison": "NiPはストレート。唯一双方の直近10に入る相手。"
+              "comparison": "点差の比較は15点Flensburg側だがホーム／アウェーが異なる。"
             },
             {
-              "opponent": "Astralis",
+              "opponent": "Aguas Santas／EHFヨーロピアンリーグ",
               "side_a": {
-                "date": "2026-08-16",
-                "result": "1–2 ×"
+                "date": "2026-10-07",
+                "result": "A 36–22 ○（+14）"
               },
               "side_b": {
-                "date": "2026-09-25",
-                "result": "1–2 ×"
+                "date": "2026-09-30",
+                "result": "H 30–30 △（0）"
               },
-              "comparison": "同スコアだが約6週間差。"
-            },
-            {
-              "opponent": "INFINITE",
-              "side_a": {
-                "date": "2026-09-10",
-                "result": "2–0 ○"
-              },
-              "side_b": {
-                "date": "2026-08-07",
-                "result": "2–0 ○"
-              },
-              "comparison": "同スコア。Betclic旧ロスター。"
-            },
-            {
-              "opponent": "Johnny Speeds",
-              "side_a": {
-                "date": "2026-10-02",
-                "result": "2–0 ○"
-              },
-              "side_b": {
-                "date": "2026-08-05",
-                "result": "2–0 ○"
-              },
-              "comparison": "同スコア。時期差・Betclic旧ロスター。"
-            },
-            {
-              "opponent": "Liquid",
-              "side_a": {
-                "date": "2026-03-21",
-                "result": "1–2 ×"
-              },
-              "side_b": {
-                "date": "2026-08-05",
-                "result": "2–1 ○"
-              },
-              "comparison": "Betclic側の反証。ただし約7か月前のNiP記録で現在の主根拠にはしない。"
+              "comparison": "Flensburgはアウェーで大勝、Buzauはホームで引分。最も強い比較材料。"
             }
           ]
         },
-        "availability": {
-          "text": "掲載予定：NiP sjuush/stavn/xKacpersky/adamb/Krimbo。Betclic Demho/Prism/ex1st/Qlocuu/ultimate。当日確定メンバー・欠場は未確認。"
-        },
         "home_away": {
-          "text": "スウェーデン・ストックホルム／LAN（ホーム差は加点しない）"
+          "text": "Flensburgホーム。10月13日20:45 CEST＝14日03:45 JST。"
+        },
+        "availability": {
+          "text": "公式前日発表は16人予定。Luca Witzkeが復帰予定だが時間限定、Niclas Kirkeløkke欠場、Moritz Detlefsen招集。Buzauは週末試合なし。最終登録・先発は未確認。"
         },
         "sport_specific": {
-          "text": "Veto未確定。過去3か月NukeはNiP78%/18マップ、Betclic62%/8マップ。InfernoはNiP64%/11、Betclic0試合。シリーズ勝者のみで2–0固定には拡張しない。"
+          "text": "共通相手・公式戦フォーム・開催地を評価。選手交代や終盤のペース低下があるので、比較点差から今回の大差ハンデ成功を断定しない。"
         },
         "market": {
-          "text": "概算精算用1.29倍。公開参考価格を使用。購入オッズではない。出典：https://www.hltv.org/betting/analytics/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii HLTV表示レンジ1.26〜1.29。精算用は1.29を使用。推定勝率・EV未算定。"
+          "text": "公開参考1.01倍を概算精算用に保存。実購入価格ではない。出典：https://www.olimp.bet/line/gandbol-9/european-league-gruppovoy-etap-6709109/flensburg-khandevitt-buzeu-13-10-2026-86053309 規定時間勝利。必要勝率99.01%。検証済み推定勝率・EVなし。ユーザー指定の正式追跡で、価格優位を認定した登録ではない。"
         }
       }
     },
     {
       "rank": 2,
-      "match_id": "2026-10-12-bnk-fearx-jdg-lol",
-      "event_id": "web-2026-10-12-bnk-fearx-jdg-lol",
-      "matchup": "BNK FEARX vs JD Gaming",
-      "favored": "BNK FEARX",
-      "selection_label": "BNK FEARX",
-      "sport": "LoL",
-      "competition": "デマーシアカップ・グローバル招待大会2026・準々決勝",
-      "start_jst": "2026-10-12T18:00:00+09:00",
-      "venue": "中国開催／会場詳細・ホーム効果未確認",
-      "format": "BO5",
+      "match_id": "2026-10-13-newcastle-jets-gamba-soccer",
+      "event_id": "web-2026-10-13-newcastle-jets-gamba-soccer",
+      "matchup": "ガンバ大阪 vs ニューカッスル・ジェッツ",
+      "favored": "ガンバ大阪",
+      "selection_label": "ガンバ大阪 DNB（引分返金）",
+      "sport": "サッカー",
+      "competition": "AFCチャンピオンズリーグ・エリート／東地区リーグ第2節",
+      "start_jst": "2026-10-13T16:45:00+09:00",
+      "venue": "豪州ニューカッスル／McDonald Jones Stadium（ガンバはアウェー）",
+      "format": "規定時間",
       "status": "formal",
-      "gap_grade": "BNKやや優勢（大格差ではない）",
-      "price_grade": "参考価格・概算精算用",
-      "market": "match_winner",
+      "gap_grade": "ガンバやや優勢・大格差ではない",
+      "price_grade": "公開参考価格・概算精算用",
+      "market": "dnb",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "未決着・勝利時の概算利益 +35.00USD（未計上）",
+      "profit_status": "未決着。勝利時+53USD／引分0USD・100USD返還／敗戦−100USD（いずれも未計上）",
       "odds": {
-        "min": 1.35,
-        "max": 1.35,
-        "required_win_rate_pct": 74.07,
-        "book_examples": "概算精算用1.35倍。公開参考価格を使用。購入オッズではない。出典：https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/"
+        "min": 1.53,
+        "max": 1.53,
+        "required_win_rate_pct": null,
+        "book_examples": "betPawa掲載「Draw No Bet | Full Time」のガンバ1.53倍を概算精算用に保存。実購入価格ではない。引分を除く決着試合で必要勝率65.36%。全試合の勝率65.36%という意味ではない。出典：https://www.betpawa.rw/event/37403496?filter=all"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-12T12:24:19+09:00",
-      "analysis_reviewed_at": "2026-10-12T12:24:19+09:00",
-      "conclusion": "BNK FEARX勝利をユーザー指定で正式採用。直近10は6勝4敗18–16対5勝5敗13–15。今大会LGD比較はBNKを支持。共通相手はLGDとBRIONの2種類のみ確認、5種類未達。BNKやや優勢と評価するが参考1.35倍の価格優位は未判定。",
-      "risk": "H2H掲載記録なし。共通相手は2種類で不足を補完しない。リーグが異なり直近勝率を直接確率化しない。JDGはAngel/xiaofang起用の大会編成で過去LPLとの連続性に注意。BNKは直近BO5でT1・DKに2–3敗戦。古い日程15:00 JSTと更新18:00 JSTが混在するため18:00予定として注記。",
+      "added_at": "2026-10-13T13:08:28+09:00",
+      "analysis_reviewed_at": "2026-10-13T13:08:28+09:00",
       "sources": [
-        "https://ensigame.com/matches/lol/2159969-bnk-fearx-bfx-vs-jd-gaming-jdg-dcgi-12-10-26",
-        "https://ensigame.com/teams/lol/fearx-fox",
-        "https://ensigame.com/teams/lol/jd-gaming-jdg",
-        "https://esportsresults.com/match/lol/1694369/bnk-fearx-vs-jd-gaming",
-        "https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/"
+        "https://www.gamba-osaka.net/english/gameinfo/news/no/21064/",
+        "https://www.gamba-osaka.net/english/gameinfo/news/no/20993/",
+        "https://www.jleague.jp/en/club/gosaka/",
+        "https://www.jleague.jp/en/news/article/35035/?navicode=leaguecup",
+        "https://newcastlejetsfc.com.au/news/acle-match-preview-jets-vs-gamba-osaka/",
+        "https://www.forebet.com/en/football/matches/newcastle-jets-gamba-osaka-2549653",
+        "https://www.betpawa.rw/event/37403496?filter=all"
       ],
+      "conclusion": "ユーザー指定によりガンバ大阪DNBを正式採用。90分勝利で的中、引分は返金、敗戦は不的中。鹿島との共通比較とACLE初戦を評価するが、ガンバのリーグ4連敗・中3日渡航を考慮し、やや優勢に留める。",
+      "risk": "H2H掲載なし、直近の共通相手は鹿島1種類のみ。ガンバの勝利3件には国内下位カテゴリー2件を含む。Jetsの10試合は3月まで遡り、現季ロスターと時期が異なる。DNBは引分で利益が出る商品ではない。",
       "analysis_detail": {
-        "summary": "BNK FEARX勝利をユーザー指定で正式採用。直近10は6勝4敗18–16対5勝5敗13–15。今大会LGD比較はBNKを支持。共通相手はLGDとBRIONの2種類のみ確認、5種類未達。BNKやや優勢と評価するが参考1.35倍の価格優位は未判定。",
+        "summary": "ユーザー指定によりガンバ大阪DNBを正式採用。90分勝利で的中、引分は返金、敗戦は不的中。鹿島との共通比較とACLE初戦を評価するが、ガンバのリーグ4連敗・中3日渡航を考慮し、やや優勢に留める。",
         "ranking_or_rating": {
-          "text": "ENSI独自指標はBNK61位/1517、JDG38位/1584でJDG側。公式世界順位ではない。大会の共通相手比較と逆方向なので大格差判定にしない。"
+          "text": "ACLE初戦：ガンバ4–1勝利、Jets1–7敗戦。表示上ガンバ東地区2位だが、1試合だけの順位で実力差を断定しない。Jetsは前季Aリーグ・レギュラーシーズン1位。"
         },
         "h2h": {
-          "summary": "Ensigame・EsportsResultsの掲載記録なし。対戦未経験と断定せず、評価材料なし。",
+          "summary": "照合した対戦データに過去対戦掲載なし。初対戦と断定せず評価材料なし。",
           "items": []
         },
         "recent_form": {
           "side_a": {
-            "label": "BNK FEARX",
-            "summary": "6勝4敗、18–16ゲーム、平均ゲーム差+0.2。直近BO5の4件は2勝2敗。日付は出典UTC表示。",
+            "label": "ガンバ大阪",
+            "summary": "公式全大会の最新10件。90分基準3勝3分4敗、16–13、平均1.6／1.3、差+0.3。柏戦は延長4–5敗戦のため延長込みでは3勝2分5敗、17–15。天皇杯の徳島・滋賀戦を除外しない。",
             "items": [
               {
-                "date": "2026-10-04",
-                "label": "LGD／BO3",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "2026-10-03",
-                "label": "Vitality／BO1",
-                "result": "1–0 ○"
-              },
-              {
-                "date": "2026-09-03",
-                "label": "Dplus KIA／BO5",
-                "result": "2–3 ×"
-              },
-              {
-                "date": "2026-08-29",
-                "label": "T1／BO5",
-                "result": "2–3 ×"
-              },
-              {
-                "date": "2026-08-28",
-                "label": "HANJIN BRION／BO5",
-                "result": "3–2 ○"
-              },
-              {
-                "date": "2026-08-27",
-                "label": "Nongshim／BO5",
-                "result": "3–1 ○"
-              },
-              {
-                "date": "2026-08-23",
-                "label": "Nongshim／BO3",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "2026-08-21",
-                "label": "HANJIN BRION／BO3",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "2026-08-15",
-                "label": "DN SOOPers／BO3",
+                "date": "2026-10-09",
+                "label": "鹿島／A・J1",
                 "result": "0–2 ×"
               },
               {
-                "date": "2026-08-13",
-                "label": "Kiwoom DRX／BO3",
-                "result": "2–1 ○"
+                "date": "2026-10-03",
+                "label": "柏／A・ルヴァン杯",
+                "result": "90分3–3 △／延長込み4–5 ×"
+              },
+              {
+                "date": "2026-09-23",
+                "label": "徳島／H・天皇杯",
+                "result": "5–0 ○"
+              },
+              {
+                "date": "2026-09-20",
+                "label": "神戸／H・J1",
+                "result": "0–1 ×"
+              },
+              {
+                "date": "2026-09-15",
+                "label": "コンアン・ハノイ／H・ACLE",
+                "result": "4–1 ○"
+              },
+              {
+                "date": "2026-09-12",
+                "label": "FC東京／H・J1",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "2026-09-06",
+                "label": "千葉／A・J1",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "2026-09-02",
+                "label": "長崎／A・J1",
+                "result": "2–2 △"
+              },
+              {
+                "date": "2026-08-29",
+                "label": "広島／H・J1",
+                "result": "0–0 △"
+              },
+              {
+                "date": "2026-08-26",
+                "label": "滋賀／H・天皇杯",
+                "result": "2–0 ○"
               }
             ]
           },
           "side_b": {
-            "label": "JD Gaming",
-            "summary": "5勝5敗、13–15ゲーム、平均ゲーム差−0.2。今大会4試合2勝2敗・4–4ゲーム。日付は出典UTC表示。",
+            "label": "ニューカッスル・ジェッツ",
+            "summary": "掲載公式戦10件は2勝4分4敗、17–21、平均1.7／2.1、差−0.4。3月まで遡るため直近1か月の強さではない。親善試合は除外。",
             "items": [
               {
-                "date": "2026-10-08",
-                "label": "NAVI／BO3",
+                "date": "2026-09-15",
+                "label": "鹿島／A・ACLE",
+                "result": "1–7 ×"
+              },
+              {
+                "date": "2026-07-21",
+                "label": "Preston Lions／A・豪州カップ",
+                "result": "2–3 ×"
+              },
+              {
+                "date": "2026-05-16",
+                "label": "Sydney FC／H・Aリーグ",
+                "result": "1–1 △"
+              },
+              {
+                "date": "2026-05-09",
+                "label": "Sydney FC／A・Aリーグ",
+                "result": "1–1 △"
+              },
+              {
+                "date": "2026-04-25",
+                "label": "Central Coast Mariners／H・Aリーグ",
+                "result": "4–0 ○"
+              },
+              {
+                "date": "2026-04-17",
+                "label": "Melbourne Victory／A・Aリーグ",
+                "result": "2–2 △"
+              },
+              {
+                "date": "2026-04-11",
+                "label": "Adelaide United／H・Aリーグ",
+                "result": "1–1 △"
+              },
+              {
+                "date": "2026-04-02",
+                "label": "Macarthur／A・Aリーグ",
+                "result": "2–3 ×"
+              },
+              {
+                "date": "2026-03-22",
+                "label": "Sydney FC／A・Aリーグ",
                 "result": "2–1 ○"
               },
               {
-                "date": "2026-10-06",
-                "label": "LGD／BO3",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "2026-10-05",
-                "label": "Shopify Rebellion／BO3",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "2026-10-03",
-                "label": "HANJIN BRION／BO1",
-                "result": "0–1 ×"
-              },
-              {
-                "date": "2026-09-19",
-                "label": "Invictus Gaming／BO5・大会前編成",
-                "result": "1–3 ×"
-              },
-              {
-                "date": "2026-09-18",
-                "label": "Team WE／BO5・大会前編成",
-                "result": "3–1 ○"
-              },
-              {
-                "date": "2026-09-05",
-                "label": "NiP（LoL）／BO5・大会前編成",
-                "result": "0–3 ×"
-              },
-              {
-                "date": "2026-08-30",
-                "label": "Team WE／BO5・大会前編成",
-                "result": "1–3 ×"
-              },
-              {
-                "date": "2026-08-23",
-                "label": "EDward Gaming／BO3・大会前編成",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "2026-08-22",
-                "label": "TOP Esports／BO3・大会前編成",
-                "result": "2–0 ○"
+                "date": "2026-03-14",
+                "label": "Auckland／H・Aリーグ",
+                "result": "1–2 ×"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "確認できる共通相手は2種類（LGD・HANJIN BRION）。5種類未達。過去戦の重複やBO3内のゲームを別相手として水増ししない。",
+          "summary": "直近公式戦の共通相手は鹿島1種類確認。5種類未達。両チームとも鹿島アウェーだが大会・時期・メンバー差がある。",
           "items": [
             {
-              "opponent": "LGD Gaming",
+              "opponent": "鹿島アントラーズ",
               "side_a": {
-                "date": "2026-10-04",
-                "result": "BO3 2–1 ○"
+                "date": "2026-10-09",
+                "result": "J1・A 0–2 ×（−2）"
               },
               "side_b": {
-                "date": "2026-10-06",
-                "result": "BO3 0–2 ×"
+                "date": "2026-09-15",
+                "result": "ACLE・A 1–7 ×（−6）"
               },
-              "comparison": "同大会・2日差。BNK+1ゲーム対JDG−2、差3。BNKを支持する最も強い比較。ただし対戦推移・ドラフト差あり。"
-            },
-            {
-              "opponent": "HANJIN BRION",
-              "side_a": {
-                "date": "2026-08-28",
-                "result": "BO5 3–2 ○（8/21 BO3も2–1 ○）"
-              },
-              "side_b": {
-                "date": "2026-10-03",
-                "result": "BO1 0–1 ×"
-              },
-              "comparison": "方向はBNKだがBO5/BO3対BO1、1か月以上の時期差。LGD比較より弱く扱う。"
+              "comparison": "敗戦幅はガンバが4点小さい。ただし両者敗戦なので、これだけでガンバ勝利を断定しない。"
             }
           ]
         },
         "home_away": {
-          "text": "国際大会。ホーム効果は評価に加算しない。開始は更新済み2媒体09:00 UTC＝18:00 JST、旧表示06:00 UTCと差あり。"
+          "text": "Jetsホーム、ガンバは中3日で豪州遠征。ガンバ公式の16:45 JSTを採用。Jets記事末尾の12日表記は曜日と不整合で、両クラブ試合ページ・Jリーグの13日を優先。"
         },
         "availability": {
-          "text": "掲載予定：BNK Clear/Raptor/VicLa/Taeyoon/Kellin、JDG Xiaoxu/xiaofang/Angel/GALA/Vampire。最終先発・交代は未確認。JDGのLPL期間10試合と大会編成を同一条件にしない。"
+          "text": "Jets公式：Alex BadolatoとOscar Fryerは負傷でメンバー外、Alex Grantは回復し招集可能性。ガンバ公式は古巣対戦Eli Adamsの起用可能性に言及。最終先発は未確認。"
         },
         "sport_specific": {
-          "text": "BO5のドラフト対応と終盤判断が重要。BNKはDK戦で2–0から2–3逆転負け、T1にも2–3。初戦優位をシリーズ勝利に直結させず、3–0・ゲームハンディは未採用。"
+          "text": "ガンバはリーグ4連敗かつその4試合無得点。直近10の得点を下部相手のカップ大勝が押し上げる点を割引。Jetsは前季王者だがシーズン前、初戦7失点。DNBにより引分損失を回避するが、敗戦リスクは残る。"
         },
         "market": {
-          "text": "概算精算用1.35倍。公開参考価格を使用。購入オッズではない。出典：https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/ 必要勝率74.07%。独自の検証済み勝率モデルなし、EV未算定。"
+          "text": "betPawa掲載「Draw No Bet | Full Time」のガンバ1.53倍を概算精算用に保存。実購入価格ではない。引分を除く決着試合で必要勝率65.36%。全試合の勝率65.36%という意味ではない。出典：https://www.betpawa.rw/event/37403496?filter=all 100USD基準で勝利利益+53、引分純損益0、敗戦−100。EV式は0.53×勝率−敗率。独立した検証済み確率なし、EV未算定。"
         }
       }
     }
@@ -503,12 +439,11 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "Ninjas in Pyjamas",
-      "BNK FEARX（やや優勢）"
+      "Flensburg"
     ],
     "price_adjusted_top": [],
-    "caution": "各100USD基準で正式追跡。参考オッズNiP1.29・BNK1.35を概算精算用に保存、実購入価格ではない。両者未決着で利益未計上。BNK共通相手2種類の不足を注記。",
-    "previous_note": "終了4件は全勝。推定オッズ据え置きで概算合計+21USD。 ジョビッチ–ポハンコバは対戦変更による無効。概算0USD・勝率対象外。"
+    "caution": "各100USD基準の正式追跡。参考精算オッズFlensburg規定時間勝利1.01／ガンバDNB1.53。未決着の利益未計上。DNB引分は返金・勝敗対象外。",
+    "previous_note": "既掲載NiP○+29USD、BNK○+35USD、旧VARREL精算漏れ○+3USD、合計概算+67USD。"
   },
   "previous_analysis": {
     "generated_at": "2026-09-30T17:39:31+09:00",
@@ -2194,7 +2129,7 @@
         "roster": "VARREL: Qloud / Topdragon / Sley / Nico / KSG / qki。現行6名ロスター確認。",
         "early_tendency": "確認H2Hは6/15のVARREL 3–0のみ。1対戦を根拠にストレート勝利の確率を断定しない。",
         "risk": "試合前の当日5人・ヒーローBAN・マップ順・最新パッチ適応・実オッズは未確認。Bo3とBo5が混在する直近成績はシリーズ勝敗とマップ差を分ける。旧掲載の勝率93%は算定根拠が確認できず撤回。",
-        "conclusion": "事前評価：VARREL優勢。同大会3勝0敗・9–1マップと確認H2H3–0が根拠。確定結果VARREL 3–0 Uwinks。購入オッズ未登録のため利益額未計算。",
+        "conclusion": "○ 0–3（VARREL勝利）。概算利益 +3.00USD（推定オッズ1.03・100USD基準）",
         "sources": [
           "https://www.strafe.com/match/uwinks-vs-varrel-group-stage-ocs-japan-stage-3-a82f93/",
           "https://ensigame.com/teams/overwatch/varrel-varrel",
@@ -2300,22 +2235,25 @@
             "text": "対象試合は3マップ先取（FT3 / Bo5）。確認H2Hは6/15のVARREL 3–0のみ。1対戦を根拠にストレート勝利の確率を断定しない。"
           },
           "post_match": {
-            "text": "事後確認：Uwinks 0–3 VARREL。OWTICSでCompleted表記と3マップの結果を確認。結果は上記の事前集計に含めない。"
+            "text": "○ 0–3（VARREL勝利）。概算利益 +3.00USD（推定オッズ1.03・100USD基準）。実購入価格・実利益ではありません。"
           }
         },
         "rank": 13,
-        "archived_at": "2026-10-06T00:22:13.588+09:00",
-        "archive_reason": "終了済み・結果確認済み。購入オッズ未登録のため利益額未計算。",
+        "archived_at": "2026-10-13T13:08:28+09:00",
+        "archive_reason": "終了・勝利確定。正式成績・週次・概算収支へ反映。",
         "favored_result": "win",
-        "result": "○ Uwinks vs VARREL: 0–3",
+        "result": "○ 0–3（VARREL勝利）",
         "analysis_reviewed_at": "2026-10-08T17:31:01+09:00",
         "analysis_basis": "2026-10-05の調査資料を2026-10-08に履歴へ追記。事前比較と事後の確定結果を分離。",
         "result_status": "final",
         "match_status": "final",
-        "result_updated_at": "2026-10-08T17:31:01+09:00",
+        "result_updated_at": "2026-10-13T13:08:28+09:00",
         "result_sources": [
-          "https://owtics.gg/en-US/esports/match/2727"
-        ]
+          "https://ensigame.com/ru/matches/overwatch/2135594-uwinks-uwinks-vs-varrel-varrel-owcs-jp-05-10-26"
+        ],
+        "match_id": "2026-10-05-uwinks-varrel",
+        "profit_usd": 3.0,
+        "profit_status": "概算利益 +3.00USD（推定オッズ1.03・100USD基準）"
       },
       {
         "matchup": "Grenada vs Bonaire",
@@ -5848,6 +5786,492 @@
             "text": "公式ドロー変更でジョビッチは1回戦免除、ポハンコバの相手はAnna Bondarへ変更。指定カードは開催されず無効。勝敗対象外・概算純損益0USD。別カードの1–6,3–6をジョビッチの敗戦として転記しない。"
           }
         }
+      },
+      {
+        "rank": 1,
+        "match_id": "2026-10-12-nip-betclic-cs2",
+        "event_id": "web-2026-10-12-nip-betclic-cs2",
+        "matchup": "Ninjas in Pyjamas vs Betclic",
+        "favored": "Ninjas in Pyjamas",
+        "selection_label": "Ninjas in Pyjamas",
+        "sport": "CS2",
+        "competition": "Stake Pulse Beat III・グループA初戦",
+        "start_jst": "2026-10-12T19:00:00+09:00",
+        "venue": "スウェーデン・ストックホルム／LAN（ホーム差は加点しない）",
+        "format": "BO3",
+        "status": "formal",
+        "gap_grade": "優勢（価格評価別）",
+        "price_grade": "参考価格・概算精算用",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": 29.0,
+        "profit_status": "概算利益 +29.00USD（推定オッズ1.29・100USD基準）",
+        "odds": {
+          "min": 1.29,
+          "max": 1.29,
+          "required_win_rate_pct": 77.52,
+          "book_examples": "概算精算用1.29倍。公開参考価格を使用。購入オッズではない。出典：https://www.hltv.org/betting/analytics/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-12T12:24:19+09:00",
+        "analysis_reviewed_at": "2026-10-12T12:24:19+09:00",
+        "conclusion": "○ 2–1（Ninjas in Pyjamas勝利）。概算利益 +29.00USD（推定オッズ1.29・100USD基準）",
+        "risk": "NiPの直近10にはBO1が5件。9勝1敗を今回90%の勝率とはしない。Betclicの8月前半はultimate加入前。旧H2H3件は2025年で現ロスター同士ではない。Veto・最終出場者未確定。日付は直近表ではHLTV現地表示に統一し、JSTでは翌日になる試合あり。",
+        "sources": [
+          "https://www.hltv.org/matches/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii",
+          "https://www.hltv.org/results?team=4411",
+          "https://www.hltv.org/team/12916/betclic",
+          "https://tips.gg/archive/apogee-esports-csgo-vs-ninjas-in-pyjamas-csgo/",
+          "https://www.hltv.org/betting/analytics/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii"
+        ],
+        "analysis_detail": {
+          "summary": "NiP勝利を正式採用。直近10は9勝1敗・15–3マップ対4勝6敗・9–13マップ。共通相手5種類を比較するが、旧ロスター・古い試合の重みを下げる。1.29倍の必要勝率77.52%を満たすかは未判定。",
+          "ranking_or_rating": {
+            "text": "HLTV：NiP26位／Betclic65位。VRS22位／53位（確認時点）。ランキング差だけを勝率へ変換しない。"
+          },
+          "h2h": {
+            "summary": "チーム履歴3シリーズ：NiP2勝1敗、マップ5–2。すべて2025年の旧メンバーで参考扱い。HLTV現ロスター比較の掲載なしと区別。以下日付はTips.GG表示。",
+            "items": [
+              {
+                "date": "2025-03-10",
+                "label": "NiP側／PGLブカレスト予選・旧ロスター",
+                "result": "1–2 ×"
+              },
+              {
+                "date": "2025-02-23",
+                "label": "NiP側／CCT欧州シリーズ19・旧ロスター",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "2025-02-19",
+                "label": "NiP側／CCT欧州シリーズ19・旧ロスター",
+                "result": "2–0 ○"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "NiP",
+              "summary": "10試合9勝1敗、15–3マップ、平均マップ差+1.2。BO1を含む。日付HLTV表示。",
+              "items": [
+                {
+                  "date": "2026-10-03",
+                  "label": "Eternal Fire／BO3",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "BBL／BO3",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "SINNERS／BO3",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "2026-10-02",
+                  "label": "Johnny Speeds／BO3",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "2026-10-02",
+                  "label": "BBL／BO1",
+                  "result": "16–12 ○（1マップ）"
+                },
+                {
+                  "date": "2026-10-02",
+                  "label": "SportsBetExpert／BO1",
+                  "result": "13–1 ○（1マップ）"
+                },
+                {
+                  "date": "2026-10-02",
+                  "label": "HAVU／BO1",
+                  "result": "13–10 ○（1マップ）"
+                },
+                {
+                  "date": "2026-10-02",
+                  "label": "Sangal／BO1",
+                  "result": "4–13 ×（1マップ）"
+                },
+                {
+                  "date": "2026-10-02",
+                  "label": "XEPT／BO1",
+                  "result": "13–2 ○（1マップ）"
+                },
+                {
+                  "date": "2026-09-28",
+                  "label": "GamerLegion／BO5",
+                  "result": "3–1 ○"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Betclic",
+              "summary": "10試合4勝6敗、9–13マップ、平均マップ差−0.4。8月前半旧ロスター。日付HLTV表示。",
+              "items": [
+                {
+                  "date": "2026-10-08",
+                  "label": "PRIVATE／BO3",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "2026-09-25",
+                  "label": "Astralis／BO3",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "2026-09-24",
+                  "label": "Eternal Fire／BO3",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "2026-09-24",
+                  "label": "JiJieHao／BO3",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "2026-09-24",
+                  "label": "ASTRAL／BO3",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "2026-09-08",
+                  "label": "HOTU／BO3",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "2026-09-04",
+                  "label": "Nemiga／BO1",
+                  "result": "11–13 ×（1マップ）"
+                },
+                {
+                  "date": "2026-08-09",
+                  "label": "Sashi／BO3・旧ロスター",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "2026-08-09",
+                  "label": "Prestige／BO3・旧ロスター",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "2026-08-07",
+                  "label": "INFINITE／BO3・旧ロスター",
+                  "result": "2–0 ○"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "5種類を照合。Eternal FireはNiP優位、同スコア3件。LiquidはBetclic側だがNiPの3月記録で重みが非常に低い。直近10内の共通相手はEternal Fireのみ。",
+            "items": [
+              {
+                "opponent": "Eternal Fire",
+                "side_a": {
+                  "date": "2026-10-03",
+                  "result": "2–0 ○"
+                },
+                "side_b": {
+                  "date": "2026-09-24",
+                  "result": "2–1 ○"
+                },
+                "comparison": "NiPはストレート。唯一双方の直近10に入る相手。"
+              },
+              {
+                "opponent": "Astralis",
+                "side_a": {
+                  "date": "2026-08-16",
+                  "result": "1–2 ×"
+                },
+                "side_b": {
+                  "date": "2026-09-25",
+                  "result": "1–2 ×"
+                },
+                "comparison": "同スコアだが約6週間差。"
+              },
+              {
+                "opponent": "INFINITE",
+                "side_a": {
+                  "date": "2026-09-10",
+                  "result": "2–0 ○"
+                },
+                "side_b": {
+                  "date": "2026-08-07",
+                  "result": "2–0 ○"
+                },
+                "comparison": "同スコア。Betclic旧ロスター。"
+              },
+              {
+                "opponent": "Johnny Speeds",
+                "side_a": {
+                  "date": "2026-10-02",
+                  "result": "2–0 ○"
+                },
+                "side_b": {
+                  "date": "2026-08-05",
+                  "result": "2–0 ○"
+                },
+                "comparison": "同スコア。時期差・Betclic旧ロスター。"
+              },
+              {
+                "opponent": "Liquid",
+                "side_a": {
+                  "date": "2026-03-21",
+                  "result": "1–2 ×"
+                },
+                "side_b": {
+                  "date": "2026-08-05",
+                  "result": "2–1 ○"
+                },
+                "comparison": "Betclic側の反証。ただし約7か月前のNiP記録で現在の主根拠にはしない。"
+              }
+            ]
+          },
+          "availability": {
+            "text": "掲載予定：NiP sjuush/stavn/xKacpersky/adamb/Krimbo。Betclic Demho/Prism/ex1st/Qlocuu/ultimate。当日確定メンバー・欠場は未確認。"
+          },
+          "home_away": {
+            "text": "スウェーデン・ストックホルム／LAN（ホーム差は加点しない）"
+          },
+          "sport_specific": {
+            "text": "Veto未確定。過去3か月NukeはNiP78%/18マップ、Betclic62%/8マップ。InfernoはNiP64%/11、Betclic0試合。シリーズ勝者のみで2–0固定には拡張しない。"
+          },
+          "market": {
+            "text": "概算精算用1.29倍。公開参考価格を使用。購入オッズではない。出典：https://www.hltv.org/betting/analytics/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii HLTV表示レンジ1.26〜1.29。精算用は1.29を使用。推定勝率・EV未算定。"
+          },
+          "post_match": {
+            "text": "○ 2–1（Ninjas in Pyjamas勝利）。概算利益 +29.00USD（推定オッズ1.29・100USD基準）。実購入価格・実利益ではありません。"
+          }
+        },
+        "favored_result": "win",
+        "result": "○ 2–1（Ninjas in Pyjamas勝利）",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-13T13:08:28+09:00",
+        "archived_at": "2026-10-13T13:08:28+09:00",
+        "archive_reason": "終了・勝利確定。正式成績・週次・概算収支へ反映。",
+        "result_sources": [
+          "https://www.hltv.org/matches/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii"
+        ]
+      },
+      {
+        "rank": 2,
+        "match_id": "2026-10-12-bnk-fearx-jdg-lol",
+        "event_id": "web-2026-10-12-bnk-fearx-jdg-lol",
+        "matchup": "BNK FEARX vs JD Gaming",
+        "favored": "BNK FEARX",
+        "selection_label": "BNK FEARX",
+        "sport": "LoL",
+        "competition": "デマーシアカップ・グローバル招待大会2026・準々決勝",
+        "start_jst": "2026-10-12T18:00:00+09:00",
+        "venue": "中国開催／会場詳細・ホーム効果未確認",
+        "format": "BO5",
+        "status": "formal",
+        "gap_grade": "BNKやや優勢（大格差ではない）",
+        "price_grade": "参考価格・概算精算用",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": 35.0,
+        "profit_status": "概算利益 +35.00USD（推定オッズ1.35・100USD基準）",
+        "odds": {
+          "min": 1.35,
+          "max": 1.35,
+          "required_win_rate_pct": 74.07,
+          "book_examples": "概算精算用1.35倍。公開参考価格を使用。購入オッズではない。出典：https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-12T12:24:19+09:00",
+        "analysis_reviewed_at": "2026-10-12T12:24:19+09:00",
+        "conclusion": "○ 3–2（BNK FEARX勝利）。概算利益 +35.00USD（推定オッズ1.35・100USD基準）",
+        "risk": "H2H掲載記録なし。共通相手は2種類で不足を補完しない。リーグが異なり直近勝率を直接確率化しない。JDGはAngel/xiaofang起用の大会編成で過去LPLとの連続性に注意。BNKは直近BO5でT1・DKに2–3敗戦。古い日程15:00 JSTと更新18:00 JSTが混在するため18:00予定として注記。",
+        "sources": [
+          "https://ensigame.com/matches/lol/2159969-bnk-fearx-bfx-vs-jd-gaming-jdg-dcgi-12-10-26",
+          "https://ensigame.com/teams/lol/fearx-fox",
+          "https://ensigame.com/teams/lol/jd-gaming-jdg",
+          "https://esportsresults.com/match/lol/1694369/bnk-fearx-vs-jd-gaming",
+          "https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/"
+        ],
+        "analysis_detail": {
+          "summary": "BNK FEARX勝利をユーザー指定で正式採用。直近10は6勝4敗18–16対5勝5敗13–15。今大会LGD比較はBNKを支持。共通相手はLGDとBRIONの2種類のみ確認、5種類未達。BNKやや優勢と評価するが参考1.35倍の価格優位は未判定。",
+          "ranking_or_rating": {
+            "text": "ENSI独自指標はBNK61位/1517、JDG38位/1584でJDG側。公式世界順位ではない。大会の共通相手比較と逆方向なので大格差判定にしない。"
+          },
+          "h2h": {
+            "summary": "Ensigame・EsportsResultsの掲載記録なし。対戦未経験と断定せず、評価材料なし。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "BNK FEARX",
+              "summary": "6勝4敗、18–16ゲーム、平均ゲーム差+0.2。直近BO5の4件は2勝2敗。日付は出典UTC表示。",
+              "items": [
+                {
+                  "date": "2026-10-04",
+                  "label": "LGD／BO3",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "Vitality／BO1",
+                  "result": "1–0 ○"
+                },
+                {
+                  "date": "2026-09-03",
+                  "label": "Dplus KIA／BO5",
+                  "result": "2–3 ×"
+                },
+                {
+                  "date": "2026-08-29",
+                  "label": "T1／BO5",
+                  "result": "2–3 ×"
+                },
+                {
+                  "date": "2026-08-28",
+                  "label": "HANJIN BRION／BO5",
+                  "result": "3–2 ○"
+                },
+                {
+                  "date": "2026-08-27",
+                  "label": "Nongshim／BO5",
+                  "result": "3–1 ○"
+                },
+                {
+                  "date": "2026-08-23",
+                  "label": "Nongshim／BO3",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "2026-08-21",
+                  "label": "HANJIN BRION／BO3",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "2026-08-15",
+                  "label": "DN SOOPers／BO3",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "2026-08-13",
+                  "label": "Kiwoom DRX／BO3",
+                  "result": "2–1 ○"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "JD Gaming",
+              "summary": "5勝5敗、13–15ゲーム、平均ゲーム差−0.2。今大会4試合2勝2敗・4–4ゲーム。日付は出典UTC表示。",
+              "items": [
+                {
+                  "date": "2026-10-08",
+                  "label": "NAVI／BO3",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "2026-10-06",
+                  "label": "LGD／BO3",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "2026-10-05",
+                  "label": "Shopify Rebellion／BO3",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "HANJIN BRION／BO1",
+                  "result": "0–1 ×"
+                },
+                {
+                  "date": "2026-09-19",
+                  "label": "Invictus Gaming／BO5・大会前編成",
+                  "result": "1–3 ×"
+                },
+                {
+                  "date": "2026-09-18",
+                  "label": "Team WE／BO5・大会前編成",
+                  "result": "3–1 ○"
+                },
+                {
+                  "date": "2026-09-05",
+                  "label": "NiP（LoL）／BO5・大会前編成",
+                  "result": "0–3 ×"
+                },
+                {
+                  "date": "2026-08-30",
+                  "label": "Team WE／BO5・大会前編成",
+                  "result": "1–3 ×"
+                },
+                {
+                  "date": "2026-08-23",
+                  "label": "EDward Gaming／BO3・大会前編成",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "2026-08-22",
+                  "label": "TOP Esports／BO3・大会前編成",
+                  "result": "2–0 ○"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "確認できる共通相手は2種類（LGD・HANJIN BRION）。5種類未達。過去戦の重複やBO3内のゲームを別相手として水増ししない。",
+            "items": [
+              {
+                "opponent": "LGD Gaming",
+                "side_a": {
+                  "date": "2026-10-04",
+                  "result": "BO3 2–1 ○"
+                },
+                "side_b": {
+                  "date": "2026-10-06",
+                  "result": "BO3 0–2 ×"
+                },
+                "comparison": "同大会・2日差。BNK+1ゲーム対JDG−2、差3。BNKを支持する最も強い比較。ただし対戦推移・ドラフト差あり。"
+              },
+              {
+                "opponent": "HANJIN BRION",
+                "side_a": {
+                  "date": "2026-08-28",
+                  "result": "BO5 3–2 ○（8/21 BO3も2–1 ○）"
+                },
+                "side_b": {
+                  "date": "2026-10-03",
+                  "result": "BO1 0–1 ×"
+                },
+                "comparison": "方向はBNKだがBO5/BO3対BO1、1か月以上の時期差。LGD比較より弱く扱う。"
+              }
+            ]
+          },
+          "home_away": {
+            "text": "国際大会。ホーム効果は評価に加算しない。開始は更新済み2媒体09:00 UTC＝18:00 JST、旧表示06:00 UTCと差あり。"
+          },
+          "availability": {
+            "text": "掲載予定：BNK Clear/Raptor/VicLa/Taeyoon/Kellin、JDG Xiaoxu/xiaofang/Angel/GALA/Vampire。最終先発・交代は未確認。JDGのLPL期間10試合と大会編成を同一条件にしない。"
+          },
+          "sport_specific": {
+            "text": "BO5のドラフト対応と終盤判断が重要。BNKはDK戦で2–0から2–3逆転負け、T1にも2–3。初戦優位をシリーズ勝利に直結させず、3–0・ゲームハンディは未採用。"
+          },
+          "market": {
+            "text": "概算精算用1.35倍。公開参考価格を使用。購入オッズではない。出典：https://esportbet.com/2026-demacia-cup-global-invitational-playoffs-betting-tips-monday-october-12/ 必要勝率74.07%。独自の検証済み勝率モデルなし、EV未算定。"
+          },
+          "post_match": {
+            "text": "○ 3–2（BNK FEARX勝利）。概算利益 +35.00USD（推定オッズ1.35・100USD基準）。実購入価格・実利益ではありません。"
+          }
+        },
+        "favored_result": "win",
+        "result": "○ 3–2（BNK FEARX勝利）",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-13T13:08:28+09:00",
+        "archived_at": "2026-10-13T13:08:28+09:00",
+        "archive_reason": "終了・勝利確定。正式成績・週次・概算収支へ反映。",
+        "result_sources": [
+          "https://ensigame.com/matches/lol/2159969-bnk-fearx-bfx-vs-jd-gaming-jdg-dcgi-12-10-26"
+        ]
       }
     ],
     "summary": {
@@ -5867,10 +6291,10 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 39,
+      "favored_wins": 41,
       "favored_losses": 5,
       "pending": 0,
-      "note": "今回4勝・概算+21USD追加。正式成績は台帳から別途集計。 Jovicカード無効1件追加。"
+      "note": "既掲載NiP○+29USD、BNK○+35USD、旧VARREL精算漏れ○+3USD、合計概算+67USD。 正式成績は台帳から集計。"
     }
   },
   "history_policy": {
@@ -5878,7 +6302,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-12T17:33:28+09:00",
-    "note": "各100USD基準で正式追跡。参考オッズNiP1.29・BNK1.35を概算精算用に保存、実購入価格ではない。両者未決着で利益未計上。BNK共通相手2種類の不足を注記。"
+    "as_of": "2026-10-13T13:08:28+09:00",
+    "note": "各100USD基準の正式追跡。参考精算オッズFlensburg規定時間勝利1.01／ガンバDNB1.53。未決着の利益未計上。DNB引分は返金・勝敗対象外。"
   }
 }

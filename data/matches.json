@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-12T17:33:28+09:00",
+    "as_of": "2026-10-13T13:08:28+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -204,6 +204,13 @@
       "at": "2026-10-12T17:33:28+09:00",
       "source": "ユーザー事前指定・WTA公式ドロー確認",
       "note": "公式ドロー変更でジョビッチは1回戦免除、ポハンコバの相手はAnna Bondarへ変更。指定カードは開催されず無効。勝敗対象外・概算純損益0USD。別カードの1–6,3–6をジョビッチの敗戦として転記しない。 追加指示は開始予定前、実登録は対戦変更確認後。"
+    },
+    {
+      "run_id": "mr-user-approved-20261013",
+      "kind": "human_review",
+      "at": "2026-10-13T13:08:28+09:00",
+      "source": "ユーザー指定・クラブ公式・リーグ公式の確認",
+      "note": "Flensburg規定時間勝利とガンバDNBを試合前正式登録。各100USD。"
     }
   ],
   "matches": [
@@ -4038,6 +4045,78 @@
         "https://scores24.live/en/tennis/m-12-10-2026-jovic-iva-pohankova-mia"
       ],
       "verified_at": "2026-10-12T17:33:28+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-14-flensburg-buzau-handball",
+      "sport": "男子ハンドボール",
+      "competition": "EHFヨーロピアンリーグ・グループE第3節",
+      "side_a": "SG Flensburg-Handewitt",
+      "side_b": "HC Buzau",
+      "home_side": "side_a",
+      "venue": "ドイツ・フレンスブルク／GGWアレーナ（Flensburgホーム）",
+      "start_at": "2026-10-14T03:45:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261013",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定・試合前登録。ホームをside_aに統一。"
+        }
+      ],
+      "sources": [
+        "https://www.sg-flensburg-handewitt.de/en/news/article/mit-16-spielern-international",
+        "https://hcbuzau.ro/2026-2027-ehf-european-league/",
+        "https://www.liveresult.ru/handball/matches/match173703_Flensborg-Buzau-online",
+        "https://www.vitisport.cz/index.php?clanek=hazena-match-detail&fixture_id=199210&lang=cs&liga=145&sekce=hazena",
+        "https://www.olimp.bet/line/gandbol-9/european-league-gruppovoy-etap-6709109/flensburg-khandevitt-buzeu-13-10-2026-86053309"
+      ],
+      "verified_at": "2026-10-13T13:08:28+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-13-newcastle-jets-gamba-soccer",
+      "sport": "サッカー",
+      "competition": "AFCチャンピオンズリーグ・エリート／東地区リーグ第2節",
+      "side_a": "ニューカッスル・ジェッツ",
+      "side_b": "ガンバ大阪",
+      "home_side": "side_a",
+      "venue": "豪州ニューカッスル／McDonald Jones Stadium（ガンバはアウェー）",
+      "start_at": "2026-10-13T16:45:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261013",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定・試合前登録。ホームをside_aに統一。"
+        }
+      ],
+      "sources": [
+        "https://www.gamba-osaka.net/english/gameinfo/news/no/21064/",
+        "https://www.gamba-osaka.net/english/gameinfo/news/no/20993/",
+        "https://www.jleague.jp/en/club/gosaka/",
+        "https://www.jleague.jp/en/news/article/35035/?navicode=leaguecup",
+        "https://newcastlejetsfc.com.au/news/acle-match-preview-jets-vs-gamba-osaka/",
+        "https://www.forebet.com/en/football/matches/newcastle-jets-gamba-osaka-2549653",
+        "https://www.betpawa.rw/event/37403496?filter=all"
+      ],
+      "verified_at": "2026-10-13T13:08:28+09:00",
       "flags": []
     }
   ]

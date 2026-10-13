@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-12T12:24:19+09:00",
+    "as_of": "2026-10-13T13:08:28+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -1569,6 +1569,94 @@
             "verified_at": "2026-10-12T12:24:19+09:00",
             "source_confidence": "official",
             "note": "最終結果確認。既存の100USDと概算精算オッズを維持して勝率・週次・概算収支へ反映。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-results-20261013",
+      "kind": "result_update",
+      "at": "2026-10-13T13:08:28+09:00",
+      "source": "HLTV・Ensigame確定結果",
+      "note": "本日欄のNiPとBNKはともに勝利、概算+64USD。既存VARRELも精算漏れを解消し+3USD。合計+67USD。",
+      "changes": [
+        {
+          "match_id": "2026-10-12-nip-betclic-cs2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 1
+              },
+              "text": "2–1（Ninjas in Pyjamas勝利）"
+            },
+            "result_confirmed_at": "2026-10-13T13:08:28+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "HLTV",
+                "url": "https://www.hltv.org/matches/2399131/ninjas-in-pyjamas-vs-betclic-stake-pulse-beat-iii",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-13T13:08:28+09:00",
+            "source_confidence": "specialist_db",
+            "note": "最終スコア確認。既存の推定精算オッズと100USD基準を維持。VARRELは既存履歴の精算漏れ解消で、新規採用ではない。"
+          }
+        },
+        {
+          "match_id": "2026-10-12-bnk-fearx-jdg-lol",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 2
+              },
+              "text": "3–2（BNK FEARX勝利）"
+            },
+            "result_confirmed_at": "2026-10-13T13:08:28+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Ensigame",
+                "url": "https://ensigame.com/matches/lol/2159969-bnk-fearx-bfx-vs-jd-gaming-jdg-dcgi-12-10-26",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-13T13:08:28+09:00",
+            "source_confidence": "specialist_db",
+            "note": "最終スコア確認。既存の推定精算オッズと100USD基準を維持。VARRELは既存履歴の精算漏れ解消で、新規採用ではない。"
+          }
+        },
+        {
+          "match_id": "2026-10-05-uwinks-varrel",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 3
+              },
+              "text": "0–3（VARREL勝利）"
+            },
+            "result_confirmed_at": "2026-10-13T13:08:28+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Ensigame 確定結果",
+                "url": "https://ensigame.com/ru/matches/overwatch/2135594-uwinks-uwinks-vs-varrel-varrel-owcs-jp-05-10-26",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-13T13:08:28+09:00",
+            "source_confidence": "specialist_db",
+            "note": "最終スコア確認。既存の推定精算オッズと100USD基準を維持。VARRELは既存履歴の精算漏れ解消で、新規採用ではない。"
           }
         }
       ],

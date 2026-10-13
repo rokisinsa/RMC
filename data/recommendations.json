@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-12T17:33:28+09:00",
+    "as_of": "2026-10-13T13:08:28+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
@@ -195,6 +195,12 @@
       "started_at": "2026-10-12T17:33:28+09:00",
       "slot": "adhoc",
       "note": "ユーザー事前指定の正式履歴追加。対戦変更確認後の登録で無効精算。"
+    },
+    {
+      "run_id": "rec-user-approved-20261013",
+      "started_at": "2026-10-13T13:08:28+09:00",
+      "slot": "adhoc",
+      "note": "指定2件を詳細分析して追加。ガンバDNBの指示を反映。実購入は行わない。"
     }
   ],
   "picks": [
@@ -4403,6 +4409,94 @@
           "reported_at": "2026-10-12T17:33:28+09:00",
           "source": "reference_estimate",
           "note": "変更前の公開参考1.14倍（Wincomparator掲載Bet365）。購入価格ではない。対戦変更につき概算精算は無効・0USD。"
+        }
+      ]
+    },
+    {
+      "id": "rec-2026-10-14-flensburg-buzau-handball",
+      "system": "recommendations",
+      "match_id": "2026-10-14-flensburg-buzau-handball",
+      "run_id": "rec-user-approved-20261013",
+      "source_event_id": "web-2026-10-14-flensburg-buzau-handball",
+      "market": "match_1x2",
+      "market_label": "規定時間勝利：Flensburg",
+      "selection": "side_a",
+      "selection_label": "SG Flensburg-Handewitt",
+      "market_odds": {
+        "text": "公開参考1.01倍を概算精算用に保存。実購入価格ではない。出典：https://www.olimp.bet/line/gandbol-9/european-league-gruppovoy-etap-6709109/flensburg-khandevitt-buzeu-13-10-2026-86053309",
+        "min": 1.01,
+        "max": 1.01,
+        "observed_at": "2026-10-13T13:08:28+09:00",
+        "source": "https://www.olimp.bet/line/gandbol-9/european-league-gruppovoy-etap-6709109/flensburg-khandevitt-buzeu-13-10-2026-86053309"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-13T13:08:28+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-13T13:08:28+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "優勢（価格評価別）・ユーザー指定正式",
+        "model_version": "user-approved-analysis-20261013",
+        "summary": "Flensburgの規定時間勝利を正式採用。直近10は9勝1分、同大会の共通相手2組でも優勢。ただし参考1.01倍の必要勝率99.01%を満たす根拠は未確立。実力優位と価格優位を分離。 ユーザー指定の各100USD基準の正式追跡。参考価格による概算精算は承認済み。実購入・実利益とは区別。未決着の利益は未計上。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定の各100USD基準の正式追跡。参考価格による概算精算は承認済み。実購入・実利益とは区別。未決着の利益は未計上。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.01,
+          "estimated": true,
+          "reported_at": "2026-10-13T13:08:28+09:00",
+          "source": "reference_estimate",
+          "note": "公開参考1.01倍を概算精算用に保存。実購入価格ではない。出典：https://www.olimp.bet/line/gandbol-9/european-league-gruppovoy-etap-6709109/flensburg-khandevitt-buzeu-13-10-2026-86053309"
+        }
+      ]
+    },
+    {
+      "id": "rec-2026-10-13-newcastle-jets-gamba-soccer",
+      "system": "recommendations",
+      "match_id": "2026-10-13-newcastle-jets-gamba-soccer",
+      "run_id": "rec-user-approved-20261013",
+      "source_event_id": "web-2026-10-13-newcastle-jets-gamba-soccer",
+      "market": "dnb",
+      "market_label": "ガンバ大阪 DNB（90分・引分返金）",
+      "selection": "side_b",
+      "selection_label": "ガンバ大阪 DNB（引分返金）",
+      "market_odds": {
+        "text": "betPawa掲載「Draw No Bet | Full Time」のガンバ1.53倍を概算精算用に保存。実購入価格ではない。引分を除く決着試合で必要勝率65.36%。全試合の勝率65.36%という意味ではない。出典：https://www.betpawa.rw/event/37403496?filter=all",
+        "min": 1.53,
+        "max": 1.53,
+        "observed_at": "2026-10-13T13:08:28+09:00",
+        "source": "https://www.betpawa.rw/event/37403496?filter=all"
+      },
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-13T13:08:28+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-13T13:08:28+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ガンバやや優勢・大格差ではない・ユーザー指定正式",
+        "model_version": "user-approved-analysis-20261013",
+        "summary": "ユーザー指定によりガンバ大阪DNBを正式採用。90分勝利で的中、引分は返金、敗戦は不的中。鹿島との共通比較とACLE初戦を評価するが、ガンバのリーグ4連敗・中3日渡航を考慮し、やや優勢に留める。 ユーザー指定の各100USD基準の正式追跡。参考価格による概算精算は承認済み。実購入・実利益とは区別。未決着の利益は未計上。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定の各100USD基準の正式追跡。参考価格による概算精算は承認済み。実購入・実利益とは区別。未決着の利益は未計上。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.53,
+          "estimated": true,
+          "reported_at": "2026-10-13T13:08:28+09:00",
+          "source": "reference_estimate",
+          "note": "betPawa掲載「Draw No Bet | Full Time」のガンバ1.53倍を概算精算用に保存。実購入価格ではない。引分を除く決着試合で必要勝率65.36%。全試合の勝率65.36%という意味ではない。出典：https://www.betpawa.rw/event/37403496?filter=all"
         }
       ]
     }
