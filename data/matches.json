@@ -211,6 +211,13 @@
       "at": "2026-10-13T13:08:28+09:00",
       "source": "ユーザー指定・クラブ公式・リーグ公式の確認",
       "note": "Flensburg規定時間勝利とガンバDNBを試合前正式登録。各100USD。"
+    },
+    {
+      "run_id": "mr-user-approved-20261014-1236",
+      "kind": "human_review",
+      "at": "2026-10-14T12:36:00+09:00",
+      "source": "ユーザー指定・大会／リーグ公式・HLTV・専門DB照合",
+      "note": "10/14指定4試合を事実登録。Team Lynx–PuckChampは開始時刻変更（旧16:00→新19:00 JST）を記録。"
     }
   ],
   "matches": [
@@ -4117,6 +4124,139 @@
         "https://www.betpawa.rw/event/37403496?filter=all"
       ],
       "verified_at": "2026-10-13T13:08:28+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-14-lynx-puckchamp-dota2",
+      "sport": "Dota 2",
+      "competition": "EPL Masters III: Play-In Season 3・Group A",
+      "side_a": "Team Lynx",
+      "side_b": "PuckChamp",
+      "home_side": "unknown",
+      "venue": "オンライン大会（開催地未確認）",
+      "start_at": "2026-10-14T19:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "07:00 UTC／16:00 JSTと記載した旧日程から10:00 UTC／19:00 JSTへ変更。2026-10-14更新の試合ページで確認。",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261014-1236",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定の開始前登録。07:00 UTC／16:00 JSTと記載した旧日程から10:00 UTC／19:00 JSTへ変更。2026-10-14更新の試合ページで確認。"
+        }
+      ],
+      "sources": [
+        "https://esportsresults.com/match/dota2/1743567/team-lynx-vs-puckchamp",
+        "https://esport.vision/team/team-lynx",
+        "https://esport.vision/team/puckchamp"
+      ],
+      "verified_at": "2026-10-14T12:36:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-15-furia-betboom-cs2",
+      "sport": "CS2",
+      "competition": "Thunderpick World Championship 2026・Group B opening match",
+      "side_a": "FURIA",
+      "side_b": "BETBOOM",
+      "home_side": "neutral",
+      "venue": "LAN（詳細会場未確認）",
+      "start_at": "2026-10-15T03:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "HLTV 10月14日18:00 UTC＝JST翌日03:00",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261014-1236",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定の開始前登録。HLTV 10月14日18:00 UTC＝JST翌日03:00"
+        }
+      ],
+      "sources": [
+        "https://www.hltv.org/matches/2399387/furia-vs-betboom-thunderpick-world-championship-2026"
+      ],
+      "verified_at": "2026-10-14T12:36:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-14-kashiwa-port-soccer",
+      "sport": "サッカー",
+      "competition": "AFCチャンピオンズリーグ・エリート2026/27 東地区リーグステージ第2節",
+      "side_a": "柏レイソル",
+      "side_b": "ポートFC",
+      "home_side": "side_a",
+      "venue": "柏サッカースタジアム",
+      "start_at": "2026-10-14T19:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "柏レイソル公式発表の日本時間",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261014-1236",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定の開始前登録。柏レイソル公式発表の日本時間"
+        }
+      ],
+      "sources": [
+        "https://www.reysol.co.jp/afc202627/index.php",
+        "https://www.the-afc.com/en/club/afc_champions_league_elite.html/news/preview-kashiwa-reysol-jpn-v-port-fc-tha",
+        "https://www.jleague.jp/en/club/kashiwa/",
+        "https://fathailand.org/match-results/33/229?language=en"
+      ],
+      "verified_at": "2026-10-14T12:36:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-14-astralis-sashi-cs2",
+      "sport": "CS2",
+      "competition": "Stake Pulse Beat III・Group C opening match",
+      "side_a": "Astralis",
+      "side_b": "Sashi",
+      "home_side": "neutral",
+      "venue": "LAN（詳細会場未確認）",
+      "start_at": "2026-10-14T21:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "HLTV 12:00 UTC＝21:00 JST",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261014-1236",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定の開始前登録。HLTV 12:00 UTC＝21:00 JST"
+        }
+      ],
+      "sources": [
+        "https://www.hltv.org/matches/2399134/astralis-vs-sashi-stake-pulse-beat-iii"
+      ],
+      "verified_at": "2026-10-14T12:36:00+09:00",
       "flags": []
     }
   ]
