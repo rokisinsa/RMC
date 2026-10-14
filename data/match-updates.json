@@ -1661,6 +1661,68 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-2026-10-14-1236-result-update",
+      "kind": "result_update",
+      "at": "2026-10-14T12:36:00+09:00",
+      "source": "大会／クラブ公式の最終結果",
+      "note": "前回本日の分析2試合の確定結果を登録。試合前予測ロックを変更せず、参考価格の概算収支は画面で自動集計する。",
+      "changes": [
+        {
+          "match_id": "2026-10-14-flensburg-buzau-handball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 36,
+                "b": 27
+              },
+              "text": "SG Flensburg-Handewitt 36–27 ACS HC Buzau（前半17–14）"
+            },
+            "result_confirmed_at": "2026-10-14T12:36:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "SG Flensburg-Handewitt公式",
+                "url": "https://www.sg-flensburg-handewitt.de/en/news/article/den-qualitaetsunterschied-ausgespielt",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-14T12:36:00+09:00",
+            "source_confidence": "official",
+            "note": "最終スコアを大会／クラブ公式で確認。結果確認時刻は試合終了時刻ではない。"
+          }
+        },
+        {
+          "match_id": "2026-10-13-newcastle-jets-gamba-soccer",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 3
+              },
+              "text": "Newcastle Jets 1–3 Gamba Osaka（90分）"
+            },
+            "result_confirmed_at": "2026-10-14T12:36:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "AFC公式",
+                "url": "https://www.the-afc.com/en/club/afc_champions_league_elite.html/news/md2-newcastle-jets-fc-aus-1-3-gamba-osaka-jpn",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-14T12:36:00+09:00",
+            "source_confidence": "official",
+            "note": "最終スコアを大会／クラブ公式で確認。結果確認時刻は試合終了時刻ではない。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }
