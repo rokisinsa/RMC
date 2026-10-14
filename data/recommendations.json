@@ -201,6 +201,12 @@
       "started_at": "2026-10-13T13:08:28+09:00",
       "slot": "adhoc",
       "note": "指定2件を詳細分析して追加。ガンバDNBの指示を反映。実購入は行わない。"
+    },
+    {
+      "run_id": "rec-user-approved-20261014-1236",
+      "started_at": "2026-10-14T12:36:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザーが正式指定した4試合を①推奨取引へ追跡登録。各100USDはシミュレーション基準。現在オッズ未確認、実購入なし。①H2H＋直近6と②総合戦力はdata/today-gap-analysis.jsonに別々に記録。"
     }
   ],
   "picks": [
@@ -4499,6 +4505,122 @@
           "note": "betPawa掲載「Draw No Bet | Full Time」のガンバ1.53倍を概算精算用に保存。実購入価格ではない。引分を除く決着試合で必要勝率65.36%。全試合の勝率65.36%という意味ではない。出典：https://www.betpawa.rw/event/37403496?filter=all"
         }
       ]
+    },
+    {
+      "id": "rec-2026-10-14-lynx-puckchamp-dota2",
+      "system": "recommendations",
+      "match_id": "2026-10-14-lynx-puckchamp-dota2",
+      "run_id": "rec-user-approved-20261014-1236",
+      "source_event_id": "web-2026-10-14-lynx-puckchamp-dota2",
+      "market": "match_winner",
+      "market_label": "Team Lynx シリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "Team Lynx",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-14T12:36:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-14T12:36:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー指定正式追跡・数値評価未認定",
+        "model_version": "user-approved-dual-analysis-20261014",
+        "summary": "①公開H2H3シリーズはTeam Lynx 2勝1敗。両者の直近6はLynx 5勝1敗、PuckChamp 3勝3敗（PuckChampのBO1を1件含む）。②大会別独自順位の差・直近の共通相手2組もLynx方向。①②同方向だが過去H2Hに敗戦あり、BO3での不確実性と開催時刻変更に注意。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式指定。仮想100USD基準。実購入ではない。オッズ未確認・参考精算オッズなし・収支未算出。カジ旅・遊雅堂・bet365の掲載確認不能。"
+    },
+    {
+      "id": "rec-2026-10-15-furia-betboom-cs2",
+      "system": "recommendations",
+      "match_id": "2026-10-15-furia-betboom-cs2",
+      "run_id": "rec-user-approved-20261014-1236",
+      "source_event_id": "web-2026-10-15-furia-betboom-cs2",
+      "market": "match_winner",
+      "market_label": "FURIA シリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "FURIA",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-14T12:36:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-14T12:36:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー指定正式追跡・数値評価未認定",
+        "model_version": "user-approved-dual-analysis-20261014",
+        "summary": "①過去シリーズH2HはFURIA 3勝1敗、直近6シリーズはFURIA 3勝3敗／BETBOOM 2勝4敗。②HLTV #4対#14／VRS #7対#12がFURIA優勢を示す。①②同方向だが格差を過信しない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式指定。仮想100USD基準。実購入ではない。オッズ未確認・参考精算オッズなし・収支未算出。カジ旅・遊雅堂・bet365の掲載確認不能。"
+    },
+    {
+      "id": "rec-2026-10-14-kashiwa-port-soccer",
+      "system": "recommendations",
+      "match_id": "2026-10-14-kashiwa-port-soccer",
+      "run_id": "rec-user-approved-20261014-1236",
+      "source_event_id": "web-2026-10-14-kashiwa-port-soccer",
+      "market": "match_1x2",
+      "market_label": "柏レイソル 90分勝利（引分は不的中）",
+      "selection": "side_a",
+      "selection_label": "柏レイソル",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-14T12:36:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-14T12:36:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー指定正式追跡・数値評価未認定",
+        "model_version": "user-approved-dual-analysis-20261014",
+        "summary": "①柏の直近6公式戦は90分4勝1分1敗、得点19／失点11（延長を除くとG大阪3-3、従って4-1-1）。ポートFCの全大会直近6件は試合識別まで検証できず、双方比較は部分的。②柏はJリーグ上位でホームだが、ポートFCはタイ1部前季2位・リーグカップ王者、ACLE初戦は神戸に1–2と接戦。現時点で①②一致認定にはデータ不足。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式指定。仮想100USD基準。実購入ではない。オッズ未確認・参考精算オッズなし・収支未算出。カジ旅・遊雅堂・bet365の掲載確認不能。"
+    },
+    {
+      "id": "rec-2026-10-14-astralis-sashi-cs2",
+      "system": "recommendations",
+      "match_id": "2026-10-14-astralis-sashi-cs2",
+      "run_id": "rec-user-approved-20261014-1236",
+      "source_event_id": "web-2026-10-14-astralis-sashi-cs2",
+      "market": "match_winner",
+      "market_label": "Astralis シリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "Astralis",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-14T12:36:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-14T12:36:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー指定正式追跡・数値評価未認定",
+        "model_version": "user-approved-dual-analysis-20261014",
+        "summary": "①HLTVに直接対決シリーズ掲載なし。直近表示6はAstralis 5勝1敗、Sashi 1勝5敗（後者は単一マップ形式が5件）。②HLTV#15対Sashi未ランク・VRS#10対#90はAstralis優勢。直近比較と現在戦力は概ね同方向だがBO3におけるSashi成績の適合性・ロスター差に注意。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式指定。仮想100USD基準。実購入ではない。オッズ未確認・参考精算オッズなし・収支未算出。カジ旅・遊雅堂・bet365の掲載確認不能。"
     }
   ]
 }
