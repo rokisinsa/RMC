@@ -218,6 +218,13 @@
       "at": "2026-10-14T12:36:00+09:00",
       "source": "ユーザー指定・大会／リーグ公式・HLTV・専門DB照合",
       "note": "10/14指定4試合を事実登録。Team Lynx–PuckChampは開始時刻変更（旧16:00→新19:00 JST）を記録。"
+    },
+    {
+      "run_id": "mr-user-approved-20261014-2248",
+      "kind": "human_review",
+      "at": "2026-10-14T22:48:00+09:00",
+      "source": "ユーザー正式指定・大会日程およびHLTV／専門試合DB照合",
+      "note": "Zero Tenacity–PuckChamp（15日22:00JST）、HEROIC–Envy（15日21:00JST）を登録。Envyの過去5人コアは3DMAXを遡る。"
     }
   ],
   "matches": [
@@ -4257,6 +4264,75 @@
         "https://www.hltv.org/matches/2399134/astralis-vs-sashi-stake-pulse-beat-iii"
       ],
       "verified_at": "2026-10-14T12:36:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-15-zero-tenacity-puckchamp-dota2",
+      "sport": "Dota 2",
+      "competition": "European Pro League Masters III — Play-In Group A",
+      "side_a": "Zero Tenacity",
+      "side_b": "PuckChamp",
+      "home_side": "unknown",
+      "venue": "オンライン・欧州サーバー",
+      "start_at": "2026-10-15T22:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261014-2248",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式指定の開始前登録。出典の形式・時刻・旧コア同一性を確認。"
+        }
+      ],
+      "sources": [
+        "https://tips.gg/matches/dota2/15-10-2026/zero-tenacity-vs-puckchamp/02-00/",
+        "https://bo3.gg/dota2/teams/zero-tenacity-dota/matches",
+        "https://bo3.gg/dota2/teams/puckchamp/matches",
+        "https://hawk.live/dota-2/matches/epl-masters-i/zero-tenacity-vs-puckchamp",
+        "https://liquipedia.net/dota2/EPL/Masters/3/Play-In"
+      ],
+      "verified_at": "2026-10-14T22:48:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-15-heroic-envy-cs2",
+      "sport": "CS2",
+      "competition": "Stake Pulse Beat III — Group D opening match",
+      "side_a": "HEROIC",
+      "side_b": "Envy",
+      "home_side": "neutral",
+      "venue": "Stockholm, Sweden",
+      "start_at": "2026-10-15T21:00:00+09:00",
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261014-2248",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式指定の開始前登録。出典の形式・時刻・旧コア同一性を確認。"
+        }
+      ],
+      "sources": [
+        "https://www.hltv.org/matches/2399137/heroic-vs-envy-stake-pulse-beat-iii",
+        "https://www.hltv.org/team/4914/3dmax",
+        "https://www.hltv.org/team/5991/envy",
+        "https://www.hltv.org/events/9223/stake-pulse-beat-iii"
+      ],
+      "verified_at": "2026-10-14T22:48:00+09:00",
       "flags": []
     }
   ]

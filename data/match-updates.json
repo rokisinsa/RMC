@@ -1723,6 +1723,92 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-2026-10-14-2248-result-update",
+      "kind": "result_update",
+      "at": "2026-10-14T22:48:00+09:00",
+      "source": "大会・チーム公式／HLTV／専門結果DB照合",
+      "note": "10月14日終了済み3件（Team Lynx、柏、Astralis）の結果・スコア確認。ユーザーの近似参考オッズ（1.05/1.15/1.10）をrecommendationsへ追記。FURIAは15日03:00開始のため継続監視。 結果根拠の品質監査でLynxの2–0を検証不能と判定、ユーザー確認勝者のみへデータ品質訂正。",
+      "changes": [
+        {
+          "match_id": "2026-10-14-lynx-puckchamp-dota2",
+          "set": {
+            "status": "final",
+            "result": {
+              "winners": {
+                "final": "side_a"
+              },
+              "text": "Team Lynx勝利（ユーザー確認／マップスコア未確認）"
+            },
+            "result_confirmed_at": "2026-10-14T22:48:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ユーザーがTeam Lynx勝利を確認",
+                "type": "user_confirmed"
+              }
+            ],
+            "verified_at": "2026-10-14T22:48:00+09:00",
+            "source_confidence": "user_confirmed",
+            "note": "ユーザーが①Team Lynx勝利を明示。外部の対戦ページは一部が試合前・ライブのままでマップスコアの独立確認不可。従前の2–0を未検証として取り下げ、正式精算には確認済み勝者のみを使用。判定○と参考オッズ1.05は変更しない。"
+          }
+        },
+        {
+          "match_id": "2026-10-14-kashiwa-port-soccer",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 5,
+                "b": 1
+              },
+              "text": "柏レイソル 5–1 ポートFC"
+            },
+            "result_confirmed_at": "2026-10-14T22:48:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "柏レイソル公式",
+                "url": "https://reysol.co.jp/game/results/202627/1014.php",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-14T22:48:00+09:00",
+            "source_confidence": "official",
+            "note": "公式結果記録の最終スコアで照合。"
+          }
+        },
+        {
+          "match_id": "2026-10-14-astralis-sashi-cs2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "Astralis 2–0 Sashi"
+            },
+            "result_confirmed_at": "2026-10-14T22:48:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "HLTV公式試合データ",
+                "url": "https://www.hltv.org/stats/matches/131965/astralis-vs-sashi",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-14T22:48:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "公式結果記録の最終スコアで照合。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }

@@ -207,6 +207,12 @@
       "started_at": "2026-10-14T12:36:00+09:00",
       "slot": "adhoc",
       "note": "ユーザーが正式指定した4試合を①推奨取引へ追跡登録。各100USDはシミュレーション基準。現在オッズ未確認、実購入なし。①H2H＋直近6と②総合戦力はdata/today-gap-analysis.jsonに別々に記録。"
+    },
+    {
+      "run_id": "rec-user-approved-20261014-2248",
+      "started_at": "2026-10-14T22:48:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー正式指定2件（Zero Tenacity／HEROIC）を①推奨へ。H2H・直近10・共通対戦相手・②総合戦力は本日の分析に詳細保存。格付けA−は暫定で①②に食い違いあり。"
     }
   ],
   "picks": [
@@ -4533,7 +4539,16 @@
       "flags": [
         "odds_unverified"
       ],
-      "note": "ユーザー正式指定。仮想100USD基準。実購入ではない。オッズ未確認・参考精算オッズなし・収支未算出。カジ旅・遊雅堂・bet365の掲載確認不能。"
+      "note": "ユーザー正式指定。仮想100USD基準。実購入ではない。オッズ未確認・参考精算オッズなし・収支未算出。カジ旅・遊雅堂・bet365の掲載確認不能。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.05,
+          "estimated": true,
+          "reported_at": "2026-10-14T22:48:00+09:00",
+          "source": "user_reported",
+          "note": "2026-10-14 22:48 JSTユーザー報告の約1.05倍。100USD基準の概算精算のみに使用。実購入価格・実現利益ではない。"
+        }
+      ]
     },
     {
       "id": "rec-2026-10-15-furia-betboom-cs2",
@@ -4591,7 +4606,16 @@
       "flags": [
         "odds_unverified"
       ],
-      "note": "ユーザー正式指定。仮想100USD基準。実購入ではない。オッズ未確認・参考精算オッズなし・収支未算出。カジ旅・遊雅堂・bet365の掲載確認不能。"
+      "note": "ユーザー正式指定。仮想100USD基準。実購入ではない。オッズ未確認・参考精算オッズなし・収支未算出。カジ旅・遊雅堂・bet365の掲載確認不能。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.15,
+          "estimated": true,
+          "reported_at": "2026-10-14T22:48:00+09:00",
+          "source": "user_reported",
+          "note": "2026-10-14 22:48 JSTユーザー報告の約1.15倍。100USD基準の概算精算のみに使用。実購入価格・実現利益ではない。"
+        }
+      ]
     },
     {
       "id": "rec-2026-10-14-astralis-sashi-cs2",
@@ -4620,7 +4644,74 @@
       "flags": [
         "odds_unverified"
       ],
-      "note": "ユーザー正式指定。仮想100USD基準。実購入ではない。オッズ未確認・参考精算オッズなし・収支未算出。カジ旅・遊雅堂・bet365の掲載確認不能。"
+      "note": "ユーザー正式指定。仮想100USD基準。実購入ではない。オッズ未確認・参考精算オッズなし・収支未算出。カジ旅・遊雅堂・bet365の掲載確認不能。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.1,
+          "estimated": true,
+          "reported_at": "2026-10-14T22:48:00+09:00",
+          "source": "user_reported",
+          "note": "2026-10-14 22:48 JSTユーザー報告の約1.10倍。100USD基準の概算精算のみに使用。実購入価格・実現利益ではない。"
+        }
+      ]
+    },
+    {
+      "id": "rec-2026-10-15-zero-tenacity-puckchamp-dota2",
+      "system": "recommendations",
+      "match_id": "2026-10-15-zero-tenacity-puckchamp-dota2",
+      "run_id": "rec-user-approved-20261014-2248",
+      "source_event_id": "web-2026-10-15-zero-tenacity-puckchamp-dota2",
+      "market": "match_winner",
+      "market_label": "Zero Tenacity BO3シリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "Zero Tenacity",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-14T22:48:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-14T22:48:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−候補（ユーザー指定／①②完全一致せず）",
+        "model_version": "user-approved-dual-analysis-20261014-2248",
+        "summary": "①旧対戦3シリーズはZero Tenacity 3勝0敗（マップ6-1）。直近10シリーズ／試合はZero 5勝5敗、PuckChamp 3勝7敗（BO1混在）。共通相手3組はZero有利が一部ある。②Tips.gg独自順位ではZero #119に対しPuckChamp #41で順位の方向が逆。①と②は完全一致しないためA−はユーザー指定の候補表示であり高信頼確定ではない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "A−はユーザー指定の暫定候補グレード。勝者市場、100USD仮想追跡。購入オッズ未確定。①実績と②現在戦力に食い違いがあり高確信として扱わない。"
+    },
+    {
+      "id": "rec-2026-10-15-heroic-envy-cs2",
+      "system": "recommendations",
+      "match_id": "2026-10-15-heroic-envy-cs2",
+      "run_id": "rec-user-approved-20261014-2248",
+      "source_event_id": "web-2026-10-15-heroic-envy-cs2",
+      "market": "match_winner",
+      "market_label": "HEROIC BO3シリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "HEROIC",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-14T22:48:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-14T22:48:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−候補（ユーザー指定／①②完全一致せず）",
+        "model_version": "user-approved-dual-analysis-20261014-2248",
+        "summary": "①HEROICは直近10シリーズ8勝2敗、旧3DMAXの現Envyコアは直近10試合6勝4敗（1MAPとBO5混在）。現5人コア同士の旧3DMAX名義H2Hは2026-07-15と09-02の2シリーズ、ともにHEROIC 2-1勝利。②現在HLTVはHEROIC #30／Envy #20でEnvy優位だがVRSはHEROIC #21／Envy #27でHEROIC優位。したがって①と②は完全には一致しない。A−は指定の暫定候補。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "A−はユーザー指定の暫定候補グレード。勝者市場、100USD仮想追跡。購入オッズ未確定。①実績と②現在戦力に食い違いがあり高確信として扱わない。"
     }
   ]
 }

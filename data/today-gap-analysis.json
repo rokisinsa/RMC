@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-14T12:36:00+09:00",
+  "generated_at": "2026-10-14T22:48:00+09:00",
   "window": {
-    "from": "2026-10-14T12:36:00+09:00",
-    "to": "2026-10-15T12:36:00+09:00",
+    "from": "2026-10-14T22:48:00+09:00",
+    "to": "2026-10-15T23:30:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "ユーザー指定4試合を正式登録。旧本日の分析2件は公式結果と参考概算を確定し、分析履歴へ移動。Team Lynx試合は19:00 JSTへ変更。"
+    "note": "正式新規2件（Zero Tenacity、HEROIC）を追加。10/14終了済み①Lynx、③柏、④Astralisは結果・参考収支を確定し分析履歴へ移動。②FURIAは未開始で継続。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -23,189 +23,11 @@
       "サッカー｜AFCチャンピオンズリーグ・エリート",
       "既掲載CS2・LoL・既存Overwatch結果精算"
     ],
-    "note": "大会公式・クラブ公式・HLTV・専門結果DBで4カード照合。Port FC直近6件不足、Team Lynx時刻変更は最新情報を優先。カジ旅・遊雅堂・bet365市場掲載は未確認。"
+    "note": "HLTV、3DMAX→Envyの5名移籍履歴、Liquipedia、bo3.gg、Tips.gg、柏／AFC公式で照合。新規2件は①②が完全一致せずA−は暫定。カジ旅／遊雅堂／bet365掲載確認不能。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-10-14-lynx-puckchamp-dota2",
-      "event_id": "web-2026-10-14-lynx-puckchamp-dota2",
-      "matchup": "Team Lynx vs PuckChamp",
-      "favored": "Team Lynx",
-      "selection_label": "Team Lynx",
-      "sport": "Dota 2",
-      "competition": "EPL Masters III: Play-In Season 3・Group A",
-      "start_jst": "2026-10-14T19:00:00+09:00",
-      "venue": "オンライン大会（開催地未確認）",
-      "format": "BO3 / Online",
-      "status": "formal",
-      "gap_grade": "A-（参考）",
-      "price_grade": "未判定",
-      "market": "match_winner",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合未決着。購入・精算オッズ未登録のため概算損益は未算出（100USDはRMC追跡用の仮想基準額）。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "カジ旅／遊雅堂／bet365：掲載確認不能。オッズ未確認・推定で補完しない。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-14T12:36:00+09:00",
-      "analysis_reviewed_at": "2026-10-14T12:36:00+09:00",
-      "sources": [
-        "https://esportsresults.com/match/dota2/1743567/team-lynx-vs-puckchamp",
-        "https://esport.vision/team/team-lynx",
-        "https://esport.vision/team/puckchamp"
-      ],
-      "conclusion": "①公開H2H3シリーズはTeam Lynx 2勝1敗。両者の直近6はLynx 5勝1敗、PuckChamp 3勝3敗（PuckChampのBO1を1件含む）。②大会別独自順位の差・直近の共通相手2組もLynx方向。①②同方向だが過去H2Hに敗戦あり、BO3での不確実性と開催時刻変更に注意。",
-      "risk": "開始時刻が16:00→19:00 JSTに変更と掲載。試合前再確認。ロスター差・BO1の混在・参考価格なし。",
-      "analysis_detail": {
-        "summary": "①公開H2H3シリーズはTeam Lynx 2勝1敗。両者の直近6はLynx 5勝1敗、PuckChamp 3勝3敗（PuckChampのBO1を1件含む）。②大会別独自順位の差・直近の共通相手2組もLynx方向。①②同方向だが過去H2Hに敗戦あり、BO3での不確実性と開催時刻変更に注意。",
-        "ranking_or_rating": {
-          "text": "EsportsResults独自Dota2順位：Lynx #24 / PuckChamp #88（世界公式順位と混同しない）。同ページ掲載のモデル勝率は68%/32%だが独立検証した推定確率ではない。"
-        },
-        "h2h": {
-          "summary": "公開確認3シリーズ：Team Lynx 2勝1敗、マップ合計4–4。古い大会・ロスター差のため現時点の勝率には直結しない。",
-          "items": [
-            {
-              "date": "2026-09-20",
-              "label": "European Pro League Season 40",
-              "result": "Team Lynx 2–1 PuckChamp"
-            },
-            {
-              "date": "2026-08-07",
-              "label": "大会詳細未確認",
-              "result": "PuckChamp 1–2 Team Lynx"
-            },
-            {
-              "date": "2026-07-20",
-              "label": "大会詳細未確認",
-              "result": "Team Lynx 0–2 PuckChamp"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Team Lynx",
-            "summary": "公開確認の直近6シリーズ：5勝1敗／マップ11勝4敗。EPL Masters Play-InとEPL40混在。",
-            "items": [
-              {
-                "date": "2026-10-13",
-                "label": "Zero Tenacity",
-                "result": "2–1 ○ BO3"
-              },
-              {
-                "date": "2026-10-12",
-                "label": "MENA Warriors",
-                "result": "2–0 ○ BO3"
-              },
-              {
-                "date": "2026-10-12",
-                "label": "CyberHero",
-                "result": "2–1 ○ BO3"
-              },
-              {
-                "date": "2026-09-24",
-                "label": "Yellow Submarine",
-                "result": "1–2 × BO3"
-              },
-              {
-                "date": "2026-09-24",
-                "label": "Two Move",
-                "result": "2–0 ○ BO3"
-              },
-              {
-                "date": "2026-09-23",
-                "label": "Kalmychata",
-                "result": "2–0 ○ BO3"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "PuckChamp",
-            "summary": "公開確認の直近6：3勝3敗。9/9のBO1勝利を含むためBO3限定フォームと同一扱いしない。",
-            "items": [
-              {
-                "date": "2026-10-12",
-                "label": "CyberHero",
-                "result": "0–2 × BO3"
-              },
-              {
-                "date": "2026-10-10",
-                "label": "old blood",
-                "result": "2–1 ○ BO3"
-              },
-              {
-                "date": "2026-10-09",
-                "label": "1nter t1de",
-                "result": "1–0 ○ BO1"
-              },
-              {
-                "date": "2026-09-20",
-                "label": "Balu Team",
-                "result": "2–0 ○ BO3"
-              },
-              {
-                "date": "2026-09-20",
-                "label": "Team Lynx",
-                "result": "1–2 × BO3"
-              },
-              {
-                "date": "2026-09-16",
-                "label": "Zero Tenacity",
-                "result": "1–2 × BO3"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "公開確認の近い時期の共通相手は2組。いずれもLynxに有利。5組未達なので水増ししない。",
-          "items": [
-            {
-              "opponent": "CyberHero",
-              "side_a": {
-                "date": "2026-10-12",
-                "result": "Team Lynx 2–1 ○"
-              },
-              "side_b": {
-                "date": "2026-10-12",
-                "result": "PuckChamp 0–2 ×"
-              },
-              "comparison": "同日相手にLynx勝ち、PuckChamp負け。"
-            },
-            {
-              "opponent": "Zero Tenacity",
-              "side_a": {
-                "date": "2026-10-13",
-                "result": "Team Lynx 2–1 ○"
-              },
-              "side_b": {
-                "date": "2026-09-16",
-                "result": "PuckChamp 1–2 ×"
-              },
-              "comparison": "時期差があるがLynx勝ち、PuckChamp負け。"
-            }
-          ]
-        },
-        "home_away": {
-          "text": "オンラインBO3、ホーム/アウェーなし。日時は当初10/14 16:00 JST予定から19:00 JSTへ延期と掲載。"
-        },
-        "availability": {
-          "text": "ロスターはサイトにより一部の表示が不一致。最終5人・代役有無未確定。EsportsResultsとesport.visionの更新タイミングが異なるため試合時ロスターの確定を待つ。"
-        },
-        "sport_specific": {
-          "text": "Veto/ドラフト前分析。BO3の各ゲームのヒーロー選択やサイドは未発表。過去のBO1とBO3を混ぜて一方の優勢を断定しない。"
-        },
-        "market": {
-          "text": "カジ旅／遊雅堂／bet365掲載確認不能。実購入・参考精算オッズとも未登録。期待値・確定利益の算定なし。"
-        }
-      }
-    },
-    {
-      "rank": 2,
       "match_id": "2026-10-15-furia-betboom-cs2",
       "event_id": "web-2026-10-15-furia-betboom-cs2",
       "matchup": "FURIA vs BETBOOM",
@@ -410,268 +232,453 @@
       }
     },
     {
-      "rank": 3,
-      "match_id": "2026-10-14-kashiwa-port-soccer",
-      "event_id": "web-2026-10-14-kashiwa-port-soccer",
-      "matchup": "柏レイソル vs ポートFC",
-      "favored": "柏レイソル",
-      "selection_label": "柏レイソル",
-      "sport": "サッカー",
-      "competition": "AFCチャンピオンズリーグ・エリート2026/27 東地区リーグステージ第2節",
-      "start_jst": "2026-10-14T19:00:00+09:00",
-      "venue": "柏サッカースタジアム",
-      "format": "90分（1X2・引分は不的中）",
+      "rank": 2,
+      "match_id": "2026-10-15-zero-tenacity-puckchamp-dota2",
+      "event_id": "web-2026-10-15-zero-tenacity-puckchamp-dota2",
+      "matchup": "Zero Tenacity vs PuckChamp",
+      "favored": "Zero Tenacity",
+      "selection_label": "Zero Tenacity",
+      "sport": "Dota 2",
+      "competition": "European Pro League Masters III — Play-In Group A",
+      "start_jst": "2026-10-15T22:00:00+09:00",
+      "venue": "オンライン・欧州サーバー",
+      "format": "BO3 / Online",
       "status": "formal",
-      "gap_grade": "B（検証不足）",
-      "price_grade": "未判定",
-      "market": "match_1x2",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合未決着。購入・精算オッズ未登録のため概算損益は未算出（100USDはRMC追跡用の仮想基準額）。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "カジ旅／遊雅堂／bet365：掲載確認不能。オッズ未確認・推定で補完しない。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-14T12:36:00+09:00",
-      "analysis_reviewed_at": "2026-10-14T12:36:00+09:00",
-      "sources": [
-        "https://www.reysol.co.jp/afc202627/index.php",
-        "https://www.the-afc.com/en/club/afc_champions_league_elite.html/news/preview-kashiwa-reysol-jpn-v-port-fc-tha",
-        "https://www.jleague.jp/en/club/kashiwa/",
-        "https://fathailand.org/match-results/33/229?language=en"
-      ],
-      "conclusion": "①柏の直近6公式戦は90分4勝1分1敗、得点19／失点11（延長を除くとG大阪3-3、従って4-1-1）。ポートFCの全大会直近6件は試合識別まで検証できず、双方比較は部分的。②柏はJリーグ上位でホームだが、ポートFCはタイ1部前季2位・リーグカップ王者、ACLE初戦は神戸に1–2と接戦。現時点で①②一致認定にはデータ不足。",
-      "risk": "ポートFCの直近6件未検証、双方ACLE初戦1–2敗戦。サッカーは引分負けの通常勝者市場。",
-      "analysis_detail": {
-        "summary": "①柏の直近6公式戦は90分4勝1分1敗、得点19／失点11（延長を除くとG大阪3-3、従って4-1-1）。ポートFCの全大会直近6件は試合識別まで検証できず、双方比較は部分的。②柏はJリーグ上位でホームだが、ポートFCはタイ1部前季2位・リーグカップ王者、ACLE初戦は神戸に1–2と接戦。現時点で①②一致認定にはデータ不足。",
-        "ranking_or_rating": {
-          "text": "柏：2025J1 2位でACL Elite出場（柏クラブ公式）。ACLE初戦は全北現代にアウェー1–2。ポートFC：2025/26タイ1部準優勝・タイリーグカップ優勝（柏公式紹介）。両チーム今大会0勝1敗、得失点とも1–2。リーグ差を勝率に換算しない。"
-        },
-        "h2h": {
-          "summary": "両者の直接対決は調査した公開情報で確認できず。初対戦とは断定しない。",
-          "items": []
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "柏レイソル",
-            "summary": "Jリーグ公式の直近6戦。90分基準4勝1分1敗（ルヴァン延長勝利を90分引分と区別）。90分得点19・失点11。",
-            "items": [
-              {
-                "date": "2026-10-09",
-                "label": "ヴィッセル神戸／H・J1",
-                "result": "4–2 ○"
-              },
-              {
-                "date": "2026-10-03",
-                "label": "ガンバ大阪／H・ルヴァン杯",
-                "result": "90分3–3 △／延長込み5–4 ○"
-              },
-              {
-                "date": "2026-09-23",
-                "label": "FC今治／H・天皇杯",
-                "result": "4–0 ○"
-              },
-              {
-                "date": "2026-09-20",
-                "label": "FC町田ゼルビア／A・J1",
-                "result": "4–2 ○"
-              },
-              {
-                "date": "2026-09-16",
-                "label": "全北現代／A・ACLE",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "2026-09-11",
-                "label": "京都サンガ／H・J1",
-                "result": "3–2 ○"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "ポートFC",
-            "summary": "全大会の直近6試合を同一チームの公式戦として照合できず、6件未達。検証済みの参考試合だけ掲載、直近6勝率は算定しない。",
-            "items": [
-              {
-                "date": "2026-10-07",
-                "label": "Kanchanaburi Power／A・タイ国内杯（タイ協会結果）",
-                "result": "3–0 ○"
-              },
-              {
-                "date": "2026-09-16頃",
-                "label": "ヴィッセル神戸／H・ACLE初戦",
-                "result": "1–2 ×"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "共通相手1組（ヴィッセル神戸）。柏の勝利はリーグ、ポートの敗戦はACLEで大会・相手ローテーションの差があり、限定参考。",
-          "items": [
-            {
-              "opponent": "ヴィッセル神戸",
-              "side_a": {
-                "date": "2026-10-09",
-                "result": "柏 4–2 ○（J1・H）"
-              },
-              "side_b": {
-                "date": "ACLE第1節",
-                "result": "ポートFC 1–2 ×（ACLE・H）"
-              },
-              "comparison": "柏側の結果は優位。ただし大会・時期・メンバー条件が異なる。"
-            }
-          ]
-        },
-        "home_away": {
-          "text": "柏のホーム、柏サッカースタジアム、日本時間10/14(水)19:00（柏公式）。"
-        },
-        "availability": {
-          "text": "柏・ポートFC双方の当日スタメン、欠場、移動疲労の定量資料は未確認。ポートFC前節では柏公式がメンデス、アルサブヒ、志村謄を重要選手として紹介。"
-        },
-        "sport_specific": {
-          "text": "サッカーは90分勝者市場（引分は不的中、DNBではない）。柏は直近守備で神戸に2失点、G大阪に90分3失点、町田に2失点。ポートFCは神戸に1–2と競争力あり、『確実な格差』認定不可。"
-        },
-        "market": {
-          "text": "カジ旅／遊雅堂／bet365の掲載・実勢オッズを確認できず。勝ち／引分の区別を明確化。"
-        }
-      }
-    },
-    {
-      "rank": 4,
-      "match_id": "2026-10-14-astralis-sashi-cs2",
-      "event_id": "web-2026-10-14-astralis-sashi-cs2",
-      "matchup": "Astralis vs Sashi",
-      "favored": "Astralis",
-      "selection_label": "Astralis",
-      "sport": "CS2",
-      "competition": "Stake Pulse Beat III・Group C opening match",
-      "start_jst": "2026-10-14T21:00:00+09:00",
-      "venue": "LAN（詳細会場未確認）",
-      "format": "BO3 / LAN",
-      "status": "formal",
-      "gap_grade": "A（参考）",
+      "gap_grade": "A−候補（暫定）",
       "price_grade": "未判定",
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "試合未決着。購入・精算オッズ未登録のため概算損益は未算出（100USDはRMC追跡用の仮想基準額）。",
+      "profit_status": "試合未決着。100USDは仮想追跡、実購入ではない。オッズ未登録で概算収支未計上。",
       "odds": {
         "min": null,
         "max": null,
         "required_win_rate_pct": null,
-        "book_examples": "カジ旅／遊雅堂／bet365：掲載確認不能。オッズ未確認・推定で補完しない。"
+        "book_examples": "カジ旅／遊雅堂／bet365掲載確認不能。価格差は未判定。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-14T12:36:00+09:00",
-      "analysis_reviewed_at": "2026-10-14T12:36:00+09:00",
+      "added_at": "2026-10-14T22:48:00+09:00",
+      "analysis_reviewed_at": "2026-10-14T22:48:00+09:00",
       "sources": [
-        "https://www.hltv.org/matches/2399134/astralis-vs-sashi-stake-pulse-beat-iii"
+        "https://tips.gg/matches/dota2/15-10-2026/zero-tenacity-vs-puckchamp/02-00/",
+        "https://bo3.gg/dota2/teams/zero-tenacity-dota/matches",
+        "https://bo3.gg/dota2/teams/puckchamp/matches",
+        "https://hawk.live/dota-2/matches/epl-masters-i/zero-tenacity-vs-puckchamp",
+        "https://liquipedia.net/dota2/EPL/Masters/3/Play-In"
       ],
-      "conclusion": "①HLTVに直接対決シリーズ掲載なし。直近表示6はAstralis 5勝1敗、Sashi 1勝5敗（後者は単一マップ形式が5件）。②HLTV#15対Sashi未ランク・VRS#10対#90はAstralis優勢。直近比較と現在戦力は概ね同方向だがBO3におけるSashi成績の適合性・ロスター差に注意。",
-      "risk": "Sashi近況には1マップ戦多数、BO3系列比較に注意。両者新コアでサンプル不足。Veto未発表。",
+      "conclusion": "①旧対戦3シリーズはZero Tenacity 3勝0敗（マップ6-1）。直近10シリーズ／試合はZero 5勝5敗、PuckChamp 3勝7敗（BO1混在）。共通相手3組はZero有利が一部ある。②Tips.gg独自順位ではZero #119に対しPuckChamp #41で順位の方向が逆。①と②は完全一致しないためA−はユーザー指定の候補表示であり高信頼確定ではない。",
+      "risk": "独自ランキングはPuckChampが上。H2Hの旧ロスター・直近BO1混入・相手の強さに注意。",
       "analysis_detail": {
-        "summary": "①HLTVに直接対決シリーズ掲載なし。直近表示6はAstralis 5勝1敗、Sashi 1勝5敗（後者は単一マップ形式が5件）。②HLTV#15対Sashi未ランク・VRS#10対#90はAstralis優勢。直近比較と現在戦力は概ね同方向だがBO3におけるSashi成績の適合性・ロスター差に注意。",
+        "summary": "①旧対戦3シリーズはZero Tenacity 3勝0敗（マップ6-1）。直近10シリーズ／試合はZero 5勝5敗、PuckChamp 3勝7敗（BO1混在）。共通相手3組はZero有利が一部ある。②Tips.gg独自順位ではZero #119に対しPuckChamp #41で順位の方向が逆。①と②は完全一致しないためA−はユーザー指定の候補表示であり高信頼確定ではない。",
         "ranking_or_rating": {
-          "text": "HLTV試合ページ（10/14確認）：Astralis HLTV #15・VRS #10。Sashi HLTV Unranked・VRS #90。VRS順位差80。"
+          "text": "Tips.gg 2026-10-14閲覧：Zero Tenacity独自順位#119／PuckChamp #41、直近30日勝率約56%／29%。同サイト独自ランキングで公式世界順位ではない。ランキングはPuckChamp優位、近況はZero優位。"
         },
         "h2h": {
-          "summary": "HLTV試合ページで直接対決のシリーズ記録を確認できず。H2H 0件確認、初対戦とは断定しない。",
-          "items": []
+          "summary": "公開確認した過去3シリーズすべてZero Tenacity勝ち（3-0、マップ6-1）。旧ロスター差に留意。",
+          "items": [
+            {
+              "date": "2026-09-16",
+              "label": "European Pro League Season 40",
+              "result": "Zero Tenacity 2–1 PuckChamp"
+            },
+            {
+              "date": "2026-08-31",
+              "label": "EPL Masters II",
+              "result": "Zero Tenacity 2–0 PuckChamp"
+            },
+            {
+              "date": "2026-07-30",
+              "label": "EPL Masters I",
+              "result": "Zero Tenacity 2–0 PuckChamp"
+            }
+          ]
         },
         "recent_form": {
           "side_a": {
-            "label": "Astralis",
-            "summary": "HLTV掲載直近6シリーズ5勝1敗、マップ12勝6敗（BO5含む）。",
+            "label": "Zero Tenacity",
+            "summary": "10件確認、5勝5敗。うちBO1の勝利2件。10/14対MENA Warriors戦は結果未確認のためここに含めない。",
             "items": [
               {
-                "date": "約1週間前",
-                "label": "Nemiga",
-                "result": "3–1 ○ BO5"
+                "date": "2026-10-13",
+                "label": "Team Lynx／EPL Masters III",
+                "result": "1–2 × BO3"
               },
               {
-                "date": "約1週間前",
-                "label": "Luminosity",
-                "result": "2–1 ○ BO3"
+                "date": "2026-10-09",
+                "label": "The Warriors／DreamLeague予選",
+                "result": "1–2 × BO3"
               },
               {
-                "date": "約1週間前",
-                "label": "fnatic",
+                "date": "2026-10-09",
+                "label": "Nemiga Gaming／DreamLeague予選",
+                "result": "1–0 ○ BO1"
+              },
+              {
+                "date": "2026-10-09",
+                "label": "Leto／DreamLeague予選",
+                "result": "1–0 ○ BO1"
+              },
+              {
+                "date": "2026-09-22",
+                "label": "Team Lynx／EPL40",
+                "result": "1–2 × BO3"
+              },
+              {
+                "date": "2026-09-21",
+                "label": "Two Move／EPL40",
+                "result": "0–2 × BO3"
+              },
+              {
+                "date": "2026-09-17",
+                "label": "BALU Team／EPL40",
                 "result": "2–0 ○ BO3"
               },
               {
-                "date": "約1週間前",
-                "label": "BIG",
+                "date": "2026-09-16",
+                "label": "PuckChamp／EPL40",
                 "result": "2–1 ○ BO3"
               },
               {
-                "date": "約2週間前",
-                "label": "FaZe",
-                "result": "2–1 ○ BO3"
-              },
-              {
-                "date": "約2週間前",
-                "label": "Alliance",
+                "date": "2026-09-15",
+                "label": "Nemiga Gaming／EPL40",
                 "result": "1–2 × BO3"
+              },
+              {
+                "date": "2026-09-14",
+                "label": "Team Lynx／EPL40",
+                "result": "2–1 ○ BO3"
               }
             ]
           },
           "side_b": {
-            "label": "Sashi",
-            "summary": "HLTV掲載直近6件：1勝5敗。ただし単一マップ形式5件＋BO3が1件で単純比較不可。",
+            "label": "PuckChamp",
+            "summary": "10件確認、3勝7敗。10/14 Team Lynxに敗戦（マップスコア未確認）を含む。10/9の1マップ勝利を含むのでBO3フォームと混同しない。",
             "items": [
               {
-                "date": "約2週間前",
-                "label": "BC.Game",
-                "result": "11–13 × 1MAP（Cache）"
+                "date": "2026-10-14",
+                "label": "Team Lynx／EPL Masters III",
+                "result": "敗戦 ×（マップスコア未確認）"
               },
               {
-                "date": "約2週間前",
-                "label": "Voca",
-                "result": "9–13 × 1MAP（Nuke）"
+                "date": "2026-10-12",
+                "label": "CyberHero／EPL Masters III",
+                "result": "0–2 × BO3"
               },
               {
-                "date": "約2週間前",
-                "label": "Glitch",
-                "result": "8–13 × 1MAP（Inferno）"
+                "date": "2026-10-10",
+                "label": "old blood／DreamLeague予選",
+                "result": "2–1 ○ BO3"
               },
               {
-                "date": "約2週間前",
-                "label": "BASEMENT BOYS",
-                "result": "13–9 ○ 1MAP（Cache）"
+                "date": "2026-10-09",
+                "label": "1nter t1de／DreamLeague予選",
+                "result": "1–0 ○ BO1"
               },
               {
-                "date": "約2週間前",
-                "label": "Prestige",
-                "result": "7–13 × 1MAP（Ancient）"
+                "date": "2026-09-20",
+                "label": "BALU Team／EPL40",
+                "result": "2–0 ○ BO3"
               },
               {
-                "date": "約2週間前",
-                "label": "Nemesis",
+                "date": "2026-09-20",
+                "label": "Team Lynx／EPL40",
                 "result": "1–2 × BO3"
+              },
+              {
+                "date": "2026-09-16",
+                "label": "Zero Tenacity／EPL40",
+                "result": "1–2 × BO3"
+              },
+              {
+                "date": "2026-09-15",
+                "label": "Team Synapse／EPL40",
+                "result": "0–2 × BO3"
+              },
+              {
+                "date": "2026-09-12",
+                "label": "Nemiga Gaming／EPL40",
+                "result": "0–2 × BO3"
+              },
+              {
+                "date": "2026-09-05",
+                "label": "Pipsqueak+4／EPL Masters II",
+                "result": "0–2 × BO3"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "表示された直近試合6件同士で同名の共通対戦相手を確認できず。0件（5件未達）。",
-          "items": []
+          "summary": "公開確認の共通対戦相手3組。Team Lynxは両者とも敗戦（PuckChampスコア未確認）、NemigaはZero勝利、BALUは両者勝利。",
+          "items": [
+            {
+              "opponent": "Team Lynx",
+              "side_a": {
+                "date": "2026-10-13",
+                "result": "Zero 1–2 ×"
+              },
+              "side_b": {
+                "date": "2026-10-14",
+                "result": "PuckChamp ×（マップスコア未確認）"
+              },
+              "comparison": "双方敗戦。PuckChampの最終マップスコア未確認につき、マップ差で優劣は決めない。"
+            },
+            {
+              "opponent": "Nemiga Gaming",
+              "side_a": {
+                "date": "2026-10-09",
+                "result": "Zero 1–0 ○（BO1）"
+              },
+              "side_b": {
+                "date": "2026-09-12",
+                "result": "PuckChamp 0–2 ×（BO3）"
+              },
+              "comparison": "Zero優勢方向だがBO1とBO3が異なる。"
+            },
+            {
+              "opponent": "BALU Team",
+              "side_a": {
+                "date": "2026-09-17",
+                "result": "Zero 2–0 ○"
+              },
+              "side_b": {
+                "date": "2026-09-20",
+                "result": "PuckChamp 2–0 ○"
+              },
+              "comparison": "同一シリーズ勝敗で差なし。"
+            }
+          ]
         },
         "home_away": {
-          "text": "LAN BO3、中立開催、10月14日12:00 UTC＝21:00 JST。"
+          "text": "2026-10-15 22:00 JST。EPL Masters III Play-In Group A、BO3 Online。Tips.ggおよびbo3.ggの掲載13:00 UTCをJSTに変換。"
         },
         "availability": {
-          "text": "HLTV表示ロスター：Astralis cmtry/phzy/Staehr/ryu/siuhy、Sashi TjP/Hatz/Anlelele/acoR/Zyphon。両者とも新加入メンバーのコア共闘サンプルが少ないとHLTV分析センターが警告。"
+          "text": "Zero Tenacity／PuckChampの出場5名は過去H2Hと同一保証なし。試合当日ロスターの公式確定は未確認。"
         },
         "sport_specific": {
-          "text": "Veto前。HLTV過去3か月マップ表示例：Astralis Cache85%/13、Dust2 17%/6、Nuke36%/11、Ancient72%/18。Sashi Cache62%/16、Dust2 36%/11、Nuke53%/17、Anubis80%/5。マップごとに逆転余地あり。Map1/2/3未確定、推定で埋めない。"
+          "text": "Patch 7.41f、Draft前分析。BO3でヒーローピック、レーン対面、サイドの確定情報なし。シリーズの3-0 H2Hだけで確勝とはできない。"
         },
         "market": {
-          "text": "カジ旅／遊雅堂／bet365掲載確認不能。オッズ・参考精算・実購入未登録。"
+          "text": "カジ旅・遊雅堂・bet365の掲載確認不能。購入オッズ未確認、精算オッズ未登録。"
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "match_id": "2026-10-15-heroic-envy-cs2",
+      "event_id": "web-2026-10-15-heroic-envy-cs2",
+      "matchup": "HEROIC vs Envy",
+      "favored": "HEROIC",
+      "selection_label": "HEROIC",
+      "sport": "CS2",
+      "competition": "Stake Pulse Beat III — Group D opening match",
+      "start_jst": "2026-10-15T21:00:00+09:00",
+      "venue": "Stockholm, Sweden",
+      "format": "BO3 / LAN",
+      "status": "formal",
+      "gap_grade": "A−候補（暫定）",
+      "price_grade": "未判定",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合未決着。100USDは仮想追跡、実購入ではない。オッズ未登録で概算収支未計上。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "required_win_rate_pct": null,
+        "book_examples": "カジ旅／遊雅堂／bet365掲載確認不能。価格差は未判定。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-14T22:48:00+09:00",
+      "analysis_reviewed_at": "2026-10-14T22:48:00+09:00",
+      "sources": [
+        "https://www.hltv.org/matches/2399137/heroic-vs-envy-stake-pulse-beat-iii",
+        "https://www.hltv.org/team/4914/3dmax",
+        "https://www.hltv.org/team/5991/envy",
+        "https://www.hltv.org/events/9223/stake-pulse-beat-iii"
+      ],
+      "conclusion": "①HEROICは直近10シリーズ8勝2敗、旧3DMAXの現Envyコアは直近10試合6勝4敗（1MAPとBO5混在）。現5人コア同士の旧3DMAX名義H2Hは2026-07-15と09-02の2シリーズ、ともにHEROIC 2-1勝利。②現在HLTVはHEROIC #30／Envy #20でEnvy優位だがVRSはHEROIC #21／Envy #27でHEROIC優位。したがって①と②は完全には一致しない。A−は指定の暫定候補。",
+      "risk": "HLTV世界順位はEnvyのほうが上。Envyは3DMAXの現行五人コアそのまま。Map選択次第で逆転リスク、Veto前。",
+      "analysis_detail": {
+        "summary": "①HEROICは直近10シリーズ8勝2敗、旧3DMAXの現Envyコアは直近10試合6勝4敗（1MAPとBO5混在）。現5人コア同士の旧3DMAX名義H2Hは2026-07-15と09-02の2シリーズ、ともにHEROIC 2-1勝利。②現在HLTVはHEROIC #30／Envy #20でEnvy優位だがVRSはHEROIC #21／Envy #27でHEROIC優位。したがって①と②は完全には一致しない。A−は指定の暫定候補。",
+        "ranking_or_rating": {
+          "text": "HLTV対戦ページ：HEROIC HLTV#30・VRS#21（1494pt）、Envy HLTV#20・VRS#27（1439pt）。HLTV順位はEnvy優位、VRS順位はHEROIC優位。世界順位差だけで大格差とは認定しない。"
+        },
+        "h2h": {
+          "summary": "HEROIC対『Envy名義』の現コア直接対決は0件（新ブランド移籍後初戦）。旧3DMAXの現Envy五人コアを遡ると7/15、9/2の2シリーズともHEROIC 2–1勝ち（シリーズ2–0、マップ4–2）。2/16のHEROIC 2–0 3DMAXは当時と現ロスター差があるため参考度低下として別掲。",
+          "items": [
+            {
+              "date": "2026-09-02",
+              "label": "IEM Beijing 2026 Closed Qualifier／旧3DMAX現在コア",
+              "result": "HEROIC 2–1 3DMAX（Cache 8–13／Dust2 13–5／Inferno 13–5）"
+            },
+            {
+              "date": "2026-07-15",
+              "label": "Stake Ranked Episode 3／旧3DMAX現在コア",
+              "result": "HEROIC 2–1 3DMAX（Cache 8–13／Inferno 13–8／Nuke 13–8）"
+            },
+            {
+              "date": "2026-02-16",
+              "label": "PGL Cluj-Napoca 2026／旧コア参考度低下",
+              "result": "HEROIC 2–0 3DMAX（Inferno 13–10／Nuke 13–5）"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "HEROIC",
+            "summary": "HLTV対戦ページの直近10シリーズ8勝2敗、5連勝中。",
+            "items": [
+              {
+                "date": "2026-09-26",
+                "label": "100 Thieves",
+                "result": "2–1 ○ BO3"
+              },
+              {
+                "date": "2026-09-26",
+                "label": "Sangal",
+                "result": "2–1 ○ BO3"
+              },
+              {
+                "date": "2026-09-25",
+                "label": "fnatic",
+                "result": "2–1 ○ BO3"
+              },
+              {
+                "date": "2026-09-22",
+                "label": "BBL",
+                "result": "2–0 ○ BO3"
+              },
+              {
+                "date": "2026-09-22",
+                "label": "Johnny Speeds",
+                "result": "2–0 ○ BO3"
+              },
+              {
+                "date": "2026-09中旬",
+                "label": "Virtus.pro",
+                "result": "1–2 × BO3"
+              },
+              {
+                "date": "2026-09中旬",
+                "label": "1win",
+                "result": "2–1 ○ BO3"
+              },
+              {
+                "date": "2026-09中旬",
+                "label": "K27",
+                "result": "2–1 ○ BO3"
+              },
+              {
+                "date": "2026-09上旬",
+                "label": "BESTIA",
+                "result": "2–0 ○ BO3"
+              },
+              {
+                "date": "2026-09上旬",
+                "label": "1win",
+                "result": "1–2 × BO3"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Envy（旧3DMAX現5人コア）",
+            "summary": "HLTV『Team core』比較10件、6勝4敗。BO5は1件、1MAP決着は4件。Envy名義はこの時期まだ公式戦がないため、3DMAX名義の同一コアに遡ったものであることを明示。",
+            "items": [
+              {
+                "date": "2026-09末",
+                "label": "GamerLegion",
+                "result": "1–2 × BO3"
+              },
+              {
+                "date": "2026-09末",
+                "label": "Alliance",
+                "result": "2–0 ○ BO3"
+              },
+              {
+                "date": "2026-09末",
+                "label": "Ninjas in Pyjamas",
+                "result": "0–2 × BO3"
+              },
+              {
+                "date": "2026-09末",
+                "label": "Luminosity",
+                "result": "3–2 ○ BO5"
+              },
+              {
+                "date": "2026-09末",
+                "label": "Inner Circle",
+                "result": "2–1 ○ BO3"
+              },
+              {
+                "date": "2026-09末",
+                "label": "M80",
+                "result": "2–1 ○ BO3"
+              },
+              {
+                "date": "2026-09中旬",
+                "label": "INFINITE",
+                "result": "13–7 ○ Dust2 1MAP"
+              },
+              {
+                "date": "2026-09中旬",
+                "label": "Liquid",
+                "result": "6–13 × Nuke 1MAP"
+              },
+              {
+                "date": "2026-09中旬",
+                "label": "BBL",
+                "result": "16–14 ○ Ancient 1MAP"
+              },
+              {
+                "date": "2026-09中旬",
+                "label": "Inner Circle",
+                "result": "9–13 × Nuke 1MAP"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "両チーム現行コアの公開近況で比較可能な相手2組（100 Thieves／NiP）に限定して掲載。古い年度・3DMAXからの5人移籍を明記。",
+          "items": [
+            {
+              "opponent": "100 Thieves",
+              "side_a": {
+                "date": "2026-09-26",
+                "result": "HEROIC 2–1 ○"
+              },
+              "side_b": {
+                "date": "2026-09上旬",
+                "result": "旧3DMAX現Envyコア 0–2 ×"
+              },
+              "comparison": "HEROIC有利。"
+            },
+            {
+              "opponent": "Ninjas in Pyjamas",
+              "side_a": {
+                "date": "2026-07末",
+                "result": "HEROIC 1–2 ×"
+              },
+              "side_b": {
+                "date": "2026-09末",
+                "result": "旧3DMAX現Envyコア 0–2 ×"
+              },
+              "comparison": "両敗戦、時期違い。"
+            }
+          ]
+        },
+        "home_away": {
+          "text": "HLTV掲載2026-10-15 12:00 UTC＝21:00 JST。Stake Pulse Beat III、Group D opening、BO3 LAN（ストックホルム）。"
+        },
+        "availability": {
+          "text": "HEROIC：Brollan／MartinezSa／nilo／Chr1zN／susp。Envy：Graviti／Kursy／Maka／misutaaa／Lucky。HLTV移籍履歴によると2026-09-29に旧3DMAXの5人全員がEnvyへ移籍。HEROIC監督Snappiの就任は直近。最終登録・突発欠場未確認。"
+        },
+        "sport_specific": {
+          "text": "Veto前分析。HLTVの『現コア・過去3か月』：HEROIC Cache55%/11、Dust2 65%/17、Mirage75%/12、Inferno79%/14、Nuke70%/10、Ancient67%/15。Envy Cache56%/16、Dust2 77%/13、Mirage試合数0、Inferno50%/14、Nuke33%/12、Ancient50%/14。Veto未発表。パターンはHEROICに全面優位ではなくDust2ではEnvyが上。"
+        },
+        "market": {
+          "text": "HLTV掲載の複数業者参考HEROIC 1.45–1.48／Envy 2.50–2.61付近。これらは購入オッズではなく、カジ旅・遊雅堂・bet365での掲載確認はできていない。独立推定勝率とEVは算定せず。"
         }
       }
     }
@@ -690,16 +697,15 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "Astralis（HLTV/VRS差）",
-      "Team Lynx（直近成績）",
-      "FURIA（H2H）"
+      "Team Lynx・柏・Astralisは10/14終了として履歴へ",
+      "残るFURIA＋新規Zero Tenacity／HEROIC"
     ],
     "price_adjusted_top": [],
-    "caution": "4試合ともユーザー指定の正式追跡。購入オッズ未確認で価格優位・EVは未判定。カジ旅／遊雅堂／bet365は掲載確認不能。各100USDは仮想参考額。",
-    "previous_note": "直前の未確定2試合を新たに○精算：Flensburg +1USD、ガンバDNB +53USD＝今回概算+54USD（すべて参考価格）。履歴は保持し未確定一覧から除外。"
+    "caution": "Zero TenacityとHEROICはA−候補（ユーザー指定）だが①実績と②ランキングに食い違い。両者とも購入オッズ未確認。既終了3件の参考概算純損益は+$30（各仮想100USD）。",
+    "previous_note": "10/14の①Lynx（勝者のみ確認）+5、③柏（5-1）+15、④Astralis（2-0）+10＝+$30。すべてユーザー参考オッズでの概算で、実購入・実利益なし。"
   },
   "previous_analysis": {
-    "generated_at": "2026-10-14T12:36:00+09:00",
+    "generated_at": "2026-10-14T22:48:00+09:00",
     "window": {
       "from": "2026-09-30T17:39:31+09:00",
       "to": "2026-10-01T09:30:00+09:00",
@@ -707,6 +713,484 @@
       "note": "9/30 JSTの残り時間を主対象とし、欧州9/30開催でJST日付またぎになる深夜カードも併記"
     },
     "candidates": [
+      {
+        "rank": 1,
+        "match_id": "2026-10-14-lynx-puckchamp-dota2",
+        "event_id": "web-2026-10-14-lynx-puckchamp-dota2",
+        "matchup": "Team Lynx vs PuckChamp",
+        "favored": "Team Lynx",
+        "selection_label": "Team Lynx",
+        "sport": "Dota 2",
+        "competition": "EPL Masters III: Play-In Season 3・Group A",
+        "start_jst": "2026-10-14T19:00:00+09:00",
+        "venue": "オンライン大会（開催地未確認）",
+        "format": "BO3 / Online",
+        "status": "formal",
+        "gap_grade": "A-（参考）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": 5,
+        "profit_status": "仮想$100 × 参考1.05倍：概算純利益 +$5。実購入・実利益ではない。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "カジ旅／遊雅堂／bet365：掲載確認不能。オッズ未確認・推定で補完しない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-14T12:36:00+09:00",
+        "analysis_reviewed_at": "2026-10-14T12:36:00+09:00",
+        "sources": [
+          "https://esportsresults.com/match/dota2/1743567/team-lynx-vs-puckchamp",
+          "https://esport.vision/team/team-lynx",
+          "https://esport.vision/team/puckchamp"
+        ],
+        "conclusion": "①公開H2H3シリーズはTeam Lynx 2勝1敗。両者の直近6はLynx 5勝1敗、PuckChamp 3勝3敗（PuckChampのBO1を1件含む）。②大会別独自順位の差・直近の共通相手2組もLynx方向。①②同方向だが過去H2Hに敗戦あり、BO3での不確実性と開催時刻変更に注意。",
+        "risk": "開始時刻が16:00→19:00 JSTに変更と掲載。試合前再確認。ロスター差・BO1の混在・参考価格なし。　事後の最終マップスコアは独立確認できず。勝者のみユーザー確認。",
+        "analysis_detail": {
+          "summary": "①公開H2H3シリーズはTeam Lynx 2勝1敗。両者の直近6はLynx 5勝1敗、PuckChamp 3勝3敗（PuckChampのBO1を1件含む）。②大会別独自順位の差・直近の共通相手2組もLynx方向。①②同方向だが過去H2Hに敗戦あり、BO3での不確実性と開催時刻変更に注意。",
+          "ranking_or_rating": {
+            "text": "EsportsResults独自Dota2順位：Lynx #24 / PuckChamp #88（世界公式順位と混同しない）。同ページ掲載のモデル勝率は68%/32%だが独立検証した推定確率ではない。"
+          },
+          "h2h": {
+            "summary": "公開確認3シリーズ：Team Lynx 2勝1敗、マップ合計4–4。古い大会・ロスター差のため現時点の勝率には直結しない。",
+            "items": [
+              {
+                "date": "2026-09-20",
+                "label": "European Pro League Season 40",
+                "result": "Team Lynx 2–1 PuckChamp"
+              },
+              {
+                "date": "2026-08-07",
+                "label": "大会詳細未確認",
+                "result": "PuckChamp 1–2 Team Lynx"
+              },
+              {
+                "date": "2026-07-20",
+                "label": "大会詳細未確認",
+                "result": "Team Lynx 0–2 PuckChamp"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Team Lynx",
+              "summary": "公開確認の直近6シリーズ：5勝1敗／マップ11勝4敗。EPL Masters Play-InとEPL40混在。",
+              "items": [
+                {
+                  "date": "2026-10-13",
+                  "label": "Zero Tenacity",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-10-12",
+                  "label": "MENA Warriors",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "2026-10-12",
+                  "label": "CyberHero",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-09-24",
+                  "label": "Yellow Submarine",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "2026-09-24",
+                  "label": "Two Move",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "2026-09-23",
+                  "label": "Kalmychata",
+                  "result": "2–0 ○ BO3"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "PuckChamp",
+              "summary": "公開確認の直近6：3勝3敗。9/9のBO1勝利を含むためBO3限定フォームと同一扱いしない。",
+              "items": [
+                {
+                  "date": "2026-10-12",
+                  "label": "CyberHero",
+                  "result": "0–2 × BO3"
+                },
+                {
+                  "date": "2026-10-10",
+                  "label": "old blood",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-10-09",
+                  "label": "1nter t1de",
+                  "result": "1–0 ○ BO1"
+                },
+                {
+                  "date": "2026-09-20",
+                  "label": "Balu Team",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "2026-09-20",
+                  "label": "Team Lynx",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "2026-09-16",
+                  "label": "Zero Tenacity",
+                  "result": "1–2 × BO3"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "公開確認の近い時期の共通相手は2組。いずれもLynxに有利。5組未達なので水増ししない。",
+            "items": [
+              {
+                "opponent": "CyberHero",
+                "side_a": {
+                  "date": "2026-10-12",
+                  "result": "Team Lynx 2–1 ○"
+                },
+                "side_b": {
+                  "date": "2026-10-12",
+                  "result": "PuckChamp 0–2 ×"
+                },
+                "comparison": "同日相手にLynx勝ち、PuckChamp負け。"
+              },
+              {
+                "opponent": "Zero Tenacity",
+                "side_a": {
+                  "date": "2026-10-13",
+                  "result": "Team Lynx 2–1 ○"
+                },
+                "side_b": {
+                  "date": "2026-09-16",
+                  "result": "PuckChamp 1–2 ×"
+                },
+                "comparison": "時期差があるがLynx勝ち、PuckChamp負け。"
+              }
+            ]
+          },
+          "home_away": {
+            "text": "オンラインBO3、ホーム/アウェーなし。日時は当初10/14 16:00 JST予定から19:00 JSTへ延期と掲載。"
+          },
+          "availability": {
+            "text": "ロスターはサイトにより一部の表示が不一致。最終5人・代役有無未確定。EsportsResultsとesport.visionの更新タイミングが異なるため試合時ロスターの確定を待つ。"
+          },
+          "sport_specific": {
+            "text": "Veto/ドラフト前分析。BO3の各ゲームのヒーロー選択やサイドは未発表。過去のBO1とBO3を混ぜて一方の優勢を断定しない。"
+          },
+          "market": {
+            "text": "カジ旅／遊雅堂／bet365掲載確認不能。実購入・参考精算オッズとも未登録。期待値・確定利益の算定なし。"
+          },
+          "post_match": {
+            "text": "ユーザー報告によりTeam Lynx勝利を確認。2–0の個別試合結果は独立確認できないため記録しない。参考1.05倍、仮想100USDで概算+5USD。実購入の利益とは異なる。"
+          }
+        },
+        "result_status": "final",
+        "result": "Team Lynx勝利（マップスコア未確認）",
+        "result_winner": "Team Lynx",
+        "favored_result": "win",
+        "result_verified_at": "2026-10-14T22:48:00+09:00",
+        "result_source": null,
+        "result_sources": []
+      },
+      {
+        "rank": 3,
+        "match_id": "2026-10-14-kashiwa-port-soccer",
+        "event_id": "web-2026-10-14-kashiwa-port-soccer",
+        "matchup": "柏レイソル vs ポートFC",
+        "favored": "柏レイソル",
+        "selection_label": "柏レイソル",
+        "sport": "サッカー",
+        "competition": "AFCチャンピオンズリーグ・エリート2026/27 東地区リーグステージ第2節",
+        "start_jst": "2026-10-14T19:00:00+09:00",
+        "venue": "柏サッカースタジアム",
+        "format": "90分（1X2・引分は不的中）",
+        "status": "formal",
+        "gap_grade": "B（検証不足）",
+        "price_grade": "未判定",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": 15,
+        "profit_status": "仮想$100 × 参考1.15倍：概算純利益 +$15。実購入・実利益ではない。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "カジ旅／遊雅堂／bet365：掲載確認不能。オッズ未確認・推定で補完しない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-14T12:36:00+09:00",
+        "analysis_reviewed_at": "2026-10-14T12:36:00+09:00",
+        "sources": [
+          "https://www.reysol.co.jp/afc202627/index.php",
+          "https://www.the-afc.com/en/club/afc_champions_league_elite.html/news/preview-kashiwa-reysol-jpn-v-port-fc-tha",
+          "https://www.jleague.jp/en/club/kashiwa/",
+          "https://fathailand.org/match-results/33/229?language=en"
+        ],
+        "conclusion": "①柏の直近6公式戦は90分4勝1分1敗、得点19／失点11（延長を除くとG大阪3-3、従って4-1-1）。ポートFCの全大会直近6件は試合識別まで検証できず、双方比較は部分的。②柏はJリーグ上位でホームだが、ポートFCはタイ1部前季2位・リーグカップ王者、ACLE初戦は神戸に1–2と接戦。現時点で①②一致認定にはデータ不足。",
+        "risk": "ポートFCの直近6件未検証、双方ACLE初戦1–2敗戦。サッカーは引分負けの通常勝者市場。",
+        "analysis_detail": {
+          "summary": "①柏の直近6公式戦は90分4勝1分1敗、得点19／失点11（延長を除くとG大阪3-3、従って4-1-1）。ポートFCの全大会直近6件は試合識別まで検証できず、双方比較は部分的。②柏はJリーグ上位でホームだが、ポートFCはタイ1部前季2位・リーグカップ王者、ACLE初戦は神戸に1–2と接戦。現時点で①②一致認定にはデータ不足。",
+          "ranking_or_rating": {
+            "text": "柏：2025J1 2位でACL Elite出場（柏クラブ公式）。ACLE初戦は全北現代にアウェー1–2。ポートFC：2025/26タイ1部準優勝・タイリーグカップ優勝（柏公式紹介）。両チーム今大会0勝1敗、得失点とも1–2。リーグ差を勝率に換算しない。"
+          },
+          "h2h": {
+            "summary": "両者の直接対決は調査した公開情報で確認できず。初対戦とは断定しない。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "柏レイソル",
+              "summary": "Jリーグ公式の直近6戦。90分基準4勝1分1敗（ルヴァン延長勝利を90分引分と区別）。90分得点19・失点11。",
+              "items": [
+                {
+                  "date": "2026-10-09",
+                  "label": "ヴィッセル神戸／H・J1",
+                  "result": "4–2 ○"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "ガンバ大阪／H・ルヴァン杯",
+                  "result": "90分3–3 △／延長込み5–4 ○"
+                },
+                {
+                  "date": "2026-09-23",
+                  "label": "FC今治／H・天皇杯",
+                  "result": "4–0 ○"
+                },
+                {
+                  "date": "2026-09-20",
+                  "label": "FC町田ゼルビア／A・J1",
+                  "result": "4–2 ○"
+                },
+                {
+                  "date": "2026-09-16",
+                  "label": "全北現代／A・ACLE",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "2026-09-11",
+                  "label": "京都サンガ／H・J1",
+                  "result": "3–2 ○"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "ポートFC",
+              "summary": "全大会の直近6試合を同一チームの公式戦として照合できず、6件未達。検証済みの参考試合だけ掲載、直近6勝率は算定しない。",
+              "items": [
+                {
+                  "date": "2026-10-07",
+                  "label": "Kanchanaburi Power／A・タイ国内杯（タイ協会結果）",
+                  "result": "3–0 ○"
+                },
+                {
+                  "date": "2026-09-16頃",
+                  "label": "ヴィッセル神戸／H・ACLE初戦",
+                  "result": "1–2 ×"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "共通相手1組（ヴィッセル神戸）。柏の勝利はリーグ、ポートの敗戦はACLEで大会・相手ローテーションの差があり、限定参考。",
+            "items": [
+              {
+                "opponent": "ヴィッセル神戸",
+                "side_a": {
+                  "date": "2026-10-09",
+                  "result": "柏 4–2 ○（J1・H）"
+                },
+                "side_b": {
+                  "date": "ACLE第1節",
+                  "result": "ポートFC 1–2 ×（ACLE・H）"
+                },
+                "comparison": "柏側の結果は優位。ただし大会・時期・メンバー条件が異なる。"
+              }
+            ]
+          },
+          "home_away": {
+            "text": "柏のホーム、柏サッカースタジアム、日本時間10/14(水)19:00（柏公式）。"
+          },
+          "availability": {
+            "text": "柏・ポートFC双方の当日スタメン、欠場、移動疲労の定量資料は未確認。ポートFC前節では柏公式がメンデス、アルサブヒ、志村謄を重要選手として紹介。"
+          },
+          "sport_specific": {
+            "text": "サッカーは90分勝者市場（引分は不的中、DNBではない）。柏は直近守備で神戸に2失点、G大阪に90分3失点、町田に2失点。ポートFCは神戸に1–2と競争力あり、『確実な格差』認定不可。"
+          },
+          "market": {
+            "text": "カジ旅／遊雅堂／bet365の掲載・実勢オッズを確認できず。勝ち／引分の区別を明確化。"
+          },
+          "post_match": {
+            "text": "公式・専門結果 柏レイソル 5–1 ポートFC／○ 的中。ユーザー申告参考1.15倍で仮想100USD基準+15USD。"
+          }
+        },
+        "result_status": "final",
+        "result": "柏レイソル 5–1 ポートFC",
+        "result_winner": "柏レイソル",
+        "favored_result": "win",
+        "result_verified_at": "2026-10-14T22:48:00+09:00",
+        "result_source": "https://reysol.co.jp/game/results/202627/1014.php",
+        "result_sources": [
+          "https://reysol.co.jp/game/results/202627/1014.php"
+        ]
+      },
+      {
+        "rank": 4,
+        "match_id": "2026-10-14-astralis-sashi-cs2",
+        "event_id": "web-2026-10-14-astralis-sashi-cs2",
+        "matchup": "Astralis vs Sashi",
+        "favored": "Astralis",
+        "selection_label": "Astralis",
+        "sport": "CS2",
+        "competition": "Stake Pulse Beat III・Group C opening match",
+        "start_jst": "2026-10-14T21:00:00+09:00",
+        "venue": "LAN（詳細会場未確認）",
+        "format": "BO3 / LAN",
+        "status": "formal",
+        "gap_grade": "A（参考）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": 10,
+        "profit_status": "仮想$100 × 参考1.10倍：概算純利益 +$10。実購入・実利益ではない。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "カジ旅／遊雅堂／bet365：掲載確認不能。オッズ未確認・推定で補完しない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-14T12:36:00+09:00",
+        "analysis_reviewed_at": "2026-10-14T12:36:00+09:00",
+        "sources": [
+          "https://www.hltv.org/matches/2399134/astralis-vs-sashi-stake-pulse-beat-iii"
+        ],
+        "conclusion": "①HLTVに直接対決シリーズ掲載なし。直近表示6はAstralis 5勝1敗、Sashi 1勝5敗（後者は単一マップ形式が5件）。②HLTV#15対Sashi未ランク・VRS#10対#90はAstralis優勢。直近比較と現在戦力は概ね同方向だがBO3におけるSashi成績の適合性・ロスター差に注意。",
+        "risk": "Sashi近況には1マップ戦多数、BO3系列比較に注意。両者新コアでサンプル不足。Veto未発表。",
+        "analysis_detail": {
+          "summary": "①HLTVに直接対決シリーズ掲載なし。直近表示6はAstralis 5勝1敗、Sashi 1勝5敗（後者は単一マップ形式が5件）。②HLTV#15対Sashi未ランク・VRS#10対#90はAstralis優勢。直近比較と現在戦力は概ね同方向だがBO3におけるSashi成績の適合性・ロスター差に注意。",
+          "ranking_or_rating": {
+            "text": "HLTV試合ページ（10/14確認）：Astralis HLTV #15・VRS #10。Sashi HLTV Unranked・VRS #90。VRS順位差80。"
+          },
+          "h2h": {
+            "summary": "HLTV試合ページで直接対決のシリーズ記録を確認できず。H2H 0件確認、初対戦とは断定しない。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Astralis",
+              "summary": "HLTV掲載直近6シリーズ5勝1敗、マップ12勝6敗（BO5含む）。",
+              "items": [
+                {
+                  "date": "約1週間前",
+                  "label": "Nemiga",
+                  "result": "3–1 ○ BO5"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "Luminosity",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "fnatic",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "BIG",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "約2週間前",
+                  "label": "FaZe",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "約2週間前",
+                  "label": "Alliance",
+                  "result": "1–2 × BO3"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Sashi",
+              "summary": "HLTV掲載直近6件：1勝5敗。ただし単一マップ形式5件＋BO3が1件で単純比較不可。",
+              "items": [
+                {
+                  "date": "約2週間前",
+                  "label": "BC.Game",
+                  "result": "11–13 × 1MAP（Cache）"
+                },
+                {
+                  "date": "約2週間前",
+                  "label": "Voca",
+                  "result": "9–13 × 1MAP（Nuke）"
+                },
+                {
+                  "date": "約2週間前",
+                  "label": "Glitch",
+                  "result": "8–13 × 1MAP（Inferno）"
+                },
+                {
+                  "date": "約2週間前",
+                  "label": "BASEMENT BOYS",
+                  "result": "13–9 ○ 1MAP（Cache）"
+                },
+                {
+                  "date": "約2週間前",
+                  "label": "Prestige",
+                  "result": "7–13 × 1MAP（Ancient）"
+                },
+                {
+                  "date": "約2週間前",
+                  "label": "Nemesis",
+                  "result": "1–2 × BO3"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "表示された直近試合6件同士で同名の共通対戦相手を確認できず。0件（5件未達）。",
+            "items": []
+          },
+          "home_away": {
+            "text": "LAN BO3、中立開催、10月14日12:00 UTC＝21:00 JST。"
+          },
+          "availability": {
+            "text": "HLTV表示ロスター：Astralis cmtry/phzy/Staehr/ryu/siuhy、Sashi TjP/Hatz/Anlelele/acoR/Zyphon。両者とも新加入メンバーのコア共闘サンプルが少ないとHLTV分析センターが警告。"
+          },
+          "sport_specific": {
+            "text": "Veto前。HLTV過去3か月マップ表示例：Astralis Cache85%/13、Dust2 17%/6、Nuke36%/11、Ancient72%/18。Sashi Cache62%/16、Dust2 36%/11、Nuke53%/17、Anubis80%/5。マップごとに逆転余地あり。Map1/2/3未確定、推定で埋めない。"
+          },
+          "market": {
+            "text": "カジ旅／遊雅堂／bet365掲載確認不能。オッズ・参考精算・実購入未登録。"
+          },
+          "post_match": {
+            "text": "公式・専門結果 Astralis 2–0 Sashi／○ 的中。ユーザー申告参考1.10倍で仮想100USD基準+10USD。"
+          }
+        },
+        "result_status": "final",
+        "result": "Astralis 2–0 Sashi",
+        "result_winner": "Astralis",
+        "favored_result": "win",
+        "result_verified_at": "2026-10-14T22:48:00+09:00",
+        "result_source": "https://www.hltv.org/stats/matches/131965/astralis-vs-sashi",
+        "result_sources": [
+          "https://www.hltv.org/stats/matches/131965/astralis-vs-sashi"
+        ]
+      },
       {
         "rank": 1,
         "match_id": "2026-10-14-flensburg-buzau-handball",
@@ -6966,10 +7450,10 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 43,
+      "favored_wins": 46,
       "favored_losses": 5,
       "pending": 0,
-      "note": "本日追加確定：Flensburg ○（36–27、参考1.01倍 +1USD）、ガンバ大阪DNB ○（3–1、参考1.53倍 +53USD）。今回合計+54USD。既存の前回算定+67USDを混同しない。全て仮想100USD追跡の概算で実購入損益ではない。"
+      "note": "2026/10/14確定3件：Lynx○（詳細スコア未確認）・参考1.05 +$5、柏○5-1・参考1.15 +$15、Astralis○2-0・参考1.10 +$10。今回追加概算利益+$30（仮想各100USD）。旧データは保持。"
     }
   },
   "history_policy": {
@@ -6977,7 +7461,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-14T12:36:00+09:00",
-    "note": "①過去対戦＋直近6／②総合戦力で独立比較。4件正式登録。旧2件は公式結果で的中判定し履歴保存。実購入・利益額と概算参考計算を厳格に区分。"
+    "as_of": "2026-10-14T22:48:00+09:00",
+    "note": "10/14 22:48 JST正式2件追加、結果確定3件アーカイブ・台帳反映、FURIA残し。①H2H＋直近10＋共通相手、②ランキング／現行コアVeto前の独立分析。　Lynxはユーザー報告で勝者確認、個別マップスコアは未確定扱い。"
   }
 }
