@@ -219,6 +219,12 @@
       "started_at": "2026-10-15T20:22:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー指定9z–FalconsのFalcons勝者市場を正式採用。HLTV公開H2H1シリーズ/直近10/共通5と現行VRS/ロスター/マップを照合。①H2Hは逆向き。"
+    },
+    {
+      "run_id": "rec-user-approved-20261016-0023",
+      "started_at": "2026-10-16T00:23:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー正式採用NHL Vegas–Calgary。H2H10戦Vegas6-4、今季6-2対1-5、共通3組中Vegas優位2、先発GK不明。"
     }
   ],
   "picks": [
@@ -4697,7 +4703,16 @@
       "flags": [
         "odds_unverified"
       ],
-      "note": "A−はユーザー指定の暫定候補グレード。勝者市場、100USD仮想追跡。購入オッズ未確定。①実績と②現在戦力に食い違いがあり高確信として扱わない。"
+      "note": "A−はユーザー指定の暫定候補グレード。勝者市場、100USD仮想追跡。購入オッズ未確定。①実績と②現在戦力に食い違いがあり高確信として扱わない。 2026/10/16事後報告の参考オッズ1.15倍で精算。事前ロック値は不変更。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.15,
+          "estimated": true,
+          "reported_at": "2026-10-16T00:23:00+09:00",
+          "source": "user_reported",
+          "note": "2026/10/16 00:23 JST、ユーザー申告の1.15倍。終了済み対戦に対する仮想$100の参考精算に使用。購入した証拠・実際の取得オッズ・実現利益は未確認。"
+        }
+      ]
     },
     {
       "id": "rec-2026-10-15-heroic-envy-cs2",
@@ -4726,7 +4741,16 @@
       "flags": [
         "odds_unverified"
       ],
-      "note": "A−はユーザー指定の暫定候補グレード。勝者市場、100USD仮想追跡。購入オッズ未確定。①実績と②現在戦力に食い違いがあり高確信として扱わない。"
+      "note": "A−はユーザー指定の暫定候補グレード。勝者市場、100USD仮想追跡。購入オッズ未確定。①実績と②現在戦力に食い違いがあり高確信として扱わない。 2026/10/16事後報告の参考オッズ約1.30倍で精算。事前ロック値は不変更。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.3,
+          "estimated": true,
+          "reported_at": "2026-10-16T00:23:00+09:00",
+          "source": "user_reported",
+          "note": "2026/10/16 00:23 JST、ユーザー申告の約1.30倍。終了済み対戦に対する仮想$100の参考精算に使用。購入した証拠・実際の取得オッズ・実現利益は未確認。"
+        }
+      ]
     },
     {
       "id": "rec-2026-10-15-9z-falcons-cs2",
@@ -4755,7 +4779,45 @@
       "flags": [
         "odds_unverified"
       ],
-      "note": "ユーザー指定による正式追跡、仮想100USD。賭けを購入したことを示さない。オッズ未取得で利益未算定。"
+      "note": "ユーザー指定による正式追跡、仮想100USD。賭けを購入したことを示さない。オッズ未取得で利益未算定。 2026/10/16事後報告の参考オッズ1.20倍で精算。事前ロック値は不変更。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.2,
+          "estimated": true,
+          "reported_at": "2026-10-16T00:23:00+09:00",
+          "source": "user_reported",
+          "note": "2026/10/16 00:23 JST、ユーザー申告の1.20倍。終了済み対戦に対する仮想$100の参考精算に使用。購入した証拠・実際の取得オッズ・実現利益は未確認。"
+        }
+      ]
+    },
+    {
+      "id": "rec-2026-10-16-vegas-calgary-nhl",
+      "system": "recommendations",
+      "match_id": "2026-10-16-vegas-calgary-nhl",
+      "run_id": "rec-user-approved-20261016-0023",
+      "source_event_id": "web-2026-10-16-vegas-calgary-nhl",
+      "market": "match_winner",
+      "market_label": "NHL勝者（延長／シュートアウト込み、60分市場ではない）",
+      "selection": "side_a",
+      "selection_label": "Vegas Golden Knights",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-16T00:23:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-16T00:23:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "正式採用（ユーザー指定）／①H2H10 6-4、共通3 2-1、②今季戦力Vegas有利／オッズなし",
+        "model_version": "RMC-dual-analysis-NHL-20261016",
+        "summary": "①公開確認できる直近H2H10戦はVegas 6勝4敗、平均点差Vegas+1.0。各チーム直近10戦はVegas6勝4敗／Calgary3勝7敗。ただし2026/27シーズン分だけではVegas6勝2敗(8試合)／Calgary1勝5敗(6試合)、不足分は前季を別記。共通相手3組（Seattle/Vancouver/Anaheim）ではVegas優位2・Calgary相対優位1。②VegasはPacific1位・GF29/GA20、Calgary8位・GF12/GA29、ホームVegas有利。①②ともVegas方向。先発GK確定前、市場オッズ未確認なので価格優位は未判定。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定Vegas勝ち。NHL OT/SO込みの勝者市場で仮想$100追跡。実購入証拠・オッズなし。開始前の主力欠場と先発GK未確認。"
     }
   ]
 }

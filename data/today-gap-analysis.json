@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-15T20:47:20+09:00",
+  "generated_at": "2026-10-16T00:23:00+09:00",
   "window": {
-    "from": "2026-10-15T20:22:00+09:00",
-    "to": "2026-10-16T20:22:00+09:00",
+    "from": "2026-10-16T00:23:00+09:00",
+    "to": "2026-10-17T00:23:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "10/15 20:22JST時点の今後24時間。前回から残るZero Tenacity、HEROICと新規Falconsの正式推奨3件。FURIAは結果を確定し履歴移動。"
+    "note": "10/16 00:23 JST時点から24時間。終了済みZero Tenacity/HEROIC/Falcons3件を結果履歴へ移動。Vegas-Calgaryのみ正式未終了カードとして新規表示。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -23,710 +23,276 @@
       "サッカー｜AFCチャンピオンズリーグ・エリート",
       "既掲載CS2・LoL・既存Overwatch結果精算"
     ],
-    "note": "HLTV現行ロスター/試合記録を照合。Falconsは過去9z戦でH2H負け。過去10シリーズ・共通5組確認。その他24hのリアル/E-sport横断探索は別途この回答で検証、正式推奨はユーザー指定の3件のみ。"
+    "note": "NHL/チーム公式、Hockey-Reference、Covers、PuckyでVegas–Calgary日程・H2H・フォーム・共通3組を照合。eスポ3件はHLTVとEnsigameの最終結果照合。オッズはユーザー申告の参考価格。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-10-15-zero-tenacity-puckchamp-dota2",
-      "event_id": "web-2026-10-15-zero-tenacity-puckchamp-dota2",
-      "matchup": "Zero Tenacity vs PuckChamp",
-      "favored": "Zero Tenacity",
-      "selection_label": "Zero Tenacity",
-      "sport": "Dota 2",
-      "competition": "European Pro League Masters III — Play-In Group A",
-      "start_jst": "2026-10-15T22:00:00+09:00",
-      "venue": "オンライン・欧州サーバー",
-      "format": "BO3 / Online",
+      "match_id": "2026-10-16-vegas-calgary-nhl",
+      "event_id": "web-2026-10-16-vegas-calgary-nhl",
+      "matchup": "Vegas Golden Knights vs Calgary Flames",
+      "favored": "Vegas Golden Knights",
+      "selection_label": "Vegas Golden Knights",
+      "sport": "NHL",
+      "competition": "NHL 2026-27 Regular Season",
+      "start_jst": "2026-10-16T11:00:00+09:00",
+      "venue": "T-Mobile Arena, Las Vegas, USA",
+      "format": "NHLレギュラーシーズン／延長SOあり",
       "status": "formal",
-      "gap_grade": "A−候補（暫定）",
+      "gap_grade": "A候補（ユーザー正式指定・①②Vegas方向）",
       "price_grade": "未判定",
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "試合未決着。100USDは仮想追跡、実購入ではない。オッズ未登録で概算収支未計上。",
+      "profit_status": "未開始・オッズ未確認。仮想100USD追跡、損益計算不能。",
       "odds": {
         "min": null,
         "max": null,
         "required_win_rate_pct": null,
-        "book_examples": "カジ旅／遊雅堂／bet365掲載確認不能。価格差は未判定。"
+        "book_examples": "カジ旅・遊雅堂・bet365の個別掲載確認不能。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-14T22:48:00+09:00",
-      "analysis_reviewed_at": "2026-10-14T22:48:00+09:00",
+      "added_at": "2026-10-16T00:23:00+09:00",
+      "analysis_reviewed_at": "2026-10-16T00:23:00+09:00",
       "sources": [
-        "https://tips.gg/matches/dota2/15-10-2026/zero-tenacity-vs-puckchamp/02-00/",
-        "https://bo3.gg/dota2/teams/zero-tenacity-dota/matches",
-        "https://bo3.gg/dota2/teams/puckchamp/matches",
-        "https://hawk.live/dota-2/matches/epl-masters-i/zero-tenacity-vs-puckchamp",
-        "https://liquipedia.net/dota2/EPL/Masters/3/Play-In"
+        "https://www.nhl.com/cs/gamecenter/cgy-vs-vgk/2026/10/15/2026020118",
+        "https://www.nhl.com/goldenknights/tickets/single-game-member",
+        "https://pucky.com/matchup/flames-vs-golden-knights/",
+        "https://www.covers.com/sport/hockey/nhl/matchup/382394",
+        "https://www.hockey-reference.com/teams/VEG/2027.html",
+        "https://www.hockey-reference.com/teams/CGY/2027_games.html",
+        "https://www.statmuse.com/nhl/team/vegas-38/schedule/2026",
+        "https://www.statmuse.com/nhl/team/calgary-flames-21/schedule/2026"
       ],
-      "conclusion": "①旧対戦3シリーズはZero Tenacity 3勝0敗（マップ6-1）。直近10シリーズ／試合はZero 5勝5敗、PuckChamp 3勝7敗（BO1混在）。共通相手3組はZero有利が一部ある。②Tips.gg独自順位ではZero #119に対しPuckChamp #41で順位の方向が逆。①と②は完全一致しないためA−はユーザー指定の候補表示であり高信頼確定ではない。",
-      "risk": "独自ランキングはPuckChampが上。H2Hの旧ロスター・直近BO1混入・相手の強さに注意。",
+      "conclusion": "①公開確認できる直近H2H10戦はVegas 6勝4敗、平均点差Vegas+1.0。各チーム直近10戦はVegas6勝4敗／Calgary3勝7敗。ただし2026/27シーズン分だけではVegas6勝2敗(8試合)／Calgary1勝5敗(6試合)、不足分は前季を別記。共通相手3組（Seattle/Vancouver/Anaheim）ではVegas優位2・Calgary相対優位1。②VegasはPacific1位・GF29/GA20、Calgary8位・GF12/GA29、ホームVegas有利。①②ともVegas方向。先発GK確定前、市場オッズ未確認なので価格優位は未判定。",
+      "risk": "ベガスH2H6-4で一方的ではない。今季共通相手AnaheimではCalgary直近勝ち。ベガス過去8戦にOT/SO勝ち2含む。先発GK未確認、NHL勝者市場は60分勝利とは異なる。",
       "analysis_detail": {
-        "summary": "①旧対戦3シリーズはZero Tenacity 3勝0敗（マップ6-1）。直近10シリーズ／試合はZero 5勝5敗、PuckChamp 3勝7敗（BO1混在）。共通相手3組はZero有利が一部ある。②Tips.gg独自順位ではZero #119に対しPuckChamp #41で順位の方向が逆。①と②は完全一致しないためA−はユーザー指定の候補表示であり高信頼確定ではない。",
+        "summary": "①公開確認できる直近H2H10戦はVegas 6勝4敗、平均点差Vegas+1.0。各チーム直近10戦はVegas6勝4敗／Calgary3勝7敗。ただし2026/27シーズン分だけではVegas6勝2敗(8試合)／Calgary1勝5敗(6試合)、不足分は前季を別記。共通相手3組（Seattle/Vancouver/Anaheim）ではVegas優位2・Calgary相対優位1。②VegasはPacific1位・GF29/GA20、Calgary8位・GF12/GA29、ホームVegas有利。①②ともVegas方向。先発GK確定前、市場オッズ未確認なので価格優位は未判定。",
         "ranking_or_rating": {
-          "text": "Tips.gg 2026-10-14閲覧：Zero Tenacity独自順位#119／PuckChamp #41、直近30日勝率約56%／29%。同サイト独自ランキングで公式世界順位ではない。ランキングはPuckChamp優位、近況はZero優位。"
+          "text": "2026-10-15試合前 NHL公式：Vegas 6勝2敗・Pacific地区1位・12pts、GF29/GA20(+9)、得点3.63/試合・失点2.50/試合。Calgary1勝5敗・地区8位・2pts、GF12/GA29(-17)、得点2.00/試合・失点4.83/試合。GFの公式集計はSO勝負決着ゴールを算入しない。"
         },
         "h2h": {
-          "summary": "公開確認した過去3シリーズすべてZero Tenacity勝ち（3-0、マップ6-1）。旧ロスター差に留意。",
+          "summary": "2024年1月～2026年4月の直近10試合を公開情報で確認：Vegas6勝・Calgary4勝、合計Vegas40得点・Calgary30得点、平均Vegas+1.0得点差。SO/OTも勝敗に含む。歴代対戦42試合との掲載があるが、ここでは直近10試合の詳細のみ確認。",
           "items": [
             {
-              "date": "2026-09-16",
-              "label": "European Pro League Season 40",
-              "result": "Zero Tenacity 2–1 PuckChamp"
+              "date": "2026-04-02",
+              "label": "Las Vegas・レギュラーシーズン",
+              "result": "Vegas 6–3 Calgary"
             },
             {
-              "date": "2026-08-31",
-              "label": "EPL Masters II",
-              "result": "Zero Tenacity 2–0 PuckChamp"
+              "date": "2025-12-20",
+              "label": "Calgary・レギュラーシーズン",
+              "result": "Vegas 3–6 Calgary"
             },
             {
-              "date": "2026-07-30",
-              "label": "EPL Masters I",
-              "result": "Zero Tenacity 2–0 PuckChamp"
+              "date": "2025-10-18",
+              "label": "Las Vegas・レギュラーシーズン",
+              "result": "Vegas 6–1 Calgary"
+            },
+            {
+              "date": "2025-10-14",
+              "label": "Calgary・レギュラーシーズン",
+              "result": "Vegas 4–2 Calgary"
+            },
+            {
+              "date": "2025-04-15",
+              "label": "Calgary・レギュラーシーズン",
+              "result": "Vegas 4–5 Calgary（SO）"
+            },
+            {
+              "date": "2025-04-05",
+              "label": "Calgary・レギュラーシーズン",
+              "result": "Vegas 3–2 Calgary（OT）"
+            },
+            {
+              "date": "2024-12-29",
+              "label": "Las Vegas・レギュラーシーズン",
+              "result": "Vegas 3–0 Calgary"
+            },
+            {
+              "date": "2024-10-28",
+              "label": "Las Vegas・レギュラーシーズン",
+              "result": "Vegas 5–0 Calgary"
+            },
+            {
+              "date": "2024-03-14",
+              "label": "Calgary・レギュラーシーズン",
+              "result": "Vegas 1–4 Calgary"
+            },
+            {
+              "date": "2024-01-13",
+              "label": "Las Vegas・レギュラーシーズン",
+              "result": "Vegas 1–3 Calgary"
             }
           ]
         },
         "recent_form": {
           "side_a": {
-            "label": "Zero Tenacity",
-            "summary": "10件確認、5勝5敗。うちBO1の勝利2件。10/14対MENA Warriors戦は結果未確認のためここに含めない。",
+            "label": "Vegas Golden Knights",
+            "summary": "直近10試合6勝4敗（今季8試合6勝2敗、前季Stanley Cup Final最後の2戦0勝2敗）。今季だけの公式得失点29-20。前年の結果と分けて扱う。",
             "items": [
               {
                 "date": "2026-10-13",
-                "label": "Team Lynx／EPL Masters III",
-                "result": "1–2 × BO3"
-              },
-              {
-                "date": "2026-10-09",
-                "label": "The Warriors／DreamLeague予選",
-                "result": "1–2 × BO3"
-              },
-              {
-                "date": "2026-10-09",
-                "label": "Nemiga Gaming／DreamLeague予選",
-                "result": "1–0 ○ BO1"
-              },
-              {
-                "date": "2026-10-09",
-                "label": "Leto／DreamLeague予選",
-                "result": "1–0 ○ BO1"
-              },
-              {
-                "date": "2026-09-22",
-                "label": "Team Lynx／EPL40",
-                "result": "1–2 × BO3"
-              },
-              {
-                "date": "2026-09-21",
-                "label": "Two Move／EPL40",
-                "result": "0–2 × BO3"
-              },
-              {
-                "date": "2026-09-17",
-                "label": "BALU Team／EPL40",
-                "result": "2–0 ○ BO3"
-              },
-              {
-                "date": "2026-09-16",
-                "label": "PuckChamp／EPL40",
-                "result": "2–1 ○ BO3"
-              },
-              {
-                "date": "2026-09-15",
-                "label": "Nemiga Gaming／EPL40",
-                "result": "1–2 × BO3"
-              },
-              {
-                "date": "2026-09-14",
-                "label": "Team Lynx／EPL40",
-                "result": "2–1 ○ BO3"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "PuckChamp",
-            "summary": "10件確認、3勝7敗。10/14 Team Lynxに敗戦（マップスコア未確認）を含む。10/9の1マップ勝利を含むのでBO3フォームと混同しない。",
-            "items": [
-              {
-                "date": "2026-10-14",
-                "label": "Team Lynx／EPL Masters III",
-                "result": "敗戦 ×（マップスコア未確認）"
+                "label": "@ Nashville Predators",
+                "result": "5–2 ○"
               },
               {
                 "date": "2026-10-12",
-                "label": "CyberHero／EPL Masters III",
-                "result": "0–2 × BO3"
+                "label": "@ Minnesota Wild",
+                "result": "2–4 ×"
               },
               {
                 "date": "2026-10-10",
-                "label": "old blood／DreamLeague予選",
-                "result": "2–1 ○ BO3"
+                "label": "vs Los Angeles Kings",
+                "result": "2–1 ○（OT）"
               },
               {
-                "date": "2026-10-09",
-                "label": "1nter t1de／DreamLeague予選",
-                "result": "1–0 ○ BO1"
+                "date": "2026-10-08",
+                "label": "vs Toronto Maple Leafs",
+                "result": "4–3 ○（SO）"
               },
               {
-                "date": "2026-09-20",
-                "label": "BALU Team／EPL40",
-                "result": "2–0 ○ BO3"
+                "date": "2026-10-06",
+                "label": "@ Seattle Kraken",
+                "result": "6–2 ○"
               },
               {
-                "date": "2026-09-20",
-                "label": "Team Lynx／EPL40",
-                "result": "1–2 × BO3"
+                "date": "2026-10-04",
+                "label": "@ Vancouver Canucks",
+                "result": "3–2 ○"
               },
               {
-                "date": "2026-09-16",
-                "label": "Zero Tenacity／EPL40",
-                "result": "1–2 × BO3"
+                "date": "2026-10-02",
+                "label": "vs Anaheim Ducks",
+                "result": "3–4 ×"
               },
               {
-                "date": "2026-09-15",
-                "label": "Team Synapse／EPL40",
-                "result": "0–2 × BO3"
+                "date": "2026-09-29",
+                "label": "vs Chicago Blackhawks",
+                "result": "5–2 ○"
               },
               {
-                "date": "2026-09-12",
-                "label": "Nemiga Gaming／EPL40",
-                "result": "0–2 × BO3"
+                "date": "2026-06-14",
+                "label": "vs Carolina Hurricanes・前季Stanley Cup Final",
+                "result": "0–3 ×"
               },
               {
-                "date": "2026-09-05",
-                "label": "Pipsqueak+4／EPL Masters II",
-                "result": "0–2 × BO3"
+                "date": "2026-06-11",
+                "label": "@ Carolina Hurricanes・前季Stanley Cup Final",
+                "result": "2–4 ×"
               }
             ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "公開確認の共通対戦相手3組。Team Lynxは両者とも敗戦（PuckChampスコア未確認）、NemigaはZero勝利、BALUは両者勝利。",
-          "items": [
-            {
-              "opponent": "Team Lynx",
-              "side_a": {
+          },
+          "side_b": {
+            "label": "Calgary Flames",
+            "summary": "直近10試合3勝7敗（今季6試合1勝5敗、前季最終4試合2勝2敗）。今季だけの公式得失点12-29。前年の結果と分けて扱う。",
+            "items": [
+              {
                 "date": "2026-10-13",
-                "result": "Zero 1–2 ×"
-              },
-              "side_b": {
-                "date": "2026-10-14",
-                "result": "PuckChamp ×（マップスコア未確認）"
-              },
-              "comparison": "双方敗戦。PuckChampの最終マップスコア未確認につき、マップ差で優劣は決めない。"
-            },
-            {
-              "opponent": "Nemiga Gaming",
-              "side_a": {
-                "date": "2026-10-09",
-                "result": "Zero 1–0 ○（BO1）"
-              },
-              "side_b": {
-                "date": "2026-09-12",
-                "result": "PuckChamp 0–2 ×（BO3）"
-              },
-              "comparison": "Zero優勢方向だがBO1とBO3が異なる。"
-            },
-            {
-              "opponent": "BALU Team",
-              "side_a": {
-                "date": "2026-09-17",
-                "result": "Zero 2–0 ○"
-              },
-              "side_b": {
-                "date": "2026-09-20",
-                "result": "PuckChamp 2–0 ○"
-              },
-              "comparison": "同一シリーズ勝敗で差なし。"
-            }
-          ]
-        },
-        "home_away": {
-          "text": "2026-10-15 22:00 JST。EPL Masters III Play-In Group A、BO3 Online。Tips.ggおよびbo3.ggの掲載13:00 UTCをJSTに変換。"
-        },
-        "availability": {
-          "text": "Zero Tenacity／PuckChampの出場5名は過去H2Hと同一保証なし。試合当日ロスターの公式確定は未確認。"
-        },
-        "sport_specific": {
-          "text": "Patch 7.41f、Draft前分析。BO3でヒーローピック、レーン対面、サイドの確定情報なし。シリーズの3-0 H2Hだけで確勝とはできない。"
-        },
-        "market": {
-          "text": "カジ旅・遊雅堂・bet365の掲載確認不能。購入オッズ未確認、精算オッズ未登録。"
-        }
-      }
-    },
-    {
-      "rank": 2,
-      "match_id": "2026-10-15-heroic-envy-cs2",
-      "event_id": "web-2026-10-15-heroic-envy-cs2",
-      "matchup": "HEROIC vs Envy",
-      "favored": "HEROIC",
-      "selection_label": "HEROIC",
-      "sport": "CS2",
-      "competition": "Stake Pulse Beat III — Group D opening match",
-      "start_jst": "2026-10-15T21:00:00+09:00",
-      "venue": "Stockholm, Sweden",
-      "format": "BO3 / LAN",
-      "status": "formal",
-      "gap_grade": "A−候補（暫定）",
-      "price_grade": "未判定",
-      "market": "match_winner",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合未決着。100USDは仮想追跡、実購入ではない。オッズ未登録で概算収支未計上。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "カジ旅／遊雅堂／bet365掲載確認不能。価格差は未判定。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-14T22:48:00+09:00",
-      "analysis_reviewed_at": "2026-10-14T22:48:00+09:00",
-      "sources": [
-        "https://www.hltv.org/matches/2399137/heroic-vs-envy-stake-pulse-beat-iii",
-        "https://www.hltv.org/team/4914/3dmax",
-        "https://www.hltv.org/team/5991/envy",
-        "https://www.hltv.org/events/9223/stake-pulse-beat-iii"
-      ],
-      "conclusion": "①HEROICは直近10シリーズ8勝2敗、旧3DMAXの現Envyコアは直近10試合6勝4敗（1MAPとBO5混在）。現5人コア同士の旧3DMAX名義H2Hは2026-07-15と09-02の2シリーズ、ともにHEROIC 2-1勝利。②現在HLTVはHEROIC #30／Envy #20でEnvy優位だがVRSはHEROIC #21／Envy #27でHEROIC優位。したがって①と②は完全には一致しない。A−は指定の暫定候補。",
-      "risk": "HLTV世界順位はEnvyのほうが上。Envyは3DMAXの現行五人コアそのまま。Map選択次第で逆転リスク、Veto前。",
-      "analysis_detail": {
-        "summary": "①HEROICは直近10シリーズ8勝2敗、旧3DMAXの現Envyコアは直近10試合6勝4敗（1MAPとBO5混在）。現5人コア同士の旧3DMAX名義H2Hは2026-07-15と09-02の2シリーズ、ともにHEROIC 2-1勝利。②現在HLTVはHEROIC #30／Envy #20でEnvy優位だがVRSはHEROIC #21／Envy #27でHEROIC優位。したがって①と②は完全には一致しない。A−は指定の暫定候補。",
-        "ranking_or_rating": {
-          "text": "HLTV対戦ページ：HEROIC HLTV#30・VRS#21（1494pt）、Envy HLTV#20・VRS#27（1439pt）。HLTV順位はEnvy優位、VRS順位はHEROIC優位。世界順位差だけで大格差とは認定しない。"
-        },
-        "h2h": {
-          "summary": "HEROIC対『Envy名義』の現コア直接対決は0件（新ブランド移籍後初戦）。旧3DMAXの現Envy五人コアを遡ると7/15、9/2の2シリーズともHEROIC 2–1勝ち（シリーズ2–0、マップ4–2）。2/16のHEROIC 2–0 3DMAXは当時と現ロスター差があるため参考度低下として別掲。",
-          "items": [
-            {
-              "date": "2026-09-02",
-              "label": "IEM Beijing 2026 Closed Qualifier／旧3DMAX現在コア",
-              "result": "HEROIC 2–1 3DMAX（Cache 8–13／Dust2 13–5／Inferno 13–5）"
-            },
-            {
-              "date": "2026-07-15",
-              "label": "Stake Ranked Episode 3／旧3DMAX現在コア",
-              "result": "HEROIC 2–1 3DMAX（Cache 8–13／Inferno 13–8／Nuke 13–8）"
-            },
-            {
-              "date": "2026-02-16",
-              "label": "PGL Cluj-Napoca 2026／旧コア参考度低下",
-              "result": "HEROIC 2–0 3DMAX（Inferno 13–10／Nuke 13–5）"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "HEROIC",
-            "summary": "HLTV対戦ページの直近10シリーズ8勝2敗、5連勝中。",
-            "items": [
-              {
-                "date": "2026-09-26",
-                "label": "100 Thieves",
-                "result": "2–1 ○ BO3"
+                "label": "@ Anaheim Ducks",
+                "result": "4–2 ○"
               },
               {
-                "date": "2026-09-26",
-                "label": "Sangal",
-                "result": "2–1 ○ BO3"
+                "date": "2026-10-10",
+                "label": "vs Anaheim Ducks",
+                "result": "2–4 ×"
               },
               {
-                "date": "2026-09-25",
-                "label": "fnatic",
-                "result": "2–1 ○ BO3"
+                "date": "2026-10-08",
+                "label": "vs Colorado Avalanche",
+                "result": "3–7 ×"
               },
               {
-                "date": "2026-09-22",
-                "label": "BBL",
-                "result": "2–0 ○ BO3"
+                "date": "2026-10-04",
+                "label": "@ Seattle Kraken",
+                "result": "1–6 ×"
               },
               {
-                "date": "2026-09-22",
-                "label": "Johnny Speeds",
-                "result": "2–0 ○ BO3"
+                "date": "2026-10-03",
+                "label": "@ Vancouver Canucks",
+                "result": "1–4 ×"
               },
               {
-                "date": "2026-09中旬",
-                "label": "Virtus.pro",
-                "result": "1–2 × BO3"
+                "date": "2026-10-01",
+                "label": "vs Seattle Kraken",
+                "result": "1–6 ×"
               },
               {
-                "date": "2026-09中旬",
-                "label": "1win",
-                "result": "2–1 ○ BO3"
+                "date": "2026-04-16",
+                "label": "vs Los Angeles Kings・前季",
+                "result": "3–1 ○"
               },
               {
-                "date": "2026-09中旬",
-                "label": "K27",
-                "result": "2–1 ○ BO3"
+                "date": "2026-04-14",
+                "label": "vs Colorado Avalanche・前季",
+                "result": "1–3 ×"
               },
               {
-                "date": "2026-09上旬",
-                "label": "BESTIA",
-                "result": "2–0 ○ BO3"
+                "date": "2026-04-12",
+                "label": "vs Utah Mammoth・前季",
+                "result": "4–1 ○"
               },
               {
-                "date": "2026-09上旬",
-                "label": "1win",
-                "result": "1–2 × BO3"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Envy（旧3DMAX現5人コア）",
-            "summary": "HLTV『Team core』比較10件、6勝4敗。BO5は1件、1MAP決着は4件。Envy名義はこの時期まだ公式戦がないため、3DMAX名義の同一コアに遡ったものであることを明示。",
-            "items": [
-              {
-                "date": "2026-09末",
-                "label": "GamerLegion",
-                "result": "1–2 × BO3"
-              },
-              {
-                "date": "2026-09末",
-                "label": "Alliance",
-                "result": "2–0 ○ BO3"
-              },
-              {
-                "date": "2026-09末",
-                "label": "Ninjas in Pyjamas",
-                "result": "0–2 × BO3"
-              },
-              {
-                "date": "2026-09末",
-                "label": "Luminosity",
-                "result": "3–2 ○ BO5"
-              },
-              {
-                "date": "2026-09末",
-                "label": "Inner Circle",
-                "result": "2–1 ○ BO3"
-              },
-              {
-                "date": "2026-09末",
-                "label": "M80",
-                "result": "2–1 ○ BO3"
-              },
-              {
-                "date": "2026-09中旬",
-                "label": "INFINITE",
-                "result": "13–7 ○ Dust2 1MAP"
-              },
-              {
-                "date": "2026-09中旬",
-                "label": "Liquid",
-                "result": "6–13 × Nuke 1MAP"
-              },
-              {
-                "date": "2026-09中旬",
-                "label": "BBL",
-                "result": "16–14 ○ Ancient 1MAP"
-              },
-              {
-                "date": "2026-09中旬",
-                "label": "Inner Circle",
-                "result": "9–13 × Nuke 1MAP"
+                "date": "2026-04-11",
+                "label": "@ Seattle Kraken・前季",
+                "result": "1–4 ×"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "両チーム現行コアの公開近況で比較可能な相手2組（100 Thieves／NiP）に限定して掲載。古い年度・3DMAXからの5人移籍を明記。",
+          "summary": "2026/27今季の共通相手は3チーム。Seattle：Vegas勝ち/Calgary二度敗戦、Vancouver：Vegas勝ち/Calgary敗戦、Anaheim：Vegas敗戦/Calgary直近勝ちもあり。この定義でVegas優勢2/3、Calgaryが比較上1/3。昨季を混ぜて5件へ水増ししない。",
           "items": [
             {
-              "opponent": "100 Thieves",
+              "opponent": "Seattle Kraken",
               "side_a": {
-                "date": "2026-09-26",
-                "result": "HEROIC 2–1 ○"
+                "date": "2026-10-06",
+                "result": "Vegas 6–2 ○"
               },
               "side_b": {
-                "date": "2026-09上旬",
-                "result": "旧3DMAX現Envyコア 0–2 ×"
+                "date": "2026-10-01／10-04",
+                "result": "Calgary 1–6 ×／1–6 ×"
               },
-              "comparison": "HEROIC有利。"
+              "comparison": "Vegas優勢。Calgaryは同じ相手に2連敗（ともに大差）。"
             },
             {
-              "opponent": "Ninjas in Pyjamas",
+              "opponent": "Vancouver Canucks",
               "side_a": {
-                "date": "2026-07末",
-                "result": "HEROIC 1–2 ×"
+                "date": "2026-10-04",
+                "result": "Vegas 3–2 ○"
               },
               "side_b": {
-                "date": "2026-09末",
-                "result": "旧3DMAX現Envyコア 0–2 ×"
+                "date": "2026-10-03",
+                "result": "Calgary 1–4 ×"
               },
-              "comparison": "両敗戦、時期違い。"
+              "comparison": "Vegas優勢。"
+            },
+            {
+              "opponent": "Anaheim Ducks",
+              "side_a": {
+                "date": "2026-10-02",
+                "result": "Vegas 3–4 ×"
+              },
+              "side_b": {
+                "date": "2026-10-10／10-13",
+                "result": "Calgary 2–4 ×、4–2 ○"
+              },
+              "comparison": "Calgaryが直近で勝利。Vegasには敗戦しかなく、比較上Calgaryが良い材料を持つ。ただしCalgaryの勝敗は混在。"
             }
           ]
         },
         "home_away": {
-          "text": "HLTV掲載2026-10-15 12:00 UTC＝21:00 JST。Stake Pulse Beat III、Group D opening、BO3 LAN（ストックホルム）。"
+          "text": "NHL 2026/27レギュラーシーズン。2026-10-15 19:00 PDT（日本時間10/16 11:00 JST）。T-Mobile Arena、Las Vegas、Vegasホーム。"
         },
         "availability": {
-          "text": "HEROIC：Brollan／MartinezSa／nilo／Chr1zN／susp。Envy：Graviti／Kursy／Maka／misutaaa／Lucky。HLTV移籍履歴によると2026-09-29に旧3DMAXの5人全員がEnvyへ移籍。HEROIC監督Snappiの就任は直近。最終登録・突発欠場未確認。"
+          "text": "試合前の先発GK最終確認なし。NHL公式試合ページのシーズン成績：Vegas Carter Hart 3-2-0, 2.41GAA/.906SV、Adin Hill 3-0-0, 2.27GAA/.903SV。Calgary Dustin Wolf 1-3-0, 4.56GAA/.839SV、Devin Cooley 0-2-0, 5.01GAA/.818SV。先発確定や怪我・欠場は未確認。"
         },
         "sport_specific": {
-          "text": "Veto前分析。HLTVの『現コア・過去3か月』：HEROIC Cache55%/11、Dust2 65%/17、Mirage75%/12、Inferno79%/14、Nuke70%/10、Ancient67%/15。Envy Cache56%/16、Dust2 77%/13、Mirage試合数0、Inferno50%/14、Nuke33%/12、Ancient50%/14。Veto未発表。パターンはHEROICに全面優位ではなくDust2ではEnvyが上。"
+          "text": "試合前 NHLチーム指標：Vegas パワープレー23.3%/ペナルティキル80.0%、Calgary パワープレー15.4%/ペナルティキル85.0%。平均得失点差 Vegas +1.13/試合、Calgary -2.83/試合。OT/SOを含むNHL勝敗市場の追跡であり、『60分勝利』とは区別する。"
         },
         "market": {
-          "text": "HLTV掲載の複数業者参考HEROIC 1.45–1.48／Envy 2.50–2.61付近。これらは購入オッズではなく、カジ旅・遊雅堂・bet365での掲載確認はできていない。独立推定勝率とEVは算定せず。"
-        }
-      }
-    },
-    {
-      "rank": 3,
-      "match_id": "2026-10-15-9z-falcons-cs2",
-      "event_id": "web-2026-10-15-9z-falcons-cs2",
-      "matchup": "9z vs Falcons",
-      "favored": "Falcons",
-      "selection_label": "Falcons",
-      "sport": "CS2",
-      "competition": "Thunderpick World Championship 2026・Group A勝者戦",
-      "start_jst": "2026-10-15T22:30:00+09:00",
-      "venue": "LAN・会場詳細未確認",
-      "format": "BO3 / LAN（Veto前）",
-      "status": "formal",
-      "gap_grade": "A−候補・H2H逆方向",
-      "price_grade": "未判定",
-      "market": "match_winner",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "100USDは仮想追跡。未開始、購入/参考オッズ未登録。利益計算不可。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "カジ旅・遊雅堂・bet365：個別掲載確認不能。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-15T20:22:00+09:00",
-      "analysis_reviewed_at": "2026-10-15T20:22:00+09:00",
-      "sources": [
-        "https://www.hltv.org/matches/2399409/9z-vs-falcons-thunderpick-world-championship-2026",
-        "https://www.hltv.org/betting/analytics/2399409/9z-vs-falcons-thunderpick-world-championship-2026"
-      ],
-      "conclusion": "①HLTV公開H2H1シリーズは2026/05/10 9z 2–1 Falcons（9z優勢）。一方、直近10シリーズは9z4勝6敗・Falcons6勝4敗、強敵に対する結果と共通相手5組はFalconsにやや優位。②HLTV #5対#17・VRS #4(1866pt)対#11(1564pt)でFalcons優位。①のH2Hと②は不一致、①の近況と②は同方向。ユーザー正式採用だがS/絶対勝利とは評価しない。",
-      "risk": "旧H2Hでは9zがFalconsを2-1で撃破。現行ロスター・BO3/Veto前の変動に注意。9zにもAurora、BETBOOM、TYLOOへの2-0勝利があり、順位差だけで絶対視しない。",
-      "analysis_detail": {
-        "summary": "①HLTV公開H2H1シリーズは2026/05/10 9z 2–1 Falcons（9z優勢）。一方、直近10シリーズは9z4勝6敗・Falcons6勝4敗、強敵に対する結果と共通相手5組はFalconsにやや優位。②HLTV #5対#17・VRS #4(1866pt)対#11(1564pt)でFalcons優位。①のH2Hと②は不一致、①の近況と②は同方向。ユーザー正式採用だがS/絶対勝利とは評価しない。",
-        "ranking_or_rating": {
-          "text": "HLTV試合ページ 2026-10-15：Falcons世界#5、Valve VRS#4・1866pt。9z世界#17、VRS#11・1564pt。VRS差302pt。ランキングの対象はCS2シニア現行チーム。"
-        },
-        "h2h": {
-          "summary": "HLTVの対戦履歴で公開確認されたH2Hは2026/05/10 PGL AstanaのBO3・1シリーズ＝9z2–1 Falcons。マップ別は9z Dust2 13–1勝／Mirage 9–13敗／Nuke 13–8勝。H2H全歴史の完全性までは保証しない。",
-          "items": [
-            {
-              "date": "2026-05-10",
-              "label": "PGL Astana 2026・Dust2",
-              "result": "9z 13–1 Falcons"
-            },
-            {
-              "date": "2026-05-10",
-              "label": "PGL Astana 2026・Mirage",
-              "result": "9z 9–13 Falcons"
-            },
-            {
-              "date": "2026-05-10",
-              "label": "PGL Astana 2026・Nuke",
-              "result": "9z 13–8 Falcons"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "9z",
-            "summary": "HLTV試合ページの直近10BO3：4勝6敗（マップ合計9勝12敗）。Auroraなどに勝利する一方でNAVI・FURIA・Vitality等の強豪には敗戦。試合日付はサイトが相対日時掲載のため日付未転記。",
-            "items": [
-              {
-                "date": "直近",
-                "label": "Aurora／Thunderpick WC",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約1週間前",
-                "label": "FURIA",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約1週間前",
-                "label": "BETBOOM",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約1週間前",
-                "label": "Natus Vincere",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約1週間前",
-                "label": "TYLOO",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約2週間前",
-                "label": "Aurora",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約5週間前",
-                "label": "G2",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "約5週間前",
-                "label": "MIBR",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約5週間前",
-                "label": "5star",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約7週間前",
-                "label": "Vitality",
-                "result": "0–2 ×"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Falcons",
-            "summary": "HLTV試合ページの直近10BO3：6勝4敗（マップ合計14勝10敗）。上位Spirit・Vitality・MOUZには敗戦がある。新加入karriganの現行コア集計を掲載。日付は相対日付で記録。",
-            "items": [
-              {
-                "date": "直近",
-                "label": "Ninjas in Pyjamas／Thunderpick WC",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約1週間前",
-                "label": "Spirit",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約1週間前",
-                "label": "Natus Vincere",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "約1週間前",
-                "label": "Vitality",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "約1週間前",
-                "label": "Aurora",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約2週間前",
-                "label": "TYLOO",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約6週間前",
-                "label": "Spirit",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約6週間前",
-                "label": "G2",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約6週間前",
-                "label": "MOUZ",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "約7週間前",
-                "label": "Legacy",
-                "result": "2–1 ○"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "同一相手5組：NAVI・G2ではFalcons優位、TYLOOは双方勝ち、Vitalityは双方負け、Auroraは9zが勝敗混在・Falcons勝利。時期と大会が異なるため直接的な勝率へ換算しない。",
-          "items": [
-            {
-              "opponent": "Natus Vincere",
-              "side_a": {
-                "date": "約1週間前",
-                "result": "9z 0–2 ×"
-              },
-              "side_b": {
-                "date": "約1週間前",
-                "result": "Falcons 2–1 ○"
-              },
-              "comparison": "Falcons方向"
-            },
-            {
-              "opponent": "G2",
-              "side_a": {
-                "date": "約5週間前",
-                "result": "9z 1–2 ×"
-              },
-              "side_b": {
-                "date": "約6週間前",
-                "result": "Falcons 2–0 ○"
-              },
-              "comparison": "Falcons方向"
-            },
-            {
-              "opponent": "TYLOO",
-              "side_a": {
-                "date": "約1週間前",
-                "result": "9z 2–0 ○"
-              },
-              "side_b": {
-                "date": "約2週間前",
-                "result": "Falcons 2–0 ○"
-              },
-              "comparison": "同じBO3スコアで差なし"
-            },
-            {
-              "opponent": "Vitality",
-              "side_a": {
-                "date": "約7週間前",
-                "result": "9z 0–2 ×"
-              },
-              "side_b": {
-                "date": "約1週間前",
-                "result": "Falcons 1–2 ×"
-              },
-              "comparison": "両者敗戦、Falconsが1MAP奪取"
-            },
-            {
-              "opponent": "Aurora",
-              "side_a": {
-                "date": "直近／約2週間前",
-                "result": "9z 2–0 ○／0–2 ×"
-              },
-              "side_b": {
-                "date": "約1週間前",
-                "result": "Falcons 2–0 ○"
-              },
-              "comparison": "直近9z勝利もあり一概にFalcons優勢ではない"
-            }
-          ]
-        },
-        "home_away": {
-          "text": "Thunderpick World Championship 2026・Group A勝者戦、BO3/LAN、ホーム・アウェー適用なし。HLTVの現在表示13:30 UTC＝22:30JST（それ以前は13:00 UTC＝22:00JSTの掲載も存在）。開始前に再確認必須。"
-        },
-        "availability": {
-          "text": "HLTV掲載：9z dgt/max/meyern/luchov/HUASOPEEK。Falcons karrigan/NiKo/m0NESY/TeSeS/kyousuke。最終サーバー出場5人・直前の代役は未確認。"
-        },
-        "sport_specific": {
-          "text": "Veto前分析。HLTV現行コア過去3か月：9z Dust2 50%(6MAP)、Mirage60%(5)、Inferno25%(4)、Nuke33%(9)、Cache50%(4)。Falcons Dust2 73%(11)、Mirage57%(7)、Inferno80%(5)、Nuke67%(3)、Anubis40%(5)。FalconsはDust2/Inferno優勢だがMirageは9zにわずかな優位。MAP1/2/3未確定。"
-        },
-        "market": {
-          "text": "カジ旅／遊雅堂／bet365の個別掲載確認不能。購入価格、参考精算オッズとも未登録。ユーザー正式指定の勝者市場のみを100USD仮想基準で追跡し、結果後もオッズ不明なら利益は算定しない。"
+          "text": "ユーザーがVegas勝者を正式採用。カジ旅／遊雅堂／bet365の個別掲載未確認。採用オッズ・実購入オッズとも未確認。100USD仮想追跡のみ、精算オッズ未登録。"
         }
       }
     }
@@ -745,16 +311,14 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "Falcons (世界#5/VRS#4対9z世界#17/VRS#11、H2H逆)",
-      "HEROIC（現行コア要注意）",
-      "Zero Tenacity（独自ランキング逆）"
+      "Vegas Golden Knights vs Calgary Flames — H2H6-4、今季6-2対1-5、共通相手3組中Vegas2組優位"
     ],
     "price_adjusted_top": [],
-    "caution": "3件はユーザー正式採用の追跡対象。オッズ確認できずEV未判定。FURIAの○はユーザー事後申告の参考1.29倍で仮想100USD基準+29USDとして精算済み（実際の購入利益とは別）。カジ旅／遊雅堂／bet365掲載確認不能。",
-    "previous_note": "FURIA 2–0 BETBOOM ○的中。ユーザー申告オッズ1.29倍、仮想100USD基準で概算+29USD（払戻129USD）。既存の精算済み取引は変更なし。"
+    "caution": "Vegas正式採用はOT/SOを含むNHL勝者市場で、60分勝者と混同しない。先発GKおよび市場オッズ未確認。旧3件は全○、事後申告倍率を参考収支として計上。",
+    "previous_note": "10/15付のZero Tenacity、HEROIC、Falconsが○、3件の仮想$100基準概算利益は+約$65。FURIAの+約$29と合わせ当日確定4件の利益は+約$94。すべて事後申告倍率による参考精算。"
   },
   "previous_analysis": {
-    "generated_at": "2026-10-15T20:22:00+09:00",
+    "generated_at": "2026-10-16T00:23:00+09:00",
     "window": {
       "from": "2026-09-30T17:39:31+09:00",
       "to": "2026-10-01T09:30:00+09:00",
@@ -762,6 +326,746 @@
       "note": "9/30 JSTの残り時間を主対象とし、欧州9/30開催でJST日付またぎになる深夜カードも併記"
     },
     "candidates": [
+      {
+        "rank": 1,
+        "match_id": "2026-10-15-zero-tenacity-puckchamp-dota2",
+        "event_id": "web-2026-10-15-zero-tenacity-puckchamp-dota2",
+        "matchup": "Zero Tenacity vs PuckChamp",
+        "favored": "Zero Tenacity",
+        "selection_label": "Zero Tenacity",
+        "sport": "Dota 2",
+        "competition": "European Pro League Masters III — Play-In Group A",
+        "start_jst": "2026-10-15T22:00:00+09:00",
+        "venue": "オンライン・欧州サーバー",
+        "format": "BO3 / Online",
+        "status": "formal",
+        "gap_grade": "A−候補（暫定）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": 15,
+        "profit_status": "○的中。ユーザー申告の1.15倍を参考精算。仮想100USDに対して払戻115.00USD・概算純利益+15USD。実購入利益と区別。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "カジ旅／遊雅堂／bet365掲載確認不能。価格差は未判定。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-14T22:48:00+09:00",
+        "analysis_reviewed_at": "2026-10-14T22:48:00+09:00",
+        "sources": [
+          "https://tips.gg/matches/dota2/15-10-2026/zero-tenacity-vs-puckchamp/02-00/",
+          "https://bo3.gg/dota2/teams/zero-tenacity-dota/matches",
+          "https://bo3.gg/dota2/teams/puckchamp/matches",
+          "https://hawk.live/dota-2/matches/epl-masters-i/zero-tenacity-vs-puckchamp",
+          "https://liquipedia.net/dota2/EPL/Masters/3/Play-In"
+        ],
+        "conclusion": "①旧対戦3シリーズはZero Tenacity 3勝0敗（マップ6-1）。直近10シリーズ／試合はZero 5勝5敗、PuckChamp 3勝7敗（BO1混在）。共通相手3組はZero有利が一部ある。②Tips.gg独自順位ではZero #119に対しPuckChamp #41で順位の方向が逆。①と②は完全一致しないためA−はユーザー指定の候補表示であり高信頼確定ではない。",
+        "risk": "独自ランキングはPuckChampが上。H2Hの旧ロスター・直近BO1混入・相手の強さに注意。",
+        "analysis_detail": {
+          "summary": "①旧対戦3シリーズはZero Tenacity 3勝0敗（マップ6-1）。直近10シリーズ／試合はZero 5勝5敗、PuckChamp 3勝7敗（BO1混在）。共通相手3組はZero有利が一部ある。②Tips.gg独自順位ではZero #119に対しPuckChamp #41で順位の方向が逆。①と②は完全一致しないためA−はユーザー指定の候補表示であり高信頼確定ではない。",
+          "ranking_or_rating": {
+            "text": "Tips.gg 2026-10-14閲覧：Zero Tenacity独自順位#119／PuckChamp #41、直近30日勝率約56%／29%。同サイト独自ランキングで公式世界順位ではない。ランキングはPuckChamp優位、近況はZero優位。"
+          },
+          "h2h": {
+            "summary": "公開確認した過去3シリーズすべてZero Tenacity勝ち（3-0、マップ6-1）。旧ロスター差に留意。",
+            "items": [
+              {
+                "date": "2026-09-16",
+                "label": "European Pro League Season 40",
+                "result": "Zero Tenacity 2–1 PuckChamp"
+              },
+              {
+                "date": "2026-08-31",
+                "label": "EPL Masters II",
+                "result": "Zero Tenacity 2–0 PuckChamp"
+              },
+              {
+                "date": "2026-07-30",
+                "label": "EPL Masters I",
+                "result": "Zero Tenacity 2–0 PuckChamp"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Zero Tenacity",
+              "summary": "10件確認、5勝5敗。うちBO1の勝利2件。10/14対MENA Warriors戦は結果未確認のためここに含めない。",
+              "items": [
+                {
+                  "date": "2026-10-13",
+                  "label": "Team Lynx／EPL Masters III",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "2026-10-09",
+                  "label": "The Warriors／DreamLeague予選",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "2026-10-09",
+                  "label": "Nemiga Gaming／DreamLeague予選",
+                  "result": "1–0 ○ BO1"
+                },
+                {
+                  "date": "2026-10-09",
+                  "label": "Leto／DreamLeague予選",
+                  "result": "1–0 ○ BO1"
+                },
+                {
+                  "date": "2026-09-22",
+                  "label": "Team Lynx／EPL40",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "2026-09-21",
+                  "label": "Two Move／EPL40",
+                  "result": "0–2 × BO3"
+                },
+                {
+                  "date": "2026-09-17",
+                  "label": "BALU Team／EPL40",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "2026-09-16",
+                  "label": "PuckChamp／EPL40",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-09-15",
+                  "label": "Nemiga Gaming／EPL40",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "2026-09-14",
+                  "label": "Team Lynx／EPL40",
+                  "result": "2–1 ○ BO3"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "PuckChamp",
+              "summary": "10件確認、3勝7敗。10/14 Team Lynxに敗戦（マップスコア未確認）を含む。10/9の1マップ勝利を含むのでBO3フォームと混同しない。",
+              "items": [
+                {
+                  "date": "2026-10-14",
+                  "label": "Team Lynx／EPL Masters III",
+                  "result": "敗戦 ×（マップスコア未確認）"
+                },
+                {
+                  "date": "2026-10-12",
+                  "label": "CyberHero／EPL Masters III",
+                  "result": "0–2 × BO3"
+                },
+                {
+                  "date": "2026-10-10",
+                  "label": "old blood／DreamLeague予選",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-10-09",
+                  "label": "1nter t1de／DreamLeague予選",
+                  "result": "1–0 ○ BO1"
+                },
+                {
+                  "date": "2026-09-20",
+                  "label": "BALU Team／EPL40",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "2026-09-20",
+                  "label": "Team Lynx／EPL40",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "2026-09-16",
+                  "label": "Zero Tenacity／EPL40",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "2026-09-15",
+                  "label": "Team Synapse／EPL40",
+                  "result": "0–2 × BO3"
+                },
+                {
+                  "date": "2026-09-12",
+                  "label": "Nemiga Gaming／EPL40",
+                  "result": "0–2 × BO3"
+                },
+                {
+                  "date": "2026-09-05",
+                  "label": "Pipsqueak+4／EPL Masters II",
+                  "result": "0–2 × BO3"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "公開確認の共通対戦相手3組。Team Lynxは両者とも敗戦（PuckChampスコア未確認）、NemigaはZero勝利、BALUは両者勝利。",
+            "items": [
+              {
+                "opponent": "Team Lynx",
+                "side_a": {
+                  "date": "2026-10-13",
+                  "result": "Zero 1–2 ×"
+                },
+                "side_b": {
+                  "date": "2026-10-14",
+                  "result": "PuckChamp ×（マップスコア未確認）"
+                },
+                "comparison": "双方敗戦。PuckChampの最終マップスコア未確認につき、マップ差で優劣は決めない。"
+              },
+              {
+                "opponent": "Nemiga Gaming",
+                "side_a": {
+                  "date": "2026-10-09",
+                  "result": "Zero 1–0 ○（BO1）"
+                },
+                "side_b": {
+                  "date": "2026-09-12",
+                  "result": "PuckChamp 0–2 ×（BO3）"
+                },
+                "comparison": "Zero優勢方向だがBO1とBO3が異なる。"
+              },
+              {
+                "opponent": "BALU Team",
+                "side_a": {
+                  "date": "2026-09-17",
+                  "result": "Zero 2–0 ○"
+                },
+                "side_b": {
+                  "date": "2026-09-20",
+                  "result": "PuckChamp 2–0 ○"
+                },
+                "comparison": "同一シリーズ勝敗で差なし。"
+              }
+            ]
+          },
+          "home_away": {
+            "text": "2026-10-15 22:00 JST。EPL Masters III Play-In Group A、BO3 Online。Tips.ggおよびbo3.ggの掲載13:00 UTCをJSTに変換。"
+          },
+          "availability": {
+            "text": "Zero Tenacity／PuckChampの出場5名は過去H2Hと同一保証なし。試合当日ロスターの公式確定は未確認。"
+          },
+          "sport_specific": {
+            "text": "Patch 7.41f、Draft前分析。BO3でヒーローピック、レーン対面、サイドの確定情報なし。シリーズの3-0 H2Hだけで確勝とはできない。"
+          },
+          "market": {
+            "text": "カジ旅・遊雅堂・bet365の掲載確認不能。購入オッズ未確認、精算オッズ未登録。"
+          },
+          "post_match": {
+            "text": "Zero Tenacity 2–0 PuckChamp、○的中。専門統計サイトの最終結果で確認。事後申告参考オッズ1.15倍、仮想100USDで+15USD。試合前のVeto予測とは区別。"
+          }
+        },
+        "result_status": "final",
+        "result": "Zero Tenacity 2–0 PuckChamp",
+        "result_winner": "Zero Tenacity",
+        "favored_result": "win",
+        "result_verified_at": "2026-10-16T00:23:00+09:00",
+        "result_source": "https://ensigame.com/matches/dota-2/2188471-zero-tenacity-z10-vs-puckchamp-puckchamp-epl-15-10-26",
+        "result_sources": [
+          "https://ensigame.com/matches/dota-2/2188471-zero-tenacity-z10-vs-puckchamp-puckchamp-epl-15-10-26"
+        ]
+      },
+      {
+        "rank": 2,
+        "match_id": "2026-10-15-heroic-envy-cs2",
+        "event_id": "web-2026-10-15-heroic-envy-cs2",
+        "matchup": "HEROIC vs Envy",
+        "favored": "HEROIC",
+        "selection_label": "HEROIC",
+        "sport": "CS2",
+        "competition": "Stake Pulse Beat III — Group D opening match",
+        "start_jst": "2026-10-15T21:00:00+09:00",
+        "venue": "Stockholm, Sweden",
+        "format": "BO3 / LAN",
+        "status": "formal",
+        "gap_grade": "A−候補（暫定）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": 30,
+        "profit_status": "○的中。ユーザー申告の約1.30倍を参考精算。仮想100USDに対して払戻約130.00USD・概算純利益+約30USD。実購入利益と区別。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "カジ旅／遊雅堂／bet365掲載確認不能。価格差は未判定。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-14T22:48:00+09:00",
+        "analysis_reviewed_at": "2026-10-14T22:48:00+09:00",
+        "sources": [
+          "https://www.hltv.org/matches/2399137/heroic-vs-envy-stake-pulse-beat-iii",
+          "https://www.hltv.org/team/4914/3dmax",
+          "https://www.hltv.org/team/5991/envy",
+          "https://www.hltv.org/events/9223/stake-pulse-beat-iii"
+        ],
+        "conclusion": "①HEROICは直近10シリーズ8勝2敗、旧3DMAXの現Envyコアは直近10試合6勝4敗（1MAPとBO5混在）。現5人コア同士の旧3DMAX名義H2Hは2026-07-15と09-02の2シリーズ、ともにHEROIC 2-1勝利。②現在HLTVはHEROIC #30／Envy #20でEnvy優位だがVRSはHEROIC #21／Envy #27でHEROIC優位。したがって①と②は完全には一致しない。A−は指定の暫定候補。",
+        "risk": "HLTV世界順位はEnvyのほうが上。Envyは3DMAXの現行五人コアそのまま。Map選択次第で逆転リスク、Veto前。",
+        "analysis_detail": {
+          "summary": "①HEROICは直近10シリーズ8勝2敗、旧3DMAXの現Envyコアは直近10試合6勝4敗（1MAPとBO5混在）。現5人コア同士の旧3DMAX名義H2Hは2026-07-15と09-02の2シリーズ、ともにHEROIC 2-1勝利。②現在HLTVはHEROIC #30／Envy #20でEnvy優位だがVRSはHEROIC #21／Envy #27でHEROIC優位。したがって①と②は完全には一致しない。A−は指定の暫定候補。",
+          "ranking_or_rating": {
+            "text": "HLTV対戦ページ：HEROIC HLTV#30・VRS#21（1494pt）、Envy HLTV#20・VRS#27（1439pt）。HLTV順位はEnvy優位、VRS順位はHEROIC優位。世界順位差だけで大格差とは認定しない。"
+          },
+          "h2h": {
+            "summary": "HEROIC対『Envy名義』の現コア直接対決は0件（新ブランド移籍後初戦）。旧3DMAXの現Envy五人コアを遡ると7/15、9/2の2シリーズともHEROIC 2–1勝ち（シリーズ2–0、マップ4–2）。2/16のHEROIC 2–0 3DMAXは当時と現ロスター差があるため参考度低下として別掲。",
+            "items": [
+              {
+                "date": "2026-09-02",
+                "label": "IEM Beijing 2026 Closed Qualifier／旧3DMAX現在コア",
+                "result": "HEROIC 2–1 3DMAX（Cache 8–13／Dust2 13–5／Inferno 13–5）"
+              },
+              {
+                "date": "2026-07-15",
+                "label": "Stake Ranked Episode 3／旧3DMAX現在コア",
+                "result": "HEROIC 2–1 3DMAX（Cache 8–13／Inferno 13–8／Nuke 13–8）"
+              },
+              {
+                "date": "2026-02-16",
+                "label": "PGL Cluj-Napoca 2026／旧コア参考度低下",
+                "result": "HEROIC 2–0 3DMAX（Inferno 13–10／Nuke 13–5）"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "HEROIC",
+              "summary": "HLTV対戦ページの直近10シリーズ8勝2敗、5連勝中。",
+              "items": [
+                {
+                  "date": "2026-09-26",
+                  "label": "100 Thieves",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-09-26",
+                  "label": "Sangal",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-09-25",
+                  "label": "fnatic",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-09-22",
+                  "label": "BBL",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "2026-09-22",
+                  "label": "Johnny Speeds",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "2026-09中旬",
+                  "label": "Virtus.pro",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "2026-09中旬",
+                  "label": "1win",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-09中旬",
+                  "label": "K27",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-09上旬",
+                  "label": "BESTIA",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "2026-09上旬",
+                  "label": "1win",
+                  "result": "1–2 × BO3"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Envy（旧3DMAX現5人コア）",
+              "summary": "HLTV『Team core』比較10件、6勝4敗。BO5は1件、1MAP決着は4件。Envy名義はこの時期まだ公式戦がないため、3DMAX名義の同一コアに遡ったものであることを明示。",
+              "items": [
+                {
+                  "date": "2026-09末",
+                  "label": "GamerLegion",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "2026-09末",
+                  "label": "Alliance",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "2026-09末",
+                  "label": "Ninjas in Pyjamas",
+                  "result": "0–2 × BO3"
+                },
+                {
+                  "date": "2026-09末",
+                  "label": "Luminosity",
+                  "result": "3–2 ○ BO5"
+                },
+                {
+                  "date": "2026-09末",
+                  "label": "Inner Circle",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-09末",
+                  "label": "M80",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "2026-09中旬",
+                  "label": "INFINITE",
+                  "result": "13–7 ○ Dust2 1MAP"
+                },
+                {
+                  "date": "2026-09中旬",
+                  "label": "Liquid",
+                  "result": "6–13 × Nuke 1MAP"
+                },
+                {
+                  "date": "2026-09中旬",
+                  "label": "BBL",
+                  "result": "16–14 ○ Ancient 1MAP"
+                },
+                {
+                  "date": "2026-09中旬",
+                  "label": "Inner Circle",
+                  "result": "9–13 × Nuke 1MAP"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "両チーム現行コアの公開近況で比較可能な相手2組（100 Thieves／NiP）に限定して掲載。古い年度・3DMAXからの5人移籍を明記。",
+            "items": [
+              {
+                "opponent": "100 Thieves",
+                "side_a": {
+                  "date": "2026-09-26",
+                  "result": "HEROIC 2–1 ○"
+                },
+                "side_b": {
+                  "date": "2026-09上旬",
+                  "result": "旧3DMAX現Envyコア 0–2 ×"
+                },
+                "comparison": "HEROIC有利。"
+              },
+              {
+                "opponent": "Ninjas in Pyjamas",
+                "side_a": {
+                  "date": "2026-07末",
+                  "result": "HEROIC 1–2 ×"
+                },
+                "side_b": {
+                  "date": "2026-09末",
+                  "result": "旧3DMAX現Envyコア 0–2 ×"
+                },
+                "comparison": "両敗戦、時期違い。"
+              }
+            ]
+          },
+          "home_away": {
+            "text": "HLTV掲載2026-10-15 12:00 UTC＝21:00 JST。Stake Pulse Beat III、Group D opening、BO3 LAN（ストックホルム）。"
+          },
+          "availability": {
+            "text": "HEROIC：Brollan／MartinezSa／nilo／Chr1zN／susp。Envy：Graviti／Kursy／Maka／misutaaa／Lucky。HLTV移籍履歴によると2026-09-29に旧3DMAXの5人全員がEnvyへ移籍。HEROIC監督Snappiの就任は直近。最終登録・突発欠場未確認。"
+          },
+          "sport_specific": {
+            "text": "Veto前分析。HLTVの『現コア・過去3か月』：HEROIC Cache55%/11、Dust2 65%/17、Mirage75%/12、Inferno79%/14、Nuke70%/10、Ancient67%/15。Envy Cache56%/16、Dust2 77%/13、Mirage試合数0、Inferno50%/14、Nuke33%/12、Ancient50%/14。Veto未発表。パターンはHEROICに全面優位ではなくDust2ではEnvyが上。"
+          },
+          "market": {
+            "text": "HLTV掲載の複数業者参考HEROIC 1.45–1.48／Envy 2.50–2.61付近。これらは購入オッズではなく、カジ旅・遊雅堂・bet365での掲載確認はできていない。独立推定勝率とEVは算定せず。"
+          },
+          "post_match": {
+            "text": "HEROIC 2–1 Envy（Cache 16–14／Inferno 8–13／Ancient 13–4）、○的中。専門統計サイトの最終結果で確認。事後申告参考オッズ約1.30倍、仮想100USDで+約30USD。試合前のVeto予測とは区別。"
+          }
+        },
+        "result_status": "final",
+        "result": "HEROIC 2–1 Envy（Cache 16–14／Inferno 8–13／Ancient 13–4）",
+        "result_winner": "HEROIC",
+        "favored_result": "win",
+        "result_verified_at": "2026-10-16T00:23:00+09:00",
+        "result_source": "https://www.hltv.org/matches/2399137/heroic-vs-envy-stake-pulse-beat-iii",
+        "result_sources": [
+          "https://www.hltv.org/matches/2399137/heroic-vs-envy-stake-pulse-beat-iii"
+        ]
+      },
+      {
+        "rank": 3,
+        "match_id": "2026-10-15-9z-falcons-cs2",
+        "event_id": "web-2026-10-15-9z-falcons-cs2",
+        "matchup": "9z vs Falcons",
+        "favored": "Falcons",
+        "selection_label": "Falcons",
+        "sport": "CS2",
+        "competition": "Thunderpick World Championship 2026・Group A勝者戦",
+        "start_jst": "2026-10-15T22:30:00+09:00",
+        "venue": "LAN・会場詳細未確認",
+        "format": "BO3 / LAN（Veto前）",
+        "status": "formal",
+        "gap_grade": "A−候補・H2H逆方向",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": 20,
+        "profit_status": "○的中。ユーザー申告の1.20倍を参考精算。仮想100USDに対して払戻120.00USD・概算純利益+20USD。実購入利益と区別。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "カジ旅・遊雅堂・bet365：個別掲載確認不能。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-15T20:22:00+09:00",
+        "analysis_reviewed_at": "2026-10-15T20:22:00+09:00",
+        "sources": [
+          "https://www.hltv.org/matches/2399409/9z-vs-falcons-thunderpick-world-championship-2026",
+          "https://www.hltv.org/betting/analytics/2399409/9z-vs-falcons-thunderpick-world-championship-2026"
+        ],
+        "conclusion": "①HLTV公開H2H1シリーズは2026/05/10 9z 2–1 Falcons（9z優勢）。一方、直近10シリーズは9z4勝6敗・Falcons6勝4敗、強敵に対する結果と共通相手5組はFalconsにやや優位。②HLTV #5対#17・VRS #4(1866pt)対#11(1564pt)でFalcons優位。①のH2Hと②は不一致、①の近況と②は同方向。ユーザー正式採用だがS/絶対勝利とは評価しない。",
+        "risk": "旧H2Hでは9zがFalconsを2-1で撃破。現行ロスター・BO3/Veto前の変動に注意。9zにもAurora、BETBOOM、TYLOOへの2-0勝利があり、順位差だけで絶対視しない。",
+        "analysis_detail": {
+          "summary": "①HLTV公開H2H1シリーズは2026/05/10 9z 2–1 Falcons（9z優勢）。一方、直近10シリーズは9z4勝6敗・Falcons6勝4敗、強敵に対する結果と共通相手5組はFalconsにやや優位。②HLTV #5対#17・VRS #4(1866pt)対#11(1564pt)でFalcons優位。①のH2Hと②は不一致、①の近況と②は同方向。ユーザー正式採用だがS/絶対勝利とは評価しない。",
+          "ranking_or_rating": {
+            "text": "HLTV試合ページ 2026-10-15：Falcons世界#5、Valve VRS#4・1866pt。9z世界#17、VRS#11・1564pt。VRS差302pt。ランキングの対象はCS2シニア現行チーム。"
+          },
+          "h2h": {
+            "summary": "HLTVの対戦履歴で公開確認されたH2Hは2026/05/10 PGL AstanaのBO3・1シリーズ＝9z2–1 Falcons。マップ別は9z Dust2 13–1勝／Mirage 9–13敗／Nuke 13–8勝。H2H全歴史の完全性までは保証しない。",
+            "items": [
+              {
+                "date": "2026-05-10",
+                "label": "PGL Astana 2026・Dust2",
+                "result": "9z 13–1 Falcons"
+              },
+              {
+                "date": "2026-05-10",
+                "label": "PGL Astana 2026・Mirage",
+                "result": "9z 9–13 Falcons"
+              },
+              {
+                "date": "2026-05-10",
+                "label": "PGL Astana 2026・Nuke",
+                "result": "9z 13–8 Falcons"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "9z",
+              "summary": "HLTV試合ページの直近10BO3：4勝6敗（マップ合計9勝12敗）。Auroraなどに勝利する一方でNAVI・FURIA・Vitality等の強豪には敗戦。試合日付はサイトが相対日時掲載のため日付未転記。",
+              "items": [
+                {
+                  "date": "直近",
+                  "label": "Aurora／Thunderpick WC",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "FURIA",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "BETBOOM",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "Natus Vincere",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "TYLOO",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約2週間前",
+                  "label": "Aurora",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約5週間前",
+                  "label": "G2",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "約5週間前",
+                  "label": "MIBR",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約5週間前",
+                  "label": "5star",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約7週間前",
+                  "label": "Vitality",
+                  "result": "0–2 ×"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Falcons",
+              "summary": "HLTV試合ページの直近10BO3：6勝4敗（マップ合計14勝10敗）。上位Spirit・Vitality・MOUZには敗戦がある。新加入karriganの現行コア集計を掲載。日付は相対日付で記録。",
+              "items": [
+                {
+                  "date": "直近",
+                  "label": "Ninjas in Pyjamas／Thunderpick WC",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "Spirit",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "Natus Vincere",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "Vitality",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "約1週間前",
+                  "label": "Aurora",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約2週間前",
+                  "label": "TYLOO",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約6週間前",
+                  "label": "Spirit",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約6週間前",
+                  "label": "G2",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約6週間前",
+                  "label": "MOUZ",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "約7週間前",
+                  "label": "Legacy",
+                  "result": "2–1 ○"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "同一相手5組：NAVI・G2ではFalcons優位、TYLOOは双方勝ち、Vitalityは双方負け、Auroraは9zが勝敗混在・Falcons勝利。時期と大会が異なるため直接的な勝率へ換算しない。",
+            "items": [
+              {
+                "opponent": "Natus Vincere",
+                "side_a": {
+                  "date": "約1週間前",
+                  "result": "9z 0–2 ×"
+                },
+                "side_b": {
+                  "date": "約1週間前",
+                  "result": "Falcons 2–1 ○"
+                },
+                "comparison": "Falcons方向"
+              },
+              {
+                "opponent": "G2",
+                "side_a": {
+                  "date": "約5週間前",
+                  "result": "9z 1–2 ×"
+                },
+                "side_b": {
+                  "date": "約6週間前",
+                  "result": "Falcons 2–0 ○"
+                },
+                "comparison": "Falcons方向"
+              },
+              {
+                "opponent": "TYLOO",
+                "side_a": {
+                  "date": "約1週間前",
+                  "result": "9z 2–0 ○"
+                },
+                "side_b": {
+                  "date": "約2週間前",
+                  "result": "Falcons 2–0 ○"
+                },
+                "comparison": "同じBO3スコアで差なし"
+              },
+              {
+                "opponent": "Vitality",
+                "side_a": {
+                  "date": "約7週間前",
+                  "result": "9z 0–2 ×"
+                },
+                "side_b": {
+                  "date": "約1週間前",
+                  "result": "Falcons 1–2 ×"
+                },
+                "comparison": "両者敗戦、Falconsが1MAP奪取"
+              },
+              {
+                "opponent": "Aurora",
+                "side_a": {
+                  "date": "直近／約2週間前",
+                  "result": "9z 2–0 ○／0–2 ×"
+                },
+                "side_b": {
+                  "date": "約1週間前",
+                  "result": "Falcons 2–0 ○"
+                },
+                "comparison": "直近9z勝利もあり一概にFalcons優勢ではない"
+              }
+            ]
+          },
+          "home_away": {
+            "text": "Thunderpick World Championship 2026・Group A勝者戦、BO3/LAN、ホーム・アウェー適用なし。HLTVの現在表示13:30 UTC＝22:30JST（それ以前は13:00 UTC＝22:00JSTの掲載も存在）。開始前に再確認必須。"
+          },
+          "availability": {
+            "text": "HLTV掲載：9z dgt/max/meyern/luchov/HUASOPEEK。Falcons karrigan/NiKo/m0NESY/TeSeS/kyousuke。最終サーバー出場5人・直前の代役は未確認。"
+          },
+          "sport_specific": {
+            "text": "Veto前分析。HLTV現行コア過去3か月：9z Dust2 50%(6MAP)、Mirage60%(5)、Inferno25%(4)、Nuke33%(9)、Cache50%(4)。Falcons Dust2 73%(11)、Mirage57%(7)、Inferno80%(5)、Nuke67%(3)、Anubis40%(5)。FalconsはDust2/Inferno優勢だがMirageは9zにわずかな優位。MAP1/2/3未確定。"
+          },
+          "market": {
+            "text": "カジ旅／遊雅堂／bet365の個別掲載確認不能。購入価格、参考精算オッズとも未登録。ユーザー正式指定の勝者市場のみを100USD仮想基準で追跡し、結果後もオッズ不明なら利益は算定しない。"
+          },
+          "post_match": {
+            "text": "9z 1–2 Falcons（Nuke 9–13／Mirage 13–8／Dust2 9–13）、○的中。専門統計サイトの最終結果で確認。事後申告参考オッズ1.20倍、仮想100USDで+20USD。試合前のVeto予測とは区別。"
+          }
+        },
+        "result_status": "final",
+        "result": "9z 1–2 Falcons（Nuke 9–13／Mirage 13–8／Dust2 9–13）",
+        "result_winner": "Falcons",
+        "favored_result": "win",
+        "result_verified_at": "2026-10-16T00:23:00+09:00",
+        "result_source": "https://www.hltv.org/matches/2399409/9z-vs-falcons-thunderpick-world-championship-2026",
+        "result_sources": [
+          "https://www.hltv.org/matches/2399409/9z-vs-falcons-thunderpick-world-championship-2026"
+        ]
+      },
       {
         "rank": 1,
         "match_id": "2026-10-15-furia-betboom-cs2",
@@ -7716,10 +8020,10 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 47,
+      "favored_wins": 50,
       "favored_losses": 5,
       "pending": 0,
-      "note": "2026/10/15 FURIA○ 2–0。ユーザー事後申告の参考1.29倍により仮想100USD基準で概算純利益+29USD（払戻129USD）。既存の精算済み結果・収支は維持。"
+      "note": "10/15 3件○：Zero Tenacity 2-0 1.15 +$15、HEROIC 2-1 約1.30 約+$30、Falcons 2-1 1.20 +$20。今回の合計仮想+約$65、10/15 FURIA 1.29 +$29を含めると同日仮想+約$94（各100USD）。ユーザー申告倍率・実購入と区別。"
     }
   },
   "history_policy": {
@@ -7727,7 +8031,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-15T20:47:20+09:00",
-    "note": "9z–Falcons正式採用、①H2H/直近10/共通5と②現行VRSを照合。FURIA-BETBOOM公式2-0で履歴に移動、利益は価格未確認のため計上しない。 FURIAの参考精算オッズ1.29倍をユーザー事後申告で追記し、仮想100USD基準+29USDとして概算精算。"
+    "as_of": "2026-10-16T00:23:00+09:00",
+    "note": "2026/10/16 00:23 Vegas-Calgary正式採用。終了済みZero Tenacity、HEROIC、Falcons3件確定し結果履歴へ移動、ユーザー申告1.15/約1.30/1.20で仮想$100参考精算、3件合計+約$65。NHL H2H10・直近10(前季別記)・共通3の分析を保存。"
   }
 }

@@ -1855,6 +1855,122 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-2026-10-16-0023-result-update",
+      "kind": "result_update",
+      "at": "2026-10-16T00:23:00+09:00",
+      "source": "HLTV CS2試合結果・Ensigame Dota2終了試合結果",
+      "note": "10/15終了のZero Tenacity 2-0 PuckChamp、HEROIC 2-1 Envy、9z 1-2 Falconsの3件を結果確定。参考オッズ1.15、約1.30、1.20は別途ユーザー申告としてrecommendationsへ追記。",
+      "changes": [
+        {
+          "match_id": "2026-10-15-zero-tenacity-puckchamp-dota2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "Zero Tenacity 2–0 PuckChamp"
+            },
+            "result_confirmed_at": "2026-10-16T00:23:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Ensigame finalized match result",
+                "url": "https://ensigame.com/matches/dota-2/2188471-zero-tenacity-z10-vs-puckchamp-puckchamp-epl-15-10-26",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-16T00:23:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "対象試合の最終シリーズ勝敗・スコアを公開結果ページで照合済み。確認時刻は試合終了時刻ではない。"
+          }
+        },
+        {
+          "match_id": "2026-10-15-heroic-envy-cs2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 1
+              },
+              "periods": {
+                "map1": {
+                  "a": 16,
+                  "b": 14
+                },
+                "map2": {
+                  "a": 8,
+                  "b": 13
+                },
+                "map3": {
+                  "a": 13,
+                  "b": 4
+                }
+              },
+              "text": "HEROIC 2–1 Envy（Cache 16–14／Inferno 8–13／Ancient 13–4）"
+            },
+            "result_confirmed_at": "2026-10-16T00:23:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "HLTV finalized match result",
+                "url": "https://www.hltv.org/matches/2399137/heroic-vs-envy-stake-pulse-beat-iii",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-16T00:23:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "対象試合の最終シリーズ勝敗・スコアを公開結果ページで照合済み。確認時刻は試合終了時刻ではない。"
+          }
+        },
+        {
+          "match_id": "2026-10-15-9z-falcons-cs2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 2
+              },
+              "periods": {
+                "map1": {
+                  "a": 9,
+                  "b": 13
+                },
+                "map2": {
+                  "a": 13,
+                  "b": 8
+                },
+                "map3": {
+                  "a": 9,
+                  "b": 13
+                }
+              },
+              "text": "9z 1–2 Falcons（Nuke 9–13／Mirage 13–8／Dust2 9–13）"
+            },
+            "result_confirmed_at": "2026-10-16T00:23:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "HLTV finalized match result",
+                "url": "https://www.hltv.org/matches/2399409/9z-vs-falcons-thunderpick-world-championship-2026",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-16T00:23:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "対象試合の最終シリーズ勝敗・スコアを公開結果ページで照合済み。確認時刻は試合終了時刻ではない。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }

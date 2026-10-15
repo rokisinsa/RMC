@@ -232,6 +232,13 @@
       "at": "2026-10-15T20:22:00+09:00",
       "source": "ユーザー正式採用指示・HLTV最新試合ページ確認",
       "note": "9z–Falcons 2026/10/15 22:30 JST(現在HLTV表示、旧22:00)を登録。公式最新時刻の変更を注記。"
+    },
+    {
+      "run_id": "mr-user-approved-20261016-0023",
+      "kind": "human_review",
+      "at": "2026-10-16T00:23:00+09:00",
+      "source": "ユーザー正式指定、NHL公式日程/試合ページ、Hockey-Reference、H2H専門記録の照合",
+      "note": "Vegas Golden Knights vs Calgary Flames 2026/10/16 11:00JSTレギュラーシーズン・Vegas勝者を登録。H2H10、直近10(前季混在分けて明記)、共通今季3組を検証。"
     }
   ],
   "matches": [
@@ -4373,6 +4380,45 @@
         "https://www.hltv.org/betting/analytics/2399409/9z-vs-falcons-thunderpick-world-championship-2026"
       ],
       "verified_at": "2026-10-15T20:22:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-16-vegas-calgary-nhl",
+      "sport": "NHL",
+      "competition": "NHL 2026-27 Regular Season — Vegas Golden Knights vs Calgary Flames",
+      "side_a": "Vegas Golden Knights",
+      "side_b": "Calgary Flames",
+      "home_side": "side_a",
+      "venue": "T-Mobile Arena, Las Vegas, Nevada, USA",
+      "start_at": "2026-10-16T11:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "2026/10/15 19:00 PDT、公式VegasカレンダーとNHLゲームセンターで確認。JST 10/16 11:00。",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261016-0023",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "開始前の正式登録。勝者市場はOT/SOを含む（60分勝利市場と混同しない）。"
+        }
+      ],
+      "sources": [
+        "https://www.nhl.com/cs/gamecenter/cgy-vs-vgk/2026/10/15/2026020118",
+        "https://www.nhl.com/goldenknights/tickets/single-game-member",
+        "https://pucky.com/matchup/flames-vs-golden-knights/",
+        "https://www.covers.com/sport/hockey/nhl/matchup/382394",
+        "https://www.hockey-reference.com/teams/VEG/2027.html",
+        "https://www.hockey-reference.com/teams/CGY/2027_games.html",
+        "https://www.statmuse.com/nhl/team/vegas-38/schedule/2026",
+        "https://www.statmuse.com/nhl/team/calgary-flames-21/schedule/2026"
+      ],
+      "verified_at": "2026-10-16T00:23:00+09:00",
       "flags": []
     }
   ]
