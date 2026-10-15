@@ -1809,6 +1809,52 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-2026-10-15-2022-result-update",
+      "kind": "result_update",
+      "at": "2026-10-15T20:22:00+09:00",
+      "source": "HLTV公式結果ページの試合スコア",
+      "note": "FURIA-BETBOOMを2-0で結果確定。購入オッズ・参考オッズ不明につき的中（○）のみ反映、参考純利益は未計算。既存結果更新ログを変更せず追記。",
+      "changes": [
+        {
+          "match_id": "2026-10-15-furia-betboom-cs2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "periods": {
+                "map1": {
+                  "a": 13,
+                  "b": 10
+                },
+                "map2": {
+                  "a": 13,
+                  "b": 9
+                }
+              },
+              "text": "FURIA 2–0 BETBOOM（Ancient 13–10, Mirage 13–9）"
+            },
+            "result_confirmed_at": "2026-10-15T20:22:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "HLTV match results",
+                "url": "https://www.hltv.org/matches/2399387/furia-vs-betboom-thunderpick-world-championship-2026",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-15T20:22:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "HLTV記録のBO3最終結果。確認時刻を採用、実際の試合終了時刻ではない。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }

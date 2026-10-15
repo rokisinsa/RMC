@@ -225,6 +225,13 @@
       "at": "2026-10-14T22:48:00+09:00",
       "source": "ユーザー正式指定・大会日程およびHLTV／専門試合DB照合",
       "note": "Zero Tenacity–PuckChamp（15日22:00JST）、HEROIC–Envy（15日21:00JST）を登録。Envyの過去5人コアは3DMAXを遡る。"
+    },
+    {
+      "run_id": "mr-user-approved-20261015-2022",
+      "kind": "human_review",
+      "at": "2026-10-15T20:22:00+09:00",
+      "source": "ユーザー正式採用指示・HLTV最新試合ページ確認",
+      "note": "9z–Falcons 2026/10/15 22:30 JST(現在HLTV表示、旧22:00)を登録。公式最新時刻の変更を注記。"
     }
   ],
   "matches": [
@@ -4333,6 +4340,39 @@
         "https://www.hltv.org/events/9223/stake-pulse-beat-iii"
       ],
       "verified_at": "2026-10-14T22:48:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-15-9z-falcons-cs2",
+      "sport": "CS2",
+      "competition": "Thunderpick World Championship 2026 — Group A winners' match",
+      "side_a": "9z",
+      "side_b": "Falcons",
+      "home_side": "neutral",
+      "venue": "LAN・会場詳細未確認",
+      "start_at": "2026-10-15T22:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "HLTV最新表示13:30 UTC=22:30JST。旧表示13:00 UTC=22:00JSTのため開始直前再確認必須。",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261015-2022",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定、試合開始前に確認。HLTVのBO3/LAN開催情報を照合。"
+        }
+      ],
+      "sources": [
+        "https://www.hltv.org/matches/2399409/9z-vs-falcons-thunderpick-world-championship-2026",
+        "https://www.hltv.org/betting/analytics/2399409/9z-vs-falcons-thunderpick-world-championship-2026"
+      ],
+      "verified_at": "2026-10-15T20:22:00+09:00",
       "flags": []
     }
   ]

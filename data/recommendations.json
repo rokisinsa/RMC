@@ -213,6 +213,12 @@
       "started_at": "2026-10-14T22:48:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー正式指定2件（Zero Tenacity／HEROIC）を①推奨へ。H2H・直近10・共通対戦相手・②総合戦力は本日の分析に詳細保存。格付けA−は暫定で①②に食い違いあり。"
+    },
+    {
+      "run_id": "rec-user-approved-20261015-2022",
+      "started_at": "2026-10-15T20:22:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー指定9z–FalconsのFalcons勝者市場を正式採用。HLTV公開H2H1シリーズ/直近10/共通5と現行VRS/ロスター/マップを照合。①H2Hは逆向き。"
     }
   ],
   "picks": [
@@ -4712,6 +4718,35 @@
         "odds_unverified"
       ],
       "note": "A−はユーザー指定の暫定候補グレード。勝者市場、100USD仮想追跡。購入オッズ未確定。①実績と②現在戦力に食い違いがあり高確信として扱わない。"
+    },
+    {
+      "id": "rec-2026-10-15-9z-falcons-cs2",
+      "system": "recommendations",
+      "match_id": "2026-10-15-9z-falcons-cs2",
+      "run_id": "rec-user-approved-20261015-2022",
+      "source_event_id": "web-2026-10-15-9z-falcons-cs2",
+      "market": "match_winner",
+      "market_label": "Falcons BO3シリーズ勝者",
+      "selection": "side_b",
+      "selection_label": "Falcons",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-15T20:22:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-15T20:22:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−候補・ユーザー指定正式（H2H 9z側、直近フォーム＋ランキングFalcons側）",
+        "model_version": "RMC-dual-analysis-20261015",
+        "summary": "①HLTV公開H2H1シリーズは2026/05/10 9z 2–1 Falcons（9z優勢）。一方、直近10シリーズは9z4勝6敗・Falcons6勝4敗、強敵に対する結果と共通相手5組はFalconsにやや優位。②HLTV #5対#17・VRS #4(1866pt)対#11(1564pt)でFalcons優位。①のH2Hと②は不一致、①の近況と②は同方向。ユーザー正式採用だがS/絶対勝利とは評価しない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定による正式追跡、仮想100USD。賭けを購入したことを示さない。オッズ未取得で利益未算定。"
     }
   ]
 }

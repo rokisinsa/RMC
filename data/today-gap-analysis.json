@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-14T22:48:00+09:00",
+  "generated_at": "2026-10-15T20:22:00+09:00",
   "window": {
-    "from": "2026-10-14T22:48:00+09:00",
-    "to": "2026-10-15T23:30:00+09:00",
+    "from": "2026-10-15T20:22:00+09:00",
+    "to": "2026-10-16T20:22:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "正式新規2件（Zero Tenacity、HEROIC）を追加。10/14終了済み①Lynx、③柏、④Astralisは結果・参考収支を確定し分析履歴へ移動。②FURIAは未開始で継続。"
+    "note": "10/15 20:22JST時点の今後24時間。前回から残るZero Tenacity、HEROICと新規Falconsの正式推奨3件。FURIAは結果を確定し履歴移動。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -23,216 +23,11 @@
       "サッカー｜AFCチャンピオンズリーグ・エリート",
       "既掲載CS2・LoL・既存Overwatch結果精算"
     ],
-    "note": "HLTV、3DMAX→Envyの5名移籍履歴、Liquipedia、bo3.gg、Tips.gg、柏／AFC公式で照合。新規2件は①②が完全一致せずA−は暫定。カジ旅／遊雅堂／bet365掲載確認不能。"
+    "note": "HLTV現行ロスター/試合記録を照合。Falconsは過去9z戦でH2H負け。過去10シリーズ・共通5組確認。その他24hのリアル/E-sport横断探索は別途この回答で検証、正式推奨はユーザー指定の3件のみ。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-10-15-furia-betboom-cs2",
-      "event_id": "web-2026-10-15-furia-betboom-cs2",
-      "matchup": "FURIA vs BETBOOM",
-      "favored": "FURIA",
-      "selection_label": "FURIA",
-      "sport": "CS2",
-      "competition": "Thunderpick World Championship 2026・Group B opening match",
-      "start_jst": "2026-10-15T03:00:00+09:00",
-      "venue": "LAN（詳細会場未確認）",
-      "format": "BO3 / LAN",
-      "status": "formal",
-      "gap_grade": "A-（参考）",
-      "price_grade": "未判定",
-      "market": "match_winner",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合未決着。購入・精算オッズ未登録のため概算損益は未算出（100USDはRMC追跡用の仮想基準額）。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "カジ旅／遊雅堂／bet365：掲載確認不能。オッズ未確認・推定で補完しない。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-14T12:36:00+09:00",
-      "analysis_reviewed_at": "2026-10-14T12:36:00+09:00",
-      "sources": [
-        "https://www.hltv.org/matches/2399387/furia-vs-betboom-thunderpick-world-championship-2026"
-      ],
-      "conclusion": "①過去シリーズH2HはFURIA 3勝1敗、直近6シリーズはFURIA 3勝3敗／BETBOOM 2勝4敗。②HLTV #4対#14／VRS #7対#12がFURIA優勢を示す。①②同方向だが格差を過信しない。",
-      "risk": "直近FURIAは3勝3敗で無敵ではない。古いH2Hにロスター差。Veto未発表。",
-      "analysis_detail": {
-        "summary": "①過去シリーズH2HはFURIA 3勝1敗、直近6シリーズはFURIA 3勝3敗／BETBOOM 2勝4敗。②HLTV #4対#14／VRS #7対#12がFURIA優勢を示す。①②同方向だが格差を過信しない。",
-        "ranking_or_rating": {
-          "text": "HLTV（試合ページ確認時）：FURIA #4／BETBOOM #14、VRS FURIA #7／BETBOOM #12。FURIA VRS1781pt、BETBOOM1522pt（HLTV画面、現況）。"
-        },
-        "h2h": {
-          "summary": "HLTV公開確認：過去4シリーズでFURIA 3勝1敗。マップ勝敗はFURIA 6–2。古い2024/2025のメンバー差に留意。",
-          "items": [
-            {
-              "date": "2026-10-03",
-              "label": "ESL Pro League S24",
-              "result": "FURIA 2–0 BETBOOM（Mirage 13–5／Cache 16–14）"
-            },
-            {
-              "date": "2026-06-13",
-              "label": "IEM Cologne Major 2026",
-              "result": "FURIA 2–0 BETBOOM（Dust2 13–6／Overpass 13–6）"
-            },
-            {
-              "date": "2025-01-19",
-              "label": "BLAST Bounty 2025 S1",
-              "result": "FURIA 1–2 BETBOOM（Dust2 13–11／Mirage 11–13／Anubis 7–13）"
-            },
-            {
-              "date": "2024-06-05",
-              "label": "YaLLa Compass 2024",
-              "result": "FURIA 1–0 BETBOOM（Nuke 13–1、1MAP）"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "FURIA",
-            "summary": "HLTV掲載直近6シリーズ、3勝3敗、マップ7–7。日付は同ページの相対表記『約1週間前』。",
-            "items": [
-              {
-                "date": "直近・約1週間前",
-                "label": "MOUZ",
-                "result": "0–2 × BO3"
-              },
-              {
-                "date": "直近・約1週間前",
-                "label": "9z",
-                "result": "2–0 ○ BO3"
-              },
-              {
-                "date": "直近・約1週間前",
-                "label": "Aurora",
-                "result": "1–2 × BO3"
-              },
-              {
-                "date": "直近・約1週間前",
-                "label": "PARIVISION",
-                "result": "2–1 ○ BO3"
-              },
-              {
-                "date": "直近・約1週間前",
-                "label": "MOUZ",
-                "result": "0–2 × BO3"
-              },
-              {
-                "date": "2026-10-03",
-                "label": "BETBOOM",
-                "result": "2–0 ○ BO3"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "BETBOOM",
-            "summary": "HLTV掲載直近6シリーズ、2勝4敗、マップ6–8。日付は同ページの相対表記に従う。",
-            "items": [
-              {
-                "date": "直近・約1週間前",
-                "label": "9z",
-                "result": "0–2 × BO3"
-              },
-              {
-                "date": "直近・約1週間前",
-                "label": "Aurora",
-                "result": "1–2 × BO3"
-              },
-              {
-                "date": "直近・約1週間前",
-                "label": "M80",
-                "result": "2–0 ○ BO3"
-              },
-              {
-                "date": "2026-10-03",
-                "label": "FURIA",
-                "result": "0–2 × BO3"
-              },
-              {
-                "date": "約4週間前",
-                "label": "G2",
-                "result": "1–2 × BO3"
-              },
-              {
-                "date": "約5週間前",
-                "label": "MIBR",
-                "result": "2–0 ○ BO3"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "HLTV掲載の過去3か月内で4組確認。9zはFURIA優勢、Auroraは同結果。M80/MIBRは双方勝利。5組未達。",
-          "items": [
-            {
-              "opponent": "9z",
-              "side_a": {
-                "date": "約1週間前",
-                "result": "FURIA 2–0 ○"
-              },
-              "side_b": {
-                "date": "約1週間前",
-                "result": "BETBOOM 0–2 ×"
-              },
-              "comparison": "FURIA側が優位"
-            },
-            {
-              "opponent": "Aurora",
-              "side_a": {
-                "date": "約1週間前",
-                "result": "FURIA 1–2 ×"
-              },
-              "side_b": {
-                "date": "約1週間前",
-                "result": "BETBOOM 1–2 ×"
-              },
-              "comparison": "シリーズスコア同等"
-            },
-            {
-              "opponent": "M80",
-              "side_a": {
-                "date": "約7週間前",
-                "result": "FURIA 2–0 ○"
-              },
-              "side_b": {
-                "date": "約1週間前",
-                "result": "BETBOOM 2–0 ○"
-              },
-              "comparison": "ともに勝ち、時期差あり"
-            },
-            {
-              "opponent": "MIBR",
-              "side_a": {
-                "date": "約3週間前",
-                "result": "FURIA 2–0 ○"
-              },
-              "side_b": {
-                "date": "約5週間前",
-                "result": "BETBOOM 2–0 ○"
-              },
-              "comparison": "ともに勝ち"
-            }
-          ]
-        },
-        "home_away": {
-          "text": "LAN BO3、中立開催。HLTV試合ページで18:00 UTC（日本時間10/15 03:00）。"
-        },
-        "availability": {
-          "text": "HLTV表示ロスター：FURIA molodoy / yuurih / FalleN / KSCERATO / YEKINDAR、BETBOOM Magnojez / Boombl4 / d1Ledez / zorte / S1ren。最終出場と直前交代は未確定。"
-        },
-        "sport_specific": {
-          "text": "Veto前。HLTV過去3か月マップ例：FURIA Cache45%/11・Dust2 50%/10・Mirage54%/13・Inferno67%/6・Nuke64%/11・Ancient44%/9、BETBOOM Cache67%/3・Mirage40%/5・Nuke50%/4・Anubis50%/6。Veto未発表のためMap1/2/3を推測しない。"
-        },
-        "market": {
-          "text": "カジ旅／遊雅堂／bet365掲載確認不能。オッズ・実購入価格未登録。勝者市場のみ事前指定。"
-        }
-      }
-    },
-    {
-      "rank": 2,
       "match_id": "2026-10-15-zero-tenacity-puckchamp-dota2",
       "event_id": "web-2026-10-15-zero-tenacity-puckchamp-dota2",
       "matchup": "Zero Tenacity vs PuckChamp",
@@ -464,7 +259,7 @@
       }
     },
     {
-      "rank": 3,
+      "rank": 2,
       "match_id": "2026-10-15-heroic-envy-cs2",
       "event_id": "web-2026-10-15-heroic-envy-cs2",
       "matchup": "HEROIC vs Envy",
@@ -681,6 +476,259 @@
           "text": "HLTV掲載の複数業者参考HEROIC 1.45–1.48／Envy 2.50–2.61付近。これらは購入オッズではなく、カジ旅・遊雅堂・bet365での掲載確認はできていない。独立推定勝率とEVは算定せず。"
         }
       }
+    },
+    {
+      "rank": 3,
+      "match_id": "2026-10-15-9z-falcons-cs2",
+      "event_id": "web-2026-10-15-9z-falcons-cs2",
+      "matchup": "9z vs Falcons",
+      "favored": "Falcons",
+      "selection_label": "Falcons",
+      "sport": "CS2",
+      "competition": "Thunderpick World Championship 2026・Group A勝者戦",
+      "start_jst": "2026-10-15T22:30:00+09:00",
+      "venue": "LAN・会場詳細未確認",
+      "format": "BO3 / LAN（Veto前）",
+      "status": "formal",
+      "gap_grade": "A−候補・H2H逆方向",
+      "price_grade": "未判定",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "100USDは仮想追跡。未開始、購入/参考オッズ未登録。利益計算不可。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "required_win_rate_pct": null,
+        "book_examples": "カジ旅・遊雅堂・bet365：個別掲載確認不能。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-15T20:22:00+09:00",
+      "analysis_reviewed_at": "2026-10-15T20:22:00+09:00",
+      "sources": [
+        "https://www.hltv.org/matches/2399409/9z-vs-falcons-thunderpick-world-championship-2026",
+        "https://www.hltv.org/betting/analytics/2399409/9z-vs-falcons-thunderpick-world-championship-2026"
+      ],
+      "conclusion": "①HLTV公開H2H1シリーズは2026/05/10 9z 2–1 Falcons（9z優勢）。一方、直近10シリーズは9z4勝6敗・Falcons6勝4敗、強敵に対する結果と共通相手5組はFalconsにやや優位。②HLTV #5対#17・VRS #4(1866pt)対#11(1564pt)でFalcons優位。①のH2Hと②は不一致、①の近況と②は同方向。ユーザー正式採用だがS/絶対勝利とは評価しない。",
+      "risk": "旧H2Hでは9zがFalconsを2-1で撃破。現行ロスター・BO3/Veto前の変動に注意。9zにもAurora、BETBOOM、TYLOOへの2-0勝利があり、順位差だけで絶対視しない。",
+      "analysis_detail": {
+        "summary": "①HLTV公開H2H1シリーズは2026/05/10 9z 2–1 Falcons（9z優勢）。一方、直近10シリーズは9z4勝6敗・Falcons6勝4敗、強敵に対する結果と共通相手5組はFalconsにやや優位。②HLTV #5対#17・VRS #4(1866pt)対#11(1564pt)でFalcons優位。①のH2Hと②は不一致、①の近況と②は同方向。ユーザー正式採用だがS/絶対勝利とは評価しない。",
+        "ranking_or_rating": {
+          "text": "HLTV試合ページ 2026-10-15：Falcons世界#5、Valve VRS#4・1866pt。9z世界#17、VRS#11・1564pt。VRS差302pt。ランキングの対象はCS2シニア現行チーム。"
+        },
+        "h2h": {
+          "summary": "HLTVの対戦履歴で公開確認されたH2Hは2026/05/10 PGL AstanaのBO3・1シリーズ＝9z2–1 Falcons。マップ別は9z Dust2 13–1勝／Mirage 9–13敗／Nuke 13–8勝。H2H全歴史の完全性までは保証しない。",
+          "items": [
+            {
+              "date": "2026-05-10",
+              "label": "PGL Astana 2026・Dust2",
+              "result": "9z 13–1 Falcons"
+            },
+            {
+              "date": "2026-05-10",
+              "label": "PGL Astana 2026・Mirage",
+              "result": "9z 9–13 Falcons"
+            },
+            {
+              "date": "2026-05-10",
+              "label": "PGL Astana 2026・Nuke",
+              "result": "9z 13–8 Falcons"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "9z",
+            "summary": "HLTV試合ページの直近10BO3：4勝6敗（マップ合計9勝12敗）。Auroraなどに勝利する一方でNAVI・FURIA・Vitality等の強豪には敗戦。試合日付はサイトが相対日時掲載のため日付未転記。",
+            "items": [
+              {
+                "date": "直近",
+                "label": "Aurora／Thunderpick WC",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約1週間前",
+                "label": "FURIA",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約1週間前",
+                "label": "BETBOOM",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約1週間前",
+                "label": "Natus Vincere",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約1週間前",
+                "label": "TYLOO",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約2週間前",
+                "label": "Aurora",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約5週間前",
+                "label": "G2",
+                "result": "1–2 ×"
+              },
+              {
+                "date": "約5週間前",
+                "label": "MIBR",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約5週間前",
+                "label": "5star",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約7週間前",
+                "label": "Vitality",
+                "result": "0–2 ×"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Falcons",
+            "summary": "HLTV試合ページの直近10BO3：6勝4敗（マップ合計13勝9敗）。上位Spirit・Vitality・MOUZには敗戦がある。新加入karriganの現行コア集計を掲載。日付は相対日付で記録。",
+            "items": [
+              {
+                "date": "直近",
+                "label": "Ninjas in Pyjamas／Thunderpick WC",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約1週間前",
+                "label": "Spirit",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約1週間前",
+                "label": "Natus Vincere",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "約1週間前",
+                "label": "Vitality",
+                "result": "1–2 ×"
+              },
+              {
+                "date": "約1週間前",
+                "label": "Aurora",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約2週間前",
+                "label": "TYLOO",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約6週間前",
+                "label": "Spirit",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約6週間前",
+                "label": "G2",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約6週間前",
+                "label": "MOUZ",
+                "result": "1–2 ×"
+              },
+              {
+                "date": "約7週間前",
+                "label": "Legacy",
+                "result": "2–1 ○"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "同一相手5組：NAVI・G2ではFalcons優位、TYLOOは双方勝ち、Vitalityは双方負け、Auroraは9zが勝敗混在・Falcons勝利。時期と大会が異なるため直接的な勝率へ換算しない。",
+          "items": [
+            {
+              "opponent": "Natus Vincere",
+              "side_a": {
+                "date": "約1週間前",
+                "result": "9z 0–2 ×"
+              },
+              "side_b": {
+                "date": "約1週間前",
+                "result": "Falcons 2–1 ○"
+              },
+              "comparison": "Falcons方向"
+            },
+            {
+              "opponent": "G2",
+              "side_a": {
+                "date": "約5週間前",
+                "result": "9z 1–2 ×"
+              },
+              "side_b": {
+                "date": "約6週間前",
+                "result": "Falcons 2–0 ○"
+              },
+              "comparison": "Falcons方向"
+            },
+            {
+              "opponent": "TYLOO",
+              "side_a": {
+                "date": "約1週間前",
+                "result": "9z 2–0 ○"
+              },
+              "side_b": {
+                "date": "約2週間前",
+                "result": "Falcons 2–0 ○"
+              },
+              "comparison": "同じBO3スコアで差なし"
+            },
+            {
+              "opponent": "Vitality",
+              "side_a": {
+                "date": "約7週間前",
+                "result": "9z 0–2 ×"
+              },
+              "side_b": {
+                "date": "約1週間前",
+                "result": "Falcons 1–2 ×"
+              },
+              "comparison": "両者敗戦、Falconsが1MAP奪取"
+            },
+            {
+              "opponent": "Aurora",
+              "side_a": {
+                "date": "直近／約2週間前",
+                "result": "9z 2–0 ○／0–2 ×"
+              },
+              "side_b": {
+                "date": "約1週間前",
+                "result": "Falcons 2–0 ○"
+              },
+              "comparison": "直近9z勝利もあり一概にFalcons優勢ではない"
+            }
+          ]
+        },
+        "home_away": {
+          "text": "Thunderpick World Championship 2026・Group A勝者戦、BO3/LAN、ホーム・アウェー適用なし。HLTVの現在表示13:30 UTC＝22:30JST（それ以前は13:00 UTC＝22:00JSTの掲載も存在）。開始前に再確認必須。"
+        },
+        "availability": {
+          "text": "HLTV掲載：9z dgt/max/meyern/luchov/HUASOPEEK。Falcons karrigan/NiKo/m0NESY/TeSeS/kyousuke。最終サーバー出場5人・直前の代役は未確認。"
+        },
+        "sport_specific": {
+          "text": "Veto前分析。HLTV現行コア過去3か月：9z Dust2 50%(6MAP)、Mirage60%(5)、Inferno25%(4)、Nuke33%(9)、Cache50%(4)。Falcons Dust2 73%(11)、Mirage57%(7)、Inferno80%(5)、Nuke67%(3)、Anubis40%(5)。FalconsはDust2/Inferno優勢だがMirageは9zにわずかな優位。MAP1/2/3未確定。"
+        },
+        "market": {
+          "text": "カジ旅／遊雅堂／bet365の個別掲載確認不能。購入価格、参考精算オッズとも未登録。ユーザー正式指定の勝者市場のみを100USD仮想基準で追跡し、結果後もオッズ不明なら利益は算定しない。"
+        }
+      }
     }
   ],
   "rejected_examples": [
@@ -697,15 +745,16 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "Team Lynx・柏・Astralisは10/14終了として履歴へ",
-      "残るFURIA＋新規Zero Tenacity／HEROIC"
+      "Falcons (世界#5/VRS#4対9z世界#17/VRS#11、H2H逆)",
+      "HEROIC（現行コア要注意）",
+      "Zero Tenacity（独自ランキング逆）"
     ],
     "price_adjusted_top": [],
-    "caution": "Zero TenacityとHEROICはA−候補（ユーザー指定）だが①実績と②ランキングに食い違い。両者とも購入オッズ未確認。既終了3件の参考概算純損益は+$30（各仮想100USD）。",
-    "previous_note": "10/14の①Lynx（勝者のみ確認）+5、③柏（5-1）+15、④Astralis（2-0）+10＝+$30。すべてユーザー参考オッズでの概算で、実購入・実利益なし。"
+    "caution": "3件はユーザー正式採用の追跡対象。オッズ確認できずEV未判定。FURIA的中の金額は価格不明のため未計算。カジ旅／遊雅堂／bet365掲載確認不能。",
+    "previous_note": "FURIA 2–0 BETBOOM ○的中（参考オッズ未登録、利益未算定）。過去精算済み取引の参考利益を変更しない。"
   },
   "previous_analysis": {
-    "generated_at": "2026-10-14T22:48:00+09:00",
+    "generated_at": "2026-10-15T20:22:00+09:00",
     "window": {
       "from": "2026-09-30T17:39:31+09:00",
       "to": "2026-10-01T09:30:00+09:00",
@@ -713,6 +762,223 @@
       "note": "9/30 JSTの残り時間を主対象とし、欧州9/30開催でJST日付またぎになる深夜カードも併記"
     },
     "candidates": [
+      {
+        "rank": 1,
+        "match_id": "2026-10-15-furia-betboom-cs2",
+        "event_id": "web-2026-10-15-furia-betboom-cs2",
+        "matchup": "FURIA vs BETBOOM",
+        "favored": "FURIA",
+        "selection_label": "FURIA",
+        "sport": "CS2",
+        "competition": "Thunderpick World Championship 2026・Group B opening match",
+        "start_jst": "2026-10-15T03:00:00+09:00",
+        "venue": "LAN（詳細会場未確認）",
+        "format": "BO3 / LAN",
+        "status": "formal",
+        "gap_grade": "A-（参考）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中。購入オッズと参考精算オッズがどちらも未登録のため100USD基準の概算利益は未計算（0USDとみなさない）。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "カジ旅／遊雅堂／bet365：掲載確認不能。オッズ未確認・推定で補完しない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-14T12:36:00+09:00",
+        "analysis_reviewed_at": "2026-10-14T12:36:00+09:00",
+        "sources": [
+          "https://www.hltv.org/matches/2399387/furia-vs-betboom-thunderpick-world-championship-2026"
+        ],
+        "conclusion": "①過去シリーズH2HはFURIA 3勝1敗、直近6シリーズはFURIA 3勝3敗／BETBOOM 2勝4敗。②HLTV #4対#14／VRS #7対#12がFURIA優勢を示す。①②同方向だが格差を過信しない。",
+        "risk": "直近FURIAは3勝3敗で無敵ではない。古いH2Hにロスター差。Veto未発表。",
+        "analysis_detail": {
+          "summary": "①過去シリーズH2HはFURIA 3勝1敗、直近6シリーズはFURIA 3勝3敗／BETBOOM 2勝4敗。②HLTV #4対#14／VRS #7対#12がFURIA優勢を示す。①②同方向だが格差を過信しない。",
+          "ranking_or_rating": {
+            "text": "HLTV（試合ページ確認時）：FURIA #4／BETBOOM #14、VRS FURIA #7／BETBOOM #12。FURIA VRS1781pt、BETBOOM1522pt（HLTV画面、現況）。"
+          },
+          "h2h": {
+            "summary": "HLTV公開確認：過去4シリーズでFURIA 3勝1敗。マップ勝敗はFURIA 6–2。古い2024/2025のメンバー差に留意。",
+            "items": [
+              {
+                "date": "2026-10-03",
+                "label": "ESL Pro League S24",
+                "result": "FURIA 2–0 BETBOOM（Mirage 13–5／Cache 16–14）"
+              },
+              {
+                "date": "2026-06-13",
+                "label": "IEM Cologne Major 2026",
+                "result": "FURIA 2–0 BETBOOM（Dust2 13–6／Overpass 13–6）"
+              },
+              {
+                "date": "2025-01-19",
+                "label": "BLAST Bounty 2025 S1",
+                "result": "FURIA 1–2 BETBOOM（Dust2 13–11／Mirage 11–13／Anubis 7–13）"
+              },
+              {
+                "date": "2024-06-05",
+                "label": "YaLLa Compass 2024",
+                "result": "FURIA 1–0 BETBOOM（Nuke 13–1、1MAP）"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "FURIA",
+              "summary": "HLTV掲載直近6シリーズ、3勝3敗、マップ7–7。日付は同ページの相対表記『約1週間前』。",
+              "items": [
+                {
+                  "date": "直近・約1週間前",
+                  "label": "MOUZ",
+                  "result": "0–2 × BO3"
+                },
+                {
+                  "date": "直近・約1週間前",
+                  "label": "9z",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "直近・約1週間前",
+                  "label": "Aurora",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "直近・約1週間前",
+                  "label": "PARIVISION",
+                  "result": "2–1 ○ BO3"
+                },
+                {
+                  "date": "直近・約1週間前",
+                  "label": "MOUZ",
+                  "result": "0–2 × BO3"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "BETBOOM",
+                  "result": "2–0 ○ BO3"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "BETBOOM",
+              "summary": "HLTV掲載直近6シリーズ、2勝4敗、マップ6–8。日付は同ページの相対表記に従う。",
+              "items": [
+                {
+                  "date": "直近・約1週間前",
+                  "label": "9z",
+                  "result": "0–2 × BO3"
+                },
+                {
+                  "date": "直近・約1週間前",
+                  "label": "Aurora",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "直近・約1週間前",
+                  "label": "M80",
+                  "result": "2–0 ○ BO3"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "FURIA",
+                  "result": "0–2 × BO3"
+                },
+                {
+                  "date": "約4週間前",
+                  "label": "G2",
+                  "result": "1–2 × BO3"
+                },
+                {
+                  "date": "約5週間前",
+                  "label": "MIBR",
+                  "result": "2–0 ○ BO3"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "HLTV掲載の過去3か月内で4組確認。9zはFURIA優勢、Auroraは同結果。M80/MIBRは双方勝利。5組未達。",
+            "items": [
+              {
+                "opponent": "9z",
+                "side_a": {
+                  "date": "約1週間前",
+                  "result": "FURIA 2–0 ○"
+                },
+                "side_b": {
+                  "date": "約1週間前",
+                  "result": "BETBOOM 0–2 ×"
+                },
+                "comparison": "FURIA側が優位"
+              },
+              {
+                "opponent": "Aurora",
+                "side_a": {
+                  "date": "約1週間前",
+                  "result": "FURIA 1–2 ×"
+                },
+                "side_b": {
+                  "date": "約1週間前",
+                  "result": "BETBOOM 1–2 ×"
+                },
+                "comparison": "シリーズスコア同等"
+              },
+              {
+                "opponent": "M80",
+                "side_a": {
+                  "date": "約7週間前",
+                  "result": "FURIA 2–0 ○"
+                },
+                "side_b": {
+                  "date": "約1週間前",
+                  "result": "BETBOOM 2–0 ○"
+                },
+                "comparison": "ともに勝ち、時期差あり"
+              },
+              {
+                "opponent": "MIBR",
+                "side_a": {
+                  "date": "約3週間前",
+                  "result": "FURIA 2–0 ○"
+                },
+                "side_b": {
+                  "date": "約5週間前",
+                  "result": "BETBOOM 2–0 ○"
+                },
+                "comparison": "ともに勝ち"
+              }
+            ]
+          },
+          "home_away": {
+            "text": "LAN BO3、中立開催。HLTV試合ページで18:00 UTC（日本時間10/15 03:00）。"
+          },
+          "availability": {
+            "text": "HLTV表示ロスター：FURIA molodoy / yuurih / FalleN / KSCERATO / YEKINDAR、BETBOOM Magnojez / Boombl4 / d1Ledez / zorte / S1ren。最終出場と直前交代は未確定。"
+          },
+          "sport_specific": {
+            "text": "Veto前。HLTV過去3か月マップ例：FURIA Cache45%/11・Dust2 50%/10・Mirage54%/13・Inferno67%/6・Nuke64%/11・Ancient44%/9、BETBOOM Cache67%/3・Mirage40%/5・Nuke50%/4・Anubis50%/6。Veto未発表のためMap1/2/3を推測しない。"
+          },
+          "market": {
+            "text": "カジ旅／遊雅堂／bet365掲載確認不能。オッズ・実購入価格未登録。勝者市場のみ事前指定。"
+          },
+          "post_match": {
+            "text": "HLTVにてFURIA 2–0 BETBOOM、Ancient13–10／Mirage13–9。勝敗判定○。オッズ未確認につき損益は未計算。"
+          }
+        },
+        "result_status": "final",
+        "result": "FURIA 2–0 BETBOOM（Ancient 13–10／Mirage 13–9）",
+        "result_winner": "FURIA",
+        "favored_result": "win",
+        "result_verified_at": "2026-10-15T20:22:00+09:00",
+        "result_source": "https://www.hltv.org/matches/2399387/furia-vs-betboom-thunderpick-world-championship-2026",
+        "result_sources": [
+          "https://www.hltv.org/matches/2399387/furia-vs-betboom-thunderpick-world-championship-2026"
+        ]
+      },
       {
         "rank": 1,
         "match_id": "2026-10-14-lynx-puckchamp-dota2",
@@ -7450,10 +7716,10 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 46,
+      "favored_wins": 47,
       "favored_losses": 5,
       "pending": 0,
-      "note": "2026/10/14確定3件：Lynx○（詳細スコア未確認）・参考1.05 +$5、柏○5-1・参考1.15 +$15、Astralis○2-0・参考1.10 +$10。今回追加概算利益+$30（仮想各100USD）。旧データは保持。"
+      "note": "10/15 FURIA○ 2–0。試合の確定勝敗のみ反映、オッズ不明で利益未算定。旧カードの概算損益は維持。"
     }
   },
   "history_policy": {
@@ -7461,7 +7727,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-14T22:48:00+09:00",
-    "note": "10/14 22:48 JST正式2件追加、結果確定3件アーカイブ・台帳反映、FURIA残し。①H2H＋直近10＋共通相手、②ランキング／現行コアVeto前の独立分析。　Lynxはユーザー報告で勝者確認、個別マップスコアは未確定扱い。"
+    "as_of": "2026-10-15T20:22:00+09:00",
+    "note": "9z–Falcons正式採用、①H2H/直近10/共通5と②現行VRSを照合。FURIA-BETBOOM公式2-0で履歴に移動、利益は価格未確認のため計上しない。"
   }
 }
