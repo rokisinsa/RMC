@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-16T00:23:00+09:00",
+  "generated_at": "2026-10-16T21:16:00+09:00",
   "window": {
-    "from": "2026-10-16T00:23:00+09:00",
-    "to": "2026-10-17T00:23:00+09:00",
+    "from": "2026-10-16T21:16:00+09:00",
+    "to": "2026-10-17T21:16:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "10/16 00:23 JST時点から24時間。終了済みZero Tenacity/HEROIC/Falcons3件を結果履歴へ移動。Vegas-Calgaryのみ正式未終了カードとして新規表示。"
+    "note": "Vegasの終了結果を履歴へ移動。BETBOOM–Legacyと柏–名古屋の2件を正式追跡。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -28,271 +28,528 @@
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-10-16-vegas-calgary-nhl",
-      "event_id": "web-2026-10-16-vegas-calgary-nhl",
-      "matchup": "Vegas Golden Knights vs Calgary Flames",
-      "favored": "Vegas Golden Knights",
-      "selection_label": "Vegas Golden Knights",
-      "sport": "NHL",
-      "competition": "NHL 2026-27 Regular Season",
-      "start_jst": "2026-10-16T11:00:00+09:00",
-      "venue": "T-Mobile Arena, Las Vegas, USA",
-      "format": "NHLレギュラーシーズン／延長SOあり",
+      "match_id": "2026-10-17-betboom-legacy-cs2",
+      "event_id": "web-2026-10-17-betboom-legacy-cs2",
+      "matchup": "BETBOOM vs Legacy",
+      "favored": "BETBOOM（勝者要確認）",
+      "selection_label": "BETBOOM（勝者要確認）",
+      "sport": "CS2",
+      "competition": "Thunderpick World Championship 2026・Group B",
+      "start_jst": "2026-10-17T02:00:00+09:00",
+      "venue": "Malta・Thunderpick World Championship2026 Group B decider、10/17 02:00JST、BO3/LAN",
+      "format": "BO3 LAN/Veto前",
       "status": "formal",
-      "gap_grade": "A候補（ユーザー正式指定・①②Vegas方向）",
+      "gap_grade": "BETBOOM側の格差なし・要確認",
       "price_grade": "未判定",
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "未開始・オッズ未確認。仮想100USD追跡、損益計算不能。",
+      "profit_status": "試合前、仮想100USD追跡。購入オッズ不明につき損益未計算。",
       "odds": {
         "min": null,
         "max": null,
         "required_win_rate_pct": null,
-        "book_examples": "カジ旅・遊雅堂・bet365の個別掲載確認不能。"
+        "book_examples": "カジ旅・遊雅堂・bet365個別掲載確認不能"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-16T00:23:00+09:00",
-      "analysis_reviewed_at": "2026-10-16T00:23:00+09:00",
+      "added_at": "2026-10-16T21:16:00+09:00",
+      "analysis_reviewed_at": "2026-10-16T21:16:00+09:00",
       "sources": [
-        "https://www.nhl.com/cs/gamecenter/cgy-vs-vgk/2026/10/15/2026020118",
-        "https://www.nhl.com/goldenknights/tickets/single-game-member",
-        "https://pucky.com/matchup/flames-vs-golden-knights/",
-        "https://www.covers.com/sport/hockey/nhl/matchup/382394",
-        "https://www.hockey-reference.com/teams/VEG/2027.html",
-        "https://www.hockey-reference.com/teams/CGY/2027_games.html",
-        "https://www.statmuse.com/nhl/team/vegas-38/schedule/2026",
-        "https://www.statmuse.com/nhl/team/calgary-flames-21/schedule/2026"
+        "https://www.hltv.org/matches/2399413/betboom-vs-legacy-thunderpick-world-championship-2026",
+        "https://www.hltv.org/matches/2394177/legacy-vs-betboom-iem-atlanta-2026",
+        "https://www.gosugamers.net/counterstrike/tournaments/62895-thunderpick-world-championship-2026/matches/662866-legacy-vs-betboom-team"
       ],
-      "conclusion": "①公開確認できる直近H2H10戦はVegas 6勝4敗、平均点差Vegas+1.0。各チーム直近10戦はVegas6勝4敗／Calgary3勝7敗。ただし2026/27シーズン分だけではVegas6勝2敗(8試合)／Calgary1勝5敗(6試合)、不足分は前季を別記。共通相手3組（Seattle/Vancouver/Anaheim）ではVegas優位2・Calgary相対優位1。②VegasはPacific1位・GF29/GA20、Calgary8位・GF12/GA29、ホームVegas有利。①②ともVegas方向。先発GK確定前、市場オッズ未確認なので価格優位は未判定。",
-      "risk": "ベガスH2H6-4で一方的ではない。今季共通相手AnaheimではCalgary直近勝ち。ベガス過去8戦にOT/SO勝ち2含む。先発GK未確認、NHL勝者市場は60分勝利とは異なる。",
+      "conclusion": "BETBOOM側の勝者指定はユーザーが明示していないため先頭表記を仮採用。①公開H2Hは2025 BO1 BETBOOM勝利、2026 BO3 Legacy2-0、近況はBETBOOM5-5/Legacy6-4、共通5組は拮抗〜Legacy方向。②HLTV#14対#7・VRS#12対#7、参考市場価格もLegacy優位。BETBOOMを大格差有利と評価できない。",
+      "risk": "BETBOOMはユーザーが勝者指定していないため先頭チームを暫定登録。BETBOOMが市場/現在戦力で劣勢であることを明示。購入オッズと各社個別掲載は未確認。",
       "analysis_detail": {
-        "summary": "①公開確認できる直近H2H10戦はVegas 6勝4敗、平均点差Vegas+1.0。各チーム直近10戦はVegas6勝4敗／Calgary3勝7敗。ただし2026/27シーズン分だけではVegas6勝2敗(8試合)／Calgary1勝5敗(6試合)、不足分は前季を別記。共通相手3組（Seattle/Vancouver/Anaheim）ではVegas優位2・Calgary相対優位1。②VegasはPacific1位・GF29/GA20、Calgary8位・GF12/GA29、ホームVegas有利。①②ともVegas方向。先発GK確定前、市場オッズ未確認なので価格優位は未判定。",
+        "summary": "BETBOOM側の勝者指定はユーザーが明示していないため先頭表記を仮採用。①公開H2Hは2025 BO1 BETBOOM勝利、2026 BO3 Legacy2-0、近況はBETBOOM5-5/Legacy6-4、共通5組は拮抗〜Legacy方向。②HLTV#14対#7・VRS#12対#7、参考市場価格もLegacy優位。BETBOOMを大格差有利と評価できない。",
         "ranking_or_rating": {
-          "text": "2026-10-15試合前 NHL公式：Vegas 6勝2敗・Pacific地区1位・12pts、GF29/GA20(+9)、得点3.63/試合・失点2.50/試合。Calgary1勝5敗・地区8位・2pts、GF12/GA29(-17)、得点2.00/試合・失点4.83/試合。GFの公式集計はSO勝負決着ゴールを算入しない。"
+          "text": "HLTV BETBOOM#14/VRS#12=1557pt、Legacy#7/VRS#7=1782pt。参考勝者価格BETBOOM約2.50–2.64、Legacy約1.45–1.53（HLTV掲載、個別3社掲載は未確認）。"
         },
         "h2h": {
-          "summary": "2024年1月～2026年4月の直近10試合を公開情報で確認：Vegas6勝・Calgary4勝、合計Vegas40得点・Calgary30得点、平均Vegas+1.0得点差。SO/OTも勝敗に含む。歴代対戦42試合との掲載があるが、ここでは直近10試合の詳細のみ確認。",
+          "summary": "公開H2Hは2シリーズ1勝1敗。マップはBETBOOM1–2 Legacy。BO1(2025)とBO3(2026)を区別。",
           "items": [
             {
-              "date": "2026-04-02",
-              "label": "Las Vegas・レギュラーシーズン",
-              "result": "Vegas 6–3 Calgary"
+              "date": "2026-05-17",
+              "label": "IEM Atlanta 2026 BO3",
+              "result": "BETBOOM 0–2 Legacy（Mirage4–13/Nuke3–13）"
             },
             {
-              "date": "2025-12-20",
-              "label": "Calgary・レギュラーシーズン",
-              "result": "Vegas 3–6 Calgary"
-            },
-            {
-              "date": "2025-10-18",
-              "label": "Las Vegas・レギュラーシーズン",
-              "result": "Vegas 6–1 Calgary"
-            },
-            {
-              "date": "2025-10-14",
-              "label": "Calgary・レギュラーシーズン",
-              "result": "Vegas 4–2 Calgary"
-            },
-            {
-              "date": "2025-04-15",
-              "label": "Calgary・レギュラーシーズン",
-              "result": "Vegas 4–5 Calgary（SO）"
-            },
-            {
-              "date": "2025-04-05",
-              "label": "Calgary・レギュラーシーズン",
-              "result": "Vegas 3–2 Calgary（OT）"
-            },
-            {
-              "date": "2024-12-29",
-              "label": "Las Vegas・レギュラーシーズン",
-              "result": "Vegas 3–0 Calgary"
-            },
-            {
-              "date": "2024-10-28",
-              "label": "Las Vegas・レギュラーシーズン",
-              "result": "Vegas 5–0 Calgary"
-            },
-            {
-              "date": "2024-03-14",
-              "label": "Calgary・レギュラーシーズン",
-              "result": "Vegas 1–4 Calgary"
-            },
-            {
-              "date": "2024-01-13",
-              "label": "Las Vegas・レギュラーシーズン",
-              "result": "Vegas 1–3 Calgary"
+              "date": "2025-06-04",
+              "label": "Austin Major 2025 BO1",
+              "result": "BETBOOM 13–3 Legacy（Anubis）"
             }
           ]
         },
         "recent_form": {
           "side_a": {
-            "label": "Vegas Golden Knights",
-            "summary": "直近10試合6勝4敗（今季8試合6勝2敗、前季Stanley Cup Final最後の2戦0勝2敗）。今季だけの公式得失点29-20。前年の結果と分けて扱う。",
+            "label": "BETBOOM",
+            "summary": "直近10シリーズ5勝5敗。HLTV公開戦績、各BO3。",
             "items": [
               {
-                "date": "2026-10-13",
-                "label": "@ Nashville Predators",
-                "result": "5–2 ○"
+                "date": "10/15",
+                "label": "PARIVISION",
+                "result": "2–1 ○"
               },
               {
-                "date": "2026-10-12",
-                "label": "@ Minnesota Wild",
-                "result": "2–4 ×"
+                "date": "10/14",
+                "label": "FURIA",
+                "result": "0–2 ×"
               },
               {
-                "date": "2026-10-10",
-                "label": "vs Los Angeles Kings",
-                "result": "2–1 ○（OT）"
+                "date": "直近",
+                "label": "9z",
+                "result": "0–2 ×"
               },
               {
-                "date": "2026-10-08",
-                "label": "vs Toronto Maple Leafs",
-                "result": "4–3 ○（SO）"
+                "date": "直近",
+                "label": "Aurora",
+                "result": "1–2 ×"
               },
               {
-                "date": "2026-10-06",
-                "label": "@ Seattle Kraken",
-                "result": "6–2 ○"
+                "date": "約2週前",
+                "label": "M80",
+                "result": "2–0 ○"
               },
               {
-                "date": "2026-10-04",
-                "label": "@ Vancouver Canucks",
-                "result": "3–2 ○"
+                "date": "約2週前",
+                "label": "FURIA",
+                "result": "0–2 ×"
               },
               {
-                "date": "2026-10-02",
-                "label": "vs Anaheim Ducks",
-                "result": "3–4 ×"
+                "date": "約5週前",
+                "label": "G2",
+                "result": "1–2 ×"
               },
               {
-                "date": "2026-09-29",
-                "label": "vs Chicago Blackhawks",
-                "result": "5–2 ○"
+                "date": "約5週前",
+                "label": "MIBR",
+                "result": "2–0 ○"
               },
               {
-                "date": "2026-06-14",
-                "label": "vs Carolina Hurricanes・前季Stanley Cup Final",
-                "result": "0–3 ×"
+                "date": "約5週前",
+                "label": "Astralis",
+                "result": "2–0 ○"
               },
               {
-                "date": "2026-06-11",
-                "label": "@ Carolina Hurricanes・前季Stanley Cup Final",
-                "result": "2–4 ×"
+                "date": "約5週前",
+                "label": "BIG",
+                "result": "2–0 ○"
               }
             ]
           },
           "side_b": {
-            "label": "Calgary Flames",
-            "summary": "直近10試合3勝7敗（今季6試合1勝5敗、前季最終4試合2勝2敗）。今季だけの公式得失点12-29。前年の結果と分けて扱う。",
+            "label": "Legacy",
+            "summary": "直近10シリーズ6勝4敗。G2戦だけBO5、それ以外BO3。",
             "items": [
               {
-                "date": "2026-10-13",
-                "label": "@ Anaheim Ducks",
-                "result": "4–2 ○"
+                "date": "10/15",
+                "label": "FURIA",
+                "result": "1–2 ×"
               },
               {
-                "date": "2026-10-10",
-                "label": "vs Anaheim Ducks",
-                "result": "2–4 ×"
+                "date": "10/14",
+                "label": "PARIVISION",
+                "result": "2–0 ○"
               },
               {
-                "date": "2026-10-08",
-                "label": "vs Colorado Avalanche",
-                "result": "3–7 ×"
+                "date": "直近",
+                "label": "M80",
+                "result": "1–2 ×"
               },
               {
-                "date": "2026-10-04",
-                "label": "@ Seattle Kraken",
-                "result": "1–6 ×"
+                "date": "直近",
+                "label": "1win",
+                "result": "0–2 ×"
               },
               {
-                "date": "2026-10-03",
-                "label": "@ Vancouver Canucks",
-                "result": "1–4 ×"
+                "date": "約2週前",
+                "label": "ShindeN",
+                "result": "2–0 ○"
               },
               {
-                "date": "2026-10-01",
-                "label": "vs Seattle Kraken",
-                "result": "1–6 ×"
+                "date": "約2週前",
+                "label": "PARIVISION",
+                "result": "1–2 ×"
               },
               {
-                "date": "2026-04-16",
-                "label": "vs Los Angeles Kings・前季",
-                "result": "3–1 ○"
+                "date": "約5週前",
+                "label": "G2",
+                "result": "3–0 ○ BO5"
               },
               {
-                "date": "2026-04-14",
-                "label": "vs Colorado Avalanche・前季",
-                "result": "1–3 ×"
+                "date": "約5週前",
+                "label": "MIBR",
+                "result": "2–1 ○"
               },
               {
-                "date": "2026-04-12",
-                "label": "vs Utah Mammoth・前季",
-                "result": "4–1 ○"
+                "date": "約5週前",
+                "label": "FURIA",
+                "result": "2–0 ○"
               },
               {
-                "date": "2026-04-11",
-                "label": "@ Seattle Kraken・前季",
-                "result": "1–4 ×"
+                "date": "約5週前",
+                "label": "Alliance",
+                "result": "2–0 ○"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "2026/27今季の共通相手は3チーム。Seattle：Vegas勝ち/Calgary二度敗戦、Vancouver：Vegas勝ち/Calgary敗戦、Anaheim：Vegas敗戦/Calgary直近勝ちもあり。この定義でVegas優勢2/3、Calgaryが比較上1/3。昨季を混ぜて5件へ水増ししない。",
+          "summary": "FURIA、PARIVISION、M80、G2、MIBRの5組を公開確認。",
           "items": [
             {
-              "opponent": "Seattle Kraken",
+              "opponent": "FURIA",
               "side_a": {
-                "date": "2026-10-06",
-                "result": "Vegas 6–2 ○"
+                "date": "10/14・約2週前",
+                "result": "BETBOOM 0–2×、0–2×"
               },
               "side_b": {
-                "date": "2026-10-01／10-04",
-                "result": "Calgary 1–6 ×／1–6 ×"
+                "date": "10/15・約5週前",
+                "result": "Legacy 1–2×、2–0○"
               },
-              "comparison": "Vegas優勢。Calgaryは同じ相手に2連敗（ともに大差）。"
+              "comparison": "Legacy方向"
             },
             {
-              "opponent": "Vancouver Canucks",
+              "opponent": "PARIVISION",
               "side_a": {
-                "date": "2026-10-04",
-                "result": "Vegas 3–2 ○"
+                "date": "10/15",
+                "result": "BETBOOM 2–1○"
               },
               "side_b": {
-                "date": "2026-10-03",
-                "result": "Calgary 1–4 ×"
+                "date": "10/14・約2週前",
+                "result": "Legacy 2–0○、1–2×"
               },
-              "comparison": "Vegas優勢。"
+              "comparison": "両者勝利実績"
             },
             {
-              "opponent": "Anaheim Ducks",
+              "opponent": "M80",
               "side_a": {
-                "date": "2026-10-02",
-                "result": "Vegas 3–4 ×"
+                "date": "約2週前",
+                "result": "BETBOOM 2–0○"
               },
               "side_b": {
-                "date": "2026-10-10／10-13",
-                "result": "Calgary 2–4 ×、4–2 ○"
+                "date": "約1週前",
+                "result": "Legacy 1–2×"
               },
-              "comparison": "Calgaryが直近で勝利。Vegasには敗戦しかなく、比較上Calgaryが良い材料を持つ。ただしCalgaryの勝敗は混在。"
+              "comparison": "BETBOOM方向"
+            },
+            {
+              "opponent": "G2",
+              "side_a": {
+                "date": "約5週前",
+                "result": "BETBOOM 1–2× BO3"
+              },
+              "side_b": {
+                "date": "約5週前",
+                "result": "Legacy 3–0○ BO5"
+              },
+              "comparison": "Legacy方向、形式差あり"
+            },
+            {
+              "opponent": "MIBR",
+              "side_a": {
+                "date": "約5週前",
+                "result": "BETBOOM 2–0○"
+              },
+              "side_b": {
+                "date": "約5週前",
+                "result": "Legacy 2–1○"
+              },
+              "comparison": "両者勝利"
             }
           ]
         },
         "home_away": {
-          "text": "NHL 2026/27レギュラーシーズン。2026-10-15 19:00 PDT（日本時間10/16 11:00 JST）。T-Mobile Arena、Las Vegas、Vegasホーム。"
+          "text": "Malta・Thunderpick World Championship2026 Group B decider、10/17 02:00JST、BO3/LAN"
         },
         "availability": {
-          "text": "試合前の先発GK最終確認なし。NHL公式試合ページのシーズン成績：Vegas Carter Hart 3-2-0, 2.41GAA/.906SV、Adin Hill 3-0-0, 2.27GAA/.903SV。Calgary Dustin Wolf 1-3-0, 4.56GAA/.839SV、Devin Cooley 0-2-0, 5.01GAA/.818SV。先発確定や怪我・欠場は未確認。"
+          "text": "BETBOOM Boombl4/zorte/S1ren/d1Ledez/Magnojez、Legacy arT/dumau/latto/n1ssim/try。直前の欠場・代役は未確認。"
         },
         "sport_specific": {
-          "text": "試合前 NHLチーム指標：Vegas パワープレー23.3%/ペナルティキル80.0%、Calgary パワープレー15.4%/ペナルティキル85.0%。平均得失点差 Vegas +1.13/試合、Calgary -2.83/試合。OT/SOを含むNHL勝敗市場の追跡であり、『60分勝利』とは区別する。"
+          "text": "Veto未発表。HLTV直近3か月LegacyはMirage73%/11MAP、Nuke80%/5、BETBOOM Mirage43%/7・Nuke50%/4。MAP1/2/3未確定。"
         },
         "market": {
-          "text": "ユーザーがVegas勝者を正式採用。カジ旅／遊雅堂／bet365の個別掲載未確認。採用オッズ・実購入オッズとも未確認。100USD仮想追跡のみ、精算オッズ未登録。"
+          "text": "BETBOOMはユーザーが勝者指定していないため先頭チームを暫定登録。BETBOOMが市場/現在戦力で劣勢であることを明示。購入オッズと各社個別掲載は未確認。"
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "match_id": "2026-10-17-kashiwa-nagoya-soccer",
+      "event_id": "web-2026-10-17-kashiwa-nagoya-soccer",
+      "matchup": "柏レイソル vs 名古屋グランパス",
+      "favored": "柏レイソル DNB（引分返金）",
+      "selection_label": "柏レイソル DNB（引分返金）",
+      "sport": "サッカー",
+      "competition": "明治安田J1リーグ2026/27第10節",
+      "start_jst": "2026-10-17T19:00:00+09:00",
+      "venue": "2026-10-17 19:00 JST 三協フロンテア柏スタジアム、柏ホーム。双方10/14に杯戦あり中2日。",
+      "format": "90分DNB引分返金",
+      "status": "formal",
+      "gap_grade": "A−候補（長期H2H逆）",
+      "price_grade": "未判定",
+      "market": "dnb",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前、仮想100USD追跡。購入オッズ不明につき損益未計算。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "required_win_rate_pct": null,
+        "book_examples": "カジ旅・遊雅堂・bet365個別掲載確認不能"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-16T21:16:00+09:00",
+      "analysis_reviewed_at": "2026-10-16T21:16:00+09:00",
+      "sources": [
+        "https://www.jleague.jp/match/j1/2026/101714/",
+        "https://www.jleague.jp/club/kashiwa/",
+        "https://www.jleague.jp/club/nagoya/",
+        "https://www.fansaka.info/team/kashiwa/nagoya/"
+      ],
+      "conclusion": "柏DNB（90分引分返金）正式採用。①直近10公式戦90分では柏6勝1分3敗、名古屋4勝1分5敗。直接H2H通算は柏20勝14分32敗と逆方向、2025の直近2戦は柏2連勝。共通対戦相手4組確認、うち柏方向3。②柏J1首位7勝2敗・名古屋15位3勝6敗、ホームの柏を支持。DNBは引分返金。",
+      "risk": "ユーザーが柏DNBを明示。取得オッズ未確認、カジ旅/遊雅堂/bet365個別掲載確認不能。",
+      "analysis_detail": {
+        "summary": "柏DNB（90分引分返金）正式採用。①直近10公式戦90分では柏6勝1分3敗、名古屋4勝1分5敗。直接H2H通算は柏20勝14分32敗と逆方向、2025の直近2戦は柏2連勝。共通対戦相手4組確認、うち柏方向3。②柏J1首位7勝2敗・名古屋15位3勝6敗、ホームの柏を支持。DNBは引分返金。",
+        "ranking_or_rating": {
+          "text": "J1柏首位（7勝0分2敗、得点21失点14）対名古屋15位（3勝0分6敗、得点9失点15）。ホーム柏3勝0分1敗、敵地名古屋1勝0分4敗。"
+        },
+        "h2h": {
+          "summary": "全大会通算66試合、柏20勝14分32敗（fansaka）。過去全66件の個別スコアまでは未掲載。確認できた直近10のうち2025年2試合は柏1-0/2-1と連勝。",
+          "items": [
+            {
+              "date": "2025-11-08",
+              "label": "J1柏ホーム",
+              "result": "柏1–0名古屋"
+            },
+            {
+              "date": "2025-04-29",
+              "label": "J1名古屋ホーム",
+              "result": "柏2–1名古屋"
+            },
+            {
+              "date": "2024-07-14",
+              "label": "J1名古屋ホーム",
+              "result": "柏1–2名古屋"
+            },
+            {
+              "date": "2024-03-16",
+              "label": "J1柏ホーム",
+              "result": "柏0–2名古屋"
+            },
+            {
+              "date": "2023 第34節",
+              "label": "J1",
+              "result": "柏1–1名古屋"
+            },
+            {
+              "date": "2023-03-12",
+              "label": "J1柏ホーム",
+              "result": "柏0–3名古屋"
+            },
+            {
+              "date": "2022-07-06",
+              "label": "J1柏ホーム",
+              "result": "柏0–1名古屋"
+            },
+            {
+              "date": "2022 第5節",
+              "label": "J1",
+              "result": "柏1–1名古屋"
+            },
+            {
+              "date": "2021 第34節",
+              "label": "J1",
+              "result": "柏0–2名古屋"
+            },
+            {
+              "date": "2021-03-10",
+              "label": "J1柏ホーム",
+              "result": "柏0–1名古屋"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "柏レイソル",
+            "summary": "直近10：90分6勝1分3敗。G大阪ルヴァンPK勝利は90分引分として計算。",
+            "items": [
+              {
+                "date": "10/14",
+                "label": "ポートFC／ACL Elite",
+                "result": "5–1 ○"
+              },
+              {
+                "date": "10/9",
+                "label": "神戸／J1",
+                "result": "4–2 ○"
+              },
+              {
+                "date": "10/3",
+                "label": "G大阪／ルヴァン",
+                "result": "3–3 △、PK勝ち"
+              },
+              {
+                "date": "9/23",
+                "label": "今治／天皇杯",
+                "result": "4–0 ○"
+              },
+              {
+                "date": "9/20",
+                "label": "町田／J1",
+                "result": "4–2 ○"
+              },
+              {
+                "date": "9/16",
+                "label": "全北現代／ACL",
+                "result": "1–2 ×"
+              },
+              {
+                "date": "9/11",
+                "label": "京都／J1",
+                "result": "3–2 ○"
+              },
+              {
+                "date": "9/6",
+                "label": "横浜FM／J1",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "9/2",
+                "label": "C大阪／J1",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "8/29",
+                "label": "清水／J1",
+                "result": "1–0 ○"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "名古屋グランパス",
+            "summary": "直近10：90分4勝1分5敗。岡山戦PK勝利は90分引分として計算。",
+            "items": [
+              {
+                "date": "10/14",
+                "label": "岡山／ルヴァン",
+                "result": "3–3 △、PK勝ち"
+              },
+              {
+                "date": "10/11",
+                "label": "川崎F／J1",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "9/29",
+                "label": "北九州／ルヴァン",
+                "result": "3–1 ○"
+              },
+              {
+                "date": "9/19",
+                "label": "FC東京／J1",
+                "result": "0–1 ×"
+              },
+              {
+                "date": "9/12",
+                "label": "長崎／J1",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "9/6",
+                "label": "町田／J1",
+                "result": "1–3 ×"
+              },
+              {
+                "date": "9/2",
+                "label": "広島／J1",
+                "result": "0–3 ×"
+              },
+              {
+                "date": "8/29",
+                "label": "岡山／J1",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "8/26",
+                "label": "鳥取／天皇杯",
+                "result": "1–3 ×"
+              },
+              {
+                "date": "8/22",
+                "label": "G大阪／J1",
+                "result": "3–1 ○"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "両者直近10内は町田・G大阪2組。約3か月に広げ長崎・清水を追加し4組、5組目未確認。柏優勢3、名古屋優勢1。",
+          "items": [
+            {
+              "opponent": "町田",
+              "side_a": {
+                "date": "9/20",
+                "result": "柏 4–2○"
+              },
+              "side_b": {
+                "date": "9/6",
+                "result": "名古屋 1–3×"
+              },
+              "comparison": "柏方向"
+            },
+            {
+              "opponent": "G大阪",
+              "side_a": {
+                "date": "10/3",
+                "result": "柏 3–3△（PK勝ち）"
+              },
+              "side_b": {
+                "date": "8/22",
+                "result": "名古屋 3–1○"
+              },
+              "comparison": "90分では名古屋方向"
+            },
+            {
+              "opponent": "長崎",
+              "side_a": {
+                "date": "8/21・直近10外",
+                "result": "柏 4–2○"
+              },
+              "side_b": {
+                "date": "9/12",
+                "result": "名古屋 0–2×"
+              },
+              "comparison": "柏方向"
+            },
+            {
+              "opponent": "清水",
+              "side_a": {
+                "date": "8/29",
+                "result": "柏 1–0○"
+              },
+              "side_b": {
+                "date": "8/8・直近10外",
+                "result": "名古屋 0–1×"
+              },
+              "comparison": "柏方向"
+            }
+          ]
+        },
+        "home_away": {
+          "text": "2026-10-17 19:00 JST 三協フロンテア柏スタジアム、柏ホーム。双方10/14に杯戦あり中2日。"
+        },
+        "availability": {
+          "text": "柏は10/14 ACL5-1で古賀太陽ら一部主力休養の公式記述あり。10/17最終スタメン/欠場未確認。"
+        },
+        "sport_specific": {
+          "text": "柏ドローノーベット、90分柏勝ちで的中、90分引分で返金、名古屋勝ちで外れ。PK/延長勝ちとは別。"
+        },
+        "market": {
+          "text": "ユーザーが柏DNBを明示。取得オッズ未確認、カジ旅/遊雅堂/bet365個別掲載確認不能。"
         }
       }
     }
@@ -311,14 +568,15 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "Vegas Golden Knights vs Calgary Flames — H2H6-4、今季6-2対1-5、共通相手3組中Vegas2組優位"
+      "柏vs名古屋：現シーズンは柏有利、長期H2Hは名古屋有利",
+      "BETBOOMvsLegacy：Legacyがランキング優位"
     ],
     "price_adjusted_top": [],
-    "caution": "Vegas正式採用はOT/SOを含むNHL勝者市場で、60分勝者と混同しない。先発GKおよび市場オッズ未確認。旧3件は全○、事後申告倍率を参考収支として計上。",
-    "previous_note": "10/15付のZero Tenacity、HEROIC、Falconsが○、3件の仮想$100基準概算利益は+約$65。FURIAの+約$29と合わせ当日確定4件の利益は+約$94。すべて事後申告倍率による参考精算。"
+    "caution": "BETBOOM勝利の選択はユーザーから明示されず先頭表記を仮置き（要確認）。柏はDNB明示。市場オッズ未確認。",
+    "previous_note": "Vegas 6-2 Calgary的中。オッズなしで利益未計算。"
   },
   "previous_analysis": {
-    "generated_at": "2026-10-16T00:23:00+09:00",
+    "generated_at": "2026-10-16T21:16:00+09:00",
     "window": {
       "from": "2026-09-30T17:39:31+09:00",
       "to": "2026-10-01T09:30:00+09:00",
@@ -326,6 +584,288 @@
       "note": "9/30 JSTの残り時間を主対象とし、欧州9/30開催でJST日付またぎになる深夜カードも併記"
     },
     "candidates": [
+      {
+        "rank": 1,
+        "match_id": "2026-10-16-vegas-calgary-nhl",
+        "event_id": "web-2026-10-16-vegas-calgary-nhl",
+        "matchup": "Vegas Golden Knights vs Calgary Flames",
+        "favored": "Vegas Golden Knights",
+        "selection_label": "Vegas Golden Knights",
+        "sport": "NHL",
+        "competition": "NHL 2026-27 Regular Season",
+        "start_jst": "2026-10-16T11:00:00+09:00",
+        "venue": "T-Mobile Arena, Las Vegas, USA",
+        "format": "NHLレギュラーシーズン／延長SOあり",
+        "status": "formal",
+        "gap_grade": "A候補（ユーザー正式指定・①②Vegas方向）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中、採用オッズ不明のため仮想100USD基準の収支額は未計算。0ドルとして計上しない。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "カジ旅・遊雅堂・bet365の個別掲載確認不能。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-16T00:23:00+09:00",
+        "analysis_reviewed_at": "2026-10-16T00:23:00+09:00",
+        "sources": [
+          "https://www.nhl.com/cs/gamecenter/cgy-vs-vgk/2026/10/15/2026020118",
+          "https://www.nhl.com/goldenknights/tickets/single-game-member",
+          "https://pucky.com/matchup/flames-vs-golden-knights/",
+          "https://www.covers.com/sport/hockey/nhl/matchup/382394",
+          "https://www.hockey-reference.com/teams/VEG/2027.html",
+          "https://www.hockey-reference.com/teams/CGY/2027_games.html",
+          "https://www.statmuse.com/nhl/team/vegas-38/schedule/2026",
+          "https://www.statmuse.com/nhl/team/calgary-flames-21/schedule/2026"
+        ],
+        "conclusion": "①公開確認できる直近H2H10戦はVegas 6勝4敗、平均点差Vegas+1.0。各チーム直近10戦はVegas6勝4敗／Calgary3勝7敗。ただし2026/27シーズン分だけではVegas6勝2敗(8試合)／Calgary1勝5敗(6試合)、不足分は前季を別記。共通相手3組（Seattle/Vancouver/Anaheim）ではVegas優位2・Calgary相対優位1。②VegasはPacific1位・GF29/GA20、Calgary8位・GF12/GA29、ホームVegas有利。①②ともVegas方向。先発GK確定前、市場オッズ未確認なので価格優位は未判定。",
+        "risk": "ベガスH2H6-4で一方的ではない。今季共通相手AnaheimではCalgary直近勝ち。ベガス過去8戦にOT/SO勝ち2含む。先発GK未確認、NHL勝者市場は60分勝利とは異なる。",
+        "analysis_detail": {
+          "summary": "①公開確認できる直近H2H10戦はVegas 6勝4敗、平均点差Vegas+1.0。各チーム直近10戦はVegas6勝4敗／Calgary3勝7敗。ただし2026/27シーズン分だけではVegas6勝2敗(8試合)／Calgary1勝5敗(6試合)、不足分は前季を別記。共通相手3組（Seattle/Vancouver/Anaheim）ではVegas優位2・Calgary相対優位1。②VegasはPacific1位・GF29/GA20、Calgary8位・GF12/GA29、ホームVegas有利。①②ともVegas方向。先発GK確定前、市場オッズ未確認なので価格優位は未判定。",
+          "ranking_or_rating": {
+            "text": "2026-10-15試合前 NHL公式：Vegas 6勝2敗・Pacific地区1位・12pts、GF29/GA20(+9)、得点3.63/試合・失点2.50/試合。Calgary1勝5敗・地区8位・2pts、GF12/GA29(-17)、得点2.00/試合・失点4.83/試合。GFの公式集計はSO勝負決着ゴールを算入しない。"
+          },
+          "h2h": {
+            "summary": "2024年1月～2026年4月の直近10試合を公開情報で確認：Vegas6勝・Calgary4勝、合計Vegas40得点・Calgary30得点、平均Vegas+1.0得点差。SO/OTも勝敗に含む。歴代対戦42試合との掲載があるが、ここでは直近10試合の詳細のみ確認。",
+            "items": [
+              {
+                "date": "2026-04-02",
+                "label": "Las Vegas・レギュラーシーズン",
+                "result": "Vegas 6–3 Calgary"
+              },
+              {
+                "date": "2025-12-20",
+                "label": "Calgary・レギュラーシーズン",
+                "result": "Vegas 3–6 Calgary"
+              },
+              {
+                "date": "2025-10-18",
+                "label": "Las Vegas・レギュラーシーズン",
+                "result": "Vegas 6–1 Calgary"
+              },
+              {
+                "date": "2025-10-14",
+                "label": "Calgary・レギュラーシーズン",
+                "result": "Vegas 4–2 Calgary"
+              },
+              {
+                "date": "2025-04-15",
+                "label": "Calgary・レギュラーシーズン",
+                "result": "Vegas 4–5 Calgary（SO）"
+              },
+              {
+                "date": "2025-04-05",
+                "label": "Calgary・レギュラーシーズン",
+                "result": "Vegas 3–2 Calgary（OT）"
+              },
+              {
+                "date": "2024-12-29",
+                "label": "Las Vegas・レギュラーシーズン",
+                "result": "Vegas 3–0 Calgary"
+              },
+              {
+                "date": "2024-10-28",
+                "label": "Las Vegas・レギュラーシーズン",
+                "result": "Vegas 5–0 Calgary"
+              },
+              {
+                "date": "2024-03-14",
+                "label": "Calgary・レギュラーシーズン",
+                "result": "Vegas 1–4 Calgary"
+              },
+              {
+                "date": "2024-01-13",
+                "label": "Las Vegas・レギュラーシーズン",
+                "result": "Vegas 1–3 Calgary"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Vegas Golden Knights",
+              "summary": "直近10試合6勝4敗（今季8試合6勝2敗、前季Stanley Cup Final最後の2戦0勝2敗）。今季だけの公式得失点29-20。前年の結果と分けて扱う。",
+              "items": [
+                {
+                  "date": "2026-10-13",
+                  "label": "@ Nashville Predators",
+                  "result": "5–2 ○"
+                },
+                {
+                  "date": "2026-10-12",
+                  "label": "@ Minnesota Wild",
+                  "result": "2–4 ×"
+                },
+                {
+                  "date": "2026-10-10",
+                  "label": "vs Los Angeles Kings",
+                  "result": "2–1 ○（OT）"
+                },
+                {
+                  "date": "2026-10-08",
+                  "label": "vs Toronto Maple Leafs",
+                  "result": "4–3 ○（SO）"
+                },
+                {
+                  "date": "2026-10-06",
+                  "label": "@ Seattle Kraken",
+                  "result": "6–2 ○"
+                },
+                {
+                  "date": "2026-10-04",
+                  "label": "@ Vancouver Canucks",
+                  "result": "3–2 ○"
+                },
+                {
+                  "date": "2026-10-02",
+                  "label": "vs Anaheim Ducks",
+                  "result": "3–4 ×"
+                },
+                {
+                  "date": "2026-09-29",
+                  "label": "vs Chicago Blackhawks",
+                  "result": "5–2 ○"
+                },
+                {
+                  "date": "2026-06-14",
+                  "label": "vs Carolina Hurricanes・前季Stanley Cup Final",
+                  "result": "0–3 ×"
+                },
+                {
+                  "date": "2026-06-11",
+                  "label": "@ Carolina Hurricanes・前季Stanley Cup Final",
+                  "result": "2–4 ×"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Calgary Flames",
+              "summary": "直近10試合3勝7敗（今季6試合1勝5敗、前季最終4試合2勝2敗）。今季だけの公式得失点12-29。前年の結果と分けて扱う。",
+              "items": [
+                {
+                  "date": "2026-10-13",
+                  "label": "@ Anaheim Ducks",
+                  "result": "4–2 ○"
+                },
+                {
+                  "date": "2026-10-10",
+                  "label": "vs Anaheim Ducks",
+                  "result": "2–4 ×"
+                },
+                {
+                  "date": "2026-10-08",
+                  "label": "vs Colorado Avalanche",
+                  "result": "3–7 ×"
+                },
+                {
+                  "date": "2026-10-04",
+                  "label": "@ Seattle Kraken",
+                  "result": "1–6 ×"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "@ Vancouver Canucks",
+                  "result": "1–4 ×"
+                },
+                {
+                  "date": "2026-10-01",
+                  "label": "vs Seattle Kraken",
+                  "result": "1–6 ×"
+                },
+                {
+                  "date": "2026-04-16",
+                  "label": "vs Los Angeles Kings・前季",
+                  "result": "3–1 ○"
+                },
+                {
+                  "date": "2026-04-14",
+                  "label": "vs Colorado Avalanche・前季",
+                  "result": "1–3 ×"
+                },
+                {
+                  "date": "2026-04-12",
+                  "label": "vs Utah Mammoth・前季",
+                  "result": "4–1 ○"
+                },
+                {
+                  "date": "2026-04-11",
+                  "label": "@ Seattle Kraken・前季",
+                  "result": "1–4 ×"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "2026/27今季の共通相手は3チーム。Seattle：Vegas勝ち/Calgary二度敗戦、Vancouver：Vegas勝ち/Calgary敗戦、Anaheim：Vegas敗戦/Calgary直近勝ちもあり。この定義でVegas優勢2/3、Calgaryが比較上1/3。昨季を混ぜて5件へ水増ししない。",
+            "items": [
+              {
+                "opponent": "Seattle Kraken",
+                "side_a": {
+                  "date": "2026-10-06",
+                  "result": "Vegas 6–2 ○"
+                },
+                "side_b": {
+                  "date": "2026-10-01／10-04",
+                  "result": "Calgary 1–6 ×／1–6 ×"
+                },
+                "comparison": "Vegas優勢。Calgaryは同じ相手に2連敗（ともに大差）。"
+              },
+              {
+                "opponent": "Vancouver Canucks",
+                "side_a": {
+                  "date": "2026-10-04",
+                  "result": "Vegas 3–2 ○"
+                },
+                "side_b": {
+                  "date": "2026-10-03",
+                  "result": "Calgary 1–4 ×"
+                },
+                "comparison": "Vegas優勢。"
+              },
+              {
+                "opponent": "Anaheim Ducks",
+                "side_a": {
+                  "date": "2026-10-02",
+                  "result": "Vegas 3–4 ×"
+                },
+                "side_b": {
+                  "date": "2026-10-10／10-13",
+                  "result": "Calgary 2–4 ×、4–2 ○"
+                },
+                "comparison": "Calgaryが直近で勝利。Vegasには敗戦しかなく、比較上Calgaryが良い材料を持つ。ただしCalgaryの勝敗は混在。"
+              }
+            ]
+          },
+          "home_away": {
+            "text": "NHL 2026/27レギュラーシーズン。2026-10-15 19:00 PDT（日本時間10/16 11:00 JST）。T-Mobile Arena、Las Vegas、Vegasホーム。"
+          },
+          "availability": {
+            "text": "試合前の先発GK最終確認なし。NHL公式試合ページのシーズン成績：Vegas Carter Hart 3-2-0, 2.41GAA/.906SV、Adin Hill 3-0-0, 2.27GAA/.903SV。Calgary Dustin Wolf 1-3-0, 4.56GAA/.839SV、Devin Cooley 0-2-0, 5.01GAA/.818SV。先発確定や怪我・欠場は未確認。"
+          },
+          "sport_specific": {
+            "text": "試合前 NHLチーム指標：Vegas パワープレー23.3%/ペナルティキル80.0%、Calgary パワープレー15.4%/ペナルティキル85.0%。平均得失点差 Vegas +1.13/試合、Calgary -2.83/試合。OT/SOを含むNHL勝敗市場の追跡であり、『60分勝利』とは区別する。"
+          },
+          "market": {
+            "text": "ユーザーがVegas勝者を正式採用。カジ旅／遊雅堂／bet365の個別掲載未確認。採用オッズ・実購入オッズとも未確認。100USD仮想追跡のみ、精算オッズ未登録。"
+          },
+          "post_match": {
+            "text": "NHL公式：2026/10/15現地開催、Vegas 6–2 Calgary（日本時間16日）。Vegas勝者市場は○。オッズ不明につき利益未計算。"
+          }
+        },
+        "result_status": "final",
+        "result": "Vegas Golden Knights 6–2 Calgary Flames",
+        "result_winner": "Vegas Golden Knights",
+        "favored_result": "win",
+        "result_verified_at": "2026-10-16T21:16:00+09:00",
+        "result_source": "https://www.nhl.com/news/calgary-flames-vegas-golden-knights-game-recap-october-15-2026",
+        "result_sources": [
+          "https://www.nhl.com/news/calgary-flames-vegas-golden-knights-game-recap-october-15-2026"
+        ]
+      },
       {
         "rank": 1,
         "match_id": "2026-10-15-zero-tenacity-puckchamp-dota2",
@@ -8020,10 +8560,10 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 50,
+      "favored_wins": 51,
       "favored_losses": 5,
       "pending": 0,
-      "note": "10/15 3件○：Zero Tenacity 2-0 1.15 +$15、HEROIC 2-1 約1.30 約+$30、Falcons 2-1 1.20 +$20。今回の合計仮想+約$65、10/15 FURIA 1.29 +$29を含めると同日仮想+約$94（各100USD）。ユーザー申告倍率・実購入と区別。"
+      "note": "NHLベガス6-2カルガリー○的中、オッズ未申告で利益額は未計算。"
     }
   },
   "history_policy": {
@@ -8031,7 +8571,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-16T00:23:00+09:00",
-    "note": "2026/10/16 00:23 Vegas-Calgary正式採用。終了済みZero Tenacity、HEROIC、Falcons3件確定し結果履歴へ移動、ユーザー申告1.15/約1.30/1.20で仮想$100参考精算、3件合計+約$65。NHL H2H10・直近10(前季別記)・共通3の分析を保存。"
+    "as_of": "2026-10-16T21:16:00+09:00",
+    "note": "10/16終了Vegas6-2を精算し履歴へ。新規BETBOOM勝者（暫定選択）と柏DNBを正式採用。①H2H/直近10/共通相手と②戦力を照合。"
   }
 }
