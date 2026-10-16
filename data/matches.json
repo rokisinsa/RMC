@@ -239,6 +239,13 @@
       "at": "2026-10-16T00:23:00+09:00",
       "source": "ユーザー正式指定、NHL公式日程/試合ページ、Hockey-Reference、H2H専門記録の照合",
       "note": "Vegas Golden Knights vs Calgary Flames 2026/10/16 11:00JSTレギュラーシーズン・Vegas勝者を登録。H2H10、直近10(前季混在分けて明記)、共通今季3組を検証。"
+    },
+    {
+      "run_id": "mr-user-approved-20261016-2116",
+      "kind": "human_review",
+      "at": "2026-10-16T21:16:00+09:00",
+      "source": "ユーザーの正式採用指定・HLTV/GosuGamers/Jリーグ公式で照合",
+      "note": "CS2 BETBOOM対Legacy（BETBOOM側仮選択）と柏対名古屋（柏DNB明示）の2件を追加"
     }
   ],
   "matches": [
@@ -4419,6 +4426,73 @@
         "https://www.statmuse.com/nhl/team/calgary-flames-21/schedule/2026"
       ],
       "verified_at": "2026-10-16T00:23:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-17-betboom-legacy-cs2",
+      "sport": "CS2",
+      "competition": "Thunderpick World Championship 2026 Group B decider",
+      "side_a": "BETBOOM",
+      "side_b": "Legacy",
+      "home_side": "neutral",
+      "venue": "BLAST Studio, Malta",
+      "start_at": "2026-10-17T02:00:00+09:00",
+      "start_time_note": "10/16 17:00 UTC、現地19:00 CEST、日本時間10/17 02:00",
+      "sources": [
+        "https://www.hltv.org/matches/2399413/betboom-vs-legacy-thunderpick-world-championship-2026",
+        "https://www.gosugamers.net/counterstrike/tournaments/62895-thunderpick-world-championship-2026/matches/662866-legacy-vs-betboom-team"
+      ],
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261016-2116",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定。CS2は勝者選択を暫定解釈、柏はDNB市場。"
+        }
+      ],
+      "verified_at": "2026-10-16T21:16:00+09:00",
+      "flags": []
+    },
+    {
+      "id": "2026-10-17-kashiwa-nagoya-soccer",
+      "sport": "サッカー",
+      "competition": "明治安田J1リーグ2026/27第10節",
+      "side_a": "柏レイソル",
+      "side_b": "名古屋グランパス",
+      "home_side": "side_a",
+      "venue": "三協フロンテア柏スタジアム",
+      "start_at": "2026-10-17T19:00:00+09:00",
+      "start_time_note": "Jリーグ・両クラブ公式 2026/10/17 19:00 JST",
+      "sources": [
+        "https://www.jleague.jp/match/j1/2026/101714/",
+        "https://www.jleague.jp/club/kashiwa/",
+        "https://www.jleague.jp/club/nagoya/"
+      ],
+      "start_time_status": "recorded",
+      "status": "scheduled",
+      "result": null,
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261016-2116",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定。CS2は勝者選択を暫定解釈、柏はDNB市場。"
+        }
+      ],
+      "verified_at": "2026-10-16T21:16:00+09:00",
       "flags": []
     }
   ]
