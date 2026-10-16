@@ -225,6 +225,12 @@
       "started_at": "2026-10-16T00:23:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー正式採用NHL Vegas–Calgary。H2H10戦Vegas6-4、今季6-2対1-5、共通3組中Vegas優位2、先発GK不明。"
+    },
+    {
+      "run_id": "rec-user-approved-20261016-2116",
+      "started_at": "2026-10-16T21:16:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー正式指定CS2 BETBOOM–Legacyと柏–名古屋。BETBOOM勝利はユーザー選択を明示していないため先頭表記からの仮置きで要確認。柏DNBは明確な指定。"
     }
   ],
   "picks": [
@@ -4818,6 +4824,65 @@
         "odds_unverified"
       ],
       "note": "ユーザー指定Vegas勝ち。NHL OT/SO込みの勝者市場で仮想$100追跡。実購入証拠・オッズなし。開始前の主力欠場と先発GK未確認。"
+    },
+    {
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261016-2116",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-16T21:16:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-16T21:16:00+09:00",
+      "settlement_override": null,
+      "id": "rec-2026-10-17-betboom-legacy-cs2",
+      "match_id": "2026-10-17-betboom-legacy-cs2",
+      "source_event_id": "web-2026-10-17-betboom-legacy-cs2",
+      "market": "match_winner",
+      "market_label": "BETBOOM BO3シリーズ勝者（先頭表記の暫定選択）",
+      "selection": "side_a",
+      "selection_label": "BETBOOM（選択要確認）",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "正式組み合わせ・BETBOOM側は暫定選択。現状の戦力格差はLegacy優勢",
+        "model_version": "rmc-2026-10-16-dual",
+        "summary": "H2H：2025 BO1 BETBOOM勝利／2026 BO3 Legacy2–0。直近10 BETBOOM5–5、Legacy6–4。共通相手5組。HLTV BETBOOM#14 Legacy#7。"
+      },
+      "flags": [
+        "odds_unverified",
+        "needs_review"
+      ],
+      "note": "ユーザーは勝者指定なしでカードを採用。先頭BETBOOMを暫定採用。指示がLegacy勝ちの場合、事前値保全のため履歴を残して修正。実購入記録なし。"
+    },
+    {
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261016-2116",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-16T21:16:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-16T21:16:00+09:00",
+      "settlement_override": null,
+      "id": "rec-2026-10-17-kashiwa-nagoya-soccer",
+      "match_id": "2026-10-17-kashiwa-nagoya-soccer",
+      "source_event_id": "web-2026-10-17-kashiwa-nagoya-soccer",
+      "market": "dnb",
+      "market_label": "柏レイソル勝利・ドローノーベット（90分引分返金）",
+      "selection": "side_a",
+      "selection_label": "柏レイソル DNB（引分返金）",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー指定の柏DNB正式採用。今季柏J1首位、名古屋15位。長期H2Hは名古屋優位",
+        "model_version": "rmc-2026-10-16-dual",
+        "summary": "J1 柏7勝2敗首位、名古屋3勝6敗15位。直近10（90分）柏6勝1分3敗／名古屋4勝1分5敗。H2H通算柏20勝14分32敗。"
+      },
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定の柏DNBを確定。90分引分時は返金。実購入オッズ未確認、仮想100USD基準追跡。"
     }
   ]
 }
