@@ -1971,6 +1971,42 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-2026-10-16-2116-vegas",
+      "kind": "result_update",
+      "at": "2026-10-16T21:16:00+09:00",
+      "source": "NHL official match recap",
+      "note": "Vegas Golden Knights 6-2 Calgary Flames。勝利判定確定。ユーザーの参考オッズは未提供で損益額は未計算。",
+      "changes": [
+        {
+          "match_id": "2026-10-16-vegas-calgary-nhl",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 6,
+                "b": 2
+              },
+              "text": "Vegas Golden Knights 6–2 Calgary Flames"
+            },
+            "result_confirmed_at": "2026-10-16T21:16:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "NHL official recap",
+                "url": "https://www.nhl.com/news/calgary-flames-vegas-golden-knights-game-recap-october-15-2026",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-16T21:16:00+09:00",
+            "source_confidence": "official",
+            "note": "NHL公式がVegas 6-2 Calgaryを確認済み。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }
