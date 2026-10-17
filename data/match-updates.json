@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-13T13:08:28+09:00",
+    "as_of": "2026-10-17T20:21:43+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -2003,6 +2003,77 @@
             "verified_at": "2026-10-16T21:16:00+09:00",
             "source_confidence": "official",
             "note": "NHL公式がVegas 6-2 Calgaryを確認済み。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-results-20261017-2021",
+      "kind": "result_update",
+      "at": "2026-10-17T20:21:43+09:00",
+      "source": "HLTV結果DB・Jリーグ公式",
+      "note": "BETBOOM–Legacyを確定。柏–名古屋は試合中で精算しない。",
+      "changes": [
+        {
+          "match_id": "2026-10-17-betboom-legacy-cs2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 1
+              },
+              "periods": {
+                "map1": {
+                  "a": 16,
+                  "b": 13
+                },
+                "map2": {
+                  "a": 11,
+                  "b": 13
+                },
+                "map3": {
+                  "a": 13,
+                  "b": 11
+                }
+              },
+              "text": "BETBOOM 2–1 Legacy"
+            },
+            "result_confirmed_at": "2026-10-17T20:21:43+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "HLTV match result",
+                "url": "https://www.hltv.org/matches/2399413/betboom-vs-legacy-thunderpick-world-championship-2026",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-17T20:21:43+09:00",
+            "source_confidence": "specialist_db",
+            "note": "Match overと最終2–1を確認。"
+          }
+        },
+        {
+          "match_id": "2026-10-17-kashiwa-nagoya-soccer",
+          "set": {
+            "status": "live",
+            "result": {
+              "text": "試合中。取得時1–2、最終結果未確定。"
+            }
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Jリーグ公式試合速報",
+                "url": "https://www.jleague.jp/match/j1/2026/101714/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-17T20:21:43+09:00",
+            "source_confidence": "official",
+            "note": "LIVE表示。途中経過をfinalスコアとして記録しない。"
           }
         }
       ],

@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-13T13:08:28+09:00",
+    "as_of": "2026-10-17T20:21:43+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
@@ -231,6 +231,12 @@
       "started_at": "2026-10-16T21:16:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー正式指定CS2 BETBOOM–Legacyと柏–名古屋。BETBOOM勝利はユーザー選択を明示していないため先頭表記からの仮置きで要確認。柏DNBは明確な指定。"
+    },
+    {
+      "run_id": "rec-user-approved-20261017-2021",
+      "started_at": "2026-10-17T20:21:43+09:00",
+      "slot": "adhoc",
+      "note": "City、Falcons、Vegasの3カードをユーザー指定で正式採用。トリプル分析・H2H・直近10・共通相手を掲載。"
     }
   ],
   "picks": [
@@ -4883,6 +4889,93 @@
         "odds_unverified"
       ],
       "note": "ユーザー指定の柏DNBを確定。90分引分時は返金。実購入オッズ未確認、仮想100USD基準追跡。"
+    },
+    {
+      "id": "rec-2026-10-17-man-city-ipswich-soccer",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261017-2021",
+      "match_id": "2026-10-17-man-city-ipswich-soccer",
+      "source_event_id": "web-2026-10-17-man-city-ipswich-soccer",
+      "market": "match_1x2",
+      "market_label": "90分勝者（引き分けは不的中）",
+      "selection": "side_a",
+      "selection_label": "Manchester City",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-17T20:21:43+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-17T20:21:43+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A候補",
+        "model_version": "rmc-triple-20261017",
+        "summary": "①実績型：City直近公式10戦8勝2敗、Ipswich5勝1分4敗（昨季2部2戦含む）。②戦力型：Cityはリーグ6連勝18点、Ipswich3勝3敗9点。③共通相手型：同季5相手はCity点差優位4、Ipswich相対優位1。3軸概ねCity方向だが、直前PSG戦2–4と過密日程は反証。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定の勝者で正式採用。仮想100USD追跡。実購入・購入オッズの記録なし。"
+    },
+    {
+      "id": "rec-2026-10-18-falcons-betboom-cs2",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261017-2021",
+      "match_id": "2026-10-18-falcons-betboom-cs2",
+      "source_event_id": "web-2026-10-18-falcons-betboom-cs2",
+      "market": "match_winner",
+      "market_label": "BO3／LAN",
+      "selection": "side_a",
+      "selection_label": "Falcons",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-17T20:21:43+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-17T20:21:43+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A候補（H2H反証あり）",
+        "model_version": "rmc-triple-20261017",
+        "summary": "①実績型：Falcons直近10戦6勝4敗、BETBOOM5勝5敗。最新H2HはFalcons0–2敗戦。②戦力型：HLTV5位対14位、VRS4位対10位はFalcons支持。③共通相手型：5種類はFalcons5勝、BETBOOM1勝4敗だが、Legacyは双方2–1で差なし。3軸は完全一致せず、確勝判定にはしない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定の勝者で正式採用。仮想100USD追跡。実購入・購入オッズの記録なし。"
+    },
+    {
+      "id": "rec-2026-10-18-vegas-pittsburgh-nhl",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261017-2021",
+      "match_id": "2026-10-18-vegas-pittsburgh-nhl",
+      "source_event_id": "web-2026-10-18-vegas-pittsburgh-nhl",
+      "market": "match_winner",
+      "market_label": "試合勝者（延長・SO込み）",
+      "selection": "side_a",
+      "selection_label": "Vegas Golden Knights",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-17T20:21:43+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-17T20:21:43+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−候補（ホーム・休養優位）",
+        "model_version": "rmc-triple-20261017",
+        "summary": "①実績型：公式直近10はVegas7勝3敗、Pittsburgh4勝6敗（OT/SO負け含む、昨季補完あり）。H2H通算Vegas7勝9敗だがホーム6勝2敗。②戦力型：今季7勝2敗対3勝4敗1延長負け、PittsburghはColorado遠征翌日の連戦。③共通相手型：今季共通Chicago1種類はVegas5–2、Pittsburgh3–5でVegas支持。ただし1件のみで3軸完全一致の強判定はしない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定の勝者で正式採用。仮想100USD追跡。実購入・購入オッズの記録なし。"
     }
   ]
 }

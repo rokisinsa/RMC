@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-16T21:16:00+09:00",
+  "generated_at": "2026-10-17T20:21:43+09:00",
   "window": {
-    "from": "2026-10-16T21:16:00+09:00",
-    "to": "2026-10-17T21:16:00+09:00",
+    "from": "2026-10-17T20:21:43+09:00",
+    "to": "2026-10-18T20:21:43+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "Vegasの終了結果を履歴へ移動。BETBOOM–Legacyと柏–名古屋の2件を正式追跡。"
+    "note": "指定3カードを追加、進行中の柏DNBを維持。終了BETBOOM–Legacyを履歴へ。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -19,264 +19,16 @@
   ],
   "coverage": {
     "checked": [
-      "男子ハンドボール｜EHFヨーロピアンリーグ",
-      "サッカー｜AFCチャンピオンズリーグ・エリート",
-      "既掲載CS2・LoL・既存Overwatch結果精算"
+      "プレミアリーグ",
+      "CS2 Thunderpick",
+      "NHL",
+      "既掲載試合の結果"
     ],
-    "note": "NHL/チーム公式、Hockey-Reference、Covers、PuckyでVegas–Calgary日程・H2H・フォーム・共通3組を照合。eスポ3件はHLTVとEnsigameの最終結果照合。オッズはユーザー申告の参考価格。"
+    "note": "指定3カード。双方直近公式10、H2H、共通相手比較を掲載。共通相手はCity5・Falcons5・NHL今季1。前季補完・相対日付・未確認オッズを明記。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-10-17-betboom-legacy-cs2",
-      "event_id": "web-2026-10-17-betboom-legacy-cs2",
-      "matchup": "BETBOOM vs Legacy",
-      "favored": "BETBOOM（勝者要確認）",
-      "selection_label": "BETBOOM（勝者要確認）",
-      "sport": "CS2",
-      "competition": "Thunderpick World Championship 2026・Group B",
-      "start_jst": "2026-10-17T02:00:00+09:00",
-      "venue": "Malta・Thunderpick World Championship2026 Group B decider、10/17 02:00JST、BO3/LAN",
-      "format": "BO3 LAN/Veto前",
-      "status": "formal",
-      "gap_grade": "BETBOOM側の格差なし・要確認",
-      "price_grade": "未判定",
-      "market": "match_winner",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合前、仮想100USD追跡。購入オッズ不明につき損益未計算。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "カジ旅・遊雅堂・bet365個別掲載確認不能"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-16T21:16:00+09:00",
-      "analysis_reviewed_at": "2026-10-16T21:16:00+09:00",
-      "sources": [
-        "https://www.hltv.org/matches/2399413/betboom-vs-legacy-thunderpick-world-championship-2026",
-        "https://www.hltv.org/matches/2394177/legacy-vs-betboom-iem-atlanta-2026",
-        "https://www.gosugamers.net/counterstrike/tournaments/62895-thunderpick-world-championship-2026/matches/662866-legacy-vs-betboom-team"
-      ],
-      "conclusion": "BETBOOM側の勝者指定はユーザーが明示していないため先頭表記を仮採用。①公開H2Hは2025 BO1 BETBOOM勝利、2026 BO3 Legacy2-0、近況はBETBOOM5-5/Legacy6-4、共通5組は拮抗〜Legacy方向。②HLTV#14対#7・VRS#12対#7、参考市場価格もLegacy優位。BETBOOMを大格差有利と評価できない。",
-      "risk": "BETBOOMはユーザーが勝者指定していないため先頭チームを暫定登録。BETBOOMが市場/現在戦力で劣勢であることを明示。購入オッズと各社個別掲載は未確認。",
-      "analysis_detail": {
-        "summary": "BETBOOM側の勝者指定はユーザーが明示していないため先頭表記を仮採用。①公開H2Hは2025 BO1 BETBOOM勝利、2026 BO3 Legacy2-0、近況はBETBOOM5-5/Legacy6-4、共通5組は拮抗〜Legacy方向。②HLTV#14対#7・VRS#12対#7、参考市場価格もLegacy優位。BETBOOMを大格差有利と評価できない。",
-        "ranking_or_rating": {
-          "text": "HLTV BETBOOM#14/VRS#12=1557pt、Legacy#7/VRS#7=1782pt。参考勝者価格BETBOOM約2.50–2.64、Legacy約1.45–1.53（HLTV掲載、個別3社掲載は未確認）。"
-        },
-        "h2h": {
-          "summary": "公開H2Hは2シリーズ1勝1敗。マップはBETBOOM1–2 Legacy。BO1(2025)とBO3(2026)を区別。",
-          "items": [
-            {
-              "date": "2026-05-17",
-              "label": "IEM Atlanta 2026 BO3",
-              "result": "BETBOOM 0–2 Legacy（Mirage4–13/Nuke3–13）"
-            },
-            {
-              "date": "2025-06-04",
-              "label": "Austin Major 2025 BO1",
-              "result": "BETBOOM 13–3 Legacy（Anubis）"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "BETBOOM",
-            "summary": "直近10シリーズ5勝5敗。HLTV公開戦績、各BO3。",
-            "items": [
-              {
-                "date": "10/15",
-                "label": "PARIVISION",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "10/14",
-                "label": "FURIA",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "直近",
-                "label": "9z",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "直近",
-                "label": "Aurora",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "約2週前",
-                "label": "M80",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約2週前",
-                "label": "FURIA",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約5週前",
-                "label": "G2",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "約5週前",
-                "label": "MIBR",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約5週前",
-                "label": "Astralis",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約5週前",
-                "label": "BIG",
-                "result": "2–0 ○"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Legacy",
-            "summary": "直近10シリーズ6勝4敗。G2戦だけBO5、それ以外BO3。",
-            "items": [
-              {
-                "date": "10/15",
-                "label": "FURIA",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "10/14",
-                "label": "PARIVISION",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "直近",
-                "label": "M80",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "直近",
-                "label": "1win",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約2週前",
-                "label": "ShindeN",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約2週前",
-                "label": "PARIVISION",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "約5週前",
-                "label": "G2",
-                "result": "3–0 ○ BO5"
-              },
-              {
-                "date": "約5週前",
-                "label": "MIBR",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "約5週前",
-                "label": "FURIA",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約5週前",
-                "label": "Alliance",
-                "result": "2–0 ○"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "FURIA、PARIVISION、M80、G2、MIBRの5組を公開確認。",
-          "items": [
-            {
-              "opponent": "FURIA",
-              "side_a": {
-                "date": "10/14・約2週前",
-                "result": "BETBOOM 0–2×、0–2×"
-              },
-              "side_b": {
-                "date": "10/15・約5週前",
-                "result": "Legacy 1–2×、2–0○"
-              },
-              "comparison": "Legacy方向"
-            },
-            {
-              "opponent": "PARIVISION",
-              "side_a": {
-                "date": "10/15",
-                "result": "BETBOOM 2–1○"
-              },
-              "side_b": {
-                "date": "10/14・約2週前",
-                "result": "Legacy 2–0○、1–2×"
-              },
-              "comparison": "両者勝利実績"
-            },
-            {
-              "opponent": "M80",
-              "side_a": {
-                "date": "約2週前",
-                "result": "BETBOOM 2–0○"
-              },
-              "side_b": {
-                "date": "約1週前",
-                "result": "Legacy 1–2×"
-              },
-              "comparison": "BETBOOM方向"
-            },
-            {
-              "opponent": "G2",
-              "side_a": {
-                "date": "約5週前",
-                "result": "BETBOOM 1–2× BO3"
-              },
-              "side_b": {
-                "date": "約5週前",
-                "result": "Legacy 3–0○ BO5"
-              },
-              "comparison": "Legacy方向、形式差あり"
-            },
-            {
-              "opponent": "MIBR",
-              "side_a": {
-                "date": "約5週前",
-                "result": "BETBOOM 2–0○"
-              },
-              "side_b": {
-                "date": "約5週前",
-                "result": "Legacy 2–1○"
-              },
-              "comparison": "両者勝利"
-            }
-          ]
-        },
-        "home_away": {
-          "text": "Malta・Thunderpick World Championship2026 Group B decider、10/17 02:00JST、BO3/LAN"
-        },
-        "availability": {
-          "text": "BETBOOM Boombl4/zorte/S1ren/d1Ledez/Magnojez、Legacy arT/dumau/latto/n1ssim/try。直前の欠場・代役は未確認。"
-        },
-        "sport_specific": {
-          "text": "Veto未発表。HLTV直近3か月LegacyはMirage73%/11MAP、Nuke80%/5、BETBOOM Mirage43%/7・Nuke50%/4。MAP1/2/3未確定。"
-        },
-        "market": {
-          "text": "BETBOOMはユーザーが勝者指定していないため先頭チームを暫定登録。BETBOOMが市場/現在戦力で劣勢であることを明示。購入オッズと各社個別掲載は未確認。"
-        }
-      }
-    },
-    {
-      "rank": 2,
       "match_id": "2026-10-17-kashiwa-nagoya-soccer",
       "event_id": "web-2026-10-17-kashiwa-nagoya-soccer",
       "matchup": "柏レイソル vs 名古屋グランパス",
@@ -293,7 +45,7 @@
       "market": "dnb",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "試合前、仮想100USD追跡。購入オッズ不明につき損益未計算。",
+      "profit_status": "試合中。柏DNBは90分結果確定後に精算。",
       "odds": {
         "min": null,
         "max": null,
@@ -551,6 +303,873 @@
         "market": {
           "text": "ユーザーが柏DNBを明示。取得オッズ未確認、カジ旅/遊雅堂/bet365個別掲載確認不能。"
         }
+      },
+      "match_status": "live",
+      "result_status": "pending",
+      "result": "試合中（公式取得スナップショット1–2、最終結果ではない）"
+    },
+    {
+      "rank": 2,
+      "match_id": "2026-10-17-man-city-ipswich-soccer",
+      "event_id": "web-2026-10-17-man-city-ipswich-soccer",
+      "matchup": "Manchester City vs Ipswich Town",
+      "favored": "Manchester City",
+      "selection_label": "Manchester City",
+      "sport": "サッカー",
+      "competition": "プレミアリーグ2026/27 第7節",
+      "start_jst": "2026-10-17T23:00:00+09:00",
+      "venue": "Etihad Stadium／Manchester Cityホーム",
+      "format": "90分勝者（引き分けは不的中）",
+      "status": "formal",
+      "gap_grade": "A候補",
+      "price_grade": "未判定",
+      "market": "match_1x2",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "仮想100USD基準。購入オッズ未確認、未精算。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "required_win_rate_pct": null,
+        "book_examples": "個別市場・購入価格未確認"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-17T20:21:43+09:00",
+      "analysis_reviewed_at": "2026-10-17T20:21:43+09:00",
+      "sources": [
+        "https://www.mancity.com/citytv/mens/enzo-maresca-manchester-city-ipswich-town-press-conference-63927740",
+        "https://www.skysports.com/football/manchester-city-vs-ipswich-town/stats/559510",
+        "https://www.skysports.com/manchester-city-scores-fixtures/2026-08-01",
+        "https://www.skysports.com/manchester-city-scores-fixtures/2026-09-01",
+        "https://www.skysports.com/ipswich-town-scores-fixtures/2026-08-01",
+        "https://www.skysports.com/ipswich-town-scores-fixtures/2026-09-01",
+        "https://www.skysports.com/ipswich-town-scores-fixtures/2026-05-01",
+        "https://www.skysports.com/ipswich-town-scores-fixtures/2026-04-01",
+        "https://www.sportsmole.co.uk/football/man-city/head-to-head/man-city-vs-ipswich-head-to-head-record-and-past-meetings_551026.html"
+      ],
+      "conclusion": "①実績型：City直近公式10戦8勝2敗、Ipswich5勝1分4敗（昨季2部2戦含む）。②戦力型：Cityはリーグ6連勝18点、Ipswich3勝3敗9点。③共通相手型：同季5相手はCity点差優位4、Ipswich相対優位1。3軸概ねCity方向だが、直前PSG戦2–4と過密日程は反証。",
+      "risk": "購入オッズ未確認。勝率・EVは未算定。",
+      "analysis_detail": {
+        "summary": "①実績型：City直近公式10戦8勝2敗、Ipswich5勝1分4敗（昨季2部2戦含む）。②戦力型：Cityはリーグ6連勝18点、Ipswich3勝3敗9点。③共通相手型：同季5相手はCity点差優位4、Ipswich相対優位1。3軸概ねCity方向だが、直前PSG戦2–4と過密日程は反証。",
+        "h2h": {
+          "summary": "直近20件の掲載記録を確認。2024年以降2試合City2勝10–1。2002年以前は現戦力の評価から除外。通算件数は媒体差があるため確定集計しない。スコアはCity視点。",
+          "items": [
+            {
+              "date": "2025-01-19",
+              "label": "A／PL",
+              "result": "6–0 ○"
+            },
+            {
+              "date": "2024-08-24",
+              "label": "H／PL",
+              "result": "4–1 ○"
+            },
+            {
+              "date": "2002-01-27",
+              "label": "A／FAカップ",
+              "result": "4–1 ○"
+            },
+            {
+              "date": "2001-05-07",
+              "label": "A／PL",
+              "result": "1–2 ×"
+            },
+            {
+              "date": "2000-12-19",
+              "label": "H／リーグ杯",
+              "result": "1–2 ×"
+            },
+            {
+              "date": "2000-11-25",
+              "label": "H／PL",
+              "result": "2–3 ×"
+            },
+            {
+              "date": "1999-10-27",
+              "label": "H／2部",
+              "result": "1–0 ○"
+            },
+            {
+              "date": "1999-09-26",
+              "label": "A／2部",
+              "result": "1–2 ×"
+            },
+            {
+              "date": "1998-02-18",
+              "label": "H／2部",
+              "result": "1–2 ×"
+            },
+            {
+              "date": "1997-10-04",
+              "label": "A／2部",
+              "result": "0–1 ×"
+            },
+            {
+              "date": "1997-08-16",
+              "label": "H／2部",
+              "result": "1–0 ○"
+            },
+            {
+              "date": "1997-04-22",
+              "label": "A／2部",
+              "result": "0–1 ×"
+            },
+            {
+              "date": "1995-02-22",
+              "label": "H／PL",
+              "result": "2–0 ○"
+            },
+            {
+              "date": "1994-12-03",
+              "label": "A／PL",
+              "result": "2–1 ○"
+            },
+            {
+              "date": "1994-03-29",
+              "label": "A／PL",
+              "result": "2–2 △"
+            },
+            {
+              "date": "1994-02-05",
+              "label": "H／PL",
+              "result": "2–1 ○"
+            },
+            {
+              "date": "1993-04-03",
+              "label": "H／PL",
+              "result": "3–1 ○"
+            },
+            {
+              "date": "1992-12-12",
+              "label": "A／PL",
+              "result": "1–3 ×"
+            },
+            {
+              "date": "1989-02-11",
+              "label": "H／2部",
+              "result": "4–0 ○"
+            },
+            {
+              "date": "1988-10-08",
+              "label": "A／2部",
+              "result": "0–1 ×"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Manchester City",
+            "summary": "公式10戦8勝2敗、25得点12失点。コミュニティシールド含む、親善試合除外。",
+            "items": [
+              {
+                "date": "2026-10-14",
+                "label": "PSG H／CL",
+                "result": "2–4 ×"
+              },
+              {
+                "date": "2026-10-11",
+                "label": "Liverpool A／PL",
+                "result": "3–0 ○"
+              },
+              {
+                "date": "2026-09-20",
+                "label": "Sunderland H／PL",
+                "result": "5–3 ○"
+              },
+              {
+                "date": "2026-09-17",
+                "label": "Norwich H／リーグ杯",
+                "result": "5–0 ○"
+              },
+              {
+                "date": "2026-09-13",
+                "label": "Manchester United A／PL",
+                "result": "1–0 ○"
+              },
+              {
+                "date": "2026-09-08",
+                "label": "Porto A／CL",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "2026-09-05",
+                "label": "Coventry H／PL",
+                "result": "1–0 ○"
+              },
+              {
+                "date": "2026-08-28",
+                "label": "Crystal Palace A／PL",
+                "result": "4–1 ○"
+              },
+              {
+                "date": "2026-08-23",
+                "label": "Bournemouth H／PL",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "2026-08-16",
+                "label": "Arsenal N／コミュニティシールド",
+                "result": "0–3 ×"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Ipswich Town",
+            "summary": "公式10戦5勝1分4敗、19得点19失点。今季8戦4勝4敗、昨季2部の最後2戦1勝1分を区別。親善試合除外。",
+            "items": [
+              {
+                "date": "2026-10-10",
+                "label": "Fulham H／PL",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "2026-09-19",
+                "label": "Everton A／PL",
+                "result": "0–1 ×"
+              },
+              {
+                "date": "2026-09-15",
+                "label": "Arsenal H／リーグ杯",
+                "result": "2–4 ×"
+              },
+              {
+                "date": "2026-09-12",
+                "label": "Crystal Palace A／PL",
+                "result": "3–2 ○"
+              },
+              {
+                "date": "2026-09-04",
+                "label": "Liverpool H／PL",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "2026-08-30",
+                "label": "Manchester United A／PL",
+                "result": "2–5 ×"
+              },
+              {
+                "date": "2026-08-25",
+                "label": "Leicester H／リーグ杯",
+                "result": "3–1 ○"
+              },
+              {
+                "date": "2026-08-22",
+                "label": "Sunderland H／PL",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "2026-05-02",
+                "label": "QPR H／昨季2部",
+                "result": "3–0 ○"
+              },
+              {
+                "date": "2026-04-28",
+                "label": "Southampton A／昨季2部",
+                "result": "2–2 △"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "今季5種類。点差はCity優位4、Ipswich相対優位1。Sunderlandは双方勝利、守備面は逆方向。",
+          "items": [
+            {
+              "opponent": "Liverpool",
+              "side_a": {
+                "date": "10/11",
+                "result": "A 3–0 ○"
+              },
+              "side_b": {
+                "date": "9/4",
+                "result": "H 0–2 ×"
+              },
+              "comparison": "City優位。ホーム差を考慮しても支持。"
+            },
+            {
+              "opponent": "Manchester United",
+              "side_a": {
+                "date": "9/13",
+                "result": "A 1–0 ○"
+              },
+              "side_b": {
+                "date": "8/30",
+                "result": "A 2–5 ×"
+              },
+              "comparison": "同じアウェー、City優位。"
+            },
+            {
+              "opponent": "Crystal Palace",
+              "side_a": {
+                "date": "8/28",
+                "result": "A 4–1 ○"
+              },
+              "side_b": {
+                "date": "9/12",
+                "result": "A 3–2 ○"
+              },
+              "comparison": "双方勝ち、Cityの点差が大きい。"
+            },
+            {
+              "opponent": "Sunderland",
+              "side_a": {
+                "date": "9/20",
+                "result": "H 5–3 ○"
+              },
+              "side_b": {
+                "date": "8/22",
+                "result": "H 2–1 ○"
+              },
+              "comparison": "双方勝ちで点差City+2対Ipswich+1。攻撃力City、失点はIpswichが少ない。"
+            },
+            {
+              "opponent": "Arsenal",
+              "side_a": {
+                "date": "8/16",
+                "result": "N 0–3 ×／シールド"
+              },
+              "side_b": {
+                "date": "9/15",
+                "result": "H 2–4 ×／リーグ杯"
+              },
+              "comparison": "双方敗戦、点差Ipswich側。大会・会場差が大きく弱い比較。"
+            }
+          ]
+        },
+        "ranking_or_rating": {
+          "text": "リーグ6試合City18点・首位、Ipswich9点・10位（試合前報道）。"
+        },
+        "home_away": {
+          "text": "Cityホーム。10/14 CLから中2日、Ipswichは10/10以来。"
+        },
+        "availability": {
+          "text": "先発未発表。欠場報道はGuardian両軍なしとASのIpswich Jack Taylor欠場で不一致、欠場なしとは確定しない。"
+        },
+        "sport_specific": {
+          "text": "先制時刻・前半勝率を一貫した標本で未確認。前半勝者やハンディには拡張せず90分勝利のみ。"
+        },
+        "market": {
+          "text": "City90分勝利。引分は不的中。DNBではない。購入オッズ未確認。"
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "match_id": "2026-10-18-falcons-betboom-cs2",
+      "event_id": "web-2026-10-18-falcons-betboom-cs2",
+      "matchup": "Falcons vs BETBOOM",
+      "favored": "Falcons",
+      "selection_label": "Falcons",
+      "sport": "CS2",
+      "competition": "Thunderpick World Championship 2026 準決勝",
+      "start_jst": "2026-10-18T02:00:00+09:00",
+      "venue": "BLAST Studios, Malta／中立",
+      "format": "BO3／LAN",
+      "status": "formal",
+      "gap_grade": "A候補（H2H反証あり）",
+      "price_grade": "未判定",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "仮想100USD基準。購入オッズ未確認、未精算。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "required_win_rate_pct": null,
+        "book_examples": "個別市場・購入価格未確認"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-17T20:21:43+09:00",
+      "analysis_reviewed_at": "2026-10-17T20:21:43+09:00",
+      "sources": [
+        "https://www.hltv.org/matches/2399415/falcons-vs-betboom-thunderpick-world-championship-2026",
+        "https://dev.blast.tv/cs/tournaments/thunderpick-world-championship-2026/match/d2c27f08/falcons-bb/comments"
+      ],
+      "conclusion": "①実績型：Falcons直近10戦6勝4敗、BETBOOM5勝5敗。最新H2HはFalcons0–2敗戦。②戦力型：HLTV5位対14位、VRS4位対10位はFalcons支持。③共通相手型：5種類はFalcons5勝、BETBOOM1勝4敗だが、Legacyは双方2–1で差なし。3軸は完全一致せず、確勝判定にはしない。",
+      "risk": "最新H2H敗戦、Veto未確定。共通相手の時期差と編成変更に注意。購入価格未確認。",
+      "analysis_detail": {
+        "summary": "①実績型：Falcons直近10戦6勝4敗、BETBOOM5勝5敗。最新H2HはFalcons0–2敗戦。②戦力型：HLTV5位対14位、VRS4位対10位はFalcons支持。③共通相手型：5種類はFalcons5勝、BETBOOM1勝4敗だが、Legacyは双方2–1で差なし。3軸は完全一致せず、確勝判定にはしない。",
+        "h2h": {
+          "summary": "掲載1シリーズFalcons0勝1敗。2敗表記は2マップであり2シリーズではない。",
+          "items": [
+            {
+              "date": "2026-06-12",
+              "label": "IEM Cologne Major／BO3",
+              "result": "Falcons0–2 BETBOOM（Ancient10–13、Nuke11–13）"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Falcons",
+            "summary": "直近10 BO3は6勝4敗、14–10マップ。日付未取得分はHLTV相対表記。",
+            "items": [
+              {
+                "date": "10/15",
+                "label": "9z／BO3",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "10/14",
+                "label": "NiP／BO3",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約1週前",
+                "label": "Spirit／BO3",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約1週前",
+                "label": "NAVI／BO3",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "約2週前",
+                "label": "Vitality／BO3",
+                "result": "1–2 ×"
+              },
+              {
+                "date": "約2週前",
+                "label": "Aurora／BO3",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約2週前",
+                "label": "TYLOO／BO3",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約6週前",
+                "label": "Spirit／BO3",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約6週前",
+                "label": "G2／BO3",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約7週前",
+                "label": "MOUZ／BO3",
+                "result": "1–2 ×"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "BETBOOM",
+            "summary": "直近10 BO3は5勝5敗、12–12マップ。Legacy戦2–1を含む。",
+            "items": [
+              {
+                "date": "10/16",
+                "label": "Legacy／BO3",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "10/15",
+                "label": "PARIVISION／BO3",
+                "result": "2–1 ○"
+              },
+              {
+                "date": "10/14",
+                "label": "FURIA／BO3",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約1週前",
+                "label": "9z／BO3",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約2週前",
+                "label": "Aurora／BO3",
+                "result": "1–2 ×"
+              },
+              {
+                "date": "約2週前",
+                "label": "M80／BO3",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約2週前",
+                "label": "FURIA／BO3",
+                "result": "0–2 ×"
+              },
+              {
+                "date": "約5週前",
+                "label": "G2／BO3",
+                "result": "1–2 ×"
+              },
+              {
+                "date": "約5週前",
+                "label": "MIBR／BO3",
+                "result": "2–0 ○"
+              },
+              {
+                "date": "約5週前",
+                "label": "Astralis／BO3",
+                "result": "2–0 ○"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "5種類：Falcons優位4、同スコア1。各チームの直近対戦。10試合外の記録も含む。",
+          "items": [
+            {
+              "opponent": "9z",
+              "side_a": {
+                "date": "10/15",
+                "result": "2–1 ○"
+              },
+              "side_b": {
+                "date": "約1週前",
+                "result": "0–2 ×"
+              },
+              "comparison": "Falcons優位"
+            },
+            {
+              "opponent": "NiP",
+              "side_a": {
+                "date": "10/14",
+                "result": "2–0 ○"
+              },
+              "side_b": {
+                "date": "約9週前",
+                "result": "0–2 ×"
+              },
+              "comparison": "Falcons優位、時期差大"
+            },
+            {
+              "opponent": "Aurora",
+              "side_a": {
+                "date": "約2週前",
+                "result": "2–0 ○"
+              },
+              "side_b": {
+                "date": "約2週前",
+                "result": "1–2 ×"
+              },
+              "comparison": "Falcons優位"
+            },
+            {
+              "opponent": "G2",
+              "side_a": {
+                "date": "約6週前",
+                "result": "2–0 ○"
+              },
+              "side_b": {
+                "date": "約5週前",
+                "result": "1–2 ×"
+              },
+              "comparison": "Falcons優位"
+            },
+            {
+              "opponent": "Legacy",
+              "side_a": {
+                "date": "約7週前",
+                "result": "2–1 ○"
+              },
+              "side_b": {
+                "date": "10/16",
+                "result": "2–1 ○"
+              },
+              "comparison": "同スコア。Falconsはその前に0–2敗戦あり"
+            }
+          ]
+        },
+        "ranking_or_rating": {
+          "text": "HLTV Falcons#5／BETBOOM#14、VRS#4(1879pt)／#10(1618pt)。投票率を勝率として扱わない。"
+        },
+        "home_away": {
+          "text": "マルタLAN中立。17日17:00UTC＝18日02:00JST（BLAST・HLTV照合）。"
+        },
+        "availability": {
+          "text": "掲載予定Falcons karrigan/NiKo/m0NESY/TeSeS/kyousuke、BETBOOM Magnojez/Boombl4/d1Ledez/zorte/S1ren。最終欠場・交代未確認。"
+        },
+        "sport_specific": {
+          "text": "直近3か月Falcons Dust2 75%/12、Nuke75%/4。BETBOOM Nuke60%/5、Mirage50%/8。Veto未確定、1stマップ・2–0固定は未採用。"
+        },
+        "market": {
+          "text": "Falcons BO3シリーズ勝者。購入オッズ未確認、100USD基準。"
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "match_id": "2026-10-18-vegas-pittsburgh-nhl",
+      "event_id": "web-2026-10-18-vegas-pittsburgh-nhl",
+      "matchup": "Vegas Golden Knights vs Pittsburgh Penguins",
+      "favored": "Vegas Golden Knights",
+      "selection_label": "Vegas Golden Knights",
+      "sport": "NHL",
+      "competition": "NHL 2026/27 レギュラーシーズン",
+      "start_jst": "2026-10-18T11:00:00+09:00",
+      "venue": "T-Mobile Arena／Vegasホーム",
+      "format": "試合勝者（延長・SO込み）",
+      "status": "formal",
+      "gap_grade": "A−候補（ホーム・休養優位）",
+      "price_grade": "未判定",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "仮想100USD基準。購入オッズ未確認、未精算。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "required_win_rate_pct": null,
+        "book_examples": "個別市場・購入価格未確認"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-17T20:21:43+09:00",
+      "analysis_reviewed_at": "2026-10-17T20:21:43+09:00",
+      "sources": [
+        "https://www.tmobilearena.com/events/all",
+        "https://champsorchumps.us/team/nhl/vegas-golden-knights/head-to-head/pittsburgh-penguins",
+        "https://champsorchumps.us/team/nhl/vegas-golden-knights/2027",
+        "https://champsorchumps.us/team/nhl/pittsburgh-penguins/2027",
+        "https://champsorchumps.us/team/nhl/vegas-golden-knights/2026",
+        "https://champsorchumps.us/team/nhl/pittsburgh-penguins/2026",
+        "https://www.nhl.com/news/calgary-flames-vegas-golden-knights-game-recap-october-15-2026",
+        "https://www.reuters.com/sports/nhl/nathan-mackinnons-4-point-night-powers-avalanche-past-penguins--flm-2026-10-17/"
+      ],
+      "conclusion": "①実績型：公式直近10はVegas7勝3敗、Pittsburgh4勝6敗（OT/SO負け含む、昨季補完あり）。H2H通算Vegas7勝9敗だがホーム6勝2敗。②戦力型：今季7勝2敗対3勝4敗1延長負け、PittsburghはColorado遠征翌日の連戦。③共通相手型：今季共通Chicago1種類はVegas5–2、Pittsburgh3–5でVegas支持。ただし1件のみで3軸完全一致の強判定はしない。",
+      "risk": "共通相手の今季同条件標本は1種類。先発GK・欠場最終確定前。過去季補完の勝率をそのまま予測確率に使わない。",
+      "analysis_detail": {
+        "summary": "①実績型：公式直近10はVegas7勝3敗、Pittsburgh4勝6敗（OT/SO負け含む、昨季補完あり）。H2H通算Vegas7勝9敗だがホーム6勝2敗。②戦力型：今季7勝2敗対3勝4敗1延長負け、PittsburghはColorado遠征翌日の連戦。③共通相手型：今季共通Chicago1種類はVegas5–2、Pittsburgh3–5でVegas支持。ただし1件のみで3軸完全一致の強判定はしない。",
+        "h2h": {
+          "summary": "全16試合：Vegas7勝9敗（うちOT負け1）。ホーム6勝2敗、直近ホーム4連勝。直近10全会場は4勝6敗。スコアVegas視点、日付現地。古い編成は参考。",
+          "items": [
+            {
+              "date": "2026-03-12",
+              "label": "H",
+              "result": "6–2 ○"
+            },
+            {
+              "date": "2026-03-01",
+              "label": "A",
+              "result": "0–5 ×"
+            },
+            {
+              "date": "2025-03-11",
+              "label": "A",
+              "result": "2–3 × OT"
+            },
+            {
+              "date": "2025-03-07",
+              "label": "H",
+              "result": "4–0 ○"
+            },
+            {
+              "date": "2024-01-20",
+              "label": "H",
+              "result": "3–2 ○"
+            },
+            {
+              "date": "2023-11-19",
+              "label": "A",
+              "result": "0–3 ×"
+            },
+            {
+              "date": "2023-01-05",
+              "label": "H",
+              "result": "5–2 ○"
+            },
+            {
+              "date": "2022-12-01",
+              "label": "A",
+              "result": "3–4 ×"
+            },
+            {
+              "date": "2022-03-11",
+              "label": "A",
+              "result": "2–5 ×"
+            },
+            {
+              "date": "2022-01-17",
+              "label": "H",
+              "result": "3–5 ×"
+            },
+            {
+              "date": "2020-01-07",
+              "label": "H",
+              "result": "3–4 ×"
+            },
+            {
+              "date": "2019-10-19",
+              "label": "A",
+              "result": "3–0 ○"
+            },
+            {
+              "date": "2019-01-19",
+              "label": "H",
+              "result": "7–3 ○"
+            },
+            {
+              "date": "2018-10-11",
+              "label": "A",
+              "result": "2–4 ×"
+            },
+            {
+              "date": "2018-02-06",
+              "label": "A",
+              "result": "4–5 ×"
+            },
+            {
+              "date": "2017-12-14",
+              "label": "H",
+              "result": "2–1 ○"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Vegas Golden Knights",
+            "summary": "公式直近10：7勝3敗。今季9戦7勝2敗35–22、前年決勝1敗を補完。プレシーズン除外、日付現地。",
+            "items": [
+              {
+                "date": "2026-10-15",
+                "label": "Calgary H",
+                "result": "6–2 ○"
+              },
+              {
+                "date": "2026-10-13",
+                "label": "@ Nashville Predators",
+                "result": "5–2 ○"
+              },
+              {
+                "date": "2026-10-12",
+                "label": "@ Minnesota Wild",
+                "result": "2–4 ×"
+              },
+              {
+                "date": "2026-10-10",
+                "label": "vs Los Angeles Kings",
+                "result": "2–1 ○（OT）"
+              },
+              {
+                "date": "2026-10-08",
+                "label": "vs Toronto Maple Leafs",
+                "result": "4–3 ○（SO）"
+              },
+              {
+                "date": "2026-10-06",
+                "label": "@ Seattle Kraken",
+                "result": "6–2 ○"
+              },
+              {
+                "date": "2026-10-04",
+                "label": "@ Vancouver Canucks",
+                "result": "3–2 ○"
+              },
+              {
+                "date": "2026-10-02",
+                "label": "vs Anaheim Ducks",
+                "result": "3–4 ×"
+              },
+              {
+                "date": "2026-09-29",
+                "label": "vs Chicago Blackhawks",
+                "result": "5–2 ○"
+              },
+              {
+                "date": "2026-06-14",
+                "label": "vs Carolina Hurricanes・前季Stanley Cup Final",
+                "result": "0–3 ×"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Pittsburgh Penguins",
+            "summary": "公式直近10：4勝6敗（延長・SO負け含む）。今季8戦3勝4敗1延長負け27–27、前年PO最後2戦1勝1敗を補完。プレシーズン除外。",
+            "items": [
+              {
+                "date": "2026-10-16",
+                "label": "Colorado A",
+                "result": "2–5 ×"
+              },
+              {
+                "date": "2026-10-13",
+                "label": "Chicago A",
+                "result": "3–5 ×"
+              },
+              {
+                "date": "2026-10-10",
+                "label": "Dallas H",
+                "result": "2–1 ○ SO"
+              },
+              {
+                "date": "2026-10-09",
+                "label": "Columbus A",
+                "result": "2–3 × SO"
+              },
+              {
+                "date": "2026-10-07",
+                "label": "Washington A",
+                "result": "3–5 ×"
+              },
+              {
+                "date": "2026-10-05",
+                "label": "Winnipeg H",
+                "result": "2–3 ×"
+              },
+              {
+                "date": "2026-10-03",
+                "label": "Montreal H",
+                "result": "6–5 ○ OT"
+              },
+              {
+                "date": "2026-09-30",
+                "label": "Philadelphia A",
+                "result": "7–0 ○"
+              },
+              {
+                "date": "2026-04-29",
+                "label": "Philadelphia A／前年PO",
+                "result": "0–1 × OT"
+              },
+              {
+                "date": "2026-04-27",
+                "label": "Philadelphia H／前年PO",
+                "result": "3–2 ○"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "今季双方が対戦済みの共通相手はChicagoの1種類。5件未達を明記。過去季の異条件比較を水増ししない。",
+          "items": [
+            {
+              "opponent": "Chicago Blackhawks",
+              "side_a": {
+                "date": "2026-09-29",
+                "result": "H 5–2 ○"
+              },
+              "side_b": {
+                "date": "2026-10-13",
+                "result": "A 3–5 ×"
+              },
+              "comparison": "Vegas+3対Pittsburgh−2でVegas支持。ただし会場逆、14日差、1件のみ。"
+            }
+          ]
+        },
+        "ranking_or_rating": {
+          "text": "今季Vegas7勝2敗14点、Pittsburgh3勝4敗1延長負け7点。試合数9対8の差あり。"
+        },
+        "home_away": {
+          "text": "現地10/17 19:00PDT＝10/18 11:00JST。PittsburghはDenverから移動して連戦2日目、Vegasはホームで中1日。"
+        },
+        "availability": {
+          "text": "先発GK・当日スクラッチ未確定。前日PittsburghのSilovs出場から翌日も同GKとは断定しない。"
+        },
+        "sport_specific": {
+          "text": "60分同点でも延長/SOでVegas勝利なら的中する市場。1stピリオドやパックラインは未採用。"
+        },
+        "market": {
+          "text": "Vegas勝者（延長・SO込み）。購入価格未確認。100USD基準、実購入扱いにしない。"
+        }
       }
     }
   ],
@@ -568,12 +1187,12 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "柏vs名古屋：現シーズンは柏有利、長期H2Hは名古屋有利",
-      "BETBOOMvsLegacy：Legacyがランキング優位"
+      "Manchester City vs Ipswich Town",
+      "Falcons vs BETBOOM",
+      "Vegas Golden Knights vs Pittsburgh Penguins"
     ],
     "price_adjusted_top": [],
-    "caution": "BETBOOM勝利の選択はユーザーから明示されず先頭表記を仮置き（要確認）。柏はDNB明示。市場オッズ未確認。",
-    "previous_note": "Vegas 6-2 Calgary的中。オッズなしで利益未計算。"
+    "caution": "市場価格未確認、価格優位未判定。柏は試合中。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -8541,6 +9160,268 @@
         "result_sources": [
           "https://ensigame.com/matches/lol/2159969-bnk-fearx-bfx-vs-jd-gaming-jdg-dcgi-12-10-26"
         ]
+      },
+      {
+        "rank": 1,
+        "match_id": "2026-10-17-betboom-legacy-cs2",
+        "event_id": "web-2026-10-17-betboom-legacy-cs2",
+        "matchup": "BETBOOM vs Legacy",
+        "favored": "BETBOOM（勝者要確認）",
+        "selection_label": "BETBOOM（勝者要確認）",
+        "sport": "CS2",
+        "competition": "Thunderpick World Championship 2026・Group B",
+        "start_jst": "2026-10-17T02:00:00+09:00",
+        "venue": "Malta・Thunderpick World Championship2026 Group B decider、10/17 02:00JST、BO3/LAN",
+        "format": "BO3 LAN/Veto前",
+        "status": "formal",
+        "gap_grade": "BETBOOM側の格差なし・要確認",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "勝利確定。購入オッズ未確認のため払戻・利益額は未計算。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "カジ旅・遊雅堂・bet365個別掲載確認不能"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-16T21:16:00+09:00",
+        "analysis_reviewed_at": "2026-10-16T21:16:00+09:00",
+        "sources": [
+          "https://www.hltv.org/matches/2399413/betboom-vs-legacy-thunderpick-world-championship-2026",
+          "https://www.hltv.org/matches/2394177/legacy-vs-betboom-iem-atlanta-2026",
+          "https://www.gosugamers.net/counterstrike/tournaments/62895-thunderpick-world-championship-2026/matches/662866-legacy-vs-betboom-team"
+        ],
+        "conclusion": "BETBOOM側の勝者指定はユーザーが明示していないため先頭表記を仮採用。①公開H2Hは2025 BO1 BETBOOM勝利、2026 BO3 Legacy2-0、近況はBETBOOM5-5/Legacy6-4、共通5組は拮抗〜Legacy方向。②HLTV#14対#7・VRS#12対#7、参考市場価格もLegacy優位。BETBOOMを大格差有利と評価できない。",
+        "risk": "BETBOOMはユーザーが勝者指定していないため先頭チームを暫定登録。BETBOOMが市場/現在戦力で劣勢であることを明示。購入オッズと各社個別掲載は未確認。",
+        "analysis_detail": {
+          "summary": "BETBOOM側の勝者指定はユーザーが明示していないため先頭表記を仮採用。①公開H2Hは2025 BO1 BETBOOM勝利、2026 BO3 Legacy2-0、近況はBETBOOM5-5/Legacy6-4、共通5組は拮抗〜Legacy方向。②HLTV#14対#7・VRS#12対#7、参考市場価格もLegacy優位。BETBOOMを大格差有利と評価できない。",
+          "ranking_or_rating": {
+            "text": "HLTV BETBOOM#14/VRS#12=1557pt、Legacy#7/VRS#7=1782pt。参考勝者価格BETBOOM約2.50–2.64、Legacy約1.45–1.53（HLTV掲載、個別3社掲載は未確認）。"
+          },
+          "h2h": {
+            "summary": "公開H2Hは2シリーズ1勝1敗。マップはBETBOOM1–2 Legacy。BO1(2025)とBO3(2026)を区別。",
+            "items": [
+              {
+                "date": "2026-05-17",
+                "label": "IEM Atlanta 2026 BO3",
+                "result": "BETBOOM 0–2 Legacy（Mirage4–13/Nuke3–13）"
+              },
+              {
+                "date": "2025-06-04",
+                "label": "Austin Major 2025 BO1",
+                "result": "BETBOOM 13–3 Legacy（Anubis）"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "BETBOOM",
+              "summary": "直近10シリーズ5勝5敗。HLTV公開戦績、各BO3。",
+              "items": [
+                {
+                  "date": "10/15",
+                  "label": "PARIVISION",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "10/14",
+                  "label": "FURIA",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "直近",
+                  "label": "9z",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "直近",
+                  "label": "Aurora",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "約2週前",
+                  "label": "M80",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約2週前",
+                  "label": "FURIA",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "G2",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "MIBR",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "Astralis",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "BIG",
+                  "result": "2–0 ○"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Legacy",
+              "summary": "直近10シリーズ6勝4敗。G2戦だけBO5、それ以外BO3。",
+              "items": [
+                {
+                  "date": "10/15",
+                  "label": "FURIA",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "10/14",
+                  "label": "PARIVISION",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "直近",
+                  "label": "M80",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "直近",
+                  "label": "1win",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約2週前",
+                  "label": "ShindeN",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約2週前",
+                  "label": "PARIVISION",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "G2",
+                  "result": "3–0 ○ BO5"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "MIBR",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "FURIA",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "Alliance",
+                  "result": "2–0 ○"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "FURIA、PARIVISION、M80、G2、MIBRの5組を公開確認。",
+            "items": [
+              {
+                "opponent": "FURIA",
+                "side_a": {
+                  "date": "10/14・約2週前",
+                  "result": "BETBOOM 0–2×、0–2×"
+                },
+                "side_b": {
+                  "date": "10/15・約5週前",
+                  "result": "Legacy 1–2×、2–0○"
+                },
+                "comparison": "Legacy方向"
+              },
+              {
+                "opponent": "PARIVISION",
+                "side_a": {
+                  "date": "10/15",
+                  "result": "BETBOOM 2–1○"
+                },
+                "side_b": {
+                  "date": "10/14・約2週前",
+                  "result": "Legacy 2–0○、1–2×"
+                },
+                "comparison": "両者勝利実績"
+              },
+              {
+                "opponent": "M80",
+                "side_a": {
+                  "date": "約2週前",
+                  "result": "BETBOOM 2–0○"
+                },
+                "side_b": {
+                  "date": "約1週前",
+                  "result": "Legacy 1–2×"
+                },
+                "comparison": "BETBOOM方向"
+              },
+              {
+                "opponent": "G2",
+                "side_a": {
+                  "date": "約5週前",
+                  "result": "BETBOOM 1–2× BO3"
+                },
+                "side_b": {
+                  "date": "約5週前",
+                  "result": "Legacy 3–0○ BO5"
+                },
+                "comparison": "Legacy方向、形式差あり"
+              },
+              {
+                "opponent": "MIBR",
+                "side_a": {
+                  "date": "約5週前",
+                  "result": "BETBOOM 2–0○"
+                },
+                "side_b": {
+                  "date": "約5週前",
+                  "result": "Legacy 2–1○"
+                },
+                "comparison": "両者勝利"
+              }
+            ]
+          },
+          "home_away": {
+            "text": "Malta・Thunderpick World Championship2026 Group B decider、10/17 02:00JST、BO3/LAN"
+          },
+          "availability": {
+            "text": "BETBOOM Boombl4/zorte/S1ren/d1Ledez/Magnojez、Legacy arT/dumau/latto/n1ssim/try。直前の欠場・代役は未確認。"
+          },
+          "sport_specific": {
+            "text": "Veto未発表。HLTV直近3か月LegacyはMirage73%/11MAP、Nuke80%/5、BETBOOM Mirage43%/7・Nuke50%/4。MAP1/2/3未確定。"
+          },
+          "market": {
+            "text": "BETBOOMはユーザーが勝者指定していないため先頭チームを暫定登録。BETBOOMが市場/現在戦力で劣勢であることを明示。購入オッズと各社個別掲載は未確認。"
+          },
+          "post_match": {
+            "text": "BETBOOM2–1勝利。Nuke16–13、Dust2 11–13、Mirage13–11。事前登録の暫定BETBOOM選択を維持し結果のみ反映。購入オッズ未確認、金額は未計算。"
+          }
+        },
+        "result": "○ BETBOOM 2–1 Legacy（既存の暫定BETBOOM選択に基づく）",
+        "favored_result": "win",
+        "result_status": "final",
+        "match_status": "final",
+        "result_updated_at": "2026-10-17T20:21:43+09:00",
+        "archived_at": "2026-10-17T20:21:43+09:00",
+        "archive_reason": "終了を確認し正式結果一覧へ。事前の暫定選択表示を維持。",
+        "result_sources": [
+          "https://www.hltv.org/matches/2399413/betboom-vs-legacy-thunderpick-world-championship-2026"
+        ]
       }
     ],
     "summary": {
@@ -8560,10 +9441,10 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 51,
+      "favored_wins": 52,
       "favored_losses": 5,
       "pending": 0,
-      "note": "NHLベガス6-2カルガリー○的中、オッズ未申告で利益額は未計算。"
+      "note": "BETBOOM2–1勝利を追加。既存の暫定選択を保持。購入オッズ不明で利益額未計算。"
     }
   },
   "history_policy": {
@@ -8571,7 +9452,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-16T21:16:00+09:00",
-    "note": "10/16終了Vegas6-2を精算し履歴へ。新規BETBOOM勝者（暫定選択）と柏DNBを正式採用。①H2H/直近10/共通相手と②戦力を照合。"
+    "as_of": "2026-10-17T20:21:43+09:00",
+    "note": "指定3件追加。終了BETBOOM勝利を反映、払戻・利益額はオッズ確認待ち。柏DNBは進行中。"
   }
 }
