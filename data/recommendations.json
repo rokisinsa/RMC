@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-17T20:21:43+09:00",
+    "as_of": "2026-10-17T16:15:13.701Z",
     "status": "active",
     "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
   },
@@ -4840,14 +4840,19 @@
       "discovered_at": "2026-10-16T21:16:00+09:00",
       "bet_at": null,
       "locked_at": "2026-10-16T21:16:00+09:00",
-      "settlement_override": null,
+      "settlement_override": {
+        "state": "loss",
+        "reason": "ユーザー訂正：採用はLegacy勝利。アシスタントのBETBOOM暫定選択は登録誤り。元の固定値は監査用に保持し表示・精算を訂正。結果Legacy1–2 BETBOOM、不的中、100USD基準の純損益−100USD。",
+        "set_at": "2026-10-17T16:15:13.701Z",
+        "source": "user_reported"
+      },
       "id": "rec-2026-10-17-betboom-legacy-cs2",
       "match_id": "2026-10-17-betboom-legacy-cs2",
       "source_event_id": "web-2026-10-17-betboom-legacy-cs2",
       "market": "match_winner",
-      "market_label": "BETBOOM BO3シリーズ勝者（先頭表記の暫定選択）",
+      "market_label": "Legacy BO3シリーズ勝者",
       "selection": "side_a",
-      "selection_label": "BETBOOM（選択要確認）",
+      "selection_label": "Legacy（ユーザー訂正）",
       "locked": {
         "prob": null,
         "gap_score": null,
@@ -4856,10 +4861,9 @@
         "summary": "H2H：2025 BO1 BETBOOM勝利／2026 BO3 Legacy2–0。直近10 BETBOOM5–5、Legacy6–4。共通相手5組。HLTV BETBOOM#14 Legacy#7。"
       },
       "flags": [
-        "odds_unverified",
-        "needs_review"
+        "odds_unverified"
       ],
-      "note": "ユーザーは勝者指定なしでカードを採用。先頭BETBOOMを暫定採用。指示がLegacy勝ちの場合、事前値保全のため履歴を残して修正。実購入記録なし。"
+      "note": "ユーザー訂正：採用はLegacy勝利。アシスタントのBETBOOM暫定選択は登録誤り。元の固定値は監査用に保持し表示・精算を訂正。結果Legacy1–2 BETBOOM、不的中、100USD基準の純損益−100USD。"
     },
     {
       "system": "recommendations",

@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-17T20:21:43+09:00",
+    "as_of": "2026-10-17T16:15:13.701Z",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -2074,6 +2074,62 @@
             "verified_at": "2026-10-17T20:21:43+09:00",
             "source_confidence": "official",
             "note": "LIVE表示。途中経過をfinalスコアとして記録しない。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261018-user-results-0113",
+      "kind": "result_update",
+      "at": "2026-10-17T16:15:13.701Z",
+      "source": "user_reported",
+      "note": "柏敗戦・Manchester City勝利のユーザー報告。",
+      "changes": [
+        {
+          "match_id": "2026-10-17-kashiwa-nagoya-soccer",
+          "set": {
+            "status": "final",
+            "result": {
+              "winners": {
+                "final": "side_b"
+              },
+              "text": "柏敗戦：柏DNBは不的中（ユーザー報告。最終スコア未確認）"
+            }
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ユーザー結果報告（2026-10-18 JST）",
+                "type": "user_confirmed"
+              }
+            ],
+            "verified_at": "2026-10-17T16:15:13.701Z",
+            "note": "2026-10-18 01:12–01:13 JSTユーザー結果報告。公開ソースでは最終結果を独立確認できず得点は記録しない。",
+            "source_confidence": "user_confirmed"
+          }
+        },
+        {
+          "match_id": "2026-10-17-man-city-ipswich-soccer",
+          "set": {
+            "status": "final",
+            "result": {
+              "winners": {
+                "final": "side_a"
+              },
+              "text": "Manchester City勝利：的中（ユーザー報告。最終スコア未確認）"
+            }
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "ユーザー結果報告（2026-10-18 JST）",
+                "type": "user_confirmed"
+              }
+            ],
+            "verified_at": "2026-10-17T16:15:13.701Z",
+            "note": "2026-10-18 01:12–01:13 JSTユーザー結果報告。公開ソースでは最終結果を独立確認できず得点は記録しない。",
+            "source_confidence": "user_confirmed"
           }
         }
       ],
