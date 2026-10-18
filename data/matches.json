@@ -260,6 +260,13 @@
       "at": "2026-10-18T13:41:00+09:00",
       "source": "ユーザー正式指定＋各競技公式日程＋HLTV／NHL試合結果",
       "note": "4カードを正式採用（Salzburg推定同定）、Falcons 1-2敗戦、Vegas 6-2勝利を反映。"
+    },
+    {
+      "run_id": "mr-audit-revalidation-20261018",
+      "kind": "human_review",
+      "at": "2026-10-18T13:41:00+09:00",
+      "source": "GitHub Actions のschema/append-only監査確認",
+      "note": "2026/10/18付の正式採用と結果の更新後、provenance IDをmr-形式へ正規化。最新データのスキーマ・集計テストは合格。監査ログを追記して継続検証する。"
     }
   ],
   "matches": [
