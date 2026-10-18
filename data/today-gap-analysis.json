@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-17T20:21:43+09:00",
+  "generated_at": "2026-10-18T13:41:00+09:00",
   "window": {
-    "from": "2026-10-17T20:21:43+09:00",
-    "to": "2026-10-18T20:21:43+09:00",
+    "from": "2026-10-18T13:41:00+09:00",
+    "to": "2026-10-19T08:00:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "終了した柏・Manchester Cityを結果付き履歴へ移動。Falcons・Vegasは継続。"
+    "note": "10/18中に開始する2件と、現地10/18開催でJST10/19早朝開始の2件を正式採用。Falcons・Vegasは終了履歴へ移動。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -22,528 +22,171 @@
       "プレミアリーグ",
       "CS2 Thunderpick",
       "NHL",
-      "既掲載試合の結果"
+      "既掲載試合の結果",
+      "NFL",
+      "La Liga",
+      "B.LEAGUE ONE",
+      "ADMIRAL Bundesliga",
+      "CS2試合結果",
+      "NHL試合結果"
     ],
-    "note": "指定3カード。双方直近公式10、H2H、共通相手比較を掲載。共通相手はCity5・Falcons5・NHL今季1。前季補完・相対日付・未確認オッズを明記。"
+    "note": "ユーザー正式指定4件と既存結果2件を確認。4件の購入価格未確認。4件目Salzburgは発話解釈による仮同定。"
   },
   "candidates": [
     {
-      "rank": 3,
-      "match_id": "2026-10-18-falcons-betboom-cs2",
-      "event_id": "web-2026-10-18-falcons-betboom-cs2",
-      "matchup": "Falcons vs BETBOOM",
-      "favored": "Falcons",
-      "selection_label": "Falcons",
-      "sport": "CS2",
-      "competition": "Thunderpick World Championship 2026 準決勝",
-      "start_jst": "2026-10-18T02:00:00+09:00",
-      "venue": "BLAST Studios, Malta／中立",
-      "format": "BO3／LAN",
+      "rank": 1,
+      "match_id": "2026-10-19-rams-cardinals-nfl",
+      "event_id": "web-2026-10-19-rams-cardinals-nfl",
+      "matchup": "Los Angeles Rams vs Arizona Cardinals",
+      "favored": "Los Angeles Rams",
+      "selection_label": "Los Angeles Rams",
+      "sport": "NFL",
+      "competition": "NFL 2026 Regular Season Week 6",
+      "start_jst": "2026-10-19T05:05:00+09:00",
+      "venue": "SoFi Stadium／Ramsホーム",
+      "format": "試合勝者（延長込み）",
       "status": "formal",
-      "gap_grade": "A候補（H2H反証あり）",
+      "gap_grade": "暫定（再評価必要）",
       "price_grade": "未判定",
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "仮想100USD基準。購入オッズ未確認、未精算。",
+      "profit_status": "仮想100USD基準。オッズ未確認、未精算。",
       "odds": {
         "min": null,
         "max": null,
         "required_win_rate_pct": null,
-        "book_examples": "個別市場・購入価格未確認"
+        "book_examples": "購入価格未確認"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-17T20:21:43+09:00",
-      "analysis_reviewed_at": "2026-10-17T20:21:43+09:00",
+      "added_at": "2026-10-18T13:41:00+09:00",
+      "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
       "sources": [
-        "https://www.hltv.org/matches/2399415/falcons-vs-betboom-thunderpick-world-championship-2026",
-        "https://dev.blast.tv/cs/tournaments/thunderpick-world-championship-2026/match/d2c27f08/falcons-bb/comments"
+        "https://www.therams.com/news/know-before-you-go-rams-vs-arizona-cardinals-sofi-stadium-week-6",
+        "https://nfl.jp/teams/la/"
       ],
-      "conclusion": "①実績型：Falcons直近10戦6勝4敗、BETBOOM5勝5敗。最新H2HはFalcons0–2敗戦。②戦力型：HLTV5位対14位、VRS4位対10位はFalcons支持。③共通相手型：5種類はFalcons5勝、BETBOOM1勝4敗だが、Legacyは双方2–1で差なし。3軸は完全一致せず、確勝判定にはしない。",
-      "risk": "最新H2H敗戦、Veto未確定。共通相手の時期差と編成変更に注意。購入価格未確認。",
+      "conclusion": "Rams 2勝3敗、Cardinals 1勝4敗。対戦前に選手欠場・実際の市場オッズ確認が必要。ユーザー正式指定によりRams勝者を採用。",
+      "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
       "analysis_detail": {
-        "summary": "①実績型：Falcons直近10戦6勝4敗、BETBOOM5勝5敗。最新H2HはFalcons0–2敗戦。②戦力型：HLTV5位対14位、VRS4位対10位はFalcons支持。③共通相手型：5種類はFalcons5勝、BETBOOM1勝4敗だが、Legacyは双方2–1で差なし。3軸は完全一致せず、確勝判定にはしない。",
-        "h2h": {
-          "summary": "掲載1シリーズFalcons0勝1敗。2敗表記は2マップであり2シリーズではない。",
-          "items": [
-            {
-              "date": "2026-06-12",
-              "label": "IEM Cologne Major／BO3",
-              "result": "Falcons0–2 BETBOOM（Ancient10–13、Nuke11–13）"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Falcons",
-            "summary": "直近10 BO3は6勝4敗、14–10マップ。日付未取得分はHLTV相対表記。",
-            "items": [
-              {
-                "date": "10/15",
-                "label": "9z／BO3",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "10/14",
-                "label": "NiP／BO3",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約1週前",
-                "label": "Spirit／BO3",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約1週前",
-                "label": "NAVI／BO3",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "約2週前",
-                "label": "Vitality／BO3",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "約2週前",
-                "label": "Aurora／BO3",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約2週前",
-                "label": "TYLOO／BO3",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約6週前",
-                "label": "Spirit／BO3",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約6週前",
-                "label": "G2／BO3",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約7週前",
-                "label": "MOUZ／BO3",
-                "result": "1–2 ×"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "BETBOOM",
-            "summary": "直近10 BO3は5勝5敗、12–12マップ。Legacy戦2–1を含む。",
-            "items": [
-              {
-                "date": "10/16",
-                "label": "Legacy／BO3",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "10/15",
-                "label": "PARIVISION／BO3",
-                "result": "2–1 ○"
-              },
-              {
-                "date": "10/14",
-                "label": "FURIA／BO3",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約1週前",
-                "label": "9z／BO3",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約2週前",
-                "label": "Aurora／BO3",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "約2週前",
-                "label": "M80／BO3",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約2週前",
-                "label": "FURIA／BO3",
-                "result": "0–2 ×"
-              },
-              {
-                "date": "約5週前",
-                "label": "G2／BO3",
-                "result": "1–2 ×"
-              },
-              {
-                "date": "約5週前",
-                "label": "MIBR／BO3",
-                "result": "2–0 ○"
-              },
-              {
-                "date": "約5週前",
-                "label": "Astralis／BO3",
-                "result": "2–0 ○"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "5種類：Falcons優位4、同スコア1。各チームの直近対戦。10試合外の記録も含む。",
-          "items": [
-            {
-              "opponent": "9z",
-              "side_a": {
-                "date": "10/15",
-                "result": "2–1 ○"
-              },
-              "side_b": {
-                "date": "約1週前",
-                "result": "0–2 ×"
-              },
-              "comparison": "Falcons優位"
-            },
-            {
-              "opponent": "NiP",
-              "side_a": {
-                "date": "10/14",
-                "result": "2–0 ○"
-              },
-              "side_b": {
-                "date": "約9週前",
-                "result": "0–2 ×"
-              },
-              "comparison": "Falcons優位、時期差大"
-            },
-            {
-              "opponent": "Aurora",
-              "side_a": {
-                "date": "約2週前",
-                "result": "2–0 ○"
-              },
-              "side_b": {
-                "date": "約2週前",
-                "result": "1–2 ×"
-              },
-              "comparison": "Falcons優位"
-            },
-            {
-              "opponent": "G2",
-              "side_a": {
-                "date": "約6週前",
-                "result": "2–0 ○"
-              },
-              "side_b": {
-                "date": "約5週前",
-                "result": "1–2 ×"
-              },
-              "comparison": "Falcons優位"
-            },
-            {
-              "opponent": "Legacy",
-              "side_a": {
-                "date": "約7週前",
-                "result": "2–1 ○"
-              },
-              "side_b": {
-                "date": "10/16",
-                "result": "2–1 ○"
-              },
-              "comparison": "同スコア。Falconsはその前に0–2敗戦あり"
-            }
-          ]
-        },
-        "ranking_or_rating": {
-          "text": "HLTV Falcons#5／BETBOOM#14、VRS#4(1879pt)／#10(1618pt)。投票率を勝率として扱わない。"
-        },
-        "home_away": {
-          "text": "マルタLAN中立。17日17:00UTC＝18日02:00JST（BLAST・HLTV照合）。"
-        },
-        "availability": {
-          "text": "掲載予定Falcons karrigan/NiKo/m0NESY/TeSeS/kyousuke、BETBOOM Magnojez/Boombl4/d1Ledez/zorte/S1ren。最終欠場・交代未確認。"
-        },
-        "sport_specific": {
-          "text": "直近3か月Falcons Dust2 75%/12、Nuke75%/4。BETBOOM Nuke60%/5、Mirage50%/8。Veto未確定、1stマップ・2–0固定は未採用。"
-        },
-        "market": {
-          "text": "Falcons BO3シリーズ勝者。購入オッズ未確認、100USD基準。"
-        }
+        "summary": "Rams 2勝3敗、Cardinals 1勝4敗。対戦前に選手欠場・実際の市場オッズ確認が必要。ユーザー正式指定によりRams勝者を採用。"
+      }
+    },
+    {
+      "rank": 2,
+      "match_id": "2026-10-19-real-madrid-sevilla-soccer",
+      "event_id": "web-2026-10-19-real-madrid-sevilla-soccer",
+      "matchup": "Real Madrid vs Sevilla FC",
+      "favored": "Real Madrid",
+      "selection_label": "Real Madrid",
+      "sport": "サッカー",
+      "competition": "La Liga 2026/27 第9節",
+      "start_jst": "2026-10-19T04:00:00+09:00",
+      "venue": "Santiago Bernabéu／Real Madridホーム",
+      "format": "90分勝者",
+      "status": "formal",
+      "gap_grade": "暫定（再評価必要）",
+      "price_grade": "未判定",
+      "market": "match_1x2",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "仮想100USD基準。オッズ未確認、未精算。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "required_win_rate_pct": null,
+        "book_examples": "購入価格未確認"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-18T13:41:00+09:00",
+      "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
+      "sources": [
+        "https://www.realmadrid.com/en-US/news/football/first-team/latest-news/el-calendario-del-real-madrid-en-octubre-24-09-2026",
+        "https://www.reuters.com/sports/soccer/real-madrids-vinicius-miss-clasico-after-four-game-suspension-2026-10-14/"
+      ],
+      "conclusion": "10/18現地21:00 CEST開始。Real Madrid勝利（90分）を正式採用。Vinícius出場停止、ほか欠場情報に注意。H2H・直近10・共通対戦相手は今回未再検証。",
+      "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
+      "analysis_detail": {
+        "summary": "10/18現地21:00 CEST開始。Real Madrid勝利（90分）を正式採用。Vinícius出場停止、ほか欠場情報に注意。H2H・直近10・共通対戦相手は今回未再検証。"
+      }
+    },
+    {
+      "rank": 3,
+      "match_id": "2026-10-18-tokyo-u-yamagata-basketball",
+      "event_id": "web-2026-10-18-tokyo-u-yamagata-basketball",
+      "matchup": "Tokyo United BC vs Yamagata Wyverns",
+      "favored": "Tokyo United BC",
+      "selection_label": "Tokyo United BC",
+      "sport": "バスケットボール",
+      "competition": "B.LEAGUE ONE 2026/27",
+      "start_jst": "2026-10-18T17:05:00+09:00",
+      "venue": "有明アリーナ／東京Uホーム",
+      "format": "試合勝者（延長込み）",
+      "status": "formal",
+      "gap_grade": "A−候補（H2H不在）",
+      "price_grade": "未判定",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "仮想100USD基準。オッズ未確認、未精算。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "required_win_rate_pct": null,
+        "book_examples": "購入価格未確認"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-18T13:41:00+09:00",
+      "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
+      "sources": [
+        "https://www.bleague.jp/en/game_detail/?ScheduleKey=507245&tab=1",
+        "https://tubc.tokyo/game_lp_20261018_20261019_1/"
+      ],
+      "conclusion": "東京U 5勝2敗、山形 1勝6敗。H2Hなし。共通相手は前季奈良・過去岩手のみで条件差が大きい。ユーザー正式指定により東京U勝者を採用。",
+      "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
+      "analysis_detail": {
+        "summary": "東京U 5勝2敗、山形 1勝6敗。H2Hなし。共通相手は前季奈良・過去岩手のみで条件差が大きい。ユーザー正式指定により東京U勝者を採用。"
       }
     },
     {
       "rank": 4,
-      "match_id": "2026-10-18-vegas-pittsburgh-nhl",
-      "event_id": "web-2026-10-18-vegas-pittsburgh-nhl",
-      "matchup": "Vegas Golden Knights vs Pittsburgh Penguins",
-      "favored": "Vegas Golden Knights",
-      "selection_label": "Vegas Golden Knights",
-      "sport": "NHL",
-      "competition": "NHL 2026/27 レギュラーシーズン",
-      "start_jst": "2026-10-18T11:00:00+09:00",
-      "venue": "T-Mobile Arena／Vegasホーム",
-      "format": "試合勝者（延長・SO込み）",
+      "match_id": "2026-10-18-salzburg-altach-soccer",
+      "event_id": "web-2026-10-18-salzburg-altach-soccer",
+      "matchup": "FC Red Bull Salzburg vs SCR Altach",
+      "favored": "FC Red Bull Salzburg",
+      "selection_label": "FC Red Bull Salzburg",
+      "sport": "サッカー",
+      "competition": "ADMIRAL Bundesliga 2026/27 第9節",
+      "start_jst": "2026-10-18T21:30:00+09:00",
+      "venue": "Red Bull Arena／Salzburgホーム",
+      "format": "90分勝者",
       "status": "formal",
-      "gap_grade": "A−候補（ホーム・休養優位）",
+      "gap_grade": "A−候補（表記推定）",
       "price_grade": "未判定",
-      "market": "match_winner",
+      "market": "match_1x2",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "仮想100USD基準。購入オッズ未確認、未精算。",
+      "profit_status": "仮想100USD基準。オッズ未確認、未精算。",
       "odds": {
         "min": null,
         "max": null,
         "required_win_rate_pct": null,
-        "book_examples": "個別市場・購入価格未確認"
+        "book_examples": "購入価格未確認"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-17T20:21:43+09:00",
-      "analysis_reviewed_at": "2026-10-17T20:21:43+09:00",
+      "added_at": "2026-10-18T13:41:00+09:00",
+      "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
       "sources": [
-        "https://www.tmobilearena.com/events/all",
-        "https://champsorchumps.us/team/nhl/vegas-golden-knights/head-to-head/pittsburgh-penguins",
-        "https://champsorchumps.us/team/nhl/vegas-golden-knights/2027",
-        "https://champsorchumps.us/team/nhl/pittsburgh-penguins/2027",
-        "https://champsorchumps.us/team/nhl/vegas-golden-knights/2026",
-        "https://champsorchumps.us/team/nhl/pittsburgh-penguins/2026",
-        "https://www.nhl.com/news/calgary-flames-vegas-golden-knights-game-recap-october-15-2026",
-        "https://www.reuters.com/sports/nhl/nathan-mackinnons-4-point-night-powers-avalanche-past-penguins--flm-2026-10-17/"
+        "https://www.bundesliga.at/de/news/artikel/vorschau-auf-die-9-runde-der-admiral-bundesliga-4",
+        "https://www.bundesliga.at/de/spielbericht/saison-2026-2027/56709/vorbericht"
       ],
-      "conclusion": "①実績型：公式直近10はVegas7勝3敗、Pittsburgh4勝6敗（OT/SO負け含む、昨季補完あり）。H2H通算Vegas7勝9敗だがホーム6勝2敗。②戦力型：今季7勝2敗対3勝4敗1延長負け、PittsburghはColorado遠征翌日の連戦。③共通相手型：今季共通Chicago1種類はVegas5–2、Pittsburgh3–5でVegas支持。ただし1件のみで3軸完全一致の強判定はしない。",
-      "risk": "共通相手の今季同条件標本は1種類。先発GK・欠場最終確定前。過去季補完の勝率をそのまま予測確率に使わない。",
+      "conclusion": "ユーザーの『アフター英語のやつ』を直前に分析したザルツブルク対アルタッハと解釈してSalzburg勝利（90分）を登録。過去リーグH2H26戦でSalzburg19勝・引分6・Altach1勝、ただし最近3戦は引分。",
+      "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
       "analysis_detail": {
-        "summary": "①実績型：公式直近10はVegas7勝3敗、Pittsburgh4勝6敗（OT/SO負け含む、昨季補完あり）。H2H通算Vegas7勝9敗だがホーム6勝2敗。②戦力型：今季7勝2敗対3勝4敗1延長負け、PittsburghはColorado遠征翌日の連戦。③共通相手型：今季共通Chicago1種類はVegas5–2、Pittsburgh3–5でVegas支持。ただし1件のみで3軸完全一致の強判定はしない。",
-        "h2h": {
-          "summary": "全16試合：Vegas7勝9敗（うちOT負け1）。ホーム6勝2敗、直近ホーム4連勝。直近10全会場は4勝6敗。スコアVegas視点、日付現地。古い編成は参考。",
-          "items": [
-            {
-              "date": "2026-03-12",
-              "label": "H",
-              "result": "6–2 ○"
-            },
-            {
-              "date": "2026-03-01",
-              "label": "A",
-              "result": "0–5 ×"
-            },
-            {
-              "date": "2025-03-11",
-              "label": "A",
-              "result": "2–3 × OT"
-            },
-            {
-              "date": "2025-03-07",
-              "label": "H",
-              "result": "4–0 ○"
-            },
-            {
-              "date": "2024-01-20",
-              "label": "H",
-              "result": "3–2 ○"
-            },
-            {
-              "date": "2023-11-19",
-              "label": "A",
-              "result": "0–3 ×"
-            },
-            {
-              "date": "2023-01-05",
-              "label": "H",
-              "result": "5–2 ○"
-            },
-            {
-              "date": "2022-12-01",
-              "label": "A",
-              "result": "3–4 ×"
-            },
-            {
-              "date": "2022-03-11",
-              "label": "A",
-              "result": "2–5 ×"
-            },
-            {
-              "date": "2022-01-17",
-              "label": "H",
-              "result": "3–5 ×"
-            },
-            {
-              "date": "2020-01-07",
-              "label": "H",
-              "result": "3–4 ×"
-            },
-            {
-              "date": "2019-10-19",
-              "label": "A",
-              "result": "3–0 ○"
-            },
-            {
-              "date": "2019-01-19",
-              "label": "H",
-              "result": "7–3 ○"
-            },
-            {
-              "date": "2018-10-11",
-              "label": "A",
-              "result": "2–4 ×"
-            },
-            {
-              "date": "2018-02-06",
-              "label": "A",
-              "result": "4–5 ×"
-            },
-            {
-              "date": "2017-12-14",
-              "label": "H",
-              "result": "2–1 ○"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Vegas Golden Knights",
-            "summary": "公式直近10：7勝3敗。今季9戦7勝2敗35–22、前年決勝1敗を補完。プレシーズン除外、日付現地。",
-            "items": [
-              {
-                "date": "2026-10-15",
-                "label": "Calgary H",
-                "result": "6–2 ○"
-              },
-              {
-                "date": "2026-10-13",
-                "label": "@ Nashville Predators",
-                "result": "5–2 ○"
-              },
-              {
-                "date": "2026-10-12",
-                "label": "@ Minnesota Wild",
-                "result": "2–4 ×"
-              },
-              {
-                "date": "2026-10-10",
-                "label": "vs Los Angeles Kings",
-                "result": "2–1 ○（OT）"
-              },
-              {
-                "date": "2026-10-08",
-                "label": "vs Toronto Maple Leafs",
-                "result": "4–3 ○（SO）"
-              },
-              {
-                "date": "2026-10-06",
-                "label": "@ Seattle Kraken",
-                "result": "6–2 ○"
-              },
-              {
-                "date": "2026-10-04",
-                "label": "@ Vancouver Canucks",
-                "result": "3–2 ○"
-              },
-              {
-                "date": "2026-10-02",
-                "label": "vs Anaheim Ducks",
-                "result": "3–4 ×"
-              },
-              {
-                "date": "2026-09-29",
-                "label": "vs Chicago Blackhawks",
-                "result": "5–2 ○"
-              },
-              {
-                "date": "2026-06-14",
-                "label": "vs Carolina Hurricanes・前季Stanley Cup Final",
-                "result": "0–3 ×"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Pittsburgh Penguins",
-            "summary": "公式直近10：4勝6敗（延長・SO負け含む）。今季8戦3勝4敗1延長負け27–27、前年PO最後2戦1勝1敗を補完。プレシーズン除外。",
-            "items": [
-              {
-                "date": "2026-10-16",
-                "label": "Colorado A",
-                "result": "2–5 ×"
-              },
-              {
-                "date": "2026-10-13",
-                "label": "Chicago A",
-                "result": "3–5 ×"
-              },
-              {
-                "date": "2026-10-10",
-                "label": "Dallas H",
-                "result": "2–1 ○ SO"
-              },
-              {
-                "date": "2026-10-09",
-                "label": "Columbus A",
-                "result": "2–3 × SO"
-              },
-              {
-                "date": "2026-10-07",
-                "label": "Washington A",
-                "result": "3–5 ×"
-              },
-              {
-                "date": "2026-10-05",
-                "label": "Winnipeg H",
-                "result": "2–3 ×"
-              },
-              {
-                "date": "2026-10-03",
-                "label": "Montreal H",
-                "result": "6–5 ○ OT"
-              },
-              {
-                "date": "2026-09-30",
-                "label": "Philadelphia A",
-                "result": "7–0 ○"
-              },
-              {
-                "date": "2026-04-29",
-                "label": "Philadelphia A／前年PO",
-                "result": "0–1 × OT"
-              },
-              {
-                "date": "2026-04-27",
-                "label": "Philadelphia H／前年PO",
-                "result": "3–2 ○"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "今季双方が対戦済みの共通相手はChicagoの1種類。5件未達を明記。過去季の異条件比較を水増ししない。",
-          "items": [
-            {
-              "opponent": "Chicago Blackhawks",
-              "side_a": {
-                "date": "2026-09-29",
-                "result": "H 5–2 ○"
-              },
-              "side_b": {
-                "date": "2026-10-13",
-                "result": "A 3–5 ×"
-              },
-              "comparison": "Vegas+3対Pittsburgh−2でVegas支持。ただし会場逆、14日差、1件のみ。"
-            }
-          ]
-        },
-        "ranking_or_rating": {
-          "text": "今季Vegas7勝2敗14点、Pittsburgh3勝4敗1延長負け7点。試合数9対8の差あり。"
-        },
-        "home_away": {
-          "text": "現地10/17 19:00PDT＝10/18 11:00JST。PittsburghはDenverから移動して連戦2日目、Vegasはホームで中1日。"
-        },
-        "availability": {
-          "text": "先発GK・当日スクラッチ未確定。前日PittsburghのSilovs出場から翌日も同GKとは断定しない。"
-        },
-        "sport_specific": {
-          "text": "60分同点でも延長/SOでVegas勝利なら的中する市場。1stピリオドやパックラインは未採用。"
-        },
-        "market": {
-          "text": "Vegas勝者（延長・SO込み）。購入価格未確認。100USD基準、実購入扱いにしない。"
-        }
+        "summary": "ユーザーの『アフター英語のやつ』を直前に分析したザルツブルク対アルタッハと解釈してSalzburg勝利（90分）を登録。過去リーグH2H26戦でSalzburg19勝・引分6・Altach1勝、ただし最近3戦は引分。"
       }
     }
   ],
@@ -561,11 +204,13 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "Falcons vs BETBOOM",
-      "Vegas Golden Knights vs Pittsburgh Penguins"
+      "Tokyo United BC vs Yamagata Wyverns",
+      "FC Red Bull Salzburg vs SCR Altach",
+      "Los Angeles Rams vs Arizona Cardinals",
+      "Real Madrid vs Sevilla"
     ],
     "price_adjusted_top": [],
-    "caution": "Legacy・柏の不的中とManchester Cityの的中を履歴に反映。残る候補の市場価格は未確認。"
+    "caution": "4件正式採用（1件$100仮想）。Falcons 1-2負け（-$100）、Vegas 6-2勝ち（ユーザー申告1.44倍、+$44参考）。差引-$56。4件目はSalzburg戦と解釈したため要表記確認。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -9428,6 +9073,531 @@
         "result": "Manchester City勝利：的中（ユーザー報告、スコア未確認）",
         "result_updated_at": "2026-10-17T16:15:13.701Z",
         "archive_reason": "ユーザー結果報告により履歴へ移動。"
+      },
+      {
+        "rank": 3,
+        "match_id": "2026-10-18-falcons-betboom-cs2",
+        "event_id": "web-2026-10-18-falcons-betboom-cs2",
+        "matchup": "Falcons vs BETBOOM",
+        "favored": "Falcons",
+        "selection_label": "Falcons",
+        "sport": "CS2",
+        "competition": "Thunderpick World Championship 2026 準決勝",
+        "start_jst": "2026-10-18T02:00:00+09:00",
+        "venue": "BLAST Studios, Malta／中立",
+        "format": "BO3／LAN",
+        "status": "final",
+        "gap_grade": "A候補（H2H反証あり）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": -100,
+        "profit_status": "×不的中・仮想100USD→払戻0USD／損失−100USD",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "個別市場・購入価格未確認"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-17T20:21:43+09:00",
+        "analysis_reviewed_at": "2026-10-17T20:21:43+09:00",
+        "sources": [
+          "https://www.hltv.org/matches/2399415/falcons-vs-betboom-thunderpick-world-championship-2026",
+          "https://dev.blast.tv/cs/tournaments/thunderpick-world-championship-2026/match/d2c27f08/falcons-bb/comments"
+        ],
+        "conclusion": "①実績型：Falcons直近10戦6勝4敗、BETBOOM5勝5敗。最新H2HはFalcons0–2敗戦。②戦力型：HLTV5位対14位、VRS4位対10位はFalcons支持。③共通相手型：5種類はFalcons5勝、BETBOOM1勝4敗だが、Legacyは双方2–1で差なし。3軸は完全一致せず、確勝判定にはしない。",
+        "risk": "最新H2H敗戦、Veto未確定。共通相手の時期差と編成変更に注意。購入価格未確認。",
+        "analysis_detail": {
+          "summary": "①実績型：Falcons直近10戦6勝4敗、BETBOOM5勝5敗。最新H2HはFalcons0–2敗戦。②戦力型：HLTV5位対14位、VRS4位対10位はFalcons支持。③共通相手型：5種類はFalcons5勝、BETBOOM1勝4敗だが、Legacyは双方2–1で差なし。3軸は完全一致せず、確勝判定にはしない。",
+          "h2h": {
+            "summary": "掲載1シリーズFalcons0勝1敗。2敗表記は2マップであり2シリーズではない。",
+            "items": [
+              {
+                "date": "2026-06-12",
+                "label": "IEM Cologne Major／BO3",
+                "result": "Falcons0–2 BETBOOM（Ancient10–13、Nuke11–13）"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Falcons",
+              "summary": "直近10 BO3は6勝4敗、14–10マップ。日付未取得分はHLTV相対表記。",
+              "items": [
+                {
+                  "date": "10/15",
+                  "label": "9z／BO3",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "10/14",
+                  "label": "NiP／BO3",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約1週前",
+                  "label": "Spirit／BO3",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約1週前",
+                  "label": "NAVI／BO3",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "約2週前",
+                  "label": "Vitality／BO3",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "約2週前",
+                  "label": "Aurora／BO3",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約2週前",
+                  "label": "TYLOO／BO3",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約6週前",
+                  "label": "Spirit／BO3",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約6週前",
+                  "label": "G2／BO3",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約7週前",
+                  "label": "MOUZ／BO3",
+                  "result": "1–2 ×"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "BETBOOM",
+              "summary": "直近10 BO3は5勝5敗、12–12マップ。Legacy戦2–1を含む。",
+              "items": [
+                {
+                  "date": "10/16",
+                  "label": "Legacy／BO3",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "10/15",
+                  "label": "PARIVISION／BO3",
+                  "result": "2–1 ○"
+                },
+                {
+                  "date": "10/14",
+                  "label": "FURIA／BO3",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約1週前",
+                  "label": "9z／BO3",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約2週前",
+                  "label": "Aurora／BO3",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "約2週前",
+                  "label": "M80／BO3",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約2週前",
+                  "label": "FURIA／BO3",
+                  "result": "0–2 ×"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "G2／BO3",
+                  "result": "1–2 ×"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "MIBR／BO3",
+                  "result": "2–0 ○"
+                },
+                {
+                  "date": "約5週前",
+                  "label": "Astralis／BO3",
+                  "result": "2–0 ○"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "5種類：Falcons優位4、同スコア1。各チームの直近対戦。10試合外の記録も含む。",
+            "items": [
+              {
+                "opponent": "9z",
+                "side_a": {
+                  "date": "10/15",
+                  "result": "2–1 ○"
+                },
+                "side_b": {
+                  "date": "約1週前",
+                  "result": "0–2 ×"
+                },
+                "comparison": "Falcons優位"
+              },
+              {
+                "opponent": "NiP",
+                "side_a": {
+                  "date": "10/14",
+                  "result": "2–0 ○"
+                },
+                "side_b": {
+                  "date": "約9週前",
+                  "result": "0–2 ×"
+                },
+                "comparison": "Falcons優位、時期差大"
+              },
+              {
+                "opponent": "Aurora",
+                "side_a": {
+                  "date": "約2週前",
+                  "result": "2–0 ○"
+                },
+                "side_b": {
+                  "date": "約2週前",
+                  "result": "1–2 ×"
+                },
+                "comparison": "Falcons優位"
+              },
+              {
+                "opponent": "G2",
+                "side_a": {
+                  "date": "約6週前",
+                  "result": "2–0 ○"
+                },
+                "side_b": {
+                  "date": "約5週前",
+                  "result": "1–2 ×"
+                },
+                "comparison": "Falcons優位"
+              },
+              {
+                "opponent": "Legacy",
+                "side_a": {
+                  "date": "約7週前",
+                  "result": "2–1 ○"
+                },
+                "side_b": {
+                  "date": "10/16",
+                  "result": "2–1 ○"
+                },
+                "comparison": "同スコア。Falconsはその前に0–2敗戦あり"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "HLTV Falcons#5／BETBOOM#14、VRS#4(1879pt)／#10(1618pt)。投票率を勝率として扱わない。"
+          },
+          "home_away": {
+            "text": "マルタLAN中立。17日17:00UTC＝18日02:00JST（BLAST・HLTV照合）。"
+          },
+          "availability": {
+            "text": "掲載予定Falcons karrigan/NiKo/m0NESY/TeSeS/kyousuke、BETBOOM Magnojez/Boombl4/d1Ledez/zorte/S1ren。最終欠場・交代未確認。"
+          },
+          "sport_specific": {
+            "text": "直近3か月Falcons Dust2 75%/12、Nuke75%/4。BETBOOM Nuke60%/5、Mirage50%/8。Veto未確定、1stマップ・2–0固定は未採用。"
+          },
+          "market": {
+            "text": "Falcons BO3シリーズ勝者。購入オッズ未確認、100USD基準。"
+          }
+        },
+        "result": "× Falcons 1-2 BETBOOM（Anubis13-5、Dust2 14-16、Mirage7-13）",
+        "payout_usd": 0,
+        "settled_at": "2026-10-18T13:41:00+09:00"
+      },
+      {
+        "rank": 4,
+        "match_id": "2026-10-18-vegas-pittsburgh-nhl",
+        "event_id": "web-2026-10-18-vegas-pittsburgh-nhl",
+        "matchup": "Vegas Golden Knights vs Pittsburgh Penguins",
+        "favored": "Vegas Golden Knights",
+        "selection_label": "Vegas Golden Knights",
+        "sport": "NHL",
+        "competition": "NHL 2026/27 レギュラーシーズン",
+        "start_jst": "2026-10-18T11:00:00+09:00",
+        "venue": "T-Mobile Arena／Vegasホーム",
+        "format": "試合勝者（延長・SO込み）",
+        "status": "final",
+        "gap_grade": "A−候補（ホーム・休養優位）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": 44,
+        "profit_status": "○的中・ユーザー申告1.44倍・仮想100USD→払戻144USD／利益＋44USD（参考）",
+        "odds": {
+          "min": 1.44,
+          "max": 1.44,
+          "required_win_rate_pct": 69.44,
+          "book_examples": "ユーザー申告1.44倍・参考値。実購入オッズは未確認"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-17T20:21:43+09:00",
+        "analysis_reviewed_at": "2026-10-17T20:21:43+09:00",
+        "sources": [
+          "https://www.tmobilearena.com/events/all",
+          "https://champsorchumps.us/team/nhl/vegas-golden-knights/head-to-head/pittsburgh-penguins",
+          "https://champsorchumps.us/team/nhl/vegas-golden-knights/2027",
+          "https://champsorchumps.us/team/nhl/pittsburgh-penguins/2027",
+          "https://champsorchumps.us/team/nhl/vegas-golden-knights/2026",
+          "https://champsorchumps.us/team/nhl/pittsburgh-penguins/2026",
+          "https://www.nhl.com/news/calgary-flames-vegas-golden-knights-game-recap-october-15-2026",
+          "https://www.reuters.com/sports/nhl/nathan-mackinnons-4-point-night-powers-avalanche-past-penguins--flm-2026-10-17/"
+        ],
+        "conclusion": "①実績型：公式直近10はVegas7勝3敗、Pittsburgh4勝6敗（OT/SO負け含む、昨季補完あり）。H2H通算Vegas7勝9敗だがホーム6勝2敗。②戦力型：今季7勝2敗対3勝4敗1延長負け、PittsburghはColorado遠征翌日の連戦。③共通相手型：今季共通Chicago1種類はVegas5–2、Pittsburgh3–5でVegas支持。ただし1件のみで3軸完全一致の強判定はしない。",
+        "risk": "共通相手の今季同条件標本は1種類。先発GK・欠場最終確定前。過去季補完の勝率をそのまま予測確率に使わない。",
+        "analysis_detail": {
+          "summary": "①実績型：公式直近10はVegas7勝3敗、Pittsburgh4勝6敗（OT/SO負け含む、昨季補完あり）。H2H通算Vegas7勝9敗だがホーム6勝2敗。②戦力型：今季7勝2敗対3勝4敗1延長負け、PittsburghはColorado遠征翌日の連戦。③共通相手型：今季共通Chicago1種類はVegas5–2、Pittsburgh3–5でVegas支持。ただし1件のみで3軸完全一致の強判定はしない。",
+          "h2h": {
+            "summary": "全16試合：Vegas7勝9敗（うちOT負け1）。ホーム6勝2敗、直近ホーム4連勝。直近10全会場は4勝6敗。スコアVegas視点、日付現地。古い編成は参考。",
+            "items": [
+              {
+                "date": "2026-03-12",
+                "label": "H",
+                "result": "6–2 ○"
+              },
+              {
+                "date": "2026-03-01",
+                "label": "A",
+                "result": "0–5 ×"
+              },
+              {
+                "date": "2025-03-11",
+                "label": "A",
+                "result": "2–3 × OT"
+              },
+              {
+                "date": "2025-03-07",
+                "label": "H",
+                "result": "4–0 ○"
+              },
+              {
+                "date": "2024-01-20",
+                "label": "H",
+                "result": "3–2 ○"
+              },
+              {
+                "date": "2023-11-19",
+                "label": "A",
+                "result": "0–3 ×"
+              },
+              {
+                "date": "2023-01-05",
+                "label": "H",
+                "result": "5–2 ○"
+              },
+              {
+                "date": "2022-12-01",
+                "label": "A",
+                "result": "3–4 ×"
+              },
+              {
+                "date": "2022-03-11",
+                "label": "A",
+                "result": "2–5 ×"
+              },
+              {
+                "date": "2022-01-17",
+                "label": "H",
+                "result": "3–5 ×"
+              },
+              {
+                "date": "2020-01-07",
+                "label": "H",
+                "result": "3–4 ×"
+              },
+              {
+                "date": "2019-10-19",
+                "label": "A",
+                "result": "3–0 ○"
+              },
+              {
+                "date": "2019-01-19",
+                "label": "H",
+                "result": "7–3 ○"
+              },
+              {
+                "date": "2018-10-11",
+                "label": "A",
+                "result": "2–4 ×"
+              },
+              {
+                "date": "2018-02-06",
+                "label": "A",
+                "result": "4–5 ×"
+              },
+              {
+                "date": "2017-12-14",
+                "label": "H",
+                "result": "2–1 ○"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Vegas Golden Knights",
+              "summary": "公式直近10：7勝3敗。今季9戦7勝2敗35–22、前年決勝1敗を補完。プレシーズン除外、日付現地。",
+              "items": [
+                {
+                  "date": "2026-10-15",
+                  "label": "Calgary H",
+                  "result": "6–2 ○"
+                },
+                {
+                  "date": "2026-10-13",
+                  "label": "@ Nashville Predators",
+                  "result": "5–2 ○"
+                },
+                {
+                  "date": "2026-10-12",
+                  "label": "@ Minnesota Wild",
+                  "result": "2–4 ×"
+                },
+                {
+                  "date": "2026-10-10",
+                  "label": "vs Los Angeles Kings",
+                  "result": "2–1 ○（OT）"
+                },
+                {
+                  "date": "2026-10-08",
+                  "label": "vs Toronto Maple Leafs",
+                  "result": "4–3 ○（SO）"
+                },
+                {
+                  "date": "2026-10-06",
+                  "label": "@ Seattle Kraken",
+                  "result": "6–2 ○"
+                },
+                {
+                  "date": "2026-10-04",
+                  "label": "@ Vancouver Canucks",
+                  "result": "3–2 ○"
+                },
+                {
+                  "date": "2026-10-02",
+                  "label": "vs Anaheim Ducks",
+                  "result": "3–4 ×"
+                },
+                {
+                  "date": "2026-09-29",
+                  "label": "vs Chicago Blackhawks",
+                  "result": "5–2 ○"
+                },
+                {
+                  "date": "2026-06-14",
+                  "label": "vs Carolina Hurricanes・前季Stanley Cup Final",
+                  "result": "0–3 ×"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Pittsburgh Penguins",
+              "summary": "公式直近10：4勝6敗（延長・SO負け含む）。今季8戦3勝4敗1延長負け27–27、前年PO最後2戦1勝1敗を補完。プレシーズン除外。",
+              "items": [
+                {
+                  "date": "2026-10-16",
+                  "label": "Colorado A",
+                  "result": "2–5 ×"
+                },
+                {
+                  "date": "2026-10-13",
+                  "label": "Chicago A",
+                  "result": "3–5 ×"
+                },
+                {
+                  "date": "2026-10-10",
+                  "label": "Dallas H",
+                  "result": "2–1 ○ SO"
+                },
+                {
+                  "date": "2026-10-09",
+                  "label": "Columbus A",
+                  "result": "2–3 × SO"
+                },
+                {
+                  "date": "2026-10-07",
+                  "label": "Washington A",
+                  "result": "3–5 ×"
+                },
+                {
+                  "date": "2026-10-05",
+                  "label": "Winnipeg H",
+                  "result": "2–3 ×"
+                },
+                {
+                  "date": "2026-10-03",
+                  "label": "Montreal H",
+                  "result": "6–5 ○ OT"
+                },
+                {
+                  "date": "2026-09-30",
+                  "label": "Philadelphia A",
+                  "result": "7–0 ○"
+                },
+                {
+                  "date": "2026-04-29",
+                  "label": "Philadelphia A／前年PO",
+                  "result": "0–1 × OT"
+                },
+                {
+                  "date": "2026-04-27",
+                  "label": "Philadelphia H／前年PO",
+                  "result": "3–2 ○"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "今季双方が対戦済みの共通相手はChicagoの1種類。5件未達を明記。過去季の異条件比較を水増ししない。",
+            "items": [
+              {
+                "opponent": "Chicago Blackhawks",
+                "side_a": {
+                  "date": "2026-09-29",
+                  "result": "H 5–2 ○"
+                },
+                "side_b": {
+                  "date": "2026-10-13",
+                  "result": "A 3–5 ×"
+                },
+                "comparison": "Vegas+3対Pittsburgh−2でVegas支持。ただし会場逆、14日差、1件のみ。"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "今季Vegas7勝2敗14点、Pittsburgh3勝4敗1延長負け7点。試合数9対8の差あり。"
+          },
+          "home_away": {
+            "text": "現地10/17 19:00PDT＝10/18 11:00JST。PittsburghはDenverから移動して連戦2日目、Vegasはホームで中1日。"
+          },
+          "availability": {
+            "text": "先発GK・当日スクラッチ未確定。前日PittsburghのSilovs出場から翌日も同GKとは断定しない。"
+          },
+          "sport_specific": {
+            "text": "60分同点でも延長/SOでVegas勝利なら的中する市場。1stピリオドやパックラインは未採用。"
+          },
+          "market": {
+            "text": "Vegas勝者（延長・SO込み）。購入価格未確認。100USD基準、実購入扱いにしない。"
+          }
+        },
+        "result": "○ Vegas Golden Knights 6-2 Pittsburgh Penguins",
+        "payout_usd": 144,
+        "settled_at": "2026-10-18T13:41:00+09:00"
       }
     ],
     "summary": {
@@ -9447,10 +9617,10 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 52,
-      "favored_losses": 7,
+      "favored_wins": 53,
+      "favored_losses": 8,
       "pending": 0,
-      "note": "Legacy採用は不的中に訂正。柏DNB不的中、Manchester City的中をユーザー報告で反映。Cityはオッズ未登録で金額未算出。"
+      "note": "既存結果へFalcons敗戦・Vegas勝利を追加。対象2件の仮想$100精算：払戻$144、純損益-$56。Vegasオッズはユーザー申告の参考値。"
     }
   },
   "history_policy": {
@@ -9458,7 +9628,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-17T16:15:13.701Z",
-    "note": "Legacy採用は不的中に訂正。柏DNB不的中、Manchester City的中をユーザー報告で反映。Cityはオッズ未登録で金額未算出。"
+    "as_of": "2026-10-18T13:41:00+09:00",
+    "note": "2026/10/18 ユーザー正式指定4件を追加。Falcons loss、Vegas win(1.44倍参考)を取引履歴・成績・収支へ反映。"
   }
 }
