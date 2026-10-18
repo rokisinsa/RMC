@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-18T13:41:00+09:00",
+  "generated_at": "2026-10-18T13:59:02+09:00",
   "window": {
     "from": "2026-10-18T13:41:00+09:00",
     "to": "2026-10-19T08:00:00+09:00",
@@ -28,9 +28,10 @@
       "B.LEAGUE ONE",
       "ADMIRAL Bundesliga",
       "CS2試合結果",
-      "NHL試合結果"
+      "NHL試合結果",
+      "MPL Indonesia Season 18公式日程"
     ],
-    "note": "ユーザー正式指定4件と既存結果2件を確認。4件の購入価格未確認。4件目Salzburgは発話解釈による仮同定。"
+    "note": "4件目をAlter Ego（vs EVOS）へ訂正。3件据置き。Falcons敗戦・Vegas勝利の精算は変更なし。"
   },
   "candidates": [
     {
@@ -152,41 +153,41 @@
     },
     {
       "rank": 4,
-      "match_id": "2026-10-18-salzburg-altach-soccer",
-      "event_id": "web-2026-10-18-salzburg-altach-soccer",
-      "matchup": "FC Red Bull Salzburg vs SCR Altach",
-      "favored": "FC Red Bull Salzburg",
-      "selection_label": "FC Red Bull Salzburg",
-      "sport": "サッカー",
-      "competition": "ADMIRAL Bundesliga 2026/27 第9節",
-      "start_jst": "2026-10-18T21:30:00+09:00",
-      "venue": "Red Bull Arena／Salzburgホーム",
-      "format": "90分勝者",
+      "match_id": "2026-10-18-evos-alter-ego-mlbb",
+      "event_id": "web-2026-10-18-evos-alter-ego-mlbb",
+      "matchup": "EVOS vs Alter Ego",
+      "favored": "Alter Ego",
+      "selection_label": "Alter Ego",
+      "sport": "MLBB",
+      "competition": "MPL Indonesia Season 18 Regular Season Week 9",
+      "start_jst": "2026-10-18T16:00:00+09:00",
+      "venue": "MPL Indonesiaステージ（会場詳細未確認）",
+      "format": "BO3・シリーズ勝者",
       "status": "formal",
-      "gap_grade": "A−候補（表記推定）",
+      "gap_grade": "A−候補（要直近10再照合）",
       "price_grade": "未判定",
-      "market": "match_1x2",
+      "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "仮想100USD基準。オッズ未確認、未精算。",
+      "profit_status": "仮想100USD基準。取得オッズ未確認・試合前、未精算。",
       "odds": {
         "min": null,
         "max": null,
         "required_win_rate_pct": null,
-        "book_examples": "購入価格未確認"
+        "book_examples": "購入オッズ未確認"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-18T13:41:00+09:00",
-      "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
+      "added_at": "2026-10-18T13:59:02+09:00",
+      "analysis_reviewed_at": "2026-10-18T13:59:02+09:00",
       "sources": [
-        "https://www.bundesliga.at/de/news/artikel/vorschau-auf-die-9-runde-der-admiral-bundesliga-4",
-        "https://www.bundesliga.at/de/spielbericht/saison-2026-2027/56709/vorbericht"
+        "https://id-mpl.com/s18/en/schedule",
+        "https://id-mpl.com/s18/ticket"
       ],
-      "conclusion": "ユーザーの『アフター英語のやつ』を直前に分析したザルツブルク対アルタッハと解釈してSalzburg勝利（90分）を登録。過去リーグH2H26戦でSalzburg19勝・引分6・Altach1勝、ただし最近3戦は引分。",
-      "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
+      "conclusion": "Alter Ego勝利で正式採用。Week9、10月18日16:00 JST、BO3。ユーザー明示訂正による採用。H2H／共通相手は直前の分析を参照、直近10試合全件の最新再確認未了。",
+      "risk": "試合オッズ・ラインアップ未確認。直近10試合と共通5相手の最新データはこの訂正では未再照合。",
       "analysis_detail": {
-        "summary": "ユーザーの『アフター英語のやつ』を直前に分析したザルツブルク対アルタッハと解釈してSalzburg勝利（90分）を登録。過去リーグH2H26戦でSalzburg19勝・引分6・Altach1勝、ただし最近3戦は引分。"
+        "summary": "ユーザー訂正に従いEVOS vs Alter EgoのAlter Ego勝利を正式採用。旧ザルツブルク取引はvoid精算、成績への加算なし。"
       }
     }
   ],
@@ -205,12 +206,12 @@
   "summary": {
     "pure_gap_top": [
       "Tokyo United BC vs Yamagata Wyverns",
-      "FC Red Bull Salzburg vs SCR Altach",
+      "EVOS vs Alter Ego（Alter Ego側）",
       "Los Angeles Rams vs Arizona Cardinals",
       "Real Madrid vs Sevilla"
     ],
     "price_adjusted_top": [],
-    "caution": "4件正式採用（1件$100仮想）。Falcons 1-2負け（-$100）、Vegas 6-2勝ち（ユーザー申告1.44倍、+$44参考）。差引-$56。4件目はSalzburg戦と解釈したため要表記確認。"
+    "caution": "ユーザー訂正：4件目はMLBB EVOS vs Alter Ego（Alter Ego勝利）。Salzburg–Altach誤登録は行政的voidで勝敗・収支非算入。新規4件が本日の正式採用として有効。Falcons-$100、Vegas+$44（ユーザー申告1.44倍・参考）で2件差引-$56。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -9598,6 +9599,47 @@
         "result": "○ Vegas Golden Knights 6-2 Pittsburgh Penguins",
         "payout_usd": 144,
         "settled_at": "2026-10-18T13:41:00+09:00"
+      },
+      {
+        "rank": 4,
+        "match_id": "2026-10-18-salzburg-altach-soccer",
+        "event_id": "web-2026-10-18-salzburg-altach-soccer",
+        "matchup": "FC Red Bull Salzburg vs SCR Altach",
+        "favored": "FC Red Bull Salzburg",
+        "selection_label": "FC Red Bull Salzburg",
+        "sport": "サッカー",
+        "competition": "ADMIRAL Bundesliga 2026/27 第9節",
+        "start_jst": "2026-10-18T21:30:00+09:00",
+        "venue": "Red Bull Arena／Salzburgホーム",
+        "format": "90分勝者",
+        "status": "void",
+        "gap_grade": "A−候補（表記推定）",
+        "price_grade": "未判定",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": 0,
+        "profit_status": "誤登録無効：勝敗・収支集計の対象外。仮想投資であり実際の支出・払戻なし。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "購入価格未確認"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-18T13:41:00+09:00",
+        "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
+        "sources": [
+          "https://www.bundesliga.at/de/news/artikel/vorschau-auf-die-9-runde-der-admiral-bundesliga-4",
+          "https://www.bundesliga.at/de/spielbericht/saison-2026-2027/56709/vorbericht"
+        ],
+        "conclusion": "ユーザーの『アフター英語のやつ』を直前に分析したザルツブルク対アルタッハと解釈してSalzburg勝利（90分）を登録。過去リーグH2H26戦でSalzburg19勝・引分6・Altach1勝、ただし最近3戦は引分。",
+        "risk": "ユーザーが指定したのはAlter Egoであり、この採用は誤登録。",
+        "analysis_detail": {
+          "summary": "ユーザーの『アフター英語のやつ』を直前に分析したザルツブルク対アルタッハと解釈してSalzburg勝利（90分）を登録。過去リーグH2H26戦でSalzburg19勝・引分6・Altach1勝、ただし最近3戦は引分。"
+        },
+        "result": "誤採用：ユーザー訂正により試合前に無効。勝敗結果ではない。",
+        "settled_at": "2026-10-18T13:59:02+09:00"
       }
     ],
     "summary": {
@@ -9628,7 +9670,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-18T13:41:00+09:00",
-    "note": "2026/10/18 ユーザー正式指定4件を追加。Falcons loss、Vegas win(1.44倍参考)を取引履歴・成績・収支へ反映。"
+    "as_of": "2026-10-18T13:59:02+09:00",
+    "note": "2026/10/18 13:59：4件目をMLBB Alter Egoへ訂正。Salzburg誤採用はvoidとして履歴保持。Falcons／Vegasの勝敗収支は変えない。"
   }
 }
