@@ -4,9 +4,9 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-17T16:15:13.701Z",
+    "as_of": "2026-10-18T13:41:00+09:00",
     "status": "active",
-    "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。"
+    "note": "推奨取引のみ運用。ユーザー承認カードは1件$100で正式追跡。Vegas1.44倍はユーザー申告の参考精算。"
   },
   "system": "recommendations",
   "discovery_runs": [
@@ -237,6 +237,12 @@
       "started_at": "2026-10-17T20:21:43+09:00",
       "slot": "adhoc",
       "note": "City、Falcons、Vegasの3カードをユーザー指定で正式採用。トリプル分析・H2H・直近10・共通相手を掲載。"
+    },
+    {
+      "run_id": "rec-rmc-user-20261018-1341",
+      "started_at": "2026-10-18T13:41:00+09:00",
+      "slot": "adhoc",
+      "note": "4カード正式採用。1件仮想100USD。新規4件の取得オッズは未確認。"
     }
   ],
   "picks": [
@@ -4950,7 +4956,7 @@
       "flags": [
         "odds_unverified"
       ],
-      "note": "ユーザー指定の勝者で正式採用。仮想100USD追跡。実購入・購入オッズの記録なし。"
+      "note": "ユーザー指定の勝者で正式採用。仮想100USD追跡。実購入・購入オッズの記録なし。 終了：BETBOOMに1-2で敗戦。仮想100USD損失−100USD。"
     },
     {
       "id": "rec-2026-10-18-vegas-pittsburgh-nhl",
@@ -4979,7 +4985,132 @@
       "flags": [
         "odds_unverified"
       ],
-      "note": "ユーザー指定の勝者で正式採用。仮想100USD追跡。実購入・購入オッズの記録なし。"
+      "note": "ユーザー指定の勝者で正式採用。仮想100USD追跡。実購入・購入オッズの記録なし。 終了：6-2勝利、ユーザー申告1.44倍で仮想100USD利益＋44USD。",
+      "settlement_odds_reports": [
+        {
+          "odds": 1.44,
+          "estimated": true,
+          "reported_at": "2026-10-18T13:41:00+09:00",
+          "source": "user_reported",
+          "note": "ユーザー申告1.44倍。仮想100USD基準で144USD払戻、利益44USDとして参考精算。実購入／実現損益の証明はない。"
+        }
+      ]
+    },
+    {
+      "id": "rec-2026-10-19-rams-cardinals-nfl",
+      "system": "recommendations",
+      "run_id": "rec-rmc-user-20261018-1341",
+      "match_id": "2026-10-19-rams-cardinals-nfl",
+      "source_event_id": "web-2026-10-19-rams-cardinals-nfl",
+      "market": "match_winner",
+      "market_label": "延長込み試合勝者",
+      "selection": "side_a",
+      "selection_label": "Los Angeles Rams",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-18T13:41:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-18T13:41:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "暫定（再評価必要）",
+        "model_version": "rmc-user-approved-20261018",
+        "summary": "Rams 2勝3敗、Cardinals 1勝4敗。対戦前に選手欠場・実際の市場オッズ確認が必要。ユーザー正式指定によりRams勝者を採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定で正式採用。1件100USD仮想追跡、購入オッズ未確認。"
+    },
+    {
+      "id": "rec-2026-10-19-real-madrid-sevilla-soccer",
+      "system": "recommendations",
+      "run_id": "rec-rmc-user-20261018-1341",
+      "match_id": "2026-10-19-real-madrid-sevilla-soccer",
+      "source_event_id": "web-2026-10-19-real-madrid-sevilla-soccer",
+      "market": "match_1x2",
+      "market_label": "90分勝者（引分は不的中）",
+      "selection": "side_a",
+      "selection_label": "Real Madrid",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-18T13:41:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-18T13:41:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "暫定（再評価必要）",
+        "model_version": "rmc-user-approved-20261018",
+        "summary": "10/18現地21:00 CEST開始。Real Madrid勝利（90分）を正式採用。Vinícius出場停止、ほか欠場情報に注意。H2H・直近10・共通対戦相手は今回未再検証。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定で正式採用。1件100USD仮想追跡、購入オッズ未確認。"
+    },
+    {
+      "id": "rec-2026-10-18-tokyo-u-yamagata-basketball",
+      "system": "recommendations",
+      "run_id": "rec-rmc-user-20261018-1341",
+      "match_id": "2026-10-18-tokyo-u-yamagata-basketball",
+      "source_event_id": "web-2026-10-18-tokyo-u-yamagata-basketball",
+      "market": "match_winner",
+      "market_label": "試合勝者（延長込み）",
+      "selection": "side_a",
+      "selection_label": "Tokyo United BC",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-18T13:41:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-18T13:41:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−候補（H2H不在）",
+        "model_version": "rmc-user-approved-20261018",
+        "summary": "東京U 5勝2敗、山形 1勝6敗。H2Hなし。共通相手は前季奈良・過去岩手のみで条件差が大きい。ユーザー正式指定により東京U勝者を採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定で正式採用。1件100USD仮想追跡、購入オッズ未確認。"
+    },
+    {
+      "id": "rec-2026-10-18-salzburg-altach-soccer",
+      "system": "recommendations",
+      "run_id": "rec-rmc-user-20261018-1341",
+      "match_id": "2026-10-18-salzburg-altach-soccer",
+      "source_event_id": "web-2026-10-18-salzburg-altach-soccer",
+      "market": "match_1x2",
+      "market_label": "90分勝者（引分は不的中）",
+      "selection": "side_a",
+      "selection_label": "FC Red Bull Salzburg",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-18T13:41:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-18T13:41:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−候補（表記推定）",
+        "model_version": "rmc-user-approved-20261018",
+        "summary": "ユーザーの『アフター英語のやつ』を直前に分析したザルツブルク対アルタッハと解釈してSalzburg勝利（90分）を登録。過去リーグH2H26戦でSalzburg19勝・引分6・Altach1勝、ただし最近3戦は引分。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定で正式採用。1件100USD仮想追跡、購入オッズ未確認。"
     }
   ]
 }
