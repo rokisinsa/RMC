@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-17T20:21:43+09:00",
+    "as_of": "2026-10-18T13:41:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -253,6 +253,13 @@
       "at": "2026-10-17T20:21:43+09:00",
       "source": "ユーザー指定・公式日程・結果DB照合",
       "note": "新規3カード登録。"
+    },
+    {
+      "run_id": "rmc-user-20261018-1341",
+      "kind": "human_review",
+      "at": "2026-10-18T13:41:00+09:00",
+      "source": "ユーザー正式指定＋各競技公式日程＋HLTV／NHL試合結果",
+      "note": "4カードを正式採用（Salzburg推定同定）、Falcons 1-2敗戦、Vegas 6-2勝利を反映。"
     }
   ],
   "matches": [
@@ -4553,13 +4560,19 @@
       "start_at": "2026-10-18T02:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": "マルタLAN中立。17日17:00UTC＝18日02:00JST（BLAST・HLTV照合）。",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 1,
+          "b": 2
+        },
+        "text": "Falcons 1-2 BETBOOM（Anubis13-5、Dust2 14-16、Mirage7-13）"
+      },
       "sources": [
         "https://www.hltv.org/matches/2399415/falcons-vs-betboom-thunderpick-world-championship-2026",
         "https://dev.blast.tv/cs/tournaments/thunderpick-world-championship-2026/match/d2c27f08/falcons-bb/comments"
       ],
-      "verified_at": "2026-10-17T20:21:43+09:00",
+      "verified_at": "2026-10-18T13:41:00+09:00",
       "flags": [],
       "provenance": [
         {
@@ -4572,6 +4585,28 @@
             }
           ],
           "note": "ユーザー指定の正式採用。"
+        },
+        {
+          "update_run_id": "rmc-user-20261018-1341",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 1,
+                  "b": 2
+                },
+                "text": "Falcons 1-2 BETBOOM（Anubis13-5、Dust2 14-16、Mirage7-13）"
+              }
+            }
+          ],
+          "note": "結果の公式／報道記録とユーザー報告を照合して確定"
         }
       ]
     },
@@ -4586,8 +4621,14 @@
       "start_at": "2026-10-18T11:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": "現地10/17 19:00PDT＝10/18 11:00JST。PittsburghはDenverから移動して連戦2日目、Vegasはホームで中1日。",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 6,
+          "b": 2
+        },
+        "text": "Vegas Golden Knights 6-2 Pittsburgh Penguins"
+      },
       "sources": [
         "https://www.tmobilearena.com/events/all",
         "https://champsorchumps.us/team/nhl/vegas-golden-knights/head-to-head/pittsburgh-penguins",
@@ -4596,9 +4637,10 @@
         "https://champsorchumps.us/team/nhl/vegas-golden-knights/2026",
         "https://champsorchumps.us/team/nhl/pittsburgh-penguins/2026",
         "https://www.nhl.com/news/calgary-flames-vegas-golden-knights-game-recap-october-15-2026",
-        "https://www.reuters.com/sports/nhl/nathan-mackinnons-4-point-night-powers-avalanche-past-penguins--flm-2026-10-17/"
+        "https://www.reuters.com/sports/nhl/nathan-mackinnons-4-point-night-powers-avalanche-past-penguins--flm-2026-10-17/",
+        "https://www.pensburgh.com/game-recaps/81998/penguins-golden-knights-recap-pens-trampled-lose-in-vegas-6-2"
       ],
-      "verified_at": "2026-10-17T20:21:43+09:00",
+      "verified_at": "2026-10-18T13:41:00+09:00",
       "flags": [],
       "provenance": [
         {
@@ -4611,6 +4653,160 @@
             }
           ],
           "note": "ユーザー指定の正式採用。"
+        },
+        {
+          "update_run_id": "rmc-user-20261018-1341",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 6,
+                  "b": 2
+                },
+                "text": "Vegas Golden Knights 6-2 Pittsburgh Penguins"
+              }
+            }
+          ],
+          "note": "結果の公式／報道記録とユーザー報告を照合して確定"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-rams-cardinals-nfl",
+      "sport": "NFL",
+      "competition": "NFL 2026 Regular Season Week 6",
+      "side_a": "Los Angeles Rams",
+      "side_b": "Arizona Cardinals",
+      "home_side": "side_a",
+      "venue": "SoFi Stadium／Ramsホーム",
+      "start_at": "2026-10-19T05:05:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "JST換算で確認済み。10/19早朝カードは現地10/18開催。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.therams.com/news/know-before-you-go-rams-vs-arizona-cardinals-sofi-stadium-week-6",
+        "https://nfl.jp/teams/la/"
+      ],
+      "verified_at": "2026-10-18T13:41:00+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "rmc-user-20261018-1341",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式指定を記録。"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-real-madrid-sevilla-soccer",
+      "sport": "サッカー",
+      "competition": "La Liga 2026/27 第9節",
+      "side_a": "Real Madrid",
+      "side_b": "Sevilla FC",
+      "home_side": "side_a",
+      "venue": "Santiago Bernabéu／Real Madridホーム",
+      "start_at": "2026-10-19T04:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "JST換算で確認済み。10/19早朝カードは現地10/18開催。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.realmadrid.com/en-US/news/football/first-team/latest-news/el-calendario-del-real-madrid-en-octubre-24-09-2026",
+        "https://www.reuters.com/sports/soccer/real-madrids-vinicius-miss-clasico-after-four-game-suspension-2026-10-14/"
+      ],
+      "verified_at": "2026-10-18T13:41:00+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "rmc-user-20261018-1341",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式指定を記録。"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-18-tokyo-u-yamagata-basketball",
+      "sport": "バスケットボール",
+      "competition": "B.LEAGUE ONE 2026/27",
+      "side_a": "Tokyo United BC",
+      "side_b": "Yamagata Wyverns",
+      "home_side": "side_a",
+      "venue": "有明アリーナ／東京Uホーム",
+      "start_at": "2026-10-18T17:05:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "JST換算で確認済み。10/19早朝カードは現地10/18開催。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.bleague.jp/en/game_detail/?ScheduleKey=507245&tab=1",
+        "https://tubc.tokyo/game_lp_20261018_20261019_1/"
+      ],
+      "verified_at": "2026-10-18T13:41:00+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "rmc-user-20261018-1341",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式指定を記録。"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-18-salzburg-altach-soccer",
+      "sport": "サッカー",
+      "competition": "ADMIRAL Bundesliga 2026/27 第9節",
+      "side_a": "FC Red Bull Salzburg",
+      "side_b": "SCR Altach",
+      "home_side": "side_a",
+      "venue": "Red Bull Arena／Salzburgホーム",
+      "start_at": "2026-10-18T21:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "JST換算で確認済み。10/19早朝カードは現地10/18開催。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.bundesliga.at/de/news/artikel/vorschau-auf-die-9-runde-der-admiral-bundesliga-4",
+        "https://www.bundesliga.at/de/spielbericht/saison-2026-2027/56709/vorbericht"
+      ],
+      "verified_at": "2026-10-18T13:41:00+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "rmc-user-20261018-1341",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式指定を記録。"
         }
       ]
     }
