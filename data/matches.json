@@ -281,6 +281,13 @@
       "at": "2026-10-21T23:31:00+09:00",
       "source": "ユーザーの正式採用指示＋Real Madrid/Rams/B.LEAGUE/Liquipedia結果＋PARI Universe/RB Leipzig/EHF開催情報",
       "note": "ユーザー指定3件を正式記録し、既存未確定4試合の実スコアを確定。旧履歴は残す。"
+    },
+    {
+      "run_id": "mr-result-update-20261021-2331b",
+      "kind": "result_update",
+      "at": "2026-10-21T23:31:00+09:00",
+      "source": "Manchester Cityクラブ公式、J.LEAGUE公式",
+      "note": "既存RMC正式採用のCity勝ち、柏DNB負けを確定。"
     }
   ],
   "matches": [
@@ -4509,11 +4516,18 @@
       "sources": [
         "https://www.jleague.jp/match/j1/2026/101714/",
         "https://www.jleague.jp/club/kashiwa/",
-        "https://www.jleague.jp/club/nagoya/"
+        "https://www.jleague.jp/club/nagoya/",
+        "https://www.jleague.jp/en/match/j1/2026/101714/"
       ],
       "start_time_status": "recorded",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 1,
+          "b": 3
+        },
+        "text": "柏レイソル 1-3 名古屋グランパス"
+      },
       "provenance": [
         {
           "update_run_id": "mr-user-approved-20261016-2116",
@@ -4525,9 +4539,31 @@
             }
           ],
           "note": "ユーザー指定。CS2は勝者選択を暫定解釈、柏はDNB市場。"
+        },
+        {
+          "update_run_id": "mr-result-update-20261021-2331b",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 1,
+                  "b": 3
+                },
+                "text": "柏レイソル 1-3 名古屋グランパス"
+              }
+            }
+          ],
+          "note": "リーグ・クラブ公式結果で確認"
         }
       ],
-      "verified_at": "2026-10-16T21:16:00+09:00",
+      "verified_at": "2026-10-21T23:31:00+09:00",
       "flags": []
     },
     {
@@ -4541,8 +4577,14 @@
       "start_at": "2026-10-17T23:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": "Cityホーム。10/14 CLから中2日、Ipswichは10/10以来。",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 3,
+          "b": 2
+        },
+        "text": "Manchester City 3-2 Ipswich Town"
+      },
       "sources": [
         "https://www.mancity.com/citytv/mens/enzo-maresca-manchester-city-ipswich-town-press-conference-63927740",
         "https://www.skysports.com/football/manchester-city-vs-ipswich-town/stats/559510",
@@ -4552,9 +4594,10 @@
         "https://www.skysports.com/ipswich-town-scores-fixtures/2026-09-01",
         "https://www.skysports.com/ipswich-town-scores-fixtures/2026-05-01",
         "https://www.skysports.com/ipswich-town-scores-fixtures/2026-04-01",
-        "https://www.sportsmole.co.uk/football/man-city/head-to-head/man-city-vs-ipswich-head-to-head-record-and-past-meetings_551026.html"
+        "https://www.sportsmole.co.uk/football/man-city/head-to-head/man-city-vs-ipswich-head-to-head-record-and-past-meetings_551026.html",
+        "https://www.mancity.com/news/mens/man-city-ipswich-premier-league-match-report-october-2026-63927840"
       ],
-      "verified_at": "2026-10-17T20:21:43+09:00",
+      "verified_at": "2026-10-21T23:31:00+09:00",
       "flags": [],
       "provenance": [
         {
@@ -4567,6 +4610,28 @@
             }
           ],
           "note": "ユーザー指定の正式採用。"
+        },
+        {
+          "update_run_id": "mr-result-update-20261021-2331b",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 3,
+                  "b": 2
+                },
+                "text": "Manchester City 3-2 Ipswich Town"
+              }
+            }
+          ],
+          "note": "リーグ・クラブ公式結果で確認"
         }
       ]
     },
