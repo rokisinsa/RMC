@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-18T13:59:02+09:00",
+    "as_of": "2026-10-21T23:31:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -274,6 +274,13 @@
       "at": "2026-10-18T13:59:02+09:00",
       "source": "ユーザー明示訂正 + MPL Indonesia Season 18公式チケット/日程",
       "note": "誤って採用したSalzburg–Altachを行政的に無効として履歴保存（サッカーの試合自体は実在）。正しくEVOS vs Alter Ego（MLBB）、Alter Ego勝利を正式採用。勝敗・収支は不変更。"
+    },
+    {
+      "run_id": "mr-user-approved-20261021-2331",
+      "kind": "human_review",
+      "at": "2026-10-21T23:31:00+09:00",
+      "source": "ユーザーの正式採用指示＋Real Madrid/Rams/B.LEAGUE/Liquipedia結果＋PARI Universe/RB Leipzig/EHF開催情報",
+      "note": "ユーザー指定3件を正式記録し、既存未確定4試合の実スコアを確定。旧履歴は残す。"
     }
   ],
   "matches": [
@@ -4703,13 +4710,20 @@
       "start_at": "2026-10-19T05:05:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": "JST換算で確認済み。10/19早朝カードは現地10/18開催。",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 16,
+          "b": 18
+        },
+        "text": "Los Angeles Rams 16-18 Arizona Cardinals"
+      },
       "sources": [
         "https://www.therams.com/news/know-before-you-go-rams-vs-arizona-cardinals-sofi-stadium-week-6",
-        "https://nfl.jp/teams/la/"
+        "https://nfl.jp/teams/la/",
+        "https://www.therams.com/news/game-recap-rams-fall-to-cardinals-18-16-at-sofi-stadium"
       ],
-      "verified_at": "2026-10-18T13:41:00+09:00",
+      "verified_at": "2026-10-21T23:31:00+09:00",
       "flags": [],
       "provenance": [
         {
@@ -4722,6 +4736,28 @@
             }
           ],
           "note": "ユーザー正式指定を記録。"
+        },
+        {
+          "update_run_id": "mr-user-approved-20261021-2331",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 16,
+                  "b": 18
+                },
+                "text": "Los Angeles Rams 16-18 Arizona Cardinals"
+              }
+            }
+          ],
+          "note": "2026/10/21外部試合結果を照合"
         }
       ]
     },
@@ -4736,13 +4772,20 @@
       "start_at": "2026-10-19T04:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": "JST換算で確認済み。10/19早朝カードは現地10/18開催。",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 4,
+          "b": 1
+        },
+        "text": "Real Madrid 4-1 Sevilla FC"
+      },
       "sources": [
         "https://www.realmadrid.com/en-US/news/football/first-team/latest-news/el-calendario-del-real-madrid-en-octubre-24-09-2026",
-        "https://www.reuters.com/sports/soccer/real-madrids-vinicius-miss-clasico-after-four-game-suspension-2026-10-14/"
+        "https://www.reuters.com/sports/soccer/real-madrids-vinicius-miss-clasico-after-four-game-suspension-2026-10-14/",
+        "https://www.reuters.com/sports/soccer/mbappe-double-helps-real-madrid-sweep-aside-sevilla-ahead-el-clasico-2026-10-18/"
       ],
-      "verified_at": "2026-10-18T13:41:00+09:00",
+      "verified_at": "2026-10-21T23:31:00+09:00",
       "flags": [],
       "provenance": [
         {
@@ -4755,6 +4798,28 @@
             }
           ],
           "note": "ユーザー正式指定を記録。"
+        },
+        {
+          "update_run_id": "mr-user-approved-20261021-2331",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 4,
+                  "b": 1
+                },
+                "text": "Real Madrid 4-1 Sevilla FC"
+              }
+            }
+          ],
+          "note": "2026/10/21外部試合結果を照合"
         }
       ]
     },
@@ -4769,13 +4834,20 @@
       "start_at": "2026-10-18T17:05:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": "JST換算で確認済み。10/19早朝カードは現地10/18開催。",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 82,
+          "b": 63
+        },
+        "text": "Tokyo United BC 82-63 Yamagata Wyverns"
+      },
       "sources": [
         "https://www.bleague.jp/en/game_detail/?ScheduleKey=507245&tab=1",
-        "https://tubc.tokyo/game_lp_20261018_20261019_1/"
+        "https://tubc.tokyo/game_lp_20261018_20261019_1/",
+        "https://www.bleague.jp/game_detail/?ScheduleKey=507245&tab=1"
       ],
-      "verified_at": "2026-10-18T13:41:00+09:00",
+      "verified_at": "2026-10-21T23:31:00+09:00",
       "flags": [],
       "provenance": [
         {
@@ -4788,6 +4860,28 @@
             }
           ],
           "note": "ユーザー正式指定を記録。"
+        },
+        {
+          "update_run_id": "mr-user-approved-20261021-2331",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 82,
+                  "b": 63
+                },
+                "text": "Tokyo United BC 82-63 Yamagata Wyverns"
+              }
+            }
+          ],
+          "note": "2026/10/21外部試合結果を照合"
         }
       ]
     },
@@ -4840,13 +4934,20 @@
       "start_at": "2026-10-18T16:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": "公式MPL 14:00 WIB（UTC+7）→16:00 JST（UTC+9）。公式Week9日程・チケットページで照合。",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 2,
+          "b": 1
+        },
+        "text": "EVOS 2-1 Alter Ego"
+      },
       "sources": [
         "https://id-mpl.com/s18/en/schedule",
-        "https://id-mpl.com/s18/ticket"
+        "https://id-mpl.com/s18/ticket",
+        "https://liquipedia.net/mobilelegends/Alter_Ego"
       ],
-      "verified_at": "2026-10-18T13:59:02+09:00",
+      "verified_at": "2026-10-21T23:31:00+09:00",
       "flags": [],
       "provenance": [
         {
@@ -4859,6 +4960,132 @@
             }
           ],
           "note": "ユーザー誤読訂正・MLBBのAlter Ego勝利を正式採用。"
+        },
+        {
+          "update_run_id": "mr-user-approved-20261021-2331",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 2,
+                  "b": 1
+                },
+                "text": "EVOS 2-1 Alter Ego"
+              }
+            }
+          ],
+          "note": "2026/10/21外部試合結果を照合"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-22-real-madrid-leipzig-soccer",
+      "sport": "サッカー",
+      "competition": "UEFA Champions League 2026/27 League Phase",
+      "side_a": "Real Madrid",
+      "side_b": "RB Leipzig",
+      "home_side": "side_a",
+      "venue": "Santiago Bernabéu",
+      "start_at": "2026-10-22T04:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "2026-10-21 23:31 JST時点、公開日程から日本時間へ換算。Aalborgの現地開始時刻は要再照合。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.uol.com.br/esporte/ultimas-noticias/2026/10/21/jogo-do-real-madrid-hoje-pela-liga-dos-campeoes-que-horas-comeca-e-onde-assistir.ghtm"
+      ],
+      "verified_at": "2026-10-21T23:31:00+09:00",
+      "flags": [
+        "odds_unverified"
+      ],
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261021-2331",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-22-aalborg-celje-handball",
+      "sport": "ハンドボール",
+      "competition": "EHF Champions League Men 2026/27 Group Phase",
+      "side_a": "Aalborg Håndbold",
+      "side_b": "RK Celje Pivovarna Laško",
+      "home_side": "side_a",
+      "venue": "Aalborgホーム",
+      "start_at": "2026-10-22T03:45:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "2026-10-21 23:31 JST時点、公開日程から日本時間へ換算。Aalborgの現地開始時刻は要再照合。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101029/AalborgH%C3%A5ndbold-RKCeljePivovarnaLa%C5%A1ko/",
+        "https://odds.am/en/match/41719186/aalborg-celje/"
+      ],
+      "verified_at": "2026-10-21T23:31:00+09:00",
+      "flags": [
+        "odds_unverified"
+      ],
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261021-2331",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-22-yandex-gamerlegion-dota2",
+      "sport": "Dota 2",
+      "competition": "PARI Universe 2026 Group A BO3",
+      "side_a": "Team Yandex",
+      "side_b": "GamerLegion",
+      "home_side": "neutral",
+      "venue": "オンライン",
+      "start_at": "2026-10-22T17:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "2026-10-21 23:31 JST時点、公開日程から日本時間へ換算。Aalborgの現地開始時刻は要再照合。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://rdy.gg/en/dota2/tournaments/117530",
+        "https://esport.vision/news/spirit-vs-parivision-groups-revealed-for-pari-universe"
+      ],
+      "verified_at": "2026-10-21T23:31:00+09:00",
+      "flags": [
+        "odds_unverified"
+      ],
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261021-2331",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
         }
       ]
     }
