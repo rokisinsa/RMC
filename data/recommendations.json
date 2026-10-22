@@ -261,6 +261,12 @@
       "started_at": "2026-10-22T19:18:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー正式指定4件 PARIVISION・SC Magdeburg・Barça Handball・Minnesota Timberwolves。全て仮想100USD、オッズ未確認。ミネソタ試合は24日JST。"
+    },
+    {
+      "run_id": "rec-user-approved-20261022-t1-los",
+      "started_at": "2026-10-22T19:18:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー正式指定T1 vs LOS。選択T1（先頭チーム）、仮想100USD、オッズ未確認。"
     }
   ],
   "picks": [
@@ -5366,6 +5372,36 @@
         "odds_unverified"
       ],
       "note": "ユーザー指定でRMC正式採用。実購入なし。"
+    },
+    {
+      "id": "rec-2026-10-24-los-t1-lol",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261022-t1-los",
+      "match_id": "2026-10-24-los-t1-lol",
+      "source_event_id": "web-2026-10-24-los-t1-lol",
+      "market": "match_winner",
+      "market_label": "BO1勝者",
+      "selection": "side_a",
+      "selection_label": "T1",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-22T19:18:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-22T19:18:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー正式採用・トリプル分析未完",
+        "model_version": "rmc-user-approved-20261022",
+        "summary": "ユーザー指定T1 vs LOSを正式登録。T1勝者は先頭表記からの仮選択で要確認。BO1は不確実性が高い。H2H・直近10・共通相手全件未検証。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified",
+        "selection_inferred"
+      ],
+      "note": "正式採用。仮想100USD、実購入なし。勝者T1は先頭表記からの仮登録。"
     }
   ]
 }
