@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-21T23:31:00+09:00",
+    "as_of": "2026-10-22T19:18:00+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。1件仮想100USD。10/18誤登録Salzburgはvoid（勝敗対象外）で保存、EVOS vs Alter EgoのAlter Ego勝利へ訂正。ベガス申告オッズ1.44倍の参考精算は維持。"
   },
@@ -255,6 +255,12 @@
       "started_at": "2026-10-21T23:31:00+09:00",
       "slot": "adhoc",
       "note": "ユーザーがReal Madrid対RB Leipzig、Aalborg対Celje、Team Yandex対GamerLegionを本日の分析・正式成績追跡に追加指定。仮想100USD、オッズ未確認。"
+    },
+    {
+      "run_id": "rec-user-approved-20261022-1918",
+      "started_at": "2026-10-22T19:18:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー正式指定4件 PARIVISION・SC Magdeburg・Barça Handball・Minnesota Timberwolves。全て仮想100USD、オッズ未確認。ミネソタ試合は24日JST。"
     }
   ],
   "picks": [
@@ -5244,6 +5250,122 @@
         "odds_unverified"
       ],
       "note": "2026/10/21 23:31JSTユーザー正式採用。仮想100USD追跡。結果未確定。"
+    },
+    {
+      "id": "rec-2026-10-23-parivision-astra-dota2",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261022-1918",
+      "match_id": "2026-10-23-parivision-astra-dota2",
+      "source_event_id": "web-2026-10-23-parivision-astra-dota2",
+      "market": "match_winner",
+      "market_label": "BO3シリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "PARIVISION",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-22T19:18:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-22T19:18:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー正式指定（要検証）",
+        "model_version": "rmc-user-approved-20261022",
+        "summary": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定でRMC正式採用。実購入なし。"
+    },
+    {
+      "id": "rec-2026-10-23-kolstad-magdeburg-handball",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261022-1918",
+      "match_id": "2026-10-23-kolstad-magdeburg-handball",
+      "source_event_id": "web-2026-10-23-kolstad-magdeburg-handball",
+      "market": "match_winner",
+      "market_label": "試合勝者（引分不的中）",
+      "selection": "side_b",
+      "selection_label": "SC Magdeburg",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-22T19:18:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-22T19:18:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー正式指定（要検証）",
+        "model_version": "rmc-user-approved-20261022",
+        "summary": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定でRMC正式採用。実購入なし。"
+    },
+    {
+      "id": "rec-2026-10-23-barca-montpellier-handball",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261022-1918",
+      "match_id": "2026-10-23-barca-montpellier-handball",
+      "source_event_id": "web-2026-10-23-barca-montpellier-handball",
+      "market": "match_winner",
+      "market_label": "試合勝者（引分不的中）",
+      "selection": "side_a",
+      "selection_label": "Barça",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-22T19:18:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-22T19:18:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー正式指定（要検証）",
+        "model_version": "rmc-user-approved-20261022",
+        "summary": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定でRMC正式採用。実購入なし。"
+    },
+    {
+      "id": "rec-2026-10-24-minnesota-orlando-nba",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261022-1918",
+      "match_id": "2026-10-24-minnesota-orlando-nba",
+      "source_event_id": "web-2026-10-24-minnesota-orlando-nba",
+      "market": "match_winner",
+      "market_label": "試合勝者（延長込み）",
+      "selection": "side_a",
+      "selection_label": "Minnesota Timberwolves",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-22T19:18:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-22T19:18:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー正式指定（要検証）",
+        "model_version": "rmc-user-approved-20261022",
+        "summary": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定でRMC正式採用。実購入なし。"
     }
   ]
 }
