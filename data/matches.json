@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-21T23:31:00+09:00",
+    "as_of": "2026-10-22T19:18:00+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -288,6 +288,13 @@
       "at": "2026-10-21T23:31:00+09:00",
       "source": "Manchester Cityクラブ公式、J.LEAGUE公式",
       "note": "既存RMC正式採用のCity勝ち、柏DNB負けを確定。"
+    },
+    {
+      "run_id": "mr-user-approved-20261022-1918",
+      "kind": "human_review",
+      "at": "2026-10-22T19:18:00+09:00",
+      "source": "ユーザー指定＋EHF公式／NBA公式／PARI Universe日程",
+      "note": "正式4件登録。ミネソタは24日08時JSTで対象期間外のため日付注意。過去登録のReal Madrid-Leipzig・Aalborg-Celjeの結果を公式確認して確定。"
     }
   ],
   "matches": [
@@ -5061,12 +5068,19 @@
       "start_at": "2026-10-22T04:00:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": "2026-10-21 23:31 JST時点、公開日程から日本時間へ換算。Aalborgの現地開始時刻は要再照合。",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 4,
+          "b": 1
+        },
+        "text": "Real Madrid 4-1 RB Leipzig"
+      },
       "sources": [
-        "https://www.uol.com.br/esporte/ultimas-noticias/2026/10/21/jogo-do-real-madrid-hoje-pela-liga-dos-campeoes-que-horas-comeca-e-onde-assistir.ghtm"
+        "https://www.uol.com.br/esporte/ultimas-noticias/2026/10/21/jogo-do-real-madrid-hoje-pela-liga-dos-campeoes-que-horas-comeca-e-onde-assistir.ghtm",
+        "https://www.realmadrid.com/en-US/news/football/first-team/reports/cronica-real-madrid-leipzig-j3-champions-21-10-2026"
       ],
-      "verified_at": "2026-10-21T23:31:00+09:00",
+      "verified_at": "2026-10-22T19:18:00+09:00",
       "flags": [
         "odds_unverified"
       ],
@@ -5081,6 +5095,28 @@
             }
           ],
           "note": "ユーザー指定正式採用"
+        },
+        {
+          "update_run_id": "mr-user-approved-20261022-1918",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 4,
+                  "b": 1
+                },
+                "text": "Real Madrid 4-1 RB Leipzig"
+              }
+            }
+          ],
+          "note": "チーム公式の結果記事で確認"
         }
       ]
     },
@@ -5095,13 +5131,20 @@
       "start_at": "2026-10-22T03:45:00+09:00",
       "start_time_status": "recorded",
       "start_time_note": "2026-10-21 23:31 JST時点、公開日程から日本時間へ換算。Aalborgの現地開始時刻は要再照合。",
-      "status": "scheduled",
-      "result": null,
+      "status": "final",
+      "result": {
+        "final": {
+          "a": 34,
+          "b": 30
+        },
+        "text": "Aalborg Håndbold 34-30 RK Celje Pivovarna Laško"
+      },
       "sources": [
         "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101029/AalborgH%C3%A5ndbold-RKCeljePivovarnaLa%C5%A1ko/",
-        "https://odds.am/en/match/41719186/aalborg-celje/"
+        "https://odds.am/en/match/41719186/aalborg-celje/",
+        "https://aalborghaandbold.dk/sikker-sejr-over-celje/"
       ],
-      "verified_at": "2026-10-21T23:31:00+09:00",
+      "verified_at": "2026-10-22T19:18:00+09:00",
       "flags": [
         "odds_unverified"
       ],
@@ -5116,6 +5159,28 @@
             }
           ],
           "note": "ユーザー指定正式採用"
+        },
+        {
+          "update_run_id": "mr-user-approved-20261022-1918",
+          "changes": [
+            {
+              "field": "status",
+              "before": "scheduled",
+              "after": "final"
+            },
+            {
+              "field": "result",
+              "before": null,
+              "after": {
+                "final": {
+                  "a": 34,
+                  "b": 30
+                },
+                "text": "Aalborg Håndbold 34-30 RK Celje Pivovarna Laško"
+              }
+            }
+          ],
+          "note": "チーム公式の結果記事で確認"
         }
       ]
     },
@@ -5151,6 +5216,144 @@
             }
           ],
           "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-parivision-astra-dota2",
+      "sport": "Dota 2",
+      "competition": "PARI Universe 2026 Group B BO3",
+      "side_a": "PARIVISION",
+      "side_b": "Astra Invicta",
+      "home_side": "neutral",
+      "venue": "オンライン",
+      "start_at": "2026-10-23T02:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "リーグ・大会公式の現地日付とJSTを照合。ミネソタは10/24で今回の今日明日の対象外。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://hawk.live/dota-2/matches/pari-universe-group-stage/parivision-vs-astra-invicta"
+      ],
+      "verified_at": "2026-10-22T19:18:00+09:00",
+      "flags": [
+        "odds_unverified"
+      ],
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261022-1918",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式指定"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-kolstad-magdeburg-handball",
+      "sport": "ハンドボール",
+      "competition": "EHF Champions League 2026/27",
+      "side_a": "Kolstad Håndball",
+      "side_b": "SC Magdeburg",
+      "home_side": "side_a",
+      "venue": "Kolstad Arena",
+      "start_at": "2026-10-23T03:45:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "リーグ・大会公式の現地日付とJSTを照合。ミネソタは10/24で今回の今日明日の対象外。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.scm-handball.de/match-center/",
+        "https://ehfel.eurohandball.com/news/en/five-main-round-tickets-still-on-the-line-as-round-5-begins/"
+      ],
+      "verified_at": "2026-10-22T19:18:00+09:00",
+      "flags": [
+        "odds_unverified"
+      ],
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261022-1918",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式指定"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-23-barca-montpellier-handball",
+      "sport": "ハンドボール",
+      "competition": "EHF Champions League 2026/27",
+      "side_a": "Barça",
+      "side_b": "Montpellier Handball",
+      "home_side": "side_a",
+      "venue": "Barcelona home",
+      "start_at": "2026-10-23T03:45:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "リーグ・大会公式の現地日付とJSTを照合。ミネソタは10/24で今回の今日明日の対象外。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://ehfeuro.eurohandball.com/men/2026/news/en/five-main-round-tickets-still-on-the-line-as-round-5-begins/"
+      ],
+      "verified_at": "2026-10-22T19:18:00+09:00",
+      "flags": [
+        "odds_unverified"
+      ],
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261022-1918",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式指定"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-24-minnesota-orlando-nba",
+      "sport": "バスケットボール",
+      "competition": "NBA 2026/27 Regular Season",
+      "side_a": "Minnesota Timberwolves",
+      "side_b": "Orlando Magic",
+      "home_side": "side_b",
+      "venue": "Kia Center",
+      "start_at": "2026-10-24T08:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "リーグ・大会公式の現地日付とJSTを照合。ミネソタは10/24で今回の今日明日の対象外。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.nba.com/team/1610612750/schedule",
+        "https://www.nba.com/schedule/timberwolves?cal=October&region=1"
+      ],
+      "verified_at": "2026-10-22T19:18:00+09:00",
+      "flags": [
+        "odds_unverified"
+      ],
+      "provenance": [
+        {
+          "update_run_id": "mr-user-approved-20261022-1918",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式指定"
         }
       ]
     }
