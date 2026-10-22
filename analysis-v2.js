@@ -355,6 +355,42 @@ function wire(root) {
 }
 
 
+
+function renderClickableFormalCards(ds) {
+  const matches = new Map((ds.matches?.matches ?? []).map(m => [m.id, m]));
+  const analysis = [...(ds.today_gap_analysis?.previous_analysis?.candidates ?? []), ...(ds.today_gap_analysis?.candidates ?? [])];
+  const active = (ds.recommendations?.picks ?? []).filter(p => {
+    const m=matches.get(p.match_id);
+    return m && Date.parse(m.start_at) >= Date.parse("2026-10-17T00:00:00+09:00")
+      && p.settlement_override?.state !== "void";
+  }).sort((a,b)=>Date.parse(matches.get(b.match_id)?.start_at)-Date.parse(matches.get(a.match_id)?.start_at));
+  if (!active.length) return "";
+  const rows=active.map((p,i)=>{
+    const m=matches.get(p.match_id);
+    const key="formal-card-detail-"+i;
+    const d=analysis.find(x=>x.match_id===m.id)?.analysis_detail ?? {};
+    const specific=!!(d.h2h?.items?.length || d.recent_form?.side_a?.items?.length || d.common_opponent_comparison?.items?.length);
+    const result=m.status==="final" ? safeText(m.result?.text ?? "終了／スコア未記録") : "試合前・結果未確定";
+    const note=specific ? "登録済みの分析詳細" : "事前分析の実スコア明細は未収集。推測値を表示しません";
+    const sources=(m.sources??[]).filter(u=>/^https:\/\//.test(u)).slice(0,6).map((u,n)=>'<a href="'+safeText(u)+'" target="_blank" rel="noopener noreferrer">出典'+(n+1)+'</a>').join(" ／ ");
+    return '<tr class="row" data-toggle="'+key+'" title="クリックでこのカードの分析を表示" style="cursor:pointer">'
+      +'<td>'+safeText(m.start_at?.slice(5,16).replace("T"," "))+'</td>'
+      +'<td><strong>'+safeText(m.side_a)+' vs '+safeText(m.side_b)+'</strong> ▼<div class="sub">'+safeText(m.sport)+'｜'+safeText(m.competition)+'</div></td>'
+      +'<td><strong>'+safeText(p.selection_label)+'</strong></td><td>'+result+'</td></tr>'
+      +'<tr class="detail-row" id="'+key+'" hidden><td colspan="4" class="detail-cell">'
+      +'<h3>① H2H（直接対決）</h3>'+gapH2HBlock(d.h2h,"H2Hの全試合スコアは未確認")
+      +'<h3>① 両チーム直近10試合</h3>'+(d.recent_form?.side_a||d.recent_form?.side_b?gapRecentTable(d.recent_form):'<div class="sub">両チームの直近10試合の実スコアは未確認</div>')
+      +'<h3>② 現在戦力・採用理由</h3><div>'+safeText(p.locked?.summary??"現在戦力の独立比較は未確認")+'</div>'
+      +'<h3>③ 共通対戦相手・全確認スコア</h3>'+gapCommonOpponentBlock(d.common_opponent_comparison,"共通相手の試合別スコア・合計は未確認")
+      +'<h3>①②③の照合</h3><div class="sub">'+safeText(note)+'。独立3系統の一致判定は検証待ち。</div>'
+      +'<div class="sub">開始：'+safeText(m.start_at)+'／採用：'+safeText(p.selection_label)+'／オッズ：'+safeText(p.odds_taken??"未確認")+'／'+result+'</div>'
+      +'<div class="sub">'+sources+'</div></td></tr>';
+  }).join("");
+  return '<section id="formal-click-analysis" style="margin:15px 0 22px"><h2>本日の分析｜正式採用カード（クリックで個別分析）</h2>'
+    +'<p class="sub">各組み合わせを押すとH2H、直近10、現戦力、共通相手、結果と出典が開きます。未調査部分は未確認と表示します。</p>'
+    +'<div class="table-wrap"><table class="result-table"><thead><tr><th>開始JST</th><th>対戦カード</th><th>採用</th><th>結果</th></tr></thead><tbody>'+rows+'</tbody></table></div></section>';
+}
+
 function attachFormalRecommendationAnalysis(vm, today) {
   const all=[...(today?.previous_analysis?.candidates??[]),...(today?.candidates??[])];
   const norm=v=>String(v??"").toLowerCase().replace(/[‐‑–—]/g,"-").replace(/\s+/g," ").trim();
@@ -406,6 +442,7 @@ async function main() {
     assertNoDemoInProduction(mode, ds);
     const vm = attachFormalRecommendationAnalysis(buildViewModel(ds, { proEdgeConfig: cfg }), ds.today_gap_analysis);
     root.innerHTML = (mode.mode === "development" ? '<div class="dev-banner">development モード（ローカル確認環境）</div>' : "")
+      + renderClickableFormalCards(ds)
       + renderTodayGapAnalysis(ds.today_gap_analysis, ds.system_analysis?.systems?.recommendations?.candidates ?? [])
       + renderPreviousGapAnalysis(ds.today_gap_analysis?.previous_analysis)
       + (mode.mode === "development"
