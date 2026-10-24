@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-18T13:59:02+09:00",
+  "generated_at": "2026-10-24T15:48:05+09:00",
   "window": {
-    "from": "2026-10-18T13:41:00+09:00",
-    "to": "2026-10-19T08:00:00+09:00",
+    "from": "2026-10-24T00:00:00+09:00",
+    "to": "2026-10-25T00:00:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "10/18中に開始する2件と、現地10/18開催でJST10/19早朝開始の2件を正式採用。Falcons・Vegasは終了履歴へ移動。"
+    "note": "指定4件を正式登録済み。終了したバルサ・トンガは結果履歴へ移動。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -19,175 +19,509 @@
   ],
   "coverage": {
     "checked": [
-      "プレミアリーグ",
-      "CS2 Thunderpick",
-      "NHL",
-      "既掲載試合の結果",
-      "NFL",
-      "La Liga",
-      "B.LEAGUE ONE",
-      "ADMIRAL Bundesliga",
-      "CS2試合結果",
-      "NHL試合結果",
-      "MPL Indonesia Season 18公式日程"
+      "ユーザー指定4件",
+      "既存正式採用の終了結果"
     ],
-    "note": "4件目をAlter Ego（vs EVOS）へ訂正。3件据置き。Falcons敗戦・Vegas勝利の精算は変更なし。"
+    "note": "世界全試合の再スクリーニングではない。今回の表示は正式採用カードに一本化。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-10-19-rams-cardinals-nfl",
-      "event_id": "web-2026-10-19-rams-cardinals-nfl",
-      "matchup": "Los Angeles Rams vs Arizona Cardinals",
-      "favored": "Los Angeles Rams",
-      "selection_label": "Los Angeles Rams",
-      "sport": "NFL",
-      "competition": "NFL 2026 Regular Season Week 6",
-      "start_jst": "2026-10-19T05:05:00+09:00",
-      "venue": "SoFi Stadium／Ramsホーム",
-      "format": "試合勝者（延長込み）",
+      "match_id": "2026-10-24-vitality-9z-cs2",
+      "event_id": "web-2026-10-24-vitality-9z-cs2",
+      "matchup": "Vitality vs 9z",
+      "favored": "Vitality",
+      "selection_label": "Vitality",
+      "sport": "CS2",
+      "competition": "PGL Masters Bucharest 2026",
+      "start_jst": "2026-10-24T22:00:00+09:00",
+      "venue": "中立／オンライン",
+      "format": "BO3／LANシリーズ勝者",
       "status": "formal",
-      "gap_grade": "暫定（再評価必要）",
-      "price_grade": "未判定",
+      "gap_grade": "A−",
+      "price_grade": "オッズ未確認",
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "仮想100USD基準。オッズ未確認、未精算。",
+      "profit_status": "結果未確定／取得オッズ未登録",
       "odds": {
         "min": null,
         "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "購入価格未確認"
+        "book_examples": "取得オッズ未登録。参考市場価格を精算には使わない。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-18T13:41:00+09:00",
-      "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
+      "added_at": "2026-10-23T18:15:18+09:00",
+      "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
       "sources": [
-        "https://www.therams.com/news/know-before-you-go-rams-vs-arizona-cardinals-sofi-stadium-week-6",
-        "https://nfl.jp/teams/la/"
+        "https://www.hltv.org/matches/2399723/vitality-vs-9z-pgl-masters-bucharest-2026",
+        "https://www.hltv.org/results?team=9565",
+        "https://www.hltv.org/results?team=9996"
       ],
-      "conclusion": "Rams 2勝3敗、Cardinals 1勝4敗。対戦前に選手欠場・実際の市場オッズ確認が必要。ユーザー正式指定によりRams勝者を採用。",
-      "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
+      "conclusion": "直近10シリーズVitality9勝1敗、9z3勝7敗。共通5相手で優勢。HLTV2位対15位。",
+      "risk": "apEXの代役にjL。司令塔変更で従来の実績をそのまま再現できるとは限らない。",
       "analysis_detail": {
-        "summary": "Rams 2勝3敗、Cardinals 1勝4敗。対戦前に選手欠場・実際の市場オッズ確認が必要。ユーザー正式指定によりRams勝者を採用。"
+        "summary": "直近10シリーズVitality9勝1敗、9z3勝7敗。共通5相手で優勢。HLTV2位対15位。",
+        "availability": {
+          "text": "apEXの代役にjL。司令塔変更で従来の実績をそのまま再現できるとは限らない。"
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Vitality",
+            "items": [
+              {
+                "date": "2026/10/11",
+                "opponent": "MOUZ",
+                "result": "W 3-0"
+              },
+              {
+                "date": "2026/10/10",
+                "opponent": "Aurora",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/09",
+                "opponent": "PARIVISION",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/05",
+                "opponent": "Falcons",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/04",
+                "opponent": "NAVI",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/03",
+                "opponent": "1win",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/20",
+                "opponent": "Aurora",
+                "result": "W 3-1"
+              },
+              {
+                "date": "2026/09/20",
+                "opponent": "FURIA",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/19",
+                "opponent": "Aurora",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/09/18",
+                "opponent": "FURIA",
+                "result": "W 2-0"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "9z",
+            "items": [
+              {
+                "date": "2026/10/16",
+                "opponent": "Aurora",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/15",
+                "opponent": "Falcons",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/10/14",
+                "opponent": "Aurora",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/07",
+                "opponent": "FURIA",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/06",
+                "opponent": "BETBOOM",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/05",
+                "opponent": "NAVI",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/04",
+                "opponent": "TYLOO",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/03",
+                "opponent": "Aurora",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/09/10",
+                "opponent": "G2",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/09/09",
+                "opponent": "MIBR",
+                "result": "L 0-2"
+              }
+            ]
+          }
+        },
+        "h2h": {
+          "summary": "確認できた5シリーズはVitality3勝2敗。HLTVの6勝4敗はマップ数でありシリーズ数ではない。",
+          "items": [
+            {
+              "date": "2026/08/29",
+              "label": "Vitality vs 9z",
+              "result": "2-0"
+            },
+            {
+              "date": "2026/06/12",
+              "label": "Vitality vs 9z",
+              "result": "1-2"
+            },
+            {
+              "date": "2026/03/19",
+              "label": "Vitality vs 9z",
+              "result": "2-0"
+            },
+            {
+              "date": "2024/10/07",
+              "label": "Vitality vs 9z",
+              "result": "1-0（13-3、BO1）"
+            },
+            {
+              "date": "2024/05/30",
+              "label": "Vitality vs 9z",
+              "result": "0-2"
+            }
+          ]
+        },
+        "common_opponent_comparison": {
+          "summary": "同じ相手との比較。開催時期・大会形式の違いに注意。古い記録を現在の実力と同一視しない。",
+          "items": [
+            {
+              "opponent": "Aurora",
+              "side_a": {
+                "date": "2026/10/10",
+                "result": "2-1"
+              },
+              "side_b": {
+                "date": "2026/10/16",
+                "result": "0-2"
+              },
+              "comparison": "Vitality優位。ただし9zも10/14には2-0勝利"
+            },
+            {
+              "opponent": "Falcons",
+              "side_a": {
+                "date": "2026/10/05",
+                "result": "2-1"
+              },
+              "side_b": {
+                "date": "2026/10/15",
+                "result": "1-2"
+              },
+              "comparison": "Vitality優位"
+            },
+            {
+              "opponent": "FURIA",
+              "side_a": {
+                "date": "2026/09/20",
+                "result": "2-0"
+              },
+              "side_b": {
+                "date": "2026/10/07",
+                "result": "0-2"
+              },
+              "comparison": "Vitality優位"
+            },
+            {
+              "opponent": "NAVI",
+              "side_a": {
+                "date": "2026/10/04",
+                "result": "2-1"
+              },
+              "side_b": {
+                "date": "2026/10/05",
+                "result": "0-2"
+              },
+              "comparison": "Vitality優位"
+            },
+            {
+              "opponent": "MOUZ",
+              "side_a": {
+                "date": "2026/10/11",
+                "result": "3-0"
+              },
+              "side_b": {
+                "date": "2026/08/27",
+                "result": "0-2"
+              },
+              "comparison": "Vitality優位／BO5とBO3の違い"
+            }
+          ]
+        }
       }
     },
     {
       "rank": 2,
-      "match_id": "2026-10-19-real-madrid-sevilla-soccer",
-      "event_id": "web-2026-10-19-real-madrid-sevilla-soccer",
-      "matchup": "Real Madrid vs Sevilla FC",
-      "favored": "Real Madrid",
-      "selection_label": "Real Madrid",
-      "sport": "サッカー",
-      "competition": "La Liga 2026/27 第9節",
-      "start_jst": "2026-10-19T04:00:00+09:00",
-      "venue": "Santiago Bernabéu／Real Madridホーム",
-      "format": "90分勝者",
+      "match_id": "2026-10-24-yandex-og-dota2",
+      "event_id": "web-2026-10-24-yandex-og-dota2",
+      "matchup": "Team Yandex vs OG",
+      "favored": "Team Yandex",
+      "selection_label": "Team Yandex",
+      "sport": "Dota 2",
+      "competition": "PARI Universe 2026",
+      "start_jst": "2026-10-24T20:00:00+09:00",
+      "venue": "中立／オンライン",
+      "format": "BO3",
       "status": "formal",
-      "gap_grade": "暫定（再評価必要）",
-      "price_grade": "未判定",
-      "market": "match_1x2",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "仮想100USD基準。オッズ未確認、未精算。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "購入価格未確認"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-18T13:41:00+09:00",
-      "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
-      "sources": [
-        "https://www.realmadrid.com/en-US/news/football/first-team/latest-news/el-calendario-del-real-madrid-en-octubre-24-09-2026",
-        "https://www.reuters.com/sports/soccer/real-madrids-vinicius-miss-clasico-after-four-game-suspension-2026-10-14/"
-      ],
-      "conclusion": "10/18現地21:00 CEST開始。Real Madrid勝利（90分）を正式採用。Vinícius出場停止、ほか欠場情報に注意。H2H・直近10・共通対戦相手は今回未再検証。",
-      "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
-      "analysis_detail": {
-        "summary": "10/18現地21:00 CEST開始。Real Madrid勝利（90分）を正式採用。Vinícius出場停止、ほか欠場情報に注意。H2H・直近10・共通対戦相手は今回未再検証。"
-      }
-    },
-    {
-      "rank": 3,
-      "match_id": "2026-10-18-tokyo-u-yamagata-basketball",
-      "event_id": "web-2026-10-18-tokyo-u-yamagata-basketball",
-      "matchup": "Tokyo United BC vs Yamagata Wyverns",
-      "favored": "Tokyo United BC",
-      "selection_label": "Tokyo United BC",
-      "sport": "バスケットボール",
-      "competition": "B.LEAGUE ONE 2026/27",
-      "start_jst": "2026-10-18T17:05:00+09:00",
-      "venue": "有明アリーナ／東京Uホーム",
-      "format": "試合勝者（延長込み）",
-      "status": "formal",
-      "gap_grade": "A−候補（H2H不在）",
-      "price_grade": "未判定",
+      "gap_grade": "A−",
+      "price_grade": "オッズ未確認",
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "仮想100USD基準。オッズ未確認、未精算。",
+      "profit_status": "結果未確定／取得オッズ未登録",
       "odds": {
         "min": null,
         "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "購入価格未確認"
+        "book_examples": "取得オッズ未登録。参考市場価格を精算には使わない。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-18T13:41:00+09:00",
-      "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
+      "added_at": "2026-10-23T18:15:18+09:00",
+      "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
       "sources": [
-        "https://www.bleague.jp/en/game_detail/?ScheduleKey=507245&tab=1",
-        "https://tubc.tokyo/game_lp_20261018_20261019_1/"
+        "https://cyberscore.live/en/matches/team-yandex-vs-og-190027/",
+        "https://cyberscore.live/en/teams/team-yandex/matches/",
+        "https://cyberscore.live/en/teams/og/matches/",
+        "https://www.cybersport.ru/tags/dota-2/team-yandex-bez-atf-nachala-vystupleniye-na-universe-by-fissure-s-pobedy-nad",
+        "https://cyberscore.live/en/matches/team-yandex-vs-og-190027/head-to-head/",
+        "https://ensigame.com/ru/matches/history/40456741-og-vs-1w-team-dota-2"
       ],
-      "conclusion": "東京U 5勝2敗、山形 1勝6敗。H2Hなし。共通相手は前季奈良・過去岩手のみで条件差が大きい。ユーザー正式指定により東京U勝者を採用。",
-      "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
+      "conclusion": "Team Yandex直近9勝1敗。強豪への勝利実績が豊富。ただしOGとのH2Hは3勝3敗1分で互角。",
+      "risk": "ATFは体調不良で初戦欠場、Xibbe代役。OG戦出場可否未確定。OGも10/23に1winへ2-0勝利し直近10戦7勝3敗に上昇。",
       "analysis_detail": {
-        "summary": "東京U 5勝2敗、山形 1勝6敗。H2Hなし。共通相手は前季奈良・過去岩手のみで条件差が大きい。ユーザー正式指定により東京U勝者を採用。"
-      }
-    },
-    {
-      "rank": 4,
-      "match_id": "2026-10-18-evos-alter-ego-mlbb",
-      "event_id": "web-2026-10-18-evos-alter-ego-mlbb",
-      "matchup": "EVOS vs Alter Ego",
-      "favored": "Alter Ego",
-      "selection_label": "Alter Ego",
-      "sport": "MLBB",
-      "competition": "MPL Indonesia Season 18 Regular Season Week 9",
-      "start_jst": "2026-10-18T16:00:00+09:00",
-      "venue": "MPL Indonesiaステージ（会場詳細未確認）",
-      "format": "BO3・シリーズ勝者",
-      "status": "formal",
-      "gap_grade": "A−候補（要直近10再照合）",
-      "price_grade": "未判定",
-      "market": "match_winner",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "仮想100USD基準。取得オッズ未確認・試合前、未精算。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "required_win_rate_pct": null,
-        "book_examples": "購入オッズ未確認"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-18T13:59:02+09:00",
-      "analysis_reviewed_at": "2026-10-18T13:59:02+09:00",
-      "sources": [
-        "https://id-mpl.com/s18/en/schedule",
-        "https://id-mpl.com/s18/ticket"
-      ],
-      "conclusion": "Alter Ego勝利で正式採用。Week9、10月18日16:00 JST、BO3。ユーザー明示訂正による採用。H2H／共通相手は直前の分析を参照、直近10試合全件の最新再確認未了。",
-      "risk": "試合オッズ・ラインアップ未確認。直近10試合と共通5相手の最新データはこの訂正では未再照合。",
-      "analysis_detail": {
-        "summary": "ユーザー訂正に従いEVOS vs Alter EgoのAlter Ego勝利を正式採用。旧ザルツブルク取引はvoid精算、成績への加算なし。"
+        "summary": "Team Yandex直近9勝1敗。強豪への勝利実績が豊富。ただしOGとのH2Hは3勝3敗1分で互角。",
+        "availability": {
+          "text": "ATFは体調不良で初戦欠場、Xibbe代役。OG戦出場可否未確定。OGも10/23に1winへ2-0勝利し直近10戦7勝3敗に上昇。"
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Team Yandex",
+            "items": [
+              {
+                "date": "2026/10/22",
+                "opponent": "GamerLegion",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/11",
+                "opponent": "Spirit",
+                "result": "W 3-1"
+              },
+              {
+                "date": "2026/10/10",
+                "opponent": "Spirit",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/08",
+                "opponent": "PARIVISION",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/08",
+                "opponent": "LGD",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/03",
+                "opponent": "Spirit",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/10/01",
+                "opponent": "BetBoom",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/30",
+                "opponent": "MOUZ",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/27",
+                "opponent": "NAVI",
+                "result": "W 3-0"
+              },
+              {
+                "date": "2026/09/26",
+                "opponent": "LGD",
+                "result": "W 2-0"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "OG",
+            "items": [
+              {
+                "date": "2026/10/23",
+                "opponent": "1win",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/16",
+                "opponent": "LEGION",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/15",
+                "opponent": "Synapse",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/15",
+                "opponent": "potn9ki",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/03",
+                "opponent": "1win",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/10/02",
+                "opponent": "BetBoom",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/01",
+                "opponent": "MOUZ",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/30",
+                "opponent": "BetBoom",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/08/15",
+                "opponent": "GamerLegion",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/08/15",
+                "opponent": "HULIGANI",
+                "result": "W 2-1"
+              }
+            ]
+          }
+        },
+        "h2h": {
+          "summary": "3勝3敗1分。BO1/BO2/BO3混在。10試合未満のため確認7件を掲載。",
+          "items": [
+            {
+              "date": "2026/07/07",
+              "label": "Team Yandex vs OG",
+              "result": "1-1 BO2"
+            },
+            {
+              "date": "2026/05/27",
+              "label": "Team Yandex vs OG",
+              "result": "1-0 BO1"
+            },
+            {
+              "date": "2026/02/17",
+              "label": "Team Yandex vs OG",
+              "result": "0-2 BO2"
+            },
+            {
+              "date": "2026/02/03",
+              "label": "Team Yandex vs OG",
+              "result": "0-1 BO1"
+            },
+            {
+              "date": "2025/12/11",
+              "label": "Team Yandex vs OG",
+              "result": "1-2 BO3"
+            },
+            {
+              "date": "2025/12/05",
+              "label": "Team Yandex vs OG",
+              "result": "2-1 BO3"
+            },
+            {
+              "date": "2025/11/28",
+              "label": "Team Yandex vs OG",
+              "result": "1-0 BO1"
+            }
+          ]
+        },
+        "common_opponent_comparison": {
+          "summary": "確認4組：Yandex優勢2、同等2。OGの10/23勝利を反映。5組に水増ししない。",
+          "items": [
+            {
+              "opponent": "GamerLegion",
+              "side_a": {
+                "date": "2026/10/22",
+                "result": "2-0"
+              },
+              "side_b": {
+                "date": "2026/08/15",
+                "result": "0-2"
+              },
+              "comparison": "Yandex優位／2か月差"
+            },
+            {
+              "opponent": "BetBoom",
+              "side_a": {
+                "date": "2026/10/01",
+                "result": "2-0"
+              },
+              "side_b": {
+                "date": "2026/10/02",
+                "result": "2-1"
+              },
+              "comparison": "Yandexのマップ差が上"
+            },
+            {
+              "opponent": "MOUZ",
+              "side_a": {
+                "date": "2026/09/30",
+                "result": "2-0"
+              },
+              "side_b": {
+                "date": "2026/10/01",
+                "result": "2-0"
+              },
+              "comparison": "同等"
+            },
+            {
+              "opponent": "1win",
+              "side_a": {
+                "date": "2026/09/24",
+                "result": "2-0"
+              },
+              "side_b": {
+                "date": "2026/10/23",
+                "result": "2-0"
+              },
+              "comparison": "最新比較は双方2-0で同等。従来のYandex優勢から修正。"
+            }
+          ]
+        }
       }
     }
   ],
@@ -205,13 +539,11 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "Tokyo United BC vs Yamagata Wyverns",
-      "EVOS vs Alter Ego（Alter Ego側）",
-      "Los Angeles Rams vs Arizona Cardinals",
-      "Real Madrid vs Sevilla"
+      "Vitality",
+      "Team Yandex"
     ],
     "price_adjusted_top": [],
-    "caution": "ユーザー訂正：4件目はMLBB EVOS vs Alter Ego（Alter Ego勝利）。Salzburg–Altach誤登録は行政的voidで勝敗・収支非算入。新規4件が本日の正式採用として有効。Falcons-$100、Vegas+$44（ユーザー申告1.44倍・参考）で2件差引-$56。"
+    "caution": "ユーザー指定4件は正式採用。バルサ45-27、トンガ36-0で勝利済み。取得オッズ未登録の勝利利益は未計算。トンガは開始予定時刻後の採用。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -505,7 +837,7 @@
         ]
       },
       {
-        "rank": 1,
+        "rank": 2,
         "match_id": "2026-10-15-zero-tenacity-puckchamp-dota2",
         "event_id": "web-2026-10-15-zero-tenacity-puckchamp-dota2",
         "matchup": "Zero Tenacity vs PuckChamp",
@@ -749,7 +1081,7 @@
         ]
       },
       {
-        "rank": 2,
+        "rank": 3,
         "match_id": "2026-10-15-heroic-envy-cs2",
         "event_id": "web-2026-10-15-heroic-envy-cs2",
         "matchup": "HEROIC vs Envy",
@@ -980,7 +1312,7 @@
         ]
       },
       {
-        "rank": 3,
+        "rank": 4,
         "match_id": "2026-10-15-9z-falcons-cs2",
         "event_id": "web-2026-10-15-9z-falcons-cs2",
         "matchup": "9z vs Falcons",
@@ -1245,7 +1577,7 @@
         ]
       },
       {
-        "rank": 1,
+        "rank": 5,
         "match_id": "2026-10-15-furia-betboom-cs2",
         "event_id": "web-2026-10-15-furia-betboom-cs2",
         "matchup": "FURIA vs BETBOOM",
@@ -1462,7 +1794,7 @@
         ]
       },
       {
-        "rank": 1,
+        "rank": 6,
         "match_id": "2026-10-14-lynx-puckchamp-dota2",
         "event_id": "web-2026-10-14-lynx-puckchamp-dota2",
         "matchup": "Team Lynx vs PuckChamp",
@@ -1650,7 +1982,7 @@
         "result_sources": []
       },
       {
-        "rank": 3,
+        "rank": 7,
         "match_id": "2026-10-14-kashiwa-port-soccer",
         "event_id": "web-2026-10-14-kashiwa-port-soccer",
         "matchup": "柏レイソル vs ポートFC",
@@ -1793,7 +2125,7 @@
         ]
       },
       {
-        "rank": 4,
+        "rank": 8,
         "match_id": "2026-10-14-astralis-sashi-cs2",
         "event_id": "web-2026-10-14-astralis-sashi-cs2",
         "matchup": "Astralis vs Sashi",
@@ -1940,7 +2272,7 @@
         ]
       },
       {
-        "rank": 1,
+        "rank": 9,
         "match_id": "2026-10-14-flensburg-buzau-handball",
         "event_id": "web-2026-10-14-flensburg-buzau-handball",
         "matchup": "SG Flensburg-Handewitt vs HC Buzau",
@@ -2156,7 +2488,7 @@
         ]
       },
       {
-        "rank": 2,
+        "rank": 10,
         "match_id": "2026-10-13-newcastle-jets-gamba-soccer",
         "event_id": "web-2026-10-13-newcastle-jets-gamba-soccer",
         "matchup": "ガンバ大阪 vs ニューカッスル・ジェッツ",
@@ -2362,447 +2694,6 @@
         ]
       },
       {
-        "rank": 1,
-        "sport": "Dota 2",
-        "competition": "BLAST SLAM VIII — Group C UB Semi Final",
-        "start_jst": "2026-09-30T19:00:00+09:00",
-        "matchup": "Team Yandex vs MOUZ",
-        "favored": "Team Yandex",
-        "venue": "BLAST Arena Studios, Malta",
-        "format": "BO3 / LAN",
-        "status": "price_reject",
-        "gap_grade": "S-",
-        "price_grade": "D",
-        "odds": {
-          "min": 1.03,
-          "max": 1.06,
-          "book_examples": "Stake 1.03–1.06 / CyberScore 1.05",
-          "required_win_rate_pct": "94.34–97.09"
-        },
-        "estimated_win_probability_pct": "88–91",
-        "estimated_ev_pct": "-6.7〜-3.5（1.06基準）",
-        "ranking_rating": "外部ELOモデルでYandex 89%対MOUZ 11%。",
-        "h2h": "直近確認5シリーズはYandex 4勝1敗。スコア: 2-1, 2-0, 2-1, 0-1, 1-0（合計マップ7-3）。",
-        "recent_form": "Yandex直近5: NAVI 3-0, LGD 2-0, Aurora 2-1, 1win 2-0, NAVI 2-0＝5連勝。MOUZ直近5: LGD 0-2, Hokori 2-0, Nemesis 0-2, Pibbles 2-0, Yandex 1-2＝2勝3敗。",
-        "common_opponents": "LGD比較: YandexはLGDに2-0、MOUZはLGDに0-2。同一相手への直近結果はYandex優勢。",
-        "roster": "Yandex: watson / CHIRA_JUNIOR / ATF / Saksa / Malady。MOUZ: 423 / Supream / BOOM / mrls / MoOz。",
-        "early_tendency": "事前draft/vetoは未確定。LAN BO3のためMap1固定評価は行わない。",
-        "risk": "実力差は大きいが1.03–1.06は必要勝率が高すぎる。『強い=価格が良い』ではない。",
-        "conclusion": "格差そのものは本日最上位級。ただし勝者市場は価格NG。RMCでは格差候補として残し、正式VALUEからは除外。",
-        "sources": [
-          "https://blast.tv/dota/tournaments/blast-slam-viii/series/62e32ac8/yandex-mouz",
-          "https://bo3.gg/dota2/matches/team-yandex-vs-mouz-dota2-30-09-2026",
-          "https://stake.bet/sports/dota-2/international-2/blast-slam-viii-t1"
-        ],
-        "result_status": "final",
-        "result": "Team Yandex 2-0 MOUZ",
-        "result_winner": "Team Yandex",
-        "favored_result": "win",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://blast.tv/dota/tournaments/blast-slam-viii/series?view=results"
-      },
-      {
-        "rank": 2,
-        "sport": "VALORANT",
-        "competition": "VALORANT Champions 2026 — Group A Winners Match",
-        "start_jst": "2026-09-30T21:00:00+09:00",
-        "matchup": "100 Thieves vs FUT Esports",
-        "favored": "100 Thieves",
-        "venue": "Champions 2026",
-        "format": "BO3 / Patch 13.05",
-        "status": "candidate",
-        "gap_grade": "A",
-        "price_grade": "A-",
-        "odds": {
-          "min": 1.34,
-          "max": 1.4,
-          "book_examples": "Stake 1.38 / VLR 1.34–1.40",
-          "required_win_rate_pct": "71.43–74.63"
-        },
-        "estimated_win_probability_pct": "75–79",
-        "estimated_ev_pct": "+3.5〜+9.0（1.38基準）",
-        "ranking_rating": "Tips.GG rating: 100T #9 / FUT #18。直近30日勝率表示は100T 100%、FUT 50%。",
-        "h2h": "確認4シリーズ: 100T 3勝1敗。2024 Masters Shanghai 2-0、2023 Red Bull 0-1、LOCK//IN 2-1、2022 Red Bull 2-0。",
-        "recent_form": "100T: T1 2-0, LOUD 3-2, NRG 2-0, LEVIATÁN 2-0, LOUD 2-0＝5連勝。FUT: JDG 2-0, Team Liquid 0-3, Karmine Corp 0-2, BBL 2-1, Team Liquid 2-0＝3勝2敗。",
-        "common_opponents": "直近5の双方に完全一致する相手は確認できず。共通相手比較は未成立。",
-        "roster": "当日確定roster/Map vetoは試合直前更新待ち。Patch 13.05は確認済み。",
-        "early_tendency": "Map veto未確定のためMap1勝率の断定はしない。",
-        "risk": "FUTは直近でJDGを2-0。古いH2Hだけで過大評価しない。",
-        "conclusion": "本日の『格差＋価格』の両立候補。100T側は単なる低オッズではなく、直近連勝・H2H・rating差が同方向。",
-        "sources": [
-          "https://www.vlr.gg/753446/100-thieves-vs-fut-esports-valorant-champions-2026-winners-a",
-          "https://stake.com/ja/sports/valorant/international-13/valorant-champions-2026-t2/854993-100-thieves-fut-esports",
-          "https://tips.gg/matches/valorant/30-09-2026/100-thieves-vs-fut-esports/10-00/"
-        ],
-        "result_status": "final",
-        "result": "100 Thieves 2-0 FUT Esports",
-        "result_winner": "100 Thieves",
-        "favored_result": "win",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://valorantesports.com/en-GB"
-      },
-      {
-        "rank": 3,
-        "sport": "Dota 2",
-        "competition": "BLAST SLAM VIII — Group C UB Semi Final",
-        "start_jst": "2026-09-30T19:00:00+09:00",
-        "matchup": "BetBoom Team vs OG",
-        "favored": "BetBoom Team",
-        "venue": "BLAST Arena Studios, Malta",
-        "format": "BO3 / LAN",
-        "status": "watch",
-        "gap_grade": "A",
-        "price_grade": "C",
-        "odds": {
-          "min": 1.22,
-          "max": 1.25,
-          "book_examples": "Stake 1.22 / 21.com 1.25",
-          "required_win_rate_pct": "80.00–81.97"
-        },
-        "estimated_win_probability_pct": "78–82",
-        "estimated_ev_pct": "-4.8〜0.0（1.22基準）",
-        "ranking_rating": "外部ELOモデル79%対21%。D2PT長期データ: BetBoom 57.7% / OG 43.4%。",
-        "h2h": "BLAST公式の直近5はBetBoom 4勝1敗。2-0, 1-0, 2-0, 2-1, 0-2。",
-        "recent_form": "BetBoomはTI直近でSpiritに0-2、Nigmaに2-1、1winに2-1、PARIに1-2、Auroraに2-0。OGは直近でGamerLegion 0-2、HULIGANI 2-1、Resilience 0-2、Nigma 0-2、BetBoom 0-2。",
-        "common_opponents": "直近5内で完全な同一相手比較は限定的。直接H2Hの情報量を優先。",
-        "roster": "BetBoom: Kiritych / Save- / MieRo / swedenstrong / Kataomi。OG: Natsumi / Topson / SSS / OneJey / skem。",
-        "early_tendency": "draft未確定。D2PT長期値ではBetBoomのlane advantage・lead conversionがOGを上回る。",
-        "risk": "BetBoomはroster変更あり。1.22では必要勝率82%近く、価格余裕が薄い。",
-        "conclusion": "実力差A。ただし価格面はWATCH。1.25以上なら再評価、1.22以下なら見送り寄り。",
-        "sources": [
-          "https://blast.tv/dota/tournaments/blast-slam-viii/series/3640a19c/BetBoom-og",
-          "https://dota2protracker.com/teams/betboom-team-8255888/compare/og-2586976",
-          "https://cyberscore.live/en/matches/betboom-team-vs-og-179567/"
-        ],
-        "result_status": "final",
-        "result": "BetBoom Team 2-1 OG",
-        "result_winner": "BetBoom Team",
-        "favored_result": "win",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://www.offstage.gg/dota2/matches/betboom-team-vs-og-2026-09-30"
-      },
-      {
-        "rank": 4,
-        "sport": "Dota 2",
-        "competition": "BLAST SLAM VIII — Group A Winners Match",
-        "start_jst": "2026-09-30T22:00:00+09:00",
-        "matchup": "PARIVISION vs LGD Gaming",
-        "favored": "PARIVISION",
-        "venue": "BLAST Arena Studios, Malta",
-        "format": "BO3 / LAN / Patch 7.41f",
-        "status": "price_reject",
-        "gap_grade": "A+",
-        "price_grade": "D",
-        "odds": {
-          "min": 1.08,
-          "max": 1.11,
-          "book_examples": "EGW 1.08 / VBET 1.11",
-          "required_win_rate_pct": "90.09–92.59"
-        },
-        "estimated_win_probability_pct": "82–86",
-        "estimated_ev_pct": "-9.0〜-4.5（1.11基準）",
-        "ranking_rating": "EGamersWorld rating #6 vs #19。",
-        "h2h": "公式確認1回はLGD 1-0 PARIVISION（BLAST Slam VII）。ただし現LGDはThiolicor以外が大きく入れ替わっている。",
-        "recent_form": "PARI直近5は5勝、直近10は9勝。LGD直近5は3勝、直近10は6勝。PARIは初戦Level UPを2-0、LGDはXtremeを2-1。",
-        "common_opponents": "Team Yandex: PARIはTIで2-1勝利、LGDはWallachiaで0-2敗戦。MOUZ: PARI 2-0、LGD 2-0で互角。",
-        "roster": "PARI: Satanic / No[o]ne- / Noticed / 9Class / Dukalis。LGD: Wits / SumaiL- / Davai / Thiolicor / Sneyking。",
-        "early_tendency": "Patch 7.41f。veto/draftは未確定。LGDは新rosterで変動幅が大きい。",
-        "risk": "唯一のH2HはLGD勝ち。BO3で1.08–1.11は価格が極端。",
-        "conclusion": "純粋な格差候補A+だが、勝者オッズは価格NG。正式VALUEには入れない。",
-        "sources": [
-          "https://egamersworld.com/dota2/tip/a-kpz7LXO/parivision-vs-lgd-gaming-QvMo8Hc9D",
-          "https://blast.tv/dota/news/blast-slam-VIII-team-rosters",
-          "https://www.vbet.com/es/esports"
-        ],
-        "result_status": "final",
-        "result": "PARIVISION 2-0 LGD Gaming",
-        "result_winner": "PARIVISION",
-        "favored_result": "win",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://blast.tv/dota/tournaments/blast-slam-viii/series?view=results"
-      },
-      {
-        "rank": 5,
-        "sport": "Dota 2",
-        "competition": "BLAST SLAM VIII — Group B UB Final",
-        "start_jst": "2026-09-30T22:00:00+09:00",
-        "matchup": "Team Spirit vs 1win",
-        "favored": "Team Spirit",
-        "venue": "BLAST Arena Studios, Malta",
-        "format": "BO3 / LAN",
-        "status": "candidate",
-        "gap_grade": "A",
-        "price_grade": "B+",
-        "odds": {
-          "min": 1.38,
-          "max": 1.44,
-          "book_examples": "21.com 1.38 / VBET 1.44",
-          "required_win_rate_pct": "69.44–72.46"
-        },
-        "estimated_win_probability_pct": "72–77",
-        "estimated_ev_pct": "+3.7〜+10.9（1.44基準）",
-        "ranking_rating": "SpiritはTI 2026王者。1winは強い個人名を持つが新編成。",
-        "h2h": "BLAST公式の現カードではSpirit 2勝0敗。TI 2026 2-0、DreamLeague Season 22 2-0。",
-        "recent_form": "Spiritは9/29 Nemesisに2-1。1winは9/29 NAVIに2-1。両者とも初戦勝利。",
-        "common_opponents": "直近の完全一致比較は十分な同期間サンプルを確認できず。直接H2Hを優先。",
-        "roster": "Spirit: Yatoro / Larl / Batyuk / not me / rue。1win: Pure / bzm / 33 / Ari / Whitemon。",
-        "early_tendency": "当日Picks/Bansは未確定。",
-        "risk": "1winはNAVIを2-1で破っており、rosterの個人火力は高い。旧H2Hの比重を上げすぎない。",
-        "conclusion": "格差A＋価格は本日比較的まとも。1.38より1.44側を優先して評価。",
-        "sources": [
-          "https://blast.tv/dota/tournaments/blast-slam-viii/series/0f3c19a3/spirit-1win",
-          "https://blast.tv/dota/news/blast-slam-VIII-team-rosters",
-          "https://www.vbet.com/es/esports"
-        ],
-        "result_status": "final",
-        "result": "Team Spirit 2-0 1win",
-        "result_winner": "Team Spirit",
-        "favored_result": "win",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://dota2protracker.com/series/1148733"
-      },
-      {
-        "rank": 6,
-        "sport": "女子ホッケー",
-        "competition": "20th Asian Games Aichi-Nagoya 2026 — Women Semi Final",
-        "start_jst": "2026-09-30T19:00:00+09:00",
-        "matchup": "India Women vs Korea Women",
-        "favored": "India Women",
-        "venue": "Gifu Prefectural Green Stadium / Aichi-Nagoya, Japan",
-        "format": "60分 / Semifinal",
-        "status": "watch",
-        "gap_grade": "A-",
-        "price_grade": "未確認",
-        "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "対象4サイトの確定プレマッチ価格は今回未確認",
-          "required_win_rate_pct": "未確認"
-        },
-        "estimated_win_probability_pct": "72–78",
-        "estimated_ev_pct": "オッズ未確認のため未算定",
-        "ranking_rating": "FIH: Indiaは8位前後、Koreaは17位前後。直近大会前後の公式ランキングで約9位差。",
-        "h2h": "直近確認できたシニア公式対戦は2025 Women’s Asia Cup Super4sでIndia 4-2 Korea。過去全件は今回の公開検索で完全列挙できず、確認済み分のみ採用。",
-        "recent_form": "今大会Indiaは5戦5勝・66得点3失点（19-0 Uzbekistan, 17-1 Indonesia, 20-1 Thailand, 3-1 Japan, 7-0 Singapore）。Koreaは4勝1敗・20得点5失点（3-1 Chinese Taipei, 7-0 Kazakhstan, 8-0 Bangladesh, 0-3 China, 2-1 Malaysia）。",
-        "common_opponents": "Japan比較: Indiaは9/25 Asian GamesでJapanに3-1。Koreaは6/21 Nations CupでJapanと0-0、SO 5-4勝ち。大会条件は違うが、直近の共通相手に対する規定時間内容はIndia優勢。",
-        "roster": "大会登録メンバーは公式大会運用中。当日先発XI/欠場の最終確定は未確認。",
-        "early_tendency": "IndiaはJapan戦で前半2-0。大量得点した下位相手戦でも早い時間帯から主導。KoreaはChina戦0-3で上位相手への攻撃出力に課題。",
-        "risk": "KoreaはNations Cup 5位でJapanをSOで破る力があり、準決勝の1試合勝負。市場価格がないためVALUE判定はしない。",
-        "conclusion": "リアルスポーツの本日上位格差候補。大会成績・ランキング・共通相手はIndia優勢。ただしオッズ未確認なので正式VALUEではなくWATCH。",
-        "sources": [
-          "https://www.hockeyindia.org/schedule/matches/20th-asian-games-aichi-nagoya-2026--women-",
-          "https://www.fih.hockey/outdoor-rankings/india-women-hockey-rankings-35",
-          "https://www.fih.hockey/outdoor-rankings/korea-women-hockey-rankings-42",
-          "https://www.hockeyindia.org/schedule/matches/fih-hockey-women---s-nations-cup-2026",
-          "https://www.hockeyindia.org/news/all-round-effort-powers-india-to-4-2-win-against-korea-in-their-first-super4s-match-at-womens-asia-cup-2025"
-        ],
-        "result_status": "final",
-        "result": "India Women 2-0 Korea Women",
-        "result_winner": "India Women",
-        "favored_result": "win",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://khelnow.com/asian-games/day-11-september-30-live-asian-games-202609"
-      },
-      {
-        "rank": 7,
-        "sport": "VALORANT",
-        "competition": "VALORANT Champions 2026 — Group B Winners Match",
-        "start_jst": "2026-09-30T18:00:00+09:00",
-        "matchup": "Team Vitality vs LOUD",
-        "favored": "LOUD",
-        "venue": "VALORANT Champions 2026",
-        "format": "BO3 / Patch 13.05",
-        "status": "candidate",
-        "gap_grade": "B+",
-        "price_grade": "B+",
-        "odds": {
-          "min": 1.63,
-          "max": 1.72,
-          "book_examples": "VLR 1.63–1.67 / Stake 1.68",
-          "required_win_rate_pct": "58.14–61.35"
-        },
-        "estimated_win_probability_pct": "62–66",
-        "estimated_ev_pct": "+4.2〜+10.9（1.68基準）",
-        "ranking_rating": "Tips.GG rating: Vitality #20 / LOUD #6。",
-        "h2h": "公式確認できる過去対戦は0。",
-        "recent_form": "Vitality: Global 2-1, Fire Flux 1-2, Enterprise 1-2, FUT 2-1, Gentle Mates 2-1。LOUD: EDG 2-0, 100T 2-3, NRG 3-2, G2 2-0, MIBR 2-0。",
-        "common_opponents": "直近5で完全一致する共通相手は確認できず。",
-        "roster": "当日Map veto未確定。Patch 13.05確認済み。",
-        "early_tendency": "LOUDはChampions初戦EDGを2-0、ラウンド26-13。VitalityはGlobal戦2-1、ラウンド35-34で僅差。",
-        "risk": "格差はS級ではなくB+。開始直前カードでオッズ変動リスクあり。",
-        "conclusion": "大格差ではないが、rating・直近の勝ち方・価格を合わせると本日のVALUE候補。",
-        "sources": [
-          "https://www.vlr.gg/753451/team-vitality-vs-loud-valorant-champions-2026-winners-b/",
-          "https://stake.com/sports/valorant/international-13",
-          "https://tips.gg/matches/valorant/30-09-2026/team-vitality-vs-loud/01-00/"
-        ],
-        "result_status": "final",
-        "result": "Team Vitality 2-0 LOUD",
-        "result_winner": "Team Vitality",
-        "favored_result": "loss",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://www.vlr.gg/753451/team-vitality-vs-loud-valorant-champions-2026-winners-b/"
-      },
-      {
-        "rank": 8,
-        "sport": "テニス",
-        "competition": "ATP 500 China Open Beijing — 1回戦",
-        "start_jst": "2026-09-30T20:00:00+09:00",
-        "matchup": "Nuno Borges vs Novak Djokovic",
-        "favored": "Novak Djokovic",
-        "venue": "Beijing / hard",
-        "format": "Best of 3 sets",
-        "status": "watch",
-        "gap_grade": "B+",
-        "price_grade": "B",
-        "odds": {
-          "min": 1.44,
-          "max": 1.44,
-          "book_examples": "Betfair 1.44 / AgentBets best -225相当約1.44",
-          "required_win_rate_pct": "69.44"
-        },
-        "estimated_win_probability_pct": "69–73",
-        "estimated_ev_pct": "-0.6〜+5.1",
-        "ranking_rating": "ATP ranking: Djokovic #11 / Borges #49。",
-        "h2h": "1回。2025 AthensでDjokovic 7-6(1), 6-4 Borges＝2-0。",
-        "recent_form": "両者とも直近10は6勝4敗。Borges直近5は3勝2敗、Djokovic直近5は2勝3敗。BorgesはCincinnatiでRublevとCerundoloに勝利。",
-        "common_opponents": "直近10の取得範囲で、比較に十分な同一相手サンプルは確認できず。",
-        "roster": "個人競技。DjokovicはUS Open時に肩・背中の問題があったが、9/29本人は北京で身体の状態が良いとコメント。",
-        "early_tendency": "Djokovicは北京ATP500で過去29勝0敗。直近健康状態には不確実性。",
-        "risk": "Borgesのハード成績が悪くなく、Djokovicは39歳で直近2大会初戦敗退。S級格差ではない。",
-        "conclusion": "ランキング/H2HはDjokovicだが『圧倒的』ではない。1.44ならWATCH。",
-        "sources": [
-          "https://www.reuters.com/sports/tennis/djokovic-says-body-feeling-good-ahead-china-open-comeback-2026-09-29/",
-          "https://www.tennis.com/tournaments/china-open-atp/matches/n-borges-vs-n-djokovic-2026-09-30",
-          "https://agentbets.ai/odds/atp-china-open/novak-djokovic-vs-nuno-borges/"
-        ],
-        "result_status": "final",
-        "result": "Novak Djokovic 2-0 Nuno Borges（6-3, 7-6(2)）",
-        "result_winner": "Novak Djokovic",
-        "favored_result": "win",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://www.reuters.com/sports/tennis/djokovic-beats-borges-stay-perfect-china-open-2026-09-30/"
-      },
-      {
-        "rank": 9,
-        "sport": "Dota 2",
-        "competition": "BLAST SLAM VIII — Group B LB Semi Final",
-        "start_jst": "2026-10-01T01:00:00+09:00",
-        "matchup": "Team Nemesis vs Natus Vincere",
-        "favored": "Natus Vincere",
-        "venue": "BLAST Arena Studios, Malta",
-        "format": "BO3 / LAN",
-        "status": "candidate",
-        "gap_grade": "A",
-        "price_grade": "B",
-        "odds": {
-          "min": 1.24,
-          "max": 1.27,
-          "book_examples": "21.com 1.24 / VBET 1.27 / Betfair 1.25",
-          "required_win_rate_pct": "78.74–80.65"
-        },
-        "estimated_win_probability_pct": "78–82",
-        "estimated_ev_pct": "-0.9〜+4.1（1.27基準）",
-        "ranking_rating": "Tips.GG rating: Nemesis #138 / NAVI #11。",
-        "h2h": "直近公式1回: 2026/9/25 PGL Wallachia S9でNAVI 2-1 Nemesis。",
-        "recent_form": "9/29はNemesisがSpiritに1-2、NAVIが1winに1-2。両者敗者側へ。",
-        "common_opponents": "Xtreme Gaming比較: Nemesisは0-2敗戦、NAVIは2-0勝利（直近Wallachia）。同一相手比較はNAVI優勢。",
-        "roster": "Nemesis: JaCkky / Ken / Jabz / Jhocam / NARMAN。NAVI: gotthejuice / Niku / pma / Daze / Riddys。",
-        "early_tendency": "Picks/Bans未確定。",
-        "risk": "5日前の直接対決も2-1で接戦。NAVIも前日に1winへ敗れている。",
-        "conclusion": "rating・直接対決・共通相手の3軸がNAVI側。価格は1.27なら候補、1.24以下は余裕小。",
-        "sources": [
-          "https://blast.tv/dota/tournaments/blast-slam-viii/series/bf5707b9/nemesis-navi",
-          "https://liquipedia.net/dota2/Match%3AID_xHpm1txH7L_R01-M005",
-          "https://www.betfair.com/apuestas/es/esports/dota-2-blast-slam/team-nemesis-natus-vincere/e-36133595"
-        ],
-        "result_status": "final",
-        "result": "Team Nemesis 2-1 Natus Vincere",
-        "result_winner": "Team Nemesis",
-        "favored_result": "loss",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://blast.tv/dota/tournaments/blast-slam-viii/series?view=results"
-      },
-      {
-        "rank": 10,
-        "sport": "Dota 2",
-        "competition": "BLAST SLAM VIII — Group A LB Semi Final",
-        "start_jst": "2026-10-01T01:00:00+09:00",
-        "matchup": "Level UP vs Xtreme Gaming",
-        "favored": "Xtreme Gaming",
-        "venue": "BLAST Arena Studios, Malta",
-        "format": "BO3 / LAN",
-        "status": "price_reject",
-        "gap_grade": "A+",
-        "price_grade": "C-",
-        "odds": {
-          "min": 1.09,
-          "max": 1.13,
-          "book_examples": "EGW 1.09–1.099 / VBET 1.13",
-          "required_win_rate_pct": "88.50–91.74"
-        },
-        "estimated_win_probability_pct": "86–90",
-        "estimated_ev_pct": "-2.8〜+1.7（1.13基準）",
-        "ranking_rating": "EGW rating Xtreme #5 / Level UP #63。Tips.GG別集計ではXtreme #12 / Level UP #159。",
-        "h2h": "過去公式対戦は確認できず。",
-        "recent_form": "Level UPは直近5で1勝4敗、Xtremeは直近8で5勝3敗の集計。9/29はLevel UP 0-2 PARI、Xtreme 1-2 LGD。",
-        "common_opponents": "直近取得範囲で比較可能な完全一致相手の信頼できる対照が不足。推測で補完しない。",
-        "roster": "Level UP: WoE / Ainkrad / bb3px / queezy / Htrd。Xtreme: Ame / Setsuまたは当日登録mid / Zeal / XinQ / BoBoKa。mid表記に情報源差があり当日確定待ち。",
-        "early_tendency": "veto/draft未確定。",
-        "risk": "Xtremeも直近2連敗表示。roster情報源にmid表記差があるため、S確定ではなくA+。",
-        "conclusion": "格差は大きいが1.09付近は短すぎる。1.13でも価格余裕は小さい。",
-        "sources": [
-          "https://sv.egamersworld.com/dota2/match/a-kpz7LXO/level-up-vs-xtreme-gaming-TrDsj4P5az",
-          "https://blast.tv/dota/news/blast-slam-VIII-team-rosters",
-          "https://tips.gg/archive/level-up-dota2-vs-xtreme-gaming-dota2/"
-        ],
-        "result_status": "final",
-        "result": "Level UP 0-2 Xtreme Gaming",
-        "result_winner": "Xtreme Gaming",
-        "favored_result": "win",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://blast.tv/dota/tournaments/blast-slam-viii/series?view=results"
-      },
-      {
-        "rank": 11,
-        "sport": "サッカー女子",
-        "competition": "UEFA Women's Champions League 2026/27 — League Phase",
-        "start_jst": "2026-10-01T01:45:00+09:00",
-        "matchup": "Roma Women vs FC Barcelona Women",
-        "favored": "FC Barcelona Women",
-        "venue": "Stadio Tre Fontane, Rome",
-        "format": "90分 1X2",
-        "status": "watch",
-        "gap_grade": "S",
-        "price_grade": "C-",
-        "odds": {
-          "min": 1.05,
-          "max": 1.07,
-          "book_examples": "bet365 1.07 / Interwetten 1.05（9/27更新値）",
-          "required_win_rate_pct": "93.46–95.24"
-        },
-        "estimated_win_probability_pct": "91–94",
-        "estimated_ev_pct": "-2.6〜+0.6（1.07基準）",
-        "ranking_rating": "クラブ世界ランキングの同一基準値は今回未採用。成績/H2H/攻撃力で評価。",
-        "h2h": "確認3試合はBarcelona 3勝0敗。直近2025/10/15 Roma 0-4 Barcelona。",
-        "recent_form": "Roma直近5: 4勝1分、平均2.0得点。Barcelona直近5: 5勝0敗、2-0,5-2,6-0,4-2,4-0で平均4.2得点。",
-        "common_opponents": "今回確認した直近5の双方に同一相手なし。",
-        "roster": "先発は試合45–60分前確定。事前予想lineupはあるが正式扱いしない。",
-        "early_tendency": "UWCL今季: Roma 0-0 OH Leuven、Barcelona 5-2 Paris FC。攻撃出力差が大きい。",
-        "risk": "Roma自身も4勝1分で好調。1.05–1.07は必要勝率が高すぎる。",
-        "conclusion": "純粋格差S。ただし勝者市場は価格面でWATCH/見送り寄り。より良い価格が出ない限りVALUE扱いしない。",
-        "sources": [
-          "https://www.fcbarcelona.com/en/football/womens-football/schedule",
-          "https://www.apwin.com/predictions/roma-women-vs-barcelona-women-prediction-uefa-womens-champions-league-30-09-2026/"
-        ],
-        "result_status": "final",
-        "result": "Roma Women 0-6 FC Barcelona Women",
-        "result_winner": "FC Barcelona Women",
-        "favored_result": "win",
-        "result_verified_at": "2026-10-03T21:00:00+09:00",
-        "result_source": "https://www.uefa.com/womenschampionsleague/news/02a9-21848dfb62c3-1313bc23426c-1000--2026-27-women-s-champions-league-all-the-league-phase-fixtu/"
-      },
-      {
         "sport": "女子サッカー",
         "competition": "Barclays Women's Super League 2026/27",
         "start_jst": "2026-10-04T22:00:00+09:00",
@@ -2950,7 +2841,7 @@
             "text": "両軍欠場者あり。戦力層はChelsea優位。"
           }
         },
-        "rank": 1,
+        "rank": 11,
         "archived_at": "2026-10-06T00:22:13.588+09:00",
         "archive_reason": "過去日付の分析カードを本日の一覧から移動",
         "favored_result": "win",
@@ -3041,7 +2932,7 @@
             "text": "最終メンバーは試合直前確認。"
           }
         },
-        "rank": 2,
+        "rank": 12,
         "archived_at": "2026-10-06T00:22:13.588+09:00",
         "archive_reason": "過去日付の分析カードを本日の一覧から移動",
         "favored_result": "win",
@@ -3117,7 +3008,7 @@
             "text": "ロスター公開情報を確認。"
           }
         },
-        "rank": 3,
+        "rank": 13,
         "archived_at": "2026-10-06T00:22:13.588+09:00",
         "archive_reason": "過去日付の分析カードを本日の一覧から移動",
         "favored_result": "win",
@@ -3307,7 +3198,7 @@
             "text": "Bo5。マップ差とストレート負け頻度を重視。"
           }
         },
-        "rank": 4,
+        "rank": 14,
         "archived_at": "2026-10-06T00:22:13.588+09:00",
         "archive_reason": "過去日付の分析カードを本日の一覧から移動",
         "favored_result": "win",
@@ -3505,7 +3396,7 @@
             "text": "Bo5。短期の1マップ事故よりシリーズ全体のフォーム差を重視。"
           }
         },
-        "rank": 5,
+        "rank": 15,
         "archived_at": "2026-10-06T00:22:13.588+09:00",
         "archive_reason": "過去日付の分析カードを本日の一覧から移動",
         "favored_result": "win",
@@ -3598,79 +3489,13 @@
             "text": "Bo5。シリーズ全体のゲーム差と共通相手内容を重視。"
           }
         },
-        "rank": 6,
+        "rank": 16,
         "archived_at": "2026-10-06T00:22:13.588+09:00",
         "archive_reason": "過去日付の分析カードを本日の一覧から移動",
         "favored_result": "win",
         "result": "Wolves勝利（ユーザー報告・スコア未記録）",
         "match_id": "2026-10-05-wolves-edgm",
         "match_status": "final"
-      },
-      {
-        "sport": "女子テニス",
-        "competition": "WTA China Open 2026 — Round 3",
-        "start_jst": "2026-10-05T12:00:00+09:00",
-        "matchup": "Coco Gauff vs Xinran Sun",
-        "favored": "Coco Gauff",
-        "venue": "Beijing, China",
-        "format": "Best of 3 sets",
-        "status": "formal",
-        "gap_grade": "A+",
-        "price_grade": "C",
-        "odds": {
-          "min": 1.03,
-          "max": 1.03,
-          "book_examples": "Gauff 1.03",
-          "required_win_rate_pct": "97.09"
-        },
-        "estimated_win_probability_pct": "95.0",
-        "estimated_ev_pct": "-2.15",
-        "ranking_rating": "Gauff世界4位。Sunは大幅下位。",
-        "h2h": "初対戦。H2Hなし。",
-        "recent_form": "Gauff 2026年46-14、ハード31-8。Sun 12-7、ハード5-1だが対戦レベル差が大きい。",
-        "common_opponents": "直近60日で十分な同一相手比較データ不足。",
-        "roster": "個人競技。直近RET/MTOは大きな警戒情報未確認。",
-        "risk": "H2Hなし、Sunが北京で好調、1.03は必要勝率97.09%で価格が非常に短い。",
-        "conclusion": "正式推奨。$100。ただし価格妙味は低い。",
-        "sources": [
-          "https://www.tennis.com/tournaments/china-open-wta/matches/c-gauff-vs-x-sun-2026-10-05",
-          "https://www.betfair.com/exchange/plus/en/tennis/wta-beijing-2026/c-gauff-v-xin-sun-betting-36147445"
-        ],
-        "analysis_detail": {
-          "summary": "ランキング・ハード実績はGauff大幅優位。H2Hなしのためテニス厳格基準ではSに上げない。",
-          "h2h": {
-            "summary": "初対戦。",
-            "items": []
-          },
-          "recent_form": {
-            "side_a": {
-              "label": "Coco Gauff",
-              "summary": "2026年46勝14敗、ハード31勝8敗。",
-              "items": []
-            },
-            "side_b": {
-              "label": "Xinran Sun",
-              "summary": "2026年12勝7敗、ハード5勝1敗。",
-              "items": []
-            }
-          },
-          "common_opponent_comparison": {
-            "summary": "直近60日では十分な比較不足。",
-            "items": []
-          },
-          "availability": {
-            "text": "直前の負傷・棄権情報は再確認対象。"
-          },
-          "sport_specific": {
-            "text": "テニス厳格基準。H2Hなしと価格の短さを減点。"
-          }
-        },
-        "rank": 7,
-        "archived_at": "2026-10-06T00:22:13.588+09:00",
-        "archive_reason": "過去日付の分析カードを本日の一覧から移動",
-        "favored_result": "win",
-        "result": "○ Coco Gauff勝利（ユーザー報告・公式スコア未確認）",
-        "result_updated_at": "2026-10-06T11:40:03+09:00"
       },
       {
         "sport": "女子テニス",
@@ -3731,7 +3556,7 @@
             "text": "テニス厳格基準でH2H・サーフェス・直近・疲労を加点。"
           }
         },
-        "rank": 8,
+        "rank": 17,
         "archived_at": "2026-10-06T00:22:13.588+09:00",
         "archive_reason": "過去日付の分析カードを本日の一覧から移動",
         "favored_result": "win",
@@ -3798,7 +3623,7 @@
             "text": "Bo3。地域強度と現行ロスター、Game1傾向を重視。"
           }
         },
-        "rank": 9,
+        "rank": 18,
         "archived_at": "2026-10-06T00:22:13.588+09:00",
         "archive_reason": "過去日付の分析カードを本日の一覧から移動",
         "favored_result": "win",
@@ -3865,7 +3690,7 @@
             "text": "Bo3。地域強度はJDG、直近フォームは減点。"
           }
         },
-        "rank": 10,
+        "rank": 19,
         "archived_at": "2026-10-06T00:22:13.588+09:00",
         "archive_reason": "過去日付の分析カードを本日の一覧から移動",
         "favored_result": "win",
@@ -3993,7 +3818,7 @@
             "text": "国立競技場の日本ホーム。90分同点なら延長なしでPK。セットプレーとローテーションに注意。"
           }
         },
-        "rank": 11,
+        "rank": 20,
         "archived_at": "2026-10-06T00:22:13.588+09:00",
         "archive_reason": "過去日付の分析カードを本日の一覧から移動",
         "favored_result": "win",
@@ -4145,7 +3970,7 @@
             "text": "○ 0–3（VARREL勝利）。概算利益 +3.00USD（推定オッズ1.03・100USD基準）。実購入価格・実利益ではありません。"
           }
         },
-        "rank": 13,
+        "rank": 21,
         "archived_at": "2026-10-13T13:08:28+09:00",
         "archive_reason": "終了・勝利確定。正式成績・週次・概算収支へ反映。",
         "favored_result": "win",
@@ -4161,121 +3986,6 @@
         "match_id": "2026-10-05-uwinks-varrel",
         "profit_usd": 3,
         "profit_status": "概算利益 +3.00USD（推定オッズ1.03・100USD基準）"
-      },
-      {
-        "matchup": "Grenada vs Bonaire",
-        "favored": "Grenada",
-        "sport": "サッカー",
-        "competition": "Concacaf Nations League B — Group C",
-        "start_jst": "2026-10-06T09:00:00+09:00",
-        "status": "formal",
-        "gap_grade": "未判定",
-        "price_grade": "未確認",
-        "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "採用オッズ未登録",
-          "required_win_rate_pct": null
-        },
-        "estimated_win_probability_pct": null,
-        "estimated_ev_pct": null,
-        "conclusion": "× Grenada DNB不的中（ユーザー報告・公式スコア未確認）。引分返金ではなく負けとして集計。",
-        "analysis_detail": {
-          "summary": "× Grenada DNB不的中（ユーザー報告・公式スコア未確認）。引分返金ではなく負けとして集計。"
-        },
-        "sources": [
-          "https://drealfmgrenada.com/index.php/2026/09/16/grenada-forced-to-move-concacaf-nations-league-home-fixtures/"
-        ],
-        "added_at": "2026-10-06T00:22:13.588+09:00",
-        "market": "dnb",
-        "selection_label": "Grenada DNB（引分返金）",
-        "venue": "Hasely Crawford Stadium, Trinidad and Tobago",
-        "risk": "開催地移転で本来のホーム優位なし。勝率・DNB価格の評価未完了。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-        "rank": 5,
-        "favored_result": "loss",
-        "result": "× Grenada DNB不的中（ユーザー報告・公式スコア未確認）",
-        "result_updated_at": "2026-10-06T11:42:27+09:00",
-        "archived_at": "2026-10-06T11:42:27+09:00",
-        "archive_reason": "終了済み・結果反映済み"
-      },
-      {
-        "matchup": "KT Wiz vs Kiwoom Heroes",
-        "favored": "KT Wiz",
-        "sport": "野球",
-        "competition": "KBO",
-        "start_jst": "2026-10-06T18:30:00+09:00",
-        "status": "formal",
-        "gap_grade": "未判定",
-        "price_grade": "未確認",
-        "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "採用オッズ未登録",
-          "required_win_rate_pct": null
-        },
-        "estimated_win_probability_pct": null,
-        "estimated_ev_pct": null,
-        "conclusion": "○ KT Wiz勝利。100USD基準で勝敗集計に反映。購入オッズ未登録のため利益額は未計算。",
-        "analysis_detail": {
-          "summary": "KT Wiz勝利方向。先発・打撃・今季H2Hで優勢。ただし直近H2Hは1–10敗戦。最終打順・救援陣の稼働・最新オッズは未確認。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。"
-        },
-        "sources": [
-          "https://mykbostats.com/games/14019-KT-vs-Kiwoom-20261006"
-        ],
-        "added_at": "2026-10-06T00:22:13.588+09:00",
-        "market": "match_winner",
-        "selection_label": "KT Wiz勝利",
-        "venue": "Gocheok Sky Dome（Kiwoomホーム）",
-        "h2h": "今季KT 10勝4敗1分。",
-        "ranking_rating": "KT 86勝49敗5分・1位。Kiwoom 49勝89敗4分・10位。",
-        "risk": "先発変更・最終打順・終盤戦の起用。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-        "rank": 2,
-        "favored_result": "win",
-        "result": "○ KT Wiz勝利（ユーザー報告・公式スコア未確認）",
-        "result_status": "final",
-        "result_updated_at": "2026-10-06T21:57:43+09:00",
-        "archived_at": "2026-10-06T21:57:43+09:00",
-        "archive_reason": "終了済み・ユーザー指示で勝利反映"
-      },
-      {
-        "matchup": "Sinja Kraus vs Nikola Bartůňková",
-        "favored": "Nikola Bartůňková",
-        "sport": "女子テニス",
-        "competition": "WTA China Open 2026 — Round of 16",
-        "start_jst": null,
-        "status": "formal",
-        "gap_grade": "未判定",
-        "price_grade": "未確認",
-        "odds": {
-          "min": null,
-          "max": null,
-          "book_examples": "採用オッズ未登録",
-          "required_win_rate_pct": null
-        },
-        "estimated_win_probability_pct": null,
-        "estimated_ev_pct": null,
-        "conclusion": "○ Nikola Bartůňková勝利。100USD基準で勝敗集計に反映。購入オッズ未登録のため利益額は未計算。",
-        "analysis_detail": {
-          "summary": "ユーザー指定候補：Bartůňková勝利。10月6日LOTUSのMuchová–Osaka戦終了後。開始時刻は固定せず、テニス除外ルールの今回の明示例外として登録。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。"
-        },
-        "sources": [
-          "https://wtafiles.wtatennis.com/pdf/draws/2026/1020/OP.pdf"
-        ],
-        "added_at": "2026-10-06T00:22:13.588+09:00",
-        "market": "match_winner",
-        "selection_label": "Nikola Bartůňková勝利",
-        "start_date_jst": "2026-10-06",
-        "venue": "Beijing / LOTUS（10月6日、前試合終了後）",
-        "format": "Best of 3 sets",
-        "exception_to_sport_exclusion": true,
-        "risk": "正確な開始時刻・直近10戦比較・最新オッズの確認未完了。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-        "rank": 5,
-        "favored_result": "win",
-        "result": "○ Nikola Bartůňková勝利（ユーザー報告・公式スコア未確認）",
-        "result_status": "final",
-        "result_updated_at": "2026-10-06T21:57:43+09:00",
-        "archived_at": "2026-10-06T21:57:43+09:00",
-        "archive_reason": "終了済み・ユーザー指示で勝利反映"
       },
       {
         "sport": "男子ハンドボール",
@@ -4512,7 +4222,7 @@
             "text": "事後確認：Sporting 51–23 Vitória、前半24–15、後半27–8。公式記事で確認。全フィールド選手が得点。結果は上記の事前集計に含めない。"
           }
         },
-        "rank": 1,
+        "rank": 22,
         "match_id": "2026-10-06-sporting-vitoria-handball",
         "favored_result": "win",
         "result": "○ Sporting CP vs Vitória SC: 51–23",
@@ -4567,7 +4277,7 @@
         "scope": "outside_24h",
         "recent_form": "SolaryはBarça 3-0、T1 Academy 2-3、DN SOOPers Challengers 3-0、Movistar KOI Fénix 3-1。",
         "risk": "移動・休養・ロスターと価格評価未完了。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-        "rank": 2,
+        "rank": 23,
         "match_id": "2026-10-07-solary-valerion",
         "favored_result": "win",
         "result": "○ Solary vs Valerion: 3–0",
@@ -4618,7 +4328,7 @@
         "selection_label": "Minas勝利",
         "venue": "Arena UniBH, Belo Horizonte",
         "risk": "順位確定後の消化試合。混成メンバー起用予定。 【注釈】勝利方向の評価と購入価値は別です。最新オッズ・必要勝率・期待値が未確認の項目は、利益が見込めると確認できた状態ではありません。",
-        "rank": 3,
+        "rank": 24,
         "match_id": "2026-10-06-minas-jf",
         "favored_result": "loss",
         "result": "× Itambé Minas vs JF Vôlei: 2–3",
@@ -4641,7 +4351,7 @@
         "profit_status": "敗戦・100USD基準"
       },
       {
-        "rank": 4,
+        "rank": 25,
         "sport": "Counter-Strike 2",
         "competition": "ESL Pro League Season 24 — Swiss Round 4",
         "start_jst": "2026-10-06T21:00:00+09:00",
@@ -4881,7 +4591,7 @@
         "profit_status": "敗戦・100USD基準"
       },
       {
-        "rank": 5,
+        "rank": 26,
         "sport": "女子バレーボール",
         "competition": "トルコ女子スーパーカップ 2026",
         "start_jst": "2026-10-07T00:00:00+09:00",
@@ -5107,7 +4817,7 @@
         "risk": "ロスター・パッチ変化、価格未確認。直近10全明細と平均マップ差はデータ不足。 正式採用は購入実行の記録ではありません。100USD基準。購入オッズ・必要勝率・推定勝率・EVは未確認。",
         "event_id": "web-kcb-skillcamp-20261008",
         "match_id": "2026-10-08-kcb-skillcamp",
-        "rank": 1,
+        "rank": 27,
         "favored_result": "win",
         "result": "○ Karmine Corp Blue 3-0 Skillcamp",
         "result_status": "final",
@@ -5255,7 +4965,7 @@
         "home_side": "side_a",
         "event_id": "web-partizan-veszprem-20261008",
         "match_id": "2026-10-08-partizan-veszprem",
-        "rank": 2,
+        "rank": 28,
         "favored_result": "win",
         "result": "○ Partizan 26-37 Veszprém",
         "result_status": "final",
@@ -5335,7 +5045,7 @@
         "stake_usd_reference": 100,
         "profit_usd": 13,
         "profit_status": "ユーザー申告の概算オッズによる参考収支",
-        "rank": 1,
+        "rank": 29,
         "event_id": "web-2026-10-09-berlin-porto",
         "favored_result": "win",
         "result": "○ Füchse Berlin勝利 40–32",
@@ -5409,7 +5119,7 @@
         "stake_usd_reference": 100,
         "profit_usd": 25,
         "profit_status": "ユーザー申告の概算オッズによる参考収支",
-        "rank": 2,
+        "rank": 30,
         "event_id": "web-2026-10-08-jdt-svay-rieng",
         "favored_result": "win",
         "result": "○ Johor Darul Ta'zim勝利 6–0",
@@ -5518,7 +5228,7 @@
         "stake_usd_reference": 100,
         "profit_usd": 12,
         "profit_status": "ユーザー申告の概算オッズによる参考収支",
-        "rank": 3,
+        "rank": 31,
         "event_id": "web-2026-10-09-barca-dinamo",
         "favored_result": "win",
         "result": "○ Barça勝利 34–27",
@@ -5534,7 +5244,7 @@
         "settlement_note": "10/9申告・購入伝票未照合。各100USD基準。"
       },
       {
-        "rank": 1,
+        "rank": 32,
         "matchup": "DEWA United Esports vs NAVI",
         "favored": "NAVI",
         "sport": "MLBB",
@@ -5828,7 +5538,7 @@
         }
       },
       {
-        "rank": 2,
+        "rank": 33,
         "matchup": "Marquette vs Georgetown",
         "favored": "Marquette",
         "sport": "女子バレーボール",
@@ -6116,7 +5826,7 @@
         "stake_usd_reference": 100,
         "profit_usd": 12,
         "profit_status": "勝利・概算利益（推定オッズ、100USD基準）",
-        "rank": 2,
+        "rank": 34,
         "match_id": "2026-10-11-psg-toulouse-handball",
         "event_id": "web-2026-10-11-psg-toulouse-handball",
         "matchup": "PSG vs Toulouse",
@@ -6466,7 +6176,7 @@
           "https://www.telefootball.net/SG/Suwon-Bluewings-Ansan-Greeners-2026-10-11-674502.html",
           "https://www.fourfourtwo.co.kr/news/articleView.html?idxno=98969"
         ],
-        "rank": 5,
+        "rank": 35,
         "result_status": "final",
         "result": "4–1（Suwon Samsung Bluewings勝利）",
         "result_winner": "Suwon Samsung Bluewings",
@@ -6498,7 +6208,7 @@
         "stake_usd_reference": 100,
         "profit_usd": 10,
         "profit_status": "概算利益 +10.00USD（推定オッズ1.10・100USD基準）",
-        "rank": 1,
+        "rank": 36,
         "match_id": "2026-10-11-aurora-twisted-ph",
         "event_id": "web-2026-10-11-aurora-twisted-ph",
         "matchup": "Aurora Gaming PH vs Twisted Minds PH",
@@ -6862,7 +6572,7 @@
           "https://scores24.live/es/handball/m-10-10-2026-villa-de-aranda-barcelona",
           "https://cadenaser.com/castillayleon/2026/05/22/el-villa-de-aranda-logra-la-permanencia-en-asobal-pese-a-caer-en-el-ultimo-segundo-ante-puente-genil-radio-aranda/"
         ],
-        "rank": 2,
+        "rank": 37,
         "estimated_settlement_odds": {
           "odds": 1.02,
           "estimated": true,
@@ -7134,7 +6844,7 @@
           "https://www.lnh.fr/la-ligue/news/2026-06-07/caen-accede-pour-premiere-fois-liqui-moly-starligue",
           "https://www.lnh.fr/lnh/news/saint-raphael-nantes-match-guichets-fermes"
         ],
-        "rank": 3,
+        "rank": 38,
         "estimated_settlement_odds": {
           "odds": 1.04,
           "estimated": true,
@@ -7433,7 +7143,7 @@
             "text": "○ 0–3（VakıfBank勝利）。概算利益 +5.00USD（推定オッズ1.05・100USD基準）。実購入価格・実利益ではありません。"
           }
         },
-        "rank": 4,
+        "rank": 39,
         "estimated_settlement_odds": {
           "odds": 1.05,
           "estimated": true,
@@ -7453,7 +7163,7 @@
         ]
       },
       {
-        "rank": 3,
+        "rank": 40,
         "match_id": "2026-10-12-jovic-pohankova-wta",
         "event_id": "web-2026-10-12-jovic-pohankova-wta",
         "matchup": "Iva Jovic vs Mia Pohankova",
@@ -7695,7 +7405,7 @@
         }
       },
       {
-        "rank": 1,
+        "rank": 41,
         "match_id": "2026-10-12-nip-betclic-cs2",
         "event_id": "web-2026-10-12-nip-betclic-cs2",
         "matchup": "Ninjas in Pyjamas vs Betclic",
@@ -7964,7 +7674,7 @@
         ]
       },
       {
-        "rank": 2,
+        "rank": 42,
         "match_id": "2026-10-12-bnk-fearx-jdg-lol",
         "event_id": "web-2026-10-12-bnk-fearx-jdg-lol",
         "matchup": "BNK FEARX vs JD Gaming",
@@ -8181,7 +7891,7 @@
         ]
       },
       {
-        "rank": 1,
+        "rank": 43,
         "match_id": "2026-10-17-betboom-legacy-cs2",
         "event_id": "web-2026-10-17-betboom-legacy-cs2",
         "matchup": "BETBOOM vs Legacy",
@@ -8192,13 +7902,13 @@
         "start_jst": "2026-10-17T02:00:00+09:00",
         "venue": "Malta・Thunderpick World Championship2026 Group B decider、10/17 02:00JST、BO3/LAN",
         "format": "BO3 LAN/Veto前",
-        "status": "formal",
+        "status": "finished",
         "gap_grade": "事前分析Legacy方向・結果不的中",
         "price_grade": "未判定",
         "market": "match_winner",
         "stake_usd_reference": 100,
-        "profit_usd": -100,
-        "profit_status": "100USD基準：払戻0／純損益−100USD。",
+        "profit_usd": null,
+        "profit_status": "仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算",
         "odds": {
           "min": null,
           "max": null,
@@ -8427,10 +8137,12 @@
           "market": {
             "text": "Legacy BO3シリーズ勝者。アシスタントのBETBOOM暫定登録をユーザー訂正により修正。オッズ未確認。"
           },
-          "post_match": "ユーザー訂正：採用はLegacy勝利。アシスタントのBETBOOM暫定選択は登録誤り。元の固定値は監査用に保持し表示・精算を訂正。結果Legacy1–2 BETBOOM、不的中、100USD基準の純損益−100USD。"
+          "post_match": {
+            "text": "BETBOOM 2–1 Legacy／仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算"
+          }
         },
-        "result": "× Legacy 1–2 BETBOOM",
-        "favored_result": "loss",
+        "result": "BETBOOM 2–1 Legacy",
+        "favored_result": "win",
         "result_status": "final",
         "match_status": "final",
         "result_updated_at": "2026-10-17T16:15:13.701Z",
@@ -8441,7 +8153,7 @@
         ]
       },
       {
-        "rank": 1,
+        "rank": 44,
         "match_id": "2026-10-17-kashiwa-nagoya-soccer",
         "event_id": "web-2026-10-17-kashiwa-nagoya-soccer",
         "matchup": "柏レイソル vs 名古屋グランパス",
@@ -8452,13 +8164,13 @@
         "start_jst": "2026-10-17T19:00:00+09:00",
         "venue": "2026-10-17 19:00 JST 三協フロンテア柏スタジアム、柏ホーム。双方10/14に杯戦あり中2日。",
         "format": "90分DNB引分返金",
-        "status": "formal",
+        "status": "finished",
         "gap_grade": "A−候補（長期H2H逆）",
         "price_grade": "未判定",
         "market": "dnb",
         "stake_usd_reference": 100,
         "profit_usd": -100,
-        "profit_status": "100USD基準：払戻0／純損益−100USD。",
+        "profit_status": "仮想100USD基準：-100 USD",
         "odds": {
           "min": null,
           "max": null,
@@ -8716,17 +8428,19 @@
           "market": {
             "text": "ユーザーが柏DNBを明示。取得オッズ未確認、カジ旅/遊雅堂/bet365個別掲載確認不能。"
           },
-          "post_match": "柏敗戦：柏DNBは不的中。100USD基準の損益−100USD。 2026-10-18 01:12–01:13 JSTユーザー報告。最終スコア未確認。"
+          "post_match": {
+            "text": "柏敗戦：柏DNBは不的中（ユーザー報告。最終スコア未確認）／仮想100USD基準：-100 USD"
+          }
         },
         "match_status": "live",
         "result_status": "pending",
-        "result": "柏敗戦：柏DNBは不的中（ユーザー報告、スコア未確認）",
+        "result": "柏敗戦：柏DNBは不的中（ユーザー報告。最終スコア未確認）",
         "favored_result": "loss",
         "result_updated_at": "2026-10-17T16:15:13.701Z",
         "archive_reason": "ユーザー結果報告により履歴へ移動。"
       },
       {
-        "rank": 2,
+        "rank": 45,
         "match_id": "2026-10-17-man-city-ipswich-soccer",
         "event_id": "web-2026-10-17-man-city-ipswich-soccer",
         "matchup": "Manchester City vs Ipswich Town",
@@ -8737,13 +8451,13 @@
         "start_jst": "2026-10-17T23:00:00+09:00",
         "venue": "Etihad Stadium／Manchester Cityホーム",
         "format": "90分勝者（引き分けは不的中）",
-        "status": "formal",
+        "status": "finished",
         "gap_grade": "A候補",
         "price_grade": "未判定",
         "market": "match_1x2",
         "stake_usd_reference": 100,
         "profit_usd": null,
-        "profit_status": "的中。オッズ未登録のため利益額未算出。",
+        "profit_status": "仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算",
         "odds": {
           "min": null,
           "max": null,
@@ -9068,15 +8782,17 @@
           "market": {
             "text": "City90分勝利。引分は不的中。DNBではない。購入オッズ未確認。"
           },
-          "post_match": "Manchester City勝利：的中。オッズ未登録のため損益未算出。 2026-10-18 01:12–01:13 JSTユーザー報告。最終スコア未確認。"
+          "post_match": {
+            "text": "Manchester City勝利：的中（ユーザー報告。最終スコア未確認）／仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算"
+          }
         },
         "favored_result": "win",
-        "result": "Manchester City勝利：的中（ユーザー報告、スコア未確認）",
+        "result": "Manchester City勝利：的中（ユーザー報告。最終スコア未確認）",
         "result_updated_at": "2026-10-17T16:15:13.701Z",
         "archive_reason": "ユーザー結果報告により履歴へ移動。"
       },
       {
-        "rank": 3,
+        "rank": 46,
         "match_id": "2026-10-18-falcons-betboom-cs2",
         "event_id": "web-2026-10-18-falcons-betboom-cs2",
         "matchup": "Falcons vs BETBOOM",
@@ -9087,13 +8803,13 @@
         "start_jst": "2026-10-18T02:00:00+09:00",
         "venue": "BLAST Studios, Malta／中立",
         "format": "BO3／LAN",
-        "status": "final",
+        "status": "finished",
         "gap_grade": "A候補（H2H反証あり）",
         "price_grade": "未判定",
         "market": "match_winner",
         "stake_usd_reference": 100,
         "profit_usd": -100,
-        "profit_status": "×不的中・仮想100USD→払戻0USD／損失−100USD",
+        "profit_status": "仮想100USD基準：-100 USD",
         "odds": {
           "min": null,
           "max": null,
@@ -9315,14 +9031,18 @@
           },
           "market": {
             "text": "Falcons BO3シリーズ勝者。購入オッズ未確認、100USD基準。"
+          },
+          "post_match": {
+            "text": "Falcons 1-2 BETBOOM（Anubis13-5、Dust2 14-16、Mirage7-13）／仮想100USD基準：-100 USD"
           }
         },
-        "result": "× Falcons 1-2 BETBOOM（Anubis13-5、Dust2 14-16、Mirage7-13）",
+        "result": "Falcons 1-2 BETBOOM（Anubis13-5、Dust2 14-16、Mirage7-13）",
         "payout_usd": 0,
-        "settled_at": "2026-10-18T13:41:00+09:00"
+        "settled_at": "2026-10-18T13:41:00+09:00",
+        "favored_result": "loss"
       },
       {
-        "rank": 4,
+        "rank": 47,
         "match_id": "2026-10-18-vegas-pittsburgh-nhl",
         "event_id": "web-2026-10-18-vegas-pittsburgh-nhl",
         "matchup": "Vegas Golden Knights vs Pittsburgh Penguins",
@@ -9333,13 +9053,13 @@
         "start_jst": "2026-10-18T11:00:00+09:00",
         "venue": "T-Mobile Arena／Vegasホーム",
         "format": "試合勝者（延長・SO込み）",
-        "status": "final",
+        "status": "finished",
         "gap_grade": "A−候補（ホーム・休養優位）",
         "price_grade": "未判定",
         "market": "match_winner",
         "stake_usd_reference": 100,
-        "profit_usd": 44,
-        "profit_status": "○的中・ユーザー申告1.44倍・仮想100USD→払戻144USD／利益＋44USD（参考）",
+        "profit_usd": 44.0,
+        "profit_status": "仮想100USD基準：44.0 USD",
         "odds": {
           "min": 1.44,
           "max": 1.44,
@@ -9594,14 +9314,18 @@
           },
           "market": {
             "text": "Vegas勝者（延長・SO込み）。購入価格未確認。100USD基準、実購入扱いにしない。"
+          },
+          "post_match": {
+            "text": "Vegas Golden Knights 6-2 Pittsburgh Penguins／仮想100USD基準：44.0 USD"
           }
         },
-        "result": "○ Vegas Golden Knights 6-2 Pittsburgh Penguins",
+        "result": "Vegas Golden Knights 6-2 Pittsburgh Penguins",
         "payout_usd": 144,
-        "settled_at": "2026-10-18T13:41:00+09:00"
+        "settled_at": "2026-10-18T13:41:00+09:00",
+        "favored_result": "win"
       },
       {
-        "rank": 4,
+        "rank": 48,
         "match_id": "2026-10-18-salzburg-altach-soccer",
         "event_id": "web-2026-10-18-salzburg-altach-soccer",
         "matchup": "FC Red Bull Salzburg vs SCR Altach",
@@ -9640,6 +9364,927 @@
         },
         "result": "誤採用：ユーザー訂正により試合前に無効。勝敗結果ではない。",
         "settled_at": "2026-10-18T13:59:02+09:00"
+      },
+      {
+        "rank": 49,
+        "match_id": "2026-10-19-rams-cardinals-nfl",
+        "event_id": "web-2026-10-19-rams-cardinals-nfl",
+        "matchup": "Los Angeles Rams vs Arizona Cardinals",
+        "favored": "Los Angeles Rams",
+        "selection_label": "Los Angeles Rams",
+        "sport": "NFL",
+        "competition": "NFL 2026 Regular Season Week 6",
+        "start_jst": "2026-10-19T05:05:00+09:00",
+        "venue": "SoFi Stadium／Ramsホーム",
+        "format": "試合勝者（延長込み）",
+        "status": "finished",
+        "gap_grade": "暫定（再評価必要）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": -100,
+        "profit_status": "仮想100USD基準：-100 USD",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "購入価格未確認"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-18T13:41:00+09:00",
+        "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
+        "sources": [
+          "https://www.therams.com/news/know-before-you-go-rams-vs-arizona-cardinals-sofi-stadium-week-6",
+          "https://nfl.jp/teams/la/"
+        ],
+        "conclusion": "Rams 2勝3敗、Cardinals 1勝4敗。対戦前に選手欠場・実際の市場オッズ確認が必要。ユーザー正式指定によりRams勝者を採用。",
+        "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
+        "analysis_detail": {
+          "summary": "Rams 2勝3敗、Cardinals 1勝4敗。対戦前に選手欠場・実際の市場オッズ確認が必要。ユーザー正式指定によりRams勝者を採用。",
+          "post_match": {
+            "text": "Los Angeles Rams 16-18 Arizona Cardinals／仮想100USD基準：-100 USD"
+          }
+        },
+        "favored_result": "loss",
+        "result": "Los Angeles Rams 16-18 Arizona Cardinals"
+      },
+      {
+        "rank": 50,
+        "match_id": "2026-10-19-real-madrid-sevilla-soccer",
+        "event_id": "web-2026-10-19-real-madrid-sevilla-soccer",
+        "matchup": "Real Madrid vs Sevilla FC",
+        "favored": "Real Madrid",
+        "selection_label": "Real Madrid",
+        "sport": "サッカー",
+        "competition": "La Liga 2026/27 第9節",
+        "start_jst": "2026-10-19T04:00:00+09:00",
+        "venue": "Santiago Bernabéu／Real Madridホーム",
+        "format": "90分勝者",
+        "status": "finished",
+        "gap_grade": "暫定（再評価必要）",
+        "price_grade": "未判定",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "購入価格未確認"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-18T13:41:00+09:00",
+        "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
+        "sources": [
+          "https://www.realmadrid.com/en-US/news/football/first-team/latest-news/el-calendario-del-real-madrid-en-octubre-24-09-2026",
+          "https://www.reuters.com/sports/soccer/real-madrids-vinicius-miss-clasico-after-four-game-suspension-2026-10-14/"
+        ],
+        "conclusion": "10/18現地21:00 CEST開始。Real Madrid勝利（90分）を正式採用。Vinícius出場停止、ほか欠場情報に注意。H2H・直近10・共通対戦相手は今回未再検証。",
+        "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
+        "analysis_detail": {
+          "summary": "10/18現地21:00 CEST開始。Real Madrid勝利（90分）を正式採用。Vinícius出場停止、ほか欠場情報に注意。H2H・直近10・共通対戦相手は今回未再検証。",
+          "post_match": {
+            "text": "Real Madrid 4-1 Sevilla FC／仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算"
+          }
+        },
+        "favored_result": "win",
+        "result": "Real Madrid 4-1 Sevilla FC"
+      },
+      {
+        "rank": 51,
+        "match_id": "2026-10-18-tokyo-u-yamagata-basketball",
+        "event_id": "web-2026-10-18-tokyo-u-yamagata-basketball",
+        "matchup": "Tokyo United BC vs Yamagata Wyverns",
+        "favored": "Tokyo United BC",
+        "selection_label": "Tokyo United BC",
+        "sport": "バスケットボール",
+        "competition": "B.LEAGUE ONE 2026/27",
+        "start_jst": "2026-10-18T17:05:00+09:00",
+        "venue": "有明アリーナ／東京Uホーム",
+        "format": "試合勝者（延長込み）",
+        "status": "finished",
+        "gap_grade": "A−候補（H2H不在）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "購入価格未確認"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-18T13:41:00+09:00",
+        "analysis_reviewed_at": "2026-10-18T13:41:00+09:00",
+        "sources": [
+          "https://www.bleague.jp/en/game_detail/?ScheduleKey=507245&tab=1",
+          "https://tubc.tokyo/game_lp_20261018_20261019_1/"
+        ],
+        "conclusion": "東京U 5勝2敗、山形 1勝6敗。H2Hなし。共通相手は前季奈良・過去岩手のみで条件差が大きい。ユーザー正式指定により東京U勝者を採用。",
+        "risk": "正式採用指定。ただし勝率・市場価格・直近メンバー等未検証。",
+        "analysis_detail": {
+          "summary": "東京U 5勝2敗、山形 1勝6敗。H2Hなし。共通相手は前季奈良・過去岩手のみで条件差が大きい。ユーザー正式指定により東京U勝者を採用。",
+          "post_match": {
+            "text": "Tokyo United BC 82-63 Yamagata Wyverns／仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算"
+          }
+        },
+        "favored_result": "win",
+        "result": "Tokyo United BC 82-63 Yamagata Wyverns"
+      },
+      {
+        "rank": 52,
+        "match_id": "2026-10-18-evos-alter-ego-mlbb",
+        "event_id": "web-2026-10-18-evos-alter-ego-mlbb",
+        "matchup": "EVOS vs Alter Ego",
+        "favored": "Alter Ego",
+        "selection_label": "Alter Ego",
+        "sport": "MLBB",
+        "competition": "MPL Indonesia Season 18 Regular Season Week 9",
+        "start_jst": "2026-10-18T16:00:00+09:00",
+        "venue": "MPL Indonesiaステージ（会場詳細未確認）",
+        "format": "BO3・シリーズ勝者",
+        "status": "finished",
+        "gap_grade": "A−候補（要直近10再照合）",
+        "price_grade": "未判定",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": -100,
+        "profit_status": "仮想100USD基準：-100 USD",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "購入オッズ未確認"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-18T13:59:02+09:00",
+        "analysis_reviewed_at": "2026-10-18T13:59:02+09:00",
+        "sources": [
+          "https://id-mpl.com/s18/en/schedule",
+          "https://id-mpl.com/s18/ticket"
+        ],
+        "conclusion": "Alter Ego勝利で正式採用。Week9、10月18日16:00 JST、BO3。ユーザー明示訂正による採用。H2H／共通相手は直前の分析を参照、直近10試合全件の最新再確認未了。",
+        "risk": "試合オッズ・ラインアップ未確認。直近10試合と共通5相手の最新データはこの訂正では未再照合。",
+        "analysis_detail": {
+          "summary": "ユーザー訂正に従いEVOS vs Alter EgoのAlter Ego勝利を正式採用。旧ザルツブルク取引はvoid精算、成績への加算なし。",
+          "post_match": {
+            "text": "EVOS 2-1 Alter Ego／仮想100USD基準：-100 USD"
+          }
+        },
+        "favored_result": "loss",
+        "result": "EVOS 2-1 Alter Ego"
+      },
+      {
+        "match_id": "2026-10-22-real-madrid-leipzig-soccer",
+        "matchup": "Real Madrid vs RB Leipzig",
+        "sport": "サッカー",
+        "competition": "UEFA Champions League 2026/27 League Phase",
+        "start_jst": "2026-10-22T04:00:00+09:00",
+        "favored": "Real Madrid",
+        "status": "finished",
+        "gap_grade": "ユーザー正式採用・格差判定保留",
+        "conclusion": "ユーザー指定で正式成績追跡。H2H・直近10・共通相手の完全照合未了。現時点オッズ未確認。実購入なし。",
+        "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+        "analysis_detail": {
+          "summary": "ユーザー指定で正式成績追跡。H2H・直近10・共通相手の完全照合未了。現時点オッズ未確認。実購入なし。",
+          "post_match": {
+            "text": "Real Madrid 4-1 RB Leipzig／仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算"
+          }
+        },
+        "sources": [
+          "https://www.uol.com.br/esporte/ultimas-noticias/2026/10/21/jogo-do-real-madrid-hoje-pela-liga-dos-campeoes-que-horas-comeca-e-onde-assistir.ghtm",
+          "https://www.realmadrid.com/en-US/news/football/first-team/reports/cronica-real-madrid-leipzig-j3-champions-21-10-2026"
+        ],
+        "favored_result": "win",
+        "result": "Real Madrid 4-1 RB Leipzig",
+        "profit_usd": null,
+        "profit_status": "仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算",
+        "rank": 53
+      },
+      {
+        "match_id": "2026-10-22-aalborg-celje-handball",
+        "matchup": "Aalborg Håndbold vs RK Celje Pivovarna Laško",
+        "sport": "ハンドボール",
+        "competition": "EHF Champions League Men 2026/27 Group Phase",
+        "start_jst": "2026-10-22T03:45:00+09:00",
+        "favored": "Aalborg Håndbold",
+        "status": "finished",
+        "gap_grade": "ユーザー正式採用・格差判定保留",
+        "conclusion": "ユーザー指定で正式成績追跡。H2H・直近10・共通相手の完全照合未了。現時点オッズ未確認。実購入なし。",
+        "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+        "analysis_detail": {
+          "summary": "ユーザー指定で正式成績追跡。H2H・直近10・共通相手の完全照合未了。現時点オッズ未確認。実購入なし。",
+          "post_match": {
+            "text": "Aalborg Håndbold 34-30 RK Celje Pivovarna Laško／仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算"
+          }
+        },
+        "sources": [
+          "https://ehfcl.eurohandball.com/men/2026-27/matches/details/202711020101029/AalborgH%C3%A5ndbold-RKCeljePivovarnaLa%C5%A1ko/",
+          "https://odds.am/en/match/41719186/aalborg-celje/",
+          "https://aalborghaandbold.dk/sikker-sejr-over-celje/"
+        ],
+        "favored_result": "win",
+        "result": "Aalborg Håndbold 34-30 RK Celje Pivovarna Laško",
+        "profit_usd": null,
+        "profit_status": "仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算",
+        "rank": 54
+      },
+      {
+        "match_id": "2026-10-22-yandex-gamerlegion-dota2",
+        "matchup": "Team Yandex vs GamerLegion",
+        "sport": "Dota 2",
+        "competition": "PARI Universe 2026 Group A BO3",
+        "start_jst": "2026-10-22T17:00:00+09:00",
+        "favored": "Team Yandex",
+        "status": "finished",
+        "gap_grade": "ユーザー正式採用・格差判定保留",
+        "conclusion": "ユーザー指定で正式成績追跡。H2H・直近10・共通相手の完全照合未了。現時点オッズ未確認。実購入なし。",
+        "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+        "analysis_detail": {
+          "summary": "ユーザー指定で正式成績追跡。H2H・直近10・共通相手の完全照合未了。現時点オッズ未確認。実購入なし。",
+          "post_match": {
+            "text": "Team Yandex 2-0 GamerLegion／仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算"
+          }
+        },
+        "sources": [
+          "https://rdy.gg/en/dota2/tournaments/117530",
+          "https://esport.vision/news/spirit-vs-parivision-groups-revealed-for-pari-universe"
+        ],
+        "favored_result": "win",
+        "result": "Team Yandex 2-0 GamerLegion",
+        "profit_usd": null,
+        "profit_status": "仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算",
+        "rank": 55
+      },
+      {
+        "match_id": "2026-10-23-parivision-astra-dota2",
+        "matchup": "PARIVISION vs Astra Invicta",
+        "sport": "Dota 2",
+        "competition": "PARI Universe 2026 Group B BO3",
+        "start_jst": "2026-10-23T02:00:00+09:00",
+        "favored": "PARIVISION",
+        "status": "finished",
+        "gap_grade": "ユーザー正式指定（要検証）",
+        "conclusion": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。",
+        "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+        "analysis_detail": {
+          "summary": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。",
+          "post_match": {
+            "text": "PARIVISION 2-0 Astra Invicta／仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算"
+          }
+        },
+        "sources": [
+          "https://hawk.live/dota-2/matches/pari-universe-group-stage/parivision-vs-astra-invicta"
+        ],
+        "favored_result": "win",
+        "result": "PARIVISION 2-0 Astra Invicta",
+        "profit_usd": null,
+        "profit_status": "仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算",
+        "rank": 56
+      },
+      {
+        "match_id": "2026-10-23-kolstad-magdeburg-handball",
+        "matchup": "Kolstad Håndball vs SC Magdeburg",
+        "sport": "ハンドボール",
+        "competition": "EHF Champions League 2026/27",
+        "start_jst": "2026-10-23T03:45:00+09:00",
+        "favored": "SC Magdeburg",
+        "status": "finished",
+        "gap_grade": "ユーザー正式指定（要検証）",
+        "conclusion": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。",
+        "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+        "analysis_detail": {
+          "summary": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。",
+          "post_match": {
+            "text": "Kolstad 32-35 SC Magdeburg／仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算"
+          }
+        },
+        "sources": [
+          "https://www.scm-handball.de/match-center/",
+          "https://ehfel.eurohandball.com/news/en/five-main-round-tickets-still-on-the-line-as-round-5-begins/"
+        ],
+        "favored_result": "win",
+        "result": "Kolstad 32-35 SC Magdeburg",
+        "profit_usd": null,
+        "profit_status": "仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算",
+        "rank": 57
+      },
+      {
+        "match_id": "2026-10-23-barca-montpellier-handball",
+        "matchup": "Barça vs Montpellier Handball",
+        "sport": "ハンドボール",
+        "competition": "EHF Champions League 2026/27",
+        "start_jst": "2026-10-23T03:45:00+09:00",
+        "favored": "Barça",
+        "status": "finished",
+        "gap_grade": "ユーザー正式指定（要検証）",
+        "conclusion": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。",
+        "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+        "analysis_detail": {
+          "summary": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。",
+          "post_match": {
+            "text": "Barça 40-34 Montpellier／仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算"
+          }
+        },
+        "sources": [
+          "https://ehfeuro.eurohandball.com/men/2026/news/en/five-main-round-tickets-still-on-the-line-as-round-5-begins/"
+        ],
+        "favored_result": "win",
+        "result": "Barça 40-34 Montpellier",
+        "profit_usd": null,
+        "profit_status": "仮想100USD基準：勝利確定／取得オッズ未登録のため利益額未計算",
+        "rank": 58
+      },
+      {
+        "rank": 59,
+        "match_id": "2026-10-24-barca-cuenca-handball",
+        "event_id": "web-2026-10-24-barca-cuenca-handball",
+        "matchup": "Barça vs REBI Cuenca",
+        "favored": "Barça",
+        "selection_label": "Barça",
+        "sport": "ハンドボール",
+        "competition": "Liga NEXUS ENERGÍA ASOBAL",
+        "start_jst": "2026-10-24T02:00:00+09:00",
+        "venue": "ホーム",
+        "format": "60分勝者（引分不的中）",
+        "status": "finished",
+        "gap_grade": "A",
+        "price_grade": "オッズ未確認",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "勝利確定／仮想100USD。取得オッズ未登録のため利益額未計算。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "取得オッズ未登録。参考市場価格を精算には使わない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-23T18:15:18+09:00",
+        "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+        "sources": [
+          "https://www.fcbarcelona.com/en/handball/first-team/schedule",
+          "https://www.fcbarcelona.es/es/balonmano/primer-equipo/resultados",
+          "https://www.handballstats247.com/h2h/barcelona-cuenca-1053-1116/",
+          "https://resultadosbalonmano.isquad.es/equipo.php?id=1031914&id_equipo=201443&id_superficie=1"
+        ],
+        "conclusion": "バルサ直近9勝1敗、クエンカ2勝2分6敗。リーグH2H直近10勝。共通5相手で得失点差優位。ただし4組は旧シーズンを含む。",
+        "risk": "双方が10/22に試合をしており連戦。大差の点数まで確約しない。",
+        "analysis_detail": {
+          "summary": "バルサ直近9勝1敗、クエンカ2勝2分6敗。リーグH2H直近10勝。共通5相手で得失点差優位。ただし4組は旧シーズンを含む。",
+          "availability": {
+            "text": "双方が10/22に試合をしており連戦。大差の点数まで確約しない。"
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Barça",
+              "items": [
+                {
+                  "date": "2026/10/22",
+                  "opponent": "Montpellier",
+                  "result": "W 40-34"
+                },
+                {
+                  "date": "2026/10/18",
+                  "opponent": "Cangas",
+                  "result": "W 37-28"
+                },
+                {
+                  "date": "2026/10/15",
+                  "opponent": "Dinamo Bucuresti",
+                  "result": "W 36-22"
+                },
+                {
+                  "date": "2026/10/11",
+                  "opponent": "Villa Aranda",
+                  "result": "W 40-33"
+                },
+                {
+                  "date": "2026/10/08",
+                  "opponent": "Dinamo Bucuresti",
+                  "result": "W 34-27"
+                },
+                {
+                  "date": "2026/10/03",
+                  "opponent": "Alicante",
+                  "result": "W 46-31"
+                },
+                {
+                  "date": "2026/10/01",
+                  "opponent": "Veszprem",
+                  "result": "L 33-42"
+                },
+                {
+                  "date": "2026/09/29",
+                  "opponent": "Derb Sultan",
+                  "result": "W 51-15"
+                },
+                {
+                  "date": "2026/09/27",
+                  "opponent": "Zamalek",
+                  "result": "W 39-29"
+                },
+                {
+                  "date": "2026/09/25",
+                  "opponent": "Pinheiros",
+                  "result": "W 44-33"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Cuenca",
+              "items": [
+                {
+                  "date": "2026/10/22",
+                  "opponent": "Granollers",
+                  "result": "D 36-36"
+                },
+                {
+                  "date": "2026/10/17",
+                  "opponent": "Torrelavega",
+                  "result": "D 31-31"
+                },
+                {
+                  "date": "2026/10/09",
+                  "opponent": "Logrono",
+                  "result": "L 32-36"
+                },
+                {
+                  "date": "2026/09/26",
+                  "opponent": "Sevilla",
+                  "result": "L 36-37"
+                },
+                {
+                  "date": "2026/09/20",
+                  "opponent": "Ademar Leon",
+                  "result": "W 35-32"
+                },
+                {
+                  "date": "2026/09/12",
+                  "opponent": "Valladolid",
+                  "result": "L 26-28"
+                },
+                {
+                  "date": "2026/06/05",
+                  "opponent": "Nava",
+                  "result": "L 27-30"
+                },
+                {
+                  "date": "2026/05/31",
+                  "opponent": "Bidasoa",
+                  "result": "L 30-36"
+                },
+                {
+                  "date": "2026/05/22",
+                  "opponent": "Guadalajara",
+                  "result": "W 34-33"
+                },
+                {
+                  "date": "2026/05/08",
+                  "opponent": "Granollers",
+                  "result": "L 30-31"
+                }
+              ]
+            }
+          },
+          "h2h": {
+            "summary": "リーグ戦直近10回はBarça全勝。スコアはBarça側が左。",
+            "items": [
+              {
+                "date": "2026/04/15",
+                "label": "Barça vs Cuenca",
+                "result": "52-23"
+              },
+              {
+                "date": "2025/12/06",
+                "label": "Barça vs Cuenca",
+                "result": "42-22"
+              },
+              {
+                "date": "2025/05/30",
+                "label": "Barça vs Cuenca",
+                "result": "48-35"
+              },
+              {
+                "date": "2024/12/20",
+                "label": "Barça vs Cuenca",
+                "result": "35-26"
+              },
+              {
+                "date": "2024/02/10",
+                "label": "Barça vs Cuenca",
+                "result": "36-21"
+              },
+              {
+                "date": "2023/09/16",
+                "label": "Barça vs Cuenca",
+                "result": "46-18"
+              },
+              {
+                "date": "2023/02/11",
+                "label": "Barça vs Cuenca",
+                "result": "41-26"
+              },
+              {
+                "date": "2022/09/10",
+                "label": "Barça vs Cuenca",
+                "result": "38-26"
+              },
+              {
+                "date": "2022/02/26",
+                "label": "Barça vs Cuenca",
+                "result": "29-26"
+              },
+              {
+                "date": "2021/10/02",
+                "label": "Barça vs Cuenca",
+                "result": "38-20"
+              }
+            ]
+          },
+          "common_opponent_comparison": {
+            "summary": "同じ相手との比較。開催時期・大会形式の違いに注意。古い記録を現在の実力と同一視しない。",
+            "items": [
+              {
+                "opponent": "Logrono",
+                "side_a": {
+                  "date": "2026/09/11",
+                  "result": "48-32"
+                },
+                "side_b": {
+                  "date": "2026/10/09",
+                  "result": "32-36"
+                },
+                "comparison": "Barça優位／今季"
+              },
+              {
+                "opponent": "Cangas",
+                "side_a": {
+                  "date": "2026/10/18",
+                  "result": "37-28"
+                },
+                "side_b": {
+                  "date": "2026/04/25",
+                  "result": "24-28"
+                },
+                "comparison": "Barça優位／旧シーズン比較"
+              },
+              {
+                "opponent": "Villa Aranda",
+                "side_a": {
+                  "date": "2026/10/11",
+                  "result": "40-33"
+                },
+                "side_b": {
+                  "date": "2026/04/12",
+                  "result": "23-33"
+                },
+                "comparison": "Barça優位／旧シーズン比較"
+              },
+              {
+                "opponent": "Puente Genil",
+                "side_a": {
+                  "date": "2026/09/20",
+                  "result": "39-27"
+                },
+                "side_b": {
+                  "date": "2026/02/27",
+                  "result": "29-27"
+                },
+                "comparison": "Barça優位／旧シーズン比較"
+              },
+              {
+                "opponent": "Nava",
+                "side_a": {
+                  "date": "2026/06/06",
+                  "result": "38-27"
+                },
+                "side_b": {
+                  "date": "2026/06/05",
+                  "result": "27-30"
+                },
+                "comparison": "Barça優位／前季カップ"
+              }
+            ]
+          },
+          "post_match": {
+            "text": "Barça 45-27 REBI Cuenca／勝利確定／仮想100USD。取得オッズ未登録のため利益額未計算。"
+          }
+        },
+        "favored_result": "win",
+        "result": "Barça 45-27 REBI Cuenca",
+        "result_sources": [
+          "https://asobal.es/estadisticas/35405652/"
+        ]
+      },
+      {
+        "rank": 60,
+        "match_id": "2026-10-23-tonga-lebanon-rugby",
+        "event_id": "web-2026-10-23-tonga-lebanon-rugby",
+        "matchup": "Tonga vs Lebanon",
+        "favored": "Tonga",
+        "selection_label": "Tonga",
+        "sport": "ラグビーリーグ",
+        "competition": "男子ラグビーリーグW杯2026",
+        "start_jst": "2026-10-23T18:05:00+09:00",
+        "venue": "中立／オンライン",
+        "format": "80分勝者（引分不的中）",
+        "status": "finished",
+        "gap_grade": "A−",
+        "price_grade": "オッズ未確認",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "勝利確定／仮想100USD。取得オッズ未登録のため利益額未計算。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "取得オッズ未登録。参考市場価格を精算には使わない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-23T18:15:18+09:00",
+        "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+        "sources": [
+          "https://leagueunlimited.com/news/44872-tonga-v-lebanon-2026-rlwc-mens-week-2-preview/",
+          "https://www.rugbyleagueproject.org/teams/tonga/results.html",
+          "https://www.rugbyleagueproject.org/teams/lebanon/results.html"
+        ],
+        "conclusion": "トンガは今大会イングランドに30-12勝利、レバノンはPNGに18-42敗戦。直近勝率は相手水準の差が大きく単純比較不可。",
+        "risk": "イサイア・カトア欠場、フリゼル休養。直接対決は2017年24-22の1件で古い。採用依頼は開始予定時刻後のため試合前予測として扱わない。",
+        "analysis_detail": {
+          "summary": "トンガは今大会イングランドに30-12勝利、レバノンはPNGに18-42敗戦。直近勝率は相手水準の差が大きく単純比較不可。",
+          "availability": {
+            "text": "イサイア・カトア欠場、フリゼル休養。直接対決は2017年24-22の1件で古い。採用依頼は開始予定時刻後のため試合前予測として扱わない。"
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Tonga",
+              "items": [
+                {
+                  "date": "2026/10/17",
+                  "opponent": "England",
+                  "result": "W 30-12"
+                },
+                {
+                  "date": "2025/11/02",
+                  "opponent": "New Zealand",
+                  "result": "L 14-40"
+                },
+                {
+                  "date": "2025/10/26",
+                  "opponent": "Samoa",
+                  "result": "L 6-34"
+                },
+                {
+                  "date": "2024/11/10",
+                  "opponent": "Australia",
+                  "result": "L 14-20"
+                },
+                {
+                  "date": "2024/11/02",
+                  "opponent": "New Zealand",
+                  "result": "W 25-24"
+                },
+                {
+                  "date": "2024/10/18",
+                  "opponent": "Australia",
+                  "result": "L 0-18"
+                },
+                {
+                  "date": "2023/11/04",
+                  "opponent": "England",
+                  "result": "L 4-26"
+                },
+                {
+                  "date": "2023/10/28",
+                  "opponent": "England",
+                  "result": "L 4-14"
+                },
+                {
+                  "date": "2023/10/22",
+                  "opponent": "England",
+                  "result": "L 18-22"
+                },
+                {
+                  "date": "2022/11/06",
+                  "opponent": "Samoa",
+                  "result": "L 18-20"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Lebanon",
+              "items": [
+                {
+                  "date": "2026/10/17",
+                  "opponent": "PNG",
+                  "result": "L 18-42"
+                },
+                {
+                  "date": "2025/10/04",
+                  "opponent": "Italy",
+                  "result": "L 14-16"
+                },
+                {
+                  "date": "2022/11/04",
+                  "opponent": "Australia",
+                  "result": "L 4-48"
+                },
+                {
+                  "date": "2022/10/30",
+                  "opponent": "Jamaica",
+                  "result": "W 74-12"
+                },
+                {
+                  "date": "2022/10/23",
+                  "opponent": "Ireland",
+                  "result": "W 32-14"
+                },
+                {
+                  "date": "2022/10/16",
+                  "opponent": "New Zealand",
+                  "result": "L 12-34"
+                },
+                {
+                  "date": "2022/10/08",
+                  "opponent": "Wales",
+                  "result": "W 38-22"
+                },
+                {
+                  "date": "2022/06/22",
+                  "opponent": "Malta",
+                  "result": "W 30-14"
+                },
+                {
+                  "date": "2019/09/29",
+                  "opponent": "Fiji",
+                  "result": "W 42-16"
+                },
+                {
+                  "date": "2019/06/22",
+                  "opponent": "Fiji",
+                  "result": "L 14-58"
+                }
+              ]
+            }
+          },
+          "h2h": {
+            "summary": "確認1試合。トンガ側が左。",
+            "items": [
+              {
+                "date": "2017/11/18",
+                "label": "Tonga vs Lebanon",
+                "result": "24-22"
+              }
+            ]
+          },
+          "common_opponent_comparison": {
+            "summary": "同じ相手との比較。開催時期・大会形式の違いに注意。古い記録を現在の実力と同一視しない。",
+            "items": [
+              {
+                "opponent": "Australia",
+                "side_a": {
+                  "date": "2024/11/10",
+                  "result": "14-20"
+                },
+                "side_b": {
+                  "date": "2022/11/04",
+                  "result": "4-48"
+                },
+                "comparison": "トンガの敗差が小さい／時期違い"
+              },
+              {
+                "opponent": "New Zealand",
+                "side_a": {
+                  "date": "2025/11/02",
+                  "result": "14-40"
+                },
+                "side_b": {
+                  "date": "2022/10/16",
+                  "result": "12-34"
+                },
+                "comparison": "トンガ優位とは言えない"
+              },
+              {
+                "opponent": "PNG",
+                "side_a": {
+                  "date": "2022/10/18",
+                  "result": "24-18"
+                },
+                "side_b": {
+                  "date": "2026/10/17",
+                  "result": "18-42"
+                },
+                "comparison": "トンガ優位だが4年差"
+              },
+              {
+                "opponent": "Wales",
+                "side_a": {
+                  "date": "2022/10/24",
+                  "result": "32-6"
+                },
+                "side_b": {
+                  "date": "2022/10/08",
+                  "result": "38-22"
+                },
+                "comparison": "同時期はトンガの点差が上"
+              },
+              {
+                "opponent": "England",
+                "side_a": {
+                  "date": "2026/10/17",
+                  "result": "30-12"
+                },
+                "side_b": {
+                  "date": "2017/11/04",
+                  "result": "10-29"
+                },
+                "comparison": "9年差。現在の比較から除外"
+              }
+            ]
+          },
+          "post_match": {
+            "text": "Tonga 36-0 Lebanon／勝利確定／仮想100USD。取得オッズ未登録のため利益額未計算。"
+          }
+        },
+        "adoption_timing": "開始予定時刻後の正式指定",
+        "favored_result": "win",
+        "result": "Tonga 36-0 Lebanon",
+        "result_sources": [
+          "https://www.nrl.com/news/2026/10/23/tonga-outclass-lebanon-to-set-up-samoa-showdown/"
+        ]
+      },
+      {
+        "match_id": "2026-10-24-minnesota-orlando-nba",
+        "matchup": "Minnesota Timberwolves vs Orlando Magic",
+        "sport": "バスケットボール",
+        "competition": "NBA 2026/27 Regular Season",
+        "start_jst": "2026-10-24T08:00:00+09:00",
+        "favored": "Minnesota Timberwolves",
+        "status": "finished",
+        "gap_grade": "ユーザー正式指定（要検証）",
+        "conclusion": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。",
+        "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+        "analysis_detail": {
+          "summary": "ユーザー正式採用。直近10・H2H全件・共通相手比較は継続調査。ブックメーカー実オッズ未確認。仮想100USD追跡。",
+          "post_match": {
+            "text": "Minnesota Timberwolves 115-93 Orlando Magic／勝利確定／仮想100USD。取得オッズ未登録のため利益額未計算。"
+          }
+        },
+        "sources": [
+          "https://www.nba.com/team/1610612750/schedule",
+          "https://www.nba.com/schedule/timberwolves?cal=October&region=1"
+        ],
+        "rank": 61,
+        "favored_result": "win",
+        "result": "Minnesota Timberwolves 115-93 Orlando Magic",
+        "profit_usd": null,
+        "profit_status": "勝利確定／仮想100USD。取得オッズ未登録のため利益額未計算。",
+        "result_sources": [
+          "https://www.landofbasketball.com/box_scores/2026/1023MINORL.htm"
+        ]
+      },
+      {
+        "match_id": "2026-10-24-los-t1-lol",
+        "matchup": "T1 vs LOS (LØS)",
+        "sport": "League of Legends",
+        "competition": "Worlds 2026 Main Event Swiss Round 1",
+        "start_jst": null,
+        "favored": "T1",
+        "status": "finished",
+        "gap_grade": "ユーザー正式採用・トリプル分析未完",
+        "conclusion": "ユーザー指定T1 vs LOSを正式登録。T1勝者は先頭表記からの仮選択で要確認。BO1は不確実性が高い。H2H・直近10・共通相手全件未検証。",
+        "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+        "analysis_detail": {
+          "summary": "ユーザー指定T1 vs LOSを正式登録。T1勝者は先頭表記からの仮選択で要確認。BO1は不確実性が高い。H2H・直近10・共通相手全件未検証。",
+          "post_match": {
+            "text": "T1 1-0 LOS／勝利確定／仮想100USD。取得オッズ未登録のため利益額未計算。"
+          }
+        },
+        "sources": [
+          "https://mid.gg/esports/worlds-2026",
+          "https://pogwire.com/esports/t1-vs-los-worlds-2026",
+          "https://esports.op.gg/matches/32717/los-vs-t1-2026-10-23"
+        ],
+        "rank": 62,
+        "risk": "開始時刻に07:00/08:00 JSTの資料差あり。未確定。",
+        "format": "BO1／開始時刻07:00または08:00 JST・要確認",
+        "favored_result": "win",
+        "result": "T1 1-0 LOS",
+        "profit_usd": null,
+        "profit_status": "勝利確定／仮想100USD。取得オッズ未登録のため利益額未計算。",
+        "result_sources": [
+          "https://bo3.gg/lol/tournaments/worlds-2026/results"
+        ]
       }
     ],
     "summary": {
@@ -9659,10 +10304,9 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 53,
-      "favored_losses": 8,
-      "pending": 0,
-      "note": "既存結果へFalcons敗戦・Vegas勝利を追加。対象2件の仮想$100精算：払戻$144、純損益-$56。Vegasオッズはユーザー申告の参考値。"
+      "favored_wins": 54,
+      "favored_losses": 6,
+      "pending": 1
     }
   },
   "history_policy": {

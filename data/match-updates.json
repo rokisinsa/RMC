@@ -2134,6 +2134,234 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "run_id": "mr-20261023-results-and-four",
+      "kind": "result_update",
+      "at": "2026-10-23T18:15:18+09:00",
+      "source": "公開結果照合・ユーザー更新依頼",
+      "note": "終了済み4件を追記。スコアの左右を対戦順に統一。",
+      "changes": [
+        {
+          "match_id": "2026-10-22-yandex-gamerlegion-dota2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "Team Yandex 2-0 GamerLegion"
+            },
+            "result_confirmed_at": "2026-10-23T18:15:18+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://www.cybersport.ru/tags/dota-2/team-yandex-bez-atf-nachala-vystupleniye-na-universe-by-fissure-s-pobedy-nad",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-10-23T18:15:18+09:00",
+            "source_confidence": "single_source",
+            "note": "最終結果を確認。採用時のオッズが未登録のため勝利利益は未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-23-parivision-astra-dota2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "PARIVISION 2-0 Astra Invicta"
+            },
+            "result_confirmed_at": "2026-10-23T18:15:18+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://www.cybersport.ru/matches/dota-2/10099570",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-10-23T18:15:18+09:00",
+            "source_confidence": "single_source",
+            "note": "最終結果を確認。採用時のオッズが未登録のため勝利利益は未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-23-kolstad-magdeburg-handball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 32,
+                "b": 35
+              },
+              "text": "Kolstad 32-35 SC Magdeburg"
+            },
+            "result_confirmed_at": "2026-10-23T18:15:18+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://www.mdr.de/sport/handball/zweiter-anzug-sc-magdeburg-siegt-in-kolstad,kolstad-scm-100.html",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-10-23T18:15:18+09:00",
+            "source_confidence": "single_source",
+            "note": "最終結果を確認。採用時のオッズが未登録のため勝利利益は未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-23-barca-montpellier-handball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 40,
+                "b": 34
+              },
+              "text": "Barça 40-34 Montpellier"
+            },
+            "result_confirmed_at": "2026-10-23T18:15:18+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://www.fcbarcelona.com/en/handball/first-team/results",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-23T18:15:18+09:00",
+            "source_confidence": "single_source",
+            "note": "最終結果を確認。採用時のオッズが未登録のため勝利利益は未計算。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261024-followup-results",
+      "kind": "result_update",
+      "at": "2026-10-24T15:48:05+09:00",
+      "source": "公開結果照合",
+      "note": "中断後に終了した4試合を結果反映。",
+      "changes": [
+        {
+          "match_id": "2026-10-24-barca-cuenca-handball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 45,
+                "b": 27
+              },
+              "text": "Barça 45-27 REBI Cuenca"
+            },
+            "result_confirmed_at": "2026-10-24T15:48:05+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "最終スコア確認",
+                "url": "https://asobal.es/estadisticas/35405652/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-24T15:48:05+09:00",
+            "source_confidence": "official",
+            "note": "取得オッズ未登録。勝利と収支金額未確定を区別。"
+          }
+        },
+        {
+          "match_id": "2026-10-23-tonga-lebanon-rugby",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 36,
+                "b": 0
+              },
+              "text": "Tonga 36-0 Lebanon"
+            },
+            "result_confirmed_at": "2026-10-24T15:48:05+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "最終スコア確認",
+                "url": "https://www.nrl.com/news/2026/10/23/tonga-outclass-lebanon-to-set-up-samoa-showdown/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-24T15:48:05+09:00",
+            "source_confidence": "official",
+            "note": "取得オッズ未登録。勝利と収支金額未確定を区別。"
+          }
+        },
+        {
+          "match_id": "2026-10-24-minnesota-orlando-nba",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 115,
+                "b": 93
+              },
+              "text": "Minnesota Timberwolves 115-93 Orlando Magic"
+            },
+            "result_confirmed_at": "2026-10-24T15:48:05+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "最終スコア確認",
+                "url": "https://www.landofbasketball.com/box_scores/2026/1023MINORL.htm",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-24T15:48:05+09:00",
+            "source_confidence": "specialist_db",
+            "note": "取得オッズ未登録。勝利と収支金額未確定を区別。"
+          }
+        },
+        {
+          "match_id": "2026-10-24-los-t1-lol",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 0
+              },
+              "text": "T1 1-0 LOS"
+            },
+            "result_confirmed_at": "2026-10-24T15:48:05+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "最終スコア確認",
+                "url": "https://bo3.gg/lol/tournaments/worlds-2026/results",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-24T15:48:05+09:00",
+            "source_confidence": "specialist_db",
+            "note": "取得オッズ未登録。勝利と収支金額未確定を区別。"
+          }
+        }
+      ],
+      "reviews": []
     }
   ]
 }

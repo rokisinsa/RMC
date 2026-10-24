@@ -267,6 +267,12 @@
       "started_at": "2026-10-22T19:18:00+09:00",
       "slot": "adhoc",
       "note": "ユーザー正式指定T1 vs LOS。選択T1（先頭チーム）、仮想100USD、オッズ未確認。"
+    },
+    {
+      "run_id": "rec-user-approved-20261023-four",
+      "started_at": "2026-10-23T18:15:18+09:00",
+      "slot": "adhoc",
+      "note": "バルサ、Vitality、トンガ、Team Yandexの4件を正式採用。1件100USD仮想追跡。"
     }
   ],
   "picks": [
@@ -5399,9 +5405,126 @@
       "settlement_override": null,
       "flags": [
         "odds_unverified",
-        "selection_inferred"
+        "needs_review"
       ],
       "note": "正式採用。仮想100USD、実購入なし。勝者T1は先頭表記からの仮登録。"
+    },
+    {
+      "id": "rec-2026-10-24-barca-cuenca-handball",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261023-four",
+      "match_id": "2026-10-24-barca-cuenca-handball",
+      "source_event_id": "web-2026-10-24-barca-cuenca-handball",
+      "market": "match_1x2",
+      "market_label": "60分勝者（引分不的中）",
+      "selection": "side_a",
+      "selection_label": "Barça",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-23T18:15:18+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-23T18:15:18+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A",
+        "model_version": "rmc-user-approved-20261023",
+        "summary": "バルサ直近9勝1敗、クエンカ2勝2分6敗。リーグH2H直近10勝。共通5相手で得失点差優位。ただし4組は旧シーズンを含む。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USDの成績追跡。実購入なし。取得オッズ未登録。"
+    },
+    {
+      "id": "rec-2026-10-24-vitality-9z-cs2",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261023-four",
+      "match_id": "2026-10-24-vitality-9z-cs2",
+      "source_event_id": "web-2026-10-24-vitality-9z-cs2",
+      "market": "match_winner",
+      "market_label": "BO3／LANシリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "Vitality",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-23T18:15:18+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-23T18:15:18+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−",
+        "model_version": "rmc-user-approved-20261023",
+        "summary": "直近10シリーズVitality9勝1敗、9z3勝7敗。共通5相手で優勢。HLTV2位対15位。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USDの成績追跡。実購入なし。取得オッズ未登録。"
+    },
+    {
+      "id": "rec-2026-10-23-tonga-lebanon-rugby",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261023-four",
+      "match_id": "2026-10-23-tonga-lebanon-rugby",
+      "source_event_id": "web-2026-10-23-tonga-lebanon-rugby",
+      "market": "match_1x2",
+      "market_label": "80分勝者（引分不的中）",
+      "selection": "side_a",
+      "selection_label": "Tonga",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-23T18:15:18+09:00",
+      "bet_at": null,
+      "locked_at": null,
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−",
+        "model_version": "rmc-user-approved-20261023",
+        "summary": "トンガは今大会イングランドに30-12勝利、レバノンはPNGに18-42敗戦。直近勝率は相手水準の差が大きく単純比較不可。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified",
+        "lock_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USDの成績追跡。実購入なし。取得オッズ未登録。 開始予定時刻後のユーザー指定。事前採用に遡及しない。"
+    },
+    {
+      "id": "rec-2026-10-24-yandex-og-dota2",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261023-four",
+      "match_id": "2026-10-24-yandex-og-dota2",
+      "source_event_id": "web-2026-10-24-yandex-og-dota2",
+      "market": "match_winner",
+      "market_label": "BO3",
+      "selection": "side_a",
+      "selection_label": "Team Yandex",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-23T18:15:18+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-23T18:15:18+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−",
+        "model_version": "rmc-user-approved-20261023",
+        "summary": "Team Yandex直近9勝1敗。Spirit・PARIVISION・NAVIへの勝利実績あり。OGとのH2Hは3勝3敗1分で互角。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USDの成績追跡。実購入なし。取得オッズ未登録。"
     }
   ]
 }
