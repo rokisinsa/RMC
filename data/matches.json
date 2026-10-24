@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-22T19:18:00+09:00",
+    "as_of": "2026-10-24T23:27:15+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -309,6 +309,13 @@
       "at": "2026-10-23T18:15:18+09:00",
       "source": "ユーザー正式指定・公開日程照合",
       "note": "4試合の新規登録。既存結果更新はmatch-updates.jsonへ追記。"
+    },
+    {
+      "run_id": "mr-20261024-five-registration",
+      "kind": "human_review",
+      "at": "2026-10-24T23:27:15+09:00",
+      "source": "ユーザー正式指定・公開日程照合",
+      "note": "指定5件を正式登録。時刻に差異がある2件は要再確認。"
     }
   ],
   "matches": [
@@ -5572,6 +5579,191 @@
           ],
           "note": "ユーザー指定4件の正式採用"
         }
+      ]
+    },
+    {
+      "id": "2026-10-25-philadelphia-milwaukee-nba",
+      "sport": "NBA",
+      "competition": "NBA 2026–27",
+      "side_a": "Philadelphia 76ers",
+      "side_b": "Milwaukee Bucks",
+      "home_side": "side_a",
+      "venue": "Philadelphia／Xfinity Mobile Arena（76ersホーム）",
+      "start_at": "2026-10-25T08:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公開日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.covers.com/sport/basketball/nba/matchup/388591",
+        "https://champsorchumps.us/team/nba/philadelphia-76ers/head-to-head/milwaukee-bucks",
+        "https://www.readthegame.com/team/PHI/games?season=2025-26",
+        "https://www.nba.com/game/0022600106",
+        "https://www.reuters.com/sports/basketball/fresh-off-epic-rally-sixers-take-bucks--flm-2026-10-24/"
+      ],
+      "verified_at": "2026-10-24T23:27:15+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261024-five-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定5件の正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-spirit-astra-dota2",
+      "sport": "Dota 2",
+      "competition": "PARI Universe 2026／Group B",
+      "side_a": "Team Spirit",
+      "side_b": "Astra Invicta",
+      "home_side": "neutral",
+      "venue": "オンライン／中立",
+      "start_at": null,
+      "start_time_status": "review_required",
+      "start_time_note": "情報源で開始時刻に差異あり。再確認が必要。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://cyberscore.live/en/matches/team-spirit-vs-astra-invicta-190035/",
+        "https://cyberscore.live/en/matches/team-spirit-vs-astra-invicta-190035/head-to-head/",
+        "https://cyberscore.live/en/teams/team-spirit/matches/",
+        "https://www.sofascore.com/esports/match/astra-invicta-team-spirit/nFWcsBxuk",
+        "https://rdy.gg/en/dota2/tournaments/117530"
+      ],
+      "verified_at": "2026-10-24T23:27:15+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261024-five-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定5件の正式採用"
+        }
+      ],
+      "start_candidates": [
+        "2026-10-25T23:00:00+09:00",
+        "2026-10-26T00:00:00+09:00"
+      ]
+    },
+    {
+      "id": "2026-10-25-newzealand-cook-rugby",
+      "sport": "Rugby League",
+      "competition": "男子13人制ラグビーリーグW杯2026／Pool A",
+      "side_a": "New Zealand",
+      "side_b": "Cook Islands",
+      "home_side": "side_a",
+      "venue": "Christchurch／One NZ Stadium（NZホーム）",
+      "start_at": "2026-10-25T14:05:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公開日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://nzrl.co.nz/national-teams/kiwis/past-result",
+        "https://www.rugbyleagueproject.org/teams/cook-islands/results.html",
+        "https://www.nrl.com/news/2026/10/21/the-inspirational-goals-driving-aitus-upset-bid/",
+        "https://leagueunlimited.com/news/44875-nz-v-cook-islands-2026-rlwc-mens-week-2-preview/"
+      ],
+      "verified_at": "2026-10-24T23:27:15+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261024-five-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定5件の正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-australia-fiji-rugby",
+      "sport": "Rugby League",
+      "competition": "男子13人制ラグビーリーグW杯2026／Pool A",
+      "side_a": "Australia",
+      "side_b": "Fiji",
+      "home_side": "side_a",
+      "venue": "Brisbane／Suncorp Stadium（Australiaホーム）",
+      "start_at": "2026-10-25T18:05:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公開日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Australia_national_rugby_league_team_results",
+        "https://www.rugbyleagueproject.org/teams/fiji/results.html",
+        "https://sportstralia.com.au/rugby/aus-vs-fij-rugby-league-head-to-head/",
+        "https://www.ticketmaster.com.au/rlwc26-mens-australia-v-fiji-milton-25-10-2026/event/130063639672750F"
+      ],
+      "verified_at": "2026-10-24T23:27:15+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261024-five-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定5件の正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-25-yandex-1win-dota2",
+      "sport": "Dota 2",
+      "competition": "PARI Universe 2026／Group A",
+      "side_a": "Team Yandex",
+      "side_b": "1win",
+      "home_side": "neutral",
+      "venue": "オンライン／中立",
+      "start_at": null,
+      "start_time_status": "review_required",
+      "start_time_note": "情報源で開始時刻に差異あり。再確認が必要。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://cyberscore.live/en/matches/team-yandex-vs-1win-team-190031/",
+        "https://cyberscore.live/en/matches/team-yandex-vs-1win-team-190031/head-to-head/",
+        "https://rdy.gg/en/dota2/tournaments/117530",
+        "https://liveesportss.com/dota-2/game/team-yandex-1win-2026-10-25"
+      ],
+      "verified_at": "2026-10-24T23:27:15+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261024-five-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定5件の正式採用"
+        }
+      ],
+      "start_candidates": [
+        "2026-10-25T20:00:00+09:00",
+        "2026-10-25T21:00:00+09:00"
       ]
     }
   ]

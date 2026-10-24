@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-17T16:15:13.701Z",
+    "as_of": "2026-10-24T23:28:03+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -2358,6 +2358,52 @@
             "verified_at": "2026-10-24T15:48:05+09:00",
             "source_confidence": "specialist_db",
             "note": "取得オッズ未登録。勝利と収支金額未確定を区別。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261024-evening-review",
+      "kind": "result_update",
+      "at": "2026-10-24T23:28:03+09:00",
+      "source": "公開結果照合",
+      "note": "既存の未精算2件は進行中。終了済み結果・既登録収支は維持。",
+      "changes": [
+        {
+          "match_id": "2026-10-24-vitality-9z-cs2",
+          "set": {
+            "status": "live"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "公開試合状況",
+                "url": "https://www.hltv.org/matches/2399723/vitality-vs-9z-pgl-masters-bucharest-2026",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-24T23:28:03+09:00",
+            "source_confidence": "specialist_db",
+            "note": "進行中／最終スコア未確定。精算しない。"
+          }
+        },
+        {
+          "match_id": "2026-10-24-yandex-og-dota2",
+          "set": {
+            "status": "live"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "公開試合状況",
+                "url": "https://cyberscore.live/en/matches/team-yandex-vs-og-190027/",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-24T23:28:03+09:00",
+            "source_confidence": "specialist_db",
+            "note": "Yandex 1–0 OG、第2マップ進行中／シリーズ未確定。精算しない。"
           }
         }
       ],

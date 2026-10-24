@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-24T15:48:05+09:00",
+  "generated_at": "2026-10-24T23:27:15+09:00",
   "window": {
     "from": "2026-10-24T00:00:00+09:00",
-    "to": "2026-10-25T00:00:00+09:00",
+    "to": "2026-10-26T01:00:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "指定4件を正式登録済み。終了したバルサ・トンガは結果履歴へ移動。"
+    "note": "本日登録5件はいずれも10/25開催予定。Spiritは10/26 0時候補もあり要時刻確認。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -35,7 +35,7 @@
       "sport": "CS2",
       "competition": "PGL Masters Bucharest 2026",
       "start_jst": "2026-10-24T22:00:00+09:00",
-      "venue": "中立／オンライン",
+      "venue": "Bucharest／LAN・中立",
       "format": "BO3／LANシリーズ勝者",
       "status": "formal",
       "gap_grade": "A−",
@@ -43,7 +43,7 @@
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "結果未確定／取得オッズ未登録",
+      "profit_status": "進行中／最終スコア未確定。取得オッズ未登録",
       "odds": {
         "min": null,
         "max": null,
@@ -52,7 +52,7 @@
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
       "added_at": "2026-10-23T18:15:18+09:00",
-      "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+      "analysis_reviewed_at": "2026-10-24T23:28:03+09:00",
       "sources": [
         "https://www.hltv.org/matches/2399723/vitality-vs-9z-pgl-masters-bucharest-2026",
         "https://www.hltv.org/results?team=9565",
@@ -272,7 +272,9 @@
             }
           ]
         }
-      }
+      },
+      "result_status": "live",
+      "result": "進行中／最終スコア未確定"
     },
     {
       "rank": 2,
@@ -292,7 +294,7 @@
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "結果未確定／取得オッズ未登録",
+      "profit_status": "Yandex 1–0 OG、第2マップ進行中／シリーズ未確定。取得オッズ未登録",
       "odds": {
         "min": null,
         "max": null,
@@ -301,7 +303,7 @@
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
       "added_at": "2026-10-23T18:15:18+09:00",
-      "analysis_reviewed_at": "2026-10-23T18:15:18+09:00",
+      "analysis_reviewed_at": "2026-10-24T23:28:03+09:00",
       "sources": [
         "https://cyberscore.live/en/matches/team-yandex-vs-og-190027/",
         "https://cyberscore.live/en/teams/team-yandex/matches/",
@@ -522,7 +524,1142 @@
             }
           ]
         }
+      },
+      "result_status": "live",
+      "result": "Yandex 1–0 OG、第2マップ進行中／シリーズ未確定"
+    },
+    {
+      "rank": 3,
+      "match_id": "2026-10-25-philadelphia-milwaukee-nba",
+      "event_id": "web-2026-10-25-philadelphia-milwaukee-nba",
+      "matchup": "Philadelphia 76ers vs Milwaukee Bucks",
+      "favored": "Philadelphia 76ers",
+      "selection_label": "Philadelphia 76ers",
+      "sport": "NBA",
+      "competition": "NBA 2026–27",
+      "start_jst": "2026-10-25T08:30:00+09:00",
+      "venue": "Philadelphia／Xfinity Mobile Arena（76ersホーム）",
+      "format": "延長込み勝者",
+      "status": "formal",
+      "gap_grade": "A−",
+      "price_grade": "オッズ未確認",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "結果未確定／取得オッズ未登録",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "取得オッズ未登録。参考市場価格を精算には使わない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-24T23:27:15+09:00",
+      "analysis_reviewed_at": "2026-10-24T23:27:15+09:00",
+      "sources": [
+        "https://www.covers.com/sport/basketball/nba/matchup/388591",
+        "https://champsorchumps.us/team/nba/philadelphia-76ers/head-to-head/milwaukee-bucks",
+        "https://www.readthegame.com/team/PHI/games?season=2025-26",
+        "https://www.nba.com/game/0022600106",
+        "https://www.reuters.com/sports/basketball/fresh-off-epic-rally-sixers-take-bucks--flm-2026-10-24/"
+      ],
+      "conclusion": "直近公式戦76ers5勝5敗、Bucks3勝7敗。今季は2勝0敗対0勝2敗。76ersのホームとBucks連戦を評価。ただし過去季の成績は現ロスターとの違いが大きい。",
+      "risk": "Embiidは出場見込み報道、LeBronは出場可否確認が必要。主力の最終出場状況により評価変更。",
+      "analysis_detail": {
+        "summary": "直近公式戦76ers5勝5敗、Bucks3勝7敗。今季は2勝0敗対0勝2敗。76ersのホームとBucks連戦を評価。ただし過去季の成績は現ロスターとの違いが大きい。",
+        "availability": {
+          "text": "Embiidは出場見込み報道、LeBronは出場可否確認が必要。主力の最終出場状況により評価変更。"
+        },
+        "home_away": {
+          "text": "Philadelphia／Xfinity Mobile Arena（76ersホーム）"
+        },
+        "market": {
+          "text": "延長込み勝者。仮想100USD。勝利時は取得オッズが判明するまで利益未計算。"
+        },
+        "sport_specific": {
+          "text": "日付は各結果資料の掲載日。現地日付とJSTにずれがある場合あり。"
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Philadelphia 76ers",
+            "items": [
+              {
+                "date": "2026/10/22",
+                "opponent": "CLE",
+                "result": "W 114-106"
+              },
+              {
+                "date": "2026/10/20",
+                "opponent": "NYK",
+                "result": "W 106-100"
+              },
+              {
+                "date": "2026/05/10",
+                "opponent": "NYK",
+                "result": "L 114-144"
+              },
+              {
+                "date": "2026/05/08",
+                "opponent": "NYK",
+                "result": "L 94-108"
+              },
+              {
+                "date": "2026/05/06",
+                "opponent": "NYK",
+                "result": "L 102-108"
+              },
+              {
+                "date": "2026/05/04",
+                "opponent": "NYK",
+                "result": "L 98-137"
+              },
+              {
+                "date": "2026/05/02",
+                "opponent": "BOS",
+                "result": "W 109-100"
+              },
+              {
+                "date": "2026/04/30",
+                "opponent": "BOS",
+                "result": "W 106-93"
+              },
+              {
+                "date": "2026/04/28",
+                "opponent": "BOS",
+                "result": "W 113-97"
+              },
+              {
+                "date": "2026/04/26",
+                "opponent": "BOS",
+                "result": "L 96-128"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Milwaukee Bucks",
+            "items": [
+              {
+                "date": "2026/10/23",
+                "opponent": "CHI",
+                "result": "L 125-132"
+              },
+              {
+                "date": "2026/10/21",
+                "opponent": "WAS",
+                "result": "L 116-128"
+              },
+              {
+                "date": "2026/04/12",
+                "opponent": "PHI",
+                "result": "L 106-126"
+              },
+              {
+                "date": "2026/04/10",
+                "opponent": "BKN",
+                "result": "W 125-108"
+              },
+              {
+                "date": "2026/04/08",
+                "opponent": "DET",
+                "result": "L 111-137"
+              },
+              {
+                "date": "2026/04/07",
+                "opponent": "BKN",
+                "result": "L 90-96"
+              },
+              {
+                "date": "2026/04/05",
+                "opponent": "MEM",
+                "result": "W 131-115"
+              },
+              {
+                "date": "2026/04/03",
+                "opponent": "BOS",
+                "result": "L 101-133"
+              },
+              {
+                "date": "2026/04/01",
+                "opponent": "HOU",
+                "result": "L 113-119"
+              },
+              {
+                "date": "2026/03/31",
+                "opponent": "DAL",
+                "result": "W 123-99"
+              }
+            ]
+          }
+        },
+        "h2h": {
+          "summary": "76ers視点で直近10戦4勝6敗、直近4連勝。全て過去季。",
+          "items": [
+            {
+              "date": "2026/04/12",
+              "opponent": "Bucks",
+              "result": "W 126-106"
+            },
+            {
+              "date": "2026/01/27",
+              "opponent": "Bucks",
+              "result": "W 139-122"
+            },
+            {
+              "date": "2025/12/05",
+              "opponent": "Bucks",
+              "result": "W 116-101"
+            },
+            {
+              "date": "2025/11/20",
+              "opponent": "Bucks",
+              "result": "W 123-114 OT"
+            },
+            {
+              "date": "2025/04/03",
+              "opponent": "Bucks",
+              "result": "L 113-126"
+            },
+            {
+              "date": "2025/02/09",
+              "opponent": "Bucks",
+              "result": "L 127-135"
+            },
+            {
+              "date": "2025/01/19",
+              "opponent": "Bucks",
+              "result": "L 109-123"
+            },
+            {
+              "date": "2024/10/23",
+              "opponent": "Bucks",
+              "result": "L 109-124"
+            },
+            {
+              "date": "2024/03/14",
+              "opponent": "Bucks",
+              "result": "L 105-114"
+            },
+            {
+              "date": "2024/02/25",
+              "opponent": "Bucks",
+              "result": "L 98-119"
+            }
+          ]
+        },
+        "common_opponent_comparison": {
+          "summary": "5相手を確認。今季だけの共通相手は0。過去季比較を現在の5相手優勢とは扱わない。",
+          "items": [
+            {
+              "opponent": "BOS",
+              "side_a": {
+                "date": "2026/05/02",
+                "result": "W 109-100"
+              },
+              "side_b": {
+                "date": "2026/04/03",
+                "result": "L 101-133"
+              },
+              "comparison": "76ers優勢／前季"
+            },
+            {
+              "opponent": "WAS",
+              "side_a": {
+                "date": "2026/04/01",
+                "result": "W 153-131"
+              },
+              "side_b": {
+                "date": "2026/10/21",
+                "result": "L 116-128"
+              },
+              "comparison": "76ers優勢だが約半年差"
+            },
+            {
+              "opponent": "CHI",
+              "side_a": {
+                "date": "2026/03/25",
+                "result": "W 157-137"
+              },
+              "side_b": {
+                "date": "2026/10/23",
+                "result": "L 125-132"
+              },
+              "comparison": "76ers優勢だが約7か月差"
+            },
+            {
+              "opponent": "HOU",
+              "side_a": {
+                "date": "2026/04/09",
+                "result": "L 102-113"
+              },
+              "side_b": {
+                "date": "2026/04/01",
+                "result": "L 113-119"
+              },
+              "comparison": "双方敗戦／Bucksの点差が小さい"
+            },
+            {
+              "opponent": "DET",
+              "side_a": {
+                "date": "2026/04/04",
+                "result": "L 93-116"
+              },
+              "side_b": {
+                "date": "2026/04/08",
+                "result": "L 111-137"
+              },
+              "comparison": "双方大敗／差は小さい"
+            }
+          ]
+        }
       }
+    },
+    {
+      "rank": 4,
+      "match_id": "2026-10-25-spirit-astra-dota2",
+      "event_id": "web-2026-10-25-spirit-astra-dota2",
+      "matchup": "Team Spirit vs Astra Invicta",
+      "favored": "Team Spirit",
+      "selection_label": "Team Spirit",
+      "sport": "Dota 2",
+      "competition": "PARI Universe 2026／Group B",
+      "start_jst": "2026-10-25T23:00:00+09:00",
+      "venue": "オンライン／中立",
+      "format": "BO3シリーズ勝者",
+      "status": "formal",
+      "gap_grade": "B+",
+      "price_grade": "オッズ未確認",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "結果未確定／取得オッズ未登録",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "取得オッズ未登録。参考市場価格を精算には使わない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-24T23:27:15+09:00",
+      "analysis_reviewed_at": "2026-10-24T23:27:15+09:00",
+      "sources": [
+        "https://cyberscore.live/en/matches/team-spirit-vs-astra-invicta-190035/",
+        "https://cyberscore.live/en/matches/team-spirit-vs-astra-invicta-190035/head-to-head/",
+        "https://cyberscore.live/en/teams/team-spirit/matches/",
+        "https://www.sofascore.com/esports/match/astra-invicta-team-spirit/nFWcsBxuk",
+        "https://rdy.gg/en/dota2/tournaments/117530"
+      ],
+      "conclusion": "Spiritは完了済み直近10シリーズ8勝2敗。Astraは確認できた2戦1勝1敗で、少標本。共通PARIVISION戦はSpirit優勢だが、AstraのBetBoomへの2–0勝利もあり一方的とは評価しない。",
+      "risk": "AstraはNightfall・Lorenof・DM・OmaR・GHを擁する。H2H未確認、比較1相手のみ。開催時刻は23時と翌0時の差異あり。",
+      "analysis_detail": {
+        "summary": "Spiritは完了済み直近10シリーズ8勝2敗。Astraは確認できた2戦1勝1敗で、少標本。共通PARIVISION戦はSpirit優勢だが、AstraのBetBoomへの2–0勝利もあり一方的とは評価しない。",
+        "availability": {
+          "text": "AstraはNightfall・Lorenof・DM・OmaR・GHを擁する。H2H未確認、比較1相手のみ。開催時刻は23時と翌0時の差異あり。"
+        },
+        "home_away": {
+          "text": "オンライン／中立"
+        },
+        "market": {
+          "text": "BO3シリーズ勝者。仮想100USD。勝利時は取得オッズが判明するまで利益未計算。"
+        },
+        "sport_specific": {
+          "text": "日付は各結果資料の掲載日。現地日付とJSTにずれがある場合あり。開始時刻に差異あり：2026-10-25T23:00:00+09:00 / 2026-10-26T00:00:00+09:00"
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Team Spirit",
+            "items": [
+              {
+                "date": "2026/10/22",
+                "opponent": "LEGION",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/11",
+                "opponent": "Yandex",
+                "result": "L 1-3"
+              },
+              {
+                "date": "2026/10/11",
+                "opponent": "PARIVISION",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/10",
+                "opponent": "Yandex",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/09",
+                "opponent": "Aurora",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/03",
+                "opponent": "Yandex",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/09/30",
+                "opponent": "1win",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/29",
+                "opponent": "Nemesis",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/08/23",
+                "opponent": "Team Vision",
+                "result": "W 3-2"
+              },
+              {
+                "date": "2026/08/23",
+                "opponent": "Yandex",
+                "result": "W 2-0"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Astra Invicta",
+            "items": [
+              {
+                "date": "2026/10/23",
+                "opponent": "BetBoom",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/22",
+                "opponent": "PARIVISION",
+                "result": "L 0-2"
+              }
+            ]
+          }
+        },
+        "h2h": {
+          "summary": "参照DBで直接対戦を確認できず。10戦を捏造せず0件と表示。",
+          "items": []
+        },
+        "common_opponent_comparison": {
+          "summary": "確認可能な共通相手は1。進行中・未実施試合は除外。",
+          "items": [
+            {
+              "opponent": "PARIVISION",
+              "side_a": {
+                "date": "2026/10/11",
+                "result": "W 2-1"
+              },
+              "side_b": {
+                "date": "2026/10/22",
+                "result": "L 0-2"
+              },
+              "comparison": "Spirit優勢／11日差"
+            }
+          ]
+        }
+      },
+      "adoption_timing": "時刻要確認：10/25 23:00 または10/26 00:00 JST"
+    },
+    {
+      "rank": 5,
+      "match_id": "2026-10-25-newzealand-cook-rugby",
+      "event_id": "web-2026-10-25-newzealand-cook-rugby",
+      "matchup": "New Zealand vs Cook Islands",
+      "favored": "New Zealand",
+      "selection_label": "New Zealand",
+      "sport": "Rugby League",
+      "competition": "男子13人制ラグビーリーグW杯2026／Pool A",
+      "start_jst": "2026-10-25T14:05:00+09:00",
+      "venue": "Christchurch／One NZ Stadium（NZホーム）",
+      "format": "80分勝敗（引き分けは不的中）",
+      "status": "formal",
+      "gap_grade": "A+",
+      "price_grade": "オッズ未確認",
+      "market": "match_1x2",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "結果未確定／取得オッズ未登録",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "取得オッズ未登録。参考市場価格を精算には使わない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-24T23:27:15+09:00",
+      "analysis_reviewed_at": "2026-10-24T23:27:15+09:00",
+      "sources": [
+        "https://nzrl.co.nz/national-teams/kiwis/past-result",
+        "https://www.rugbyleagueproject.org/teams/cook-islands/results.html",
+        "https://www.nrl.com/news/2026/10/21/the-inspirational-goals-driving-aitus-upset-bid/",
+        "https://leagueunlimited.com/news/44875-nz-v-cook-islands-2026-rlwc-mens-week-2-preview/"
+      ],
+      "conclusion": "NZは直近10戦6勝4敗、Cook諸島は1勝9敗。対戦相手の水準もNZが高い。共通3相手でNZ優勢だが一部は数年前の比較。",
+      "risk": "Pongaの腕骨折・離脱報道とKiniの代役起用に注意。勝者評価と大幅ハンデの可否は別。",
+      "analysis_detail": {
+        "summary": "NZは直近10戦6勝4敗、Cook諸島は1勝9敗。対戦相手の水準もNZが高い。共通3相手でNZ優勢だが一部は数年前の比較。",
+        "availability": {
+          "text": "Pongaの腕骨折・離脱報道とKiniの代役起用に注意。勝者評価と大幅ハンデの可否は別。"
+        },
+        "home_away": {
+          "text": "Christchurch／One NZ Stadium（NZホーム）"
+        },
+        "market": {
+          "text": "80分勝敗（引き分けは不的中）。仮想100USD。勝利時は取得オッズが判明するまで利益未計算。"
+        },
+        "sport_specific": {
+          "text": "日付は各結果資料の掲載日。現地日付とJSTにずれがある場合あり。"
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "New Zealand",
+            "items": [
+              {
+                "date": "2026/10/15",
+                "opponent": "Australia",
+                "result": "L 22-24"
+              },
+              {
+                "date": "2025/11/09",
+                "opponent": "Samoa",
+                "result": "W 36-14"
+              },
+              {
+                "date": "2025/11/02",
+                "opponent": "Tonga",
+                "result": "W 40-14"
+              },
+              {
+                "date": "2025/10/19",
+                "opponent": "Samoa",
+                "result": "W 24-18"
+              },
+              {
+                "date": "2024/11/10",
+                "opponent": "PNG",
+                "result": "W 54-12"
+              },
+              {
+                "date": "2024/11/02",
+                "opponent": "Tonga",
+                "result": "L 24-25"
+              },
+              {
+                "date": "2024/10/27",
+                "opponent": "Australia",
+                "result": "L 10-22"
+              },
+              {
+                "date": "2023/11/04",
+                "opponent": "Australia",
+                "result": "W 30-0"
+              },
+              {
+                "date": "2023/10/28",
+                "opponent": "Australia",
+                "result": "L 18-36"
+              },
+              {
+                "date": "2023/10/21",
+                "opponent": "Samoa",
+                "result": "W 50-0"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Cook Islands",
+            "items": [
+              {
+                "date": "2026/10/18",
+                "opponent": "Fiji",
+                "result": "L 12-40"
+              },
+              {
+                "date": "2025/11/09",
+                "opponent": "South Africa",
+                "result": "W 58-6"
+              },
+              {
+                "date": "2025/10/25",
+                "opponent": "PNG",
+                "result": "L 28-40"
+              },
+              {
+                "date": "2025/10/18",
+                "opponent": "Fiji",
+                "result": "L 24-44"
+              },
+              {
+                "date": "2024/11/03",
+                "opponent": "PNG",
+                "result": "L 20-42"
+              },
+              {
+                "date": "2024/10/26",
+                "opponent": "Fiji",
+                "result": "L 6-56"
+              },
+              {
+                "date": "2023/10/22",
+                "opponent": "Fiji",
+                "result": "L 18-22"
+              },
+              {
+                "date": "2023/10/15",
+                "opponent": "PNG",
+                "result": "L 10-46"
+              },
+              {
+                "date": "2022/10/30",
+                "opponent": "Tonga",
+                "result": "L 10-92"
+              },
+              {
+                "date": "2022/10/25",
+                "opponent": "PNG",
+                "result": "L 16-32"
+              }
+            ]
+          }
+        },
+        "h2h": {
+          "summary": "確認できたH2H2件はNZ全勝。ただし非常に古く参考扱い。",
+          "items": [
+            {
+              "date": "2013/10/20",
+              "opponent": "Cook Islands",
+              "result": "W 50-0"
+            },
+            {
+              "date": "2000/11/02",
+              "opponent": "Cook Islands",
+              "result": "W 84-10"
+            }
+          ]
+        },
+        "common_opponent_comparison": {
+          "summary": "確認3相手。時期の隔たりを割り引く。",
+          "items": [
+            {
+              "opponent": "PNG",
+              "side_a": {
+                "date": "2024/11/10",
+                "result": "W 54-12"
+              },
+              "side_b": {
+                "date": "2025/10/25",
+                "result": "L 28-40"
+              },
+              "comparison": "NZ優勢／約1年差"
+            },
+            {
+              "opponent": "Tonga",
+              "side_a": {
+                "date": "2025/11/02",
+                "result": "W 40-14"
+              },
+              "side_b": {
+                "date": "2022/10/30",
+                "result": "L 10-92"
+              },
+              "comparison": "NZ優勢／3年差"
+            },
+            {
+              "opponent": "Fiji",
+              "side_a": {
+                "date": "2022/11/05",
+                "result": "W 24-18"
+              },
+              "side_b": {
+                "date": "2026/10/18",
+                "result": "L 12-40"
+              },
+              "comparison": "NZ優勢／4年差"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "match_id": "2026-10-25-australia-fiji-rugby",
+      "event_id": "web-2026-10-25-australia-fiji-rugby",
+      "matchup": "Australia vs Fiji",
+      "favored": "Australia",
+      "selection_label": "Australia",
+      "sport": "Rugby League",
+      "competition": "男子13人制ラグビーリーグW杯2026／Pool A",
+      "start_jst": "2026-10-25T18:05:00+09:00",
+      "venue": "Brisbane／Suncorp Stadium（Australiaホーム）",
+      "format": "80分勝敗（引き分けは不的中）",
+      "status": "formal",
+      "gap_grade": "A+",
+      "price_grade": "オッズ未確認",
+      "market": "match_1x2",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "結果未確定／取得オッズ未登録",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "取得オッズ未登録。参考市場価格を精算には使わない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-24T23:27:15+09:00",
+      "analysis_reviewed_at": "2026-10-24T23:27:15+09:00",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Australia_national_rugby_league_team_results",
+        "https://www.rugbyleagueproject.org/teams/fiji/results.html",
+        "https://sportstralia.com.au/rugby/aus-vs-fij-rugby-league-head-to-head/",
+        "https://www.ticketmaster.com.au/rlwc26-mens-australia-v-fiji-milton-25-10-2026/event/130063639672750F"
+      ],
+      "conclusion": "Australiaは直近10戦9勝1敗、Fiji6勝4敗。確認H2H7戦全勝。Fijiの勝利はCook諸島などに集中し、対戦相手水準も考慮するとAustralia優勢。",
+      "risk": "Moses離脱、Walker・Deardenのハーフ起用、Tedesco起用・Walsh休養報道。編成変更があり大幅ハンデは別途評価。",
+      "analysis_detail": {
+        "summary": "Australiaは直近10戦9勝1敗、Fiji6勝4敗。確認H2H7戦全勝。Fijiの勝利はCook諸島などに集中し、対戦相手水準も考慮するとAustralia優勢。",
+        "availability": {
+          "text": "Moses離脱、Walker・Deardenのハーフ起用、Tedesco起用・Walsh休養報道。編成変更があり大幅ハンデは別途評価。"
+        },
+        "home_away": {
+          "text": "Brisbane／Suncorp Stadium（Australiaホーム）"
+        },
+        "market": {
+          "text": "80分勝敗（引き分けは不的中）。仮想100USD。勝利時は取得オッズが判明するまで利益未計算。"
+        },
+        "sport_specific": {
+          "text": "日付は各結果資料の掲載日。現地日付とJSTにずれがある場合あり。"
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Australia",
+            "items": [
+              {
+                "date": "2026/10/15",
+                "opponent": "NZ",
+                "result": "W 24-22"
+              },
+              {
+                "date": "2025/11/08",
+                "opponent": "England",
+                "result": "W 30-8"
+              },
+              {
+                "date": "2025/11/01",
+                "opponent": "England",
+                "result": "W 14-4"
+              },
+              {
+                "date": "2025/10/25",
+                "opponent": "England",
+                "result": "W 26-6"
+              },
+              {
+                "date": "2024/11/10",
+                "opponent": "Tonga",
+                "result": "W 20-14"
+              },
+              {
+                "date": "2024/10/27",
+                "opponent": "NZ",
+                "result": "W 22-10"
+              },
+              {
+                "date": "2024/10/18",
+                "opponent": "Tonga",
+                "result": "W 18-0"
+              },
+              {
+                "date": "2023/11/04",
+                "opponent": "NZ",
+                "result": "L 0-30"
+              },
+              {
+                "date": "2023/10/28",
+                "opponent": "NZ",
+                "result": "W 36-18"
+              },
+              {
+                "date": "2023/10/14",
+                "opponent": "Samoa",
+                "result": "W 38-12"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Fiji",
+            "items": [
+              {
+                "date": "2026/10/18",
+                "opponent": "Cook Islands",
+                "result": "W 40-12"
+              },
+              {
+                "date": "2025/11/01",
+                "opponent": "PNG",
+                "result": "L 18-50"
+              },
+              {
+                "date": "2025/10/18",
+                "opponent": "Cook Islands",
+                "result": "W 44-24"
+              },
+              {
+                "date": "2024/10/26",
+                "opponent": "Cook Islands",
+                "result": "W 56-6"
+              },
+              {
+                "date": "2024/10/19",
+                "opponent": "PNG",
+                "result": "L 10-22"
+              },
+              {
+                "date": "2023/11/05",
+                "opponent": "PNG",
+                "result": "L 12-32"
+              },
+              {
+                "date": "2023/10/29",
+                "opponent": "PNG",
+                "result": "W 43-16"
+              },
+              {
+                "date": "2023/10/22",
+                "opponent": "Cook Islands",
+                "result": "W 22-18"
+              },
+              {
+                "date": "2022/11/05",
+                "opponent": "NZ",
+                "result": "L 18-24"
+              },
+              {
+                "date": "2022/10/29",
+                "opponent": "Scotland",
+                "result": "W 30-14"
+              }
+            ]
+          }
+        },
+        "h2h": {
+          "summary": "確認7戦すべてAustralia勝利。直近でも2022年なので現在の得点差予測には直結させない。",
+          "items": [
+            {
+              "date": "2022/10/15",
+              "opponent": "Fiji",
+              "result": "W 42-8"
+            },
+            {
+              "date": "2017/11/24",
+              "opponent": "Fiji",
+              "result": "W 54-6"
+            },
+            {
+              "date": "2013/11/23",
+              "opponent": "Fiji",
+              "result": "W 64-0"
+            },
+            {
+              "date": "2013/11/02",
+              "opponent": "Fiji",
+              "result": "W 34-2"
+            },
+            {
+              "date": "2008/11/16",
+              "opponent": "Fiji",
+              "result": "W 52-0"
+            },
+            {
+              "date": "2000/11/01",
+              "opponent": "Fiji",
+              "result": "W 66-8"
+            },
+            {
+              "date": "2095/10/14",
+              "opponent": "Fiji",
+              "result": "W 66-0"
+            }
+          ]
+        },
+        "common_opponent_comparison": {
+          "summary": "確認2相手。2相手とも明確優勢という評価にはしない。",
+          "items": [
+            {
+              "opponent": "New Zealand",
+              "side_a": {
+                "date": "2026/10/15",
+                "result": "W 24-22"
+              },
+              "side_b": {
+                "date": "2022/11/05",
+                "result": "L 18-24"
+              },
+              "comparison": "Australia優勢だが4年差"
+            },
+            {
+              "opponent": "Samoa",
+              "side_a": {
+                "date": "2023/10/14",
+                "result": "W 38-12"
+              },
+              "side_b": {
+                "date": "2019/11/02",
+                "result": "W 44-18"
+              },
+              "comparison": "双方26点差勝ち／優劣判定不可"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "match_id": "2026-10-25-yandex-1win-dota2",
+      "event_id": "web-2026-10-25-yandex-1win-dota2",
+      "matchup": "Team Yandex vs 1win",
+      "favored": "Team Yandex",
+      "selection_label": "Team Yandex",
+      "sport": "Dota 2",
+      "competition": "PARI Universe 2026／Group A",
+      "start_jst": "2026-10-25T21:00:00+09:00",
+      "venue": "オンライン／中立",
+      "format": "BO3シリーズ勝者",
+      "status": "formal",
+      "gap_grade": "A",
+      "price_grade": "オッズ未確認",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "結果未確定／取得オッズ未登録",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "取得オッズ未登録。参考市場価格を精算には使わない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-24T23:27:15+09:00",
+      "analysis_reviewed_at": "2026-10-24T23:27:15+09:00",
+      "sources": [
+        "https://cyberscore.live/en/matches/team-yandex-vs-1win-team-190031/",
+        "https://cyberscore.live/en/matches/team-yandex-vs-1win-team-190031/head-to-head/",
+        "https://rdy.gg/en/dota2/tournaments/117530",
+        "https://liveesportss.com/dota-2/game/team-yandex-1win-2026-10-25"
+      ],
+      "conclusion": "Yandexは完了済み直近10シリーズ9勝1敗、1win3勝7敗。共通4相手のうち3相手で明確な結果差。H2Hは参照DBで4勝1敗。",
+      "risk": "ATFは10/24 OG戦で出場を確認。ただし翌日の出場は最終確認が必要。開始時刻は20時と21時の差異あり。H2Hには旧チーム名・異なるロスターを含む。",
+      "analysis_detail": {
+        "summary": "Yandexは完了済み直近10シリーズ9勝1敗、1win3勝7敗。共通4相手のうち3相手で明確な結果差。H2Hは参照DBで4勝1敗。",
+        "availability": {
+          "text": "ATFは10/24 OG戦で出場を確認。ただし翌日の出場は最終確認が必要。開始時刻は20時と21時の差異あり。H2Hには旧チーム名・異なるロスターを含む。"
+        },
+        "home_away": {
+          "text": "オンライン／中立"
+        },
+        "market": {
+          "text": "BO3シリーズ勝者。仮想100USD。勝利時は取得オッズが判明するまで利益未計算。"
+        },
+        "sport_specific": {
+          "text": "日付は各結果資料の掲載日。現地日付とJSTにずれがある場合あり。開始時刻に差異あり：2026-10-25T20:00:00+09:00 / 2026-10-25T21:00:00+09:00"
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Team Yandex",
+            "items": [
+              {
+                "date": "2026/10/22",
+                "opponent": "GamerLegion",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/11",
+                "opponent": "Spirit",
+                "result": "W 3-1"
+              },
+              {
+                "date": "2026/10/10",
+                "opponent": "Spirit",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/08",
+                "opponent": "PARIVISION",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/08",
+                "opponent": "LGD",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/03",
+                "opponent": "Spirit",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/10/01",
+                "opponent": "BetBoom",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/30",
+                "opponent": "MOUZ",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/27",
+                "opponent": "NAVI",
+                "result": "W 3-0"
+              },
+              {
+                "date": "2026/09/26",
+                "opponent": "LGD",
+                "result": "W 2-0"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "1win",
+            "items": [
+              {
+                "date": "2026/10/24",
+                "opponent": "GamerLegion",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/23",
+                "opponent": "OG",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/22",
+                "opponent": "Liquid",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/09",
+                "opponent": "PARIVISION",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/10/08",
+                "opponent": "Aurora",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/03",
+                "opponent": "OG",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/02",
+                "opponent": "Nemesis",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/30",
+                "opponent": "Spirit",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/09/29",
+                "opponent": "NAVI",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/09/25",
+                "opponent": "GamerLegion",
+                "result": "L 1-2"
+              }
+            ]
+          }
+        },
+        "h2h": {
+          "summary": "確認5件でYandex4勝1敗。旧名・形式・ロスター差を含む。",
+          "items": [
+            {
+              "date": "2026/09/24",
+              "opponent": "1win",
+              "result": "W 2-0"
+            },
+            {
+              "date": "2026/08/15",
+              "opponent": "IronWing（1win旧名としてDB集計）",
+              "result": "L 1-2"
+            },
+            {
+              "date": "2026/07/12",
+              "opponent": "1win",
+              "result": "W 2-0 BO2"
+            },
+            {
+              "date": "2025/10/26",
+              "opponent": "1win",
+              "result": "W 3-0 BO5"
+            },
+            {
+              "date": "2025/10/25",
+              "opponent": "1win",
+              "result": "W 2-0"
+            }
+          ]
+        },
+        "common_opponent_comparison": {
+          "summary": "確認4相手。進行中のOG戦は直近成績に含めない。",
+          "items": [
+            {
+              "opponent": "GamerLegion",
+              "side_a": {
+                "date": "2026/10/22",
+                "result": "W 2-0"
+              },
+              "side_b": {
+                "date": "2026/10/24",
+                "result": "L 0-2"
+              },
+              "comparison": "Yandex優勢"
+            },
+            {
+              "opponent": "PARIVISION",
+              "side_a": {
+                "date": "2026/10/08",
+                "result": "W 2-1"
+              },
+              "side_b": {
+                "date": "2026/10/09",
+                "result": "L 1-2"
+              },
+              "comparison": "Yandex優勢"
+            },
+            {
+              "opponent": "Spirit",
+              "side_a": {
+                "date": "2026/10/10",
+                "result": "W 2-0"
+              },
+              "side_b": {
+                "date": "2026/09/30",
+                "result": "L 0-2"
+              },
+              "comparison": "Yandex優勢"
+            },
+            {
+              "opponent": "NAVI",
+              "side_a": {
+                "date": "2026/09/27",
+                "result": "W 3-0 BO5"
+              },
+              "side_b": {
+                "date": "2026/09/29",
+                "result": "W 2-1 BO3"
+              },
+              "comparison": "双方勝利／形式差あり"
+            }
+          ]
+        }
+      },
+      "adoption_timing": "時刻要確認：10/25 20:00 または21:00 JST"
     }
   ],
   "rejected_examples": [
@@ -539,11 +1676,12 @@
   ],
   "summary": {
     "pure_gap_top": [
-      "Vitality",
+      "New Zealand",
+      "Australia",
       "Team Yandex"
     ],
     "price_adjusted_top": [],
-    "caution": "ユーザー指定4件は正式採用。バルサ45-27、トンガ36-0で勝利済み。取得オッズ未登録の勝利利益は未計算。トンガは開始予定時刻後の採用。"
+    "caution": "正式採用5件を追加。既存Vitality–9z、Yandex–OGは確認時点で進行中。終了済みカードは履歴の結果・収支を維持。取得オッズ未登録の勝利利益は未計算。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -10314,7 +11452,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-18T13:59:02+09:00",
-    "note": "2026/10/18 13:59：4件目をMLBB Alter Egoへ訂正。Salzburg誤採用はvoidとして履歴保持。Falcons／Vegasの勝敗収支は変えない。"
+    "as_of": "2026-10-24T23:27:15+09:00",
+    "note": "正式採用5件を追加。既存Vitality–9z、Yandex–OGは確認時点で進行中。終了済みカードは履歴の結果・収支を維持。取得オッズ未登録の勝利利益は未計算。"
   }
 }

@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-22T19:18:00+09:00",
+    "as_of": "2026-10-24T23:27:15+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。1件仮想100USD。10/18誤登録Salzburgはvoid（勝敗対象外）で保存、EVOS vs Alter EgoのAlter Ego勝利へ訂正。ベガス申告オッズ1.44倍の参考精算は維持。"
   },
@@ -273,6 +273,12 @@
       "started_at": "2026-10-23T18:15:18+09:00",
       "slot": "adhoc",
       "note": "バルサ、Vitality、トンガ、Team Yandexの4件を正式採用。1件100USD仮想追跡。"
+    },
+    {
+      "run_id": "rec-user-approved-20261024-five",
+      "started_at": "2026-10-24T23:27:15+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー指定5件。先頭チーム勝利を仮想100USDで正式採用。"
     }
   ],
   "picks": [
@@ -5519,6 +5525,151 @@
         "confidence": "A−",
         "model_version": "rmc-user-approved-20261023",
         "summary": "Team Yandex直近9勝1敗。Spirit・PARIVISION・NAVIへの勝利実績あり。OGとのH2Hは3勝3敗1分で互角。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USDの成績追跡。実購入なし。取得オッズ未登録。"
+    },
+    {
+      "id": "rec-2026-10-25-philadelphia-milwaukee-nba",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261024-five",
+      "match_id": "2026-10-25-philadelphia-milwaukee-nba",
+      "source_event_id": "web-2026-10-25-philadelphia-milwaukee-nba",
+      "market": "match_winner",
+      "market_label": "延長込み勝者",
+      "selection": "side_a",
+      "selection_label": "Philadelphia 76ers",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-24T23:27:15+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-24T23:27:15+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−",
+        "model_version": "rmc-user-approved-20261024",
+        "summary": "直近公式戦76ers5勝5敗、Bucks3勝7敗。今季は2勝0敗対0勝2敗。76ersのホームとBucks連戦を評価。ただし過去季の成績は現ロスターとの違いが大きい。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USDの成績追跡。実購入なし。取得オッズ未登録。"
+    },
+    {
+      "id": "rec-2026-10-25-spirit-astra-dota2",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261024-five",
+      "match_id": "2026-10-25-spirit-astra-dota2",
+      "source_event_id": "web-2026-10-25-spirit-astra-dota2",
+      "market": "match_winner",
+      "market_label": "BO3シリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "Team Spirit",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-24T23:27:15+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-24T23:27:15+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "B+",
+        "model_version": "rmc-user-approved-20261024",
+        "summary": "Spiritは完了済み直近10シリーズ8勝2敗。Astraは確認できた2戦1勝1敗で、少標本。共通PARIVISION戦はSpirit優勢だが、AstraのBetBoomへの2–0勝利もあり一方的とは評価しない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USDの成績追跡。実購入なし。取得オッズ未登録。"
+    },
+    {
+      "id": "rec-2026-10-25-newzealand-cook-rugby",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261024-five",
+      "match_id": "2026-10-25-newzealand-cook-rugby",
+      "source_event_id": "web-2026-10-25-newzealand-cook-rugby",
+      "market": "match_1x2",
+      "market_label": "80分勝敗（引き分けは不的中）",
+      "selection": "side_a",
+      "selection_label": "New Zealand",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-24T23:27:15+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-24T23:27:15+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A+",
+        "model_version": "rmc-user-approved-20261024",
+        "summary": "NZは直近10戦6勝4敗、Cook諸島は1勝9敗。対戦相手の水準もNZが高い。共通3相手でNZ優勢だが一部は数年前の比較。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USDの成績追跡。実購入なし。取得オッズ未登録。"
+    },
+    {
+      "id": "rec-2026-10-25-australia-fiji-rugby",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261024-five",
+      "match_id": "2026-10-25-australia-fiji-rugby",
+      "source_event_id": "web-2026-10-25-australia-fiji-rugby",
+      "market": "match_1x2",
+      "market_label": "80分勝敗（引き分けは不的中）",
+      "selection": "side_a",
+      "selection_label": "Australia",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-24T23:27:15+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-24T23:27:15+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A+",
+        "model_version": "rmc-user-approved-20261024",
+        "summary": "Australiaは直近10戦9勝1敗、Fiji6勝4敗。確認H2H7戦全勝。Fijiの勝利はCook諸島などに集中し、対戦相手水準も考慮するとAustralia優勢。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USDの成績追跡。実購入なし。取得オッズ未登録。"
+    },
+    {
+      "id": "rec-2026-10-25-yandex-1win-dota2",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261024-five",
+      "match_id": "2026-10-25-yandex-1win-dota2",
+      "source_event_id": "web-2026-10-25-yandex-1win-dota2",
+      "market": "match_winner",
+      "market_label": "BO3シリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "Team Yandex",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-24T23:27:15+09:00",
+      "bet_at": null,
+      "locked_at": "2026-10-24T23:27:15+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A",
+        "model_version": "rmc-user-approved-20261024",
+        "summary": "Yandexは完了済み直近10シリーズ9勝1敗、1win3勝7敗。共通4相手のうち3相手で明確な結果差。H2Hは参照DBで4勝1敗。"
       },
       "settlement_override": null,
       "flags": [
