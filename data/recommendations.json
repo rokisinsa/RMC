@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-24T23:27:15+09:00",
+    "as_of": "2026-10-25T07:19:42.665Z",
     "status": "active",
     "note": "推奨取引のみ運用。1件仮想100USD。10/18誤登録Salzburgはvoid（勝敗対象外）で保存、EVOS vs Alter EgoのAlter Ego勝利へ訂正。ベガス申告オッズ1.44倍の参考精算は維持。"
   },
@@ -279,6 +279,12 @@
       "started_at": "2026-10-24T23:27:15+09:00",
       "slot": "adhoc",
       "note": "ユーザー指定5件。先頭チーム勝利を仮想100USDで正式採用。"
+    },
+    {
+      "run_id": "rec-user-approved-20261025-two",
+      "started_at": "2026-10-25T07:19:42.665Z",
+      "slot": "adhoc",
+      "note": "ユーザー指定2件。仮想100USD。"
     }
   ],
   "picks": [
@@ -5676,6 +5682,64 @@
         "odds_unverified"
       ],
       "note": "ユーザー正式採用。仮想100USDの成績追跡。実購入なし。取得オッズ未登録。"
+    },
+    {
+      "id": "rec-2026-10-26-yandex-liquid-dota2",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261025-two",
+      "match_id": "2026-10-26-yandex-liquid-dota2",
+      "source_event_id": "web-2026-10-26-yandex-liquid-dota2",
+      "market": "match_winner",
+      "market_label": "BO3シリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "Team Yandex",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-25T07:19:42.665Z",
+      "bet_at": null,
+      "locked_at": "2026-10-25T07:19:42.665Z",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−",
+        "model_version": "rmc-user-approved-20261025",
+        "summary": "Yandex直近10戦9勝1敗、Liquid5勝5敗。H2H6勝2敗。共通4相手中3相手で結果優勢。10/25試合前時点の暫定評価。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USD。実購入なし。参考表示価格と取得オッズは区別。"
+    },
+    {
+      "id": "rec-2026-10-26-thunder-clippers-nba",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261025-two",
+      "match_id": "2026-10-26-thunder-clippers-nba",
+      "source_event_id": "web-2026-10-26-thunder-clippers-nba",
+      "market": "match_winner",
+      "market_label": "延長込み勝者",
+      "selection": "side_a",
+      "selection_label": "Oklahoma City Thunder",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-25T07:19:42.665Z",
+      "bet_at": null,
+      "locked_at": "2026-10-25T07:19:42.665Z",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A",
+        "model_version": "rmc-user-approved-20261025",
+        "summary": "H2H直近10戦サンダー9勝1敗、直近8連勝。直近公式戦6勝4敗対4勝6敗。今季2勝0敗対1勝1敗。ホームと休養、相手の欠場懸念からサンダー優勢。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USD。実購入なし。参考表示価格と取得オッズは区別。"
     }
   ]
 }

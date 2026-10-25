@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-24T23:27:15+09:00",
+    "as_of": "2026-10-25T07:19:42.665Z",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -316,6 +316,13 @@
       "at": "2026-10-24T23:27:15+09:00",
       "source": "ユーザー正式指定・公開日程照合",
       "note": "指定5件を正式登録。時刻に差異がある2件は要再確認。"
+    },
+    {
+      "run_id": "mr-20261025-two-registration",
+      "kind": "human_review",
+      "at": "2026-10-25T07:19:42.665Z",
+      "source": "ユーザー指定・公開日程照合",
+      "note": "Yandexとホームのサンダーを正式採用"
     }
   ],
   "matches": [
@@ -5764,6 +5771,77 @@
       "start_candidates": [
         "2026-10-25T20:00:00+09:00",
         "2026-10-25T21:00:00+09:00"
+      ]
+    },
+    {
+      "id": "2026-10-26-yandex-liquid-dota2",
+      "sport": "Dota 2",
+      "competition": "PARI Universe 2026／Group A",
+      "side_a": "Team Yandex",
+      "side_b": "Team Liquid",
+      "home_side": "neutral",
+      "venue": "オンライン／中立",
+      "start_at": "2026-10-26T20:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公開日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://cyberscore.live/en/matches/team-yandex-vs-team-liquid-190034/",
+        "https://cyberscore.live/en/matches/team-yandex-vs-team-liquid-190034/head-to-head/",
+        "https://cyberscore.live/en/teams/team-liquid/matches/",
+        "https://cyberscore.live/en/teams/team-yandex/matches/",
+        "https://esportsinsider.com/betting-odds/dota2/match/team-yandex-vs-team-liquid-1753741"
+      ],
+      "verified_at": "2026-10-25T07:19:42.665Z",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261025-two-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "指定2件の正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-26-thunder-clippers-nba",
+      "sport": "NBA",
+      "competition": "NBA 2026–27",
+      "side_a": "Oklahoma City Thunder",
+      "side_b": "LA Clippers",
+      "home_side": "side_a",
+      "venue": "Paycom Center／Oklahoma City（サンダーホーム）",
+      "start_at": "2026-10-26T08:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公開日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.covers.com/sport/basketball/nba/matchup/388600",
+        "https://www.nba.com/thunder/game/0022600116-clippers-vs-thunder-oklahoma-city-ok-10-25-2026",
+        "https://www.fanduel.com/research/thunder-vs-clippers-prediction-nba-odds-spread-best-bets-for-10-25-2026",
+        "https://www.reuters.com/sports/basketball/sga-thunder-hope-new-streak-starts-vs-clippers--flm-2026-10-24/"
+      ],
+      "verified_at": "2026-10-25T07:19:42.665Z",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261025-two-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "指定2件の正式採用"
+        }
       ]
     }
   ]

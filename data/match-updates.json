@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-24T23:28:03+09:00",
+    "as_of": "2026-10-25T07:19:42.665Z",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -2404,6 +2404,112 @@
             "verified_at": "2026-10-24T23:28:03+09:00",
             "source_confidence": "specialist_db",
             "note": "Yandex 1–0 OG、第2マップ進行中／シリーズ未確定。精算しない。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261025-afternoon-results",
+      "kind": "result_update",
+      "at": "2026-10-25T07:19:42.665Z",
+      "source": "公開結果照合",
+      "note": "終了確認3件を勝敗・精算対象へ反映。NZは終了結果未確認で保留。",
+      "changes": [
+        {
+          "match_id": "2026-10-24-vitality-9z-cs2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "Vitality 2-0 9z"
+            },
+            "result_confirmed_at": "2026-10-25T07:19:42.665Z"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "確定結果",
+                "url": "https://www.hltv.org/matches/2399723/vitality-vs-9z-pgl-masters-bucharest-2026",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-25T07:19:42.665Z",
+            "source_confidence": "specialist_db",
+            "note": "勝利確定。取得オッズ不明のため利益額未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-24-yandex-og-dota2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "Team Yandex 2-0 OG"
+            },
+            "result_confirmed_at": "2026-10-25T07:19:42.665Z"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "確定結果",
+                "url": "https://cyberscore.live/en/matches/team-yandex-vs-og-190027/",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-25T07:19:42.665Z",
+            "source_confidence": "specialist_db",
+            "note": "勝利確定。取得オッズ不明のため利益額未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-25-philadelphia-milwaukee-nba",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 127,
+                "b": 116
+              },
+              "text": "Philadelphia 76ers 127-116 Milwaukee Bucks"
+            },
+            "result_confirmed_at": "2026-10-25T07:19:42.665Z"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "確定結果",
+                "url": "https://www.nba.com/game/mil-vs-phi-0022600106",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-25T07:19:42.665Z",
+            "source_confidence": "official",
+            "note": "勝利確定。取得オッズ不明のため利益額未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-25-newzealand-cook-rugby",
+          "set": {
+            "status": "live"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "FOX途中経過",
+                "url": "https://www.foxsports.com.au/nrl/rugby-league-world-cup/match-centre/RLW20260109",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-25T07:19:42.665Z",
+            "source_confidence": "specialist_db",
+            "note": "取得先に75分68-16の途中経過。終了確定情報は未取得、精算保留。"
           }
         }
       ],
