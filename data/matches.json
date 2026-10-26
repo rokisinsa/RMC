@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-25T07:19:42.665Z",
+    "as_of": "2026-10-26T08:28:07.893Z",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -323,6 +323,13 @@
       "at": "2026-10-25T07:19:42.665Z",
       "source": "ユーザー指定・公開日程照合",
       "note": "Yandexとホームのサンダーを正式採用"
+    },
+    {
+      "run_id": "mr-20261026-boston-registration",
+      "kind": "human_review",
+      "at": "2026-10-26T08:28:07.893Z",
+      "source": "ユーザー指定・公開日程照合",
+      "note": "Boston–Chicagoを追加。Yandex–Liquidは既存採用を維持し重複登録しない。"
     }
   ],
   "matches": [
@@ -5841,6 +5848,43 @@
             }
           ],
           "note": "指定2件の正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-27-boston-chicago-nba",
+      "sport": "NBA",
+      "competition": "NBA 2026–27",
+      "side_a": "Boston Celtics",
+      "side_b": "Chicago Bulls",
+      "home_side": "side_a",
+      "venue": "TD Garden／Boston（ボストンホーム）",
+      "start_at": "2026-10-27T08:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "TD Garden公式の10/26 19:30 EDTをJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.tdgarden.com/events/detail/celtics-vs-bulls-26-27",
+        "https://www.covers.com/sport/basketball/nba/matchup/388607",
+        "https://www.covers.com/sport/basketball/nba/teams/main/boston-celtics",
+        "https://www.covers.com/sport/basketball/nba/teams/main/chicago-bulls",
+        "https://sports.iheart.com/content/2026-10-26-bulls-vs-celtics-injury-report-oct-26/",
+        "https://www.fanduel.com/research/nba-predictions-odds-10-26-2026"
+      ],
+      "verified_at": "2026-10-26T08:28:07.893Z",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261026-boston-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー正式採用"
         }
       ]
     }

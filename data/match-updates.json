@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-25T07:19:42.665Z",
+    "as_of": "2026-10-26T08:28:07.893Z",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -2510,6 +2510,165 @@
             "verified_at": "2026-10-25T07:19:42.665Z",
             "source_confidence": "specialist_db",
             "note": "取得先に75分68-16の途中経過。終了確定情報は未取得、精算保留。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261026-results-and-schedule",
+      "kind": "result_update",
+      "at": "2026-10-26T08:28:07.893Z",
+      "source": "公開結果・日程照合",
+      "note": "5件の終了結果を確定し、Yandex–Liquidの開始予定を更新。",
+      "changes": [
+        {
+          "match_id": "2026-10-25-spirit-astra-dota2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "Team Spirit 2-0 Astra Invicta"
+            },
+            "result_confirmed_at": "2026-10-26T08:28:07.893Z"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "確定結果",
+                "url": "https://cyberscore.live/en/matches/team-spirit-vs-astra-invicta-190035/",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-26T08:28:07.893Z",
+            "source_confidence": "specialist_db",
+            "note": "最終スコアを確認。勝敗確定、取得オッズ未登録のため利益額未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-25-newzealand-cook-rugby",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 82,
+                "b": 16
+              },
+              "text": "New Zealand 82-16 Cook Islands"
+            },
+            "result_confirmed_at": "2026-10-26T08:28:07.893Z"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "確定結果",
+                "url": "https://www.skysports.com/rugby-league/new-zealand-vs-cook-islands/64275",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-26T08:28:07.893Z",
+            "source_confidence": "specialist_db",
+            "note": "最終スコアを確認。勝敗確定、取得オッズ未登録のため利益額未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-25-australia-fiji-rugby",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 36,
+                "b": 22
+              },
+              "text": "Australia 36-22 Fiji"
+            },
+            "result_confirmed_at": "2026-10-26T08:28:07.893Z"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "確定結果",
+                "url": "https://www.nrl.com/draw/rugby-league-world-cup/2026/round-2/australia-v-fiji/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-26T08:28:07.893Z",
+            "source_confidence": "official",
+            "note": "最終スコアを確認。勝敗確定、取得オッズ未登録のため利益額未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-25-yandex-1win-dota2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "Team Yandex 2-0 1win"
+            },
+            "result_confirmed_at": "2026-10-26T08:28:07.893Z"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "確定結果",
+                "url": "https://ensigame.com/matches/dota-2/2200214-team-yandex-yandex-vs-1w-team-1win-pari-25-10-26",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-26T08:28:07.893Z",
+            "source_confidence": "specialist_db",
+            "note": "最終スコアを確認。勝敗確定、取得オッズ未登録のため利益額未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-26-thunder-clippers-nba",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 108,
+                "b": 101
+              },
+              "text": "Oklahoma City Thunder 108-101 LA Clippers"
+            },
+            "result_confirmed_at": "2026-10-26T08:28:07.893Z"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "確定結果",
+                "url": "https://www.covers.com/sport/basketball/nba/matchup/388600",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-26T08:28:07.893Z",
+            "source_confidence": "specialist_db",
+            "note": "最終スコアを確認。勝敗確定、取得オッズ未登録のため利益額未計算。"
+          }
+        },
+        {
+          "match_id": "2026-10-26-yandex-liquid-dota2",
+          "set": {
+            "start_at": "2026-10-26T21:00:00+09:00",
+            "start_time_note": "10/26確認：CyberScore・Hawk Liveは12:00 UTC。ESI等の11:00 UTC旧表示あり。開始直前再確認。"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Hawk Live日程",
+                "url": "https://hawk.live/dota-2/matches/pari-universe-group-stage/team-yandex-vs-team-liquid",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-26T08:28:07.893Z",
+            "source_confidence": "specialist_db",
+            "note": "最新の12:00 UTCを採用、旧20時JST表示との差を明記。"
           }
         }
       ],
