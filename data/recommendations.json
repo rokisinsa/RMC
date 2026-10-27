@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-26T08:28:07.893Z",
+    "as_of": "2026-10-27T08:23:17.605Z",
     "status": "active",
     "note": "推奨取引のみ運用。1件仮想100USD。10/18誤登録Salzburgはvoid（勝敗対象外）で保存、EVOS vs Alter EgoのAlter Ego勝利へ訂正。ベガス申告オッズ1.44倍の参考精算は維持。"
   },
@@ -291,6 +291,12 @@
       "started_at": "2026-10-26T08:28:07.893Z",
       "slot": "adhoc",
       "note": "ボストン正式採用。Yandex既存採用を再確認。仮想100USD。"
+    },
+    {
+      "run_id": "rec-user-approved-20261027-three",
+      "started_at": "2026-10-27T08:23:17.605Z",
+      "slot": "adhoc",
+      "note": "ユーザー指定3件。仮想各100USD。Arsenalは90分勝利。"
     }
   ],
   "picks": [
@@ -5889,6 +5895,93 @@
         "odds_unverified"
       ],
       "note": "ユーザー正式採用。仮想100USD。実購入なし。参考表示価格と取得オッズは区別。"
+    },
+    {
+      "id": "rec-2026-10-28-boston-brooklyn-nba",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261027-three",
+      "match_id": "2026-10-28-boston-brooklyn-nba",
+      "source_event_id": "web-2026-10-28-boston-brooklyn-nba",
+      "market": "match_winner",
+      "market_label": "延長込み勝者",
+      "selection": "side_a",
+      "selection_label": "Boston Celtics",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-27T08:23:17.605Z",
+      "bet_at": null,
+      "locked_at": "2026-10-27T08:23:17.605Z",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−",
+        "model_version": "rmc-user-approved-20261027",
+        "summary": "BOS直近5勝5敗、BKN2勝8敗。H2H9勝1敗。今季2勝1敗対0勝3敗。ホームと対戦実績からBOS優勢。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USD。実購入なし。取得オッズ未登録。条件付き評価は正式採用後も維持。"
+    },
+    {
+      "id": "rec-2026-10-28-furia-tyloo-cs2",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261027-three",
+      "match_id": "2026-10-28-furia-tyloo-cs2",
+      "source_event_id": "web-2026-10-28-furia-tyloo-cs2",
+      "market": "match_winner",
+      "market_label": "BO3シリーズ勝者",
+      "selection": "side_a",
+      "selection_label": "FURIA",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-27T08:23:17.605Z",
+      "bet_at": null,
+      "locked_at": "2026-10-27T08:23:17.605Z",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "A−",
+        "model_version": "rmc-user-approved-20261027",
+        "summary": "FURIA直近6勝4敗、TYLOO4勝6敗。確認H2Hは1シリーズFURIA2-0（2マップ）。VRS5位対49位、相手水準を考慮しFURIA優勢。共通5相手すべて優勢ではない。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USD。実購入なし。取得オッズ未登録。条件付き評価は正式採用後も維持。"
+    },
+    {
+      "id": "rec-2026-10-28-fleetwood-arsenal-football",
+      "system": "recommendations",
+      "run_id": "rec-user-approved-20261027-three",
+      "match_id": "2026-10-28-fleetwood-arsenal-football",
+      "source_event_id": "web-2026-10-28-fleetwood-arsenal-football",
+      "market": "match_1x2",
+      "market_label": "90分勝敗（引き分けは不的中）",
+      "selection": "side_b",
+      "selection_label": "Arsenal",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-10-27T08:23:17.605Z",
+      "bet_at": null,
+      "locked_at": "2026-10-27T08:23:17.605Z",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "条件付き",
+        "model_version": "rmc-user-approved-20261027",
+        "summary": "Arsenal直近8勝1分1敗・19得点9失点、Fleetwood3勝1分6敗・13得点15失点。1部対4部のカテゴリー差。H2Hデータ・直近10の共通相手は確認できず、比較裏付け不足の条件付き評価を維持。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー正式採用。仮想100USD。実購入なし。取得オッズ未登録。条件付き評価は正式採用後も維持。"
     }
   ]
 }

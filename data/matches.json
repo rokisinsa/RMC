@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-26T08:28:07.893Z",
+    "as_of": "2026-10-27T08:23:17.605Z",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -330,6 +330,13 @@
       "at": "2026-10-26T08:28:07.893Z",
       "source": "ユーザー指定・公開日程照合",
       "note": "Boston–Chicagoを追加。Yandex–Liquidは既存採用を維持し重複登録しない。"
+    },
+    {
+      "run_id": "mr-20261027-three-registration",
+      "kind": "human_review",
+      "at": "2026-10-27T08:23:17.605Z",
+      "source": "ユーザー指定・公開日程照合",
+      "note": "Boston–Brooklyn、FURIA–TYLOO、Fleetwood–Arsenalを追加。"
     }
   ],
   "matches": [
@@ -5885,6 +5892,112 @@
             }
           ],
           "note": "ユーザー正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-boston-brooklyn-nba",
+      "sport": "NBA",
+      "competition": "NBA 2026–27",
+      "side_a": "Boston Celtics",
+      "side_b": "Brooklyn Nets",
+      "home_side": "side_a",
+      "venue": "TD Garden／Boston（ボストンホーム）",
+      "start_at": "2026-10-28T08:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公開日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.covers.com/sport/basketball/nba/matchup/388614",
+        "https://www.nba.com/game/bkn-vs-bos-0022600128",
+        "https://basketball.realgm.com/nba/teams/Boston-Celtics/2/Schedule/2026",
+        "https://www.covers.com/sport/basketball/nba/teams/main/brooklyn-nets"
+      ],
+      "verified_at": "2026-10-27T08:23:17.605Z",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261027-three-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定3件の正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-furia-tyloo-cs2",
+      "sport": "CS2",
+      "competition": "PGL Masters Bucharest 2026／Swiss Round 4",
+      "side_a": "FURIA",
+      "side_b": "TYLOO",
+      "home_side": "neutral",
+      "venue": "Bucharest／LAN・中立",
+      "start_at": "2026-10-28T02:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公開日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.hltv.org/matches/2399748/furia-vs-tyloo-pgl-masters-bucharest-2026",
+        "https://www.hltv.org/results?team=8297",
+        "https://www.hltv.org/results?team=4863",
+        "https://www.hltv.org/matches/2399739/spirit-vs-furia-pgl-masters-bucharest-2026",
+        "https://www.hltv.org/matches/2399738/9z-vs-tyloo-pgl-masters-bucharest-2026"
+      ],
+      "verified_at": "2026-10-27T08:23:17.605Z",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261027-three-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定3件の正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-fleetwood-arsenal-football",
+      "sport": "Football",
+      "competition": "Carabao Cup 2026–27／4回戦",
+      "side_a": "Fleetwood Town",
+      "side_b": "Arsenal",
+      "home_side": "side_a",
+      "venue": "Highbury Stadium／Fleetwood（フリートウッドホーム）",
+      "start_at": "2026-10-28T05:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公開日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232",
+        "https://www.11v11.com/teams/arsenal/option/fixtures/",
+        "https://tipsterarea.com/match/fleetwood-arsenal-efl-cup-england-952254",
+        "https://www.sportsmole.co.uk/football/arsenal/league-cup/team-news/fleetwood-vs-arsenal-injury-suspension-list-predicted-xis_607677.html"
+      ],
+      "verified_at": "2026-10-27T08:23:17.605Z",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261027-three-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定3件の正式採用"
         }
       ]
     }

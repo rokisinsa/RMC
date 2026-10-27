@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-26T08:28:07.893Z",
+  "generated_at": "2026-10-27T08:23:17.605Z",
   "window": {
-    "from": "2026-10-26T00:00:00+09:00",
-    "to": "2026-10-28T00:00:00+09:00",
+    "from": "2026-10-27T00:00:00+09:00",
+    "to": "2026-10-29T00:00:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "ボストン追加・Yandex分析更新。終了5件は結果確定して履歴へ。"
+    "note": "指定3件を本日の分析に追加。終了2件は結果確定し履歴・収支へ。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -19,343 +19,71 @@
   ],
   "coverage": {
     "checked": [
-      "ユーザー指定のボストン・Yandex",
-      "本日の分析の全6件の結果・日程確認"
+      "ユーザー指定3試合",
+      "掲載中2試合の最終結果"
     ],
-    "note": "Yandexは既存採用を更新し重複なし。本日の分析を一本化。"
+    "note": "本日の分析は一本化。全世界の全試合を網羅したものではない。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-10-26-yandex-liquid-dota2",
-      "event_id": "web-2026-10-26-yandex-liquid-dota2",
-      "matchup": "Team Yandex vs Team Liquid",
-      "favored": "Team Yandex",
-      "selection_label": "Team Yandex",
-      "sport": "Dota 2",
-      "competition": "PARI Universe 2026／Group A",
-      "start_jst": "2026-10-26T21:00:00+09:00",
-      "venue": "オンライン／中立",
-      "format": "BO3シリーズ勝者",
-      "status": "formal",
-      "gap_grade": "A",
-      "price_grade": "参考オッズ・取得オッズ未登録",
-      "market": "match_winner",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "結果未確定／取得オッズ未登録",
-      "odds": {
-        "min": 1.15,
-        "max": 1.2,
-        "book_examples": "10/26確認：ESI掲載Bet365・GG.bet1.20、1xBet1.19、Betway・Stake1.15。参考価格、実取得なし。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-25T07:19:42.665Z",
-      "analysis_reviewed_at": "2026-10-26T08:28:07.893Z",
-      "sources": [
-        "https://cyberscore.live/en/matches/team-yandex-vs-team-liquid-190034/",
-        "https://cyberscore.live/en/matches/team-yandex-vs-team-liquid-190034/head-to-head/",
-        "https://cyberscore.live/en/teams/team-liquid/matches/",
-        "https://cyberscore.live/en/teams/team-yandex/matches/",
-        "https://esportsinsider.com/betting-odds/dota2/match/team-yandex-vs-team-liquid-1753741"
-      ],
-      "conclusion": "Yandex直近9勝1敗・7連勝、Liquid4勝6敗。H2H6勝2敗（同じBO3は3勝1敗）。共通5相手のうち4相手で勝敗優勢、1相手は双方勝利。同大会のOG・GamerLegion比較を重視。",
-      "risk": "BO3勝者を評価。2-0勝利は別条件。旧編成・時期差のあるH2Hは割引。開始は最新21時JST予定、一部20時旧表示あり。",
-      "analysis_detail": {
-        "summary": "Yandex直近9勝1敗・7連勝、Liquid4勝6敗。H2H6勝2敗（同じBO3は3勝1敗）。共通5相手のうち4相手で勝敗優勢、1相手は双方勝利。同大会のOG・GamerLegion比較を重視。",
-        "availability": {
-          "text": "BO3勝者を評価。2-0勝利は別条件。旧編成・時期差のあるH2Hは割引。開始は最新21時JST予定、一部20時旧表示あり。"
-        },
-        "home_away": {
-          "text": "オンライン／中立"
-        },
-        "market": {
-          "text": "仮想100USD、勝者市場。参考オッズは実取得価格として精算しない。"
-        },
-        "sport_specific": {
-          "text": "過去試合日付は資料掲載日。旧季・旧ロスターを含む。"
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Team Yandex",
-            "items": [
-              {
-                "date": "2026/10/25",
-                "opponent": "1win",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026/10/24",
-                "opponent": "OG",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026/10/22",
-                "opponent": "GamerLegion",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026/10/11",
-                "opponent": "Spirit",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026/10/10",
-                "opponent": "Spirit",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026/10/08",
-                "opponent": "PARIVISION",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026/10/08",
-                "opponent": "LGD",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026/10/03",
-                "opponent": "Spirit",
-                "result": "L 1-2"
-              },
-              {
-                "date": "2026/10/01",
-                "opponent": "BetBoom",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026/09/30",
-                "opponent": "MOUZ",
-                "result": "W 2-0"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Team Liquid",
-            "items": [
-              {
-                "date": "2026/10/25",
-                "opponent": "OG",
-                "result": "L 1-2"
-              },
-              {
-                "date": "2026/10/23",
-                "opponent": "GamerLegion",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026/10/22",
-                "opponent": "1win",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026/10/02",
-                "opponent": "GamerLegion",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026/10/01",
-                "opponent": "Aurora",
-                "result": "L 1-2"
-              },
-              {
-                "date": "2026/09/29",
-                "opponent": "Yakult Brothers",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026/08/22",
-                "opponent": "Spirit",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026/08/21",
-                "opponent": "Falcons",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026/08/20",
-                "opponent": "Yandex",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026/08/15",
-                "opponent": "Aurora",
-                "result": "W 2-1"
-              }
-            ]
-          }
-        },
-        "h2h": {
-          "summary": "確認8件6勝2敗。形式・編成差あり。",
-          "items": [
-            {
-              "date": "2026/08/20",
-              "opponent": "Liquid",
-              "result": "W 2-0"
-            },
-            {
-              "date": "2026/08/14",
-              "opponent": "Liquid",
-              "result": "L 1-2"
-            },
-            {
-              "date": "2026/05/26",
-              "opponent": "Liquid",
-              "result": "W 1-0 BO1"
-            },
-            {
-              "date": "2026/03/15",
-              "opponent": "Liquid",
-              "result": "W 3-2 BO5"
-            },
-            {
-              "date": "2026/03/13",
-              "opponent": "Liquid",
-              "result": "W 2-0"
-            },
-            {
-              "date": "2026/02/17",
-              "opponent": "Liquid",
-              "result": "L 0-2 BO2"
-            },
-            {
-              "date": "2026/02/05",
-              "opponent": "Liquid",
-              "result": "W 1-0 BO1"
-            },
-            {
-              "date": "2026/01/31",
-              "opponent": "Liquid",
-              "result": "W 2-0"
-            }
-          ]
-        },
-        "common_opponent_comparison": {
-          "summary": "共通5相手：Yandex4優勢、1同等。OG・GamerLegion・1winは同大会、Spiritは時期差、Auroraは直近10より前まで拡張。",
-          "items": [
-            {
-              "opponent": "OG",
-              "side_a": {
-                "date": "2026/10/24",
-                "result": "W 2-0"
-              },
-              "side_b": {
-                "date": "2026/10/25",
-                "result": "L 1-2"
-              },
-              "comparison": "Yandex優勢／同大会"
-            },
-            {
-              "opponent": "GamerLegion",
-              "side_a": {
-                "date": "2026/10/22",
-                "result": "W 2-0"
-              },
-              "side_b": {
-                "date": "2026/10/23",
-                "result": "L 0-2"
-              },
-              "comparison": "Yandex優勢"
-            },
-            {
-              "opponent": "Spirit",
-              "side_a": {
-                "date": "2026/10/10",
-                "result": "W 2-0"
-              },
-              "side_b": {
-                "date": "2026/08/22",
-                "result": "L 0-2"
-              },
-              "comparison": "Yandex優勢／時期差あり"
-            },
-            {
-              "opponent": "Aurora",
-              "side_a": {
-                "date": "2026/09/25",
-                "result": "W 2-1"
-              },
-              "side_b": {
-                "date": "2026/10/01",
-                "result": "L 1-2"
-              },
-              "comparison": "Yandex優勢"
-            },
-            {
-              "opponent": "1win",
-              "side_a": {
-                "date": "2026/10/25",
-                "result": "W 2-0"
-              },
-              "side_b": {
-                "date": "2026/10/22",
-                "result": "W 2-0"
-              },
-              "comparison": "双方勝利"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "rank": 2,
-      "match_id": "2026-10-27-boston-chicago-nba",
-      "event_id": "web-2026-10-27-boston-chicago-nba",
-      "matchup": "Boston Celtics vs Chicago Bulls",
+      "match_id": "2026-10-28-boston-brooklyn-nba",
+      "event_id": "web-2026-10-28-boston-brooklyn-nba",
+      "matchup": "Boston Celtics vs Brooklyn Nets",
       "favored": "Boston Celtics",
       "selection_label": "Boston Celtics",
       "sport": "NBA",
       "competition": "NBA 2026–27",
-      "start_jst": "2026-10-27T08:30:00+09:00",
+      "start_jst": "2026-10-28T08:30:00+09:00",
       "venue": "TD Garden／Boston（ボストンホーム）",
       "format": "延長込み勝者",
       "status": "formal",
-      "gap_grade": "A",
-      "price_grade": "参考オッズ・取得オッズ未登録",
+      "gap_grade": "A−",
+      "price_grade": "取得オッズ未登録",
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
       "profit_status": "結果未確定／取得オッズ未登録",
       "odds": {
-        "min": 1.1219512195121952,
-        "max": 1.1219512195121952,
-        "book_examples": "10/26確認：FanDuel勝者価格-820＝約1.12倍。参考価格であり実取得価格ではない。"
+        "min": null,
+        "max": null,
+        "book_examples": "取得オッズ未登録。過去の別カードのオッズは流用しない。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-26T08:28:07.893Z",
-      "analysis_reviewed_at": "2026-10-26T08:28:07.893Z",
+      "added_at": "2026-10-27T08:23:17.605Z",
+      "analysis_reviewed_at": "2026-10-27T08:23:17.605Z",
       "sources": [
-        "https://www.tdgarden.com/events/detail/celtics-vs-bulls-26-27",
-        "https://www.covers.com/sport/basketball/nba/matchup/388607",
-        "https://www.covers.com/sport/basketball/nba/teams/main/boston-celtics",
-        "https://www.covers.com/sport/basketball/nba/teams/main/chicago-bulls",
-        "https://sports.iheart.com/content/2026-10-26-bulls-vs-celtics-injury-report-oct-26/",
-        "https://www.fanduel.com/research/nba-predictions-odds-10-26-2026"
+        "https://www.covers.com/sport/basketball/nba/matchup/388614",
+        "https://www.nba.com/game/bkn-vs-bos-0022600128",
+        "https://basketball.realgm.com/nba/teams/Boston-Celtics/2/Schedule/2026",
+        "https://www.covers.com/sport/basketball/nba/teams/main/brooklyn-nets"
       ],
-      "conclusion": "ボストン勝利A。H2H直近10戦8勝2敗、直近公式戦5勝5敗対3勝7敗。ホーム、シカゴの今季平均128失点と欠場状況を評価。共通相手は直近10同士で2組のみ、両組ともボストン優勢だが前季を含む。",
-      "risk": "今季はBOS1勝1敗、CHI1勝2敗の小標本。BOS直近10の7件は前季76ers戦。CHIのClaxton欠場、P.Williams・Essengue出場不透明。BOS Carter欠場。低オッズの価格優位は未証明。大差ハンデ勝利とは区別。",
+      "conclusion": "BOS直近5勝5敗、BKN2勝8敗。H2H9勝1敗。今季2勝1敗対0勝3敗。ホームと対戦実績からBOS優勢。",
+      "risk": "BOSは連戦2日目。George・Robinson等の休養は開始前確認。直近10の7試合が昨季PHIとの同一シリーズ。共通相手5組は昨季まで拡張した参考比較であり現編成の優位を保証しない。大差ハンデは別評価。",
       "analysis_detail": {
-        "summary": "ボストン勝利A。H2H直近10戦8勝2敗、直近公式戦5勝5敗対3勝7敗。ホーム、シカゴの今季平均128失点と欠場状況を評価。共通相手は直近10同士で2組のみ、両組ともボストン優勢だが前季を含む。",
+        "summary": "BOS直近5勝5敗、BKN2勝8敗。H2H9勝1敗。今季2勝1敗対0勝3敗。ホームと対戦実績からBOS優勢。",
         "availability": {
-          "text": "今季はBOS1勝1敗、CHI1勝2敗の小標本。BOS直近10の7件は前季76ers戦。CHIのClaxton欠場、P.Williams・Essengue出場不透明。BOS Carter欠場。低オッズの価格優位は未証明。大差ハンデ勝利とは区別。"
+          "text": "BOSは連戦2日目。George・Robinson等の休養は開始前確認。直近10の7試合が昨季PHIとの同一シリーズ。共通相手5組は昨季まで拡張した参考比較であり現編成の優位を保証しない。大差ハンデは別評価。"
         },
         "home_away": {
-          "text": "TD Garden／Boston（ボストンホーム）。BOSは現地10/23以来、CHIは10/24以来。"
+          "text": "TD Garden／Boston（ボストンホーム）"
         },
         "market": {
-          "text": "延長込み勝者。仮想100USD。参考価格-820（約1.12倍）、取得オッズ未登録。"
+          "text": "延長込み勝者。仮想100USD。取得オッズ未登録。"
         },
         "sport_specific": {
-          "text": "過去成績の日付は現地掲載日。前季プレーオフと現季を区別。H2H・共通相手の古さを割引。"
+          "text": "過去成績の日付は掲載元現地日。スコアは各チーム側を左。旧季・BO5・編成差を区別。"
         },
         "recent_form": {
           "side_a": {
             "label": "Boston Celtics",
             "items": [
+              {
+                "date": "2026/10/26",
+                "opponent": "CHI",
+                "result": "W 134-99"
+              },
               {
                 "date": "2026/10/23",
                 "opponent": "NYK",
@@ -400,176 +128,609 @@
                 "date": "2026/04/19",
                 "opponent": "PHI",
                 "result": "W 123-91"
-              },
-              {
-                "date": "2026/04/12",
-                "opponent": "ORL",
-                "result": "W 113-108"
               }
             ]
           },
           "side_b": {
-            "label": "Chicago Bulls",
+            "label": "Brooklyn Nets",
             "items": [
               {
-                "date": "2026/10/24",
-                "opponent": "WAS",
-                "result": "L 120-124"
+                "date": "2026/10/25",
+                "opponent": "IND",
+                "result": "L 109-136"
               },
               {
-                "date": "2026/10/23",
-                "opponent": "MIL",
-                "result": "W 132-125"
+                "date": "2026/10/24",
+                "opponent": "CLE",
+                "result": "L 121-125"
               },
               {
                 "date": "2026/10/21",
-                "opponent": "TOR",
-                "result": "L 92-135"
+                "opponent": "CHA",
+                "result": "L 103-110"
               },
               {
                 "date": "2026/04/12",
-                "opponent": "DAL",
-                "result": "L 128-149"
+                "opponent": "TOR",
+                "result": "L 101-136"
               },
               {
                 "date": "2026/04/10",
-                "opponent": "ORL",
-                "result": "L 103-127"
+                "opponent": "MIL",
+                "result": "L 108-125"
               },
               {
                 "date": "2026/04/09",
-                "opponent": "WAS",
-                "result": "W 119-108"
+                "opponent": "IND",
+                "result": "L 94-123"
               },
               {
                 "date": "2026/04/07",
-                "opponent": "WAS",
-                "result": "W 129-98"
+                "opponent": "MIL",
+                "result": "W 96-90"
               },
               {
                 "date": "2026/04/05",
-                "opponent": "PHX",
-                "result": "L 110-120"
+                "opponent": "WAS",
+                "result": "W 121-115"
               },
               {
                 "date": "2026/04/03",
-                "opponent": "NYK",
-                "result": "L 96-136"
+                "opponent": "ATL",
+                "result": "L 107-141"
               },
               {
-                "date": "2026/04/01",
-                "opponent": "IND",
-                "result": "L 126-145"
+                "date": "2026/03/31",
+                "opponent": "CHA",
+                "result": "L 86-117"
               }
             ]
           }
         },
         "h2h": {
-          "summary": "ボストン視点8勝2敗。過去季を含む。",
+          "summary": "BOS視点9勝1敗。延長勝利・接戦を含み大差勝利とは区別。",
           "items": [
             {
-              "date": "2026/02/11",
-              "opponent": "CHI",
-              "result": "W 124-105"
+              "date": "2026/02/27",
+              "opponent": "Brooklyn Nets",
+              "result": "W 148-111"
             },
             {
-              "date": "2026/01/24",
-              "opponent": "CHI",
-              "result": "L 111-114"
+              "date": "2026/01/23",
+              "opponent": "Brooklyn Nets",
+              "result": "W 130-126 2OT"
             },
             {
-              "date": "2026/01/05",
-              "opponent": "CHI",
-              "result": "W 115-101"
+              "date": "2025/11/21",
+              "opponent": "Brooklyn Nets",
+              "result": "L 105-113"
             },
             {
-              "date": "2025/01/29",
-              "opponent": "CHI",
-              "result": "W 122-100"
+              "date": "2025/11/18",
+              "opponent": "Brooklyn Nets",
+              "result": "W 113-99"
             },
             {
-              "date": "2024/12/21",
-              "opponent": "CHI",
-              "result": "W 123-98"
+              "date": "2025/03/18",
+              "opponent": "Brooklyn Nets",
+              "result": "W 104-96"
             },
             {
-              "date": "2024/12/19",
-              "opponent": "CHI",
-              "result": "L 108-117"
+              "date": "2025/03/15",
+              "opponent": "Brooklyn Nets",
+              "result": "W 115-113"
             },
             {
-              "date": "2024/11/29",
-              "opponent": "CHI",
-              "result": "W 138-129"
+              "date": "2024/11/13",
+              "opponent": "Brooklyn Nets",
+              "result": "W 139-114"
             },
             {
-              "date": "2024/03/23",
-              "opponent": "CHI",
-              "result": "W 124-113"
+              "date": "2024/11/08",
+              "opponent": "Brooklyn Nets",
+              "result": "W 108-104 OT"
             },
             {
-              "date": "2024/02/22",
-              "opponent": "CHI",
-              "result": "W 129-112"
+              "date": "2024/02/14",
+              "opponent": "Brooklyn Nets",
+              "result": "W 136-86"
             },
             {
-              "date": "2023/11/28",
-              "opponent": "CHI",
-              "result": "W 124-97"
+              "date": "2024/02/13",
+              "opponent": "Brooklyn Nets",
+              "result": "W 118-110"
             }
           ]
         },
         "common_opponent_comparison": {
-          "summary": "直近10試合同士の共通相手は2組、両組ボストン優勢。ただし前季・約半年の時期差を含む。",
+          "summary": "今季のみ・直近10同士では共通相手0。昨季まで拡張した5相手。時期・編成差のため補助材料。",
           "items": [
             {
-              "opponent": "NYK",
+              "opponent": "CHA",
               "side_a": {
-                "date": "2026/10/23",
-                "result": "W 107-103"
+                "date": "2026/04/07",
+                "result": "W 113-102"
               },
               "side_b": {
-                "date": "2026/04/03",
-                "result": "L 96-136"
+                "date": "2026/10/21",
+                "result": "L 103-110"
               },
-              "comparison": "BOS優勢だが約半年差"
+              "comparison": "BOS優勢／シーズン差"
             },
             {
-              "opponent": "ORL",
+              "opponent": "TOR",
               "side_a": {
+                "date": "2026/04/05",
+                "result": "W 115-101"
+              },
+              "side_b": {
                 "date": "2026/04/12",
-                "result": "W 113-108"
+                "result": "L 101-136"
+              },
+              "comparison": "BOS優勢／昨季"
+            },
+            {
+              "opponent": "MIL",
+              "side_a": {
+                "date": "2026/04/03",
+                "result": "W 133-101"
               },
               "side_b": {
                 "date": "2026/04/10",
-                "result": "L 103-127"
+                "result": "L 108-125"
               },
-              "comparison": "BOS優勢／前季"
+              "comparison": "BOS優勢／昨季"
+            },
+            {
+              "opponent": "ATL",
+              "side_a": {
+                "date": "2026/03/30",
+                "result": "L 102-112"
+              },
+              "side_b": {
+                "date": "2026/04/03",
+                "result": "L 107-141"
+              },
+              "comparison": "両者敗戦、BOS負け幅小／昨季"
+            },
+            {
+              "opponent": "WAS",
+              "side_a": {
+                "date": "2026/03/14",
+                "result": "W 111-100"
+              },
+              "side_b": {
+                "date": "2026/04/05",
+                "result": "W 121-115"
+              },
+              "comparison": "両者勝利、差は限定的／昨季"
             }
           ]
         }
       }
-    }
-  ],
-  "rejected_examples": [
-    {
-      "sport": "Dota 2",
-      "matchup": "Team Yandex vs Team Spirit",
-      "reason": "ユーザー指定により今回のRMC反映対象から除外。"
     },
     {
-      "sport": "女子バレーボール",
-      "matchup": "Kuzeyboru vs Afyon",
-      "reason": "ユーザー指定により今回のRMC反映対象から除外。"
+      "rank": 2,
+      "match_id": "2026-10-28-furia-tyloo-cs2",
+      "event_id": "web-2026-10-28-furia-tyloo-cs2",
+      "matchup": "FURIA vs TYLOO",
+      "favored": "FURIA",
+      "selection_label": "FURIA",
+      "sport": "CS2",
+      "competition": "PGL Masters Bucharest 2026／Swiss Round 4",
+      "start_jst": "2026-10-28T02:00:00+09:00",
+      "venue": "Bucharest／LAN・中立",
+      "format": "BO3シリーズ勝者",
+      "status": "formal",
+      "gap_grade": "A−",
+      "price_grade": "取得オッズ未登録",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "結果未確定／取得オッズ未登録",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "取得オッズ未登録。過去の別カードのオッズは流用しない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-27T08:23:17.605Z",
+      "analysis_reviewed_at": "2026-10-27T08:23:17.605Z",
+      "sources": [
+        "https://www.hltv.org/matches/2399748/furia-vs-tyloo-pgl-masters-bucharest-2026",
+        "https://www.hltv.org/results?team=8297",
+        "https://www.hltv.org/results?team=4863",
+        "https://www.hltv.org/matches/2399739/spirit-vs-furia-pgl-masters-bucharest-2026",
+        "https://www.hltv.org/matches/2399738/9z-vs-tyloo-pgl-masters-bucharest-2026"
+      ],
+      "conclusion": "FURIA直近6勝4敗、TYLOO4勝6敗。確認H2Hは1シリーズFURIA2-0（2マップ）。VRS5位対49位、相手水準を考慮しFURIA優勢。共通5相手すべて優勢ではない。",
+      "risk": "両者大会1勝2敗で敗者脱落。FURIAは直前NAVI・Spiritに連敗。TYLOOはzhokiNg代役起用でも9zに2-1勝利。2-0固定はシリーズ勝利より弱い評価。",
+      "analysis_detail": {
+        "summary": "FURIA直近6勝4敗、TYLOO4勝6敗。確認H2Hは1シリーズFURIA2-0（2マップ）。VRS5位対49位、相手水準を考慮しFURIA優勢。共通5相手すべて優勢ではない。",
+        "availability": {
+          "text": "両者大会1勝2敗で敗者脱落。FURIAは直前NAVI・Spiritに連敗。TYLOOはzhokiNg代役起用でも9zに2-1勝利。2-0固定はシリーズ勝利より弱い評価。"
+        },
+        "home_away": {
+          "text": "Bucharest／LAN・中立"
+        },
+        "market": {
+          "text": "BO3シリーズ勝者。仮想100USD。取得オッズ未登録。"
+        },
+        "sport_specific": {
+          "text": "過去成績の日付は掲載元現地日。スコアは各チーム側を左。旧季・BO5・編成差を区別。"
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "FURIA",
+            "items": [
+              {
+                "date": "2026/10/26",
+                "opponent": "Spirit",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/10/25",
+                "opponent": "NAVI",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/24",
+                "opponent": "DENDELE",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/18",
+                "opponent": "BetBoom",
+                "result": "W 3-2 BO5"
+              },
+              {
+                "date": "2026/10/17",
+                "opponent": "Aurora",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/16",
+                "opponent": "Legacy",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/14",
+                "opponent": "BetBoom",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/09",
+                "opponent": "MOUZ",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/07",
+                "opponent": "9z",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/06",
+                "opponent": "Aurora",
+                "result": "L 1-2"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "TYLOO",
+            "items": [
+              {
+                "date": "2026/10/26",
+                "opponent": "9z",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/10/25",
+                "opponent": "Spirit",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/24",
+                "opponent": "FUT",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/05",
+                "opponent": "M80",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/10/04",
+                "opponent": "9z",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/10/03",
+                "opponent": "Falcons",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/09/13",
+                "opponent": "DEPO",
+                "result": "W 3-0 BO5"
+              },
+              {
+                "date": "2026/09/10",
+                "opponent": "NEXVOID",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/10",
+                "opponent": "Alliance",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026/09/09",
+                "opponent": "NEXVOID",
+                "result": "W 2-0"
+              }
+            ]
+          }
+        },
+        "h2h": {
+          "summary": "掲載で確認できた1シリーズのみ。2勝表記はマップ単位。10シリーズ未確認。",
+          "items": [
+            {
+              "date": "2026/03/19",
+              "opponent": "TYLOO",
+              "result": "W 2-0（Mirage 13-8、Overpass 13-11）"
+            }
+          ]
+        },
+        "common_opponent_comparison": {
+          "summary": "直近約3か月の共通5相手。M80は勝敗差、Spirit・9zはマップ差の補助材料。全相手優勢ではない。",
+          "items": [
+            {
+              "opponent": "9z",
+              "side_a": {
+                "date": "2026/10/07",
+                "result": "W 2-0"
+              },
+              "side_b": {
+                "date": "2026/10/26",
+                "result": "W 2-1"
+              },
+              "comparison": "双方勝利"
+            },
+            {
+              "opponent": "Spirit",
+              "side_a": {
+                "date": "2026/10/26",
+                "result": "L 1-2"
+              },
+              "side_b": {
+                "date": "2026/10/25",
+                "result": "L 0-2"
+              },
+              "comparison": "同大会、FURIAのみ1マップ獲得"
+            },
+            {
+              "opponent": "FUT",
+              "side_a": {
+                "date": "2026/08/22",
+                "result": "L 1-2"
+              },
+              "side_b": {
+                "date": "2026/10/24",
+                "result": "L 0-2"
+              },
+              "comparison": "双方敗戦、時期差"
+            },
+            {
+              "opponent": "M80",
+              "side_a": {
+                "date": "2026/08/28",
+                "result": "W 2-0"
+              },
+              "side_b": {
+                "date": "2026/10/05",
+                "result": "L 1-2"
+              },
+              "comparison": "FURIA優勢"
+            },
+            {
+              "opponent": "GamerLegion",
+              "side_a": {
+                "date": "2026/09/08",
+                "result": "W 2-1"
+              },
+              "side_b": {
+                "date": "2026/09/09",
+                "result": "W 2-0"
+              },
+              "comparison": "双方勝利、スコアはTYLOOが良い"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "match_id": "2026-10-28-fleetwood-arsenal-football",
+      "event_id": "web-2026-10-28-fleetwood-arsenal-football",
+      "matchup": "Fleetwood Town vs Arsenal",
+      "favored": "Arsenal",
+      "selection_label": "Arsenal",
+      "sport": "Football",
+      "competition": "Carabao Cup 2026–27／4回戦",
+      "start_jst": "2026-10-28T05:00:00+09:00",
+      "venue": "Highbury Stadium／Fleetwood（フリートウッドホーム）",
+      "format": "90分勝敗（引き分けは不的中）",
+      "status": "formal",
+      "gap_grade": "条件付き",
+      "price_grade": "取得オッズ未登録",
+      "market": "match_1x2",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "結果未確定／取得オッズ未登録",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "取得オッズ未登録。過去の別カードのオッズは流用しない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-10-27T08:23:17.605Z",
+      "analysis_reviewed_at": "2026-10-27T08:23:17.605Z",
+      "sources": [
+        "https://www.skysports.com/football/fleetwood-town-vs-arsenal/5392900173048033232",
+        "https://www.11v11.com/teams/arsenal/option/fixtures/",
+        "https://tipsterarea.com/match/fleetwood-arsenal-efl-cup-england-952254",
+        "https://www.sportsmole.co.uk/football/arsenal/league-cup/team-news/fleetwood-vs-arsenal-injury-suspension-list-predicted-xis_607677.html"
+      ],
+      "conclusion": "Arsenal直近8勝1分1敗・19得点9失点、Fleetwood3勝1分6敗・13得点15失点。1部対4部のカテゴリー差。H2Hデータ・直近10の共通相手は確認できず、比較裏付け不足の条件付き評価を維持。",
+      "risk": "Saka・Saliba欠場報道、Rice等出場不透明。先発変更を確認。Fleetwood直近ホーム5試合3勝1分1敗、前ラウンドSheffield Unitedに1-0勝利。大差勝ちは別評価。今回は90分勝利で登録し、PK込み勝ち上がりとは区別。",
+      "analysis_detail": {
+        "summary": "Arsenal直近8勝1分1敗・19得点9失点、Fleetwood3勝1分6敗・13得点15失点。1部対4部のカテゴリー差。H2Hデータ・直近10の共通相手は確認できず、比較裏付け不足の条件付き評価を維持。",
+        "availability": {
+          "text": "Saka・Saliba欠場報道、Rice等出場不透明。先発変更を確認。Fleetwood直近ホーム5試合3勝1分1敗、前ラウンドSheffield Unitedに1-0勝利。大差勝ちは別評価。今回は90分勝利で登録し、PK込み勝ち上がりとは区別。"
+        },
+        "home_away": {
+          "text": "Highbury Stadium／Fleetwood（フリートウッドホーム）"
+        },
+        "market": {
+          "text": "90分勝敗（引き分けは不的中）。仮想100USD。取得オッズ未登録。"
+        },
+        "sport_specific": {
+          "text": "過去成績の日付は掲載元現地日。スコアは各チーム側を左。旧季・BO5・編成差を区別。"
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Fleetwood Town",
+            "items": [
+              {
+                "date": "2026/10/24",
+                "opponent": "Exeter",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/10/20",
+                "opponent": "Cheltenham",
+                "result": "L 2-4"
+              },
+              {
+                "date": "2026/10/17",
+                "opponent": "Rotherham",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/10",
+                "opponent": "Walsall",
+                "result": "D 1-1"
+              },
+              {
+                "date": "2026/10/06",
+                "opponent": "Barnsley",
+                "result": "W 4-1"
+              },
+              {
+                "date": "2026/10/03",
+                "opponent": "Salford",
+                "result": "L 0-1"
+              },
+              {
+                "date": "2026/09/26",
+                "opponent": "Rochdale",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/09/22",
+                "opponent": "Oldham",
+                "result": "L 0-1"
+              },
+              {
+                "date": "2026/09/19",
+                "opponent": "Barnet",
+                "result": "L 1-3"
+              },
+              {
+                "date": "2026/09/16",
+                "opponent": "Sheffield_United",
+                "result": "W 1-0"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Arsenal",
+            "items": [
+              {
+                "date": "2026/10/24",
+                "opponent": "Everton",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/10/21",
+                "opponent": "Bayern",
+                "result": "D 2-2"
+              },
+              {
+                "date": "2026/10/18",
+                "opponent": "Nottingham_Forest",
+                "result": "W 1-0"
+              },
+              {
+                "date": "2026/10/13",
+                "opponent": "Lille",
+                "result": "W 3-0"
+              },
+              {
+                "date": "2026/10/10",
+                "opponent": "Leeds",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026/09/19",
+                "opponent": "Brighton",
+                "result": "L 0-3"
+              },
+              {
+                "date": "2026/09/15",
+                "opponent": "Ipswich",
+                "result": "W 4-2"
+              },
+              {
+                "date": "2026/09/12",
+                "opponent": "Sunderland",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/09/09",
+                "opponent": "Napoli",
+                "result": "W 1-0"
+              },
+              {
+                "date": "2026/09/06",
+                "opponent": "Chelsea",
+                "result": "W 2-1"
+              }
+            ]
+          }
+        },
+        "h2h": {
+          "summary": "H2H掲載データなし。10試合を推測で補完しない。",
+          "items": []
+        },
+        "common_opponent_comparison": {
+          "summary": "両者の直近10試合に共通相手0。1〜2相手での補完も成立せず。",
+          "items": []
+        }
+      }
     }
   ],
+  "rejected_examples": [],
   "summary": {
     "pure_gap_top": [
-      "Team Yandex",
-      "Boston Celtics"
+      "Boston Celtics",
+      "FURIA",
+      "Arsenal（条件付き）"
     ],
     "price_adjusted_top": [],
-    "caution": "勝者市場の正式採用2件。終了5件は勝利確定。取得オッズ未登録分の払戻・利益額は未計算。"
+    "caution": "3件正式採用。取得オッズ未登録。終了BOS134-99・Yandex2-1は勝利確定、利益額未計算。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -12264,6 +12425,549 @@
         "result_sources": [
           "https://www.covers.com/sport/basketball/nba/matchup/388600"
         ]
+      },
+      {
+        "rank": 1,
+        "match_id": "2026-10-26-yandex-liquid-dota2",
+        "event_id": "web-2026-10-26-yandex-liquid-dota2",
+        "matchup": "Team Yandex vs Team Liquid",
+        "favored": "Team Yandex",
+        "selection_label": "Team Yandex",
+        "sport": "Dota 2",
+        "competition": "PARI Universe 2026／Group A",
+        "start_jst": "2026-10-26T21:00:00+09:00",
+        "venue": "オンライン／中立",
+        "format": "BO3シリーズ勝者",
+        "status": "finished",
+        "gap_grade": "A",
+        "price_grade": "参考オッズ・取得オッズ未登録",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "勝利確定／取得オッズ未登録のため払戻・利益額未計算",
+        "odds": {
+          "min": 1.15,
+          "max": 1.2,
+          "book_examples": "10/26確認：ESI掲載Bet365・GG.bet1.20、1xBet1.19、Betway・Stake1.15。参考価格、実取得なし。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-25T07:19:42.665Z",
+        "analysis_reviewed_at": "2026-10-26T08:28:07.893Z",
+        "sources": [
+          "https://cyberscore.live/en/matches/team-yandex-vs-team-liquid-190034/",
+          "https://cyberscore.live/en/matches/team-yandex-vs-team-liquid-190034/head-to-head/",
+          "https://cyberscore.live/en/teams/team-liquid/matches/",
+          "https://cyberscore.live/en/teams/team-yandex/matches/",
+          "https://esportsinsider.com/betting-odds/dota2/match/team-yandex-vs-team-liquid-1753741"
+        ],
+        "conclusion": "Yandex直近9勝1敗・7連勝、Liquid4勝6敗。H2H6勝2敗（同じBO3は3勝1敗）。共通5相手のうち4相手で勝敗優勢、1相手は双方勝利。同大会のOG・GamerLegion比較を重視。",
+        "risk": "BO3勝者を評価。2-0勝利は別条件。旧編成・時期差のあるH2Hは割引。開始は最新21時JST予定、一部20時旧表示あり。",
+        "analysis_detail": {
+          "summary": "Yandex直近9勝1敗・7連勝、Liquid4勝6敗。H2H6勝2敗（同じBO3は3勝1敗）。共通5相手のうち4相手で勝敗優勢、1相手は双方勝利。同大会のOG・GamerLegion比較を重視。",
+          "availability": {
+            "text": "BO3勝者を評価。2-0勝利は別条件。旧編成・時期差のあるH2Hは割引。開始は最新21時JST予定、一部20時旧表示あり。"
+          },
+          "home_away": {
+            "text": "オンライン／中立"
+          },
+          "market": {
+            "text": "仮想100USD、勝者市場。参考オッズは実取得価格として精算しない。"
+          },
+          "sport_specific": {
+            "text": "過去試合日付は資料掲載日。旧季・旧ロスターを含む。"
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Team Yandex",
+              "items": [
+                {
+                  "date": "2026/10/25",
+                  "opponent": "1win",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026/10/24",
+                  "opponent": "OG",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026/10/22",
+                  "opponent": "GamerLegion",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026/10/11",
+                  "opponent": "Spirit",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026/10/10",
+                  "opponent": "Spirit",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026/10/08",
+                  "opponent": "PARIVISION",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026/10/08",
+                  "opponent": "LGD",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026/10/03",
+                  "opponent": "Spirit",
+                  "result": "L 1-2"
+                },
+                {
+                  "date": "2026/10/01",
+                  "opponent": "BetBoom",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026/09/30",
+                  "opponent": "MOUZ",
+                  "result": "W 2-0"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Team Liquid",
+              "items": [
+                {
+                  "date": "2026/10/25",
+                  "opponent": "OG",
+                  "result": "L 1-2"
+                },
+                {
+                  "date": "2026/10/23",
+                  "opponent": "GamerLegion",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026/10/22",
+                  "opponent": "1win",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026/10/02",
+                  "opponent": "GamerLegion",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026/10/01",
+                  "opponent": "Aurora",
+                  "result": "L 1-2"
+                },
+                {
+                  "date": "2026/09/29",
+                  "opponent": "Yakult Brothers",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026/08/22",
+                  "opponent": "Spirit",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026/08/21",
+                  "opponent": "Falcons",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026/08/20",
+                  "opponent": "Yandex",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026/08/15",
+                  "opponent": "Aurora",
+                  "result": "W 2-1"
+                }
+              ]
+            }
+          },
+          "h2h": {
+            "summary": "確認8件6勝2敗。形式・編成差あり。",
+            "items": [
+              {
+                "date": "2026/08/20",
+                "opponent": "Liquid",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/08/14",
+                "opponent": "Liquid",
+                "result": "L 1-2"
+              },
+              {
+                "date": "2026/05/26",
+                "opponent": "Liquid",
+                "result": "W 1-0 BO1"
+              },
+              {
+                "date": "2026/03/15",
+                "opponent": "Liquid",
+                "result": "W 3-2 BO5"
+              },
+              {
+                "date": "2026/03/13",
+                "opponent": "Liquid",
+                "result": "W 2-0"
+              },
+              {
+                "date": "2026/02/17",
+                "opponent": "Liquid",
+                "result": "L 0-2 BO2"
+              },
+              {
+                "date": "2026/02/05",
+                "opponent": "Liquid",
+                "result": "W 1-0 BO1"
+              },
+              {
+                "date": "2026/01/31",
+                "opponent": "Liquid",
+                "result": "W 2-0"
+              }
+            ]
+          },
+          "common_opponent_comparison": {
+            "summary": "共通5相手：Yandex4優勢、1同等。OG・GamerLegion・1winは同大会、Spiritは時期差、Auroraは直近10より前まで拡張。",
+            "items": [
+              {
+                "opponent": "OG",
+                "side_a": {
+                  "date": "2026/10/24",
+                  "result": "W 2-0"
+                },
+                "side_b": {
+                  "date": "2026/10/25",
+                  "result": "L 1-2"
+                },
+                "comparison": "Yandex優勢／同大会"
+              },
+              {
+                "opponent": "GamerLegion",
+                "side_a": {
+                  "date": "2026/10/22",
+                  "result": "W 2-0"
+                },
+                "side_b": {
+                  "date": "2026/10/23",
+                  "result": "L 0-2"
+                },
+                "comparison": "Yandex優勢"
+              },
+              {
+                "opponent": "Spirit",
+                "side_a": {
+                  "date": "2026/10/10",
+                  "result": "W 2-0"
+                },
+                "side_b": {
+                  "date": "2026/08/22",
+                  "result": "L 0-2"
+                },
+                "comparison": "Yandex優勢／時期差あり"
+              },
+              {
+                "opponent": "Aurora",
+                "side_a": {
+                  "date": "2026/09/25",
+                  "result": "W 2-1"
+                },
+                "side_b": {
+                  "date": "2026/10/01",
+                  "result": "L 1-2"
+                },
+                "comparison": "Yandex優勢"
+              },
+              {
+                "opponent": "1win",
+                "side_a": {
+                  "date": "2026/10/25",
+                  "result": "W 2-0"
+                },
+                "side_b": {
+                  "date": "2026/10/22",
+                  "result": "W 2-0"
+                },
+                "comparison": "双方勝利"
+              }
+            ]
+          },
+          "post_match": {
+            "text": "Team Yandex 2-1 Team Liquid。勝利確定。取得オッズ未登録のため払戻・利益額未計算。"
+          }
+        },
+        "result_status": "final",
+        "favored_result": "win",
+        "result": "Team Yandex 2-1 Team Liquid",
+        "result_sources": [
+          "https://www.offstage.gg/dota2/matches/team-yandex-vs-team-liquid-2026-10-26"
+        ]
+      },
+      {
+        "rank": 2,
+        "match_id": "2026-10-27-boston-chicago-nba",
+        "event_id": "web-2026-10-27-boston-chicago-nba",
+        "matchup": "Boston Celtics vs Chicago Bulls",
+        "favored": "Boston Celtics",
+        "selection_label": "Boston Celtics",
+        "sport": "NBA",
+        "competition": "NBA 2026–27",
+        "start_jst": "2026-10-27T08:30:00+09:00",
+        "venue": "TD Garden／Boston（ボストンホーム）",
+        "format": "延長込み勝者",
+        "status": "finished",
+        "gap_grade": "A",
+        "price_grade": "参考オッズ・取得オッズ未登録",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "勝利確定／取得オッズ未登録のため払戻・利益額未計算",
+        "odds": {
+          "min": 1.1219512195121952,
+          "max": 1.1219512195121952,
+          "book_examples": "10/26確認：FanDuel勝者価格-820＝約1.12倍。参考価格であり実取得価格ではない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-26T08:28:07.893Z",
+        "analysis_reviewed_at": "2026-10-26T08:28:07.893Z",
+        "sources": [
+          "https://www.tdgarden.com/events/detail/celtics-vs-bulls-26-27",
+          "https://www.covers.com/sport/basketball/nba/matchup/388607",
+          "https://www.covers.com/sport/basketball/nba/teams/main/boston-celtics",
+          "https://www.covers.com/sport/basketball/nba/teams/main/chicago-bulls",
+          "https://sports.iheart.com/content/2026-10-26-bulls-vs-celtics-injury-report-oct-26/",
+          "https://www.fanduel.com/research/nba-predictions-odds-10-26-2026"
+        ],
+        "conclusion": "ボストン勝利A。H2H直近10戦8勝2敗、直近公式戦5勝5敗対3勝7敗。ホーム、シカゴの今季平均128失点と欠場状況を評価。共通相手は直近10同士で2組のみ、両組ともボストン優勢だが前季を含む。",
+        "risk": "今季はBOS1勝1敗、CHI1勝2敗の小標本。BOS直近10の7件は前季76ers戦。CHIのClaxton欠場、P.Williams・Essengue出場不透明。BOS Carter欠場。低オッズの価格優位は未証明。大差ハンデ勝利とは区別。",
+        "analysis_detail": {
+          "summary": "ボストン勝利A。H2H直近10戦8勝2敗、直近公式戦5勝5敗対3勝7敗。ホーム、シカゴの今季平均128失点と欠場状況を評価。共通相手は直近10同士で2組のみ、両組ともボストン優勢だが前季を含む。",
+          "availability": {
+            "text": "今季はBOS1勝1敗、CHI1勝2敗の小標本。BOS直近10の7件は前季76ers戦。CHIのClaxton欠場、P.Williams・Essengue出場不透明。BOS Carter欠場。低オッズの価格優位は未証明。大差ハンデ勝利とは区別。"
+          },
+          "home_away": {
+            "text": "TD Garden／Boston（ボストンホーム）。BOSは現地10/23以来、CHIは10/24以来。"
+          },
+          "market": {
+            "text": "延長込み勝者。仮想100USD。参考価格-820（約1.12倍）、取得オッズ未登録。"
+          },
+          "sport_specific": {
+            "text": "過去成績の日付は現地掲載日。前季プレーオフと現季を区別。H2H・共通相手の古さを割引。"
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Boston Celtics",
+              "items": [
+                {
+                  "date": "2026/10/23",
+                  "opponent": "NYK",
+                  "result": "W 107-103"
+                },
+                {
+                  "date": "2026/10/20",
+                  "opponent": "DET",
+                  "result": "L 113-121"
+                },
+                {
+                  "date": "2026/05/02",
+                  "opponent": "PHI",
+                  "result": "L 100-109"
+                },
+                {
+                  "date": "2026/04/30",
+                  "opponent": "PHI",
+                  "result": "L 93-106"
+                },
+                {
+                  "date": "2026/04/28",
+                  "opponent": "PHI",
+                  "result": "L 97-113"
+                },
+                {
+                  "date": "2026/04/26",
+                  "opponent": "PHI",
+                  "result": "W 128-96"
+                },
+                {
+                  "date": "2026/04/24",
+                  "opponent": "PHI",
+                  "result": "W 108-100"
+                },
+                {
+                  "date": "2026/04/21",
+                  "opponent": "PHI",
+                  "result": "L 97-111"
+                },
+                {
+                  "date": "2026/04/19",
+                  "opponent": "PHI",
+                  "result": "W 123-91"
+                },
+                {
+                  "date": "2026/04/12",
+                  "opponent": "ORL",
+                  "result": "W 113-108"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Chicago Bulls",
+              "items": [
+                {
+                  "date": "2026/10/24",
+                  "opponent": "WAS",
+                  "result": "L 120-124"
+                },
+                {
+                  "date": "2026/10/23",
+                  "opponent": "MIL",
+                  "result": "W 132-125"
+                },
+                {
+                  "date": "2026/10/21",
+                  "opponent": "TOR",
+                  "result": "L 92-135"
+                },
+                {
+                  "date": "2026/04/12",
+                  "opponent": "DAL",
+                  "result": "L 128-149"
+                },
+                {
+                  "date": "2026/04/10",
+                  "opponent": "ORL",
+                  "result": "L 103-127"
+                },
+                {
+                  "date": "2026/04/09",
+                  "opponent": "WAS",
+                  "result": "W 119-108"
+                },
+                {
+                  "date": "2026/04/07",
+                  "opponent": "WAS",
+                  "result": "W 129-98"
+                },
+                {
+                  "date": "2026/04/05",
+                  "opponent": "PHX",
+                  "result": "L 110-120"
+                },
+                {
+                  "date": "2026/04/03",
+                  "opponent": "NYK",
+                  "result": "L 96-136"
+                },
+                {
+                  "date": "2026/04/01",
+                  "opponent": "IND",
+                  "result": "L 126-145"
+                }
+              ]
+            }
+          },
+          "h2h": {
+            "summary": "ボストン視点8勝2敗。過去季を含む。",
+            "items": [
+              {
+                "date": "2026/02/11",
+                "opponent": "CHI",
+                "result": "W 124-105"
+              },
+              {
+                "date": "2026/01/24",
+                "opponent": "CHI",
+                "result": "L 111-114"
+              },
+              {
+                "date": "2026/01/05",
+                "opponent": "CHI",
+                "result": "W 115-101"
+              },
+              {
+                "date": "2025/01/29",
+                "opponent": "CHI",
+                "result": "W 122-100"
+              },
+              {
+                "date": "2024/12/21",
+                "opponent": "CHI",
+                "result": "W 123-98"
+              },
+              {
+                "date": "2024/12/19",
+                "opponent": "CHI",
+                "result": "L 108-117"
+              },
+              {
+                "date": "2024/11/29",
+                "opponent": "CHI",
+                "result": "W 138-129"
+              },
+              {
+                "date": "2024/03/23",
+                "opponent": "CHI",
+                "result": "W 124-113"
+              },
+              {
+                "date": "2024/02/22",
+                "opponent": "CHI",
+                "result": "W 129-112"
+              },
+              {
+                "date": "2023/11/28",
+                "opponent": "CHI",
+                "result": "W 124-97"
+              }
+            ]
+          },
+          "common_opponent_comparison": {
+            "summary": "直近10試合同士の共通相手は2組、両組ボストン優勢。ただし前季・約半年の時期差を含む。",
+            "items": [
+              {
+                "opponent": "NYK",
+                "side_a": {
+                  "date": "2026/10/23",
+                  "result": "W 107-103"
+                },
+                "side_b": {
+                  "date": "2026/04/03",
+                  "result": "L 96-136"
+                },
+                "comparison": "BOS優勢だが約半年差"
+              },
+              {
+                "opponent": "ORL",
+                "side_a": {
+                  "date": "2026/04/12",
+                  "result": "W 113-108"
+                },
+                "side_b": {
+                  "date": "2026/04/10",
+                  "result": "L 103-127"
+                },
+                "comparison": "BOS優勢／前季"
+              }
+            ]
+          },
+          "post_match": {
+            "text": "Boston Celtics 134-99 Chicago Bulls。勝利確定。取得オッズ未登録のため払戻・利益額未計算。"
+          }
+        },
+        "result_status": "final",
+        "favored_result": "win",
+        "result": "Boston Celtics 134-99 Chicago Bulls",
+        "result_sources": [
+          "https://www.covers.com/sport/basketball/nba/matchup/388607"
+        ]
       }
     ],
     "summary": {
@@ -12283,7 +12987,7 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 62,
+      "favored_wins": 64,
       "favored_losses": 6,
       "pending": 0
     }
@@ -12293,7 +12997,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-26T08:28:07.893Z",
-    "note": "ボストン追加・Yandex分析更新。終了5件は結果確定して履歴へ。"
+    "as_of": "2026-10-27T08:23:17.605Z",
+    "note": "ユーザー指定3件を追加。Yandex–Liquid 2-1、Boston–Chicago 134-99を勝利確定して履歴へ。取得オッズ未登録につき払戻・利益額は未計算。"
   }
 }

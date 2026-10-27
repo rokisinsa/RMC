@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-26T08:28:07.893Z",
+    "as_of": "2026-10-27T08:23:17.605Z",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -2669,6 +2669,68 @@
             "verified_at": "2026-10-26T08:28:07.893Z",
             "source_confidence": "specialist_db",
             "note": "最新の12:00 UTCを採用、旧20時JST表示との差を明記。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261027-results",
+      "kind": "result_update",
+      "at": "2026-10-27T08:23:17.605Z",
+      "source": "公開最終結果照合",
+      "note": "本日の分析2件の勝利を確定。取得オッズ未登録につき金額未計算。",
+      "changes": [
+        {
+          "match_id": "2026-10-26-yandex-liquid-dota2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 1
+              },
+              "text": "Team Yandex 2-1 Team Liquid"
+            },
+            "result_confirmed_at": "2026-10-27T08:23:17.605Z"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "最終結果",
+                "url": "https://www.offstage.gg/dota2/matches/team-yandex-vs-team-liquid-2026-10-26",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-27T08:23:17.605Z",
+            "source_confidence": "specialist_db",
+            "note": "終了・最終スコアを確認"
+          }
+        },
+        {
+          "match_id": "2026-10-27-boston-chicago-nba",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 134,
+                "b": 99
+              },
+              "text": "Boston Celtics 134-99 Chicago Bulls"
+            },
+            "result_confirmed_at": "2026-10-27T08:23:17.605Z"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "最終結果",
+                "url": "https://www.covers.com/sport/basketball/nba/matchup/388607",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-27T08:23:17.605Z",
+            "source_confidence": "specialist_db",
+            "note": "終了・最終スコアを確認"
           }
         }
       ],
