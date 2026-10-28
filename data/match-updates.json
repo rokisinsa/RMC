@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-27T08:23:17.605Z",
+    "as_of": "2026-10-28T17:25:00+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -2731,6 +2731,104 @@
             "verified_at": "2026-10-27T08:23:17.605Z",
             "source_confidence": "specialist_db",
             "note": "終了・最終スコアを確認"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261028-results",
+      "kind": "result_update",
+      "at": "2026-10-28T17:25:00+09:00",
+      "source": "公開最終結果照合",
+      "note": "掲載3件を2的中1不的中で確定。Arsenal仮想損益−100USD。勝利2件はオッズ未登録。",
+      "changes": [
+        {
+          "match_id": "2026-10-28-boston-brooklyn-nba",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 125,
+                "b": 124
+              },
+              "text": "Boston Celtics 125-124 Brooklyn Nets（延長）"
+            },
+            "result_confirmed_at": "2026-10-28T17:25:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "最終結果",
+                "url": "https://www.reuters.com/sports/basketball/jayson-tatums-buzzer-beating-jumper-lifts-celtics-over-nets-ot--flm-2026-10-28/",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-28T17:25:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "市場条件に従い確定。Arsenalは90分引分で不的中、PK結果は参考。"
+          }
+        },
+        {
+          "match_id": "2026-10-28-furia-tyloo-cs2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "FURIA 2-0 TYLOO"
+            },
+            "result_confirmed_at": "2026-10-28T17:25:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "最終結果",
+                "url": "https://www.hltv.org/matches/2399748/furia-vs-tyloo-pgl-masters-bucharest-2026",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-28T17:25:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "市場条件に従い確定。Arsenalは90分引分で不的中、PK結果は参考。"
+          }
+        },
+        {
+          "match_id": "2026-10-28-fleetwood-arsenal-football",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 1
+              },
+              "text": "Fleetwood Town 1-1 Arsenal（90分／PK 5-3。Arsenal 90分勝利は不的中）",
+              "periods": {
+                "penalties": {
+                  "a": 5,
+                  "b": 3
+                },
+                "regulation": {
+                  "a": 1,
+                  "b": 1
+                }
+              }
+            },
+            "result_confirmed_at": "2026-10-28T17:25:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "最終結果",
+                "url": "https://www.reuters.com/sports/soccer/fourth-tier-fleetwood-stun-arsenal-league-cup-shootout-2026-10-27/",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-10-28T17:25:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "市場条件に従い確定。Arsenalは90分引分で不的中、PK結果は参考。"
           }
         }
       ],
