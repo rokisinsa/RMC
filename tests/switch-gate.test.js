@@ -30,6 +30,20 @@ function base() {
 const ev = (over = {}) => ({ sources: [{ name: "大会公式", url: "https://official.example/result", type: "official" }], verified_at: "2026-10-01T10:00:00+09:00", source_confidence: "official", note: null, ...over });
 const run = (id, at, changes, reviews = []) => ({ run_id: id, kind: "result_update", at, source: "test", note: null, changes, reviews });
 
+test("後日確認済みの基礎データと古い速報ログの再生を結果訂正と誤判定しない", () => {
+  const { ds, m6 } = base();
+  Object.assign(m6, { status: "final", result: { final: { a: 0, b: 1 } }, verified_at: "2026-10-02T10:00:00+09:00" });
+  const old = run("mr-old", "2026-10-01T10:05:00+09:00", [{ match_id: "m6", set: { status: "live", result: { text: "途中経過" } }, evidence: ev() }]);
+  const final = run("mr-final", "2026-10-02T10:05:00+09:00", [{ match_id: "m6", set: { status: "final", result: { final: { a: 0, b: 1 } } }, evidence: ev({ verified_at: "2026-10-02T10:00:00+09:00" }) }]);
+  const log = { runs: [old, final] };
+  assert.ok(!codes(checkMatchUpdates(ds.matches, log)).includes("UPDATE_CORRECTION_REASON_MISSING"));
+  assert.deepEqual(applyMatchUpdates(ds.matches, log).matches.find(x => x.id === "m6").result.final, { a: 0, b: 1 });
+  for (const verified_at of ["2026-10-01T10:00:00+09:00", null]) {
+    m6.verified_at = verified_at;
+    assert.ok(codes(checkMatchUpdates(ds.matches, { runs: [old] })).includes("UPDATE_CORRECTION_REASON_MISSING"));
+  }
+});
+
 // ── 2. 結果更新ログ ─────────────────────────────────────
 test("scheduled → final：最新の有効な事実だけが表示に反映され、過去の履歴は消えない", () => {
   const { ds } = base();

@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-28T17:25:00+09:00",
+    "as_of": "2026-10-29T18:44:44+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -344,6 +344,13 @@
       "at": "2026-10-28T17:25:00+09:00",
       "source": "Inter公式日程",
       "note": "Venezia–Interを追加。"
+    },
+    {
+      "run_id": "mr-20261029-user-five",
+      "kind": "human_review",
+      "at": "2026-10-29T18:44:44+09:00",
+      "source": "ユーザー指定＋公式日程・専門結果DB",
+      "note": "5カード正式追加。PSG/Bostonは10/31 JST。"
     }
   ],
   "matches": [
@@ -6031,6 +6038,174 @@
       "provenance": [
         {
           "update_run_id": "mr-20261028-inter-registration",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-29-spirit-legion-dota2",
+      "sport": "Dota 2",
+      "competition": "PARI Universe 2026／下位ブラケット BO3",
+      "side_a": "Team Spirit",
+      "side_b": "LEGION",
+      "home_side": "unknown",
+      "venue": "オンライン",
+      "start_at": "2026-10-29T21:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "大会・公式日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://cyberscore.live/en/teams/team-spirit/matches/",
+        "https://ensigame.com/teams/dota-2/legion-legion-4",
+        "https://www.sofascore.com/esports/match/legion-team-spirit/nFWcsQark"
+      ],
+      "verified_at": "2026-10-29T18:44:44+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261029-user-five",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-30-berlin-partizan-handball",
+      "sport": "Handball",
+      "competition": "EHF Champions League Men 2026/27／Group A",
+      "side_a": "Füchse Berlin",
+      "side_b": "RK Partizan",
+      "home_side": "side_a",
+      "venue": "Berlinホーム",
+      "start_at": "2026-10-30T02:45:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "大会・公式日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://ehfec.eurohandball.com/men/2026-27/news/en/three-main-round-spots-still-open-before-final-round-6/",
+        "https://history.eurohandball.com/ec/cl/men/2026-27/round/1/6742663"
+      ],
+      "verified_at": "2026-10-29T18:44:44+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261029-user-five",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-30-nassr-kholood-football",
+      "sport": "Football",
+      "competition": "Saudi Pro League 2026/27",
+      "side_a": "Al Nassr",
+      "side_b": "Al Kholood",
+      "home_side": "side_a",
+      "venue": "Al-Awwal Park",
+      "start_at": "2026-10-30T03:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "大会・公式日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://sportaurus.com/match/24633979",
+        "https://www.bettingacademyindia.com/stats/match/saudi-arabia/pro-league/nassr/al-kholood/3JnZM62B1mVxv"
+      ],
+      "verified_at": "2026-10-29T18:44:44+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261029-user-five",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-31-le-havre-psg-football",
+      "sport": "Football",
+      "competition": "Ligue 1 2026/27／第9節",
+      "side_a": "Le Havre",
+      "side_b": "Paris Saint-Germain",
+      "home_side": "side_a",
+      "venue": "Stade Océane／PSGアウェー",
+      "start_at": "2026-10-31T03:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "大会・公式日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.psg.fr/en/content/fixtures-for-matchday-9-of-ligue-12026-2027-le-havre-ac-paris-saint-germain",
+        "https://www.skysports.com/football/le-havre-vs-paris-saint-germain/557069",
+        "https://www.sportsmole.co.uk/football/le-havre/preview/le-havre-vs-psg-prediction-team-news-lineups_607838.html"
+      ],
+      "verified_at": "2026-10-29T18:44:44+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261029-user-five",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-31-boston-chicago-nba",
+      "sport": "NBA",
+      "competition": "Emirates NBA Cup 2026／East Group C",
+      "side_a": "Boston Celtics",
+      "side_b": "Chicago Bulls",
+      "home_side": "side_a",
+      "venue": "TD Garden／Bostonホーム",
+      "start_at": "2026-10-31T08:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "大会・公式日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.tdgarden.com/events/detail/celtics-vs-bulls-26-27-1",
+        "https://www.covers.com/sport/basketball/nba/matchup/385764",
+        "https://www.reuters.com/sports/basketball/payton-pritchard-ignites-celtics-offense-win-over-bulls--flm-2026-10-27/"
+      ],
+      "verified_at": "2026-10-29T18:44:44+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261029-user-five",
           "changes": [
             {
               "field": "new_match",

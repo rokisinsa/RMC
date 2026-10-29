@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-28T17:25:00+09:00",
+    "as_of": "2026-10-29T18:44:44+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -2829,6 +2829,42 @@
             "verified_at": "2026-10-28T17:25:00+09:00",
             "source_confidence": "specialist_db",
             "note": "市場条件に従い確定。Arsenalは90分引分で不的中、PK結果は参考。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261029-inter-result",
+      "kind": "result_update",
+      "at": "2026-10-29T18:44:44+09:00",
+      "source": "Inter公式マッチセンター",
+      "note": "Inter勝利を確定。取得オッズ未登録のため利益額は未計算。Salzburg誤採用の無効は維持。過去ログと既存の確定結果は変更なし。",
+      "changes": [
+        {
+          "match_id": "2026-10-29-venezia-inter-football",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 0,
+                "b": 2
+              },
+              "text": "Venezia 0-2 Inter Milan"
+            },
+            "result_confirmed_at": "2026-10-29T18:44:44+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Inter official match centre",
+                "url": "https://www.inter.it/en/match_center/5377",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-10-29T18:44:44+09:00",
+            "source_confidence": "official",
+            "note": "現地10/28 18:30、Venezia対Inter、最終0-2を公式本文で確認。"
           }
         }
       ],
