@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-10-29T18:44:44+09:00",
+    "as_of": "2026-11-03T16:33:07+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -2865,6 +2865,141 @@
             "verified_at": "2026-10-29T18:44:44+09:00",
             "source_confidence": "official",
             "note": "現地10/28 18:30、Venezia対Inter、最終0-2を公式本文で確認。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261103-user-two-results",
+      "kind": "result_update",
+      "at": "2026-11-03T16:33:07+09:00",
+      "source": "公式結果・大会結果照合",
+      "note": "本日の分析5件を勝敗確定。金額未計算を維持。",
+      "changes": [
+        {
+          "match_id": "2026-10-29-spirit-legion-dota2",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 0
+              },
+              "text": "Team Spirit vs LEGION 2-0。選択側勝利・的中確定。"
+            }
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果",
+                "url": "https://liquipedia.net/dota2/Match%3AID_1lWhUOsDuZ_R01-M006",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-11-03T16:33:07+09:00",
+            "note": "公開試合結果を照合。採用オッズ未登録のため利益額未計算。",
+            "source_confidence": "single_source"
+          }
+        },
+        {
+          "match_id": "2026-10-30-berlin-partizan-handball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 40,
+                "b": 33
+              },
+              "text": "Füchse Berlin vs RK Partizan 40-33。選択側勝利・的中確定。"
+            }
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果",
+                "url": "https://www.sportschau.de/live-und-ergebnisse/ma12367681/liveticker",
+                "type": "media"
+              }
+            ],
+            "verified_at": "2026-11-03T16:33:07+09:00",
+            "note": "公開試合結果を照合。採用オッズ未登録のため利益額未計算。",
+            "source_confidence": "single_source"
+          }
+        },
+        {
+          "match_id": "2026-10-30-nassr-kholood-football",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 5,
+                "b": 3
+              },
+              "text": "Al Nassr vs Al Kholood 5-3。選択側勝利・的中確定。"
+            }
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果",
+                "url": "https://alkholoodclub.com/results",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-03T16:33:07+09:00",
+            "note": "公開試合結果を照合。採用オッズ未登録のため利益額未計算。",
+            "source_confidence": "single_source"
+          }
+        },
+        {
+          "match_id": "2026-10-31-le-havre-psg-football",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 5
+              },
+              "text": "Le Havre vs Paris Saint-Germain 1-5。選択側勝利・的中確定。"
+            }
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果",
+                "url": "https://www.psg.fr/en/matches/mens-football/20262027/le-havre-vs-paris-2026-10-30",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-03T16:33:07+09:00",
+            "note": "公開試合結果を照合。採用オッズ未登録のため利益額未計算。",
+            "source_confidence": "single_source"
+          }
+        },
+        {
+          "match_id": "2026-10-31-boston-chicago-nba",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 125,
+                "b": 111
+              },
+              "text": "Boston Celtics vs Chicago Bulls 125-111。選択側勝利・的中確定。"
+            }
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果",
+                "url": "https://www.nba.com/game/CHI-vs-BOS-0022600016",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-03T16:33:07+09:00",
+            "note": "公開試合結果を照合。採用オッズ未登録のため利益額未計算。",
+            "source_confidence": "single_source"
           }
         }
       ],

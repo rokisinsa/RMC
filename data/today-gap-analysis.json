@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-10-29T18:44:44+09:00",
+  "generated_at": "2026-11-03T16:33:07+09:00",
   "window": {
-    "from": "2026-10-29T00:00:00+09:00",
-    "to": "2026-11-01T00:00:00+09:00",
+    "from": "2026-11-03T00:00:00+09:00",
+    "to": "2026-11-05T00:00:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "ユーザー指定5件。PSGとBostonは10/31開催として追加。"
+    "note": "11/4開催のユーザー指定2件。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -19,35 +19,31 @@
   ],
   "coverage": {
     "checked": [
-      "Team Spirit vs LEGION",
-      "Füchse Berlin vs RK Partizan",
-      "Al Nassr vs Al Kholood",
-      "Le Havre vs Paris Saint-Germain",
-      "Boston Celtics vs Chicago Bulls",
-      "Inter公式最終結果"
+      "FC Barcelona vs Aston Villa",
+      "Nashville Predators vs Carolina Hurricanes"
     ],
-    "note": "確認できた分析を保存。不足項目は未照合と表示。全競技網羅ではない。"
+    "note": "指定2件追加と掲載済み5件の結果確認。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-10-29-spirit-legion-dota2",
-      "event_id": "web-2026-10-29-spirit-legion-dota2",
-      "matchup": "Team Spirit vs LEGION",
-      "favored": "Team Spirit",
-      "selection_label": "Team Spirit",
-      "sport": "Dota 2",
-      "competition": "PARI Universe 2026／下位ブラケット BO3",
-      "start_jst": "2026-10-29T21:00:00+09:00",
-      "venue": "オンライン",
-      "format": "シリーズ勝者",
+      "match_id": "2026-11-04-barcelona-villa-football",
+      "event_id": "web-2026-11-04-barcelona-villa-football",
+      "matchup": "FC Barcelona vs Aston Villa",
+      "favored": "FC Barcelona",
+      "selection_label": "FC Barcelona DNB（引分返金）",
+      "sport": "Football",
+      "competition": "UEFA Champions League 2026/27／リーグフェーズ第4節",
+      "start_jst": "2026-11-04T05:00:00+09:00",
+      "venue": "Spotify Camp Nou／バルセロナがホーム",
+      "format": "ドローノーベット（90分、引分返金）",
       "status": "formal",
-      "gap_grade": "A候補",
+      "gap_grade": "条件付き",
       "price_grade": "取得オッズ未登録",
-      "market": "match_winner",
+      "market": "dnb",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "試合前／取得オッズ未登録",
+      "profit_status": "○的中確定／採用オッズ未登録のため払戻・利益額は未確定。0として計上しない。",
       "odds": {
         "min": null,
         "max": null,
@@ -55,732 +51,64 @@
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-29T18:44:44+09:00",
-      "analysis_reviewed_at": "2026-10-29T18:44:44+09:00",
+      "added_at": "2026-11-03T16:33:07+09:00",
+      "analysis_reviewed_at": "2026-11-03T16:33:07+09:00",
       "sources": [
-        "https://cyberscore.live/en/teams/team-spirit/matches/",
-        "https://ensigame.com/teams/dota-2/legion-legion-4",
-        "https://www.sofascore.com/esports/match/legion-team-spirit/nFWcsQark"
+        "https://www.fcbarcelona.com/en/matches/141501/fc-barcelona-aston-villa-uefa-champions-league-2026-2027",
+        "https://theanalyst.com/articles/barcelona-vs-aston-villa-prediction-champions-league-preview-11-2026"
       ],
-      "conclusion": "Spirit直近7勝3敗対LEGION4勝6敗。同大会の共通相手比較と10/22のH2H2-0からSpirit優勢。シリーズ勝利をユーザー指定で正式採用。",
-      "risk": "Spiritも直前OG戦は1-2で敗戦。LEGIONのBO1勝利をBO3と同等に扱わない。2-0は別評価。",
+      "conclusion": "ホームのバルセロナDNB（90分、引分返金）をユーザー指定で正式採用。直近アラベス戦6-1。一方でヴィラは今大会3連勝。格差最上位とは認定しない。",
+      "risk": "バルセロナは直前にPSG・レアル戦で敗戦。H2H直近10・共通5相手は未充足。",
       "analysis_detail": {
-        "summary": "Spirit直近7勝3敗対LEGION4勝6敗。同大会の共通相手比較と10/22のH2H2-0からSpirit優勢。シリーズ勝利をユーザー指定で正式採用。",
+        "summary": "ホームのバルセロナDNB（90分、引分返金）をユーザー指定で正式採用。直近アラベス戦6-1。一方でヴィラは今大会3連勝。格差最上位とは認定しない。",
         "availability": {
-          "text": "Spiritも直前OG戦は1-2で敗戦。LEGIONのBO1勝利をBO3と同等に扱わない。2-0は別評価。"
+          "text": "バルセロナは直前にPSG・レアル戦で敗戦。H2H直近10・共通5相手は未充足。"
+        },
+        "h2h": {
+          "summary": "直近10件未照合。古い対戦を現在戦力の根拠にしない。",
+          "items": []
         },
         "recent_form": {
           "side_a": {
-            "label": "Team Spirit",
-            "summary": "7勝3敗。直近5は4勝1敗。",
-            "items": [
-              {
-                "date": "2026-10-28",
-                "opponent": "OG",
-                "result": "L 1-2"
-              },
-              {
-                "date": "2026-10-26",
-                "opponent": "PARIVISION",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-10-25",
-                "opponent": "Astra Invicta",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026-10-24",
-                "opponent": "BetBoom",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026-10-22",
-                "opponent": "LEGION",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026-10-11",
-                "opponent": "Yandex（BO5）",
-                "result": "L 1-3"
-              },
-              {
-                "date": "2026-10-11",
-                "opponent": "PARIVISION",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-10-10",
-                "opponent": "Yandex",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026-10-09",
-                "opponent": "Aurora",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-10-03",
-                "opponent": "Yandex",
-                "result": "W 2-1"
-              }
-            ]
+            "label": "FC Barcelona",
+            "summary": "直近アラベス戦6-1。",
+            "items": []
           },
           "side_b": {
-            "label": "LEGION",
-            "summary": "4勝6敗。BO1を除く掲載8シリーズは2勝6敗。LEGIONとGamerLegionは別チーム。",
-            "items": [
-              {
-                "date": "2026-10-28",
-                "opponent": "GamerLegion",
-                "result": "L 1-2"
-              },
-              {
-                "date": "2026-10-27",
-                "opponent": "BetBoom（BO1）",
-                "result": "W 1-0"
-              },
-              {
-                "date": "2026-10-27",
-                "opponent": "Astra Invicta（BO1）",
-                "result": "W 1-0"
-              },
-              {
-                "date": "2026-10-26",
-                "opponent": "BetBoom",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026-10-24",
-                "opponent": "Astra Invicta",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-10-23",
-                "opponent": "PARIVISION",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026-10-22",
-                "opponent": "Team Spirit",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026-10-17",
-                "opponent": "Team Lynx",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026-10-16",
-                "opponent": "OG",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026-10-15",
-                "opponent": "Team Lynx",
-                "result": "W 2-0"
-              }
-            ]
+            "label": "Aston Villa",
+            "summary": "CL開幕3連勝。直近フラム戦1-1。",
+            "items": []
           }
         },
-        "h2h": {
-          "summary": "確認1シリーズのみ。Spirit側スコア。",
-          "items": [
-            {
-              "date": "2026-10-22",
-              "label": "Team Spirit vs LEGION",
-              "result": "2-0"
-            }
-          ]
-        },
         "common_opponent_comparison": {
-          "summary": "直近10件内4組。5組目なし。",
-          "items": [
-            {
-              "opponent": "PARIVISION",
-              "side_a": {
-                "result": "2-1、2-1"
-              },
-              "side_b": {
-                "result": "0-2"
-              },
-              "comparison": "Spirit優勢"
-            },
-            {
-              "opponent": "Astra Invicta",
-              "side_a": {
-                "result": "2-0"
-              },
-              "side_b": {
-                "result": "1-0（BO1）、2-1"
-              },
-              "comparison": "BO3でSpirit快勝"
-            },
-            {
-              "opponent": "BetBoom",
-              "side_a": {
-                "result": "2-0"
-              },
-              "side_b": {
-                "result": "1-0（BO1）、0-2"
-              },
-              "comparison": "BO3比較Spirit優勢"
-            },
-            {
-              "opponent": "OG",
-              "side_a": {
-                "result": "1-2"
-              },
-              "side_b": {
-                "result": "0-2"
-              },
-              "comparison": "両者敗戦"
-            }
-          ]
+          "summary": "未照合。",
+          "items": []
         },
         "market": {
-          "text": "ユーザー指定の正式採用。仮想100USD追跡。取得オッズ未登録、価格優位未判定。"
+          "text": "バルセロナDNBを正式採用。90分勝利は的中、引分は返金、敗戦は不的中。仮想100USD追跡、採用オッズ未登録。"
         }
-      }
+      },
+      "result_note": "Team Spirit vs LEGION 2-0。選択側勝利・的中確定。"
     },
     {
       "rank": 2,
-      "match_id": "2026-10-30-berlin-partizan-handball",
-      "event_id": "web-2026-10-30-berlin-partizan-handball",
-      "matchup": "Füchse Berlin vs RK Partizan",
-      "favored": "Füchse Berlin",
-      "selection_label": "Füchse Berlin",
-      "sport": "Handball",
-      "competition": "EHF Champions League Men 2026/27／Group A",
-      "start_jst": "2026-10-30T02:45:00+09:00",
-      "venue": "Berlinホーム",
-      "format": "通常時間勝敗（引分は不的中）",
-      "status": "formal",
-      "gap_grade": "条件付き",
-      "price_grade": "取得オッズ未登録",
-      "market": "match_1x2",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合前／取得オッズ未登録",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-29T18:44:44+09:00",
-      "analysis_reviewed_at": "2026-10-29T18:44:44+09:00",
-      "sources": [
-        "https://ehfec.eurohandball.com/men/2026-27/news/en/three-main-round-spots-still-open-before-final-round-6/",
-        "https://history.eurohandball.com/ec/cl/men/2026-27/round/1/6742663"
-      ],
-      "conclusion": "CLでBerlin3勝2敗、Partizan0勝1分4敗。H2H44-33と同組比較はBerlin優勢。ユーザー指定で通常時間勝利を正式採用。",
-      "risk": "Berlinは突破確定。Partizanは国内では好成績。CLと国内の相手水準を区別。全大会直近10戦未照合。",
-      "analysis_detail": {
-        "summary": "CLでBerlin3勝2敗、Partizan0勝1分4敗。H2H44-33と同組比較はBerlin優勢。ユーザー指定で通常時間勝利を正式採用。",
-        "availability": {
-          "text": "Berlinは突破確定。Partizanは国内では好成績。CLと国内の相手水準を区別。全大会直近10戦未照合。"
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Füchse Berlin",
-            "summary": "CL5試合。国内を含む直近10試合の完全照合は未完了。",
-            "items": [
-              {
-                "date": "2026-10-21",
-                "opponent": "Veszprem",
-                "result": "L 35-39"
-              },
-              {
-                "date": "2026-10-15",
-                "opponent": "Porto",
-                "result": "W 36-33"
-              },
-              {
-                "date": "2026-10-08",
-                "opponent": "Porto",
-                "result": "W 40-32"
-              },
-              {
-                "date": "2026-09-16",
-                "opponent": "Veszprem",
-                "result": "L 29-35"
-              },
-              {
-                "date": "2026-09-10",
-                "opponent": "Partizan",
-                "result": "W 44-33"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "RK Partizan",
-            "summary": "CL5試合。国内を含む直近10試合の完全照合は未完了。",
-            "items": [
-              {
-                "date": "2026-10-21",
-                "opponent": "Porto",
-                "result": "D 33-33"
-              },
-              {
-                "date": "2026-10-14",
-                "opponent": "Veszprem",
-                "result": "L 28-38"
-              },
-              {
-                "date": "2026-10-07",
-                "opponent": "Veszprem",
-                "result": "L 26-37"
-              },
-              {
-                "date": "2026-09-17",
-                "opponent": "Porto",
-                "result": "L 28-32"
-              },
-              {
-                "date": "2026-09-10",
-                "opponent": "Berlin",
-                "result": "L 33-44"
-              }
-            ]
-          }
-        },
-        "h2h": {
-          "summary": "H2H1試合、Berlin側。",
-          "items": [
-            {
-              "date": "2026-09-10",
-              "label": "Partizan vs Berlin",
-              "result": "Berlin 44-33"
-            }
-          ]
-        },
-        "common_opponent_comparison": {
-          "summary": "同組2相手各2試合。5組未充足。",
-          "items": [
-            {
-              "opponent": "Porto",
-              "side_a": {
-                "result": "40-32、36-33"
-              },
-              "side_b": {
-                "result": "28-32、33-33"
-              },
-              "comparison": "Berlin優勢"
-            },
-            {
-              "opponent": "Veszprem",
-              "side_a": {
-                "result": "29-35、35-39"
-              },
-              "side_b": {
-                "result": "26-37、28-38"
-              },
-              "comparison": "両者敗戦、Berlinの点差が小さい"
-            }
-          ]
-        },
-        "market": {
-          "text": "ユーザー指定の正式採用。仮想100USD追跡。取得オッズ未登録、価格優位未判定。"
-        }
-      }
-    },
-    {
-      "rank": 3,
-      "match_id": "2026-10-30-nassr-kholood-football",
-      "event_id": "web-2026-10-30-nassr-kholood-football",
-      "matchup": "Al Nassr vs Al Kholood",
-      "favored": "Al Nassr",
-      "selection_label": "Al Nassr",
-      "sport": "Football",
-      "competition": "Saudi Pro League 2026/27",
-      "start_jst": "2026-10-30T03:00:00+09:00",
-      "venue": "Al-Awwal Park",
-      "format": "通常時間勝敗（引分は不的中）",
-      "status": "formal",
-      "gap_grade": "A候補",
-      "price_grade": "取得オッズ未登録",
-      "market": "match_1x2",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合前／取得オッズ未登録",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-29T18:44:44+09:00",
-      "analysis_reviewed_at": "2026-10-29T18:44:44+09:00",
-      "sources": [
-        "https://sportaurus.com/match/24633979",
-        "https://www.bettingacademyindia.com/stats/match/saudi-arabia/pro-league/nassr/al-kholood/3JnZM62B1mVxv"
-      ],
-      "conclusion": "Nassr直近4連勝対Kholood4連敗。H2H3勝1分、共通相手Faisaly・Ettifaq・Diriyahで優位。Nassr90分勝利を正式採用。",
-      "risk": "Ittihad戦ではKholoodの引分がNassrの敗戦を上回る。NassrもAl Ainに0-4の敗戦あり。先発未確定、点差勝利は別評価。",
-      "analysis_detail": {
-        "summary": "Nassr直近4連勝対Kholood4連敗。H2H3勝1分、共通相手Faisaly・Ettifaq・Diriyahで優位。Nassr90分勝利を正式採用。",
-        "availability": {
-          "text": "Ittihad戦ではKholoodの引分がNassrの敗戦を上回る。NassrもAl Ainに0-4の敗戦あり。先発未確定、点差勝利は別評価。"
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Al Nassr",
-            "summary": "全大会7勝1分2敗、19得点13失点。直近4連勝。ネフチ戦の日付は資料間に1日差あり。",
-            "items": [
-              {
-                "date": "2026-10-23",
-                "opponent": "Al Faisaly",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026-10-20",
-                "opponent": "NEOM",
-                "result": "W 1-0"
-              },
-              {
-                "date": "2026-10",
-                "opponent": "Neftchi",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026-10-09",
-                "opponent": "Diriyah",
-                "result": "W 3-0"
-              },
-              {
-                "date": "2026-09-15",
-                "opponent": "Al Ain",
-                "result": "L 0-4"
-              },
-              {
-                "date": "2026-09-12",
-                "opponent": "Khaleej",
-                "result": "D 1-1"
-              },
-              {
-                "date": "2026-09-09",
-                "opponent": "Abha",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-09-05",
-                "opponent": "Ittihad",
-                "result": "L 1-2"
-              },
-              {
-                "date": "2026-08-28",
-                "opponent": "Taawoun",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-08-25",
-                "opponent": "Ettifaq",
-                "result": "W 3-2"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Al Kholood",
-            "summary": "全大会4勝2分4敗。直近4連敗2得点13失点。",
-            "items": [
-              {
-                "date": "2026-10-24",
-                "opponent": "Ettifaq",
-                "result": "L 0-3"
-              },
-              {
-                "date": "2026-10-15",
-                "opponent": "Faisaly",
-                "result": "L 2-3"
-              },
-              {
-                "date": "2026-10-09",
-                "opponent": "Qadsiah",
-                "result": "L 0-5"
-              },
-              {
-                "date": "2026-09-13",
-                "opponent": "Riyadh",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026-09-09",
-                "opponent": "Shabab",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-09-03",
-                "opponent": "Fayha",
-                "result": "D 2-2"
-              },
-              {
-                "date": "2026-08-29",
-                "opponent": "Ahli",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026-08-26",
-                "opponent": "Diriyah",
-                "result": "D 1-1"
-              },
-              {
-                "date": "2026-08-22",
-                "opponent": "Taawoun",
-                "result": "W 3-2"
-              },
-              {
-                "date": "2026-08-19",
-                "opponent": "Jeddah（カップ）",
-                "result": "W 5-0"
-              }
-            ]
-          }
-        },
-        "h2h": {
-          "summary": "確認4対戦、Nassr側。",
-          "items": [
-            {
-              "date": "2026-01-30",
-              "label": "Al Nassr vs Al Kholood",
-              "result": "3-0"
-            },
-            {
-              "date": "2025-09-14",
-              "label": "Al Nassr vs Al Kholood",
-              "result": "2-0"
-            },
-            {
-              "date": "2025-03",
-              "label": "Al Nassr vs Al Kholood",
-              "result": "3-1"
-            },
-            {
-              "date": "2024-10-25",
-              "label": "Al Nassr vs Al Kholood",
-              "result": "3-3"
-            }
-          ]
-        },
-        "common_opponent_comparison": {
-          "summary": "今季まで拡張した5相手各1試合。",
-          "items": [
-            {
-              "opponent": "Faisaly",
-              "side_a": {
-                "result": "3-1（A）"
-              },
-              "side_b": {
-                "result": "2-3（A）"
-              },
-              "comparison": "同じ敵地でNassr優勢"
-            },
-            {
-              "opponent": "Ettifaq",
-              "side_a": {
-                "result": "3-2（A）"
-              },
-              "side_b": {
-                "result": "0-3（H）"
-              },
-              "comparison": "Nassr優勢"
-            },
-            {
-              "opponent": "Diriyah",
-              "side_a": {
-                "result": "3-0（H）"
-              },
-              "side_b": {
-                "result": "1-1（A）"
-              },
-              "comparison": "Nassr優勢、会場差あり"
-            },
-            {
-              "opponent": "Taawoun",
-              "side_a": {
-                "result": "2-1（H）"
-              },
-              "side_b": {
-                "result": "3-2（H）"
-              },
-              "comparison": "両者1点差勝利"
-            },
-            {
-              "opponent": "Ittihad",
-              "side_a": {
-                "result": "1-2（A）"
-              },
-              "side_b": {
-                "result": "1-1（A）"
-              },
-              "comparison": "Kholood優勢"
-            }
-          ]
-        },
-        "market": {
-          "text": "ユーザー指定の正式採用。仮想100USD追跡。取得オッズ未登録、価格優位未判定。"
-        }
-      }
-    },
-    {
-      "rank": 4,
-      "match_id": "2026-10-31-le-havre-psg-football",
-      "event_id": "web-2026-10-31-le-havre-psg-football",
-      "matchup": "Le Havre vs Paris Saint-Germain",
-      "favored": "Paris Saint-Germain",
-      "selection_label": "Paris Saint-Germain",
-      "sport": "Football",
-      "competition": "Ligue 1 2026/27／第9節",
-      "start_jst": "2026-10-31T03:00:00+09:00",
-      "venue": "Stade Océane／PSGアウェー",
-      "format": "通常時間勝敗（引分は不的中）",
-      "status": "formal",
-      "gap_grade": "条件付き",
-      "price_grade": "取得オッズ未登録",
-      "market": "match_1x2",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合前／取得オッズ未登録",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-10-29T18:44:44+09:00",
-      "analysis_reviewed_at": "2026-10-29T18:44:44+09:00",
-      "sources": [
-        "https://www.psg.fr/en/content/fixtures-for-matchday-9-of-ligue-12026-2027-le-havre-ac-paris-saint-germain",
-        "https://www.skysports.com/football/le-havre-vs-paris-saint-germain/557069",
-        "https://www.sportsmole.co.uk/football/le-havre/preview/le-havre-vs-psg-prediction-team-news-lineups_607838.html"
-      ],
-      "conclusion": "PSGは直近確認6戦全勝、Le Havreは6戦0勝1分5敗。共通Marseille戦もPSG優位。ユーザー指定でPSG90分勝利を正式採用。開催は日本時間10/31 03:00。",
-      "risk": "PSGはアウェー。欠場・先発は試合当日に再確認。H2H10試合と共通5相手の完全照合は未実施。",
-      "analysis_detail": {
-        "summary": "PSGは直近確認6戦全勝、Le Havreは6戦0勝1分5敗。共通Marseille戦もPSG優位。ユーザー指定でPSG90分勝利を正式採用。開催は日本時間10/31 03:00。",
-        "availability": {
-          "text": "PSGはアウェー。欠場・先発は試合当日に再確認。H2H10試合と共通5相手の完全照合は未実施。"
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Le Havre",
-            "summary": "確認直近6試合0勝1分5敗。残り4試合未照合。",
-            "items": [
-              {
-                "date": "2026-10-25",
-                "opponent": "Marseille",
-                "result": "L 3-4"
-              },
-              {
-                "date": "2026-10-18",
-                "opponent": "Auxerre",
-                "result": "L 1-3"
-              },
-              {
-                "date": "2026-10-10",
-                "opponent": "Lille",
-                "result": "L 0-1"
-              },
-              {
-                "date": "2026-09-19",
-                "opponent": "Toulouse",
-                "result": "L 2-3"
-              },
-              {
-                "date": "2026-09-12",
-                "opponent": "Angers",
-                "result": "D 0-0"
-              },
-              {
-                "date": "2026-09-05",
-                "opponent": "Brest",
-                "result": "L 1-2"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Paris Saint-Germain",
-            "summary": "確認直近6試合全勝。残り4試合未照合。",
-            "items": [
-              {
-                "date": "2026-10-26",
-                "opponent": "Lyon",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026-10-20",
-                "opponent": "Barcelona",
-                "result": "W 4-2"
-              },
-              {
-                "date": "2026-10-17",
-                "opponent": "Strasbourg",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026-10-14",
-                "opponent": "Manchester City",
-                "result": "W 4-2"
-              },
-              {
-                "date": "2026-10-10",
-                "opponent": "Le Mans",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026-09-20",
-                "opponent": "Marseille",
-                "result": "W 2-1"
-              }
-            ]
-          }
-        },
-        "h2h": {
-          "summary": "直近リーグ4対戦はPSG勝利との報道。10試合の個別スコアは未照合。",
-          "items": []
-        },
-        "common_opponent_comparison": {
-          "summary": "確認1組。5組未充足。",
-          "items": [
-            {
-              "opponent": "Marseille",
-              "side_a": {
-                "result": "3-4（10/25 A）"
-              },
-              "side_b": {
-                "result": "2-1（9/20 A）"
-              },
-              "comparison": "同じ敵地でPSG優勢"
-            }
-          ]
-        },
-        "market": {
-          "text": "ユーザー指定の正式採用。仮想100USD追跡。取得オッズ未登録、価格優位未判定。"
-        }
-      }
-    },
-    {
-      "rank": 5,
-      "match_id": "2026-10-31-boston-chicago-nba",
-      "event_id": "web-2026-10-31-boston-chicago-nba",
-      "matchup": "Boston Celtics vs Chicago Bulls",
-      "favored": "Boston Celtics",
-      "selection_label": "Boston Celtics",
-      "sport": "NBA",
-      "competition": "Emirates NBA Cup 2026／East Group C",
-      "start_jst": "2026-10-31T08:30:00+09:00",
-      "venue": "TD Garden／Bostonホーム",
-      "format": "延長込み勝者",
+      "match_id": "2026-11-04-nashville-carolina-nhl",
+      "event_id": "web-2026-11-04-nashville-carolina-nhl",
+      "matchup": "Nashville Predators vs Carolina Hurricanes",
+      "favored": "Carolina Hurricanes",
+      "selection_label": "Carolina Hurricanes",
+      "sport": "NHL",
+      "competition": "NHL 2026/27 Regular Season",
+      "start_jst": "2026-11-04T10:00:00+09:00",
+      "venue": "ナッシュビルがホーム／カロライナがアウェー",
+      "format": "延長・シュートアウト込み勝利",
       "status": "formal",
       "gap_grade": "A候補",
       "price_grade": "取得オッズ未登録",
       "market": "match_winner",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "試合前／取得オッズ未登録",
+      "profit_status": "○的中確定／採用オッズ未登録のため払戻・利益額は未確定。0として計上しない。",
       "odds": {
         "min": null,
         "max": null,
@@ -788,221 +116,85 @@
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-10-29T18:44:44+09:00",
-      "analysis_reviewed_at": "2026-10-29T18:44:44+09:00",
+      "added_at": "2026-11-03T16:33:07+09:00",
+      "analysis_reviewed_at": "2026-11-03T16:33:07+09:00",
       "sources": [
-        "https://www.tdgarden.com/events/detail/celtics-vs-bulls-26-27-1",
-        "https://www.covers.com/sport/basketball/nba/matchup/385764",
-        "https://www.reuters.com/sports/basketball/payton-pritchard-ignites-celtics-offense-win-over-bulls--flm-2026-10-27/"
+        "https://abcnews.com/Sports/wireStory/hurricanes-bring-4-game-win-streak-matchup-predators-137763124",
+        "https://www.statmuse.com/nhl/ask/predators-vs-hurricane-last-ten-games",
+        "https://news.sportsinteraction.com/nhl/matchup/hurricanes-vs-predators-odds-110326-217858"
       ],
-      "conclusion": "Bostonは今季3勝1敗・Chicago1勝4敗。直近H2H134-99、H2H10戦8勝2敗。ホームBostonの延長込み勝利を正式採用。日本時間10/31 08:30。",
-      "risk": "昨季を含む直近10戦は現編成の実力をそのまま示さない。Boston直前Brooklyn戦は延長1点差。欠場は当日確認。大差ハンデは別評価。",
+      "conclusion": "カロライナ直近10試合8勝1敗1延長等敗、ナッシュビル3勝3敗4延長等敗。カロライナのアウェー勝利を正式採用。",
+      "risk": "H2H10試合の最終勝敗は5勝5敗。ナッシュビルは接戦が多く、規定時間勝利・大差勝利とは分ける。先発GK未確定。",
       "analysis_detail": {
-        "summary": "Bostonは今季3勝1敗・Chicago1勝4敗。直近H2H134-99、H2H10戦8勝2敗。ホームBostonの延長込み勝利を正式採用。日本時間10/31 08:30。",
+        "summary": "カロライナ直近10試合8勝1敗1延長等敗、ナッシュビル3勝3敗4延長等敗。カロライナのアウェー勝利を正式採用。",
         "availability": {
-          "text": "昨季を含む直近10戦は現編成の実力をそのまま示さない。Boston直前Brooklyn戦は延長1点差。欠場は当日確認。大差ハンデは別評価。"
+          "text": "H2H10試合の最終勝敗は5勝5敗。ナッシュビルは接戦が多く、規定時間勝利・大差勝利とは分ける。先発GK未確定。"
+        },
+        "h2h": {
+          "summary": "直近10試合5勝5敗（カロライナ側、延長敗含む）。",
+          "items": []
         },
         "recent_form": {
           "side_a": {
-            "label": "Boston Celtics",
-            "summary": "5勝5敗。今季のみ3勝1敗、残り6戦は昨季同一相手のプレーオフ。日付は現地。",
-            "items": [
-              {
-                "date": "2026-10-27",
-                "opponent": "Brooklyn",
-                "result": "W 125-124（OT）"
-              },
-              {
-                "date": "2026-10-26",
-                "opponent": "Chicago",
-                "result": "W 134-99"
-              },
-              {
-                "date": "2026-10-23",
-                "opponent": "New York",
-                "result": "W 107-103"
-              },
-              {
-                "date": "2026-10-20",
-                "opponent": "Detroit",
-                "result": "L 113-121"
-              },
-              {
-                "date": "2026-05-02",
-                "opponent": "Philadelphia",
-                "result": "L 100-109"
-              },
-              {
-                "date": "2026-04-30",
-                "opponent": "Philadelphia",
-                "result": "L 93-106"
-              },
-              {
-                "date": "2026-04-28",
-                "opponent": "Philadelphia",
-                "result": "L 97-113"
-              },
-              {
-                "date": "2026-04-26",
-                "opponent": "Philadelphia",
-                "result": "W 128-96"
-              },
-              {
-                "date": "2026-04-24",
-                "opponent": "Philadelphia",
-                "result": "W 108-100"
-              },
-              {
-                "date": "2026-04-21",
-                "opponent": "Philadelphia",
-                "result": "L 97-111"
-              }
-            ]
+            "label": "Nashville Predators",
+            "summary": "直近10試合3勝3敗4延長等敗。平均2.9得点3.3失点。",
+            "items": []
           },
           "side_b": {
-            "label": "Chicago Bulls",
-            "summary": "3勝7敗。今季のみ1勝4敗、残り5戦は昨季。日付は現地。",
-            "items": [
-              {
-                "date": "2026-10-28",
-                "opponent": "New York",
-                "result": "L 127-133"
-              },
-              {
-                "date": "2026-10-26",
-                "opponent": "Boston",
-                "result": "L 99-134"
-              },
-              {
-                "date": "2026-10-24",
-                "opponent": "Washington",
-                "result": "L 120-124"
-              },
-              {
-                "date": "2026-10-23",
-                "opponent": "Milwaukee",
-                "result": "W 132-125"
-              },
-              {
-                "date": "2026-10-21",
-                "opponent": "Toronto",
-                "result": "L 92-135"
-              },
-              {
-                "date": "2026-04-12",
-                "opponent": "Dallas",
-                "result": "L 128-149"
-              },
-              {
-                "date": "2026-04-10",
-                "opponent": "Orlando",
-                "result": "L 103-127"
-              },
-              {
-                "date": "2026-04-09",
-                "opponent": "Washington",
-                "result": "W 119-108"
-              },
-              {
-                "date": "2026-04-07",
-                "opponent": "Washington",
-                "result": "W 129-98"
-              },
-              {
-                "date": "2026-04-05",
-                "opponent": "Phoenix",
-                "result": "L 110-120"
-              }
-            ]
+            "label": "Carolina Hurricanes",
+            "summary": "直近10試合8勝1敗1延長等敗。平均4.0得点1.9失点。直近5試合4勝1SO敗。",
+            "items": []
           }
         },
-        "h2h": {
-          "summary": "直近10対戦Boston8勝2敗。Boston側スコア、日付は現地。",
-          "items": [
-            {
-              "date": "2026-10-26",
-              "label": "Boston vs Chicago",
-              "result": "134-99"
-            },
-            {
-              "date": "2026-02-11",
-              "label": "Boston vs Chicago",
-              "result": "124-105"
-            },
-            {
-              "date": "2026-01-24",
-              "label": "Boston vs Chicago",
-              "result": "111-114"
-            },
-            {
-              "date": "2026-01-05",
-              "label": "Boston vs Chicago",
-              "result": "115-101"
-            },
-            {
-              "date": "2025-01-29",
-              "label": "Boston vs Chicago",
-              "result": "122-100"
-            },
-            {
-              "date": "2024-12-21",
-              "label": "Boston vs Chicago",
-              "result": "123-98"
-            },
-            {
-              "date": "2024-12-19",
-              "label": "Boston vs Chicago",
-              "result": "108-117"
-            },
-            {
-              "date": "2024-11-29",
-              "label": "Boston vs Chicago",
-              "result": "138-129"
-            },
-            {
-              "date": "2024-03-23",
-              "label": "Boston vs Chicago",
-              "result": "124-113"
-            },
-            {
-              "date": "2024-02-22",
-              "label": "Boston vs Chicago",
-              "result": "129-112"
-            }
-          ]
-        },
         "common_opponent_comparison": {
-          "summary": "直近10件内1組。5組未充足。",
+          "summary": "直近10試合内の共通3相手。5相手未充足。",
           "items": [
             {
-              "opponent": "New York",
+              "opponent": "Boston",
               "side_a": {
-                "result": "107-103（10/23）"
+                "result": "10/22 A 0-6"
               },
               "side_b": {
-                "result": "127-133（10/28）"
+                "result": "10/27 H 2-1"
               },
-              "comparison": "今季はBoston勝利、Chicago敗戦"
+              "comparison": "カロライナ優勢、会場差あり"
+            },
+            {
+              "opponent": "Washington",
+              "side_a": {
+                "result": "10/29 H 3-4"
+              },
+              "side_b": {
+                "result": "10/13 H 4-2"
+              },
+              "comparison": "同じホーム条件でカロライナ優勢"
+            },
+            {
+              "opponent": "St Louis",
+              "side_a": {
+                "result": "10/17 H 5-2"
+              },
+              "side_b": {
+                "result": "10/24 A 4-0"
+              },
+              "comparison": "両者勝利、カロライナ敵地完封"
             }
           ]
         },
         "market": {
-          "text": "ユーザー指定の正式採用。仮想100USD追跡。取得オッズ未登録、価格優位未判定。"
+          "text": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。"
         }
-      }
+      },
+      "result_note": "Team Spirit vs LEGION 2-0。選択側勝利・的中確定。"
     }
   ],
   "rejected_examples": [],
   "summary": {
     "pure_gap_top": [
-      "Team Spirit",
-      "Füchse Berlin",
-      "Al Nassr",
-      "Paris Saint-Germain",
-      "Boston Celtics"
+      "Carolina Hurricanes"
     ],
     "price_adjusted_top": [],
-    "caution": "Inter 2-0で的中確定。取得オッズ未登録のため利益額は未計算。採用済みBoston・FURIAの的中、Arsenalの不的中−100USDは既存確定を維持。"
+    "caution": "新規2件正式採用。旧5件的中確定、採用オッズ未登録のため利益額未確定。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -14040,6 +13232,978 @@
         "result_sources": [
           "https://www.inter.it/en/match_center/5377"
         ]
+      },
+      {
+        "rank": 1,
+        "match_id": "2026-10-29-spirit-legion-dota2",
+        "event_id": "web-2026-10-29-spirit-legion-dota2",
+        "matchup": "Team Spirit vs LEGION",
+        "favored": "Team Spirit",
+        "selection_label": "Team Spirit",
+        "sport": "Dota 2",
+        "competition": "PARI Universe 2026／下位ブラケット BO3",
+        "start_jst": "2026-10-29T21:00:00+09:00",
+        "venue": "オンライン",
+        "format": "シリーズ勝者",
+        "status": "formal",
+        "gap_grade": "A候補",
+        "price_grade": "取得オッズ未登録",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中確定／採用オッズ未登録のため払戻・利益額は未確定。0として計上しない。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-29T18:44:44+09:00",
+        "analysis_reviewed_at": "2026-10-29T18:44:44+09:00",
+        "sources": [
+          "https://cyberscore.live/en/teams/team-spirit/matches/",
+          "https://ensigame.com/teams/dota-2/legion-legion-4",
+          "https://www.sofascore.com/esports/match/legion-team-spirit/nFWcsQark",
+          "https://liquipedia.net/dota2/Match%3AID_1lWhUOsDuZ_R01-M006"
+        ],
+        "conclusion": "Spirit直近7勝3敗対LEGION4勝6敗。同大会の共通相手比較と10/22のH2H2-0からSpirit優勢。シリーズ勝利をユーザー指定で正式採用。",
+        "risk": "Spiritも直前OG戦は1-2で敗戦。LEGIONのBO1勝利をBO3と同等に扱わない。2-0は別評価。",
+        "analysis_detail": {
+          "summary": "Spirit直近7勝3敗対LEGION4勝6敗。同大会の共通相手比較と10/22のH2H2-0からSpirit優勢。シリーズ勝利をユーザー指定で正式採用。",
+          "availability": {
+            "text": "Spiritも直前OG戦は1-2で敗戦。LEGIONのBO1勝利をBO3と同等に扱わない。2-0は別評価。"
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Team Spirit",
+              "summary": "7勝3敗。直近5は4勝1敗。",
+              "items": [
+                {
+                  "date": "2026-10-28",
+                  "opponent": "OG",
+                  "result": "L 1-2"
+                },
+                {
+                  "date": "2026-10-26",
+                  "opponent": "PARIVISION",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-10-25",
+                  "opponent": "Astra Invicta",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "BetBoom",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026-10-22",
+                  "opponent": "LEGION",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026-10-11",
+                  "opponent": "Yandex（BO5）",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-10-11",
+                  "opponent": "PARIVISION",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-10-10",
+                  "opponent": "Yandex",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-10-09",
+                  "opponent": "Aurora",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-10-03",
+                  "opponent": "Yandex",
+                  "result": "W 2-1"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "LEGION",
+              "summary": "4勝6敗。BO1を除く掲載8シリーズは2勝6敗。LEGIONとGamerLegionは別チーム。",
+              "items": [
+                {
+                  "date": "2026-10-28",
+                  "opponent": "GamerLegion",
+                  "result": "L 1-2"
+                },
+                {
+                  "date": "2026-10-27",
+                  "opponent": "BetBoom（BO1）",
+                  "result": "W 1-0"
+                },
+                {
+                  "date": "2026-10-27",
+                  "opponent": "Astra Invicta（BO1）",
+                  "result": "W 1-0"
+                },
+                {
+                  "date": "2026-10-26",
+                  "opponent": "BetBoom",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "Astra Invicta",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-10-23",
+                  "opponent": "PARIVISION",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-10-22",
+                  "opponent": "Team Spirit",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-10-17",
+                  "opponent": "Team Lynx",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-10-16",
+                  "opponent": "OG",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-10-15",
+                  "opponent": "Team Lynx",
+                  "result": "W 2-0"
+                }
+              ]
+            }
+          },
+          "h2h": {
+            "summary": "確認1シリーズのみ。Spirit側スコア。",
+            "items": [
+              {
+                "date": "2026-10-22",
+                "label": "Team Spirit vs LEGION",
+                "result": "2-0"
+              }
+            ]
+          },
+          "common_opponent_comparison": {
+            "summary": "直近10件内4組。5組目なし。",
+            "items": [
+              {
+                "opponent": "PARIVISION",
+                "side_a": {
+                  "result": "2-1、2-1"
+                },
+                "side_b": {
+                  "result": "0-2"
+                },
+                "comparison": "Spirit優勢"
+              },
+              {
+                "opponent": "Astra Invicta",
+                "side_a": {
+                  "result": "2-0"
+                },
+                "side_b": {
+                  "result": "1-0（BO1）、2-1"
+                },
+                "comparison": "BO3でSpirit快勝"
+              },
+              {
+                "opponent": "BetBoom",
+                "side_a": {
+                  "result": "2-0"
+                },
+                "side_b": {
+                  "result": "1-0（BO1）、0-2"
+                },
+                "comparison": "BO3比較Spirit優勢"
+              },
+              {
+                "opponent": "OG",
+                "side_a": {
+                  "result": "1-2"
+                },
+                "side_b": {
+                  "result": "0-2"
+                },
+                "comparison": "両者敗戦"
+              }
+            ]
+          },
+          "market": {
+            "text": "ユーザー指定の正式採用。仮想100USD追跡。取得オッズ未登録、価格優位未判定。"
+          }
+        },
+        "result_note": "Team Spirit vs LEGION 2-0。選択側勝利・的中確定。"
+      },
+      {
+        "rank": 2,
+        "match_id": "2026-10-30-berlin-partizan-handball",
+        "event_id": "web-2026-10-30-berlin-partizan-handball",
+        "matchup": "Füchse Berlin vs RK Partizan",
+        "favored": "Füchse Berlin",
+        "selection_label": "Füchse Berlin",
+        "sport": "Handball",
+        "competition": "EHF Champions League Men 2026/27／Group A",
+        "start_jst": "2026-10-30T02:45:00+09:00",
+        "venue": "Berlinホーム",
+        "format": "通常時間勝敗（引分は不的中）",
+        "status": "formal",
+        "gap_grade": "条件付き",
+        "price_grade": "取得オッズ未登録",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中確定／採用オッズ未登録のため払戻・利益額は未確定。0として計上しない。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-29T18:44:44+09:00",
+        "analysis_reviewed_at": "2026-10-29T18:44:44+09:00",
+        "sources": [
+          "https://ehfec.eurohandball.com/men/2026-27/news/en/three-main-round-spots-still-open-before-final-round-6/",
+          "https://history.eurohandball.com/ec/cl/men/2026-27/round/1/6742663",
+          "https://www.sportschau.de/live-und-ergebnisse/ma12367681/liveticker"
+        ],
+        "conclusion": "CLでBerlin3勝2敗、Partizan0勝1分4敗。H2H44-33と同組比較はBerlin優勢。ユーザー指定で通常時間勝利を正式採用。",
+        "risk": "Berlinは突破確定。Partizanは国内では好成績。CLと国内の相手水準を区別。全大会直近10戦未照合。",
+        "analysis_detail": {
+          "summary": "CLでBerlin3勝2敗、Partizan0勝1分4敗。H2H44-33と同組比較はBerlin優勢。ユーザー指定で通常時間勝利を正式採用。",
+          "availability": {
+            "text": "Berlinは突破確定。Partizanは国内では好成績。CLと国内の相手水準を区別。全大会直近10戦未照合。"
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Füchse Berlin",
+              "summary": "CL5試合。国内を含む直近10試合の完全照合は未完了。",
+              "items": [
+                {
+                  "date": "2026-10-21",
+                  "opponent": "Veszprem",
+                  "result": "L 35-39"
+                },
+                {
+                  "date": "2026-10-15",
+                  "opponent": "Porto",
+                  "result": "W 36-33"
+                },
+                {
+                  "date": "2026-10-08",
+                  "opponent": "Porto",
+                  "result": "W 40-32"
+                },
+                {
+                  "date": "2026-09-16",
+                  "opponent": "Veszprem",
+                  "result": "L 29-35"
+                },
+                {
+                  "date": "2026-09-10",
+                  "opponent": "Partizan",
+                  "result": "W 44-33"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "RK Partizan",
+              "summary": "CL5試合。国内を含む直近10試合の完全照合は未完了。",
+              "items": [
+                {
+                  "date": "2026-10-21",
+                  "opponent": "Porto",
+                  "result": "D 33-33"
+                },
+                {
+                  "date": "2026-10-14",
+                  "opponent": "Veszprem",
+                  "result": "L 28-38"
+                },
+                {
+                  "date": "2026-10-07",
+                  "opponent": "Veszprem",
+                  "result": "L 26-37"
+                },
+                {
+                  "date": "2026-09-17",
+                  "opponent": "Porto",
+                  "result": "L 28-32"
+                },
+                {
+                  "date": "2026-09-10",
+                  "opponent": "Berlin",
+                  "result": "L 33-44"
+                }
+              ]
+            }
+          },
+          "h2h": {
+            "summary": "H2H1試合、Berlin側。",
+            "items": [
+              {
+                "date": "2026-09-10",
+                "label": "Partizan vs Berlin",
+                "result": "Berlin 44-33"
+              }
+            ]
+          },
+          "common_opponent_comparison": {
+            "summary": "同組2相手各2試合。5組未充足。",
+            "items": [
+              {
+                "opponent": "Porto",
+                "side_a": {
+                  "result": "40-32、36-33"
+                },
+                "side_b": {
+                  "result": "28-32、33-33"
+                },
+                "comparison": "Berlin優勢"
+              },
+              {
+                "opponent": "Veszprem",
+                "side_a": {
+                  "result": "29-35、35-39"
+                },
+                "side_b": {
+                  "result": "26-37、28-38"
+                },
+                "comparison": "両者敗戦、Berlinの点差が小さい"
+              }
+            ]
+          },
+          "market": {
+            "text": "ユーザー指定の正式採用。仮想100USD追跡。取得オッズ未登録、価格優位未判定。"
+          }
+        },
+        "result_note": "Füchse Berlin vs RK Partizan 40-33。選択側勝利・的中確定。"
+      },
+      {
+        "rank": 3,
+        "match_id": "2026-10-30-nassr-kholood-football",
+        "event_id": "web-2026-10-30-nassr-kholood-football",
+        "matchup": "Al Nassr vs Al Kholood",
+        "favored": "Al Nassr",
+        "selection_label": "Al Nassr",
+        "sport": "Football",
+        "competition": "Saudi Pro League 2026/27",
+        "start_jst": "2026-10-30T03:00:00+09:00",
+        "venue": "Al-Awwal Park",
+        "format": "通常時間勝敗（引分は不的中）",
+        "status": "formal",
+        "gap_grade": "A候補",
+        "price_grade": "取得オッズ未登録",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中確定／採用オッズ未登録のため払戻・利益額は未確定。0として計上しない。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-29T18:44:44+09:00",
+        "analysis_reviewed_at": "2026-10-29T18:44:44+09:00",
+        "sources": [
+          "https://sportaurus.com/match/24633979",
+          "https://www.bettingacademyindia.com/stats/match/saudi-arabia/pro-league/nassr/al-kholood/3JnZM62B1mVxv",
+          "https://alkholoodclub.com/results"
+        ],
+        "conclusion": "Nassr直近4連勝対Kholood4連敗。H2H3勝1分、共通相手Faisaly・Ettifaq・Diriyahで優位。Nassr90分勝利を正式採用。",
+        "risk": "Ittihad戦ではKholoodの引分がNassrの敗戦を上回る。NassrもAl Ainに0-4の敗戦あり。先発未確定、点差勝利は別評価。",
+        "analysis_detail": {
+          "summary": "Nassr直近4連勝対Kholood4連敗。H2H3勝1分、共通相手Faisaly・Ettifaq・Diriyahで優位。Nassr90分勝利を正式採用。",
+          "availability": {
+            "text": "Ittihad戦ではKholoodの引分がNassrの敗戦を上回る。NassrもAl Ainに0-4の敗戦あり。先発未確定、点差勝利は別評価。"
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Al Nassr",
+              "summary": "全大会7勝1分2敗、19得点13失点。直近4連勝。ネフチ戦の日付は資料間に1日差あり。",
+              "items": [
+                {
+                  "date": "2026-10-23",
+                  "opponent": "Al Faisaly",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-10-20",
+                  "opponent": "NEOM",
+                  "result": "W 1-0"
+                },
+                {
+                  "date": "2026-10",
+                  "opponent": "Neftchi",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-10-09",
+                  "opponent": "Diriyah",
+                  "result": "W 3-0"
+                },
+                {
+                  "date": "2026-09-15",
+                  "opponent": "Al Ain",
+                  "result": "L 0-4"
+                },
+                {
+                  "date": "2026-09-12",
+                  "opponent": "Khaleej",
+                  "result": "D 1-1"
+                },
+                {
+                  "date": "2026-09-09",
+                  "opponent": "Abha",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-09-05",
+                  "opponent": "Ittihad",
+                  "result": "L 1-2"
+                },
+                {
+                  "date": "2026-08-28",
+                  "opponent": "Taawoun",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-08-25",
+                  "opponent": "Ettifaq",
+                  "result": "W 3-2"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Al Kholood",
+              "summary": "全大会4勝2分4敗。直近4連敗2得点13失点。",
+              "items": [
+                {
+                  "date": "2026-10-24",
+                  "opponent": "Ettifaq",
+                  "result": "L 0-3"
+                },
+                {
+                  "date": "2026-10-15",
+                  "opponent": "Faisaly",
+                  "result": "L 2-3"
+                },
+                {
+                  "date": "2026-10-09",
+                  "opponent": "Qadsiah",
+                  "result": "L 0-5"
+                },
+                {
+                  "date": "2026-09-13",
+                  "opponent": "Riyadh",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-09-09",
+                  "opponent": "Shabab",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-09-03",
+                  "opponent": "Fayha",
+                  "result": "D 2-2"
+                },
+                {
+                  "date": "2026-08-29",
+                  "opponent": "Ahli",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-08-26",
+                  "opponent": "Diriyah",
+                  "result": "D 1-1"
+                },
+                {
+                  "date": "2026-08-22",
+                  "opponent": "Taawoun",
+                  "result": "W 3-2"
+                },
+                {
+                  "date": "2026-08-19",
+                  "opponent": "Jeddah（カップ）",
+                  "result": "W 5-0"
+                }
+              ]
+            }
+          },
+          "h2h": {
+            "summary": "確認4対戦、Nassr側。",
+            "items": [
+              {
+                "date": "2026-01-30",
+                "label": "Al Nassr vs Al Kholood",
+                "result": "3-0"
+              },
+              {
+                "date": "2025-09-14",
+                "label": "Al Nassr vs Al Kholood",
+                "result": "2-0"
+              },
+              {
+                "date": "2025-03",
+                "label": "Al Nassr vs Al Kholood",
+                "result": "3-1"
+              },
+              {
+                "date": "2024-10-25",
+                "label": "Al Nassr vs Al Kholood",
+                "result": "3-3"
+              }
+            ]
+          },
+          "common_opponent_comparison": {
+            "summary": "今季まで拡張した5相手各1試合。",
+            "items": [
+              {
+                "opponent": "Faisaly",
+                "side_a": {
+                  "result": "3-1（A）"
+                },
+                "side_b": {
+                  "result": "2-3（A）"
+                },
+                "comparison": "同じ敵地でNassr優勢"
+              },
+              {
+                "opponent": "Ettifaq",
+                "side_a": {
+                  "result": "3-2（A）"
+                },
+                "side_b": {
+                  "result": "0-3（H）"
+                },
+                "comparison": "Nassr優勢"
+              },
+              {
+                "opponent": "Diriyah",
+                "side_a": {
+                  "result": "3-0（H）"
+                },
+                "side_b": {
+                  "result": "1-1（A）"
+                },
+                "comparison": "Nassr優勢、会場差あり"
+              },
+              {
+                "opponent": "Taawoun",
+                "side_a": {
+                  "result": "2-1（H）"
+                },
+                "side_b": {
+                  "result": "3-2（H）"
+                },
+                "comparison": "両者1点差勝利"
+              },
+              {
+                "opponent": "Ittihad",
+                "side_a": {
+                  "result": "1-2（A）"
+                },
+                "side_b": {
+                  "result": "1-1（A）"
+                },
+                "comparison": "Kholood優勢"
+              }
+            ]
+          },
+          "market": {
+            "text": "ユーザー指定の正式採用。仮想100USD追跡。取得オッズ未登録、価格優位未判定。"
+          }
+        },
+        "result_note": "Al Nassr vs Al Kholood 5-3。選択側勝利・的中確定。"
+      },
+      {
+        "rank": 4,
+        "match_id": "2026-10-31-le-havre-psg-football",
+        "event_id": "web-2026-10-31-le-havre-psg-football",
+        "matchup": "Le Havre vs Paris Saint-Germain",
+        "favored": "Paris Saint-Germain",
+        "selection_label": "Paris Saint-Germain",
+        "sport": "Football",
+        "competition": "Ligue 1 2026/27／第9節",
+        "start_jst": "2026-10-31T03:00:00+09:00",
+        "venue": "Stade Océane／PSGアウェー",
+        "format": "通常時間勝敗（引分は不的中）",
+        "status": "formal",
+        "gap_grade": "条件付き",
+        "price_grade": "取得オッズ未登録",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中確定／採用オッズ未登録のため払戻・利益額は未確定。0として計上しない。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-29T18:44:44+09:00",
+        "analysis_reviewed_at": "2026-10-29T18:44:44+09:00",
+        "sources": [
+          "https://www.psg.fr/en/content/fixtures-for-matchday-9-of-ligue-12026-2027-le-havre-ac-paris-saint-germain",
+          "https://www.skysports.com/football/le-havre-vs-paris-saint-germain/557069",
+          "https://www.sportsmole.co.uk/football/le-havre/preview/le-havre-vs-psg-prediction-team-news-lineups_607838.html",
+          "https://www.psg.fr/en/matches/mens-football/20262027/le-havre-vs-paris-2026-10-30"
+        ],
+        "conclusion": "PSGは直近確認6戦全勝、Le Havreは6戦0勝1分5敗。共通Marseille戦もPSG優位。ユーザー指定でPSG90分勝利を正式採用。開催は日本時間10/31 03:00。",
+        "risk": "PSGはアウェー。欠場・先発は試合当日に再確認。H2H10試合と共通5相手の完全照合は未実施。",
+        "analysis_detail": {
+          "summary": "PSGは直近確認6戦全勝、Le Havreは6戦0勝1分5敗。共通Marseille戦もPSG優位。ユーザー指定でPSG90分勝利を正式採用。開催は日本時間10/31 03:00。",
+          "availability": {
+            "text": "PSGはアウェー。欠場・先発は試合当日に再確認。H2H10試合と共通5相手の完全照合は未実施。"
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Le Havre",
+              "summary": "確認直近6試合0勝1分5敗。残り4試合未照合。",
+              "items": [
+                {
+                  "date": "2026-10-25",
+                  "opponent": "Marseille",
+                  "result": "L 3-4"
+                },
+                {
+                  "date": "2026-10-18",
+                  "opponent": "Auxerre",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-10-10",
+                  "opponent": "Lille",
+                  "result": "L 0-1"
+                },
+                {
+                  "date": "2026-09-19",
+                  "opponent": "Toulouse",
+                  "result": "L 2-3"
+                },
+                {
+                  "date": "2026-09-12",
+                  "opponent": "Angers",
+                  "result": "D 0-0"
+                },
+                {
+                  "date": "2026-09-05",
+                  "opponent": "Brest",
+                  "result": "L 1-2"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Paris Saint-Germain",
+              "summary": "確認直近6試合全勝。残り4試合未照合。",
+              "items": [
+                {
+                  "date": "2026-10-26",
+                  "opponent": "Lyon",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026-10-20",
+                  "opponent": "Barcelona",
+                  "result": "W 4-2"
+                },
+                {
+                  "date": "2026-10-17",
+                  "opponent": "Strasbourg",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-10-14",
+                  "opponent": "Manchester City",
+                  "result": "W 4-2"
+                },
+                {
+                  "date": "2026-10-10",
+                  "opponent": "Le Mans",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-09-20",
+                  "opponent": "Marseille",
+                  "result": "W 2-1"
+                }
+              ]
+            }
+          },
+          "h2h": {
+            "summary": "直近リーグ4対戦はPSG勝利との報道。10試合の個別スコアは未照合。",
+            "items": []
+          },
+          "common_opponent_comparison": {
+            "summary": "確認1組。5組未充足。",
+            "items": [
+              {
+                "opponent": "Marseille",
+                "side_a": {
+                  "result": "3-4（10/25 A）"
+                },
+                "side_b": {
+                  "result": "2-1（9/20 A）"
+                },
+                "comparison": "同じ敵地でPSG優勢"
+              }
+            ]
+          },
+          "market": {
+            "text": "ユーザー指定の正式採用。仮想100USD追跡。取得オッズ未登録、価格優位未判定。"
+          }
+        },
+        "result_note": "Le Havre vs Paris Saint-Germain 1-5。選択側勝利・的中確定。"
+      },
+      {
+        "rank": 5,
+        "match_id": "2026-10-31-boston-chicago-nba",
+        "event_id": "web-2026-10-31-boston-chicago-nba",
+        "matchup": "Boston Celtics vs Chicago Bulls",
+        "favored": "Boston Celtics",
+        "selection_label": "Boston Celtics",
+        "sport": "NBA",
+        "competition": "Emirates NBA Cup 2026／East Group C",
+        "start_jst": "2026-10-31T08:30:00+09:00",
+        "venue": "TD Garden／Bostonホーム",
+        "format": "延長込み勝者",
+        "status": "formal",
+        "gap_grade": "A候補",
+        "price_grade": "取得オッズ未登録",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中確定／採用オッズ未登録のため払戻・利益額は未確定。0として計上しない。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-10-29T18:44:44+09:00",
+        "analysis_reviewed_at": "2026-10-29T18:44:44+09:00",
+        "sources": [
+          "https://www.tdgarden.com/events/detail/celtics-vs-bulls-26-27-1",
+          "https://www.covers.com/sport/basketball/nba/matchup/385764",
+          "https://www.reuters.com/sports/basketball/payton-pritchard-ignites-celtics-offense-win-over-bulls--flm-2026-10-27/",
+          "https://www.nba.com/game/CHI-vs-BOS-0022600016"
+        ],
+        "conclusion": "Bostonは今季3勝1敗・Chicago1勝4敗。直近H2H134-99、H2H10戦8勝2敗。ホームBostonの延長込み勝利を正式採用。日本時間10/31 08:30。",
+        "risk": "昨季を含む直近10戦は現編成の実力をそのまま示さない。Boston直前Brooklyn戦は延長1点差。欠場は当日確認。大差ハンデは別評価。",
+        "analysis_detail": {
+          "summary": "Bostonは今季3勝1敗・Chicago1勝4敗。直近H2H134-99、H2H10戦8勝2敗。ホームBostonの延長込み勝利を正式採用。日本時間10/31 08:30。",
+          "availability": {
+            "text": "昨季を含む直近10戦は現編成の実力をそのまま示さない。Boston直前Brooklyn戦は延長1点差。欠場は当日確認。大差ハンデは別評価。"
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Boston Celtics",
+              "summary": "5勝5敗。今季のみ3勝1敗、残り6戦は昨季同一相手のプレーオフ。日付は現地。",
+              "items": [
+                {
+                  "date": "2026-10-27",
+                  "opponent": "Brooklyn",
+                  "result": "W 125-124（OT）"
+                },
+                {
+                  "date": "2026-10-26",
+                  "opponent": "Chicago",
+                  "result": "W 134-99"
+                },
+                {
+                  "date": "2026-10-23",
+                  "opponent": "New York",
+                  "result": "W 107-103"
+                },
+                {
+                  "date": "2026-10-20",
+                  "opponent": "Detroit",
+                  "result": "L 113-121"
+                },
+                {
+                  "date": "2026-05-02",
+                  "opponent": "Philadelphia",
+                  "result": "L 100-109"
+                },
+                {
+                  "date": "2026-04-30",
+                  "opponent": "Philadelphia",
+                  "result": "L 93-106"
+                },
+                {
+                  "date": "2026-04-28",
+                  "opponent": "Philadelphia",
+                  "result": "L 97-113"
+                },
+                {
+                  "date": "2026-04-26",
+                  "opponent": "Philadelphia",
+                  "result": "W 128-96"
+                },
+                {
+                  "date": "2026-04-24",
+                  "opponent": "Philadelphia",
+                  "result": "W 108-100"
+                },
+                {
+                  "date": "2026-04-21",
+                  "opponent": "Philadelphia",
+                  "result": "L 97-111"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Chicago Bulls",
+              "summary": "3勝7敗。今季のみ1勝4敗、残り5戦は昨季。日付は現地。",
+              "items": [
+                {
+                  "date": "2026-10-28",
+                  "opponent": "New York",
+                  "result": "L 127-133"
+                },
+                {
+                  "date": "2026-10-26",
+                  "opponent": "Boston",
+                  "result": "L 99-134"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "Washington",
+                  "result": "L 120-124"
+                },
+                {
+                  "date": "2026-10-23",
+                  "opponent": "Milwaukee",
+                  "result": "W 132-125"
+                },
+                {
+                  "date": "2026-10-21",
+                  "opponent": "Toronto",
+                  "result": "L 92-135"
+                },
+                {
+                  "date": "2026-04-12",
+                  "opponent": "Dallas",
+                  "result": "L 128-149"
+                },
+                {
+                  "date": "2026-04-10",
+                  "opponent": "Orlando",
+                  "result": "L 103-127"
+                },
+                {
+                  "date": "2026-04-09",
+                  "opponent": "Washington",
+                  "result": "W 119-108"
+                },
+                {
+                  "date": "2026-04-07",
+                  "opponent": "Washington",
+                  "result": "W 129-98"
+                },
+                {
+                  "date": "2026-04-05",
+                  "opponent": "Phoenix",
+                  "result": "L 110-120"
+                }
+              ]
+            }
+          },
+          "h2h": {
+            "summary": "直近10対戦Boston8勝2敗。Boston側スコア、日付は現地。",
+            "items": [
+              {
+                "date": "2026-10-26",
+                "label": "Boston vs Chicago",
+                "result": "134-99"
+              },
+              {
+                "date": "2026-02-11",
+                "label": "Boston vs Chicago",
+                "result": "124-105"
+              },
+              {
+                "date": "2026-01-24",
+                "label": "Boston vs Chicago",
+                "result": "111-114"
+              },
+              {
+                "date": "2026-01-05",
+                "label": "Boston vs Chicago",
+                "result": "115-101"
+              },
+              {
+                "date": "2025-01-29",
+                "label": "Boston vs Chicago",
+                "result": "122-100"
+              },
+              {
+                "date": "2024-12-21",
+                "label": "Boston vs Chicago",
+                "result": "123-98"
+              },
+              {
+                "date": "2024-12-19",
+                "label": "Boston vs Chicago",
+                "result": "108-117"
+              },
+              {
+                "date": "2024-11-29",
+                "label": "Boston vs Chicago",
+                "result": "138-129"
+              },
+              {
+                "date": "2024-03-23",
+                "label": "Boston vs Chicago",
+                "result": "124-113"
+              },
+              {
+                "date": "2024-02-22",
+                "label": "Boston vs Chicago",
+                "result": "129-112"
+              }
+            ]
+          },
+          "common_opponent_comparison": {
+            "summary": "直近10件内1組。5組未充足。",
+            "items": [
+              {
+                "opponent": "New York",
+                "side_a": {
+                  "result": "107-103（10/23）"
+                },
+                "side_b": {
+                  "result": "127-133（10/28）"
+                },
+                "comparison": "今季はBoston勝利、Chicago敗戦"
+              }
+            ]
+          },
+          "market": {
+            "text": "ユーザー指定の正式採用。仮想100USD追跡。取得オッズ未登録、価格優位未判定。"
+          }
+        },
+        "result_note": "Boston Celtics vs Chicago Bulls 125-111。選択側勝利・的中確定。"
       }
     ],
     "summary": {
@@ -14069,7 +14233,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-10-29T18:44:44+09:00",
-    "note": "Boston・FURIA勝利、Arsenal90分勝利不的中。Arsenal仮想−100USD、勝利2件利益未計算。 Inter追加。"
+    "as_of": "2026-11-03T16:33:07+09:00",
+    "note": "終了済み5件は履歴に移動。結果確定と金額確定を区別。"
   }
 }

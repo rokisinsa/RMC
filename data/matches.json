@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-10-29T18:44:44+09:00",
+    "as_of": "2026-11-03T16:33:07+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -351,6 +351,13 @@
       "at": "2026-10-29T18:44:44+09:00",
       "source": "ユーザー指定＋公式日程・専門結果DB",
       "note": "5カード正式追加。PSG/Bostonは10/31 JST。"
+    },
+    {
+      "run_id": "mr-20261103-user-two",
+      "kind": "human_review",
+      "at": "2026-11-03T16:33:07+09:00",
+      "source": "公式日程・AP試合情報",
+      "note": "Barcelonaホーム・Carolinaアウェーの2件追加"
     }
   ],
   "matches": [
@@ -6206,6 +6213,70 @@
       "provenance": [
         {
           "update_run_id": "mr-20261029-user-five",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-barcelona-villa-football",
+      "sport": "Football",
+      "competition": "UEFA Champions League 2026/27／リーグフェーズ第4節",
+      "side_a": "FC Barcelona",
+      "side_b": "Aston Villa",
+      "home_side": "side_a",
+      "venue": "Spotify Camp Nou／バルセロナがホーム",
+      "start_at": "2026-11-04T05:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "大会・公式日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.fcbarcelona.com/en/matches/141501/fc-barcelona-aston-villa-uefa-champions-league-2026-2027"
+      ],
+      "verified_at": "2026-11-03T16:33:07+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261103-user-two",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-nashville-carolina-nhl",
+      "sport": "NHL",
+      "competition": "NHL 2026/27 Regular Season",
+      "side_a": "Nashville Predators",
+      "side_b": "Carolina Hurricanes",
+      "home_side": "side_a",
+      "venue": "ナッシュビルがホーム／カロライナがアウェー",
+      "start_at": "2026-11-04T10:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "大会・公式日程を日本時間へ換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://abcnews.com/Sports/wireStory/hurricanes-bring-4-game-win-streak-matchup-predators-137763124"
+      ],
+      "verified_at": "2026-11-03T16:33:07+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261103-user-two",
           "changes": [
             {
               "field": "new_match",
