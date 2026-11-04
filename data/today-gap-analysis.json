@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-11-03T16:33:07+09:00",
+  "generated_at": "2026-11-04T20:44:08+09:00",
   "window": {
-    "from": "2026-11-03T00:00:00+09:00",
-    "to": "2026-11-05T00:00:00+09:00",
+    "from": "2026-11-04T00:00:00+09:00",
+    "to": "2026-11-06T00:00:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "11/4開催のユーザー指定2件。"
+    "note": "ユーザー指定7件、全件11/5 JST。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -19,182 +19,735 @@
   ],
   "coverage": {
     "checked": [
-      "FC Barcelona vs Aston Villa",
-      "Nashville Predators vs Carolina Hurricanes"
+      "North Macedonia vs Luxembourg",
+      "Slavia Praha vs Arsenal",
+      "Gen.G vs LYON",
+      "Boston Celtics vs Milwaukee Bucks",
+      "Florida Panthers vs Chicago Blackhawks",
+      "New York Knicks vs Chicago Bulls",
+      "AEK Athens vs Real Madrid"
     ],
-    "note": "指定2件追加と掲載済み5件の結果確認。"
+    "note": "指定カードの追加。全世界網羅調査ではない。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-11-04-barcelona-villa-football",
-      "event_id": "web-2026-11-04-barcelona-villa-football",
-      "matchup": "FC Barcelona vs Aston Villa",
-      "favored": "FC Barcelona",
-      "selection_label": "FC Barcelona DNB（引分返金）",
-      "sport": "Football",
-      "competition": "UEFA Champions League 2026/27／リーグフェーズ第4節",
-      "start_jst": "2026-11-04T05:00:00+09:00",
-      "venue": "Spotify Camp Nou／バルセロナがホーム",
-      "format": "ドローノーベット（90分、引分返金）",
+      "match_id": "2026-11-05-north-macedonia-luxembourg-handball",
+      "event_id": "web-2026-11-05-north-macedonia-luxembourg-handball",
+      "matchup": "North Macedonia vs Luxembourg",
+      "favored": "North Macedonia",
+      "selection_label": "North Macedonia",
+      "sport": "Handball",
+      "competition": "Men’s EHF EURO 2028 Qualifiers",
+      "start_jst": "2026-11-05T03:00:00+09:00",
+      "venue": "North Macedoniaがホーム／Luxembourgがアウェー",
+      "format": "60分勝利",
       "status": "formal",
-      "gap_grade": "条件付き",
-      "price_grade": "取得オッズ未登録",
-      "market": "dnb",
+      "gap_grade": "A−",
+      "price_grade": "採用オッズ未登録",
+      "market": "match_1x2",
       "stake_usd_reference": 100,
       "profit_usd": null,
-      "profit_status": "○的中確定／採用オッズ未登録のため払戻・利益額は未確定。0として計上しない。",
+      "profit_status": "試合前・未確定。採用オッズ未登録。",
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
+        "book_examples": "採用オッズ未登録。推測価格は精算に使わない。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-11-03T16:33:07+09:00",
-      "analysis_reviewed_at": "2026-11-03T16:33:07+09:00",
+      "added_at": "2026-11-04T20:44:08+09:00",
+      "analysis_reviewed_at": "2026-11-04T20:44:08+09:00",
       "sources": [
-        "https://www.fcbarcelona.com/en/matches/141501/fc-barcelona-aston-villa-uefa-champions-league-2026-2027",
-        "https://theanalyst.com/articles/barcelona-vs-aston-villa-prediction-champions-league-preview-11-2026"
+        "https://www.eurohandball.com/en/news/en/wednesday-qualifiers-action-the-road-to-men-s-ehf-euro-2028-throws-off-in-croatia/",
+        "https://www.betexplorer.com/handball/team/north-macedonia/lSN16BOP/results/",
+        "https://www.eurohandball.com/en/team/wEC4kltMIBH4Ho7pDuVV2g/luxembourg/"
       ],
-      "conclusion": "ホームのバルセロナDNB（90分、引分返金）をユーザー指定で正式採用。直近アラベス戦6-1。一方でヴィラは今大会3連勝。格差最上位とは認定しない。",
-      "risk": "バルセロナは直前にPSG・レアル戦で敗戦。H2H直近10・共通5相手は未充足。",
+      "conclusion": "北マケドニアのホーム60分勝利を正式採用。H2H公式集計6戦全勝、取得一覧の直近5試合3勝2分。",
+      "risk": "最新H2Hは2023年で28-23。大差条件とは別評価。ルクセンブルクは新監督、活動間隔が長い。",
       "analysis_detail": {
-        "summary": "ホームのバルセロナDNB（90分、引分返金）をユーザー指定で正式採用。直近アラベス戦6-1。一方でヴィラは今大会3連勝。格差最上位とは認定しない。",
+        "summary": "北マケドニアのホーム60分勝利を正式採用。H2H公式集計6戦全勝、取得一覧の直近5試合3勝2分。",
         "availability": {
-          "text": "バルセロナは直前にPSG・レアル戦で敗戦。H2H直近10・共通5相手は未充足。"
+          "text": "最新H2Hは2023年で28-23。大差条件とは別評価。ルクセンブルクは新監督、活動間隔が長い。"
         },
         "h2h": {
-          "summary": "直近10件未照合。古い対戦を現在戦力の根拠にしない。",
-          "items": []
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "FC Barcelona",
-            "summary": "直近アラベス戦6-1。",
-            "items": []
-          },
-          "side_b": {
-            "label": "Aston Villa",
-            "summary": "CL開幕3連勝。直近フラム戦1-1。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "未照合。",
-          "items": []
-        },
-        "market": {
-          "text": "バルセロナDNBを正式採用。90分勝利は的中、引分は返金、敗戦は不的中。仮想100USD追跡、採用オッズ未登録。"
-        }
-      },
-      "result_note": "Team Spirit vs LEGION 2-0。選択側勝利・的中確定。"
-    },
-    {
-      "rank": 2,
-      "match_id": "2026-11-04-nashville-carolina-nhl",
-      "event_id": "web-2026-11-04-nashville-carolina-nhl",
-      "matchup": "Nashville Predators vs Carolina Hurricanes",
-      "favored": "Carolina Hurricanes",
-      "selection_label": "Carolina Hurricanes",
-      "sport": "NHL",
-      "competition": "NHL 2026/27 Regular Season",
-      "start_jst": "2026-11-04T10:00:00+09:00",
-      "venue": "ナッシュビルがホーム／カロライナがアウェー",
-      "format": "延長・シュートアウト込み勝利",
-      "status": "formal",
-      "gap_grade": "A候補",
-      "price_grade": "取得オッズ未登録",
-      "market": "match_winner",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "○的中確定／採用オッズ未登録のため払戻・利益額は未確定。0として計上しない。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-11-03T16:33:07+09:00",
-      "analysis_reviewed_at": "2026-11-03T16:33:07+09:00",
-      "sources": [
-        "https://abcnews.com/Sports/wireStory/hurricanes-bring-4-game-win-streak-matchup-predators-137763124",
-        "https://www.statmuse.com/nhl/ask/predators-vs-hurricane-last-ten-games",
-        "https://news.sportsinteraction.com/nhl/matchup/hurricanes-vs-predators-odds-110326-217858"
-      ],
-      "conclusion": "カロライナ直近10試合8勝1敗1延長等敗、ナッシュビル3勝3敗4延長等敗。カロライナのアウェー勝利を正式採用。",
-      "risk": "H2H10試合の最終勝敗は5勝5敗。ナッシュビルは接戦が多く、規定時間勝利・大差勝利とは分ける。先発GK未確定。",
-      "analysis_detail": {
-        "summary": "カロライナ直近10試合8勝1敗1延長等敗、ナッシュビル3勝3敗4延長等敗。カロライナのアウェー勝利を正式採用。",
-        "availability": {
-          "text": "H2H10試合の最終勝敗は5勝5敗。ナッシュビルは接戦が多く、規定時間勝利・大差勝利とは分ける。先発GK未確定。"
-        },
-        "h2h": {
-          "summary": "直近10試合5勝5敗（カロライナ側、延長敗含む）。",
-          "items": []
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Nashville Predators",
-            "summary": "直近10試合3勝3敗4延長等敗。平均2.9得点3.3失点。",
-            "items": []
-          },
-          "side_b": {
-            "label": "Carolina Hurricanes",
-            "summary": "直近10試合8勝1敗1延長等敗。平均4.0得点1.9失点。直近5試合4勝1SO敗。",
-            "items": []
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "直近10試合内の共通3相手。5相手未充足。",
+          "summary": "公式集計6勝0敗。個別スコア確認2件、10件未充足。",
           "items": [
             {
-              "opponent": "Boston",
-              "side_a": {
-                "result": "10/22 A 0-6"
-              },
-              "side_b": {
-                "result": "10/27 H 2-1"
-              },
-              "comparison": "カロライナ優勢、会場差あり"
+              "date": "2023-04-26",
+              "label": "North Macedonia A",
+              "result": "28-23"
             },
             {
-              "opponent": "Washington",
+              "date": "2022-10-12",
+              "label": "North Macedonia H",
+              "result": "38-24"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "North Macedonia",
+            "summary": "取得一覧10試合5勝3分2敗（親善含む）。直近5試合3勝2分。5/17スロバキア38-23、5/14同31-24。",
+            "items": []
+          },
+          "side_b": {
+            "label": "Luxembourg",
+            "summary": "取得一覧の直近5試合1勝4敗。",
+            "items": []
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "確認済み2相手。5相手未充足。会場・大会・時期の差を考慮。",
+          "items": [
+            {
+              "opponent": "Portugal",
               "side_a": {
-                "result": "10/29 H 3-4"
+                "result": "2023/3/9 23-29、3/12 27-32"
               },
               "side_b": {
-                "result": "10/13 H 4-2"
+                "result": "2022/10/16 21-32、2023/4/30 18-36"
               },
-              "comparison": "同じホーム条件でカロライナ優勢"
+              "comparison": "北マケドニアの敗戦幅が小さい。ただし古い比較。"
             },
             {
-              "opponent": "St Louis",
+              "opponent": "Turkey",
               "side_a": {
-                "result": "10/17 H 5-2"
+                "result": "2022/10/16 36-27、2023/4/30 30-27"
               },
               "side_b": {
-                "result": "10/24 A 4-0"
+                "result": "2023/3/8 29-30、3/12 20-31"
               },
-              "comparison": "両者勝利、カロライナ敵地完封"
+              "comparison": "北マケドニア2勝、ルクセンブルク2敗。"
             }
           ]
         },
         "market": {
-          "text": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。"
+          "text": "North Macedoniaの60分勝利をユーザー指定で正式採用。各100USDの仮想追跡。実購入なし。"
         }
+      }
+    },
+    {
+      "rank": 2,
+      "match_id": "2026-11-05-slavia-arsenal-football",
+      "event_id": "web-2026-11-05-slavia-arsenal-football",
+      "matchup": "Slavia Praha vs Arsenal",
+      "favored": "Arsenal",
+      "selection_label": "Arsenal",
+      "sport": "Football",
+      "competition": "UEFA Champions League 2026/27／リーグフェーズ第4節",
+      "start_jst": "2026-11-05T05:00:00+09:00",
+      "venue": "Slavia Prahaがホーム／Arsenalがアウェー",
+      "format": "90分勝利",
+      "status": "formal",
+      "gap_grade": "A−",
+      "price_grade": "採用オッズ未登録",
+      "market": "match_1x2",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・未確定。採用オッズ未登録。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録。推測価格は精算に使わない。"
       },
-      "result_note": "Team Spirit vs LEGION 2-0。選択側勝利・的中確定。"
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-11-04T20:44:08+09:00",
+      "analysis_reviewed_at": "2026-11-04T20:44:08+09:00",
+      "sources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21f243b9af8c-03bb9fc28b53-1000--champions-league-matchday-4-slavia-praha-vs-arsenal-facts/",
+        "https://theanalyst.com/articles/slavia-prague-vs-arsenal-prediction-champions-league-preview-11-2026",
+        "https://www.athletic-club.eus/en/teams/athletic-club/2025-26/matches/1_8544/"
+      ],
+      "conclusion": "アーセナルのアウェー90分勝利を正式採用。H2H3勝2分、直近5試合90分では3勝2分。",
+      "risk": "サカ欠場報道。サリバは情報差があり先発確認待ち。共通相手は昨季の補助比較。",
+      "analysis_detail": {
+        "summary": "アーセナルのアウェー90分勝利を正式採用。H2H3勝2分、直近5試合90分では3勝2分。",
+        "availability": {
+          "text": "サカ欠場報道。サリバは情報差があり先発確認待ち。共通相手は昨季の補助比較。"
+        },
+        "h2h": {
+          "summary": "アーセナル側3勝2分、15得点1失点。全5件。",
+          "items": [
+            {
+              "date": "2025-11-04",
+              "label": "Arsenal A",
+              "result": "3-0"
+            },
+            {
+              "date": "2021-04-15",
+              "label": "Arsenal A",
+              "result": "4-0"
+            },
+            {
+              "date": "2021-04-08",
+              "label": "Arsenal H",
+              "result": "1-1"
+            },
+            {
+              "date": "2007-11-07",
+              "label": "Arsenal A",
+              "result": "0-0"
+            },
+            {
+              "date": "2007-10-23",
+              "label": "Arsenal H",
+              "result": "7-0"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Slavia Praha",
+            "summary": "今季CL1分2敗、4得点7失点。",
+            "items": []
+          },
+          "side_b": {
+            "label": "Arsenal",
+            "summary": "直近5試合3勝2分、7得点3失点（90分）。11/1 Liverpool 1-0、10/27 Fleetwood 1-1（PK敗退）、10/24 Everton 2-0、10/21 Bayern 2-2、10/18 Forest 1-0。",
+            "items": []
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "確認済み1相手。5相手未充足。会場・大会・時期の差を考慮。",
+          "items": [
+            {
+              "opponent": "Athletic Club",
+              "side_a": {
+                "result": "2025/11/25 H 0-0"
+              },
+              "side_b": {
+                "result": "2025/9/16 A 2-0"
+              },
+              "comparison": "アーセナル優勢だが昨季比較。"
+            }
+          ]
+        },
+        "market": {
+          "text": "Arsenalの90分勝利をユーザー指定で正式採用。各100USDの仮想追跡。実購入なし。"
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "match_id": "2026-11-05-geng-lyon-lol",
+      "event_id": "web-2026-11-05-geng-lyon-lol",
+      "matchup": "Gen.G vs LYON",
+      "favored": "Gen.G",
+      "selection_label": "Gen.G",
+      "sport": "LoL",
+      "competition": "League of Legends Worlds 2026／準々決勝",
+      "start_jst": "2026-11-05T07:00:00+09:00",
+      "venue": "中立開催",
+      "format": "BO5シリーズ勝利（3マップ先取）",
+      "status": "formal",
+      "gap_grade": "A−",
+      "price_grade": "採用オッズ未登録",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・未確定。採用オッズ未登録。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録。推測価格は精算に使わない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-11-04T20:44:08+09:00",
+      "analysis_reviewed_at": "2026-11-04T20:44:08+09:00",
+      "sources": [
+        "https://joocgame.com/worlds-2026/results",
+        "https://dpm.lol/esports/events/4567-first-stand-2026",
+        "https://app.kboom.gg/lol-fantasy/teams/lyon/"
+      ],
+      "conclusion": "Gen.GのBO5シリーズ勝利を正式採用。直近H2H2-1、同大会IG比較も優勢。",
+      "risk": "最新直接対決で1マップ失っている。3-0限定ではない。JDG比較は約7か月前。",
+      "analysis_detail": {
+        "summary": "Gen.GのBO5シリーズ勝利を正式採用。直近H2H2-1、同大会IG比較も優勢。",
+        "availability": {
+          "text": "最新直接対決で1マップ失っている。3-0限定ではない。JDG比較は約7か月前。"
+        },
+        "h2h": {
+          "summary": "確認2シリーズでGen.G2勝、マップ合計5-1。",
+          "items": [
+            {
+              "date": "2026-10-25",
+              "label": "Worlds BO3",
+              "result": "Gen.G 2-1 LYON"
+            },
+            {
+              "date": "2026-03-19",
+              "label": "First Stand BO5",
+              "result": "Gen.G 3-0 LYON"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Gen.G",
+            "summary": "Worlds Swiss3勝0敗。10/23 IG1-0、10/24 HLE1-0、10/25 LYON2-1。日付は大会現地。",
+            "items": []
+          },
+          "side_b": {
+            "label": "LYON",
+            "summary": "Worlds Swiss3勝2敗。TSW1-0、KC1-0、Gen.G1-2、IG1-2、LOS2-1。",
+            "items": []
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "確認済み2相手。5相手未充足。会場・大会・時期の差を考慮。",
+          "items": [
+            {
+              "opponent": "IG",
+              "side_a": {
+                "result": "2026/10/23 1-0 BO1"
+              },
+              "side_b": {
+                "result": "2026/10/28 1-2 BO3"
+              },
+              "comparison": "同大会でGen.G優勢、形式差あり。"
+            },
+            {
+              "opponent": "JDG",
+              "side_a": {
+                "result": "2026/3/17 3-0"
+              },
+              "side_b": {
+                "result": "2026/3/20 1-3"
+              },
+              "comparison": "同大会BO5でGen.G優勢、パッチと時期が古い。"
+            }
+          ]
+        },
+        "market": {
+          "text": "Gen.GのBO5シリーズ勝利（3マップ先取）をユーザー指定で正式採用。各100USDの仮想追跡。実購入なし。"
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "match_id": "2026-11-05-boston-milwaukee-nba",
+      "event_id": "web-2026-11-05-boston-milwaukee-nba",
+      "matchup": "Boston Celtics vs Milwaukee Bucks",
+      "favored": "Boston Celtics",
+      "selection_label": "Boston Celtics",
+      "sport": "NBA",
+      "competition": "NBA 2026/27 Regular Season",
+      "start_jst": "2026-11-05T09:30:00+09:00",
+      "venue": "Boston Celticsがホーム／Milwaukee Bucksがアウェー",
+      "format": "延長込み勝利",
+      "status": "formal",
+      "gap_grade": "A候補",
+      "price_grade": "採用オッズ未登録",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・未確定。採用オッズ未登録。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録。推測価格は精算に使わない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-11-04T20:44:08+09:00",
+      "analysis_reviewed_at": "2026-11-04T20:44:08+09:00",
+      "sources": [
+        "https://basketball.realgm.com/nba/preview/2026-11-04/Milwaukee-at-Boston/530686",
+        "https://statz.ai/nba/news/milwaukee-bucks-vs-boston-celtics-prediction-picks-odds-november-4-2026"
+      ],
+      "conclusion": "セルティックスのホーム延長込み勝利を正式採用。H2H直近10戦7勝3敗、今季ホーム4勝0敗。",
+      "risk": "今季5勝2敗でも直前Houston戦93-109。欠場・先発確認前。共通相手の個別照合は未完了。",
+      "analysis_detail": {
+        "summary": "セルティックスのホーム延長込み勝利を正式採用。H2H直近10戦7勝3敗、今季ホーム4勝0敗。",
+        "availability": {
+          "text": "今季5勝2敗でも直前Houston戦93-109。欠場・先発確認前。共通相手の個別照合は未完了。"
+        },
+        "h2h": {
+          "summary": "Boston側直近10戦7勝3敗。日付は現地。",
+          "items": [
+            {
+              "date": "2026-04-03",
+              "label": "Boston",
+              "result": "133-101"
+            },
+            {
+              "date": "2026-03-02",
+              "label": "Boston",
+              "result": "108-81"
+            },
+            {
+              "date": "2026-02-01",
+              "label": "Boston",
+              "result": "107-79"
+            },
+            {
+              "date": "2025-12-11",
+              "label": "Boston",
+              "result": "101-116"
+            },
+            {
+              "date": "2024-12-06",
+              "label": "Boston",
+              "result": "111-105"
+            },
+            {
+              "date": "2024-11-10",
+              "label": "Boston",
+              "result": "113-107"
+            },
+            {
+              "date": "2024-10-28",
+              "label": "Boston",
+              "result": "119-108"
+            },
+            {
+              "date": "2024-04-09",
+              "label": "Boston",
+              "result": "91-104"
+            },
+            {
+              "date": "2024-03-20",
+              "label": "Boston",
+              "result": "122-119"
+            },
+            {
+              "date": "2024-01-11",
+              "label": "Boston",
+              "result": "102-135"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Boston Celtics",
+            "summary": "今季5勝2敗、ホーム4勝0敗。平均115.0得点109.1失点。直近10試合全体は未照合。",
+            "items": []
+          },
+          "side_b": {
+            "label": "Milwaukee Bucks",
+            "summary": "今季1勝6敗、アウェー0勝3敗。平均111.1得点124.1失点。",
+            "items": []
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "確認済み0相手。5相手未充足。会場・大会・時期の差を考慮。",
+          "items": []
+        },
+        "market": {
+          "text": "Boston Celticsの延長込み勝利をユーザー指定で正式採用。各100USDの仮想追跡。実購入なし。"
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "match_id": "2026-11-05-florida-chicago-nhl",
+      "event_id": "web-2026-11-05-florida-chicago-nhl",
+      "matchup": "Florida Panthers vs Chicago Blackhawks",
+      "favored": "Florida Panthers",
+      "selection_label": "Florida Panthers",
+      "sport": "NHL",
+      "competition": "NHL 2026/27 Regular Season",
+      "start_jst": "2026-11-05T09:30:00+09:00",
+      "venue": "Florida Panthersがホーム／Chicago Blackhawksがアウェー",
+      "format": "延長・シュートアウト込み勝利",
+      "status": "formal",
+      "gap_grade": "条件付き",
+      "price_grade": "採用オッズ未登録",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・未確定。採用オッズ未登録。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録。推測価格は精算に使わない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-11-04T20:44:08+09:00",
+      "analysis_reviewed_at": "2026-11-04T20:44:08+09:00",
+      "sources": [
+        "https://www.nhl.com/panthers/",
+        "https://insidetherink.com/stats/nhl/games/2026-11-04-blackhawks-at-panthers-2026020248/",
+        "https://leaguemind.com/games/nhl/401892645-chicago-blackhawks-at-florida-panthers"
+      ],
+      "conclusion": "パンサーズ対ブラックホークスを1カードとして登録。ホームのフロリダ延長・SO込み勝利をユーザー指定で正式採用。",
+      "risk": "H2H10件・共通5相手は未充足。先発GK未確定。最新H2Hも1点差なので大差条件とは分ける。",
+      "analysis_detail": {
+        "summary": "パンサーズ対ブラックホークスを1カードとして登録。ホームのフロリダ延長・SO込み勝利をユーザー指定で正式採用。",
+        "availability": {
+          "text": "H2H10件・共通5相手は未充足。先発GK未確定。最新H2Hも1点差なので大差条件とは分ける。"
+        },
+        "h2h": {
+          "summary": "個別確認できた最新対戦1件。全10試合の勝敗集計は未確定。",
+          "items": [
+            {
+              "date": "2026-10-25",
+              "label": "Florida A",
+              "result": "3-2"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Florida Panthers",
+            "summary": "公式掲載8勝5敗2延長等敗。個別直近10試合は未照合。",
+            "items": []
+          },
+          "side_b": {
+            "label": "Chicago Blackhawks",
+            "summary": "公式掲載4勝10敗1延長等敗。",
+            "items": []
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "確認済み0相手。5相手未充足。会場・大会・時期の差を考慮。",
+          "items": []
+        },
+        "market": {
+          "text": "Florida Panthersの延長・シュートアウト込み勝利をユーザー指定で正式採用。各100USDの仮想追跡。実購入なし。"
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "match_id": "2026-11-05-new-york-chicago-nba",
+      "event_id": "web-2026-11-05-new-york-chicago-nba",
+      "matchup": "New York Knicks vs Chicago Bulls",
+      "favored": "New York Knicks",
+      "selection_label": "New York Knicks",
+      "sport": "NBA",
+      "competition": "NBA 2026/27 Regular Season",
+      "start_jst": "2026-11-05T09:30:00+09:00",
+      "venue": "New York Knicksがホーム／Chicago Bullsがアウェー",
+      "format": "延長込み勝利",
+      "status": "formal",
+      "gap_grade": "B＋",
+      "price_grade": "採用オッズ未登録",
+      "market": "match_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・未確定。採用オッズ未登録。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録。推測価格は精算に使わない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-11-04T20:44:08+09:00",
+      "analysis_reviewed_at": "2026-11-04T20:44:08+09:00",
+      "sources": [
+        "https://basketball.realgm.com/nba/preview/2026-11-04/Chicago-at-New-York/530688",
+        "https://www.msg.com/events-tickets/new-york-knicks-madison-square-garden-november-2026/3B006511E91E862F",
+        "https://www.nba.com/stats/team/1610612738/schedule"
+      ],
+      "conclusion": "ニックスのホーム延長込み勝利を正式採用。H2H直近10戦7勝3敗、最新対戦133-127。",
+      "risk": "今季ニックスも3勝4敗、ホーム2勝2敗。最新H2H6点差で圧倒とはいえない。共通相手は1件。",
+      "analysis_detail": {
+        "summary": "ニックスのホーム延長込み勝利を正式採用。H2H直近10戦7勝3敗、最新対戦133-127。",
+        "availability": {
+          "text": "今季ニックスも3勝4敗、ホーム2勝2敗。最新H2H6点差で圧倒とはいえない。共通相手は1件。"
+        },
+        "h2h": {
+          "summary": "Knicks側直近10戦7勝3敗。日付は現地。",
+          "items": [
+            {
+              "date": "2026-10-28",
+              "label": "New York",
+              "result": "133-127"
+            },
+            {
+              "date": "2026-04-03",
+              "label": "New York",
+              "result": "136-96"
+            },
+            {
+              "date": "2026-02-22",
+              "label": "New York",
+              "result": "105-99"
+            },
+            {
+              "date": "2025-11-02",
+              "label": "New York",
+              "result": "128-116"
+            },
+            {
+              "date": "2025-10-31",
+              "label": "New York",
+              "result": "125-135"
+            },
+            {
+              "date": "2025-02-20",
+              "label": "New York",
+              "result": "113-111"
+            },
+            {
+              "date": "2025-01-04",
+              "label": "New York",
+              "result": "126-139"
+            },
+            {
+              "date": "2024-11-13",
+              "label": "New York",
+              "result": "123-124"
+            },
+            {
+              "date": "2024-04-14",
+              "label": "New York",
+              "result": "120-119"
+            },
+            {
+              "date": "2024-04-09",
+              "label": "New York",
+              "result": "128-117"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "New York Knicks",
+            "summary": "今季3勝4敗、ホーム2勝2敗。平均106.4得点105.1失点。",
+            "items": []
+          },
+          "side_b": {
+            "label": "Chicago Bulls",
+            "summary": "今季1勝6敗、アウェー1勝4敗。平均112.6得点128.9失点。",
+            "items": []
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "確認済み1相手。5相手未充足。会場・大会・時期の差を考慮。",
+          "items": [
+            {
+              "opponent": "Boston Celtics",
+              "side_a": {
+                "result": "2026/10/23 A 103-107"
+              },
+              "side_b": {
+                "result": "2026/10/26 A 99-134"
+              },
+              "comparison": "同じ敵地でNY4点差、Chicago35点差の敗戦。ただし1比較。"
+            }
+          ]
+        },
+        "market": {
+          "text": "New York Knicksの延長込み勝利をユーザー指定で正式採用。各100USDの仮想追跡。実購入なし。"
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "match_id": "2026-11-05-aek-real-madrid-football",
+      "event_id": "web-2026-11-05-aek-real-madrid-football",
+      "matchup": "AEK Athens vs Real Madrid",
+      "favored": "Real Madrid",
+      "selection_label": "Real Madrid",
+      "sport": "Football",
+      "competition": "UEFA Champions League 2026/27／リーグフェーズ第4節",
+      "start_jst": "2026-11-05T02:45:00+09:00",
+      "venue": "AEK Athensがホーム／Real Madridがアウェー",
+      "format": "90分勝利",
+      "status": "formal",
+      "gap_grade": "A−",
+      "price_grade": "採用オッズ未登録",
+      "market": "match_1x2",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・未確定。採用オッズ未登録。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "採用オッズ未登録。推測価格は精算に使わない。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-11-04T20:44:08+09:00",
+      "analysis_reviewed_at": "2026-11-04T20:44:08+09:00",
+      "sources": [
+        "https://www.realmadrid.com/en-US/football/games/champions-league/aek-athens-real-madrid/04-11-2026",
+        "https://www.sportschau.de/live-und-ergebnisse/fussball/uefa-champions-league/ma12517659/aek-athen_real-madrid/info",
+        "https://www.skysports.com/football/aek-athens-vs-real-madrid/577660",
+        "https://www.realmadrid.com/en-US/news/football/first-team/reports/cronica-rm-city-ida-octavos-champions-11-03-2026"
+      ],
+      "conclusion": "レアル・マドリードのアウェー90分勝利を正式採用。直近5戦全勝、17得点6失点。",
+      "risk": "H2H全4件は1985〜2002年で現在戦力への加点はしない。共通相手は昨季を含む。",
+      "analysis_detail": {
+        "summary": "レアル・マドリードのアウェー90分勝利を正式採用。直近5戦全勝、17得点6失点。",
+        "availability": {
+          "text": "H2H全4件は1985〜2002年で現在戦力への加点はしない。共通相手は昨季を含む。"
+        },
+        "h2h": {
+          "summary": "Real側1勝2分1敗。非常に古い4件。",
+          "items": [
+            {
+              "date": "2002-10-22",
+              "label": "Real H",
+              "result": "2-2"
+            },
+            {
+              "date": "2002-10-02",
+              "label": "Real A",
+              "result": "3-3"
+            },
+            {
+              "date": "1985-10-02",
+              "label": "Real H",
+              "result": "5-0"
+            },
+            {
+              "date": "1985-09-18",
+              "label": "Real A",
+              "result": "0-1"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "AEK Athens",
+            "summary": "今季CL1勝2敗、3得点8失点。",
+            "items": []
+          },
+          "side_b": {
+            "label": "Real Madrid",
+            "summary": "直近5戦全勝。11/1 Racing3-0、10/25 Barcelona2-1、10/21 Leipzig4-1、10/18 Sevilla4-1、10/14 Roma4-3。",
+            "items": []
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "確認済み1相手。5相手未充足。会場・大会・時期の差を考慮。",
+          "items": [
+            {
+              "opponent": "Manchester City",
+              "side_a": {
+                "result": "2026/10/20 1-5"
+              },
+              "side_b": {
+                "result": "2026/3/11 H 3-0、3/17 A 2-1"
+              },
+              "comparison": "Real優勢だがシーズン差。3/17には相手退場あり。"
+            }
+          ]
+        },
+        "market": {
+          "text": "Real Madridの90分勝利をユーザー指定で正式採用。各100USDの仮想追跡。実購入なし。"
+        }
+      }
     }
   ],
   "rejected_examples": [],
   "summary": {
     "pure_gap_top": [
-      "Carolina Hurricanes"
+      "North Macedonia",
+      "Gen.G",
+      "Real Madrid",
+      "Arsenal"
     ],
     "price_adjusted_top": [],
-    "caution": "新規2件正式採用。旧5件的中確定、採用オッズ未登録のため利益額未確定。"
+    "caution": "正式採用7件。採用オッズ未登録。終了2件は結果履歴へ移動。Barcelona利益額未確定、Carolina仮想損益−100USD。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -14204,6 +14757,182 @@
           }
         },
         "result_note": "Boston Celtics vs Chicago Bulls 125-111。選択側勝利・的中確定。"
+      },
+      {
+        "rank": 1,
+        "match_id": "2026-11-04-barcelona-villa-football",
+        "event_id": "web-2026-11-04-barcelona-villa-football",
+        "matchup": "FC Barcelona vs Aston Villa",
+        "favored": "FC Barcelona",
+        "selection_label": "FC Barcelona DNB（引分返金）",
+        "sport": "Football",
+        "competition": "UEFA Champions League 2026/27／リーグフェーズ第4節",
+        "start_jst": "2026-11-04T05:00:00+09:00",
+        "venue": "Spotify Camp Nou／バルセロナがホーム",
+        "format": "ドローノーベット（90分、引分返金）",
+        "status": "final",
+        "gap_grade": "条件付き",
+        "price_grade": "取得オッズ未登録",
+        "market": "dnb",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "的中確定／採用オッズ未登録のため利益額未確定。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-11-03T16:33:07+09:00",
+        "analysis_reviewed_at": "2026-11-03T16:33:07+09:00",
+        "sources": [
+          "https://www.fcbarcelona.com/en/matches/141501/fc-barcelona-aston-villa-uefa-champions-league-2026-2027",
+          "https://theanalyst.com/articles/barcelona-vs-aston-villa-prediction-champions-league-preview-11-2026",
+          "https://www.fcbarcelona.com/en/matches/141501/fc-barcelona-aston-villa-uefa-champions-league-2026-2027"
+        ],
+        "conclusion": "ホームのバルセロナDNB（90分、引分返金）をユーザー指定で正式採用。直近アラベス戦6-1。一方でヴィラは今大会3連勝。格差最上位とは認定しない。",
+        "risk": "バルセロナは直前にPSG・レアル戦で敗戦。H2H直近10・共通5相手は未充足。",
+        "analysis_detail": {
+          "summary": "ホームのバルセロナDNB（90分、引分返金）をユーザー指定で正式採用。直近アラベス戦6-1。一方でヴィラは今大会3連勝。格差最上位とは認定しない。",
+          "availability": {
+            "text": "バルセロナは直前にPSG・レアル戦で敗戦。H2H直近10・共通5相手は未充足。"
+          },
+          "h2h": {
+            "summary": "直近10件未照合。古い対戦を現在戦力の根拠にしない。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "FC Barcelona",
+              "summary": "直近アラベス戦6-1。",
+              "items": []
+            },
+            "side_b": {
+              "label": "Aston Villa",
+              "summary": "CL開幕3連勝。直近フラム戦1-1。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "未照合。",
+            "items": []
+          },
+          "market": {
+            "text": "バルセロナDNBを正式採用。90分勝利は的中、引分は返金、敗戦は不的中。仮想100USD追跡、採用オッズ未登録。"
+          },
+          "post_match": {
+            "text": "FC Barcelona vs Aston Villa 3-0。的中確定。 的中確定／採用オッズ未登録のため利益額未確定。"
+          }
+        },
+        "result_note": "FC Barcelona vs Aston Villa 3-0。的中確定。",
+        "result": "FC Barcelona vs Aston Villa 3-0。的中確定。",
+        "favored_result": "win",
+        "result_confirmed_at": "2026-11-04T20:44:08+09:00"
+      },
+      {
+        "rank": 2,
+        "match_id": "2026-11-04-nashville-carolina-nhl",
+        "event_id": "web-2026-11-04-nashville-carolina-nhl",
+        "matchup": "Nashville Predators vs Carolina Hurricanes",
+        "favored": "Carolina Hurricanes",
+        "selection_label": "Carolina Hurricanes",
+        "sport": "NHL",
+        "competition": "NHL 2026/27 Regular Season",
+        "start_jst": "2026-11-04T10:00:00+09:00",
+        "venue": "ナッシュビルがホーム／カロライナがアウェー",
+        "format": "延長・シュートアウト込み勝利",
+        "status": "final",
+        "gap_grade": "A候補",
+        "price_grade": "取得オッズ未登録",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": -100,
+        "profit_status": "不的中確定／仮想100USD基準の純損益 −100USD、払戻0USD。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "取得オッズ未登録。推測値・別試合の価格は使わない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-11-03T16:33:07+09:00",
+        "analysis_reviewed_at": "2026-11-03T16:33:07+09:00",
+        "sources": [
+          "https://abcnews.com/Sports/wireStory/hurricanes-bring-4-game-win-streak-matchup-predators-137763124",
+          "https://www.statmuse.com/nhl/ask/predators-vs-hurricane-last-ten-games",
+          "https://news.sportsinteraction.com/nhl/matchup/hurricanes-vs-predators-odds-110326-217858",
+          "https://www.nhl.com/news/carolina-hurricanes-nashville-predators-game-recap-november-3-2026"
+        ],
+        "conclusion": "カロライナ直近10試合8勝1敗1延長等敗、ナッシュビル3勝3敗4延長等敗。カロライナのアウェー勝利を正式採用。",
+        "risk": "H2H10試合の最終勝敗は5勝5敗。ナッシュビルは接戦が多く、規定時間勝利・大差勝利とは分ける。先発GK未確定。",
+        "analysis_detail": {
+          "summary": "カロライナ直近10試合8勝1敗1延長等敗、ナッシュビル3勝3敗4延長等敗。カロライナのアウェー勝利を正式採用。",
+          "availability": {
+            "text": "H2H10試合の最終勝敗は5勝5敗。ナッシュビルは接戦が多く、規定時間勝利・大差勝利とは分ける。先発GK未確定。"
+          },
+          "h2h": {
+            "summary": "直近10試合5勝5敗（カロライナ側、延長敗含む）。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Nashville Predators",
+              "summary": "直近10試合3勝3敗4延長等敗。平均2.9得点3.3失点。",
+              "items": []
+            },
+            "side_b": {
+              "label": "Carolina Hurricanes",
+              "summary": "直近10試合8勝1敗1延長等敗。平均4.0得点1.9失点。直近5試合4勝1SO敗。",
+              "items": []
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "直近10試合内の共通3相手。5相手未充足。",
+            "items": [
+              {
+                "opponent": "Boston",
+                "side_a": {
+                  "result": "10/22 A 0-6"
+                },
+                "side_b": {
+                  "result": "10/27 H 2-1"
+                },
+                "comparison": "カロライナ優勢、会場差あり"
+              },
+              {
+                "opponent": "Washington",
+                "side_a": {
+                  "result": "10/29 H 3-4"
+                },
+                "side_b": {
+                  "result": "10/13 H 4-2"
+                },
+                "comparison": "同じホーム条件でカロライナ優勢"
+              },
+              {
+                "opponent": "St Louis",
+                "side_a": {
+                  "result": "10/17 H 5-2"
+                },
+                "side_b": {
+                  "result": "10/24 A 4-0"
+                },
+                "comparison": "両者勝利、カロライナ敵地完封"
+              }
+            ]
+          },
+          "market": {
+            "text": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。"
+          },
+          "post_match": {
+            "text": "Nashville Predators vs Carolina Hurricanes 4-1。選択したCarolina Hurricanesは敗戦、不的中確定。 不的中確定／仮想100USD基準の純損益 −100USD、払戻0USD。"
+          }
+        },
+        "result_note": "Nashville Predators vs Carolina Hurricanes 4-1。選択したCarolina Hurricanesは敗戦、不的中確定。",
+        "result": "Nashville Predators vs Carolina Hurricanes 4-1。選択したCarolina Hurricanesは敗戦、不的中確定。",
+        "favored_result": "loss",
+        "result_confirmed_at": "2026-11-04T20:44:08+09:00"
       }
     ],
     "summary": {
@@ -14223,9 +14952,9 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 66,
-      "favored_losses": 7,
-      "pending": 0
+      "favored_wins": 68,
+      "favored_losses": 8,
+      "pending": 6
     }
   },
   "history_policy": {
@@ -14233,7 +14962,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-11-03T16:33:07+09:00",
-    "note": "終了済み5件は履歴に移動。結果確定と金額確定を区別。"
+    "as_of": "2026-11-04T20:44:08+09:00",
+    "note": "7件正式採用、終了2件を履歴と成績へ。利益額未確定と不的中損失を区別。"
   }
 }

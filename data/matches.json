@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-11-03T16:33:07+09:00",
+    "as_of": "2026-11-04T20:44:08+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -358,6 +358,13 @@
       "at": "2026-11-03T16:33:07+09:00",
       "source": "公式日程・AP試合情報",
       "note": "Barcelonaホーム・Carolinaアウェーの2件追加"
+    },
+    {
+      "run_id": "mr-20261104-user-seven",
+      "kind": "human_review",
+      "at": "2026-11-04T20:44:08+09:00",
+      "source": "公式日程・大会結果・専門DB",
+      "note": "ユーザー指定7カードを追加。Celtics重複統合、Panthers対Blackhawksは1カード。"
     }
   ],
   "matches": [
@@ -6277,6 +6284,244 @@
       "provenance": [
         {
           "update_run_id": "mr-20261103-user-two",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-north-macedonia-luxembourg-handball",
+      "sport": "Handball",
+      "competition": "Men’s EHF EURO 2028 Qualifiers",
+      "side_a": "North Macedonia",
+      "side_b": "Luxembourg",
+      "home_side": "side_a",
+      "venue": "North Macedoniaがホーム／Luxembourgがアウェー",
+      "start_at": "2026-11-05T03:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "掲載日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.eurohandball.com/en/news/en/wednesday-qualifiers-action-the-road-to-men-s-ehf-euro-2028-throws-off-in-croatia/",
+        "https://www.betexplorer.com/handball/team/north-macedonia/lSN16BOP/results/",
+        "https://www.eurohandball.com/en/team/wEC4kltMIBH4Ho7pDuVV2g/luxembourg/"
+      ],
+      "verified_at": "2026-11-04T20:44:08+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261104-user-seven",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-slavia-arsenal-football",
+      "sport": "Football",
+      "competition": "UEFA Champions League 2026/27／リーグフェーズ第4節",
+      "side_a": "Slavia Praha",
+      "side_b": "Arsenal",
+      "home_side": "side_a",
+      "venue": "Slavia Prahaがホーム／Arsenalがアウェー",
+      "start_at": "2026-11-05T05:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "掲載日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.uefa.com/uefachampionsleague/news/02aa-21f243b9af8c-03bb9fc28b53-1000--champions-league-matchday-4-slavia-praha-vs-arsenal-facts/",
+        "https://theanalyst.com/articles/slavia-prague-vs-arsenal-prediction-champions-league-preview-11-2026",
+        "https://www.athletic-club.eus/en/teams/athletic-club/2025-26/matches/1_8544/"
+      ],
+      "verified_at": "2026-11-04T20:44:08+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261104-user-seven",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-geng-lyon-lol",
+      "sport": "LoL",
+      "competition": "League of Legends Worlds 2026／準々決勝",
+      "side_a": "Gen.G",
+      "side_b": "LYON",
+      "home_side": "neutral",
+      "venue": "中立開催",
+      "start_at": "2026-11-05T07:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "掲載日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://joocgame.com/worlds-2026/results",
+        "https://dpm.lol/esports/events/4567-first-stand-2026",
+        "https://app.kboom.gg/lol-fantasy/teams/lyon/"
+      ],
+      "verified_at": "2026-11-04T20:44:08+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261104-user-seven",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-boston-milwaukee-nba",
+      "sport": "NBA",
+      "competition": "NBA 2026/27 Regular Season",
+      "side_a": "Boston Celtics",
+      "side_b": "Milwaukee Bucks",
+      "home_side": "side_a",
+      "venue": "Boston Celticsがホーム／Milwaukee Bucksがアウェー",
+      "start_at": "2026-11-05T09:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "掲載日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://basketball.realgm.com/nba/preview/2026-11-04/Milwaukee-at-Boston/530686",
+        "https://statz.ai/nba/news/milwaukee-bucks-vs-boston-celtics-prediction-picks-odds-november-4-2026"
+      ],
+      "verified_at": "2026-11-04T20:44:08+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261104-user-seven",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-florida-chicago-nhl",
+      "sport": "NHL",
+      "competition": "NHL 2026/27 Regular Season",
+      "side_a": "Florida Panthers",
+      "side_b": "Chicago Blackhawks",
+      "home_side": "side_a",
+      "venue": "Florida Panthersがホーム／Chicago Blackhawksがアウェー",
+      "start_at": "2026-11-05T09:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "掲載日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.nhl.com/panthers/",
+        "https://insidetherink.com/stats/nhl/games/2026-11-04-blackhawks-at-panthers-2026020248/",
+        "https://leaguemind.com/games/nhl/401892645-chicago-blackhawks-at-florida-panthers"
+      ],
+      "verified_at": "2026-11-04T20:44:08+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261104-user-seven",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-new-york-chicago-nba",
+      "sport": "NBA",
+      "competition": "NBA 2026/27 Regular Season",
+      "side_a": "New York Knicks",
+      "side_b": "Chicago Bulls",
+      "home_side": "side_a",
+      "venue": "New York Knicksがホーム／Chicago Bullsがアウェー",
+      "start_at": "2026-11-05T09:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "掲載日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://basketball.realgm.com/nba/preview/2026-11-04/Chicago-at-New-York/530688",
+        "https://www.msg.com/events-tickets/new-york-knicks-madison-square-garden-november-2026/3B006511E91E862F",
+        "https://www.nba.com/stats/team/1610612738/schedule"
+      ],
+      "verified_at": "2026-11-04T20:44:08+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261104-user-seven",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-aek-real-madrid-football",
+      "sport": "Football",
+      "competition": "UEFA Champions League 2026/27／リーグフェーズ第4節",
+      "side_a": "AEK Athens",
+      "side_b": "Real Madrid",
+      "home_side": "side_a",
+      "venue": "AEK Athensがホーム／Real Madridがアウェー",
+      "start_at": "2026-11-05T02:45:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "掲載日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.realmadrid.com/en-US/football/games/champions-league/aek-athens-real-madrid/04-11-2026",
+        "https://www.sportschau.de/live-und-ergebnisse/fussball/uefa-champions-league/ma12517659/aek-athen_real-madrid/info",
+        "https://www.skysports.com/football/aek-athens-vs-real-madrid/577660",
+        "https://www.realmadrid.com/en-US/news/football/first-team/reports/cronica-rm-city-ida-octavos-champions-11-03-2026"
+      ],
+      "verified_at": "2026-11-04T20:44:08+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261104-user-seven",
           "changes": [
             {
               "field": "new_match",

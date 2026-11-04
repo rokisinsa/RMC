@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-11-03T16:33:07+09:00",
+    "as_of": "2026-11-04T20:44:08+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -3000,6 +3000,68 @@
             "verified_at": "2026-11-03T16:33:07+09:00",
             "note": "公開試合結果を照合。採用オッズ未登録のため利益額未計算。",
             "source_confidence": "single_source"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261104-user-seven-results",
+      "kind": "result_update",
+      "at": "2026-11-04T20:44:08+09:00",
+      "source": "クラブ・リーグ公式結果",
+      "note": "掲載済み2件を確定。Barcelona DNB的中、Carolina不的中。",
+      "changes": [
+        {
+          "match_id": "2026-11-04-barcelona-villa-football",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 0
+              },
+              "text": "FC Barcelona vs Aston Villa 3-0。的中確定。"
+            },
+            "result_confirmed_at": "2026-11-04T20:44:08+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "クラブ・リーグ公式結果",
+                "url": "https://www.fcbarcelona.com/en/matches/141501/fc-barcelona-aston-villa-uefa-champions-league-2026-2027",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-04T20:44:08+09:00",
+            "source_confidence": "official",
+            "note": "対戦・開催日・最終スコアを確認。結果と金額確定を区別。"
+          }
+        },
+        {
+          "match_id": "2026-11-04-nashville-carolina-nhl",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 4,
+                "b": 1
+              },
+              "text": "Nashville Predators vs Carolina Hurricanes 4-1。選択したCarolina Hurricanesは敗戦、不的中確定。"
+            },
+            "result_confirmed_at": "2026-11-04T20:44:08+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "クラブ・リーグ公式結果",
+                "url": "https://www.nhl.com/news/carolina-hurricanes-nashville-predators-game-recap-november-3-2026",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-04T20:44:08+09:00",
+            "source_confidence": "official",
+            "note": "対戦・開催日・最終スコアを確認。結果と金額確定を区別。"
           }
         }
       ],
