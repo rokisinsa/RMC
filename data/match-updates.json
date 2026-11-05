@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-11-04T20:44:08+09:00",
+    "as_of": "2026-11-05T19:31:08+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -3062,6 +3062,198 @@
             "verified_at": "2026-11-04T20:44:08+09:00",
             "source_confidence": "official",
             "note": "対戦・開催日・最終スコアを確認。結果と金額確定を区別。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-20261105-results",
+      "kind": "result_update",
+      "at": "2026-11-05T19:31:08+09:00",
+      "source": "大会・リーグ・チーム公式、専門統計",
+      "note": "本日7件を新規確定。過去5件は既存の確定結果を維持して分析履歴表示を同期。",
+      "changes": [
+        {
+          "match_id": "2026-11-05-north-macedonia-luxembourg-handball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 41,
+                "b": 23
+              },
+              "text": "North Macedonia vs Luxembourg 41-23。的中確定。"
+            },
+            "result_confirmed_at": "2026-11-05T19:31:08+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://old.eurohandball.com/ech/men/2028/match/2/086",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-05T19:31:08+09:00",
+            "source_confidence": "official",
+            "note": "日付・カード・最終結果を照合。採用オッズ未登録の的中利益額は未確定。"
+          }
+        },
+        {
+          "match_id": "2026-11-05-slavia-arsenal-football",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 2
+              },
+              "text": "Slavia Praha vs Arsenal 1-2。的中確定。"
+            },
+            "result_confirmed_at": "2026-11-05T19:31:08+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://www.uefa.com/uefachampionsleague/news/02a8-2176fa83582b-d99f0b27f405-1000--champions-league-league-phase-fixtures-by-team/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-05T19:31:08+09:00",
+            "source_confidence": "official",
+            "note": "日付・カード・最終結果を照合。採用オッズ未登録の的中利益額は未確定。"
+          }
+        },
+        {
+          "match_id": "2026-11-05-geng-lyon-lol",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 0
+              },
+              "text": "Gen.G vs LYON 3-0。的中確定。"
+            },
+            "result_confirmed_at": "2026-11-05T19:31:08+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://lolesports.com/en-GB/live/worlds/104946685894036941",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-05T19:31:08+09:00",
+            "source_confidence": "official",
+            "note": "日付・カード・最終結果を照合。採用オッズ未登録の的中利益額は未確定。"
+          }
+        },
+        {
+          "match_id": "2026-11-05-boston-milwaukee-nba",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 109,
+                "b": 102
+              },
+              "text": "Boston Celtics vs Milwaukee Bucks 109-102。的中確定。"
+            },
+            "result_confirmed_at": "2026-11-05T19:31:08+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://www.nba.com/celtics/game/0022600175-bucks-vs-celtics-boston-ma-11-04-2026",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-05T19:31:08+09:00",
+            "source_confidence": "official",
+            "note": "日付・カード・最終結果を照合。採用オッズ未登録の的中利益額は未確定。"
+          }
+        },
+        {
+          "match_id": "2026-11-05-florida-chicago-nhl",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 5,
+                "b": 3
+              },
+              "text": "Florida Panthers vs Chicago Blackhawks 5-3。的中確定。"
+            },
+            "result_confirmed_at": "2026-11-05T19:31:08+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://www.nhl.com/news/chicago-blackhawks-florida-panthers-game-recap-november-4-2026",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-05T19:31:08+09:00",
+            "source_confidence": "official",
+            "note": "日付・カード・最終結果を照合。採用オッズ未登録の的中利益額は未確定。"
+          }
+        },
+        {
+          "match_id": "2026-11-05-new-york-chicago-nba",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 135,
+                "b": 105
+              },
+              "text": "New York Knicks vs Chicago Bulls 135-105。的中確定。"
+            },
+            "result_confirmed_at": "2026-11-05T19:31:08+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://www.nba.com/knicks/game/0022600177-bulls-vs-knicks-new-york-ny-11-04-2026/box-score",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-05T19:31:08+09:00",
+            "source_confidence": "official",
+            "note": "日付・カード・最終結果を照合。採用オッズ未登録の的中利益額は未確定。"
+          }
+        },
+        {
+          "match_id": "2026-11-05-aek-real-madrid-football",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 3
+              },
+              "text": "AEK Athens vs Real Madrid 2-3。的中確定。"
+            },
+            "result_confirmed_at": "2026-11-05T19:31:08+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "試合結果確認",
+                "url": "https://www.uefa.com/uefachampionsleague/news/02a8-2176fa83582b-d99f0b27f405-1000--champions-league-league-phase-fixtures-by-team/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-05T19:31:08+09:00",
+            "source_confidence": "official",
+            "note": "日付・カード・最終結果を照合。採用オッズ未登録の的中利益額は未確定。"
           }
         }
       ],

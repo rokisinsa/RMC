@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-11-04T20:44:08+09:00",
+    "as_of": "2026-11-05T19:31:08+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -365,6 +365,13 @@
       "at": "2026-11-04T20:44:08+09:00",
       "source": "公式日程・大会結果・専門DB",
       "note": "ユーザー指定7カードを追加。Celtics重複統合、Panthers対Blackhawksは1カード。"
+    },
+    {
+      "run_id": "mr-20261105-user-three",
+      "kind": "human_review",
+      "at": "2026-11-05T19:31:08+09:00",
+      "source": "ユーザー指定・公式日程",
+      "note": "Jaguarsアウェー、Benficaホーム、Fenerbahce女子を正式採用。"
     }
   ],
   "matches": [
@@ -6522,6 +6529,114 @@
       "provenance": [
         {
           "update_run_id": "mr-20261104-user-seven",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-06-baltimore-jacksonville-nfl",
+      "sport": "American Football",
+      "competition": "NFL 2026 Week 9",
+      "side_a": "Baltimore Ravens",
+      "side_b": "Jacksonville Jaguars",
+      "home_side": "side_a",
+      "venue": "Baltimore Ravensがホーム／Jacksonville Jaguarsがアウェー",
+      "start_at": "2026-11-06T10:15:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公式日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.jaguars.com/game-day/2026/reg-week9/jaguars-at-ravens/",
+        "https://www.jaguars.com/schedule/2026/",
+        "https://www.baltimoreravens.com/schedule/2026/",
+        "https://champsorchumps.us/team/nfl/jacksonville-jaguars/head-to-head/baltimore-ravens",
+        "https://www.baltimoreravens.com/team/injury-report/index-app",
+        "https://www.jaguars.com/news/scout-s-take-bucky-brooks-gives-final-analysis-of-jaguars-week-8-win-previews-key-matchups-in-week-9-vs-ravens"
+      ],
+      "verified_at": "2026-11-05T19:31:08+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261105-user-three",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-06-benfica-lech-football",
+      "sport": "Football",
+      "competition": "UEFA Europa League 2026/27／リーグフェーズ第4節",
+      "side_a": "Benfica",
+      "side_b": "Lech Poznan",
+      "home_side": "side_a",
+      "venue": "Benficaがホーム／Lech Poznanがアウェー",
+      "start_at": "2026-11-06T05:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公式日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.slbenfica.pt/pt-pt/futebol/match-center/benfica-lech-poznan-5-novembro-2026",
+        "https://www.uefa.com/uefaeuropaleague/news/02a8-2177782493b9-69ba3288701d-1000--2026-27-uefa-europa-league-league-phase-fixtures-by-team/",
+        "https://tipsterarea.com/match/benfica-lech-poznan-europa-league-group-stage-953993",
+        "https://www.365scores.com/football/match/poland-cup-157/lech-poznan-siarka-tarnobrzeg-2211-13066-157",
+        "https://www.slbenfica.pt/pt-pt/agora/noticias/2026/11/04/futebol-antevisao-marco-silva-benfica-lech-poznan-liga-europa-fase-de-liga-4-jornada"
+      ],
+      "verified_at": "2026-11-05T19:31:08+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261105-user-three",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-fenerbahce-afyon-volleyball-women",
+      "sport": "Volleyball Women",
+      "competition": "Vodafone Sultanlar Ligi 2026/27／第7節",
+      "side_a": "Fenerbahce Medicana Women",
+      "side_b": "Sinnada Hotels Afyon Belediye Yuntas Women",
+      "home_side": "side_a",
+      "venue": "Fenerbahce Medicana Womenがホーム／Sinnada Hotels Afyon Belediye Yuntas Womenがアウェー",
+      "start_at": "2026-11-05T20:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公式日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/matches/2591737/",
+        "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/teams/2110016-20759/",
+        "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/teams/2161555-92608/",
+        "https://afyonbelediyeyuntas.com/fikstur/sonuclar"
+      ],
+      "verified_at": "2026-11-05T19:31:08+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261105-user-three",
           "changes": [
             {
               "field": "new_match",

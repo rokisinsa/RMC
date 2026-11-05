@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-11-04T20:44:08+09:00",
+    "as_of": "2026-11-05T19:31:08+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。1件仮想100USD。10/18誤登録Salzburgはvoid（勝敗対象外）で保存、EVOS vs Alter EgoのAlter Ego勝利へ訂正。ベガス申告オッズ1.44倍の参考精算は維持。"
   },
@@ -321,6 +321,12 @@
       "started_at": "2026-11-04T20:44:08+09:00",
       "slot": "adhoc",
       "note": "ユーザー指定7カード正式採用。全件採用オッズ未登録。"
+    },
+    {
+      "run_id": "rec-20261105-user-three",
+      "started_at": "2026-11-05T19:31:08+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー指定3件を正式採用。採用オッズは未登録。"
     }
   ],
   "picks": [
@@ -6455,6 +6461,96 @@
       ],
       "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。",
       "detail_ref": "data/today-gap-analysis.json#2026-11-05-aek-real-madrid-football"
+    },
+    {
+      "id": "rec-2026-11-06-baltimore-jacksonville-nfl",
+      "system": "recommendations",
+      "run_id": "rec-20261105-user-three",
+      "match_id": "2026-11-06-baltimore-jacksonville-nfl",
+      "source_event_id": "web-2026-11-06-baltimore-jacksonville-nfl",
+      "market": "match_winner",
+      "market_label": "延長込み勝利",
+      "selection": "side_b",
+      "selection_label": "Jacksonville Jaguars",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-11-05T19:31:08+09:00",
+      "bet_at": null,
+      "locked_at": "2026-11-05T19:31:08+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "条件付き優勢",
+        "model_version": "rmc-user-approved-20261105",
+        "summary": "①実績型：Jaguarsは直近6戦4勝2敗、Ravensは3勝3敗で直近3連敗。共通相手3組もJaguars側。ただしH2H直近10戦は5勝5敗で大差を支持しない。②総合戦力型：RavensのLamar Jackson・Tyler Huntley欠場が大きく、Jaguars優勢。照合：現在成績と現在戦力は同方向、過去H2Hだけでは格差認定不可。アウェーJaguars勝利を正式採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。",
+      "detail_ref": "data/today-gap-analysis.json#2026-11-06-baltimore-jacksonville-nfl"
+    },
+    {
+      "id": "rec-2026-11-06-benfica-lech-football",
+      "system": "recommendations",
+      "run_id": "rec-20261105-user-three",
+      "match_id": "2026-11-06-benfica-lech-football",
+      "source_event_id": "web-2026-11-06-benfica-lech-football",
+      "market": "match_1x2",
+      "market_label": "90分勝利",
+      "selection": "side_a",
+      "selection_label": "Benfica",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-11-05T19:31:08+09:00",
+      "bet_at": null,
+      "locked_at": "2026-11-05T19:31:08+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "優勢",
+        "model_version": "rmc-user-approved-20261105",
+        "summary": "①実績型：Benfica直近10戦9勝1敗、直近6戦全勝。Lechは国内杯を含め直近10戦5勝1分4敗。H2Hは2020年2勝、8得点2失点だが旧メンバーで参考度低下。②総合戦力型：今ELはBenfica3勝・10得点2失点、Lech0勝1分2敗・1得点9失点。対戦相手の質とホーム条件もBenfica側。照合：両分析は同方向。Benficaホーム90分勝利を正式採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。",
+      "detail_ref": "data/today-gap-analysis.json#2026-11-06-benfica-lech-football"
+    },
+    {
+      "id": "rec-2026-11-05-fenerbahce-afyon-volleyball-women",
+      "system": "recommendations",
+      "run_id": "rec-20261105-user-three",
+      "match_id": "2026-11-05-fenerbahce-afyon-volleyball-women",
+      "source_event_id": "web-2026-11-05-fenerbahce-afyon-volleyball-women",
+      "market": "match_winner",
+      "market_label": "試合勝利（3セット先取）",
+      "selection": "side_a",
+      "selection_label": "Fenerbahce Medicana Women",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-11-05T19:31:08+09:00",
+      "bet_at": null,
+      "locked_at": "2026-11-05T19:31:08+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "優勢",
+        "model_version": "rmc-user-approved-20261105",
+        "summary": "①実績型：Fenerbahce今季5戦全勝・15-3セット、Afyon1勝5敗・7-17セットで直近5連敗。H2Hは公式確認できず。②総合戦力型：公式順位3位対14位、攻撃決定率50.7%対36.0%、攻撃効率38.4%対18.6%でFenerbahce優勢。照合：直近実績と現在の攻撃指標は同方向。H2H・共通相手の裏付けは不足。Fenerbahce女子の試合勝利を正式採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。",
+      "detail_ref": "data/today-gap-analysis.json#2026-11-05-fenerbahce-afyon-volleyball-women"
     }
   ]
 }
