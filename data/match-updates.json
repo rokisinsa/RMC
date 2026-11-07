@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-11-05T19:31:08+09:00",
+    "as_of": "2026-11-07T19:14:44+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -3254,6 +3254,134 @@
             "verified_at": "2026-11-05T19:31:08+09:00",
             "source_confidence": "official",
             "note": "日付・カード・最終結果を照合。採用オッズ未登録の的中利益額は未確定。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-2026-11-07-results",
+      "kind": "result_update",
+      "at": "2026-11-07T19:14:44+09:00",
+      "source": "クラブ・リーグ公式結果",
+      "note": "正式採用済み未確定4件を的中確定。9/28以前の履歴は表示集計対象外、既存の同一性未解決を維持。",
+      "changes": [
+        {
+          "match_id": "2026-11-06-baltimore-jacksonville-nfl",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 10,
+                "b": 33
+              },
+              "text": "Baltimore Ravens vs Jacksonville Jaguars 10-33。採用側の的中確定。"
+            },
+            "result_confirmed_at": "2026-11-07T19:14:44+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "公式試合結果",
+                "url": "https://www.jaguars.com/news/game-report-2026-week-9-jaguars-33-ravens-10",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-07T19:14:44+09:00",
+            "source_confidence": "official",
+            "note": "日付・対戦カード・最終結果を本文で照合。採用オッズ未登録につき利益額は未確定。"
+          }
+        },
+        {
+          "match_id": "2026-11-06-benfica-lech-football",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 1
+              },
+              "text": "Benfica vs Lech Poznan 3-1。採用側の的中確定。"
+            },
+            "result_confirmed_at": "2026-11-07T19:14:44+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "公式試合結果",
+                "url": "https://www.lechpoznan.pl/dzien-meczowy,113,slb-lpo,342.html",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-07T19:14:44+09:00",
+            "source_confidence": "official",
+            "note": "日付・対戦カード・最終結果を本文で照合。採用オッズ未登録につき利益額は未確定。"
+          }
+        },
+        {
+          "match_id": "2026-11-05-fenerbahce-afyon-volleyball-women",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 0
+              },
+              "text": "Fenerbahce Medicana Women vs Sinnada Hotels Afyon Belediye Yuntas Women 3-0。採用側の的中確定。",
+              "periods": {
+                "set1": {
+                  "a": 25,
+                  "b": 10
+                },
+                "set2": {
+                  "a": 25,
+                  "b": 15
+                },
+                "set3": {
+                  "a": 25,
+                  "b": 18
+                }
+              }
+            },
+            "result_confirmed_at": "2026-11-07T19:14:44+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "公式試合結果",
+                "url": "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/matches/2591737/",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-07T19:14:44+09:00",
+            "source_confidence": "official",
+            "note": "日付・対戦カード・最終結果を本文で照合。採用オッズ未登録につき利益額は未確定。"
+          }
+        },
+        {
+          "match_id": "2026-10-18-salzburg-altach-soccer",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 0
+              },
+              "text": "FC Red Bull Salzburg vs SCR Altach 3-0。採用側の的中確定。"
+            },
+            "result_confirmed_at": "2026-11-07T19:14:44+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "公式試合結果",
+                "url": "https://www.bundesliga.at/de/news/artikel/salzburg-schlug-altach-30-und-ist-wieder-zweiter",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-07T19:14:44+09:00",
+            "source_confidence": "official",
+            "note": "日付・対戦カード・最終結果を本文で照合。採用オッズ未登録につき利益額は未確定。"
           }
         }
       ],

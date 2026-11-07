@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-11-05T19:31:08+09:00",
+  "generated_at": "2026-11-07T19:14:44+09:00",
   "window": {
-    "from": "2026-11-05T00:00:00+09:00",
-    "to": "2026-11-07T00:00:00+09:00",
+    "from": "2026-11-07T00:00:00+09:00",
+    "to": "2026-11-09T00:00:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "本日・明日のユーザー指定3件。NFLとBenficaは11/6 JST。"
+    "note": "本日・明日のユーザー指定3件。開始は全て11/8 JST。"
   },
   "methodology": [
     "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
@@ -19,25 +19,25 @@
   ],
   "coverage": {
     "checked": [
-      "Baltimore Ravens vs Jacksonville Jaguars",
-      "Benfica vs Lech Poznan",
-      "Fenerbahce Medicana Women vs Sinnada Hotels Afyon Belediye Yuntas Women"
+      "Gen.G vs Invictus Gaming",
+      "Paris Saint-Germain vs Troyes",
+      "Carolina Hurricanes vs Chicago Blackhawks"
     ],
-    "note": "ユーザー指定3件の追加と既存終了12件の精算更新。世界全競技の新規総探索ではない。"
+    "note": "ユーザー指定3件の正式追加と既存未確定4件の結果更新。世界全競技の新規総探索ではない。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-11-06-baltimore-jacksonville-nfl",
-      "event_id": "web-2026-11-06-baltimore-jacksonville-nfl",
-      "matchup": "Baltimore Ravens vs Jacksonville Jaguars",
-      "favored": "Jacksonville Jaguars",
-      "selection_label": "Jacksonville Jaguars",
-      "sport": "American Football",
-      "competition": "NFL 2026 Week 9",
-      "start_jst": "2026-11-06T10:15:00+09:00",
-      "venue": "Baltimore Ravensがホーム／Jacksonville Jaguarsがアウェー",
-      "format": "延長込み勝利",
+      "match_id": "2026-11-08-geng-invictus-lol",
+      "event_id": "web-2026-11-08-geng-invictus-lol",
+      "matchup": "Gen.G vs Invictus Gaming",
+      "favored": "Gen.G",
+      "selection_label": "Gen.G",
+      "sport": "League of Legends",
+      "competition": "Worlds 2026／準決勝",
+      "start_jst": "2026-11-08T07:00:00+09:00",
+      "venue": "Allen, Texas／LAN・中立会場（Gen.Gを指定のホーム側表示＝side_aとして登録。ホーム優位は加点しない）",
+      "format": "BO5・シリーズ勝利",
       "status": "formal",
       "gap_grade": "条件付き優勢",
       "price_grade": "採用オッズ未登録",
@@ -48,304 +48,227 @@
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "採用オッズ未登録。カジ旅・遊雅堂・bet365：掲載確認不能。市場価格を精算オッズに流用しない。"
+        "book_examples": "カジ旅・遊雅堂・bet365：掲載確認不能。採用価格未登録。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-11-05T19:31:08+09:00",
-      "analysis_reviewed_at": "2026-11-05T19:31:08+09:00",
+      "added_at": "2026-11-07T19:14:44+09:00",
+      "analysis_reviewed_at": "2026-11-07T19:14:44+09:00",
       "sources": [
-        "https://www.jaguars.com/game-day/2026/reg-week9/jaguars-at-ravens/",
-        "https://www.jaguars.com/schedule/2026/",
-        "https://www.baltimoreravens.com/schedule/2026/",
-        "https://champsorchumps.us/team/nfl/jacksonville-jaguars/head-to-head/baltimore-ravens",
-        "https://www.baltimoreravens.com/team/injury-report/index-app",
-        "https://www.jaguars.com/news/scout-s-take-bucky-brooks-gives-final-analysis-of-jaguars-week-8-win-previews-key-matchups-in-week-9-vs-ravens"
+        "https://lolesports.com/en-GB/leagues/lck,lcp,lta_n",
+        "https://mid.gg/esports/matches/gen-g-vs-invictus-gaming",
+        "https://esportsresults.com/match/lol/1711020/invictus-gaming-vs-gen-g",
+        "https://liquipedia.net/leagueoflegends/World_Championship/2026"
       ],
-      "conclusion": "①実績型：Jaguarsは直近6戦4勝2敗、Ravensは3勝3敗で直近3連敗。共通相手3組もJaguars側。ただしH2H直近10戦は5勝5敗で大差を支持しない。②総合戦力型：RavensのLamar Jackson・Tyler Huntley欠場が大きく、Jaguars優勢。照合：現在成績と現在戦力は同方向、過去H2Hだけでは格差認定不可。アウェーJaguars勝利を正式採用。",
-      "risk": "Jaguarsアウェー・短週。古いH2Hは五分。Ravensのラン攻撃、Jaguarsの負傷者、ターンオーバーで接戦化し得る。",
+      "conclusion": "①実績型：Gen.Gは直近10シリーズ9勝1敗、IGは7勝3敗。今大会H2HはGen.GのBO1勝利1件。ただし共通相手HLE・LYONでは双方勝利し、直接比較の差は限定的。②総合戦力型：年間ゲーム成績100-41対70-70、LCK第1シード対LPL第4シードでGen.G優勢。照合：方向は一致するが、BO1のH2Hと年間成績だけでBO5の大差を保証できない。ユーザー指定でGen.Gシリーズ勝利を正式採用。",
+      "risk": "IGはTESを3-1で破って準決勝進出。ドラフト前分析。サイド選択・当日Pick/Ban・最終出場ロスター・最新GPRは未確認。",
       "analysis_detail": {
-        "summary": "①実績型：Jaguarsは直近6戦4勝2敗、Ravensは3勝3敗で直近3連敗。共通相手3組もJaguars側。ただしH2H直近10戦は5勝5敗で大差を支持しない。②総合戦力型：RavensのLamar Jackson・Tyler Huntley欠場が大きく、Jaguars優勢。照合：現在成績と現在戦力は同方向、過去H2Hだけでは格差認定不可。アウェーJaguars勝利を正式採用。",
         "h2h": {
-          "summary": "公開情報24戦、Jaguars13勝11敗（54.2%）。得失点524-491、平均差+1.38。直近10戦5勝5敗。1996～2023年のため現ロスターへの参考度低下。全スコアJaguars視点、H/AはJaguarsの指定会場区分（2017年Hはロンドン中立地）。",
+          "summary": "公開情報で確認できた1件（2024年以降DB＋今大会公式）。Gen.G 1勝0敗、ゲーム差+1。BO1の1件でBO5を断定しない。過去全期間の全件性は保証できず。",
           "items": [
             {
-              "date": "2023-12-17",
-              "label": "Jaguars H vs Ravens",
-              "result": "7-23"
-            },
-            {
-              "date": "2022-11-27",
-              "label": "Jaguars H vs Ravens",
-              "result": "28-27"
-            },
-            {
-              "date": "2020-12-20",
-              "label": "Jaguars A vs Ravens",
-              "result": "14-40"
-            },
-            {
-              "date": "2017-09-24",
-              "label": "Jaguars H vs Ravens",
-              "result": "44-7"
-            },
-            {
-              "date": "2016-09-25",
-              "label": "Jaguars H vs Ravens",
-              "result": "17-19"
-            },
-            {
-              "date": "2015-11-15",
-              "label": "Jaguars A vs Ravens",
-              "result": "22-20"
-            },
-            {
-              "date": "2014-12-14",
-              "label": "Jaguars A vs Ravens",
-              "result": "12-20"
-            },
-            {
-              "date": "2011-10-24",
-              "label": "Jaguars H vs Ravens",
-              "result": "12-7"
-            },
-            {
-              "date": "2008-12-28",
-              "label": "Jaguars A vs Ravens",
-              "result": "7-27"
-            },
-            {
-              "date": "2005-11-13",
-              "label": "Jaguars H vs Ravens",
-              "result": "30-3"
-            },
-            {
-              "date": "2003-11-02",
-              "label": "Jaguars A vs Ravens",
-              "result": "17-24"
-            },
-            {
-              "date": "2002-10-20",
-              "label": "Jaguars A vs Ravens",
-              "result": "10-17"
-            },
-            {
-              "date": "2001-11-25",
-              "label": "Jaguars H vs Ravens",
-              "result": "21-24"
-            },
-            {
-              "date": "2001-10-28",
-              "label": "Jaguars A vs Ravens",
-              "result": "17-18"
-            },
-            {
-              "date": "2000-10-08",
-              "label": "Jaguars H vs Ravens",
-              "result": "10-15"
-            },
-            {
-              "date": "2000-09-10",
-              "label": "Jaguars A vs Ravens",
-              "result": "36-39"
-            },
-            {
-              "date": "1999-11-28",
-              "label": "Jaguars A vs Ravens",
-              "result": "30-23"
-            },
-            {
-              "date": "1999-11-14",
-              "label": "Jaguars H vs Ravens",
-              "result": "6-3"
-            },
-            {
-              "date": "1998-11-01",
-              "label": "Jaguars A vs Ravens",
-              "result": "45-19"
-            },
-            {
-              "date": "1998-09-20",
-              "label": "Jaguars H vs Ravens",
-              "result": "24-10"
-            },
-            {
-              "date": "1997-11-30",
-              "label": "Jaguars H vs Ravens",
-              "result": "29-27"
-            },
-            {
-              "date": "1997-08-31",
-              "label": "Jaguars A vs Ravens",
-              "result": "28-27"
-            },
-            {
-              "date": "1996-11-24",
-              "label": "Jaguars A vs Ravens",
-              "result": "28-25"
-            },
-            {
-              "date": "1996-11-10",
-              "label": "Jaguars H vs Ravens",
-              "result": "30-27"
+              "date": "2026-10-23 UTC",
+              "label": "Worlds Swiss・BO1",
+              "result": "Gen.G 1-0 IG"
             }
           ]
         },
         "recent_form": {
           "side_a": {
-            "label": "Baltimore Ravens",
-            "summary": "8試合 4勝0分4敗／179-203（平均差-3.00）。6試合 3勝0分3敗／121-156（平均差-5.83）。5試合 2勝0分3敗／87-125（平均差-7.60）。2試合 0勝0分2敗／23-71（平均差-24.00）。1試合 0勝0分1敗／10-36（平均差-26.00）。日付は開催地基準。今季8戦のみ確認。直近10の残り2戦は未取得。",
+            "label": "Gen.G",
+            "summary": "10戦 9勝0分1敗／21-6・平均差+1.50。6戦 6勝0分0敗／13-3・平均差+1.67。5戦 5勝0分0敗／10-2・平均差+1.60。2戦 2勝0分0敗／5-1・平均差+2.00。1戦 1勝0分0敗／3-0・平均差+3.00。日付UTC。シリーズ勝敗とゲーム差は別指標。BO形式が混在するため単純同率比較は不可。",
             "items": [
               {
-                "date": "2026-11-01",
-                "opponent": "Bills",
-                "result": "L 10-36"
+                "date": "2026-11-04",
+                "opponent": "LYON",
+                "result": "W 3-0",
+                "note": "BO5"
               },
               {
                 "date": "2026-10-25",
-                "opponent": "Bengals",
-                "result": "L 13-35"
+                "opponent": "LYON",
+                "result": "W 2-1",
+                "note": "BO3"
               },
               {
-                "date": "2026-10-18",
-                "opponent": "Browns",
-                "result": "L 10-13"
+                "date": "2026-10-24",
+                "opponent": "HLE",
+                "result": "W 1-0",
+                "note": "BO1"
               },
               {
-                "date": "2026-10-11",
-                "opponent": "Falcons（OT）",
-                "result": "W 30-23"
-              },
-              {
-                "date": "2026-10-04",
-                "opponent": "Titans",
-                "result": "W 24-18"
-              },
-              {
-                "date": "2026-09-27",
-                "opponent": "Cowboys",
-                "result": "W 34-31"
-              },
-              {
-                "date": "2026-09-20",
-                "opponent": "Saints",
-                "result": "L 17-24"
+                "date": "2026-10-23",
+                "opponent": "IG",
+                "result": "W 1-0",
+                "note": "BO1"
               },
               {
                 "date": "2026-09-13",
-                "opponent": "Colts",
-                "result": "W 41-23"
+                "opponent": "HLE",
+                "result": "W 3-1",
+                "note": "BO5"
+              },
+              {
+                "date": "2026-09-05",
+                "opponent": "HLE",
+                "result": "W 3-1",
+                "note": "BO5"
+              },
+              {
+                "date": "2026-09-01",
+                "opponent": "KT",
+                "result": "W 3-0",
+                "note": "BO5"
+              },
+              {
+                "date": "2026-08-22",
+                "opponent": "Dplus KIA",
+                "result": "L 1-2",
+                "note": "BO3"
+              },
+              {
+                "date": "2026-08-19",
+                "opponent": "KT",
+                "result": "W 2-1",
+                "note": "BO3"
+              },
+              {
+                "date": "2026-08-16",
+                "opponent": "T1",
+                "result": "W 2-0",
+                "note": "BO3"
               }
             ]
           },
           "side_b": {
-            "label": "Jacksonville Jaguars",
-            "summary": "7試合 5勝0分2敗／196-111（平均差+12.14）。6試合 4勝0分2敗／162-101（平均差+10.17）。5試合 4勝0分1敗／149-81（平均差+13.60）。2試合 1勝0分1敗／73-41（平均差+16.00）。1試合 1勝0分0敗／42-7（平均差+35.00）。日付は開催地基準。今季7戦のみ確認。直近10の残り3戦は未取得。",
+            "label": "Invictus Gaming",
+            "summary": "10戦 7勝0分3敗／19-11・平均差+0.80。6戦 5勝0分1敗／10-4・平均差+1.00。5戦 4勝0分1敗／7-3・平均差+0.80。2戦 2勝0分0敗／5-2・平均差+1.50。1戦 1勝0分0敗／3-1・平均差+2.00。日付UTC。直近準々決勝でTESを破っており、年間成績だけで軽視しない。",
             "items": [
               {
-                "date": "2026-11-01",
-                "opponent": "Colts",
-                "result": "W 42-7"
+                "date": "2026-11-03",
+                "opponent": "TES",
+                "result": "W 3-1",
+                "note": "BO5"
               },
               {
-                "date": "2026-10-18",
-                "opponent": "Texans",
-                "result": "L 31-34"
+                "date": "2026-10-28",
+                "opponent": "LYON",
+                "result": "W 2-1",
+                "note": "BO3"
               },
               {
-                "date": "2026-10-11",
-                "opponent": "Eagles",
-                "result": "W 19-17"
+                "date": "2026-10-25",
+                "opponent": "HLE",
+                "result": "W 1-0",
+                "note": "BO1"
               },
               {
-                "date": "2026-10-04",
-                "opponent": "Bengals",
-                "result": "W 22-17"
+                "date": "2026-10-24",
+                "opponent": "Team Secret Whales",
+                "result": "W 1-0",
+                "note": "BO1"
               },
               {
-                "date": "2026-09-27",
-                "opponent": "Patriots",
-                "result": "W 35-6"
+                "date": "2026-10-23",
+                "opponent": "Gen.G",
+                "result": "L 0-1",
+                "note": "BO1"
               },
               {
-                "date": "2026-09-20",
-                "opponent": "Broncos",
-                "result": "L 13-20"
+                "date": "2026-09-19",
+                "opponent": "JDG",
+                "result": "W 3-1",
+                "note": "BO5"
               },
               {
-                "date": "2026-09-13",
-                "opponent": "Browns",
-                "result": "W 34-10"
+                "date": "2026-09-17",
+                "opponent": "TES",
+                "result": "L 1-3",
+                "note": "BO5"
+              },
+              {
+                "date": "2026-09-12",
+                "opponent": "Anyone’s Legend",
+                "result": "L 2-3",
+                "note": "BO5"
+              },
+              {
+                "date": "2026-09-08",
+                "opponent": "LGD",
+                "result": "W 3-0",
+                "note": "BO5"
+              },
+              {
+                "date": "2026-09-06",
+                "opponent": "Team WE",
+                "result": "W 3-1",
+                "note": "BO5"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "2026年の共通相手3組。全組でJaguarsの点差が上。開催地・対戦時期・QB構成が異なり、点差を次戦へ直結させない。",
+          "summary": "今大会の共通相手2チーム。5件に水増ししない。LYONの同形式比較は双方2-1、HLEは双方1-0。",
           "items": [
             {
-              "opponent": "Colts",
+              "opponent": "LYON",
               "side_a": {
-                "date": "9/13",
-                "result": "W 41-23"
+                "date": "2026-10-25",
+                "result": "2-1",
+                "performance": "得失差+1"
               },
               "side_b": {
-                "date": "11/1",
-                "result": "W 42-7"
+                "date": "2026-10-28",
+                "result": "2-1",
+                "performance": "得失差+1"
               },
-              "comparison": "Jaguars点差+35、Ravens+18。"
+              "comparison": "BO3同士では同差。Gen.Gは11/4のBO5でも3-0。"
             },
             {
-              "opponent": "Bengals",
+              "opponent": "HLE",
               "side_a": {
-                "date": "10/25",
-                "result": "L 13-35"
+                "date": "2026-10-24",
+                "result": "1-0",
+                "performance": "得失差+1"
               },
               "side_b": {
-                "date": "10/4",
-                "result": "W 22-17"
+                "date": "2026-10-25",
+                "result": "1-0",
+                "performance": "得失差+1"
               },
-              "comparison": "Jaguars+5、Ravens−22。"
-            },
-            {
-              "opponent": "Browns",
-              "side_a": {
-                "date": "10/18",
-                "result": "L 10-13"
-              },
-              "side_b": {
-                "date": "9/13",
-                "result": "W 34-10"
-              },
-              "comparison": "Jaguars+24、Ravens−3。"
+              "comparison": "双方BO1勝利。直接の格差根拠は弱い。"
             }
           ]
         },
         "ranking_or_rating": {
-          "text": "現在成績：Jaguars5勝2敗、Ravens4勝4敗。独立Elo・EPA/DVOAは確認できず。順位や勝率だけで格差判定しない。"
+          "text": "2026シリーズ44-16対24-26、ゲーム100-41対70-70（MID.GG確認時点）。異なる地域・相手構成で補正未実施。最新GPR数値は確認できず。"
         },
         "availability": {
-          "text": "11/4公式injury report：Ravens QB Lamar Jackson（右親指）、Tyler Huntley（足指）、S Jaylinn Hawkins OUT。Joe Fagnanoは水曜FP。Jaguars Bhayshul Tuten・Travon Walker QUESTIONABLE。試合直前inactive未発表。"
+          "text": "登録表示：Gen.G＝Kiin/Canyon/Chovy/Ruler/Duro、IG＝TheShy/Wei/Rookie/JiaQi/Meiko。当日確定出場は未確認。"
         },
         "sport_specific": {
-          "text": "双方11/1から木曜の短週。RavensはHenry中心のランで攻撃回数を減らす展開に注意。試合勝者・延長込み、ハンデ指定なし。同点終了時は採用先の規定未登録のため自動確定せず要確認。"
+          "text": "LAN、BO5。ドラフト前（Veto前に相当）。LoLのためCS2のマップ別勝率を転用しない。Pick/Ban・パッチ別成績・サイド割当は未確認。"
         },
+        "summary": "①実績型：Gen.Gは直近10シリーズ9勝1敗、IGは7勝3敗。今大会H2HはGen.GのBO1勝利1件。ただし共通相手HLE・LYONでは双方勝利し、直接比較の差は限定的。②総合戦力型：年間ゲーム成績100-41対70-70、LCK第1シード対LPL第4シードでGen.G優勢。照合：方向は一致するが、BO1のH2Hと年間成績だけでBO5の大差を保証できない。ユーザー指定でGen.Gシリーズ勝利を正式採用。",
         "home_away": {
-          "text": "M&T Bank Stadium、Baltimoreホーム。11/5 20:15 EST＝11/6 10:15 JST。"
+          "text": "Allen, Texas／LAN・中立会場（Gen.Gを指定のホーム側表示＝side_aとして登録。ホーム優位は加点しない）"
+        },
+        "market": {
+          "text": "BO5・シリーズ勝利。ユーザー指定正式採用、仮想100 USD追跡・実購入なし。採用オッズ未登録。カジ旅・遊雅堂・bet365は掲載確認不能。"
         }
       }
     },
     {
       "rank": 2,
-      "match_id": "2026-11-06-benfica-lech-football",
-      "event_id": "web-2026-11-06-benfica-lech-football",
-      "matchup": "Benfica vs Lech Poznan",
-      "favored": "Benfica",
-      "selection_label": "Benfica",
+      "match_id": "2026-11-08-psg-troyes-football",
+      "event_id": "web-2026-11-08-psg-troyes-football",
+      "matchup": "Paris Saint-Germain vs Troyes",
+      "favored": "Paris Saint-Germain",
+      "selection_label": "Paris Saint-Germain",
       "sport": "Football",
-      "competition": "UEFA Europa League 2026/27／リーグフェーズ第4節",
-      "start_jst": "2026-11-06T05:00:00+09:00",
-      "venue": "Benficaがホーム／Lech Poznanがアウェー",
+      "competition": "Ligue 1 2026/27／第10節",
+      "start_jst": "2026-11-08T05:05:00+09:00",
+      "venue": "Parc des Princes／PSGホーム",
       "format": "90分勝利",
       "status": "formal",
       "gap_grade": "優勢",
@@ -357,296 +280,1187 @@
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "採用オッズ未登録。カジ旅・遊雅堂・bet365：掲載確認不能。市場価格を精算オッズに流用しない。"
+        "book_examples": "カジ旅・遊雅堂・bet365：掲載確認不能。採用価格未登録。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-11-05T19:31:08+09:00",
-      "analysis_reviewed_at": "2026-11-05T19:31:08+09:00",
+      "added_at": "2026-11-07T19:14:44+09:00",
+      "analysis_reviewed_at": "2026-11-07T19:14:44+09:00",
       "sources": [
-        "https://www.slbenfica.pt/pt-pt/futebol/match-center/benfica-lech-poznan-5-novembro-2026",
-        "https://www.uefa.com/uefaeuropaleague/news/02a8-2177782493b9-69ba3288701d-1000--2026-27-uefa-europa-league-league-phase-fixtures-by-team/",
-        "https://tipsterarea.com/match/benfica-lech-poznan-europa-league-group-stage-953993",
-        "https://www.365scores.com/football/match/poland-cup-157/lech-poznan-siarka-tarnobrzeg-2211-13066-157",
-        "https://www.slbenfica.pt/pt-pt/agora/noticias/2026/11/04/futebol-antevisao-marco-silva-benfica-lech-poznan-liga-europa-fase-de-liga-4-jornada"
+        "https://www.psg.fr/content/programme-de-la-10e-journee-de-ligue-1-2026-2027-paris-saint-germain-estac-troyes",
+        "https://ligue1.com/fr/articles/l1_article_6040-les-coups-d-envoi-de-aj-auxerre-paris-fc-et-psg-estac-troyes-decales",
+        "https://www.skysports.com/football/paris-saint-germain-vs-troyes/557084",
+        "https://antosofa.com/en/historique/paris-sg-troyes",
+        "https://litstreak.com/teams/psg-CjhkPw0k",
+        "https://fdb4.io/team/troyes/results",
+        "https://goalsignal.com/uk/matches/paris-saint-germain-vs-troyes"
       ],
-      "conclusion": "①実績型：Benfica直近10戦9勝1敗、直近6戦全勝。Lechは国内杯を含め直近10戦5勝1分4敗。H2Hは2020年2勝、8得点2失点だが旧メンバーで参考度低下。②総合戦力型：今ELはBenfica3勝・10得点2失点、Lech0勝1分2敗・1得点9失点。対戦相手の質とホーム条件もBenfica側。照合：両分析は同方向。Benficaホーム90分勝利を正式採用。",
-      "risk": "H2Hは6年前、現在の共通相手比較なし。先発・欠場未確定、Benficaは短い休養。90分引分リスク。",
+      "conclusion": "①実績型：PSG直近公式10戦10勝、Troyes2勝2分6敗。確認H2H21件でPSG14勝5分2敗、直近10対戦9勝1分。②総合戦力型：リーグ1位20点対16位8点、PSGホーム。照合：実績と現在順位はPSG優勢で一致。共通相手の比較でもPSG側が優位だが、Troyesは直近2戦無敗へ改善。PSG90分勝利を正式採用。",
+      "risk": "H2Hは2023年以前で現メンバーと異なる。Troyes直近10件目は前季2部。PSG主力の欠場報道はあるが当日スタメン未確認。大差勝利や無失点まで保証しない。",
       "analysis_detail": {
-        "summary": "①実績型：Benfica直近10戦9勝1敗、直近6戦全勝。Lechは国内杯を含め直近10戦5勝1分4敗。H2Hは2020年2勝、8得点2失点だが旧メンバーで参考度低下。②総合戦力型：今ELはBenfica3勝・10得点2失点、Lech0勝1分2敗・1得点9失点。対戦相手の質とホーム条件もBenfica側。照合：両分析は同方向。Benficaホーム90分勝利を正式採用。",
         "h2h": {
-          "summary": "公開情報で確認2戦、Benfica2勝（100%）、8-2、平均得点4・失点1・差+3、最大差4。2020年で現戦力への参考度は低い。",
+          "summary": "公開DBから個票確認21件：PSG14勝5分2敗、50得点22失点、平均差+1.33。直近10件9勝1分、最大勝ち幅9。DBは1999年以降・欠落あり、全H2Hとは断定しない。いずれも旧ロスターで参考度低下。",
           "items": [
             {
-              "date": "2020-12-03",
-              "label": "Benfica（H）vs Lech",
-              "result": "4-0"
+              "date": "2023-05-07",
+              "label": "PSG A",
+              "result": "3-1",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
             },
             {
-              "date": "2020-10-22",
-              "label": "Lech（H）vs Benfica",
-              "result": "2-4"
+              "date": "2022-10-29",
+              "label": "PSG H",
+              "result": "4-3",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2022-05-08",
+              "label": "PSG H",
+              "result": "2-2",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2021-08-07",
+              "label": "PSG A",
+              "result": "2-1",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2018-03-03",
+              "label": "PSG A",
+              "result": "2-0",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2017-11-29",
+              "label": "PSG H",
+              "result": "2-0",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2016-03-13",
+              "label": "PSG A",
+              "result": "9-0",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2015-11-28",
+              "label": "PSG H",
+              "result": "4-1",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2013-04-13",
+              "label": "PSG A",
+              "result": "1-0",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2012-11-24",
+              "label": "PSG H",
+              "result": "4-0",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2007-05-19",
+              "label": "PSG H",
+              "result": "2-1",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2006-12-23",
+              "label": "PSG A",
+              "result": "1-1",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2006-01-15",
+              "label": "PSG H",
+              "result": "2-1",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2005-08-21",
+              "label": "PSG A",
+              "result": "1-1",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2002-10-19",
+              "label": "PSG A",
+              "result": "2-1",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2002-03-16",
+              "label": "PSG H",
+              "result": "3-1",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2001-11-04",
+              "label": "PSG A",
+              "result": "0-1",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2000-12-21",
+              "label": "PSG H",
+              "result": "0-0",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2000-09-06",
+              "label": "PSG A",
+              "result": "3-5",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "2000-05-13",
+              "label": "PSG A",
+              "result": "2-2",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+            },
+            {
+              "date": "1999-07-31",
+              "label": "PSG H",
+              "result": "1-0",
+              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
             }
           ]
         },
         "recent_form": {
           "side_a": {
-            "label": "Benfica",
-            "summary": "10試合 9勝0分1敗／27-8（平均差+1.90）。6試合 6勝0分0敗／17-4（平均差+2.17）。5試合 5勝0分0敗／15-4（平均差+2.20）。2試合 2勝0分0敗／5-1（平均差+2.00）。1試合 1勝0分0敗／1-0（平均差+1.00）。日付は開催地基準。",
+            "label": "Paris Saint-Germain",
+            "summary": "10戦 10勝0分0敗／36-9・平均差+2.70。6戦 6勝0分0敗／24-6・平均差+3.00。5戦 5勝0分0敗／20-4・平均差+3.20。2戦 2勝0分0敗／11-1・平均差+5.00。1戦 1勝0分0敗／6-0・平均差+6.00。公式戦のみ、現地日付。欧州大会と国内リーグを含む。",
             "items": [
               {
-                "date": "2026-11-02",
-                "opponent": "Alverca",
-                "result": "W 1-0"
+                "date": "2026-11-03",
+                "opponent": "Villarreal",
+                "result": "W 6-0"
               },
               {
-                "date": "2026-10-29",
-                "opponent": "Gil Vicente",
-                "result": "W 4-1"
+                "date": "2026-10-30",
+                "opponent": "Le Havre",
+                "result": "W 5-1"
               },
               {
                 "date": "2026-10-26",
-                "opponent": "Santa Clara",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-10-22",
-                "opponent": "Omonia",
-                "result": "W 4-1"
-              },
-              {
-                "date": "2026-10-15",
-                "opponent": "Celtic",
-                "result": "W 4-1"
-              },
-              {
-                "date": "2026-10-11",
-                "opponent": "Vitoria Guimaraes",
+                "opponent": "Lyon",
                 "result": "W 2-0"
               },
               {
-                "date": "2026-09-20",
-                "opponent": "Porto",
-                "result": "L 1-3"
+                "date": "2026-10-20",
+                "opponent": "Barcelona",
+                "result": "W 4-2"
               },
               {
-                "date": "2026-09-16",
-                "opponent": "Milan",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026-09-13",
-                "opponent": "Gil Vicente",
+                "date": "2026-10-17",
+                "opponent": "Strasbourg",
                 "result": "W 3-1"
               },
               {
+                "date": "2026-10-14",
+                "opponent": "Manchester City",
+                "result": "W 4-2"
+              },
+              {
+                "date": "2026-10-10",
+                "opponent": "Le Mans",
+                "result": "W 3-1"
+              },
+              {
+                "date": "2026-09-20",
+                "opponent": "Marseille",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026-09-13",
+                "opponent": "Brest",
+                "result": "W 1-0"
+              },
+              {
                 "date": "2026-09-09",
-                "opponent": "Moreirense",
-                "result": "W 4-0"
+                "opponent": "Slovan Bratislava",
+                "result": "W 6-1"
               }
             ]
           },
           "side_b": {
-            "label": "Lech Poznan",
-            "summary": "10試合 5勝1分4敗／22-17（平均差+0.50）。6試合 3勝1分2敗／12-9（平均差+0.50）。5試合 3勝1分1敗／12-5（平均差+1.40）。2試合 1勝0分1敗／3-2（平均差+0.50）。1試合 1勝0分0敗／3-1（平均差+2.00）。日付は開催地基準。TipsterAreaの表に欠けた10/28国内杯0-1を365Scoresで補完。",
+            "label": "Troyes",
+            "summary": "10戦 2勝2分6敗／7-17・平均差-1.00。6戦 1勝1分4敗／3-9・平均差-1.00。5戦 1勝1分3敗／3-7・平均差-0.80。2戦 1勝1分0敗／2-0・平均差+1.00。1戦 1勝0分0敗／2-0・平均差+2.00。公式戦のみ。10件目は前季2部で参考度低下。10/2 Dijonとの2-2は親善試合のため集計除外。",
             "items": [
               {
                 "date": "2026-10-31",
-                "opponent": "Wisla Krakow",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026-10-28",
-                "opponent": "Siarka Tarnobrzeg（国内杯）",
-                "result": "L 0-1"
+                "opponent": "Le Mans",
+                "result": "W 2-0"
               },
               {
                 "date": "2026-10-25",
-                "opponent": "Legia Warszawa",
+                "opponent": "Toulouse",
+                "result": "D 0-0"
+              },
+              {
+                "date": "2026-10-17",
+                "opponent": "Lens",
+                "result": "L 1-3"
+              },
+              {
+                "date": "2026-10-11",
+                "opponent": "Marseille",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026-09-19",
+                "opponent": "Angers",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026-09-13",
+                "opponent": "Lille",
+                "result": "L 0-2"
+              },
+              {
+                "date": "2026-09-06",
+                "opponent": "Strasbourg",
+                "result": "L 2-6"
+              },
+              {
+                "date": "2026-08-29",
+                "opponent": "Lorient",
                 "result": "W 2-1"
               },
               {
-                "date": "2026-10-22",
-                "opponent": "Sunderland",
-                "result": "D 1-1"
+                "date": "2026-08-22",
+                "opponent": "Paris FC",
+                "result": "D 0-0"
               },
               {
-                "date": "2026-10-18",
-                "opponent": "Korona Kielce",
-                "result": "W 6-1"
-              },
-              {
-                "date": "2026-10-15",
-                "opponent": "Bayer Leverkusen",
-                "result": "L 0-4"
-              },
-              {
-                "date": "2026-10-10",
-                "opponent": "Slask Wroclaw",
-                "result": "W 4-1"
-              },
-              {
-                "date": "2026-09-20",
-                "opponent": "Radomiak Radom",
-                "result": "W 5-1"
-              },
-              {
-                "date": "2026-09-17",
-                "opponent": "Crystal Palace",
-                "result": "L 0-4"
-              },
-              {
-                "date": "2026-09-12",
-                "opponent": "Gornik Zabrze",
-                "result": "L 1-2"
+                "date": "2026-05-09",
+                "opponent": "Grenoble",
+                "result": "L 0-1",
+                "note": "前季Ligue 2"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "直近10試合内の共通対戦相手なし。異なる国内リーグの勝率・点差をそのまま比較しない。2020年ELの共通組には現在との時間差が大きいため今回の判断材料に採用せず。",
-          "items": []
+          "summary": "今季4チームを比較。Lille戦はPSG直近10試合より前へ拡張。親善試合を混ぜない。",
+          "items": [
+            {
+              "opponent": "Le Mans",
+              "side_a": {
+                "date": "2026-10-10",
+                "result": "3-1",
+                "performance": "得失差+2"
+              },
+              "side_b": {
+                "date": "2026-10-31",
+                "result": "2-0",
+                "performance": "得失差+2"
+              },
+              "comparison": "ともに2点差勝利。"
+            },
+            {
+              "opponent": "Marseille",
+              "side_a": {
+                "date": "2026-09-20",
+                "result": "2-1",
+                "performance": "得失差+1"
+              },
+              "side_b": {
+                "date": "2026-10-11",
+                "result": "0-2",
+                "performance": "得失差-2"
+              },
+              "comparison": "PSG優位。開催条件・時期の差あり。"
+            },
+            {
+              "opponent": "Strasbourg",
+              "side_a": {
+                "date": "2026-10-17",
+                "result": "3-1",
+                "performance": "得失差+2"
+              },
+              "side_b": {
+                "date": "2026-09-06",
+                "result": "2-6",
+                "performance": "得失差-4"
+              },
+              "comparison": "PSG優位。"
+            },
+            {
+              "opponent": "Lille",
+              "side_a": {
+                "date": "2026-08-28",
+                "result": "2-2",
+                "performance": "得失差+0"
+              },
+              "side_b": {
+                "date": "2026-09-13",
+                "result": "0-2",
+                "performance": "得失差-2"
+              },
+              "comparison": "PSGは引分、Troyes敗戦。"
+            }
+          ]
         },
         "ranking_or_rating": {
-          "text": "EL第3節終了時：Benfica9ポイント・得失点+8、Lech1ポイント・得失点−8。現時点の独立Elo・国内順位・xG/xGAは未確認。BenficaはMilan、Celtic、Omoniaに勝利。LechはLeverkusenとCrystal Palaceに各0-4、Sunderlandに1-1。"
-        },
-        "home_away": {
-          "text": "Estádio da Luz（Lisbon）。11/5 20:00現地＝11/6 05:00 JST。Benficaがホーム、Lechがアウェー。"
+          "text": "Ligue 1：PSG1位20点、Troyes16位8点。Elo・xG/xGAの最新確定値は確認できず。"
         },
         "availability": {
-          "text": "公式会見の掲載を確認。先発11人・最終欠場者一覧は未確認。怪我情報の二次資料には更新差があるため、確定出場として登録しない。"
+          "text": "PSGはKvaratskhelia、Marquinhos等の欠場報道あり。最新公式メディカルの本文・当日先発は未確認のため確定欠場リストとはしない。"
         },
         "sport_specific": {
-          "text": "90分＋アディショナルタイムの勝利。DNBではなく、引分は不的中。Benficaは11/2、Lechは10/31が直近試合で休養差はLech側。国内得点力だけでなく欧州大会の相手水準を考慮。"
+          "text": "90分勝利。延長・勝ち抜け・ハンデを含まない。公式がキックオフを21:05 CETへ変更、旧20:45表示を採用しない。"
+        },
+        "summary": "①実績型：PSG直近公式10戦10勝、Troyes2勝2分6敗。確認H2H21件でPSG14勝5分2敗、直近10対戦9勝1分。②総合戦力型：リーグ1位20点対16位8点、PSGホーム。照合：実績と現在順位はPSG優勢で一致。共通相手の比較でもPSG側が優位だが、Troyesは直近2戦無敗へ改善。PSG90分勝利を正式採用。",
+        "home_away": {
+          "text": "Parc des Princes／PSGホーム"
+        },
+        "market": {
+          "text": "90分勝利。ユーザー指定正式採用、仮想100 USD追跡・実購入なし。採用オッズ未登録。カジ旅・遊雅堂・bet365は掲載確認不能。"
         }
       }
     },
     {
       "rank": 3,
-      "match_id": "2026-11-05-fenerbahce-afyon-volleyball-women",
-      "event_id": "web-2026-11-05-fenerbahce-afyon-volleyball-women",
-      "matchup": "Fenerbahce Medicana Women vs Sinnada Hotels Afyon Belediye Yuntas Women",
-      "favored": "Fenerbahce Medicana Women",
-      "selection_label": "Fenerbahce Medicana Women",
-      "sport": "Volleyball Women",
-      "competition": "Vodafone Sultanlar Ligi 2026/27／第7節",
-      "start_jst": "2026-11-05T20:00:00+09:00",
-      "venue": "Fenerbahce Medicana Womenがホーム／Sinnada Hotels Afyon Belediye Yuntas Womenがアウェー",
-      "format": "試合勝利（3セット先取）",
+      "match_id": "2026-11-08-carolina-chicago-nhl",
+      "event_id": "web-2026-11-08-carolina-chicago-nhl",
+      "matchup": "Carolina Hurricanes vs Chicago Blackhawks",
+      "favored": "Carolina Hurricanes",
+      "selection_label": "Carolina Hurricanes",
+      "sport": "Ice Hockey",
+      "competition": "NHL 2026/27／Regular Season",
+      "start_jst": "2026-11-08T10:00:00+09:00",
+      "venue": "Lenovo Center／Carolinaホーム",
+      "format": "試合勝利（延長・SO込み）",
       "status": "formal",
       "gap_grade": "優勢",
       "price_grade": "採用オッズ未登録",
-      "market": "match_winner",
+      "market": "winner_incl_extra_time",
       "stake_usd_reference": 100,
       "profit_usd": null,
       "profit_status": "試合前・未確定。採用オッズ未登録。",
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "採用オッズ未登録。カジ旅・遊雅堂・bet365：掲載確認不能。市場価格を精算オッズに流用しない。"
+        "book_examples": "カジ旅・遊雅堂・bet365：掲載確認不能。採用価格未登録。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-11-05T19:31:08+09:00",
-      "analysis_reviewed_at": "2026-11-05T19:31:08+09:00",
+      "added_at": "2026-11-07T19:14:44+09:00",
+      "analysis_reviewed_at": "2026-11-07T19:14:44+09:00",
       "sources": [
-        "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/matches/2591737/",
-        "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/teams/2110016-20759/",
-        "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/teams/2161555-92608/",
-        "https://afyonbelediyeyuntas.com/fikstur/sonuclar"
+        "https://www.nhl.com/hurricanes/news/topic/press-releases/preview-november-7-vs-chicago",
+        "https://www.hockey.com/nhl/teams/carolina-hurricanes/schedule",
+        "https://www.hockey.com/nhl/teams/chicago-blackhawks/schedule",
+        "https://champsorchumps.us/team/nhl/carolina-hurricanes/head-to-head/chicago-blackhawks",
+        "https://www.eliteprospects.com/games/h2h/carolina-hurricanes-vs-chicago-blackhawks-55-56"
       ],
-      "conclusion": "①実績型：Fenerbahce今季5戦全勝・15-3セット、Afyon1勝5敗・7-17セットで直近5連敗。H2Hは公式確認できず。②総合戦力型：公式順位3位対14位、攻撃決定率50.7%対36.0%、攻撃効率38.4%対18.6%でFenerbahce優勢。照合：直近実績と現在の攻撃指標は同方向。H2H・共通相手の裏付けは不足。Fenerbahce女子の試合勝利を正式採用。",
-      "risk": "H2H・今季共通相手なし、直近10試合未充足。当日ローテーション未確認。Afyonは5敗中4敗で1セット獲得しておりストレート勝利まで断定しない。",
+      "conclusion": "①実績型：Carolinaは直近10戦7勝3敗（SO敗込み）、Chicago2勝8敗（OT敗込み）。直近H2H10件はCarolina9勝1敗、今季初戦も5-2。②総合戦力型：Carolina13-3-2、Chicago4-12-1、ホーム開催。照合：過去実績・今季成績ともCarolina方向。ただし先発GK未確定。Carolinaの延長・SO込み試合勝利を正式採用。",
+      "risk": "Jordan Staal離脱、先発GK未確定。CarolinaにもNashville戦1-4の敗戦あり。規定時間勝利と延長込み勝利は別市場。Chicagoの最近10戦とCarolinaの対戦相手水準は均等ではない。",
       "analysis_detail": {
-        "summary": "①実績型：Fenerbahce今季5戦全勝・15-3セット、Afyon1勝5敗・7-17セットで直近5連敗。H2Hは公式確認できず。②総合戦力型：公式順位3位対14位、攻撃決定率50.7%対36.0%、攻撃効率38.4%対18.6%でFenerbahce優勢。照合：直近実績と現在の攻撃指標は同方向。H2H・共通相手の裏付けは不足。Fenerbahce女子の試合勝利を正式採用。",
         "h2h": {
-          "summary": "女子・当該クラブ同士の公式H2H確認できず。男子Afyonや旧カテゴリーの対戦を混ぜない。件数0と不存在は同義ではない。",
-          "items": []
+          "summary": "公開フランチャイズ履歴98件を取得。1997年以前Hartford時代は別表記で参考保存し、現在Carolinaの評価から除外。直近10件9勝1敗（OT/SO含む）、42-21、平均差+2.10。古い対戦は参考度低下。",
+          "items": [
+            {
+              "date": "2026-10-10",
+              "label": "Carolina A",
+              "result": "W 5-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2026-04-09",
+              "label": "Carolina A",
+              "result": "W 7-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2026-01-22",
+              "label": "Carolina H",
+              "result": "L 3-4 OT/SO",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2025-01-30",
+              "label": "Carolina H",
+              "result": "W 3-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2025-01-20",
+              "label": "Carolina A",
+              "result": "W 4-3 OT",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2024-04-14",
+              "label": "Carolina A",
+              "result": "W 4-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2024-02-19",
+              "label": "Carolina H",
+              "result": "W 6-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2022-12-27",
+              "label": "Carolina H",
+              "result": "W 3-0",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2022-11-14",
+              "label": "Carolina A",
+              "result": "W 3-0",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2021-11-03",
+              "label": "Carolina A",
+              "result": "W 4-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2021-10-29",
+              "label": "Carolina H",
+              "result": "W 6-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2021-05-06",
+              "label": "Carolina H",
+              "result": "L 1-2 OT",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2021-05-04",
+              "label": "Carolina H",
+              "result": "W 6-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2021-05-03",
+              "label": "Carolina H",
+              "result": "W 5-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2021-04-01",
+              "label": "Carolina A",
+              "result": "W 4-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2021-03-30",
+              "label": "Carolina A",
+              "result": "L 1-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2021-02-19",
+              "label": "Carolina H",
+              "result": "W 5-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2021-02-04",
+              "label": "Carolina A",
+              "result": "L 4-6",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2021-02-02",
+              "label": "Carolina A",
+              "result": "W 4-3 OT/SO",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2019-11-19",
+              "label": "Carolina A",
+              "result": "W 4-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2019-10-26",
+              "label": "Carolina H",
+              "result": "W 4-0",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2018-11-12",
+              "label": "Carolina H",
+              "result": "W 3-2 OT",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2018-11-08",
+              "label": "Carolina A",
+              "result": "W 4-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2018-03-08",
+              "label": "Carolina A",
+              "result": "W 3-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2017-11-11",
+              "label": "Carolina H",
+              "result": "L 3-4 OT",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2017-01-06",
+              "label": "Carolina A",
+              "result": "L 1-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2016-12-30",
+              "label": "Carolina H",
+              "result": "W 3-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2016-01-26",
+              "label": "Carolina H",
+              "result": "W 5-0",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2015-12-27",
+              "label": "Carolina A",
+              "result": "W 2-1",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2015-03-23",
+              "label": "Carolina H",
+              "result": "L 1-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2015-03-02",
+              "label": "Carolina A",
+              "result": "L 2-5",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2014-03-21",
+              "label": "Carolina A",
+              "result": "L 2-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2013-10-15",
+              "label": "Carolina H",
+              "result": "L 2-3 OT/SO",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2011-10-28",
+              "label": "Carolina H",
+              "result": "W 3-0",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2011-03-04",
+              "label": "Carolina A",
+              "result": "L 2-5",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2010-01-30",
+              "label": "Carolina H",
+              "result": "W 4-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2009-03-11",
+              "label": "Carolina A",
+              "result": "L 2-3 OT/SO",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2008-03-12",
+              "label": "Carolina A",
+              "result": "W 3-0",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2005-12-13",
+              "label": "Carolina H",
+              "result": "W 5-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2004-03-17",
+              "label": "Carolina A",
+              "result": "W 3-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2002-10-26",
+              "label": "Carolina H",
+              "result": "T 3-3 OT",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2002-03-05",
+              "label": "Carolina A",
+              "result": "W 2-1 OT",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2001-03-04",
+              "label": "Carolina A",
+              "result": "W 6-3",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2000-12-31",
+              "label": "Carolina H",
+              "result": "W 2-1",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "2000-03-08",
+              "label": "Carolina H",
+              "result": "W 4-1",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "1999-04-03",
+              "label": "Carolina A",
+              "result": "L 1-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "1998-10-28",
+              "label": "Carolina H",
+              "result": "W 2-0",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "1998-01-14",
+              "label": "Carolina H",
+              "result": "L 1-4",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "1997-10-26",
+              "label": "Carolina A",
+              "result": "W 3-2",
+              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+            },
+            {
+              "date": "1997-02-26",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "T 2-2 OT",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1996-12-29",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 3-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1995-12-10",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 1-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1995-10-14",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 3-2",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1994-03-30",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 3-2 OT",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1993-10-14",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "W 6-2",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1993-03-28",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 0-3",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1993-01-23",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 2-6",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1992-03-28",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 1-3",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1991-11-10",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 0-3",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1991-10-26",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 2-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1991-02-28",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 3-6",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1991-02-10",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 3-1",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1990-11-06",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "T 1-1 OT",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1990-01-27",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 6-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1989-12-30",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 3-7",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1989-11-12",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 2-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1989-04-01",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 6-1",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1988-12-14",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 3-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1988-10-15",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 7-5",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1988-03-02",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "W 2-1",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1988-01-13",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 1-2",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1987-10-24",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 5-3",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1987-02-21",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 3-6",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1987-02-17",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "W 5-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1987-01-03",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 2-3",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1986-03-15",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 11-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1986-01-12",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 2-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1985-10-23",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 2-9",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1985-01-05",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 4-3",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1984-11-17",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 0-7",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1984-10-28",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "W 4-1",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1984-02-05",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "W 4-3",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1983-11-12",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 6-1",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1983-10-30",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 1-6",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1983-02-19",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 2-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1983-01-23",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 2-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1982-11-26",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 3-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1982-01-25",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "W 6-5",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1981-12-13",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 3-8",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1981-10-31",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "T 2-2",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1981-02-15",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "T 4-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1981-02-07",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 2-6",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1981-01-17",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 2-3",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1980-11-23",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "L 3-11",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1980-01-19",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "W 5-3",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1979-11-11",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "T 5-5",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1979-11-09",
+              "label": "Hartford旧フランチャイズ・参考度低下 H",
+              "result": "L 2-4",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            },
+            {
+              "date": "1979-10-14",
+              "label": "Hartford旧フランチャイズ・参考度低下 A",
+              "result": "T 3-3",
+              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+            }
+          ]
         },
         "recent_form": {
           "side_a": {
-            "label": "Fenerbahce Medicana 女子",
-            "summary": "5試合 5勝0分0敗／15-3（平均差+2.40）。2試合 2勝0分0敗／6-1（平均差+2.50）。1試合 1勝0分0敗／3-0（平均差+3.00）。日付は開催地基準。2026/27公式掲載5戦を確認。6～10試合目は未取得、旧シーズンで水増ししない。",
+            "label": "Carolina Hurricanes",
+            "summary": "10戦 7勝0分3敗／38-24・平均差+1.40。6戦 5勝0分1敗／22-10・平均差+2.00。5戦 4勝0分1敗／18-10・平均差+1.60。2戦 1勝0分1敗／6-7・平均差-0.50。1戦 1勝0分0敗／5-3・平均差+2.00。現地日付。OT/SOは最終勝敗に含む。",
             "items": [
               {
+                "date": "2026-11-05",
+                "opponent": "NY Islanders",
+                "result": "W 5-3"
+              },
+              {
+                "date": "2026-11-03",
+                "opponent": "Nashville",
+                "result": "L 1-4"
+              },
+              {
                 "date": "2026-11-01",
-                "opponent": "Galatasaray",
-                "result": "W 3-0"
+                "opponent": "Winnipeg",
+                "result": "W 7-0"
               },
               {
-                "date": "2026-10-25",
-                "opponent": "Eczacibasi",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026-10-18",
-                "opponent": "Zeren",
-                "result": "W 3-0"
-              },
-              {
-                "date": "2026-10-11",
-                "opponent": "Besiktas",
+                "date": "2026-10-29",
+                "opponent": "Columbus",
                 "result": "W 3-2"
               },
               {
-                "date": "2026-10-04",
-                "opponent": "Manisa",
-                "result": "W 3-0"
+                "date": "2026-10-27",
+                "opponent": "Boston",
+                "result": "W 2-1"
+              },
+              {
+                "date": "2026-10-24",
+                "opponent": "St Louis",
+                "result": "W 4-0"
+              },
+              {
+                "date": "2026-10-22",
+                "opponent": "Edmonton",
+                "result": "L 5-6",
+                "note": "SO敗"
+              },
+              {
+                "date": "2026-10-20",
+                "opponent": "Vancouver",
+                "result": "W 6-3"
+              },
+              {
+                "date": "2026-10-18",
+                "opponent": "Calgary",
+                "result": "L 2-3"
+              },
+              {
+                "date": "2026-10-17",
+                "opponent": "Winnipeg",
+                "result": "W 3-2"
               }
             ]
           },
           "side_b": {
-            "label": "Sinnada Hotels Afyon Belediye Yuntas 女子",
-            "summary": "6試合 1勝0分5敗／7-17（平均差-1.67）。5試合 0勝0分5敗／4-15（平均差-2.20）。2試合 0勝0分2敗／2-6（平均差-2.00）。1試合 0勝0分1敗／1-3（平均差-2.00）。日付は開催地基準。今季公式6戦。7～10試合目未取得。",
+            "label": "Chicago Blackhawks",
+            "summary": "10戦 2勝0分8敗／20-38・平均差-1.80。6戦 1勝0分5敗／13-24・平均差-1.83。5戦 0勝0分5敗／11-23・平均差-2.40。2戦 0勝0分2敗／4-9・平均差-2.50。1戦 0勝0分1敗／1-4・平均差-3.00。現地日付。OT/SO込み勝敗。5連敗。",
             "items": [
               {
-                "date": "2026-11-01",
-                "opponent": "Vakifbank",
-                "result": "L 1-3"
+                "date": "2026-11-05",
+                "opponent": "Tampa Bay",
+                "result": "L 1-4"
+              },
+              {
+                "date": "2026-11-04",
+                "opponent": "Florida",
+                "result": "L 3-5"
+              },
+              {
+                "date": "2026-11-02",
+                "opponent": "Colorado",
+                "result": "L 2-5"
+              },
+              {
+                "date": "2026-10-31",
+                "opponent": "Boston",
+                "result": "L 4-5",
+                "note": "OT敗"
+              },
+              {
+                "date": "2026-10-29",
+                "opponent": "Detroit",
+                "result": "L 1-4"
+              },
+              {
+                "date": "2026-10-27",
+                "opponent": "Los Angeles",
+                "result": "W 2-1"
               },
               {
                 "date": "2026-10-25",
-                "opponent": "Ilbank",
-                "result": "L 1-3"
+                "opponent": "Florida",
+                "result": "L 2-3"
               },
               {
-                "date": "2026-10-18",
-                "opponent": "Aras Kargo",
-                "result": "L 1-3"
+                "date": "2026-10-23",
+                "opponent": "Montreal",
+                "result": "L 1-4"
               },
               {
-                "date": "2026-10-14",
-                "opponent": "Nilufer",
-                "result": "L 0-3"
+                "date": "2026-10-17",
+                "opponent": "Dallas",
+                "result": "L 0-4"
               },
               {
-                "date": "2026-10-11",
-                "opponent": "Turk Hava Yollari",
-                "result": "L 1-3"
-              },
-              {
-                "date": "2026-10-04",
-                "opponent": "Kuzeyboru",
-                "result": "W 3-2"
+                "date": "2026-10-15",
+                "opponent": "Winnipeg",
+                "result": "W 4-3",
+                "note": "OT勝"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "今季取得済み5戦対6戦に共通相手なし。相手構成が異なるためセット差の単純な差し引きで予想しない。FenerbahceはEczacibasi、Galatasaray戦の勝利も確認。",
-          "items": []
+          "summary": "今季の共通相手を5チーム比較（直近10の外へ拡張）。全件が同条件ではない。Floridaでは双方敗戦、Winnipegでは双方勝利のため一方的優位としない。",
+          "items": [
+            {
+              "opponent": "Boston",
+              "side_a": {
+                "date": "2026-10-27",
+                "result": "2-1",
+                "performance": "得失差+1"
+              },
+              "side_b": {
+                "date": "2026-10-31",
+                "result": "4-5 OT",
+                "performance": "得失差-1"
+              },
+              "comparison": "Carolina勝利、Chicago延長敗。"
+            },
+            {
+              "opponent": "Winnipeg",
+              "side_a": {
+                "date": "2026-11-01",
+                "result": "7-0",
+                "performance": "得失差+7"
+              },
+              "side_b": {
+                "date": "2026-10-15",
+                "result": "4-3 OT",
+                "performance": "得失差+1"
+              },
+              "comparison": "双方勝利だがCarolinaの点差が大きい。Carolina10/17にも3-2勝利。"
+            },
+            {
+              "opponent": "St Louis",
+              "side_a": {
+                "date": "2026-10-24",
+                "result": "4-0",
+                "performance": "得失差+4"
+              },
+              "side_b": {
+                "date": "2026-10-06",
+                "result": "4-2",
+                "performance": "得失差+2"
+              },
+              "comparison": "双方勝利。"
+            },
+            {
+              "opponent": "NY Islanders",
+              "side_a": {
+                "date": "2026-11-05",
+                "result": "5-3",
+                "performance": "得失差+2"
+              },
+              "side_b": {
+                "date": "2026-10-08",
+                "result": "1-4",
+                "performance": "得失差-3"
+              },
+              "comparison": "Carolina勝利、Chicago敗戦。"
+            },
+            {
+              "opponent": "Florida",
+              "side_a": {
+                "date": "2026-09-29",
+                "result": "0-1 OT",
+                "performance": "得失差-1"
+              },
+              "side_b": {
+                "date": "2026-11-04",
+                "result": "3-5",
+                "performance": "得失差-2"
+              },
+              "comparison": "双方敗戦、Carolinaは延長敗。Chicago10/25も2-3敗。"
+            }
+          ]
         },
         "ranking_or_rating": {
-          "text": "公式：Fenerbahce3位14点（5試合）、Afyon14位2点（6試合）。消化数が異なる。セット勝率83.3%対29.2%。単なる順位差に加え攻撃指標を比較。"
+          "text": "今季Carolina13勝3敗2延長敗・28点、Chicago4勝12敗1延長敗・9点。消化試合数と相手構成が異なる。最新Elo・5対5期待得点率は未確認。"
         },
         "availability": {
-          "text": "公式登録Fenerbahce：Vargas、Fedorovtseva、Orro、Eda Erdem、Ana Cristina等。登録と当日出場は別。両チームの先発ローテーション・最新欠場は未確認。"
+          "text": "CarolinaのJordan Staalは離脱中。Kochetkovの先発は未確定。Chicago当日GK・欠場全員の確定情報は取得できず。"
         },
         "sport_specific": {
-          "text": "最大5セット、3セット先取の試合勝者。3-0やセットハンデではない。今季攻撃決定率＝得点/打数：283/558=50.7%対309/859=36.0%。攻撃効率＝（得点−失策−被ブロック）/打数：214/558=38.4%対160/859=18.6%。相手水準の補正は未実施。"
+          "text": "延長・SO込み勝者市場として登録。60分終了時の引分では敗戦扱いにしない。最終結果確認後に当該市場の精算確認を行う。両者の直近試合は11/5現地。"
         },
+        "summary": "①実績型：Carolinaは直近10戦7勝3敗（SO敗込み）、Chicago2勝8敗（OT敗込み）。直近H2H10件はCarolina9勝1敗、今季初戦も5-2。②総合戦力型：Carolina13-3-2、Chicago4-12-1、ホーム開催。照合：過去実績・今季成績ともCarolina方向。ただし先発GK未確定。Carolinaの延長・SO込み試合勝利を正式採用。",
         "home_away": {
-          "text": "TVF Burhan Felek Vestel Voleybol Salonu。公式11/5 14:00 Turkey＝11/5 20:00 JST。双方の直近試合は11/1。"
+          "text": "Lenovo Center／Carolinaホーム"
+        },
+        "market": {
+          "text": "試合勝利（延長・SO込み）。ユーザー指定正式採用、仮想100 USD追跡・実購入なし。採用オッズ未登録。カジ旅・遊雅堂・bet365は掲載確認不能。"
         }
       }
     }
@@ -654,11 +1468,11 @@
   "rejected_examples": [],
   "summary": {
     "pure_gap_top": [
-      "Fenerbahce Medicana Women",
-      "Benfica"
+      "Paris Saint-Germain",
+      "Carolina Hurricanes"
     ],
     "price_adjusted_top": [],
-    "caution": "ユーザー指定3件正式採用。Jaguarsは条件付き優勢。本日7件の的中を確定、過去5件は既存確定結果と履歴表示を同期。採用オッズ未登録のため利益額未確定。"
+    "caution": "Gen.Gは条件付き優勢。指定3件を正式採用、既存4件の的中を確定。採用オッズ未登録のため利益額未確定。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -9451,13 +10265,13 @@
         "start_jst": "2026-10-18T21:30:00+09:00",
         "venue": "Red Bull Arena／Salzburgホーム",
         "format": "90分勝者",
-        "status": "void",
+        "status": "final",
         "gap_grade": "A−候補（表記推定）",
         "price_grade": "未判定",
         "market": "match_1x2",
         "stake_usd_reference": 100,
-        "profit_usd": 0,
-        "profit_status": "ユーザー申告1.12倍を記録。誤登録による無効を維持し、参考払戻100USD・純損益0USD。",
+        "profit_usd": null,
+        "profit_status": "的中確定。採用オッズ未登録のため払戻・純利益額は未確定。",
         "odds": {
           "min": null,
           "max": null,
@@ -9475,10 +10289,19 @@
         "conclusion": "ユーザーの『アフター英語のやつ』を直前に分析したザルツブルク対アルタッハと解釈してSalzburg勝利（90分）を登録。過去リーグH2H26戦でSalzburg19勝・引分6・Altach1勝、ただし最近3戦は引分。",
         "risk": "ユーザーが指定したのはAlter Egoであり、この採用は誤登録。",
         "analysis_detail": {
-          "summary": "ユーザーの『アフター英語のやつ』を直前に分析したザルツブルク対アルタッハと解釈してSalzburg勝利（90分）を登録。過去リーグH2H26戦でSalzburg19勝・引分6・Altach1勝、ただし最近3戦は引分。"
+          "summary": "ユーザーの『アフター英語のやつ』を直前に分析したザルツブルク対アルタッハと解釈してSalzburg勝利（90分）を登録。過去リーグH2H26戦でSalzburg19勝・引分6・Altach1勝、ただし最近3戦は引分。",
+          "post_match": {
+            "text": "FC Red Bull Salzburg vs SCR Altach 3-0。採用側の的中確定。 採用オッズ未登録のため利益額未確定。"
+          }
         },
-        "result": "誤採用：ユーザー訂正により試合前に無効。勝敗結果ではない。",
-        "settled_at": "2026-10-18T13:59:02+09:00"
+        "result": "FC Red Bull Salzburg vs SCR Altach 3-0。採用側の的中確定。",
+        "settled_at": "2026-10-18T13:59:02+09:00",
+        "favored_result": "win",
+        "result_note": "FC Red Bull Salzburg vs SCR Altach 3-0。採用側の的中確定。",
+        "result_confirmed_at": "2026-11-07T19:14:44+09:00",
+        "result_sources": [
+          "https://www.bundesliga.at/de/news/artikel/salzburg-schlug-altach-30-und-ist-wieder-zweiter"
+        ]
       },
       {
         "rank": 49,
@@ -15677,6 +16500,660 @@
         "result_sources": [
           "https://www.uefa.com/uefachampionsleague/news/02a8-2176fa83582b-d99f0b27f405-1000--champions-league-league-phase-fixtures-by-team/"
         ]
+      },
+      {
+        "rank": 1,
+        "match_id": "2026-11-06-baltimore-jacksonville-nfl",
+        "event_id": "web-2026-11-06-baltimore-jacksonville-nfl",
+        "matchup": "Baltimore Ravens vs Jacksonville Jaguars",
+        "favored": "Jacksonville Jaguars",
+        "selection_label": "Jacksonville Jaguars",
+        "sport": "American Football",
+        "competition": "NFL 2026 Week 9",
+        "start_jst": "2026-11-06T10:15:00+09:00",
+        "venue": "Baltimore Ravensがホーム／Jacksonville Jaguarsがアウェー",
+        "format": "延長込み勝利",
+        "status": "final",
+        "gap_grade": "条件付き優勢",
+        "price_grade": "採用オッズ未登録",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "的中確定。採用オッズ未登録のため払戻・純利益額は未確定。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "採用オッズ未登録。カジ旅・遊雅堂・bet365：掲載確認不能。市場価格を精算オッズに流用しない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-11-05T19:31:08+09:00",
+        "analysis_reviewed_at": "2026-11-05T19:31:08+09:00",
+        "sources": [
+          "https://www.jaguars.com/game-day/2026/reg-week9/jaguars-at-ravens/",
+          "https://www.jaguars.com/schedule/2026/",
+          "https://www.baltimoreravens.com/schedule/2026/",
+          "https://champsorchumps.us/team/nfl/jacksonville-jaguars/head-to-head/baltimore-ravens",
+          "https://www.baltimoreravens.com/team/injury-report/index-app",
+          "https://www.jaguars.com/news/scout-s-take-bucky-brooks-gives-final-analysis-of-jaguars-week-8-win-previews-key-matchups-in-week-9-vs-ravens"
+        ],
+        "conclusion": "①実績型：Jaguarsは直近6戦4勝2敗、Ravensは3勝3敗で直近3連敗。共通相手3組もJaguars側。ただしH2H直近10戦は5勝5敗で大差を支持しない。②総合戦力型：RavensのLamar Jackson・Tyler Huntley欠場が大きく、Jaguars優勢。照合：現在成績と現在戦力は同方向、過去H2Hだけでは格差認定不可。アウェーJaguars勝利を正式採用。",
+        "risk": "Jaguarsアウェー・短週。古いH2Hは五分。Ravensのラン攻撃、Jaguarsの負傷者、ターンオーバーで接戦化し得る。",
+        "analysis_detail": {
+          "summary": "①実績型：Jaguarsは直近6戦4勝2敗、Ravensは3勝3敗で直近3連敗。共通相手3組もJaguars側。ただしH2H直近10戦は5勝5敗で大差を支持しない。②総合戦力型：RavensのLamar Jackson・Tyler Huntley欠場が大きく、Jaguars優勢。照合：現在成績と現在戦力は同方向、過去H2Hだけでは格差認定不可。アウェーJaguars勝利を正式採用。",
+          "h2h": {
+            "summary": "公開情報24戦、Jaguars13勝11敗（54.2%）。得失点524-491、平均差+1.38。直近10戦5勝5敗。1996～2023年のため現ロスターへの参考度低下。全スコアJaguars視点、H/AはJaguarsの指定会場区分（2017年Hはロンドン中立地）。",
+            "items": [
+              {
+                "date": "2023-12-17",
+                "label": "Jaguars H vs Ravens",
+                "result": "7-23"
+              },
+              {
+                "date": "2022-11-27",
+                "label": "Jaguars H vs Ravens",
+                "result": "28-27"
+              },
+              {
+                "date": "2020-12-20",
+                "label": "Jaguars A vs Ravens",
+                "result": "14-40"
+              },
+              {
+                "date": "2017-09-24",
+                "label": "Jaguars H vs Ravens",
+                "result": "44-7"
+              },
+              {
+                "date": "2016-09-25",
+                "label": "Jaguars H vs Ravens",
+                "result": "17-19"
+              },
+              {
+                "date": "2015-11-15",
+                "label": "Jaguars A vs Ravens",
+                "result": "22-20"
+              },
+              {
+                "date": "2014-12-14",
+                "label": "Jaguars A vs Ravens",
+                "result": "12-20"
+              },
+              {
+                "date": "2011-10-24",
+                "label": "Jaguars H vs Ravens",
+                "result": "12-7"
+              },
+              {
+                "date": "2008-12-28",
+                "label": "Jaguars A vs Ravens",
+                "result": "7-27"
+              },
+              {
+                "date": "2005-11-13",
+                "label": "Jaguars H vs Ravens",
+                "result": "30-3"
+              },
+              {
+                "date": "2003-11-02",
+                "label": "Jaguars A vs Ravens",
+                "result": "17-24"
+              },
+              {
+                "date": "2002-10-20",
+                "label": "Jaguars A vs Ravens",
+                "result": "10-17"
+              },
+              {
+                "date": "2001-11-25",
+                "label": "Jaguars H vs Ravens",
+                "result": "21-24"
+              },
+              {
+                "date": "2001-10-28",
+                "label": "Jaguars A vs Ravens",
+                "result": "17-18"
+              },
+              {
+                "date": "2000-10-08",
+                "label": "Jaguars H vs Ravens",
+                "result": "10-15"
+              },
+              {
+                "date": "2000-09-10",
+                "label": "Jaguars A vs Ravens",
+                "result": "36-39"
+              },
+              {
+                "date": "1999-11-28",
+                "label": "Jaguars A vs Ravens",
+                "result": "30-23"
+              },
+              {
+                "date": "1999-11-14",
+                "label": "Jaguars H vs Ravens",
+                "result": "6-3"
+              },
+              {
+                "date": "1998-11-01",
+                "label": "Jaguars A vs Ravens",
+                "result": "45-19"
+              },
+              {
+                "date": "1998-09-20",
+                "label": "Jaguars H vs Ravens",
+                "result": "24-10"
+              },
+              {
+                "date": "1997-11-30",
+                "label": "Jaguars H vs Ravens",
+                "result": "29-27"
+              },
+              {
+                "date": "1997-08-31",
+                "label": "Jaguars A vs Ravens",
+                "result": "28-27"
+              },
+              {
+                "date": "1996-11-24",
+                "label": "Jaguars A vs Ravens",
+                "result": "28-25"
+              },
+              {
+                "date": "1996-11-10",
+                "label": "Jaguars H vs Ravens",
+                "result": "30-27"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Baltimore Ravens",
+              "summary": "8試合 4勝0分4敗／179-203（平均差-3.00）。6試合 3勝0分3敗／121-156（平均差-5.83）。5試合 2勝0分3敗／87-125（平均差-7.60）。2試合 0勝0分2敗／23-71（平均差-24.00）。1試合 0勝0分1敗／10-36（平均差-26.00）。日付は開催地基準。今季8戦のみ確認。直近10の残り2戦は未取得。",
+              "items": [
+                {
+                  "date": "2026-11-01",
+                  "opponent": "Bills",
+                  "result": "L 10-36"
+                },
+                {
+                  "date": "2026-10-25",
+                  "opponent": "Bengals",
+                  "result": "L 13-35"
+                },
+                {
+                  "date": "2026-10-18",
+                  "opponent": "Browns",
+                  "result": "L 10-13"
+                },
+                {
+                  "date": "2026-10-11",
+                  "opponent": "Falcons（OT）",
+                  "result": "W 30-23"
+                },
+                {
+                  "date": "2026-10-04",
+                  "opponent": "Titans",
+                  "result": "W 24-18"
+                },
+                {
+                  "date": "2026-09-27",
+                  "opponent": "Cowboys",
+                  "result": "W 34-31"
+                },
+                {
+                  "date": "2026-09-20",
+                  "opponent": "Saints",
+                  "result": "L 17-24"
+                },
+                {
+                  "date": "2026-09-13",
+                  "opponent": "Colts",
+                  "result": "W 41-23"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Jacksonville Jaguars",
+              "summary": "7試合 5勝0分2敗／196-111（平均差+12.14）。6試合 4勝0分2敗／162-101（平均差+10.17）。5試合 4勝0分1敗／149-81（平均差+13.60）。2試合 1勝0分1敗／73-41（平均差+16.00）。1試合 1勝0分0敗／42-7（平均差+35.00）。日付は開催地基準。今季7戦のみ確認。直近10の残り3戦は未取得。",
+              "items": [
+                {
+                  "date": "2026-11-01",
+                  "opponent": "Colts",
+                  "result": "W 42-7"
+                },
+                {
+                  "date": "2026-10-18",
+                  "opponent": "Texans",
+                  "result": "L 31-34"
+                },
+                {
+                  "date": "2026-10-11",
+                  "opponent": "Eagles",
+                  "result": "W 19-17"
+                },
+                {
+                  "date": "2026-10-04",
+                  "opponent": "Bengals",
+                  "result": "W 22-17"
+                },
+                {
+                  "date": "2026-09-27",
+                  "opponent": "Patriots",
+                  "result": "W 35-6"
+                },
+                {
+                  "date": "2026-09-20",
+                  "opponent": "Broncos",
+                  "result": "L 13-20"
+                },
+                {
+                  "date": "2026-09-13",
+                  "opponent": "Browns",
+                  "result": "W 34-10"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "2026年の共通相手3組。全組でJaguarsの点差が上。開催地・対戦時期・QB構成が異なり、点差を次戦へ直結させない。",
+            "items": [
+              {
+                "opponent": "Colts",
+                "side_a": {
+                  "date": "9/13",
+                  "result": "W 41-23"
+                },
+                "side_b": {
+                  "date": "11/1",
+                  "result": "W 42-7"
+                },
+                "comparison": "Jaguars点差+35、Ravens+18。"
+              },
+              {
+                "opponent": "Bengals",
+                "side_a": {
+                  "date": "10/25",
+                  "result": "L 13-35"
+                },
+                "side_b": {
+                  "date": "10/4",
+                  "result": "W 22-17"
+                },
+                "comparison": "Jaguars+5、Ravens−22。"
+              },
+              {
+                "opponent": "Browns",
+                "side_a": {
+                  "date": "10/18",
+                  "result": "L 10-13"
+                },
+                "side_b": {
+                  "date": "9/13",
+                  "result": "W 34-10"
+                },
+                "comparison": "Jaguars+24、Ravens−3。"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "現在成績：Jaguars5勝2敗、Ravens4勝4敗。独立Elo・EPA/DVOAは確認できず。順位や勝率だけで格差判定しない。"
+          },
+          "availability": {
+            "text": "11/4公式injury report：Ravens QB Lamar Jackson（右親指）、Tyler Huntley（足指）、S Jaylinn Hawkins OUT。Joe Fagnanoは水曜FP。Jaguars Bhayshul Tuten・Travon Walker QUESTIONABLE。試合直前inactive未発表。"
+          },
+          "sport_specific": {
+            "text": "双方11/1から木曜の短週。RavensはHenry中心のランで攻撃回数を減らす展開に注意。試合勝者・延長込み、ハンデ指定なし。同点終了時は採用先の規定未登録のため自動確定せず要確認。"
+          },
+          "home_away": {
+            "text": "M&T Bank Stadium、Baltimoreホーム。11/5 20:15 EST＝11/6 10:15 JST。"
+          },
+          "post_match": {
+            "text": "Baltimore Ravens vs Jacksonville Jaguars 10-33。採用側の的中確定。 採用オッズ未登録のため利益額未確定。"
+          }
+        },
+        "favored_result": "win",
+        "result": "Baltimore Ravens vs Jacksonville Jaguars 10-33。採用側の的中確定。",
+        "result_note": "Baltimore Ravens vs Jacksonville Jaguars 10-33。採用側の的中確定。",
+        "result_confirmed_at": "2026-11-07T19:14:44+09:00",
+        "result_sources": [
+          "https://www.jaguars.com/news/game-report-2026-week-9-jaguars-33-ravens-10"
+        ]
+      },
+      {
+        "rank": 2,
+        "match_id": "2026-11-06-benfica-lech-football",
+        "event_id": "web-2026-11-06-benfica-lech-football",
+        "matchup": "Benfica vs Lech Poznan",
+        "favored": "Benfica",
+        "selection_label": "Benfica",
+        "sport": "Football",
+        "competition": "UEFA Europa League 2026/27／リーグフェーズ第4節",
+        "start_jst": "2026-11-06T05:00:00+09:00",
+        "venue": "Benficaがホーム／Lech Poznanがアウェー",
+        "format": "90分勝利",
+        "status": "final",
+        "gap_grade": "優勢",
+        "price_grade": "採用オッズ未登録",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "的中確定。採用オッズ未登録のため払戻・純利益額は未確定。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "採用オッズ未登録。カジ旅・遊雅堂・bet365：掲載確認不能。市場価格を精算オッズに流用しない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-11-05T19:31:08+09:00",
+        "analysis_reviewed_at": "2026-11-05T19:31:08+09:00",
+        "sources": [
+          "https://www.slbenfica.pt/pt-pt/futebol/match-center/benfica-lech-poznan-5-novembro-2026",
+          "https://www.uefa.com/uefaeuropaleague/news/02a8-2177782493b9-69ba3288701d-1000--2026-27-uefa-europa-league-league-phase-fixtures-by-team/",
+          "https://tipsterarea.com/match/benfica-lech-poznan-europa-league-group-stage-953993",
+          "https://www.365scores.com/football/match/poland-cup-157/lech-poznan-siarka-tarnobrzeg-2211-13066-157",
+          "https://www.slbenfica.pt/pt-pt/agora/noticias/2026/11/04/futebol-antevisao-marco-silva-benfica-lech-poznan-liga-europa-fase-de-liga-4-jornada"
+        ],
+        "conclusion": "①実績型：Benfica直近10戦9勝1敗、直近6戦全勝。Lechは国内杯を含め直近10戦5勝1分4敗。H2Hは2020年2勝、8得点2失点だが旧メンバーで参考度低下。②総合戦力型：今ELはBenfica3勝・10得点2失点、Lech0勝1分2敗・1得点9失点。対戦相手の質とホーム条件もBenfica側。照合：両分析は同方向。Benficaホーム90分勝利を正式採用。",
+        "risk": "H2Hは6年前、現在の共通相手比較なし。先発・欠場未確定、Benficaは短い休養。90分引分リスク。",
+        "analysis_detail": {
+          "summary": "①実績型：Benfica直近10戦9勝1敗、直近6戦全勝。Lechは国内杯を含め直近10戦5勝1分4敗。H2Hは2020年2勝、8得点2失点だが旧メンバーで参考度低下。②総合戦力型：今ELはBenfica3勝・10得点2失点、Lech0勝1分2敗・1得点9失点。対戦相手の質とホーム条件もBenfica側。照合：両分析は同方向。Benficaホーム90分勝利を正式採用。",
+          "h2h": {
+            "summary": "公開情報で確認2戦、Benfica2勝（100%）、8-2、平均得点4・失点1・差+3、最大差4。2020年で現戦力への参考度は低い。",
+            "items": [
+              {
+                "date": "2020-12-03",
+                "label": "Benfica（H）vs Lech",
+                "result": "4-0"
+              },
+              {
+                "date": "2020-10-22",
+                "label": "Lech（H）vs Benfica",
+                "result": "2-4"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Benfica",
+              "summary": "10試合 9勝0分1敗／27-8（平均差+1.90）。6試合 6勝0分0敗／17-4（平均差+2.17）。5試合 5勝0分0敗／15-4（平均差+2.20）。2試合 2勝0分0敗／5-1（平均差+2.00）。1試合 1勝0分0敗／1-0（平均差+1.00）。日付は開催地基準。",
+              "items": [
+                {
+                  "date": "2026-11-02",
+                  "opponent": "Alverca",
+                  "result": "W 1-0"
+                },
+                {
+                  "date": "2026-10-29",
+                  "opponent": "Gil Vicente",
+                  "result": "W 4-1"
+                },
+                {
+                  "date": "2026-10-26",
+                  "opponent": "Santa Clara",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-10-22",
+                  "opponent": "Omonia",
+                  "result": "W 4-1"
+                },
+                {
+                  "date": "2026-10-15",
+                  "opponent": "Celtic",
+                  "result": "W 4-1"
+                },
+                {
+                  "date": "2026-10-11",
+                  "opponent": "Vitoria Guimaraes",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026-09-20",
+                  "opponent": "Porto",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-09-16",
+                  "opponent": "Milan",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026-09-13",
+                  "opponent": "Gil Vicente",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-09-09",
+                  "opponent": "Moreirense",
+                  "result": "W 4-0"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Lech Poznan",
+              "summary": "10試合 5勝1分4敗／22-17（平均差+0.50）。6試合 3勝1分2敗／12-9（平均差+0.50）。5試合 3勝1分1敗／12-5（平均差+1.40）。2試合 1勝0分1敗／3-2（平均差+0.50）。1試合 1勝0分0敗／3-1（平均差+2.00）。日付は開催地基準。TipsterAreaの表に欠けた10/28国内杯0-1を365Scoresで補完。",
+              "items": [
+                {
+                  "date": "2026-10-31",
+                  "opponent": "Wisla Krakow",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-10-28",
+                  "opponent": "Siarka Tarnobrzeg（国内杯）",
+                  "result": "L 0-1"
+                },
+                {
+                  "date": "2026-10-25",
+                  "opponent": "Legia Warszawa",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-10-22",
+                  "opponent": "Sunderland",
+                  "result": "D 1-1"
+                },
+                {
+                  "date": "2026-10-18",
+                  "opponent": "Korona Kielce",
+                  "result": "W 6-1"
+                },
+                {
+                  "date": "2026-10-15",
+                  "opponent": "Bayer Leverkusen",
+                  "result": "L 0-4"
+                },
+                {
+                  "date": "2026-10-10",
+                  "opponent": "Slask Wroclaw",
+                  "result": "W 4-1"
+                },
+                {
+                  "date": "2026-09-20",
+                  "opponent": "Radomiak Radom",
+                  "result": "W 5-1"
+                },
+                {
+                  "date": "2026-09-17",
+                  "opponent": "Crystal Palace",
+                  "result": "L 0-4"
+                },
+                {
+                  "date": "2026-09-12",
+                  "opponent": "Gornik Zabrze",
+                  "result": "L 1-2"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "直近10試合内の共通対戦相手なし。異なる国内リーグの勝率・点差をそのまま比較しない。2020年ELの共通組には現在との時間差が大きいため今回の判断材料に採用せず。",
+            "items": []
+          },
+          "ranking_or_rating": {
+            "text": "EL第3節終了時：Benfica9ポイント・得失点+8、Lech1ポイント・得失点−8。現時点の独立Elo・国内順位・xG/xGAは未確認。BenficaはMilan、Celtic、Omoniaに勝利。LechはLeverkusenとCrystal Palaceに各0-4、Sunderlandに1-1。"
+          },
+          "home_away": {
+            "text": "Estádio da Luz（Lisbon）。11/5 20:00現地＝11/6 05:00 JST。Benficaがホーム、Lechがアウェー。"
+          },
+          "availability": {
+            "text": "公式会見の掲載を確認。先発11人・最終欠場者一覧は未確認。怪我情報の二次資料には更新差があるため、確定出場として登録しない。"
+          },
+          "sport_specific": {
+            "text": "90分＋アディショナルタイムの勝利。DNBではなく、引分は不的中。Benficaは11/2、Lechは10/31が直近試合で休養差はLech側。国内得点力だけでなく欧州大会の相手水準を考慮。"
+          },
+          "post_match": {
+            "text": "Benfica vs Lech Poznan 3-1。採用側の的中確定。 採用オッズ未登録のため利益額未確定。"
+          }
+        },
+        "favored_result": "win",
+        "result": "Benfica vs Lech Poznan 3-1。採用側の的中確定。",
+        "result_note": "Benfica vs Lech Poznan 3-1。採用側の的中確定。",
+        "result_confirmed_at": "2026-11-07T19:14:44+09:00",
+        "result_sources": [
+          "https://www.lechpoznan.pl/dzien-meczowy,113,slb-lpo,342.html"
+        ]
+      },
+      {
+        "rank": 3,
+        "match_id": "2026-11-05-fenerbahce-afyon-volleyball-women",
+        "event_id": "web-2026-11-05-fenerbahce-afyon-volleyball-women",
+        "matchup": "Fenerbahce Medicana Women vs Sinnada Hotels Afyon Belediye Yuntas Women",
+        "favored": "Fenerbahce Medicana Women",
+        "selection_label": "Fenerbahce Medicana Women",
+        "sport": "Volleyball Women",
+        "competition": "Vodafone Sultanlar Ligi 2026/27／第7節",
+        "start_jst": "2026-11-05T20:00:00+09:00",
+        "venue": "Fenerbahce Medicana Womenがホーム／Sinnada Hotels Afyon Belediye Yuntas Womenがアウェー",
+        "format": "試合勝利（3セット先取）",
+        "status": "final",
+        "gap_grade": "優勢",
+        "price_grade": "採用オッズ未登録",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "的中確定。採用オッズ未登録のため払戻・純利益額は未確定。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "採用オッズ未登録。カジ旅・遊雅堂・bet365：掲載確認不能。市場価格を精算オッズに流用しない。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-11-05T19:31:08+09:00",
+        "analysis_reviewed_at": "2026-11-05T19:31:08+09:00",
+        "sources": [
+          "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/matches/2591737/",
+          "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/teams/2110016-20759/",
+          "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/teams/2161555-92608/",
+          "https://afyonbelediyeyuntas.com/fikstur/sonuclar"
+        ],
+        "conclusion": "①実績型：Fenerbahce今季5戦全勝・15-3セット、Afyon1勝5敗・7-17セットで直近5連敗。H2Hは公式確認できず。②総合戦力型：公式順位3位対14位、攻撃決定率50.7%対36.0%、攻撃効率38.4%対18.6%でFenerbahce優勢。照合：直近実績と現在の攻撃指標は同方向。H2H・共通相手の裏付けは不足。Fenerbahce女子の試合勝利を正式採用。",
+        "risk": "H2H・今季共通相手なし、直近10試合未充足。当日ローテーション未確認。Afyonは5敗中4敗で1セット獲得しておりストレート勝利まで断定しない。",
+        "analysis_detail": {
+          "summary": "①実績型：Fenerbahce今季5戦全勝・15-3セット、Afyon1勝5敗・7-17セットで直近5連敗。H2Hは公式確認できず。②総合戦力型：公式順位3位対14位、攻撃決定率50.7%対36.0%、攻撃効率38.4%対18.6%でFenerbahce優勢。照合：直近実績と現在の攻撃指標は同方向。H2H・共通相手の裏付けは不足。Fenerbahce女子の試合勝利を正式採用。",
+          "h2h": {
+            "summary": "女子・当該クラブ同士の公式H2H確認できず。男子Afyonや旧カテゴリーの対戦を混ぜない。件数0と不存在は同義ではない。",
+            "items": []
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Fenerbahce Medicana 女子",
+              "summary": "5試合 5勝0分0敗／15-3（平均差+2.40）。2試合 2勝0分0敗／6-1（平均差+2.50）。1試合 1勝0分0敗／3-0（平均差+3.00）。日付は開催地基準。2026/27公式掲載5戦を確認。6～10試合目は未取得、旧シーズンで水増ししない。",
+              "items": [
+                {
+                  "date": "2026-11-01",
+                  "opponent": "Galatasaray",
+                  "result": "W 3-0"
+                },
+                {
+                  "date": "2026-10-25",
+                  "opponent": "Eczacibasi",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-10-18",
+                  "opponent": "Zeren",
+                  "result": "W 3-0"
+                },
+                {
+                  "date": "2026-10-11",
+                  "opponent": "Besiktas",
+                  "result": "W 3-2"
+                },
+                {
+                  "date": "2026-10-04",
+                  "opponent": "Manisa",
+                  "result": "W 3-0"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Sinnada Hotels Afyon Belediye Yuntas 女子",
+              "summary": "6試合 1勝0分5敗／7-17（平均差-1.67）。5試合 0勝0分5敗／4-15（平均差-2.20）。2試合 0勝0分2敗／2-6（平均差-2.00）。1試合 0勝0分1敗／1-3（平均差-2.00）。日付は開催地基準。今季公式6戦。7～10試合目未取得。",
+              "items": [
+                {
+                  "date": "2026-11-01",
+                  "opponent": "Vakifbank",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-10-25",
+                  "opponent": "Ilbank",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-10-18",
+                  "opponent": "Aras Kargo",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-10-14",
+                  "opponent": "Nilufer",
+                  "result": "L 0-3"
+                },
+                {
+                  "date": "2026-10-11",
+                  "opponent": "Turk Hava Yollari",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-10-04",
+                  "opponent": "Kuzeyboru",
+                  "result": "W 3-2"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "今季取得済み5戦対6戦に共通相手なし。相手構成が異なるためセット差の単純な差し引きで予想しない。FenerbahceはEczacibasi、Galatasaray戦の勝利も確認。",
+            "items": []
+          },
+          "ranking_or_rating": {
+            "text": "公式：Fenerbahce3位14点（5試合）、Afyon14位2点（6試合）。消化数が異なる。セット勝率83.3%対29.2%。単なる順位差に加え攻撃指標を比較。"
+          },
+          "availability": {
+            "text": "公式登録Fenerbahce：Vargas、Fedorovtseva、Orro、Eda Erdem、Ana Cristina等。登録と当日出場は別。両チームの先発ローテーション・最新欠場は未確認。"
+          },
+          "sport_specific": {
+            "text": "最大5セット、3セット先取の試合勝者。3-0やセットハンデではない。今季攻撃決定率＝得点/打数：283/558=50.7%対309/859=36.0%。攻撃効率＝（得点−失策−被ブロック）/打数：214/558=38.4%対160/859=18.6%。相手水準の補正は未実施。"
+          },
+          "home_away": {
+            "text": "TVF Burhan Felek Vestel Voleybol Salonu。公式11/5 14:00 Turkey＝11/5 20:00 JST。双方の直近試合は11/1。"
+          },
+          "post_match": {
+            "text": "Fenerbahce Medicana Women vs Sinnada Hotels Afyon Belediye Yuntas Women 3-0。採用側の的中確定。 採用オッズ未登録のため利益額未確定。"
+          }
+        },
+        "favored_result": "win",
+        "result": "Fenerbahce Medicana Women vs Sinnada Hotels Afyon Belediye Yuntas Women 3-0。採用側の的中確定。",
+        "result_note": "Fenerbahce Medicana Women vs Sinnada Hotels Afyon Belediye Yuntas Women 3-0。採用側の的中確定。",
+        "result_confirmed_at": "2026-11-07T19:14:44+09:00",
+        "result_sources": [
+          "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/matches/2591737/"
+        ]
       }
     ],
     "summary": {
@@ -15707,7 +17184,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-11-05T19:31:08+09:00",
-    "note": "ユーザー指定3件正式採用。Jaguarsは条件付き優勢。本日7件の的中を確定、過去5件は既存確定結果と履歴表示を同期。採用オッズ未登録のため利益額未確定。"
+    "as_of": "2026-11-07T19:14:44+09:00",
+    "note": "Gen.Gは条件付き優勢。指定3件を正式採用、既存4件の的中を確定。採用オッズ未登録のため利益額未確定。"
   }
 }

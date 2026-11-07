@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-11-05T19:31:08+09:00",
+    "as_of": "2026-11-07T19:14:44+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。1件仮想100USD。10/18誤登録Salzburgはvoid（勝敗対象外）で保存、EVOS vs Alter EgoのAlter Ego勝利へ訂正。ベガス申告オッズ1.44倍の参考精算は維持。"
   },
@@ -327,6 +327,12 @@
       "started_at": "2026-11-05T19:31:08+09:00",
       "slot": "adhoc",
       "note": "ユーザー指定3件を正式採用。採用オッズは未登録。"
+    },
+    {
+      "run_id": "rec-20261107-user-three",
+      "started_at": "2026-11-07T19:14:44+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー指定3件を正式採用。採用オッズ未登録。"
     }
   ],
   "picks": [
@@ -6551,6 +6557,96 @@
       ],
       "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。",
       "detail_ref": "data/today-gap-analysis.json#2026-11-05-fenerbahce-afyon-volleyball-women"
+    },
+    {
+      "id": "rec-2026-11-08-geng-invictus-lol",
+      "system": "recommendations",
+      "run_id": "rec-20261107-user-three",
+      "match_id": "2026-11-08-geng-invictus-lol",
+      "source_event_id": "web-2026-11-08-geng-invictus-lol",
+      "market": "match_winner",
+      "market_label": "BO5・シリーズ勝利",
+      "selection": "side_a",
+      "selection_label": "Gen.G",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-11-07T19:14:44+09:00",
+      "bet_at": null,
+      "locked_at": "2026-11-07T19:14:44+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "条件付き優勢",
+        "model_version": "rmc-user-approved-20261107",
+        "summary": "①実績型：Gen.Gは直近10シリーズ9勝1敗、IGは7勝3敗。今大会H2HはGen.GのBO1勝利1件。ただし共通相手HLE・LYONでは双方勝利し、直接比較の差は限定的。②総合戦力型：年間ゲーム成績100-41対70-70、LCK第1シード対LPL第4シードでGen.G優勢。照合：方向は一致するが、BO1のH2Hと年間成績だけでBO5の大差を保証できない。ユーザー指定でGen.Gシリーズ勝利を正式採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。",
+      "detail_ref": "data/today-gap-analysis.json#2026-11-08-geng-invictus-lol"
+    },
+    {
+      "id": "rec-2026-11-08-psg-troyes-football",
+      "system": "recommendations",
+      "run_id": "rec-20261107-user-three",
+      "match_id": "2026-11-08-psg-troyes-football",
+      "source_event_id": "web-2026-11-08-psg-troyes-football",
+      "market": "match_1x2",
+      "market_label": "90分勝利",
+      "selection": "side_a",
+      "selection_label": "Paris Saint-Germain",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-11-07T19:14:44+09:00",
+      "bet_at": null,
+      "locked_at": "2026-11-07T19:14:44+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "優勢",
+        "model_version": "rmc-user-approved-20261107",
+        "summary": "①実績型：PSG直近公式10戦10勝、Troyes2勝2分6敗。確認H2H21件でPSG14勝5分2敗、直近10対戦9勝1分。②総合戦力型：リーグ1位20点対16位8点、PSGホーム。照合：実績と現在順位はPSG優勢で一致。共通相手の比較でもPSG側が優位だが、Troyesは直近2戦無敗へ改善。PSG90分勝利を正式採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。",
+      "detail_ref": "data/today-gap-analysis.json#2026-11-08-psg-troyes-football"
+    },
+    {
+      "id": "rec-2026-11-08-carolina-chicago-nhl",
+      "system": "recommendations",
+      "run_id": "rec-20261107-user-three",
+      "match_id": "2026-11-08-carolina-chicago-nhl",
+      "source_event_id": "web-2026-11-08-carolina-chicago-nhl",
+      "market": "winner_incl_extra_time",
+      "market_label": "試合勝利（延長・SO込み）",
+      "selection": "side_a",
+      "selection_label": "Carolina Hurricanes",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-11-07T19:14:44+09:00",
+      "bet_at": null,
+      "locked_at": "2026-11-07T19:14:44+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "優勢",
+        "model_version": "rmc-user-approved-20261107",
+        "summary": "①実績型：Carolinaは直近10戦7勝3敗（SO敗込み）、Chicago2勝8敗（OT敗込み）。直近H2H10件はCarolina9勝1敗、今季初戦も5-2。②総合戦力型：Carolina13-3-2、Chicago4-12-1、ホーム開催。照合：過去実績・今季成績ともCarolina方向。ただし先発GK未確定。Carolinaの延長・SO込み試合勝利を正式採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。",
+      "detail_ref": "data/today-gap-analysis.json#2026-11-08-carolina-chicago-nhl"
     }
   ]
 }

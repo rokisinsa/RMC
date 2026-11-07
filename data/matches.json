@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-11-05T19:31:08+09:00",
+    "as_of": "2026-11-07T19:14:44+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -372,6 +372,13 @@
       "at": "2026-11-05T19:31:08+09:00",
       "source": "ユーザー指定・公式日程",
       "note": "Jaguarsアウェー、Benficaホーム、Fenerbahce女子を正式採用。"
+    },
+    {
+      "run_id": "mr-20261107-user-three",
+      "kind": "human_review",
+      "at": "2026-11-07T19:14:44+09:00",
+      "source": "ユーザー指定・公式日程",
+      "note": "Gen.G、PSG、Carolinaを正式採用。Gen.Gは中立会場。"
     }
   ],
   "matches": [
@@ -6637,6 +6644,115 @@
       "provenance": [
         {
           "update_run_id": "mr-20261105-user-three",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-08-geng-invictus-lol",
+      "sport": "League of Legends",
+      "competition": "Worlds 2026／準決勝",
+      "side_a": "Gen.G",
+      "side_b": "Invictus Gaming",
+      "home_side": "neutral",
+      "venue": "Allen, Texas／LAN・中立会場（Gen.Gを指定のホーム側表示＝side_aとして登録。ホーム優位は加点しない）",
+      "start_at": "2026-11-08T07:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公式日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://lolesports.com/en-GB/leagues/lck,lcp,lta_n",
+        "https://mid.gg/esports/matches/gen-g-vs-invictus-gaming",
+        "https://esportsresults.com/match/lol/1711020/invictus-gaming-vs-gen-g",
+        "https://liquipedia.net/leagueoflegends/World_Championship/2026"
+      ],
+      "verified_at": "2026-11-07T19:14:44+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261107-user-three",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-08-psg-troyes-football",
+      "sport": "Football",
+      "competition": "Ligue 1 2026/27／第10節",
+      "side_a": "Paris Saint-Germain",
+      "side_b": "Troyes",
+      "home_side": "side_a",
+      "venue": "Parc des Princes／PSGホーム",
+      "start_at": "2026-11-08T05:05:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公式日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.psg.fr/content/programme-de-la-10e-journee-de-ligue-1-2026-2027-paris-saint-germain-estac-troyes",
+        "https://ligue1.com/fr/articles/l1_article_6040-les-coups-d-envoi-de-aj-auxerre-paris-fc-et-psg-estac-troyes-decales",
+        "https://www.skysports.com/football/paris-saint-germain-vs-troyes/557084",
+        "https://antosofa.com/en/historique/paris-sg-troyes",
+        "https://litstreak.com/teams/psg-CjhkPw0k",
+        "https://fdb4.io/team/troyes/results",
+        "https://goalsignal.com/uk/matches/paris-saint-germain-vs-troyes"
+      ],
+      "verified_at": "2026-11-07T19:14:44+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261107-user-three",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-08-carolina-chicago-nhl",
+      "sport": "Ice Hockey",
+      "competition": "NHL 2026/27／Regular Season",
+      "side_a": "Carolina Hurricanes",
+      "side_b": "Chicago Blackhawks",
+      "home_side": "side_a",
+      "venue": "Lenovo Center／Carolinaホーム",
+      "start_at": "2026-11-08T10:00:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公式日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.nhl.com/hurricanes/news/topic/press-releases/preview-november-7-vs-chicago",
+        "https://www.hockey.com/nhl/teams/carolina-hurricanes/schedule",
+        "https://www.hockey.com/nhl/teams/chicago-blackhawks/schedule",
+        "https://champsorchumps.us/team/nhl/carolina-hurricanes/head-to-head/chicago-blackhawks",
+        "https://www.eliteprospects.com/games/h2h/carolina-hurricanes-vs-chicago-blackhawks-55-56"
+      ],
+      "verified_at": "2026-11-07T19:14:44+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261107-user-three",
           "changes": [
             {
               "field": "new_match",
