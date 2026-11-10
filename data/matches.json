@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-11-07T19:14:44+09:00",
+    "as_of": "2026-11-10T19:21:25+09:00",
     "status": "active",
     "note": "試合事実：旧RMC（baseline-2026-09-26）から移行したデータ（正式運用中）。"
   },
@@ -379,6 +379,20 @@
       "at": "2026-11-07T19:14:44+09:00",
       "source": "ユーザー指定・公式日程",
       "note": "Gen.G、PSG、Carolinaを正式採用。Gen.Gは中立会場。"
+    },
+    {
+      "run_id": "mr-20261108-user-benfica",
+      "kind": "human_review",
+      "at": "2026-11-08T22:43:00+09:00",
+      "source": "ユーザー指定・公式日程",
+      "note": "Estrela対BenficaのBenfica90分勝利を正式採用。"
+    },
+    {
+      "run_id": "mr-20261110-user-two",
+      "kind": "human_review",
+      "at": "2026-11-10T19:21:25+09:00",
+      "source": "ユーザー指定・公式日程",
+      "note": "Ziraat第1セット勝利、Knicks延長込み試合勝利を追加。"
     }
   ],
   "matches": [
@@ -6753,6 +6767,118 @@
       "provenance": [
         {
           "update_run_id": "mr-20261107-user-three",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-09-estrela-benfica-football",
+      "sport": "Football",
+      "competition": "Liga Portugal Betclic 2026/27／第11節",
+      "side_a": "Estrela Amadora",
+      "side_b": "Benfica",
+      "home_side": "side_a",
+      "venue": "Estadio Jose Gomes／Estrelaホーム・Benficaアウェー",
+      "start_at": "2026-11-09T05:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "11/8現地20:30をJST換算。",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.ligaportugal.pt/match/20262027/ligaportugalbetclic/11/2",
+        "https://www.slbenfica.pt/en-us/agora/noticias/2026/11/07/futebol-marco-silva-antevisao-estrela-da-amadora-benfica-11-jornada-liga-betclic",
+        "https://www.forebet.com/en/football/matches/estrela-amadora-sl-benfica-2494345",
+        "https://tipsterarea.com/match/estrela-da-amadora-benfica-primeira-liga-portugal-954714",
+        "https://sportalic.com/tip/estrela-da-amadora-benfica-primeira-liga-portugal-954714",
+        "https://www.abola.pt/futebol/jogo/fazendense-estrela-da-amadora-11418466"
+      ],
+      "verified_at": "2026-11-08T22:43:00+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261108-user-benfica",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-ziraat-alanya-volleyball",
+      "sport": "Volleyball",
+      "competition": "AXA Sigorta Kupa Voley 男子・準々決勝",
+      "side_a": "Ziraat Bankkart",
+      "side_b": "On Hotels Alanya Belediyespor",
+      "home_side": "side_a",
+      "venue": "TVF Ziraat Bankkart Voleybol Salonu／Ziraatホーム",
+      "start_at": "2026-11-10T22:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公式日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://efelercup.volleystation.com/en/schedule/",
+        "https://efeler.volleystation.com/en/phase-6226-lig-etabi/standings/",
+        "https://ziraatsporkulubu.ziraatbank.com.tr/tr/fikstur",
+        "https://scores24.live/en/volleyball/m-17-11-2026-ziraat-bankasi-ankara-alanya-belediye",
+        "https://vblineup.com/tr/men-efeler2026/teams/alanya-belediyespor",
+        "https://www.365scores.com/volleyball/match/efeler-ligi-5766/galatasaray-ziraat-bankasi-16318-23046-5766",
+        "https://tvf.org.tr/icerik/ziraat-bankkart-cev-sampiyonlar-ligini-bronz-madalya-ile-tamamladi"
+      ],
+      "verified_at": "2026-11-10T19:21:25+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261110-user-two",
+          "changes": [
+            {
+              "field": "new_match",
+              "before": null,
+              "after": "registered"
+            }
+          ],
+          "note": "ユーザー指定正式採用"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-11-knicks-bucks-nba",
+      "sport": "Basketball",
+      "competition": "NBA 2026/27",
+      "side_a": "New York Knicks",
+      "side_b": "Milwaukee Bucks",
+      "home_side": "side_a",
+      "venue": "Madison Square Garden／New Yorkホーム",
+      "start_at": "2026-11-11T09:30:00+09:00",
+      "start_time_status": "recorded",
+      "start_time_note": "公式日程をJST換算",
+      "status": "scheduled",
+      "result": null,
+      "sources": [
+        "https://www.msg.com/events-tickets/new-york-knicks-madison-square-garden-november-2026/3B006511E91F8631",
+        "https://cdn-uat.nba.com/team/1610612752/schedule",
+        "https://cdn-uat.nba.com/team/1610612749/schedule",
+        "https://www.covers.com/sport/basketball/nba/matchup/388697",
+        "https://champsorchumps.us/team/nba/new-york-knicks/head-to-head/milwaukee-bucks",
+        "https://www.reuters.com/sports/basketball/surging-knicks-host-bucks-amid-historic-slide--flm-2026-11-10/"
+      ],
+      "verified_at": "2026-11-10T19:21:25+09:00",
+      "flags": [],
+      "provenance": [
+        {
+          "update_run_id": "mr-20261110-user-two",
           "changes": [
             {
               "field": "new_match",

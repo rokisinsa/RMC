@@ -1,45 +1,295 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-11-07T19:14:44+09:00",
+  "generated_at": "2026-11-10T19:21:25+09:00",
   "window": {
-    "from": "2026-11-07T00:00:00+09:00",
-    "to": "2026-11-09T00:00:00+09:00",
+    "from": "2026-11-10T00:00:00+09:00",
+    "to": "2026-11-12T00:00:00+09:00",
     "timezone": "Asia/Tokyo",
-    "note": "本日・明日のユーザー指定3件。開始は全て11/8 JST。"
+    "note": "ユーザー指定2件。開始は11/10夜と11/11朝JST。"
   },
   "methodology": [
-    "H2Hを確認できる限り列挙し、直近10試合を両者別に表示",
-    "双方が直近に対戦した共通対戦相手を抽出し、勝敗・スコア・得失点差を比較",
-    "相手レベルが大きく違う場合は単純な勝率比較をしない",
-    "実力格差と市場価格を分離し、低オッズだけを格差根拠にしない",
-    "未確認項目は推測で埋めず未確認と表示",
-    "今後の新規探索はOverwatchとテニスを除外。ただしKraus–Bartůňkováはユーザー明示指定により今回のみ追加。既存取引の結果履歴は保持。",
-    "Jovic–Pohankovaはユーザー明示指定のテニス例外として正式履歴へ保存。ただし公式ドロー変更で不成立、当日候補には掲載せず無効精算。"
+    "①H2H＋直近10/6/5/2/1試合、②現在戦力を独立に確認し照合。",
+    "共通対戦相手は確認件数のみ。",
+    "第1セット勝利は試合勝利と別市場。",
+    "終了・中止済みは履歴へ移し、無効は勝敗集計外。",
+    "事前ロック分析・既存履歴は保存。購入価格不明は利益額をnullで保持。"
   ],
   "coverage": {
     "checked": [
-      "Gen.G vs Invictus Gaming",
-      "Paris Saint-Germain vs Troyes",
-      "Carolina Hurricanes vs Chicago Blackhawks"
+      "Ziraat Bankkart vs On Hotels Alanya Belediyespor",
+      "New York Knicks vs Milwaukee Bucks"
     ],
-    "note": "ユーザー指定3件の正式追加と既存未確定4件の結果更新。世界全競技の新規総探索ではない。"
+    "note": "ユーザー指定2件の正式採用。既存の結果確定4件を成績へ移動。中止・不成立履歴2件は無効維持、新規中止は確認できず。"
   },
   "candidates": [
     {
       "rank": 1,
-      "match_id": "2026-11-08-geng-invictus-lol",
-      "event_id": "web-2026-11-08-geng-invictus-lol",
-      "matchup": "Gen.G vs Invictus Gaming",
-      "favored": "Gen.G",
-      "selection_label": "Gen.G",
-      "sport": "League of Legends",
-      "competition": "Worlds 2026／準決勝",
-      "start_jst": "2026-11-08T07:00:00+09:00",
-      "venue": "Allen, Texas／LAN・中立会場（Gen.Gを指定のホーム側表示＝side_aとして登録。ホーム優位は加点しない）",
-      "format": "BO5・シリーズ勝利",
+      "match_id": "2026-11-10-ziraat-alanya-volleyball",
+      "event_id": "web-2026-11-10-ziraat-alanya-volleyball",
+      "matchup": "Ziraat Bankkart vs On Hotels Alanya Belediyespor",
+      "favored": "Ziraat Bankkart",
+      "selection_label": "Ziraat Bankkart 第1セット勝利",
+      "sport": "Volleyball",
+      "competition": "AXA Sigorta Kupa Voley 男子・準々決勝",
+      "start_jst": "2026-11-10T22:30:00+09:00",
+      "venue": "TVF Ziraat Bankkart Voleybol Salonu／Ziraatホーム",
+      "format": "第1セット勝利",
       "status": "formal",
-      "gap_grade": "条件付き優勢",
+      "gap_grade": "ユーザー指定正式採用",
+      "price_grade": "採用オッズ未登録",
+      "market": "set1_winner",
+      "stake_usd_reference": 100,
+      "profit_usd": null,
+      "profit_status": "試合前・未確定。採用オッズ未登録。",
+      "odds": {
+        "min": null,
+        "max": null,
+        "book_examples": "カジ旅・遊雅堂・bet365：個別市場の掲載確認不能。採用価格未登録。"
+      },
+      "estimated_win_probability_pct": null,
+      "estimated_ev_pct": null,
+      "added_at": "2026-11-10T19:21:25+09:00",
+      "analysis_reviewed_at": "2026-11-10T19:21:25+09:00",
+      "sources": [
+        "https://efelercup.volleystation.com/en/schedule/",
+        "https://efeler.volleystation.com/en/phase-6226-lig-etabi/standings/",
+        "https://ziraatsporkulubu.ziraatbank.com.tr/tr/fikstur",
+        "https://scores24.live/en/volleyball/m-17-11-2026-ziraat-bankasi-ankara-alanya-belediye",
+        "https://vblineup.com/tr/men-efeler2026/teams/alanya-belediyespor",
+        "https://www.365scores.com/volleyball/match/efeler-ligi-5766/galatasaray-ziraat-bankasi-16318-23046-5766",
+        "https://tvf.org.tr/icerik/ziraat-bankkart-cev-sampiyonlar-ligini-bronz-madalya-ile-tamamladi"
+      ],
+      "conclusion": "①実績型：試合H2Hは6勝1敗、直近6試合全勝。ただし最新H2Hの第1セットは19-25で敗戦。試合勝率を第1セット勝率に流用しない。②総合戦力型：リーグ首位6勝0敗、18-5セットでZiraat優勢。照合：試合全体は同方向だが第1セット市場はサンプル不足。ユーザー指定で第1セット勝利を正式採用。",
+      "risk": "試合全体の強さを第1セット確率へ転用不可。最新直接対決は第1セット敗戦。",
+      "analysis_detail": {
+        "h2h": {
+          "summary": "公開確認7件、Ziraat6勝1敗・19-8セット。直近5対戦には3-0なし。第1セット別の全件取得は未完了。",
+          "items": [
+            {
+              "date": "2026-10-31",
+              "label": "Ziraatアウェー",
+              "result": "3-2（第1セット19-25）"
+            },
+            {
+              "date": "2026-02-22",
+              "label": "Ziraatホーム",
+              "result": "3-1"
+            },
+            {
+              "date": "2025-11-29",
+              "label": "Ziraatアウェー",
+              "result": "3-1"
+            },
+            {
+              "date": "2025-03-08",
+              "label": "Ziraatアウェー",
+              "result": "1-3"
+            },
+            {
+              "date": "2024-12-08",
+              "label": "Ziraatホーム",
+              "result": "3-1"
+            },
+            {
+              "date": "2024-03-16",
+              "label": "Ziraatアウェー",
+              "result": "3-0"
+            },
+            {
+              "date": "2023-12-06",
+              "label": "Ziraatホーム",
+              "result": "3-0"
+            }
+          ]
+        },
+        "recent_form": {
+          "side_a": {
+            "label": "Ziraat",
+            "summary": "10戦8勝2敗／26-13・平均差+1.30。6戦6勝0敗／18-5・平均差+2.17。5戦5勝0敗／15-5・平均差+2.00。2戦2勝0敗／6-0・平均差+3.00。1戦1勝0敗／3-0・平均差+3.00。日付は開催地基準。最新7件は今季、残り3件は前季。試合・セット集計であり第1セット集計ではない。",
+            "items": [
+              {
+                "date": "2026-11-07",
+                "opponent": "IBB",
+                "result": "W 3-0"
+              },
+              {
+                "date": "2026-11-03",
+                "opponent": "Sungurlu",
+                "result": "W 3-0"
+              },
+              {
+                "date": "2026-10-31",
+                "opponent": "Alanya",
+                "result": "W 3-2"
+              },
+              {
+                "date": "2026-10-27",
+                "opponent": "Gaziantep",
+                "result": "W 3-1"
+              },
+              {
+                "date": "2026-10-24",
+                "opponent": "Altekma",
+                "result": "W 3-2"
+              },
+              {
+                "date": "2026-10-17",
+                "opponent": "Fenerbahce",
+                "result": "W 3-0"
+              },
+              {
+                "date": "2026-10-12",
+                "opponent": "Galatasaray（Super Cup）",
+                "result": "L 1-3"
+              },
+              {
+                "date": "2026-05-17",
+                "opponent": "Projekt Warszawa",
+                "result": "W 3-2"
+              },
+              {
+                "date": "2026-05-16",
+                "opponent": "Zawiercie",
+                "result": "L 1-3"
+              },
+              {
+                "date": "2026-04-27",
+                "opponent": "Galatasaray",
+                "result": "W 3-0"
+              }
+            ]
+          },
+          "side_b": {
+            "label": "Alanya",
+            "summary": "10戦3勝7敗／19-25・平均差-0.60。6戦3勝3敗／13-13・平均差+0.00。5戦2勝3敗／10-11・平均差-0.20。2戦0勝2敗／4-6・平均差-1.00。1戦0勝1敗／2-3・平均差-1.00。日付は開催地基準。10/17の不戦勝は除外。実施試合10件。旧季4件は現戦力への参考度低下。",
+            "items": [
+              {
+                "date": "2026-11-07",
+                "opponent": "Gaziantep",
+                "result": "L 2-3"
+              },
+              {
+                "date": "2026-10-31",
+                "opponent": "Ziraat",
+                "result": "L 2-3"
+              },
+              {
+                "date": "2026-10-27",
+                "opponent": "Fenerbahce",
+                "result": "L 0-3"
+              },
+              {
+                "date": "2026-10-24",
+                "opponent": "Istanbul Genclik",
+                "result": "W 3-0"
+              },
+              {
+                "date": "2026-10-10",
+                "opponent": "IBB（Cup）",
+                "result": "W 3-2"
+              },
+              {
+                "date": "2026-10-08",
+                "opponent": "Istanbul Genclik（Cup）",
+                "result": "W 3-2"
+              },
+              {
+                "date": "2026-03-22",
+                "opponent": "Altekma",
+                "result": "L 1-3"
+              },
+              {
+                "date": "2026-03-18",
+                "opponent": "Galatasaray",
+                "result": "L 1-3"
+              },
+              {
+                "date": "2026-03-15",
+                "opponent": "Bursa",
+                "result": "L 2-3"
+              },
+              {
+                "date": "2026-03-08",
+                "opponent": "Istanbul Genclik",
+                "result": "L 2-3"
+              }
+            ]
+          }
+        },
+        "common_opponent_comparison": {
+          "summary": "今季3相手。第1セット同士の比較は未取得。",
+          "items": [
+            {
+              "opponent": "Fenerbahce",
+              "side_a": {
+                "date": "2026-10-17",
+                "result": "3-0"
+              },
+              "side_b": {
+                "date": "2026-10-27",
+                "result": "0-3"
+              },
+              "comparison": "ともにアウェー、試合結果はZiraat方向。"
+            },
+            {
+              "opponent": "Gaziantep",
+              "side_a": {
+                "date": "2026-10-27",
+                "result": "3-1"
+              },
+              "side_b": {
+                "date": "2026-11-07",
+                "result": "2-3"
+              },
+              "comparison": "Ziraatホーム対Alanyaアウェーで条件差。"
+            },
+            {
+              "opponent": "IBB",
+              "side_a": {
+                "date": "2026-11-07",
+                "result": "3-0"
+              },
+              "side_b": {
+                "date": "2026-10-10",
+                "result": "3-2"
+              },
+              "comparison": "リーグとカップ、会場差あり。"
+            }
+          ]
+        },
+        "ranking_or_rating": {
+          "text": "公式リーグZiraat1位6勝0敗16点・18-5セット、Alanya7位2勝3敗8点・10-9セット。Alanya公式表は不戦勝1件を含む。"
+        },
+        "availability": {
+          "text": "Ziraat登録Nimir、Ishikawa、Toniutti。当日先発ローテーション・両軍欠場未確認。"
+        },
+        "sport_specific": {
+          "text": "採用市場は第1セット勝者（set1_winner）。最低1セット獲得や試合勝利とは別。第1セット勝率とローテーション相性はデータ不足。"
+        },
+        "summary": "①実績型：試合H2Hは6勝1敗、直近6試合全勝。ただし最新H2Hの第1セットは19-25で敗戦。試合勝率を第1セット勝率に流用しない。②総合戦力型：リーグ首位6勝0敗、18-5セットでZiraat優勢。照合：試合全体は同方向だが第1セット市場はサンプル不足。ユーザー指定で第1セット勝利を正式採用。",
+        "home_away": {
+          "text": "TVF Ziraat Bankkart Voleybol Salonu／Ziraatホーム"
+        },
+        "market": {
+          "text": "第1セット勝利。仮想100USD追跡、実購入なし。オッズ・EV未確定。"
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "match_id": "2026-11-11-knicks-bucks-nba",
+      "event_id": "web-2026-11-11-knicks-bucks-nba",
+      "matchup": "New York Knicks vs Milwaukee Bucks",
+      "favored": "New York Knicks",
+      "selection_label": "New York Knicks 試合勝利（延長込み）",
+      "sport": "Basketball",
+      "competition": "NBA 2026/27",
+      "start_jst": "2026-11-11T09:30:00+09:00",
+      "venue": "Madison Square Garden／New Yorkホーム",
+      "format": "試合勝利（延長込み）",
+      "status": "formal",
+      "gap_grade": "ユーザー指定正式採用",
       "price_grade": "採用オッズ未登録",
       "market": "match_winner",
       "stake_usd_reference": 100,
@@ -48,1419 +298,1425 @@
       "odds": {
         "min": null,
         "max": null,
-        "book_examples": "カジ旅・遊雅堂・bet365：掲載確認不能。採用価格未登録。"
+        "book_examples": "カジ旅・遊雅堂・bet365：個別市場の掲載確認不能。採用価格未登録。"
       },
       "estimated_win_probability_pct": null,
       "estimated_ev_pct": null,
-      "added_at": "2026-11-07T19:14:44+09:00",
-      "analysis_reviewed_at": "2026-11-07T19:14:44+09:00",
+      "added_at": "2026-11-10T19:21:25+09:00",
+      "analysis_reviewed_at": "2026-11-10T19:21:25+09:00",
       "sources": [
-        "https://lolesports.com/en-GB/leagues/lck,lcp,lta_n",
-        "https://mid.gg/esports/matches/gen-g-vs-invictus-gaming",
-        "https://esportsresults.com/match/lol/1711020/invictus-gaming-vs-gen-g",
-        "https://liquipedia.net/leagueoflegends/World_Championship/2026"
+        "https://www.msg.com/events-tickets/new-york-knicks-madison-square-garden-november-2026/3B006511E91F8631",
+        "https://cdn-uat.nba.com/team/1610612752/schedule",
+        "https://cdn-uat.nba.com/team/1610612749/schedule",
+        "https://www.covers.com/sport/basketball/nba/matchup/388697",
+        "https://champsorchumps.us/team/nba/new-york-knicks/head-to-head/milwaukee-bucks",
+        "https://www.reuters.com/sports/basketball/surging-knicks-host-bucks-amid-historic-slide--flm-2026-11-10/"
       ],
-      "conclusion": "①実績型：Gen.Gは直近10シリーズ9勝1敗、IGは7勝3敗。今大会H2HはGen.GのBO1勝利1件。ただし共通相手HLE・LYONでは双方勝利し、直接比較の差は限定的。②総合戦力型：年間ゲーム成績100-41対70-70、LCK第1シード対LPL第4シードでGen.G優勢。照合：方向は一致するが、BO1のH2Hと年間成績だけでBO5の大差を保証できない。ユーザー指定でGen.Gシリーズ勝利を正式採用。",
-      "risk": "IGはTESを3-1で破って準決勝進出。ドラフト前分析。サイド選択・当日Pick/Ban・最終出場ロスター・最新GPRは未確認。",
+      "conclusion": "①実績型：直近H2H10戦7勝3敗、直近6試合5勝1敗対0勝6敗。共通相手4組でもニックス方向。②総合戦力型：今季5勝4敗・平均得失差+5.7対1勝9敗・-13.2、NYKホーム。照合：現在成績と近年H2Hは同方向。ただしMILは今夏の主力移籍で過去H2Hの参考度低下。ニックス延長込み試合勝利を正式採用。",
+      "risk": "当日の出場状況未確定。旧H2Hのロスター差、翌日の連戦に注意。",
       "analysis_detail": {
         "h2h": {
-          "summary": "公開情報で確認できた1件（2024年以降DB＋今大会公式）。Gen.G 1勝0敗、ゲーム差+1。BO1の1件でBO5を断定しない。過去全期間の全件性は保証できず。",
+          "summary": "公開表から243件取得。通算116勝127敗（RS112勝126敗、PO4勝1敗）、近10戦7勝3敗。古い対戦と今夏MILのGiannis移籍前は参考度低下。",
           "items": [
             {
-              "date": "2026-10-23 UTC",
-              "label": "Worlds Swiss・BO1",
-              "result": "Gen.G 1-0 IG"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Gen.G",
-            "summary": "10戦 9勝0分1敗／21-6・平均差+1.50。6戦 6勝0分0敗／13-3・平均差+1.67。5戦 5勝0分0敗／10-2・平均差+1.60。2戦 2勝0分0敗／5-1・平均差+2.00。1戦 1勝0分0敗／3-0・平均差+3.00。日付UTC。シリーズ勝敗とゲーム差は別指標。BO形式が混在するため単純同率比較は不可。",
-            "items": [
-              {
-                "date": "2026-11-04",
-                "opponent": "LYON",
-                "result": "W 3-0",
-                "note": "BO5"
-              },
-              {
-                "date": "2026-10-25",
-                "opponent": "LYON",
-                "result": "W 2-1",
-                "note": "BO3"
-              },
-              {
-                "date": "2026-10-24",
-                "opponent": "HLE",
-                "result": "W 1-0",
-                "note": "BO1"
-              },
-              {
-                "date": "2026-10-23",
-                "opponent": "IG",
-                "result": "W 1-0",
-                "note": "BO1"
-              },
-              {
-                "date": "2026-09-13",
-                "opponent": "HLE",
-                "result": "W 3-1",
-                "note": "BO5"
-              },
-              {
-                "date": "2026-09-05",
-                "opponent": "HLE",
-                "result": "W 3-1",
-                "note": "BO5"
-              },
-              {
-                "date": "2026-09-01",
-                "opponent": "KT",
-                "result": "W 3-0",
-                "note": "BO5"
-              },
-              {
-                "date": "2026-08-22",
-                "opponent": "Dplus KIA",
-                "result": "L 1-2",
-                "note": "BO3"
-              },
-              {
-                "date": "2026-08-19",
-                "opponent": "KT",
-                "result": "W 2-1",
-                "note": "BO3"
-              },
-              {
-                "date": "2026-08-16",
-                "opponent": "T1",
-                "result": "W 2-0",
-                "note": "BO3"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Invictus Gaming",
-            "summary": "10戦 7勝0分3敗／19-11・平均差+0.80。6戦 5勝0分1敗／10-4・平均差+1.00。5戦 4勝0分1敗／7-3・平均差+0.80。2戦 2勝0分0敗／5-2・平均差+1.50。1戦 1勝0分0敗／3-1・平均差+2.00。日付UTC。直近準々決勝でTESを破っており、年間成績だけで軽視しない。",
-            "items": [
-              {
-                "date": "2026-11-03",
-                "opponent": "TES",
-                "result": "W 3-1",
-                "note": "BO5"
-              },
-              {
-                "date": "2026-10-28",
-                "opponent": "LYON",
-                "result": "W 2-1",
-                "note": "BO3"
-              },
-              {
-                "date": "2026-10-25",
-                "opponent": "HLE",
-                "result": "W 1-0",
-                "note": "BO1"
-              },
-              {
-                "date": "2026-10-24",
-                "opponent": "Team Secret Whales",
-                "result": "W 1-0",
-                "note": "BO1"
-              },
-              {
-                "date": "2026-10-23",
-                "opponent": "Gen.G",
-                "result": "L 0-1",
-                "note": "BO1"
-              },
-              {
-                "date": "2026-09-19",
-                "opponent": "JDG",
-                "result": "W 3-1",
-                "note": "BO5"
-              },
-              {
-                "date": "2026-09-17",
-                "opponent": "TES",
-                "result": "L 1-3",
-                "note": "BO5"
-              },
-              {
-                "date": "2026-09-12",
-                "opponent": "Anyone’s Legend",
-                "result": "L 2-3",
-                "note": "BO5"
-              },
-              {
-                "date": "2026-09-08",
-                "opponent": "LGD",
-                "result": "W 3-0",
-                "note": "BO5"
-              },
-              {
-                "date": "2026-09-06",
-                "opponent": "Team WE",
-                "result": "W 3-1",
-                "note": "BO5"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "今大会の共通相手2チーム。5件に水増ししない。LYONの同形式比較は双方2-1、HLEは双方1-0。",
-          "items": [
-            {
-              "opponent": "LYON",
-              "side_a": {
-                "date": "2026-10-25",
-                "result": "2-1",
-                "performance": "得失差+1"
-              },
-              "side_b": {
-                "date": "2026-10-28",
-                "result": "2-1",
-                "performance": "得失差+1"
-              },
-              "comparison": "BO3同士では同差。Gen.Gは11/4のBO5でも3-0。"
+              "date": "2026-02-27",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 127-98 MIL"
             },
             {
-              "opponent": "HLE",
-              "side_a": {
-                "date": "2026-10-24",
-                "result": "1-0",
-                "performance": "得失差+1"
-              },
-              "side_b": {
-                "date": "2026-10-25",
-                "result": "1-0",
-                "performance": "得失差+1"
-              },
-              "comparison": "双方BO1勝利。直接の格差根拠は弱い。"
-            }
-          ]
-        },
-        "ranking_or_rating": {
-          "text": "2026シリーズ44-16対24-26、ゲーム100-41対70-70（MID.GG確認時点）。異なる地域・相手構成で補正未実施。最新GPR数値は確認できず。"
-        },
-        "availability": {
-          "text": "登録表示：Gen.G＝Kiin/Canyon/Chovy/Ruler/Duro、IG＝TheShy/Wei/Rookie/JiaQi/Meiko。当日確定出場は未確認。"
-        },
-        "sport_specific": {
-          "text": "LAN、BO5。ドラフト前（Veto前に相当）。LoLのためCS2のマップ別勝率を転用しない。Pick/Ban・パッチ別成績・サイド割当は未確認。"
-        },
-        "summary": "①実績型：Gen.Gは直近10シリーズ9勝1敗、IGは7勝3敗。今大会H2HはGen.GのBO1勝利1件。ただし共通相手HLE・LYONでは双方勝利し、直接比較の差は限定的。②総合戦力型：年間ゲーム成績100-41対70-70、LCK第1シード対LPL第4シードでGen.G優勢。照合：方向は一致するが、BO1のH2Hと年間成績だけでBO5の大差を保証できない。ユーザー指定でGen.Gシリーズ勝利を正式採用。",
-        "home_away": {
-          "text": "Allen, Texas／LAN・中立会場（Gen.Gを指定のホーム側表示＝side_aとして登録。ホーム優位は加点しない）"
-        },
-        "market": {
-          "text": "BO5・シリーズ勝利。ユーザー指定正式採用、仮想100 USD追跡・実購入なし。採用オッズ未登録。カジ旅・遊雅堂・bet365は掲載確認不能。"
-        }
-      }
-    },
-    {
-      "rank": 2,
-      "match_id": "2026-11-08-psg-troyes-football",
-      "event_id": "web-2026-11-08-psg-troyes-football",
-      "matchup": "Paris Saint-Germain vs Troyes",
-      "favored": "Paris Saint-Germain",
-      "selection_label": "Paris Saint-Germain",
-      "sport": "Football",
-      "competition": "Ligue 1 2026/27／第10節",
-      "start_jst": "2026-11-08T05:05:00+09:00",
-      "venue": "Parc des Princes／PSGホーム",
-      "format": "90分勝利",
-      "status": "formal",
-      "gap_grade": "優勢",
-      "price_grade": "採用オッズ未登録",
-      "market": "match_1x2",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合前・未確定。採用オッズ未登録。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "カジ旅・遊雅堂・bet365：掲載確認不能。採用価格未登録。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-11-07T19:14:44+09:00",
-      "analysis_reviewed_at": "2026-11-07T19:14:44+09:00",
-      "sources": [
-        "https://www.psg.fr/content/programme-de-la-10e-journee-de-ligue-1-2026-2027-paris-saint-germain-estac-troyes",
-        "https://ligue1.com/fr/articles/l1_article_6040-les-coups-d-envoi-de-aj-auxerre-paris-fc-et-psg-estac-troyes-decales",
-        "https://www.skysports.com/football/paris-saint-germain-vs-troyes/557084",
-        "https://antosofa.com/en/historique/paris-sg-troyes",
-        "https://litstreak.com/teams/psg-CjhkPw0k",
-        "https://fdb4.io/team/troyes/results",
-        "https://goalsignal.com/uk/matches/paris-saint-germain-vs-troyes"
-      ],
-      "conclusion": "①実績型：PSG直近公式10戦10勝、Troyes2勝2分6敗。確認H2H21件でPSG14勝5分2敗、直近10対戦9勝1分。②総合戦力型：リーグ1位20点対16位8点、PSGホーム。照合：実績と現在順位はPSG優勢で一致。共通相手の比較でもPSG側が優位だが、Troyesは直近2戦無敗へ改善。PSG90分勝利を正式採用。",
-      "risk": "H2Hは2023年以前で現メンバーと異なる。Troyes直近10件目は前季2部。PSG主力の欠場報道はあるが当日スタメン未確認。大差勝利や無失点まで保証しない。",
-      "analysis_detail": {
-        "h2h": {
-          "summary": "公開DBから個票確認21件：PSG14勝5分2敗、50得点22失点、平均差+1.33。直近10件9勝1分、最大勝ち幅9。DBは1999年以降・欠落あり、全H2Hとは断定しない。いずれも旧ロスターで参考度低下。",
-          "items": [
-            {
-              "date": "2023-05-07",
-              "label": "PSG A",
-              "result": "3-1",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2025-11-28",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 118-109 MIL"
             },
             {
-              "date": "2022-10-29",
-              "label": "PSG H",
-              "result": "4-3",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2025-10-28",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 111-121 MIL"
             },
             {
-              "date": "2022-05-08",
-              "label": "PSG H",
-              "result": "2-2",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2025-03-28",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 116-107 MIL"
             },
             {
-              "date": "2021-08-07",
-              "label": "PSG A",
-              "result": "2-1",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2025-01-12",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 140-106 MIL"
             },
             {
-              "date": "2018-03-03",
-              "label": "PSG A",
-              "result": "2-0",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2024-11-08",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 116-94 MIL"
             },
             {
-              "date": "2017-11-29",
-              "label": "PSG H",
-              "result": "2-0",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2024-04-07",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 122-109 MIL"
             },
             {
-              "date": "2016-03-13",
-              "label": "PSG A",
-              "result": "9-0",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2023-12-25",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 129-122 MIL"
             },
             {
-              "date": "2015-11-28",
-              "label": "PSG H",
-              "result": "4-1",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2023-12-23",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 111-130 MIL"
             },
             {
-              "date": "2013-04-13",
-              "label": "PSG A",
-              "result": "1-0",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2023-12-05",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 122-146 MIL"
             },
             {
-              "date": "2012-11-24",
-              "label": "PSG H",
-              "result": "4-0",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2023-11-03",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 105-110 MIL"
             },
             {
-              "date": "2007-05-19",
-              "label": "PSG H",
-              "result": "2-1",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2023-01-09",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 107-111 MIL"
             },
             {
-              "date": "2006-12-23",
-              "label": "PSG A",
-              "result": "1-1",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2022-11-30",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 103-109 MIL"
             },
             {
-              "date": "2006-01-15",
-              "label": "PSG H",
-              "result": "2-1",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2022-10-28",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 108-119 MIL"
             },
             {
-              "date": "2005-08-21",
-              "label": "PSG A",
-              "result": "1-1",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2022-01-28",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 108-123 MIL"
             },
             {
-              "date": "2002-10-19",
-              "label": "PSG A",
-              "result": "2-1",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2021-12-12",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 97-112 MIL"
             },
             {
-              "date": "2002-03-16",
-              "label": "PSG H",
-              "result": "3-1",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2021-11-10",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-112 MIL"
             },
             {
-              "date": "2001-11-04",
-              "label": "PSG A",
-              "result": "0-1",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2021-11-05",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 113-98 MIL"
             },
             {
-              "date": "2000-12-21",
-              "label": "PSG H",
-              "result": "0-0",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2021-03-27",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-96 MIL"
             },
             {
-              "date": "2000-09-06",
-              "label": "PSG A",
-              "result": "3-5",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2021-03-11",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 101-134 MIL"
             },
             {
-              "date": "2000-05-13",
-              "label": "PSG A",
-              "result": "2-2",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              "date": "2020-12-27",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 130-110 MIL"
             },
             {
-              "date": "1999-07-31",
-              "label": "PSG H",
-              "result": "1-0",
-              "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Paris Saint-Germain",
-            "summary": "10戦 10勝0分0敗／36-9・平均差+2.70。6戦 6勝0分0敗／24-6・平均差+3.00。5戦 5勝0分0敗／20-4・平均差+3.20。2戦 2勝0分0敗／11-1・平均差+5.00。1戦 1勝0分0敗／6-0・平均差+6.00。公式戦のみ、現地日付。欧州大会と国内リーグを含む。",
-            "items": [
-              {
-                "date": "2026-11-03",
-                "opponent": "Villarreal",
-                "result": "W 6-0"
-              },
-              {
-                "date": "2026-10-30",
-                "opponent": "Le Havre",
-                "result": "W 5-1"
-              },
-              {
-                "date": "2026-10-26",
-                "opponent": "Lyon",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026-10-20",
-                "opponent": "Barcelona",
-                "result": "W 4-2"
-              },
-              {
-                "date": "2026-10-17",
-                "opponent": "Strasbourg",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026-10-14",
-                "opponent": "Manchester City",
-                "result": "W 4-2"
-              },
-              {
-                "date": "2026-10-10",
-                "opponent": "Le Mans",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026-09-20",
-                "opponent": "Marseille",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-09-13",
-                "opponent": "Brest",
-                "result": "W 1-0"
-              },
-              {
-                "date": "2026-09-09",
-                "opponent": "Slovan Bratislava",
-                "result": "W 6-1"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Troyes",
-            "summary": "10戦 2勝2分6敗／7-17・平均差-1.00。6戦 1勝1分4敗／3-9・平均差-1.00。5戦 1勝1分3敗／3-7・平均差-0.80。2戦 1勝1分0敗／2-0・平均差+1.00。1戦 1勝0分0敗／2-0・平均差+2.00。公式戦のみ。10件目は前季2部で参考度低下。10/2 Dijonとの2-2は親善試合のため集計除外。",
-            "items": [
-              {
-                "date": "2026-10-31",
-                "opponent": "Le Mans",
-                "result": "W 2-0"
-              },
-              {
-                "date": "2026-10-25",
-                "opponent": "Toulouse",
-                "result": "D 0-0"
-              },
-              {
-                "date": "2026-10-17",
-                "opponent": "Lens",
-                "result": "L 1-3"
-              },
-              {
-                "date": "2026-10-11",
-                "opponent": "Marseille",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026-09-19",
-                "opponent": "Angers",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026-09-13",
-                "opponent": "Lille",
-                "result": "L 0-2"
-              },
-              {
-                "date": "2026-09-06",
-                "opponent": "Strasbourg",
-                "result": "L 2-6"
-              },
-              {
-                "date": "2026-08-29",
-                "opponent": "Lorient",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-08-22",
-                "opponent": "Paris FC",
-                "result": "D 0-0"
-              },
-              {
-                "date": "2026-05-09",
-                "opponent": "Grenoble",
-                "result": "L 0-1",
-                "note": "前季Ligue 2"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "今季4チームを比較。Lille戦はPSG直近10試合より前へ拡張。親善試合を混ぜない。",
-          "items": [
-            {
-              "opponent": "Le Mans",
-              "side_a": {
-                "date": "2026-10-10",
-                "result": "3-1",
-                "performance": "得失差+2"
-              },
-              "side_b": {
-                "date": "2026-10-31",
-                "result": "2-0",
-                "performance": "得失差+2"
-              },
-              "comparison": "ともに2点差勝利。"
+              "date": "2020-01-14",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-128 MIL"
             },
             {
-              "opponent": "Marseille",
-              "side_a": {
-                "date": "2026-09-20",
-                "result": "2-1",
-                "performance": "得失差+1"
-              },
-              "side_b": {
-                "date": "2026-10-11",
-                "result": "0-2",
-                "performance": "得失差-2"
-              },
-              "comparison": "PSG優位。開催条件・時期の差あり。"
+              "date": "2019-12-21",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-123 MIL"
             },
             {
-              "opponent": "Strasbourg",
-              "side_a": {
-                "date": "2026-10-17",
-                "result": "3-1",
-                "performance": "得失差+2"
-              },
-              "side_b": {
-                "date": "2026-09-06",
-                "result": "2-6",
-                "performance": "得失差-4"
-              },
-              "comparison": "PSG優位。"
+              "date": "2019-12-02",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 88-132 MIL"
             },
             {
-              "opponent": "Lille",
-              "side_a": {
-                "date": "2026-08-28",
-                "result": "2-2",
-                "performance": "得失差+0"
-              },
-              "side_b": {
-                "date": "2026-09-13",
-                "result": "0-2",
-                "performance": "得失差-2"
-              },
-              "comparison": "PSGは引分、Troyes敗戦。"
-            }
-          ]
-        },
-        "ranking_or_rating": {
-          "text": "Ligue 1：PSG1位20点、Troyes16位8点。Elo・xG/xGAの最新確定値は確認できず。"
-        },
-        "availability": {
-          "text": "PSGはKvaratskhelia、Marquinhos等の欠場報道あり。最新公式メディカルの本文・当日先発は未確認のため確定欠場リストとはしない。"
-        },
-        "sport_specific": {
-          "text": "90分勝利。延長・勝ち抜け・ハンデを含まない。公式がキックオフを21:05 CETへ変更、旧20:45表示を採用しない。"
-        },
-        "summary": "①実績型：PSG直近公式10戦10勝、Troyes2勝2分6敗。確認H2H21件でPSG14勝5分2敗、直近10対戦9勝1分。②総合戦力型：リーグ1位20点対16位8点、PSGホーム。照合：実績と現在順位はPSG優勢で一致。共通相手の比較でもPSG側が優位だが、Troyesは直近2戦無敗へ改善。PSG90分勝利を正式採用。",
-        "home_away": {
-          "text": "Parc des Princes／PSGホーム"
-        },
-        "market": {
-          "text": "90分勝利。ユーザー指定正式採用、仮想100 USD追跡・実購入なし。採用オッズ未登録。カジ旅・遊雅堂・bet365は掲載確認不能。"
-        }
-      }
-    },
-    {
-      "rank": 3,
-      "match_id": "2026-11-08-carolina-chicago-nhl",
-      "event_id": "web-2026-11-08-carolina-chicago-nhl",
-      "matchup": "Carolina Hurricanes vs Chicago Blackhawks",
-      "favored": "Carolina Hurricanes",
-      "selection_label": "Carolina Hurricanes",
-      "sport": "Ice Hockey",
-      "competition": "NHL 2026/27／Regular Season",
-      "start_jst": "2026-11-08T10:00:00+09:00",
-      "venue": "Lenovo Center／Carolinaホーム",
-      "format": "試合勝利（延長・SO込み）",
-      "status": "formal",
-      "gap_grade": "優勢",
-      "price_grade": "採用オッズ未登録",
-      "market": "winner_incl_extra_time",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合前・未確定。採用オッズ未登録。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "カジ旅・遊雅堂・bet365：掲載確認不能。採用価格未登録。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-11-07T19:14:44+09:00",
-      "analysis_reviewed_at": "2026-11-07T19:14:44+09:00",
-      "sources": [
-        "https://www.nhl.com/hurricanes/news/topic/press-releases/preview-november-7-vs-chicago",
-        "https://www.hockey.com/nhl/teams/carolina-hurricanes/schedule",
-        "https://www.hockey.com/nhl/teams/chicago-blackhawks/schedule",
-        "https://champsorchumps.us/team/nhl/carolina-hurricanes/head-to-head/chicago-blackhawks",
-        "https://www.eliteprospects.com/games/h2h/carolina-hurricanes-vs-chicago-blackhawks-55-56"
-      ],
-      "conclusion": "①実績型：Carolinaは直近10戦7勝3敗（SO敗込み）、Chicago2勝8敗（OT敗込み）。直近H2H10件はCarolina9勝1敗、今季初戦も5-2。②総合戦力型：Carolina13-3-2、Chicago4-12-1、ホーム開催。照合：過去実績・今季成績ともCarolina方向。ただし先発GK未確定。Carolinaの延長・SO込み試合勝利を正式採用。",
-      "risk": "Jordan Staal離脱、先発GK未確定。CarolinaにもNashville戦1-4の敗戦あり。規定時間勝利と延長込み勝利は別市場。Chicagoの最近10戦とCarolinaの対戦相手水準は均等ではない。",
-      "analysis_detail": {
-        "h2h": {
-          "summary": "公開フランチャイズ履歴98件を取得。1997年以前Hartford時代は別表記で参考保存し、現在Carolinaの評価から除外。直近10件9勝1敗（OT/SO含む）、42-21、平均差+2.10。古い対戦は参考度低下。",
-          "items": [
-            {
-              "date": "2026-10-10",
-              "label": "Carolina A",
-              "result": "W 5-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2018-12-27",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 96-112 MIL"
             },
             {
-              "date": "2026-04-09",
-              "label": "Carolina A",
-              "result": "W 7-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2018-12-25",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 95-109 MIL"
             },
             {
-              "date": "2026-01-22",
-              "label": "Carolina H",
-              "result": "L 3-4 OT/SO",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2018-12-01",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 136-134 MIL"
             },
             {
-              "date": "2025-01-30",
-              "label": "Carolina H",
-              "result": "W 3-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2018-10-22",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 113-124 MIL"
             },
             {
-              "date": "2025-01-20",
-              "label": "Carolina A",
-              "result": "W 4-3 OT",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2018-04-07",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-115 MIL"
             },
             {
-              "date": "2024-04-14",
-              "label": "Carolina A",
-              "result": "W 4-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2018-03-09",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 112-120 MIL"
             },
             {
-              "date": "2024-02-19",
-              "label": "Carolina H",
-              "result": "W 6-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2018-02-06",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 89-103 MIL"
             },
             {
-              "date": "2022-12-27",
-              "label": "Carolina H",
-              "result": "W 3-0",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2018-02-02",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 90-92 MIL"
             },
             {
-              "date": "2022-11-14",
-              "label": "Carolina A",
-              "result": "W 3-0",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2021-11-03",
-              "label": "Carolina A",
-              "result": "W 4-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2021-10-29",
-              "label": "Carolina H",
-              "result": "W 6-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2021-05-06",
-              "label": "Carolina H",
-              "result": "L 1-2 OT",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2021-05-04",
-              "label": "Carolina H",
-              "result": "W 6-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2021-05-03",
-              "label": "Carolina H",
-              "result": "W 5-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2021-04-01",
-              "label": "Carolina A",
-              "result": "W 4-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2021-03-30",
-              "label": "Carolina A",
-              "result": "L 1-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2021-02-19",
-              "label": "Carolina H",
-              "result": "W 5-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2021-02-04",
-              "label": "Carolina A",
-              "result": "L 4-6",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2021-02-02",
-              "label": "Carolina A",
-              "result": "W 4-3 OT/SO",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2019-11-19",
-              "label": "Carolina A",
-              "result": "W 4-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2019-10-26",
-              "label": "Carolina H",
-              "result": "W 4-0",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2018-11-12",
-              "label": "Carolina H",
-              "result": "W 3-2 OT",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2018-11-08",
-              "label": "Carolina A",
-              "result": "W 4-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2018-03-08",
-              "label": "Carolina A",
-              "result": "W 3-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
-            },
-            {
-              "date": "2017-11-11",
-              "label": "Carolina H",
-              "result": "L 3-4 OT",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2017-03-08",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 93-104 MIL"
             },
             {
               "date": "2017-01-06",
-              "label": "Carolina A",
-              "result": "L 1-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 116-111 MIL"
             },
             {
-              "date": "2016-12-30",
-              "label": "Carolina H",
-              "result": "W 3-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2017-01-04",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 104-105 MIL"
             },
             {
-              "date": "2016-01-26",
-              "label": "Carolina H",
-              "result": "W 5-0",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2016-01-10",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-88 MIL"
             },
             {
-              "date": "2015-12-27",
-              "label": "Carolina A",
-              "result": "W 2-1",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2015-12-05",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 91-106 MIL"
             },
             {
-              "date": "2015-03-23",
-              "label": "Carolina H",
-              "result": "L 1-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2015-11-06",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 92-99 MIL"
             },
             {
-              "date": "2015-03-02",
-              "label": "Carolina A",
-              "result": "L 2-5",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2015-10-28",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 122-97 MIL"
             },
             {
-              "date": "2014-03-21",
-              "label": "Carolina A",
-              "result": "L 2-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2015-04-10",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 91-99 MIL"
             },
             {
-              "date": "2013-10-15",
-              "label": "Carolina H",
-              "result": "L 2-3 OT/SO",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2015-01-15",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 79-95 MIL"
             },
             {
-              "date": "2011-10-28",
-              "label": "Carolina H",
-              "result": "W 3-0",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2015-01-04",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 82-95 MIL"
             },
             {
-              "date": "2011-03-04",
-              "label": "Carolina A",
-              "result": "L 2-5",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2014-11-18",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 113-117 MIL"
             },
             {
-              "date": "2010-01-30",
-              "label": "Carolina H",
-              "result": "W 4-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2014-03-15",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 115-94 MIL"
             },
             {
-              "date": "2009-03-11",
-              "label": "Carolina A",
-              "result": "L 2-3 OT/SO",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2014-02-03",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 98-101 MIL"
             },
             {
-              "date": "2008-03-12",
-              "label": "Carolina A",
-              "result": "W 3-0",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2013-12-18",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 107-101 MIL"
             },
             {
-              "date": "2005-12-13",
-              "label": "Carolina H",
-              "result": "W 5-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2013-10-30",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 90-83 MIL"
             },
             {
-              "date": "2004-03-17",
-              "label": "Carolina A",
-              "result": "W 3-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2013-04-05",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 101-83 MIL"
             },
             {
-              "date": "2002-10-26",
-              "label": "Carolina H",
-              "result": "T 3-3 OT",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2013-02-01",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 96-86 MIL"
+            },
+            {
+              "date": "2012-11-28",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-88 MIL"
+            },
+            {
+              "date": "2012-04-11",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 111-107 MIL"
+            },
+            {
+              "date": "2012-03-26",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 89-80 MIL"
+            },
+            {
+              "date": "2012-03-09",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 114-119 MIL"
+            },
+            {
+              "date": "2012-01-20",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 86-100 MIL"
+            },
+            {
+              "date": "2011-03-25",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 96-102 MIL"
+            },
+            {
+              "date": "2011-03-20",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 95-100 MIL"
+            },
+            {
+              "date": "2011-02-23",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 114-108 MIL"
+            },
+            {
+              "date": "2010-11-09",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 80-107 MIL"
+            },
+            {
+              "date": "2010-02-22",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 67-83 MIL"
+            },
+            {
+              "date": "2010-02-05",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 107-114 MIL"
+            },
+            {
+              "date": "2009-11-07",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 87-102 MIL"
+            },
+            {
+              "date": "2009-03-10",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 120-112 MIL"
+            },
+            {
+              "date": "2008-12-19",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 81-105 MIL"
+            },
+            {
+              "date": "2008-11-21",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 87-104 MIL"
+            },
+            {
+              "date": "2008-11-02",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 86-94 MIL"
+            },
+            {
+              "date": "2008-04-01",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 115-119 MIL"
+            },
+            {
+              "date": "2008-02-09",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 99-98 MIL"
+            },
+            {
+              "date": "2007-11-30",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 91-88 MIL"
+            },
+            {
+              "date": "2007-04-07",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 118-113 MIL"
+            },
+            {
+              "date": "2007-02-23",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 95-93 MIL"
+            },
+            {
+              "date": "2007-01-28",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 105-107 MIL"
+            },
+            {
+              "date": "2006-12-09",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 115-107 MIL"
+            },
+            {
+              "date": "2006-04-14",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 80-97 MIL"
+            },
+            {
+              "date": "2006-03-04",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 103-98 MIL"
+            },
+            {
+              "date": "2005-12-30",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 108-113 MIL"
+            },
+            {
+              "date": "2005-12-12",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 92-112 MIL"
+            },
+            {
+              "date": "2005-04-03",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-106 MIL"
+            },
+            {
+              "date": "2005-02-16",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 108-90 MIL"
+            },
+            {
+              "date": "2005-01-23",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 96-101 MIL"
+            },
+            {
+              "date": "2004-03-14",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 103-100 MIL"
+            },
+            {
+              "date": "2004-01-10",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 94-88 MIL"
+            },
+            {
+              "date": "2003-11-08",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 87-90 MIL"
+            },
+            {
+              "date": "2003-11-05",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 90-106 MIL"
+            },
+            {
+              "date": "2003-03-16",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 120-111 MIL"
+            },
+            {
+              "date": "2003-02-01",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-107 MIL"
+            },
+            {
+              "date": "2002-12-21",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 90-94 MIL"
+            },
+            {
+              "date": "2002-11-04",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 88-97 MIL"
             },
             {
               "date": "2002-03-05",
-              "label": "Carolina A",
-              "result": "W 2-1 OT",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-89 MIL"
             },
             {
-              "date": "2001-03-04",
-              "label": "Carolina A",
-              "result": "W 6-3",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2002-01-26",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 129-127 MIL"
             },
             {
-              "date": "2000-12-31",
-              "label": "Carolina H",
-              "result": "W 2-1",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2002-01-12",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 97-102 MIL"
             },
             {
-              "date": "2000-03-08",
-              "label": "Carolina H",
-              "result": "W 4-1",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2001-12-04",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 85-71 MIL"
             },
             {
-              "date": "1999-04-03",
-              "label": "Carolina A",
-              "result": "L 1-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2001-01-23",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 91-105 MIL"
             },
             {
-              "date": "1998-10-28",
-              "label": "Carolina H",
-              "result": "W 2-0",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2000-12-17",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-97 MIL"
             },
             {
-              "date": "1998-01-14",
-              "label": "Carolina H",
-              "result": "L 1-4",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2000-11-07",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 103-89 MIL"
             },
             {
-              "date": "1997-10-26",
-              "label": "Carolina A",
-              "result": "W 3-2",
-              "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              "date": "2000-03-02",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 109-94 MIL"
             },
             {
-              "date": "1997-02-26",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "T 2-2 OT",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "2000-02-09",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 109-103 MIL"
             },
             {
-              "date": "1996-12-29",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 3-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1999-12-02",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 84-80 MIL"
             },
             {
-              "date": "1995-12-10",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 1-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1999-11-08",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 111-101 MIL"
             },
             {
-              "date": "1995-10-14",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 3-2",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1999-03-15",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 108-102 MIL"
             },
             {
-              "date": "1994-03-30",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 3-2 OT",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1999-03-09",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 86-87 MIL"
             },
             {
-              "date": "1993-10-14",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "W 6-2",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1999-03-05",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 87-88 MIL"
             },
             {
-              "date": "1993-03-28",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 0-3",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1998-02-26",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-90 MIL"
             },
             {
-              "date": "1993-01-23",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 2-6",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1998-02-03",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 78-82 MIL"
             },
             {
-              "date": "1992-03-28",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 1-3",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1998-01-29",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 112-115 MIL"
             },
             {
-              "date": "1991-11-10",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 0-3",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1997-12-20",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 78-98 MIL"
             },
             {
-              "date": "1991-10-26",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 2-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1997-03-22",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 79-80 MIL"
             },
             {
-              "date": "1991-02-28",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 3-6",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1997-03-04",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 93-86 MIL"
             },
             {
-              "date": "1991-02-10",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 3-1",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1997-01-05",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 97-92 MIL"
             },
             {
-              "date": "1990-11-06",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "T 1-1 OT",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1996-04-05",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 86-79 MIL"
             },
             {
-              "date": "1990-01-27",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 6-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1996-02-20",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 87-92 MIL"
             },
             {
-              "date": "1989-12-30",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 3-7",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1996-01-15",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 92-98 MIL"
             },
             {
-              "date": "1989-11-12",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 2-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1995-11-04",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 84-71 MIL"
             },
             {
-              "date": "1989-04-01",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 6-1",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1995-04-17",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 93-99 MIL"
             },
             {
-              "date": "1988-12-14",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 3-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1995-04-05",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 114-94 MIL"
             },
             {
-              "date": "1988-10-15",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 7-5",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1995-02-07",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 87-95 MIL"
             },
             {
-              "date": "1988-03-02",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "W 2-1",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1995-01-13",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 91-88 MIL"
             },
             {
-              "date": "1988-01-13",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 1-2",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1994-04-22",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 125-85 MIL"
             },
             {
-              "date": "1987-10-24",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 5-3",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1994-03-17",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 105-83 MIL"
             },
             {
-              "date": "1987-02-21",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 3-6",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1994-01-06",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 92-86 MIL"
             },
             {
-              "date": "1987-02-17",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "W 5-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1993-11-13",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 99-86 MIL"
             },
             {
-              "date": "1987-01-03",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 2-3",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1993-03-16",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-99 MIL"
             },
             {
-              "date": "1986-03-15",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 11-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1993-02-24",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 91-90 MIL"
             },
             {
-              "date": "1986-01-12",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 2-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1992-12-26",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-102 MIL"
             },
             {
-              "date": "1985-10-23",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 2-9",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1992-12-05",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 111-98 MIL"
             },
             {
-              "date": "1985-01-05",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 4-3",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1992-04-18",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 114-103 MIL"
             },
             {
-              "date": "1984-11-17",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 0-7",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1992-03-19",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 96-92 MIL"
             },
             {
-              "date": "1984-10-28",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "W 4-1",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1992-01-17",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 85-90 MIL"
             },
             {
-              "date": "1984-02-05",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "W 4-3",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1991-11-05",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 113-85 MIL"
             },
             {
-              "date": "1983-11-12",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 6-1",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1991-03-17",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 101-102 MIL"
             },
             {
-              "date": "1983-10-30",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 1-6",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1990-12-29",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-109 MIL"
             },
             {
-              "date": "1983-02-19",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 2-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1990-11-30",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 97-103 MIL"
             },
             {
-              "date": "1983-01-23",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 2-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1990-11-24",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 97-107 MIL"
             },
             {
-              "date": "1982-11-26",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 3-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1990-04-19",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 95-96 MIL"
             },
             {
-              "date": "1982-01-25",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "W 6-5",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1990-03-17",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 111-123 MIL"
             },
             {
-              "date": "1981-12-13",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 3-8",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1990-03-03",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 106-105 MIL"
             },
             {
-              "date": "1981-10-31",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "T 2-2",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1989-11-25",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 125-108 MIL"
             },
             {
-              "date": "1981-02-15",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "T 4-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1989-04-06",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 112-99 MIL"
             },
             {
-              "date": "1981-02-07",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 2-6",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1989-03-19",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 128-104 MIL"
             },
             {
-              "date": "1981-01-17",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 2-3",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1989-03-01",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 111-121 MIL"
             },
             {
-              "date": "1980-11-23",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "L 3-11",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1988-12-08",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 113-109 MIL"
             },
             {
-              "date": "1980-01-19",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "W 5-3",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1988-04-22",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 109-118 MIL"
             },
             {
-              "date": "1979-11-11",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "T 5-5",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1988-03-31",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 113-103 MIL"
             },
             {
-              "date": "1979-11-09",
-              "label": "Hartford旧フランチャイズ・参考度低下 H",
-              "result": "L 2-4",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1988-02-23",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 89-87 MIL"
             },
             {
-              "date": "1979-10-14",
-              "label": "Hartford旧フランチャイズ・参考度低下 A",
-              "result": "T 3-3",
-              "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              "date": "1987-12-22",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 105-122 MIL"
+            },
+            {
+              "date": "1987-12-15",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 98-103 MIL"
+            },
+            {
+              "date": "1987-11-14",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 93-89 MIL"
+            },
+            {
+              "date": "1987-04-10",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 93-132 MIL"
+            },
+            {
+              "date": "1987-03-24",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 96-135 MIL"
+            },
+            {
+              "date": "1987-02-11",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 104-127 MIL"
+            },
+            {
+              "date": "1987-02-03",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 110-109 MIL"
+            },
+            {
+              "date": "1986-12-27",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 114-100 MIL"
+            },
+            {
+              "date": "1986-11-14",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 103-106 MIL"
+            },
+            {
+              "date": "1986-04-12",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 78-116 MIL"
+            },
+            {
+              "date": "1986-03-03",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 108-115 MIL"
+            },
+            {
+              "date": "1986-01-25",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 88-104 MIL"
+            },
+            {
+              "date": "1986-01-04",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 86-119 MIL"
+            },
+            {
+              "date": "1985-12-05",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 95-105 MIL"
+            },
+            {
+              "date": "1985-11-07",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 88-92 MIL"
+            },
+            {
+              "date": "1985-04-13",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 84-88 MIL"
+            },
+            {
+              "date": "1985-03-28",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 116-121 MIL"
+            },
+            {
+              "date": "1985-03-25",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 106-126 MIL"
+            },
+            {
+              "date": "1985-02-19",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 118-129 MIL"
+            },
+            {
+              "date": "1984-11-30",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-118 MIL"
+            },
+            {
+              "date": "1984-03-03",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 106-111 MIL"
+            },
+            {
+              "date": "1984-02-08",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 103-113 MIL"
+            },
+            {
+              "date": "1984-01-13",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 101-103 MIL"
+            },
+            {
+              "date": "1983-12-17",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-96 MIL"
+            },
+            {
+              "date": "1983-11-08",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 90-97 MIL"
+            },
+            {
+              "date": "1983-03-26",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 81-89 MIL"
+            },
+            {
+              "date": "1983-03-16",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 105-93 MIL"
+            },
+            {
+              "date": "1982-12-21",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 101-94 MIL"
+            },
+            {
+              "date": "1982-11-27",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 96-109 MIL"
+            },
+            {
+              "date": "1982-11-18",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 77-89 MIL"
+            },
+            {
+              "date": "1982-10-30",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 86-108 MIL"
+            },
+            {
+              "date": "1982-04-16",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 99-112 MIL"
+            },
+            {
+              "date": "1982-02-23",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 113-110 MIL"
+            },
+            {
+              "date": "1982-01-05",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 112-102 MIL"
+            },
+            {
+              "date": "1981-12-12",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 86-104 MIL"
+            },
+            {
+              "date": "1981-11-21",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 118-112 MIL"
+            },
+            {
+              "date": "1981-11-13",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 85-95 MIL"
+            },
+            {
+              "date": "1981-03-18",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 116-103 MIL"
+            },
+            {
+              "date": "1981-03-06",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 111-122 MIL"
+            },
+            {
+              "date": "1980-12-11",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 107-119 MIL"
+            },
+            {
+              "date": "1980-12-06",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 104-94 MIL"
+            },
+            {
+              "date": "1980-11-14",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 106-125 MIL"
+            },
+            {
+              "date": "1980-10-11",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 114-109 MIL"
+            },
+            {
+              "date": "1980-01-11",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 107-109 MIL"
+            },
+            {
+              "date": "1979-12-29",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 117-105 MIL"
+            },
+            {
+              "date": "1979-03-20",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 118-110 MIL"
+            },
+            {
+              "date": "1979-01-21",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 114-138 MIL"
+            },
+            {
+              "date": "1978-11-18",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-100 MIL"
+            },
+            {
+              "date": "1978-10-20",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 115-105 MIL"
+            },
+            {
+              "date": "1978-03-08",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 125-127 MIL"
+            },
+            {
+              "date": "1978-02-11",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 133-122 MIL"
+            },
+            {
+              "date": "1977-12-16",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 150-152 MIL"
+            },
+            {
+              "date": "1977-12-03",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 108-115 MIL"
+            },
+            {
+              "date": "1977-04-01",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 116-109 MIL"
+            },
+            {
+              "date": "1977-03-22",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 125-115 MIL"
+            },
+            {
+              "date": "1977-02-18",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 123-124 MIL"
+            },
+            {
+              "date": "1976-11-13",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 110-97 MIL"
+            },
+            {
+              "date": "1976-02-11",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 95-109 MIL"
+            },
+            {
+              "date": "1976-02-10",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 104-97 MIL"
+            },
+            {
+              "date": "1975-12-23",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 110-108 MIL"
+            },
+            {
+              "date": "1975-12-09",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-109 MIL"
+            },
+            {
+              "date": "1975-04-04",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 101-109 MIL"
+            },
+            {
+              "date": "1975-03-30",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 111-99 MIL"
+            },
+            {
+              "date": "1974-12-29",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 89-115 MIL"
+            },
+            {
+              "date": "1974-11-23",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 72-90 MIL"
+            },
+            {
+              "date": "1974-03-09",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 88-75 MIL"
+            },
+            {
+              "date": "1974-02-17",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 86-97 MIL"
+            },
+            {
+              "date": "1973-11-22",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 91-107 MIL"
+            },
+            {
+              "date": "1973-11-17",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-93 MIL"
+            },
+            {
+              "date": "1973-03-01",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-114 MIL"
+            },
+            {
+              "date": "1973-01-02",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 102-92 MIL"
+            },
+            {
+              "date": "1972-12-01",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 74-100 MIL"
+            },
+            {
+              "date": "1972-11-18",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 87-86 MIL"
+            },
+            {
+              "date": "1972-03-24",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 88-131 MIL"
+            },
+            {
+              "date": "1972-03-07",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 110-101 MIL"
+            },
+            {
+              "date": "1972-02-11",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 113-107 MIL"
+            },
+            {
+              "date": "1972-01-04",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-121 MIL"
+            },
+            {
+              "date": "1972-01-03",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 101-99 MIL"
+            },
+            {
+              "date": "1971-03-13",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 108-103 MIL"
+            },
+            {
+              "date": "1971-01-26",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 107-98 MIL"
+            },
+            {
+              "date": "1971-01-07",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 106-116 MIL"
+            },
+            {
+              "date": "1970-11-28",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 100-99 MIL"
+            },
+            {
+              "date": "1970-11-27",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 103-94 MIL"
+            },
+            {
+              "date": "1970-04-20",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 132-96 MIL"
+            },
+            {
+              "date": "1970-04-19",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 117-105 MIL"
+            },
+            {
+              "date": "1970-04-17",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 96-101 MIL"
+            },
+            {
+              "date": "1970-04-13",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 112-111 MIL"
+            },
+            {
+              "date": "1970-04-11",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 110-102 MIL"
+            },
+            {
+              "date": "1970-03-18",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 108-116 MIL"
+            },
+            {
+              "date": "1970-01-02",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 105-118 MIL"
+            },
+            {
+              "date": "1969-12-10",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 96-95 MIL"
+            },
+            {
+              "date": "1969-12-06",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 124-99 MIL"
+            },
+            {
+              "date": "1969-11-03",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 109-93 MIL"
+            },
+            {
+              "date": "1969-11-01",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 112-108 MIL"
+            },
+            {
+              "date": "1969-02-05",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 111-102 MIL"
+            },
+            {
+              "date": "1969-01-25",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 113-96 MIL"
+            },
+            {
+              "date": "1969-01-18",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 117-109 MIL"
+            },
+            {
+              "date": "1969-01-08",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 115-101 MIL"
+            },
+            {
+              "date": "1968-12-07",
+              "label": "NYK ホーム／NBA・旧ロスター参考度低下",
+              "result": "NYK 119-113 MIL"
+            },
+            {
+              "date": "1968-10-23",
+              "label": "NYK アウェー／NBA・旧ロスター参考度低下",
+              "result": "NYK 114-112 MIL"
             }
           ]
         },
         "recent_form": {
           "side_a": {
-            "label": "Carolina Hurricanes",
-            "summary": "10戦 7勝0分3敗／38-24・平均差+1.40。6戦 5勝0分1敗／22-10・平均差+2.00。5戦 4勝0分1敗／18-10・平均差+1.60。2戦 1勝0分1敗／6-7・平均差-0.50。1戦 1勝0分0敗／5-3・平均差+2.00。現地日付。OT/SOは最終勝敗に含む。",
+            "label": "New York Knicks",
+            "summary": "10戦6勝4敗／1083-1028・平均差+5.50。6戦5勝1敗／684-614・平均差+11.67。5戦4勝1敗／573-517・平均差+11.20。2戦2勝0敗／244-202・平均差+21.00。1戦1勝0敗／109-97・平均差+12.00。日付は開催地基準。今季は9試合5勝4敗。10件目のみ前季Finals。",
             "items": [
               {
-                "date": "2026-11-05",
-                "opponent": "NY Islanders",
-                "result": "W 5-3"
+                "date": "2026-11-07",
+                "opponent": "Cleveland",
+                "result": "W 109-97"
               },
               {
-                "date": "2026-11-03",
-                "opponent": "Nashville",
-                "result": "L 1-4"
+                "date": "2026-11-04",
+                "opponent": "Chicago",
+                "result": "W 135-105"
               },
               {
-                "date": "2026-11-01",
-                "opponent": "Winnipeg",
-                "result": "W 7-0"
+                "date": "2026-11-02",
+                "opponent": "Brooklyn",
+                "result": "W 103-90"
               },
               {
-                "date": "2026-10-29",
-                "opponent": "Columbus",
-                "result": "W 3-2"
+                "date": "2026-10-30",
+                "opponent": "Philadelphia",
+                "result": "L 93-98"
+              },
+              {
+                "date": "2026-10-28",
+                "opponent": "Chicago",
+                "result": "W 133-127"
               },
               {
                 "date": "2026-10-27",
+                "opponent": "Detroit",
+                "result": "W 111-97"
+              },
+              {
+                "date": "2026-10-25",
+                "opponent": "Orlando",
+                "result": "L 102-111"
+              },
+              {
+                "date": "2026-10-23",
                 "opponent": "Boston",
-                "result": "W 2-1"
-              },
-              {
-                "date": "2026-10-24",
-                "opponent": "St Louis",
-                "result": "W 4-0"
-              },
-              {
-                "date": "2026-10-22",
-                "opponent": "Edmonton",
-                "result": "L 5-6",
-                "note": "SO敗"
+                "result": "L 103-107"
               },
               {
                 "date": "2026-10-20",
-                "opponent": "Vancouver",
-                "result": "W 6-3"
+                "opponent": "Philadelphia",
+                "result": "L 100-106"
               },
               {
-                "date": "2026-10-18",
-                "opponent": "Calgary",
-                "result": "L 2-3"
-              },
-              {
-                "date": "2026-10-17",
-                "opponent": "Winnipeg",
-                "result": "W 3-2"
+                "date": "2026-06-13",
+                "opponent": "San Antonio（前季Finals）",
+                "result": "W 94-90"
               }
             ]
           },
           "side_b": {
-            "label": "Chicago Blackhawks",
-            "summary": "10戦 2勝0分8敗／20-38・平均差-1.80。6戦 1勝0分5敗／13-24・平均差-1.83。5戦 0勝0分5敗／11-23・平均差-2.40。2戦 0勝0分2敗／4-9・平均差-2.50。1戦 0勝0分1敗／1-4・平均差-3.00。現地日付。OT/SO込み勝敗。5連敗。",
+            "label": "Milwaukee Bucks",
+            "summary": "10戦1勝9敗／1084-1216・平均差-13.20。6戦0勝6敗／617-727・平均差-18.33。5戦0勝5敗／517-595・平均差-15.60。2戦0勝2敗／204-238・平均差-17.00。1戦0勝1敗／97-117・平均差-20.00。日付は開催地基準。全10件今季。6連敗。",
             "items": [
               {
-                "date": "2026-11-05",
-                "opponent": "Tampa Bay",
-                "result": "L 1-4"
+                "date": "2026-11-08",
+                "opponent": "Boston",
+                "result": "L 97-117"
+              },
+              {
+                "date": "2026-11-06",
+                "opponent": "Toronto",
+                "result": "L 107-121"
               },
               {
                 "date": "2026-11-04",
-                "opponent": "Florida",
-                "result": "L 3-5"
+                "opponent": "Boston",
+                "result": "L 102-109"
               },
               {
                 "date": "2026-11-02",
-                "opponent": "Colorado",
-                "result": "L 2-5"
+                "opponent": "Minnesota",
+                "result": "L 100-112"
               },
               {
                 "date": "2026-10-31",
-                "opponent": "Boston",
-                "result": "L 4-5",
-                "note": "OT敗"
+                "opponent": "Cleveland",
+                "result": "L 111-136"
               },
               {
-                "date": "2026-10-29",
-                "opponent": "Detroit",
-                "result": "L 1-4"
+                "date": "2026-10-28",
+                "opponent": "Houston",
+                "result": "L 100-132"
               },
               {
-                "date": "2026-10-27",
-                "opponent": "Los Angeles",
-                "result": "W 2-1"
+                "date": "2026-10-26",
+                "opponent": "Indiana",
+                "result": "W 110-102"
               },
               {
-                "date": "2026-10-25",
-                "opponent": "Florida",
-                "result": "L 2-3"
+                "date": "2026-10-24",
+                "opponent": "Philadelphia",
+                "result": "L 116-127"
               },
               {
                 "date": "2026-10-23",
-                "opponent": "Montreal",
-                "result": "L 1-4"
+                "opponent": "Chicago",
+                "result": "L 125-132"
               },
               {
-                "date": "2026-10-17",
-                "opponent": "Dallas",
-                "result": "L 0-4"
-              },
-              {
-                "date": "2026-10-15",
-                "opponent": "Winnipeg",
-                "result": "W 4-3",
-                "note": "OT勝"
+                "date": "2026-10-21",
+                "opponent": "Washington",
+                "result": "L 116-128"
               }
             ]
           }
         },
         "common_opponent_comparison": {
-          "summary": "今季の共通相手を5チーム比較（直近10の外へ拡張）。全件が同条件ではない。Floridaでは双方敗戦、Winnipegでは双方勝利のため一方的優位としない。",
+          "summary": "今季4相手。5件へ水増しせず。全体傾向はNYK方向だが相手当日の欠場補正未実施。",
           "items": [
             {
-              "opponent": "Boston",
+              "opponent": "Cleveland",
               "side_a": {
-                "date": "2026-10-27",
-                "result": "2-1",
-                "performance": "得失差+1"
+                "date": "2026-11-07",
+                "result": "A 109-97"
               },
               "side_b": {
                 "date": "2026-10-31",
-                "result": "4-5 OT",
-                "performance": "得失差-1"
+                "result": "H 111-136"
               },
-              "comparison": "Carolina勝利、Chicago延長敗。"
+              "comparison": "NYK+12、MIL-25。"
             },
             {
-              "opponent": "Winnipeg",
+              "opponent": "Chicago",
               "side_a": {
-                "date": "2026-11-01",
-                "result": "7-0",
-                "performance": "得失差+7"
+                "date": "2026-11-04 / 10-28",
+                "result": "H135-105 / A133-127"
               },
               "side_b": {
-                "date": "2026-10-15",
-                "result": "4-3 OT",
-                "performance": "得失差+1"
+                "date": "2026-10-23",
+                "result": "H125-132"
               },
-              "comparison": "双方勝利だがCarolinaの点差が大きい。Carolina10/17にも3-2勝利。"
+              "comparison": "同ホームNYK+30対MIL-7。"
             },
             {
-              "opponent": "St Louis",
+              "opponent": "Philadelphia",
               "side_a": {
+                "date": "2026-10-30 / 10-20",
+                "result": "A93-98 / H100-106"
+              },
+              "side_b": {
                 "date": "2026-10-24",
-                "result": "4-0",
-                "performance": "得失差+4"
+                "result": "A116-127"
               },
-              "side_b": {
-                "date": "2026-10-06",
-                "result": "4-2",
-                "performance": "得失差+2"
-              },
-              "comparison": "双方勝利。"
+              "comparison": "同アウェーNYK-5対MIL-11。"
             },
             {
-              "opponent": "NY Islanders",
+              "opponent": "Boston",
               "side_a": {
-                "date": "2026-11-05",
-                "result": "5-3",
-                "performance": "得失差+2"
+                "date": "2026-10-23",
+                "result": "A103-107"
               },
               "side_b": {
-                "date": "2026-10-08",
-                "result": "1-4",
-                "performance": "得失差-3"
+                "date": "2026-11-04 / 11-08",
+                "result": "A102-109 / H97-117"
               },
-              "comparison": "Carolina勝利、Chicago敗戦。"
-            },
-            {
-              "opponent": "Florida",
-              "side_a": {
-                "date": "2026-09-29",
-                "result": "0-1 OT",
-                "performance": "得失差-1"
-              },
-              "side_b": {
-                "date": "2026-11-04",
-                "result": "3-5",
-                "performance": "得失差-2"
-              },
-              "comparison": "双方敗戦、Carolinaは延長敗。Chicago10/25も2-3敗。"
+              "comparison": "同アウェーNYK-4対MIL-7。差は小さい。"
             }
           ]
         },
         "ranking_or_rating": {
-          "text": "今季Carolina13勝3敗2延長敗・28点、Chicago4勝12敗1延長敗・9点。消化試合数と相手構成が異なる。最新Elo・5対5期待得点率は未確認。"
+          "text": "確認時点NYK東5位5勝4敗、MIL東15位1勝9敗。今季平均得点/失点NYK109.9/104.2、MIL108.4/121.6。Net Ratingではなく単純得失点差。"
         },
         "availability": {
-          "text": "CarolinaのJordan Staalは離脱中。Kochetkovの先発は未確定。Chicago当日GK・欠場全員の確定情報は取得できず。"
+          "text": "Covers掲載Herro Questionable（打撲）、Trent Jr.とKam Jones Day-to-day。最終NBA injury report・先発は未確認。欠場確定とは扱わない。MILは今夏GiannisとPortisがMiamiへ移籍、旧H2Hと戦力が異なる。"
         },
         "sport_specific": {
-          "text": "延長・SO込み勝者市場として登録。60分終了時の引分では敗戦扱いにしない。最終結果確認後に当該市場の精算確認を行う。両者の直近試合は11/5現地。"
+          "text": "延長込み試合勝者をmatch_winnerで追跡。ハンデなし。NYKは11/7以来中2日、MIL11/8以来中1日（現地）。両軍翌日も試合あり。"
         },
-        "summary": "①実績型：Carolinaは直近10戦7勝3敗（SO敗込み）、Chicago2勝8敗（OT敗込み）。直近H2H10件はCarolina9勝1敗、今季初戦も5-2。②総合戦力型：Carolina13-3-2、Chicago4-12-1、ホーム開催。照合：過去実績・今季成績ともCarolina方向。ただし先発GK未確定。Carolinaの延長・SO込み試合勝利を正式採用。",
+        "summary": "①実績型：直近H2H10戦7勝3敗、直近6試合5勝1敗対0勝6敗。共通相手4組でもニックス方向。②総合戦力型：今季5勝4敗・平均得失差+5.7対1勝9敗・-13.2、NYKホーム。照合：現在成績と近年H2Hは同方向。ただしMILは今夏の主力移籍で過去H2Hの参考度低下。ニックス延長込み試合勝利を正式採用。",
         "home_away": {
-          "text": "Lenovo Center／Carolinaホーム"
+          "text": "Madison Square Garden／New Yorkホーム"
         },
         "market": {
-          "text": "試合勝利（延長・SO込み）。ユーザー指定正式採用、仮想100 USD追跡・実購入なし。採用オッズ未登録。カジ旅・遊雅堂・bet365は掲載確認不能。"
+          "text": "試合勝利（延長込み）。仮想100USD追跡、実購入なし。オッズ・EV未確定。"
         }
       }
     }
@@ -1468,11 +1724,10 @@
   "rejected_examples": [],
   "summary": {
     "pure_gap_top": [
-      "Paris Saint-Germain",
-      "Carolina Hurricanes"
+      "New York Knicks"
     ],
     "price_adjusted_top": [],
-    "caution": "Gen.Gは条件付き優勢。指定3件を正式採用、既存4件の的中を確定。採用オッズ未登録のため利益額未確定。"
+    "caution": "Ziraatは第1セット市場。試合勝者とは区別しサンプル不足を明記。採用オッズ未登録につき収支額未確定。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -17154,6 +17409,1789 @@
         "result_sources": [
           "https://sultanlar.volleystation.com/de/phase-6225-lig-etabi/matches/2591737/"
         ]
+      },
+      {
+        "rank": 1,
+        "match_id": "2026-11-08-geng-invictus-lol",
+        "event_id": "web-2026-11-08-geng-invictus-lol",
+        "matchup": "Gen.G vs Invictus Gaming",
+        "favored": "Gen.G",
+        "selection_label": "Gen.G",
+        "sport": "League of Legends",
+        "competition": "Worlds 2026／準決勝",
+        "start_jst": "2026-11-08T07:00:00+09:00",
+        "venue": "Allen, Texas／LAN・中立会場（Gen.Gを指定のホーム側表示＝side_aとして登録。ホーム優位は加点しない）",
+        "format": "BO5・シリーズ勝利",
+        "status": "final",
+        "gap_grade": "条件付き優勢",
+        "price_grade": "採用オッズ未登録",
+        "market": "match_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中確定。採用オッズ未登録のため利益額未確定（0ドルとして計上しない）。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "カジ旅・遊雅堂・bet365：掲載確認不能。採用価格未登録。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-11-07T19:14:44+09:00",
+        "analysis_reviewed_at": "2026-11-07T19:14:44+09:00",
+        "sources": [
+          "https://lolesports.com/en-GB/leagues/lck,lcp,lta_n",
+          "https://mid.gg/esports/matches/gen-g-vs-invictus-gaming",
+          "https://esportsresults.com/match/lol/1711020/invictus-gaming-vs-gen-g",
+          "https://liquipedia.net/leagueoflegends/World_Championship/2026"
+        ],
+        "conclusion": "①実績型：Gen.Gは直近10シリーズ9勝1敗、IGは7勝3敗。今大会H2HはGen.GのBO1勝利1件。ただし共通相手HLE・LYONでは双方勝利し、直接比較の差は限定的。②総合戦力型：年間ゲーム成績100-41対70-70、LCK第1シード対LPL第4シードでGen.G優勢。照合：方向は一致するが、BO1のH2Hと年間成績だけでBO5の大差を保証できない。ユーザー指定でGen.Gシリーズ勝利を正式採用。",
+        "risk": "IGはTESを3-1で破って準決勝進出。ドラフト前分析。サイド選択・当日Pick/Ban・最終出場ロスター・最新GPRは未確認。",
+        "analysis_detail": {
+          "h2h": {
+            "summary": "公開情報で確認できた1件（2024年以降DB＋今大会公式）。Gen.G 1勝0敗、ゲーム差+1。BO1の1件でBO5を断定しない。過去全期間の全件性は保証できず。",
+            "items": [
+              {
+                "date": "2026-10-23 UTC",
+                "label": "Worlds Swiss・BO1",
+                "result": "Gen.G 1-0 IG"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Gen.G",
+              "summary": "10戦 9勝0分1敗／21-6・平均差+1.50。6戦 6勝0分0敗／13-3・平均差+1.67。5戦 5勝0分0敗／10-2・平均差+1.60。2戦 2勝0分0敗／5-1・平均差+2.00。1戦 1勝0分0敗／3-0・平均差+3.00。日付UTC。シリーズ勝敗とゲーム差は別指標。BO形式が混在するため単純同率比較は不可。",
+              "items": [
+                {
+                  "date": "2026-11-04",
+                  "opponent": "LYON",
+                  "result": "W 3-0",
+                  "note": "BO5"
+                },
+                {
+                  "date": "2026-10-25",
+                  "opponent": "LYON",
+                  "result": "W 2-1",
+                  "note": "BO3"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "HLE",
+                  "result": "W 1-0",
+                  "note": "BO1"
+                },
+                {
+                  "date": "2026-10-23",
+                  "opponent": "IG",
+                  "result": "W 1-0",
+                  "note": "BO1"
+                },
+                {
+                  "date": "2026-09-13",
+                  "opponent": "HLE",
+                  "result": "W 3-1",
+                  "note": "BO5"
+                },
+                {
+                  "date": "2026-09-05",
+                  "opponent": "HLE",
+                  "result": "W 3-1",
+                  "note": "BO5"
+                },
+                {
+                  "date": "2026-09-01",
+                  "opponent": "KT",
+                  "result": "W 3-0",
+                  "note": "BO5"
+                },
+                {
+                  "date": "2026-08-22",
+                  "opponent": "Dplus KIA",
+                  "result": "L 1-2",
+                  "note": "BO3"
+                },
+                {
+                  "date": "2026-08-19",
+                  "opponent": "KT",
+                  "result": "W 2-1",
+                  "note": "BO3"
+                },
+                {
+                  "date": "2026-08-16",
+                  "opponent": "T1",
+                  "result": "W 2-0",
+                  "note": "BO3"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Invictus Gaming",
+              "summary": "10戦 7勝0分3敗／19-11・平均差+0.80。6戦 5勝0分1敗／10-4・平均差+1.00。5戦 4勝0分1敗／7-3・平均差+0.80。2戦 2勝0分0敗／5-2・平均差+1.50。1戦 1勝0分0敗／3-1・平均差+2.00。日付UTC。直近準々決勝でTESを破っており、年間成績だけで軽視しない。",
+              "items": [
+                {
+                  "date": "2026-11-03",
+                  "opponent": "TES",
+                  "result": "W 3-1",
+                  "note": "BO5"
+                },
+                {
+                  "date": "2026-10-28",
+                  "opponent": "LYON",
+                  "result": "W 2-1",
+                  "note": "BO3"
+                },
+                {
+                  "date": "2026-10-25",
+                  "opponent": "HLE",
+                  "result": "W 1-0",
+                  "note": "BO1"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "Team Secret Whales",
+                  "result": "W 1-0",
+                  "note": "BO1"
+                },
+                {
+                  "date": "2026-10-23",
+                  "opponent": "Gen.G",
+                  "result": "L 0-1",
+                  "note": "BO1"
+                },
+                {
+                  "date": "2026-09-19",
+                  "opponent": "JDG",
+                  "result": "W 3-1",
+                  "note": "BO5"
+                },
+                {
+                  "date": "2026-09-17",
+                  "opponent": "TES",
+                  "result": "L 1-3",
+                  "note": "BO5"
+                },
+                {
+                  "date": "2026-09-12",
+                  "opponent": "Anyone’s Legend",
+                  "result": "L 2-3",
+                  "note": "BO5"
+                },
+                {
+                  "date": "2026-09-08",
+                  "opponent": "LGD",
+                  "result": "W 3-0",
+                  "note": "BO5"
+                },
+                {
+                  "date": "2026-09-06",
+                  "opponent": "Team WE",
+                  "result": "W 3-1",
+                  "note": "BO5"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "今大会の共通相手2チーム。5件に水増ししない。LYONの同形式比較は双方2-1、HLEは双方1-0。",
+            "items": [
+              {
+                "opponent": "LYON",
+                "side_a": {
+                  "date": "2026-10-25",
+                  "result": "2-1",
+                  "performance": "得失差+1"
+                },
+                "side_b": {
+                  "date": "2026-10-28",
+                  "result": "2-1",
+                  "performance": "得失差+1"
+                },
+                "comparison": "BO3同士では同差。Gen.Gは11/4のBO5でも3-0。"
+              },
+              {
+                "opponent": "HLE",
+                "side_a": {
+                  "date": "2026-10-24",
+                  "result": "1-0",
+                  "performance": "得失差+1"
+                },
+                "side_b": {
+                  "date": "2026-10-25",
+                  "result": "1-0",
+                  "performance": "得失差+1"
+                },
+                "comparison": "双方BO1勝利。直接の格差根拠は弱い。"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "2026シリーズ44-16対24-26、ゲーム100-41対70-70（MID.GG確認時点）。異なる地域・相手構成で補正未実施。最新GPR数値は確認できず。"
+          },
+          "availability": {
+            "text": "登録表示：Gen.G＝Kiin/Canyon/Chovy/Ruler/Duro、IG＝TheShy/Wei/Rookie/JiaQi/Meiko。当日確定出場は未確認。"
+          },
+          "sport_specific": {
+            "text": "LAN、BO5。ドラフト前（Veto前に相当）。LoLのためCS2のマップ別勝率を転用しない。Pick/Ban・パッチ別成績・サイド割当は未確認。"
+          },
+          "summary": "①実績型：Gen.Gは直近10シリーズ9勝1敗、IGは7勝3敗。今大会H2HはGen.GのBO1勝利1件。ただし共通相手HLE・LYONでは双方勝利し、直接比較の差は限定的。②総合戦力型：年間ゲーム成績100-41対70-70、LCK第1シード対LPL第4シードでGen.G優勢。照合：方向は一致するが、BO1のH2Hと年間成績だけでBO5の大差を保証できない。ユーザー指定でGen.Gシリーズ勝利を正式採用。",
+          "home_away": {
+            "text": "Allen, Texas／LAN・中立会場（Gen.Gを指定のホーム側表示＝side_aとして登録。ホーム優位は加点しない）"
+          },
+          "market": {
+            "text": "BO5・シリーズ勝利。ユーザー指定正式採用、仮想100 USD追跡・実購入なし。採用オッズ未登録。カジ旅・遊雅堂・bet365は掲載確認不能。"
+          },
+          "post_match": {
+            "text": "Gen.G 3-0 Invictus Gaming。採用側勝利。試合前分析は保存し、結果のみ追記。採用オッズ未登録のため利益額未確定。"
+          }
+        },
+        "favored_result": "win",
+        "result": "Gen.G 3-0 Invictus Gaming",
+        "result_confirmed_at": "2026-11-08T22:43:00+09:00",
+        "result_sources": [
+          "https://mid.gg/esports/matches/gen-g-vs-invictus-gaming"
+        ]
+      },
+      {
+        "rank": 2,
+        "match_id": "2026-11-08-psg-troyes-football",
+        "event_id": "web-2026-11-08-psg-troyes-football",
+        "matchup": "Paris Saint-Germain vs Troyes",
+        "favored": "Paris Saint-Germain",
+        "selection_label": "Paris Saint-Germain",
+        "sport": "Football",
+        "competition": "Ligue 1 2026/27／第10節",
+        "start_jst": "2026-11-08T05:05:00+09:00",
+        "venue": "Parc des Princes／PSGホーム",
+        "format": "90分勝利",
+        "status": "final",
+        "gap_grade": "優勢",
+        "price_grade": "採用オッズ未登録",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中確定。採用オッズ未登録のため利益額未確定（0ドルとして計上しない）。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "カジ旅・遊雅堂・bet365：掲載確認不能。採用価格未登録。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-11-07T19:14:44+09:00",
+        "analysis_reviewed_at": "2026-11-07T19:14:44+09:00",
+        "sources": [
+          "https://www.psg.fr/content/programme-de-la-10e-journee-de-ligue-1-2026-2027-paris-saint-germain-estac-troyes",
+          "https://ligue1.com/fr/articles/l1_article_6040-les-coups-d-envoi-de-aj-auxerre-paris-fc-et-psg-estac-troyes-decales",
+          "https://www.skysports.com/football/paris-saint-germain-vs-troyes/557084",
+          "https://antosofa.com/en/historique/paris-sg-troyes",
+          "https://litstreak.com/teams/psg-CjhkPw0k",
+          "https://fdb4.io/team/troyes/results",
+          "https://goalsignal.com/uk/matches/paris-saint-germain-vs-troyes"
+        ],
+        "conclusion": "①実績型：PSG直近公式10戦10勝、Troyes2勝2分6敗。確認H2H21件でPSG14勝5分2敗、直近10対戦9勝1分。②総合戦力型：リーグ1位20点対16位8点、PSGホーム。照合：実績と現在順位はPSG優勢で一致。共通相手の比較でもPSG側が優位だが、Troyesは直近2戦無敗へ改善。PSG90分勝利を正式採用。",
+        "risk": "H2Hは2023年以前で現メンバーと異なる。Troyes直近10件目は前季2部。PSG主力の欠場報道はあるが当日スタメン未確認。大差勝利や無失点まで保証しない。",
+        "analysis_detail": {
+          "h2h": {
+            "summary": "公開DBから個票確認21件：PSG14勝5分2敗、50得点22失点、平均差+1.33。直近10件9勝1分、最大勝ち幅9。DBは1999年以降・欠落あり、全H2Hとは断定しない。いずれも旧ロスターで参考度低下。",
+            "items": [
+              {
+                "date": "2023-05-07",
+                "label": "PSG A",
+                "result": "3-1",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2022-10-29",
+                "label": "PSG H",
+                "result": "4-3",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2022-05-08",
+                "label": "PSG H",
+                "result": "2-2",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2021-08-07",
+                "label": "PSG A",
+                "result": "2-1",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2018-03-03",
+                "label": "PSG A",
+                "result": "2-0",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2017-11-29",
+                "label": "PSG H",
+                "result": "2-0",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2016-03-13",
+                "label": "PSG A",
+                "result": "9-0",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2015-11-28",
+                "label": "PSG H",
+                "result": "4-1",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2013-04-13",
+                "label": "PSG A",
+                "result": "1-0",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2012-11-24",
+                "label": "PSG H",
+                "result": "4-0",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2007-05-19",
+                "label": "PSG H",
+                "result": "2-1",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2006-12-23",
+                "label": "PSG A",
+                "result": "1-1",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2006-01-15",
+                "label": "PSG H",
+                "result": "2-1",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2005-08-21",
+                "label": "PSG A",
+                "result": "1-1",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2002-10-19",
+                "label": "PSG A",
+                "result": "2-1",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2002-03-16",
+                "label": "PSG H",
+                "result": "3-1",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2001-11-04",
+                "label": "PSG A",
+                "result": "0-1",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2000-12-21",
+                "label": "PSG H",
+                "result": "0-0",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2000-09-06",
+                "label": "PSG A",
+                "result": "3-5",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "2000-05-13",
+                "label": "PSG A",
+                "result": "2-2",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              },
+              {
+                "date": "1999-07-31",
+                "label": "PSG H",
+                "result": "1-0",
+                "note": "Ligue 1／PSG視点。旧ロスターで参考度低下。"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Paris Saint-Germain",
+              "summary": "10戦 10勝0分0敗／36-9・平均差+2.70。6戦 6勝0分0敗／24-6・平均差+3.00。5戦 5勝0分0敗／20-4・平均差+3.20。2戦 2勝0分0敗／11-1・平均差+5.00。1戦 1勝0分0敗／6-0・平均差+6.00。公式戦のみ、現地日付。欧州大会と国内リーグを含む。",
+              "items": [
+                {
+                  "date": "2026-11-03",
+                  "opponent": "Villarreal",
+                  "result": "W 6-0"
+                },
+                {
+                  "date": "2026-10-30",
+                  "opponent": "Le Havre",
+                  "result": "W 5-1"
+                },
+                {
+                  "date": "2026-10-26",
+                  "opponent": "Lyon",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026-10-20",
+                  "opponent": "Barcelona",
+                  "result": "W 4-2"
+                },
+                {
+                  "date": "2026-10-17",
+                  "opponent": "Strasbourg",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-10-14",
+                  "opponent": "Manchester City",
+                  "result": "W 4-2"
+                },
+                {
+                  "date": "2026-10-10",
+                  "opponent": "Le Mans",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-09-20",
+                  "opponent": "Marseille",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-09-13",
+                  "opponent": "Brest",
+                  "result": "W 1-0"
+                },
+                {
+                  "date": "2026-09-09",
+                  "opponent": "Slovan Bratislava",
+                  "result": "W 6-1"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Troyes",
+              "summary": "10戦 2勝2分6敗／7-17・平均差-1.00。6戦 1勝1分4敗／3-9・平均差-1.00。5戦 1勝1分3敗／3-7・平均差-0.80。2戦 1勝1分0敗／2-0・平均差+1.00。1戦 1勝0分0敗／2-0・平均差+2.00。公式戦のみ。10件目は前季2部で参考度低下。10/2 Dijonとの2-2は親善試合のため集計除外。",
+              "items": [
+                {
+                  "date": "2026-10-31",
+                  "opponent": "Le Mans",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026-10-25",
+                  "opponent": "Toulouse",
+                  "result": "D 0-0"
+                },
+                {
+                  "date": "2026-10-17",
+                  "opponent": "Lens",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-10-11",
+                  "opponent": "Marseille",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-09-19",
+                  "opponent": "Angers",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-09-13",
+                  "opponent": "Lille",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-09-06",
+                  "opponent": "Strasbourg",
+                  "result": "L 2-6"
+                },
+                {
+                  "date": "2026-08-29",
+                  "opponent": "Lorient",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-08-22",
+                  "opponent": "Paris FC",
+                  "result": "D 0-0"
+                },
+                {
+                  "date": "2026-05-09",
+                  "opponent": "Grenoble",
+                  "result": "L 0-1",
+                  "note": "前季Ligue 2"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "今季4チームを比較。Lille戦はPSG直近10試合より前へ拡張。親善試合を混ぜない。",
+            "items": [
+              {
+                "opponent": "Le Mans",
+                "side_a": {
+                  "date": "2026-10-10",
+                  "result": "3-1",
+                  "performance": "得失差+2"
+                },
+                "side_b": {
+                  "date": "2026-10-31",
+                  "result": "2-0",
+                  "performance": "得失差+2"
+                },
+                "comparison": "ともに2点差勝利。"
+              },
+              {
+                "opponent": "Marseille",
+                "side_a": {
+                  "date": "2026-09-20",
+                  "result": "2-1",
+                  "performance": "得失差+1"
+                },
+                "side_b": {
+                  "date": "2026-10-11",
+                  "result": "0-2",
+                  "performance": "得失差-2"
+                },
+                "comparison": "PSG優位。開催条件・時期の差あり。"
+              },
+              {
+                "opponent": "Strasbourg",
+                "side_a": {
+                  "date": "2026-10-17",
+                  "result": "3-1",
+                  "performance": "得失差+2"
+                },
+                "side_b": {
+                  "date": "2026-09-06",
+                  "result": "2-6",
+                  "performance": "得失差-4"
+                },
+                "comparison": "PSG優位。"
+              },
+              {
+                "opponent": "Lille",
+                "side_a": {
+                  "date": "2026-08-28",
+                  "result": "2-2",
+                  "performance": "得失差+0"
+                },
+                "side_b": {
+                  "date": "2026-09-13",
+                  "result": "0-2",
+                  "performance": "得失差-2"
+                },
+                "comparison": "PSGは引分、Troyes敗戦。"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "Ligue 1：PSG1位20点、Troyes16位8点。Elo・xG/xGAの最新確定値は確認できず。"
+          },
+          "availability": {
+            "text": "PSGはKvaratskhelia、Marquinhos等の欠場報道あり。最新公式メディカルの本文・当日先発は未確認のため確定欠場リストとはしない。"
+          },
+          "sport_specific": {
+            "text": "90分勝利。延長・勝ち抜け・ハンデを含まない。公式がキックオフを21:05 CETへ変更、旧20:45表示を採用しない。"
+          },
+          "summary": "①実績型：PSG直近公式10戦10勝、Troyes2勝2分6敗。確認H2H21件でPSG14勝5分2敗、直近10対戦9勝1分。②総合戦力型：リーグ1位20点対16位8点、PSGホーム。照合：実績と現在順位はPSG優勢で一致。共通相手の比較でもPSG側が優位だが、Troyesは直近2戦無敗へ改善。PSG90分勝利を正式採用。",
+          "home_away": {
+            "text": "Parc des Princes／PSGホーム"
+          },
+          "market": {
+            "text": "90分勝利。ユーザー指定正式採用、仮想100 USD追跡・実購入なし。採用オッズ未登録。カジ旅・遊雅堂・bet365は掲載確認不能。"
+          },
+          "post_match": {
+            "text": "Paris Saint-Germain 1-0 Troyes。採用側勝利。試合前分析は保存し、結果のみ追記。採用オッズ未登録のため利益額未確定。"
+          }
+        },
+        "favored_result": "win",
+        "result": "Paris Saint-Germain 1-0 Troyes",
+        "result_confirmed_at": "2026-11-08T22:43:00+09:00",
+        "result_sources": [
+          "https://www.psg.fr/en/matches/mens-football/20262027/paris-vs-troyes-2026-11-07"
+        ]
+      },
+      {
+        "rank": 3,
+        "match_id": "2026-11-08-carolina-chicago-nhl",
+        "event_id": "web-2026-11-08-carolina-chicago-nhl",
+        "matchup": "Carolina Hurricanes vs Chicago Blackhawks",
+        "favored": "Carolina Hurricanes",
+        "selection_label": "Carolina Hurricanes",
+        "sport": "Ice Hockey",
+        "competition": "NHL 2026/27／Regular Season",
+        "start_jst": "2026-11-08T10:00:00+09:00",
+        "venue": "Lenovo Center／Carolinaホーム",
+        "format": "試合勝利（延長・SO込み）",
+        "status": "final",
+        "gap_grade": "優勢",
+        "price_grade": "採用オッズ未登録",
+        "market": "winner_incl_extra_time",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中確定。採用オッズ未登録のため利益額未確定（0ドルとして計上しない）。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "カジ旅・遊雅堂・bet365：掲載確認不能。採用価格未登録。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-11-07T19:14:44+09:00",
+        "analysis_reviewed_at": "2026-11-07T19:14:44+09:00",
+        "sources": [
+          "https://www.nhl.com/hurricanes/news/topic/press-releases/preview-november-7-vs-chicago",
+          "https://www.hockey.com/nhl/teams/carolina-hurricanes/schedule",
+          "https://www.hockey.com/nhl/teams/chicago-blackhawks/schedule",
+          "https://champsorchumps.us/team/nhl/carolina-hurricanes/head-to-head/chicago-blackhawks",
+          "https://www.eliteprospects.com/games/h2h/carolina-hurricanes-vs-chicago-blackhawks-55-56"
+        ],
+        "conclusion": "①実績型：Carolinaは直近10戦7勝3敗（SO敗込み）、Chicago2勝8敗（OT敗込み）。直近H2H10件はCarolina9勝1敗、今季初戦も5-2。②総合戦力型：Carolina13-3-2、Chicago4-12-1、ホーム開催。照合：過去実績・今季成績ともCarolina方向。ただし先発GK未確定。Carolinaの延長・SO込み試合勝利を正式採用。",
+        "risk": "Jordan Staal離脱、先発GK未確定。CarolinaにもNashville戦1-4の敗戦あり。規定時間勝利と延長込み勝利は別市場。Chicagoの最近10戦とCarolinaの対戦相手水準は均等ではない。",
+        "analysis_detail": {
+          "h2h": {
+            "summary": "公開フランチャイズ履歴98件を取得。1997年以前Hartford時代は別表記で参考保存し、現在Carolinaの評価から除外。直近10件9勝1敗（OT/SO含む）、42-21、平均差+2.10。古い対戦は参考度低下。",
+            "items": [
+              {
+                "date": "2026-10-10",
+                "label": "Carolina A",
+                "result": "W 5-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2026-04-09",
+                "label": "Carolina A",
+                "result": "W 7-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2026-01-22",
+                "label": "Carolina H",
+                "result": "L 3-4 OT/SO",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2025-01-30",
+                "label": "Carolina H",
+                "result": "W 3-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2025-01-20",
+                "label": "Carolina A",
+                "result": "W 4-3 OT",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2024-04-14",
+                "label": "Carolina A",
+                "result": "W 4-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2024-02-19",
+                "label": "Carolina H",
+                "result": "W 6-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2022-12-27",
+                "label": "Carolina H",
+                "result": "W 3-0",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2022-11-14",
+                "label": "Carolina A",
+                "result": "W 3-0",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2021-11-03",
+                "label": "Carolina A",
+                "result": "W 4-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2021-10-29",
+                "label": "Carolina H",
+                "result": "W 6-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2021-05-06",
+                "label": "Carolina H",
+                "result": "L 1-2 OT",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2021-05-04",
+                "label": "Carolina H",
+                "result": "W 6-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2021-05-03",
+                "label": "Carolina H",
+                "result": "W 5-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2021-04-01",
+                "label": "Carolina A",
+                "result": "W 4-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2021-03-30",
+                "label": "Carolina A",
+                "result": "L 1-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2021-02-19",
+                "label": "Carolina H",
+                "result": "W 5-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2021-02-04",
+                "label": "Carolina A",
+                "result": "L 4-6",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2021-02-02",
+                "label": "Carolina A",
+                "result": "W 4-3 OT/SO",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2019-11-19",
+                "label": "Carolina A",
+                "result": "W 4-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2019-10-26",
+                "label": "Carolina H",
+                "result": "W 4-0",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2018-11-12",
+                "label": "Carolina H",
+                "result": "W 3-2 OT",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2018-11-08",
+                "label": "Carolina A",
+                "result": "W 4-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2018-03-08",
+                "label": "Carolina A",
+                "result": "W 3-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2017-11-11",
+                "label": "Carolina H",
+                "result": "L 3-4 OT",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2017-01-06",
+                "label": "Carolina A",
+                "result": "L 1-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2016-12-30",
+                "label": "Carolina H",
+                "result": "W 3-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2016-01-26",
+                "label": "Carolina H",
+                "result": "W 5-0",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2015-12-27",
+                "label": "Carolina A",
+                "result": "W 2-1",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2015-03-23",
+                "label": "Carolina H",
+                "result": "L 1-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2015-03-02",
+                "label": "Carolina A",
+                "result": "L 2-5",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2014-03-21",
+                "label": "Carolina A",
+                "result": "L 2-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2013-10-15",
+                "label": "Carolina H",
+                "result": "L 2-3 OT/SO",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2011-10-28",
+                "label": "Carolina H",
+                "result": "W 3-0",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2011-03-04",
+                "label": "Carolina A",
+                "result": "L 2-5",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2010-01-30",
+                "label": "Carolina H",
+                "result": "W 4-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2009-03-11",
+                "label": "Carolina A",
+                "result": "L 2-3 OT/SO",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2008-03-12",
+                "label": "Carolina A",
+                "result": "W 3-0",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2005-12-13",
+                "label": "Carolina H",
+                "result": "W 5-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2004-03-17",
+                "label": "Carolina A",
+                "result": "W 3-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2002-10-26",
+                "label": "Carolina H",
+                "result": "T 3-3 OT",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2002-03-05",
+                "label": "Carolina A",
+                "result": "W 2-1 OT",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2001-03-04",
+                "label": "Carolina A",
+                "result": "W 6-3",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2000-12-31",
+                "label": "Carolina H",
+                "result": "W 2-1",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "2000-03-08",
+                "label": "Carolina H",
+                "result": "W 4-1",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "1999-04-03",
+                "label": "Carolina A",
+                "result": "L 1-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "1998-10-28",
+                "label": "Carolina H",
+                "result": "W 2-0",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "1998-01-14",
+                "label": "Carolina H",
+                "result": "L 1-4",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "1997-10-26",
+                "label": "Carolina A",
+                "result": "W 3-2",
+                "note": "NHL／現地日付。古いロスターの参考度は低い。"
+              },
+              {
+                "date": "1997-02-26",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "T 2-2 OT",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1996-12-29",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 3-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1995-12-10",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 1-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1995-10-14",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 3-2",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1994-03-30",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 3-2 OT",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1993-10-14",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "W 6-2",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1993-03-28",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 0-3",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1993-01-23",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 2-6",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1992-03-28",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 1-3",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1991-11-10",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 0-3",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1991-10-26",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 2-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1991-02-28",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 3-6",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1991-02-10",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 3-1",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1990-11-06",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "T 1-1 OT",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1990-01-27",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 6-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1989-12-30",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 3-7",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1989-11-12",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 2-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1989-04-01",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 6-1",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1988-12-14",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 3-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1988-10-15",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 7-5",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1988-03-02",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "W 2-1",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1988-01-13",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 1-2",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1987-10-24",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 5-3",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1987-02-21",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 3-6",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1987-02-17",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "W 5-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1987-01-03",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 2-3",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1986-03-15",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 11-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1986-01-12",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 2-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1985-10-23",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 2-9",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1985-01-05",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 4-3",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1984-11-17",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 0-7",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1984-10-28",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "W 4-1",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1984-02-05",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "W 4-3",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1983-11-12",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 6-1",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1983-10-30",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 1-6",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1983-02-19",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 2-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1983-01-23",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 2-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1982-11-26",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 3-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1982-01-25",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "W 6-5",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1981-12-13",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 3-8",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1981-10-31",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "T 2-2",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1981-02-15",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "T 4-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1981-02-07",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 2-6",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1981-01-17",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 2-3",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1980-11-23",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "L 3-11",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1980-01-19",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "W 5-3",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1979-11-11",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "T 5-5",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1979-11-09",
+                "label": "Hartford旧フランチャイズ・参考度低下 H",
+                "result": "L 2-4",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              },
+              {
+                "date": "1979-10-14",
+                "label": "Hartford旧フランチャイズ・参考度低下 A",
+                "result": "T 3-3",
+                "note": "NHL／現地日付。1997年以前は別環境・現在戦力評価に含めない。"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Carolina Hurricanes",
+              "summary": "10戦 7勝0分3敗／38-24・平均差+1.40。6戦 5勝0分1敗／22-10・平均差+2.00。5戦 4勝0分1敗／18-10・平均差+1.60。2戦 1勝0分1敗／6-7・平均差-0.50。1戦 1勝0分0敗／5-3・平均差+2.00。現地日付。OT/SOは最終勝敗に含む。",
+              "items": [
+                {
+                  "date": "2026-11-05",
+                  "opponent": "NY Islanders",
+                  "result": "W 5-3"
+                },
+                {
+                  "date": "2026-11-03",
+                  "opponent": "Nashville",
+                  "result": "L 1-4"
+                },
+                {
+                  "date": "2026-11-01",
+                  "opponent": "Winnipeg",
+                  "result": "W 7-0"
+                },
+                {
+                  "date": "2026-10-29",
+                  "opponent": "Columbus",
+                  "result": "W 3-2"
+                },
+                {
+                  "date": "2026-10-27",
+                  "opponent": "Boston",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "St Louis",
+                  "result": "W 4-0"
+                },
+                {
+                  "date": "2026-10-22",
+                  "opponent": "Edmonton",
+                  "result": "L 5-6",
+                  "note": "SO敗"
+                },
+                {
+                  "date": "2026-10-20",
+                  "opponent": "Vancouver",
+                  "result": "W 6-3"
+                },
+                {
+                  "date": "2026-10-18",
+                  "opponent": "Calgary",
+                  "result": "L 2-3"
+                },
+                {
+                  "date": "2026-10-17",
+                  "opponent": "Winnipeg",
+                  "result": "W 3-2"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Chicago Blackhawks",
+              "summary": "10戦 2勝0分8敗／20-38・平均差-1.80。6戦 1勝0分5敗／13-24・平均差-1.83。5戦 0勝0分5敗／11-23・平均差-2.40。2戦 0勝0分2敗／4-9・平均差-2.50。1戦 0勝0分1敗／1-4・平均差-3.00。現地日付。OT/SO込み勝敗。5連敗。",
+              "items": [
+                {
+                  "date": "2026-11-05",
+                  "opponent": "Tampa Bay",
+                  "result": "L 1-4"
+                },
+                {
+                  "date": "2026-11-04",
+                  "opponent": "Florida",
+                  "result": "L 3-5"
+                },
+                {
+                  "date": "2026-11-02",
+                  "opponent": "Colorado",
+                  "result": "L 2-5"
+                },
+                {
+                  "date": "2026-10-31",
+                  "opponent": "Boston",
+                  "result": "L 4-5",
+                  "note": "OT敗"
+                },
+                {
+                  "date": "2026-10-29",
+                  "opponent": "Detroit",
+                  "result": "L 1-4"
+                },
+                {
+                  "date": "2026-10-27",
+                  "opponent": "Los Angeles",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-10-25",
+                  "opponent": "Florida",
+                  "result": "L 2-3"
+                },
+                {
+                  "date": "2026-10-23",
+                  "opponent": "Montreal",
+                  "result": "L 1-4"
+                },
+                {
+                  "date": "2026-10-17",
+                  "opponent": "Dallas",
+                  "result": "L 0-4"
+                },
+                {
+                  "date": "2026-10-15",
+                  "opponent": "Winnipeg",
+                  "result": "W 4-3",
+                  "note": "OT勝"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "今季の共通相手を5チーム比較（直近10の外へ拡張）。全件が同条件ではない。Floridaでは双方敗戦、Winnipegでは双方勝利のため一方的優位としない。",
+            "items": [
+              {
+                "opponent": "Boston",
+                "side_a": {
+                  "date": "2026-10-27",
+                  "result": "2-1",
+                  "performance": "得失差+1"
+                },
+                "side_b": {
+                  "date": "2026-10-31",
+                  "result": "4-5 OT",
+                  "performance": "得失差-1"
+                },
+                "comparison": "Carolina勝利、Chicago延長敗。"
+              },
+              {
+                "opponent": "Winnipeg",
+                "side_a": {
+                  "date": "2026-11-01",
+                  "result": "7-0",
+                  "performance": "得失差+7"
+                },
+                "side_b": {
+                  "date": "2026-10-15",
+                  "result": "4-3 OT",
+                  "performance": "得失差+1"
+                },
+                "comparison": "双方勝利だがCarolinaの点差が大きい。Carolina10/17にも3-2勝利。"
+              },
+              {
+                "opponent": "St Louis",
+                "side_a": {
+                  "date": "2026-10-24",
+                  "result": "4-0",
+                  "performance": "得失差+4"
+                },
+                "side_b": {
+                  "date": "2026-10-06",
+                  "result": "4-2",
+                  "performance": "得失差+2"
+                },
+                "comparison": "双方勝利。"
+              },
+              {
+                "opponent": "NY Islanders",
+                "side_a": {
+                  "date": "2026-11-05",
+                  "result": "5-3",
+                  "performance": "得失差+2"
+                },
+                "side_b": {
+                  "date": "2026-10-08",
+                  "result": "1-4",
+                  "performance": "得失差-3"
+                },
+                "comparison": "Carolina勝利、Chicago敗戦。"
+              },
+              {
+                "opponent": "Florida",
+                "side_a": {
+                  "date": "2026-09-29",
+                  "result": "0-1 OT",
+                  "performance": "得失差-1"
+                },
+                "side_b": {
+                  "date": "2026-11-04",
+                  "result": "3-5",
+                  "performance": "得失差-2"
+                },
+                "comparison": "双方敗戦、Carolinaは延長敗。Chicago10/25も2-3敗。"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "今季Carolina13勝3敗2延長敗・28点、Chicago4勝12敗1延長敗・9点。消化試合数と相手構成が異なる。最新Elo・5対5期待得点率は未確認。"
+          },
+          "availability": {
+            "text": "CarolinaのJordan Staalは離脱中。Kochetkovの先発は未確定。Chicago当日GK・欠場全員の確定情報は取得できず。"
+          },
+          "sport_specific": {
+            "text": "延長・SO込み勝者市場として登録。60分終了時の引分では敗戦扱いにしない。最終結果確認後に当該市場の精算確認を行う。両者の直近試合は11/5現地。"
+          },
+          "summary": "①実績型：Carolinaは直近10戦7勝3敗（SO敗込み）、Chicago2勝8敗（OT敗込み）。直近H2H10件はCarolina9勝1敗、今季初戦も5-2。②総合戦力型：Carolina13-3-2、Chicago4-12-1、ホーム開催。照合：過去実績・今季成績ともCarolina方向。ただし先発GK未確定。Carolinaの延長・SO込み試合勝利を正式採用。",
+          "home_away": {
+            "text": "Lenovo Center／Carolinaホーム"
+          },
+          "market": {
+            "text": "試合勝利（延長・SO込み）。ユーザー指定正式採用、仮想100 USD追跡・実購入なし。採用オッズ未登録。カジ旅・遊雅堂・bet365は掲載確認不能。"
+          },
+          "post_match": {
+            "text": "Carolina Hurricanes 9-2 Chicago Blackhawks。採用側勝利。試合前分析は保存し、結果のみ追記。採用オッズ未登録のため利益額未確定。"
+          }
+        },
+        "favored_result": "win",
+        "result": "Carolina Hurricanes 9-2 Chicago Blackhawks",
+        "result_confirmed_at": "2026-11-08T22:43:00+09:00",
+        "result_sources": [
+          "https://www.nhl.com/news/chicago-blackhawks-carolina-hurricanes-game-recap-november-7-2026"
+        ]
+      },
+      {
+        "rank": 1,
+        "match_id": "2026-11-09-estrela-benfica-football",
+        "event_id": "web-2026-11-09-estrela-benfica-football",
+        "matchup": "Estrela Amadora vs Benfica",
+        "favored": "Benfica",
+        "selection_label": "Benfica",
+        "sport": "Football",
+        "competition": "Liga Portugal Betclic 2026/27／第11節",
+        "start_jst": "2026-11-09T05:30:00+09:00",
+        "venue": "Estadio Jose Gomes／Estrelaホーム・Benficaアウェー",
+        "format": "90分勝利",
+        "status": "formal",
+        "gap_grade": "優勢",
+        "price_grade": "採用オッズ未登録",
+        "market": "match_1x2",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○的中。採用オッズ未登録のため利益額未確定。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "required_win_rate_pct": null,
+          "book_examples": "カジ旅・遊雅堂・bet365：掲載確認不能。採用価格未登録。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-11-08T22:43:00+09:00",
+        "analysis_reviewed_at": "2026-11-08T22:43:00+09:00",
+        "sources": [
+          "https://www.ligaportugal.pt/match/20262027/ligaportugalbetclic/11/2",
+          "https://www.slbenfica.pt/en-us/agora/noticias/2026/11/07/futebol-marco-silva-antevisao-estrela-da-amadora-benfica-11-jornada-liga-betclic",
+          "https://www.forebet.com/en/football/matches/estrela-amadora-sl-benfica-2494345",
+          "https://tipsterarea.com/match/estrela-da-amadora-benfica-primeira-liga-portugal-954714",
+          "https://sportalic.com/tip/estrela-da-amadora-benfica-primeira-liga-portugal-954714",
+          "https://www.abola.pt/futebol/jogo/fazendense-estrela-da-amadora-11418466"
+        ],
+        "conclusion": "①実績型：現クラブとのH2H9件はBenfica9勝、29得点5失点。直近公式10戦Benfica9勝1敗、Estrela3勝3分4敗。共通相手4組はBenfica側。②総合戦力型：リーグ2位25点・得失点+19対12位10点・-4。照合：①②③ともBenfica方向。ただしアウェー直近H2H4件中3件は1点差で、大勝とは分けて評価。ユーザー指定でBenficaの90分勝利を正式採用。",
+        "risk": "ベンフィカはアウェー・欧州戦後。直近アウェーH2Hは1点差勝利も多い。先発未確定、オッズ未登録のためEVは未判定。",
+        "analysis_detail": {
+          "summary": "①実績型：現クラブとのH2H9件はBenfica9勝、29得点5失点。直近公式10戦Benfica9勝1敗、Estrela3勝3分4敗。共通相手4組はBenfica側。②総合戦力型：リーグ2位25点・得失点+19対12位10点・-4。照合：①②③ともBenfica方向。ただしアウェー直近H2H4件中3件は1点差で、大勝とは分けて評価。ユーザー指定でBenficaの90分勝利を正式採用。",
+          "h2h": {
+            "summary": "確認9件：Benfica9勝0敗、29-5、平均得失点差+2.67。旧クラブの2009年以前を混ぜない。スコアはBenfica側、日付は現地。アウェー直近4件中3件が1点差。",
+            "items": [
+              {
+                "date": "2026-01-25",
+                "label": "Benficaホーム・リーグ",
+                "result": "Benfica 4-0 Estrela"
+              },
+              {
+                "date": "2025-08-16",
+                "label": "Estrelaホーム・リーグ",
+                "result": "Benfica 1-0 Estrela"
+              },
+              {
+                "date": "2025-02-02",
+                "label": "Estrelaホーム・リーグ",
+                "result": "Benfica 3-2 Estrela"
+              },
+              {
+                "date": "2024-11-23",
+                "label": "Benficaホーム・カップ",
+                "result": "Benfica 7-0 Estrela"
+              },
+              {
+                "date": "2024-08-24",
+                "label": "Benficaホーム・リーグ",
+                "result": "Benfica 1-0 Estrela"
+              },
+              {
+                "date": "2024-01-29",
+                "label": "Estrelaホーム・リーグ",
+                "result": "Benfica 4-1 Estrela"
+              },
+              {
+                "date": "2023-08-19",
+                "label": "Benficaホーム・リーグ",
+                "result": "Benfica 2-0 Estrela"
+              },
+              {
+                "date": "2022-11-20",
+                "label": "Estrelaホーム・リーグ杯",
+                "result": "Benfica 3-2 Estrela"
+              },
+              {
+                "date": "2021-01-12",
+                "label": "Estrelaホーム・カップ",
+                "result": "Benfica 4-0 Estrela"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Estrela Amadora",
+              "summary": "10戦3勝3分4敗・15-18。6戦1勝1分4敗・6-11。5戦1勝4敗・3-8。2戦2敗・1-4。1戦1-2負け。カップ勝利を含む。日付は現地。",
+              "items": [
+                {
+                  "date": "2026-10-31",
+                  "opponent": "Moreirense",
+                  "label": "Moreirense",
+                  "result": "L 1-2"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "Casa Pia",
+                  "label": "Casa Pia",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-10-17",
+                  "opponent": "Fazendense",
+                  "label": "Fazendense",
+                  "result": "W 2-1（カップ）"
+                },
+                {
+                  "date": "2026-10-11",
+                  "opponent": "Arouca",
+                  "label": "Arouca",
+                  "result": "L 0-1"
+                },
+                {
+                  "date": "2026-09-20",
+                  "opponent": "Academico Viseu",
+                  "label": "Academico Viseu",
+                  "result": "L 0-2"
+                },
+                {
+                  "date": "2026-09-14",
+                  "opponent": "Rio Ave",
+                  "label": "Rio Ave",
+                  "result": "D 3-3"
+                },
+                {
+                  "date": "2026-09-10",
+                  "opponent": "Braga",
+                  "label": "Braga",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-09-05",
+                  "opponent": "Famalicao",
+                  "label": "Famalicao",
+                  "result": "D 2-2"
+                },
+                {
+                  "date": "2026-08-30",
+                  "opponent": "Nacional",
+                  "label": "Nacional",
+                  "result": "W 3-2"
+                },
+                {
+                  "date": "2026-08-15",
+                  "opponent": "Alverca",
+                  "label": "Alverca",
+                  "result": "D 2-2"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Benfica",
+              "summary": "10戦9勝1敗・26-9。6戦6勝・18-5。5戦5勝・14-4。2戦2勝・4-1。1戦3-1勝ち。公式戦7連勝。日付は現地。",
+              "items": [
+                {
+                  "date": "2026-11-05",
+                  "opponent": "Lech Poznan",
+                  "label": "Lech Poznan",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-11-02",
+                  "opponent": "Alverca",
+                  "label": "Alverca",
+                  "result": "W 1-0"
+                },
+                {
+                  "date": "2026-10-29",
+                  "opponent": "Gil Vicente",
+                  "label": "Gil Vicente",
+                  "result": "W 4-1（リーグ杯）"
+                },
+                {
+                  "date": "2026-10-26",
+                  "opponent": "Santa Clara",
+                  "label": "Santa Clara",
+                  "result": "W 2-1"
+                },
+                {
+                  "date": "2026-10-22",
+                  "opponent": "Omonia",
+                  "label": "Omonia",
+                  "result": "W 4-1"
+                },
+                {
+                  "date": "2026-10-15",
+                  "opponent": "Celtic",
+                  "label": "Celtic",
+                  "result": "W 4-1"
+                },
+                {
+                  "date": "2026-10-11",
+                  "opponent": "Vitoria Guimaraes",
+                  "label": "Vitoria Guimaraes",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026-09-20",
+                  "opponent": "Porto",
+                  "label": "Porto",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-09-16",
+                  "opponent": "Milan",
+                  "label": "Milan",
+                  "result": "W 2-0"
+                },
+                {
+                  "date": "2026-09-13",
+                  "opponent": "Gil Vicente",
+                  "label": "Gil Vicente",
+                  "result": "W 3-1"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "今季4相手。双方の得失点差を比較。日時・会場が異なり単純な点差予測には使用しない。",
+            "items": [
+              {
+                "opponent": "Alverca",
+                "side_a": {
+                  "date": "2026-08-15",
+                  "result": "2-2",
+                  "performance": "得失点差+0"
+                },
+                "side_b": {
+                  "date": "2026-11-02",
+                  "result": "1-0",
+                  "performance": "得失点差+1"
+                },
+                "comparison": "Benfica側の結果が良い。時期・開催地差に注意。"
+              },
+              {
+                "opponent": "Moreirense",
+                "side_a": {
+                  "date": "2026-10-31",
+                  "result": "1-2",
+                  "performance": "得失点差-1"
+                },
+                "side_b": {
+                  "date": "2026-09-09",
+                  "result": "4-0",
+                  "performance": "得失点差+4"
+                },
+                "comparison": "Benfica側の結果が良い。時期・開催地差に注意。"
+              },
+              {
+                "opponent": "Casa Pia",
+                "side_a": {
+                  "date": "2026-10-24",
+                  "result": "0-2",
+                  "performance": "得失点差-2"
+                },
+                "side_b": {
+                  "date": "2026-08-17",
+                  "result": "7-0",
+                  "performance": "得失点差+7"
+                },
+                "comparison": "Benfica側の結果が良い。時期・開催地差に注意。"
+              },
+              {
+                "opponent": "Academico Viseu",
+                "side_a": {
+                  "date": "2026-09-20",
+                  "result": "0-2",
+                  "performance": "得失点差-2"
+                },
+                "side_b": {
+                  "date": "2026-08-09",
+                  "result": "2-2",
+                  "performance": "得失点差+0"
+                },
+                "comparison": "Benfica側の結果が良い。時期・開催地差に注意。"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "リーグ10試合：Estrela12位・2勝4分4敗10点・15得点19失点。Benfica2位・8勝1分1敗25点・27得点8失点。最新Elo・xG/xGA確認できず。"
+          },
+          "home_away": {
+            "text": "Estadio Jose Gomes、Estrelaホーム／Benficaアウェー。リスボン近郊への移動。11/8現地20:30＝11/9 JST05:30。"
+          },
+          "availability": {
+            "text": "当日先発と欠場の最終確定は未確認。Pavlidisは直前欧州戦で休養との試合前報道あり。出場を断定しない。"
+          },
+          "sport_specific": {
+            "text": "90分勝利。木曜欧州戦からの連戦。H2H優勢と大差勝利は別評価。引分なら本採用は不的中（DNBではない）。"
+          },
+          "market": {
+            "text": "ユーザー指定正式採用。仮想100USD追跡・実購入なし。採用オッズ未登録。必要勝率・EV未計算。"
+          },
+          "post_match": {
+            "text": "Estrela Amadora 2-3 Benfica。Benficaの90分勝利が的中。 採用オッズ未登録のため利益額未確定。"
+          }
+        },
+        "favored_result": "win",
+        "result": "Estrela Amadora 2-3 Benfica。Benficaの90分勝利が的中。",
+        "result_note": "Estrela Amadora 2-3 Benfica。Benficaの90分勝利が的中。",
+        "result_status": "final",
+        "match_status": "final",
+        "result_confirmed_at": "2026-11-10T19:21:25+09:00",
+        "result_updated_at": "2026-11-10T19:21:25+09:00",
+        "result_sources": [
+          "https://www.sofascore.com/football/match/cf-estrela-amadora-benfica/gkbsKkb"
+        ],
+        "archived_at": "2026-11-10T19:21:25+09:00",
+        "archive_reason": "試合終了・結果確認"
       }
     ],
     "summary": {
@@ -17173,7 +19211,7 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 80,
+      "favored_wins": 84,
       "favored_losses": 8,
       "pending": 0,
       "void": 2
@@ -17184,7 +19222,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-11-07T19:14:44+09:00",
-    "note": "Gen.Gは条件付き優勢。指定3件を正式採用、既存4件の的中を確定。採用オッズ未登録のため利益額未確定。"
+    "as_of": "2026-11-10T19:21:25+09:00",
+    "note": "指定2件追加・前回未公開分を含め4件勝利確定。既存無効2件を維持。"
   }
 }

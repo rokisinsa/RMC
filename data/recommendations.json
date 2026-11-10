@@ -4,7 +4,7 @@
     "generated_by": "migration/migrate.js",
     "legacy_source": "analysis.html",
     "legacy_commit": "02e5167",
-    "as_of": "2026-11-07T19:14:44+09:00",
+    "as_of": "2026-11-10T19:21:25+09:00",
     "status": "active",
     "note": "推奨取引のみ運用。1件仮想100USD。10/18誤登録Salzburgはvoid（勝敗対象外）で保存、EVOS vs Alter EgoのAlter Ego勝利へ訂正。ベガス申告オッズ1.44倍の参考精算は維持。"
   },
@@ -333,6 +333,18 @@
       "started_at": "2026-11-07T19:14:44+09:00",
       "slot": "adhoc",
       "note": "ユーザー指定3件を正式採用。採用オッズ未登録。"
+    },
+    {
+      "run_id": "rec-20261108-user-benfica",
+      "started_at": "2026-11-08T22:43:00+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー指定Benfica90分勝利、仮想100USD追跡。採用オッズ未登録。"
+    },
+    {
+      "run_id": "rec-20261110-user-two",
+      "started_at": "2026-11-10T19:21:25+09:00",
+      "slot": "adhoc",
+      "note": "ユーザー指定2件。勝率・採用オッズを推測しない。"
     }
   ],
   "picks": [
@@ -6641,12 +6653,107 @@
         "model_version": "rmc-user-approved-20261107",
         "summary": "①実績型：Carolinaは直近10戦7勝3敗（SO敗込み）、Chicago2勝8敗（OT敗込み）。直近H2H10件はCarolina9勝1敗、今季初戦も5-2。②総合戦力型：Carolina13-3-2、Chicago4-12-1、ホーム開催。照合：過去実績・今季成績ともCarolina方向。ただし先発GK未確定。Carolinaの延長・SO込み試合勝利を正式採用。"
       },
-      "settlement_override": null,
+      "settlement_override": {
+        "state": "win",
+        "reason": "NHL公式最終結果Carolina 9-2 Chicagoにより延長・SO込み勝者市場のCarolina的中を確認。",
+        "set_at": "2026-11-08T22:43:00+09:00",
+        "source": "https://www.nhl.com/news/chicago-blackhawks-carolina-hurricanes-game-recap-november-7-2026"
+      },
       "flags": [
         "odds_unverified"
       ],
       "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。採用オッズ未登録。",
       "detail_ref": "data/today-gap-analysis.json#2026-11-08-carolina-chicago-nhl"
+    },
+    {
+      "id": "rec-2026-11-09-estrela-benfica-football",
+      "system": "recommendations",
+      "run_id": "rec-20261108-user-benfica",
+      "match_id": "2026-11-09-estrela-benfica-football",
+      "source_event_id": "web-2026-11-09-estrela-benfica-football",
+      "market": "match_1x2",
+      "market_label": "90分勝利",
+      "selection": "side_b",
+      "selection_label": "Benfica",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-11-08T22:43:00+09:00",
+      "bet_at": null,
+      "locked_at": "2026-11-08T22:43:00+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "優勢",
+        "model_version": "rmc-user-approved-20261108",
+        "summary": "①実績型：現クラブとのH2H9件はBenfica9勝、29得点5失点。直近公式10戦Benfica9勝1敗、Estrela3勝3分4敗。共通相手4組はBenfica側。②総合戦力型：リーグ2位25点・得失点+19対12位10点・-4。照合：①②③ともBenfica方向。ただしアウェー直近H2H4件中3件は1点差で、大勝とは分けて評価。ユーザー指定でBenficaの90分勝利を正式採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。H2H9件・双方10試合・共通相手4件をdetail_refに保存。",
+      "detail_ref": "data/today-gap-analysis.json#2026-11-09-estrela-benfica-football"
+    },
+    {
+      "id": "rec-2026-11-10-ziraat-alanya-volleyball",
+      "system": "recommendations",
+      "run_id": "rec-20261110-user-two",
+      "match_id": "2026-11-10-ziraat-alanya-volleyball",
+      "source_event_id": "web-2026-11-10-ziraat-alanya-volleyball",
+      "market": "set1_winner",
+      "market_label": "第1セット勝利",
+      "selection": "side_a",
+      "selection_label": "Ziraat Bankkart 第1セット勝利",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-11-10T19:21:25+09:00",
+      "bet_at": null,
+      "locked_at": "2026-11-10T19:21:25+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー指定正式採用",
+        "model_version": "rmc-user-approved-20261110",
+        "summary": "①実績型：試合H2Hは6勝1敗、直近6試合全勝。ただし最新H2Hの第1セットは19-25で敗戦。試合勝率を第1セット勝率に流用しない。②総合戦力型：リーグ首位6勝0敗、18-5セットでZiraat優勢。照合：試合全体は同方向だが第1セット市場はサンプル不足。ユーザー指定で第1セット勝利を正式採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。詳細はdetail_refに保存。",
+      "detail_ref": "data/today-gap-analysis.json#2026-11-10-ziraat-alanya-volleyball"
+    },
+    {
+      "id": "rec-2026-11-11-knicks-bucks-nba",
+      "system": "recommendations",
+      "run_id": "rec-20261110-user-two",
+      "match_id": "2026-11-11-knicks-bucks-nba",
+      "source_event_id": "web-2026-11-11-knicks-bucks-nba",
+      "market": "match_winner",
+      "market_label": "試合勝利（延長込み）",
+      "selection": "side_a",
+      "selection_label": "New York Knicks 試合勝利（延長込み）",
+      "market_odds": null,
+      "odds_taken": null,
+      "stake": 100,
+      "discovered_at": "2026-11-10T19:21:25+09:00",
+      "bet_at": null,
+      "locked_at": "2026-11-10T19:21:25+09:00",
+      "locked": {
+        "prob": null,
+        "gap_score": null,
+        "confidence": "ユーザー指定正式採用",
+        "model_version": "rmc-user-approved-20261110",
+        "summary": "①実績型：直近H2H10戦7勝3敗、直近6試合5勝1敗対0勝6敗。共通相手4組でもニックス方向。②総合戦力型：今季5勝4敗・平均得失差+5.7対1勝9敗・-13.2、NYKホーム。照合：現在成績と近年H2Hは同方向。ただしMILは今夏の主力移籍で過去H2Hの参考度低下。ニックス延長込み試合勝利を正式採用。"
+      },
+      "settlement_override": null,
+      "flags": [
+        "odds_unverified"
+      ],
+      "note": "ユーザー指定正式採用。仮想100USD追跡、実購入なし。詳細はdetail_refに保存。",
+      "detail_ref": "data/today-gap-analysis.json#2026-11-11-knicks-bucks-nba"
     }
   ]
 }

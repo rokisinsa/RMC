@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-11-07T19:14:44+09:00",
+    "as_of": "2026-11-10T19:21:25+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -3382,6 +3382,130 @@
             "verified_at": "2026-11-07T19:14:44+09:00",
             "source_confidence": "official",
             "note": "日付・対戦カード・最終結果を本文で照合。採用オッズ未登録につき利益額は未確定。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-2026-11-08-2243-result-update",
+      "kind": "result_update",
+      "at": "2026-11-08T22:43:00+09:00",
+      "source": "試合結果本文・NHL/PSG公式",
+      "note": "本日の分析掲載3件を的中確定。オッズ未登録のため利益額は未計算、0ドル扱いしない。",
+      "changes": [
+        {
+          "match_id": "2026-11-08-geng-invictus-lol",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 0
+              },
+              "text": "Gen.G 3-0 Invictus Gaming。採用側の的中確定。"
+            },
+            "result_confirmed_at": "2026-11-08T22:43:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "MID.GG confirmed result",
+                "url": "https://mid.gg/esports/matches/gen-g-vs-invictus-gaming",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-11-08T22:43:00+09:00",
+            "source_confidence": "specialist_db",
+            "note": "日付・大会・対戦カードと最終結果を本文で照合。採用オッズ未登録につき金額未確定。"
+          }
+        },
+        {
+          "match_id": "2026-11-08-psg-troyes-football",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 1,
+                "b": 0
+              },
+              "text": "Paris Saint-Germain 1-0 Troyes。採用側の的中確定。"
+            },
+            "result_confirmed_at": "2026-11-08T22:43:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "PSG official full-time match report",
+                "url": "https://www.psg.fr/en/matches/mens-football/20262027/paris-vs-troyes-2026-11-07",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-08T22:43:00+09:00",
+            "source_confidence": "official",
+            "note": "日付・大会・対戦カードと最終結果を本文で照合。採用オッズ未登録につき金額未確定。"
+          }
+        },
+        {
+          "match_id": "2026-11-08-carolina-chicago-nhl",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 9,
+                "b": 2
+              },
+              "text": "Carolina Hurricanes 9-2 Chicago Blackhawks。採用側の的中確定。"
+            },
+            "result_confirmed_at": "2026-11-08T22:43:00+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "NHL official final result",
+                "url": "https://www.nhl.com/news/chicago-blackhawks-carolina-hurricanes-game-recap-november-7-2026",
+                "type": "official"
+              }
+            ],
+            "verified_at": "2026-11-08T22:43:00+09:00",
+            "source_confidence": "official",
+            "note": "日付・大会・対戦カードと最終結果を本文で照合。採用オッズ未登録につき金額未確定。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-2026-11-10-1921-result-update",
+      "kind": "result_update",
+      "at": "2026-11-10T19:21:25+09:00",
+      "source": "専門結果DB・公式結果照合",
+      "note": "前回未公開のGen.G・PSG・Carolina結果とBenfica追加を含め公開。今回Benficaを確定。既存無効2件は維持、新規中止を確認せず。9月の同一性未解決4件は未確定を維持。",
+      "changes": [
+        {
+          "match_id": "2026-11-09-estrela-benfica-football",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 2,
+                "b": 3
+              },
+              "text": "Estrela Amadora 2-3 Benfica。Benficaの90分勝利が的中。"
+            },
+            "result_confirmed_at": "2026-11-10T19:21:25+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "Sofascore",
+                "url": "https://www.sofascore.com/football/match/cf-estrela-amadora-benfica/gkbsKkb",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-11-10T19:21:25+09:00",
+            "source_confidence": "specialist_db",
+            "note": "11/8現地・リーグ第11節・Estrelaホーム・最終結果を本文で照合。公式検索結果とも一致。"
           }
         }
       ],
