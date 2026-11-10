@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "title": "本日の分析",
-  "generated_at": "2026-11-10T19:21:25+09:00",
+  "generated_at": "2026-11-11T00:17:12+09:00",
   "window": {
     "from": "2026-11-10T00:00:00+09:00",
     "to": "2026-11-12T00:00:00+09:00",
@@ -20,262 +20,9 @@
       "Ziraat Bankkart vs On Hotels Alanya Belediyespor",
       "New York Knicks vs Milwaukee Bucks"
     ],
-    "note": "ユーザー指定2件の正式採用。既存の結果確定4件を成績へ移動。中止・不成立履歴2件は無効維持、新規中止は確認できず。"
+    "note": "Ziraat第1セット勝利確定、履歴へ移動。Knicksは開始前。"
   },
   "candidates": [
-    {
-      "rank": 1,
-      "match_id": "2026-11-10-ziraat-alanya-volleyball",
-      "event_id": "web-2026-11-10-ziraat-alanya-volleyball",
-      "matchup": "Ziraat Bankkart vs On Hotels Alanya Belediyespor",
-      "favored": "Ziraat Bankkart",
-      "selection_label": "Ziraat Bankkart 第1セット勝利",
-      "sport": "Volleyball",
-      "competition": "AXA Sigorta Kupa Voley 男子・準々決勝",
-      "start_jst": "2026-11-10T22:30:00+09:00",
-      "venue": "TVF Ziraat Bankkart Voleybol Salonu／Ziraatホーム",
-      "format": "第1セット勝利",
-      "status": "formal",
-      "gap_grade": "ユーザー指定正式採用",
-      "price_grade": "採用オッズ未登録",
-      "market": "set1_winner",
-      "stake_usd_reference": 100,
-      "profit_usd": null,
-      "profit_status": "試合前・未確定。採用オッズ未登録。",
-      "odds": {
-        "min": null,
-        "max": null,
-        "book_examples": "カジ旅・遊雅堂・bet365：個別市場の掲載確認不能。採用価格未登録。"
-      },
-      "estimated_win_probability_pct": null,
-      "estimated_ev_pct": null,
-      "added_at": "2026-11-10T19:21:25+09:00",
-      "analysis_reviewed_at": "2026-11-10T19:21:25+09:00",
-      "sources": [
-        "https://efelercup.volleystation.com/en/schedule/",
-        "https://efeler.volleystation.com/en/phase-6226-lig-etabi/standings/",
-        "https://ziraatsporkulubu.ziraatbank.com.tr/tr/fikstur",
-        "https://scores24.live/en/volleyball/m-17-11-2026-ziraat-bankasi-ankara-alanya-belediye",
-        "https://vblineup.com/tr/men-efeler2026/teams/alanya-belediyespor",
-        "https://www.365scores.com/volleyball/match/efeler-ligi-5766/galatasaray-ziraat-bankasi-16318-23046-5766",
-        "https://tvf.org.tr/icerik/ziraat-bankkart-cev-sampiyonlar-ligini-bronz-madalya-ile-tamamladi"
-      ],
-      "conclusion": "①実績型：試合H2Hは6勝1敗、直近6試合全勝。ただし最新H2Hの第1セットは19-25で敗戦。試合勝率を第1セット勝率に流用しない。②総合戦力型：リーグ首位6勝0敗、18-5セットでZiraat優勢。照合：試合全体は同方向だが第1セット市場はサンプル不足。ユーザー指定で第1セット勝利を正式採用。",
-      "risk": "試合全体の強さを第1セット確率へ転用不可。最新直接対決は第1セット敗戦。",
-      "analysis_detail": {
-        "h2h": {
-          "summary": "公開確認7件、Ziraat6勝1敗・19-8セット。直近5対戦には3-0なし。第1セット別の全件取得は未完了。",
-          "items": [
-            {
-              "date": "2026-10-31",
-              "label": "Ziraatアウェー",
-              "result": "3-2（第1セット19-25）"
-            },
-            {
-              "date": "2026-02-22",
-              "label": "Ziraatホーム",
-              "result": "3-1"
-            },
-            {
-              "date": "2025-11-29",
-              "label": "Ziraatアウェー",
-              "result": "3-1"
-            },
-            {
-              "date": "2025-03-08",
-              "label": "Ziraatアウェー",
-              "result": "1-3"
-            },
-            {
-              "date": "2024-12-08",
-              "label": "Ziraatホーム",
-              "result": "3-1"
-            },
-            {
-              "date": "2024-03-16",
-              "label": "Ziraatアウェー",
-              "result": "3-0"
-            },
-            {
-              "date": "2023-12-06",
-              "label": "Ziraatホーム",
-              "result": "3-0"
-            }
-          ]
-        },
-        "recent_form": {
-          "side_a": {
-            "label": "Ziraat",
-            "summary": "10戦8勝2敗／26-13・平均差+1.30。6戦6勝0敗／18-5・平均差+2.17。5戦5勝0敗／15-5・平均差+2.00。2戦2勝0敗／6-0・平均差+3.00。1戦1勝0敗／3-0・平均差+3.00。日付は開催地基準。最新7件は今季、残り3件は前季。試合・セット集計であり第1セット集計ではない。",
-            "items": [
-              {
-                "date": "2026-11-07",
-                "opponent": "IBB",
-                "result": "W 3-0"
-              },
-              {
-                "date": "2026-11-03",
-                "opponent": "Sungurlu",
-                "result": "W 3-0"
-              },
-              {
-                "date": "2026-10-31",
-                "opponent": "Alanya",
-                "result": "W 3-2"
-              },
-              {
-                "date": "2026-10-27",
-                "opponent": "Gaziantep",
-                "result": "W 3-1"
-              },
-              {
-                "date": "2026-10-24",
-                "opponent": "Altekma",
-                "result": "W 3-2"
-              },
-              {
-                "date": "2026-10-17",
-                "opponent": "Fenerbahce",
-                "result": "W 3-0"
-              },
-              {
-                "date": "2026-10-12",
-                "opponent": "Galatasaray（Super Cup）",
-                "result": "L 1-3"
-              },
-              {
-                "date": "2026-05-17",
-                "opponent": "Projekt Warszawa",
-                "result": "W 3-2"
-              },
-              {
-                "date": "2026-05-16",
-                "opponent": "Zawiercie",
-                "result": "L 1-3"
-              },
-              {
-                "date": "2026-04-27",
-                "opponent": "Galatasaray",
-                "result": "W 3-0"
-              }
-            ]
-          },
-          "side_b": {
-            "label": "Alanya",
-            "summary": "10戦3勝7敗／19-25・平均差-0.60。6戦3勝3敗／13-13・平均差+0.00。5戦2勝3敗／10-11・平均差-0.20。2戦0勝2敗／4-6・平均差-1.00。1戦0勝1敗／2-3・平均差-1.00。日付は開催地基準。10/17の不戦勝は除外。実施試合10件。旧季4件は現戦力への参考度低下。",
-            "items": [
-              {
-                "date": "2026-11-07",
-                "opponent": "Gaziantep",
-                "result": "L 2-3"
-              },
-              {
-                "date": "2026-10-31",
-                "opponent": "Ziraat",
-                "result": "L 2-3"
-              },
-              {
-                "date": "2026-10-27",
-                "opponent": "Fenerbahce",
-                "result": "L 0-3"
-              },
-              {
-                "date": "2026-10-24",
-                "opponent": "Istanbul Genclik",
-                "result": "W 3-0"
-              },
-              {
-                "date": "2026-10-10",
-                "opponent": "IBB（Cup）",
-                "result": "W 3-2"
-              },
-              {
-                "date": "2026-10-08",
-                "opponent": "Istanbul Genclik（Cup）",
-                "result": "W 3-2"
-              },
-              {
-                "date": "2026-03-22",
-                "opponent": "Altekma",
-                "result": "L 1-3"
-              },
-              {
-                "date": "2026-03-18",
-                "opponent": "Galatasaray",
-                "result": "L 1-3"
-              },
-              {
-                "date": "2026-03-15",
-                "opponent": "Bursa",
-                "result": "L 2-3"
-              },
-              {
-                "date": "2026-03-08",
-                "opponent": "Istanbul Genclik",
-                "result": "L 2-3"
-              }
-            ]
-          }
-        },
-        "common_opponent_comparison": {
-          "summary": "今季3相手。第1セット同士の比較は未取得。",
-          "items": [
-            {
-              "opponent": "Fenerbahce",
-              "side_a": {
-                "date": "2026-10-17",
-                "result": "3-0"
-              },
-              "side_b": {
-                "date": "2026-10-27",
-                "result": "0-3"
-              },
-              "comparison": "ともにアウェー、試合結果はZiraat方向。"
-            },
-            {
-              "opponent": "Gaziantep",
-              "side_a": {
-                "date": "2026-10-27",
-                "result": "3-1"
-              },
-              "side_b": {
-                "date": "2026-11-07",
-                "result": "2-3"
-              },
-              "comparison": "Ziraatホーム対Alanyaアウェーで条件差。"
-            },
-            {
-              "opponent": "IBB",
-              "side_a": {
-                "date": "2026-11-07",
-                "result": "3-0"
-              },
-              "side_b": {
-                "date": "2026-10-10",
-                "result": "3-2"
-              },
-              "comparison": "リーグとカップ、会場差あり。"
-            }
-          ]
-        },
-        "ranking_or_rating": {
-          "text": "公式リーグZiraat1位6勝0敗16点・18-5セット、Alanya7位2勝3敗8点・10-9セット。Alanya公式表は不戦勝1件を含む。"
-        },
-        "availability": {
-          "text": "Ziraat登録Nimir、Ishikawa、Toniutti。当日先発ローテーション・両軍欠場未確認。"
-        },
-        "sport_specific": {
-          "text": "採用市場は第1セット勝者（set1_winner）。最低1セット獲得や試合勝利とは別。第1セット勝率とローテーション相性はデータ不足。"
-        },
-        "summary": "①実績型：試合H2Hは6勝1敗、直近6試合全勝。ただし最新H2Hの第1セットは19-25で敗戦。試合勝率を第1セット勝率に流用しない。②総合戦力型：リーグ首位6勝0敗、18-5セットでZiraat優勢。照合：試合全体は同方向だが第1セット市場はサンプル不足。ユーザー指定で第1セット勝利を正式採用。",
-        "home_away": {
-          "text": "TVF Ziraat Bankkart Voleybol Salonu／Ziraatホーム"
-        },
-        "market": {
-          "text": "第1セット勝利。仮想100USD追跡、実購入なし。オッズ・EV未確定。"
-        }
-      }
-    },
     {
       "rank": 2,
       "match_id": "2026-11-11-knicks-bucks-nba",
@@ -1727,7 +1474,7 @@
       "New York Knicks"
     ],
     "price_adjusted_top": [],
-    "caution": "Ziraatは第1セット市場。試合勝者とは区別しサンプル不足を明記。採用オッズ未登録につき収支額未確定。"
+    "caution": "Ziraat第1セット25-23で的中、履歴・正式成績に反映。Knicksは11/11 09:30 JST開始前。採用オッズ未登録につき利益額未確定。"
   },
   "previous_analysis": {
     "generated_at": "2026-10-16T21:16:00+09:00",
@@ -19192,6 +18939,275 @@
         ],
         "archived_at": "2026-11-10T19:21:25+09:00",
         "archive_reason": "試合終了・結果確認"
+      },
+      {
+        "rank": 1,
+        "match_id": "2026-11-10-ziraat-alanya-volleyball",
+        "event_id": "web-2026-11-10-ziraat-alanya-volleyball",
+        "matchup": "Ziraat Bankkart vs On Hotels Alanya Belediyespor",
+        "favored": "Ziraat Bankkart",
+        "selection_label": "Ziraat Bankkart 第1セット勝利",
+        "sport": "Volleyball",
+        "competition": "AXA Sigorta Kupa Voley 男子・準々決勝",
+        "start_jst": "2026-11-10T22:30:00+09:00",
+        "venue": "TVF Ziraat Bankkart Voleybol Salonu／Ziraatホーム",
+        "format": "第1セット勝利",
+        "status": "formal",
+        "gap_grade": "ユーザー指定正式採用",
+        "price_grade": "採用オッズ未登録",
+        "market": "set1_winner",
+        "stake_usd_reference": 100,
+        "profit_usd": null,
+        "profit_status": "○第1セット勝利が的中。採用オッズ未登録につき利益額未確定。",
+        "odds": {
+          "min": null,
+          "max": null,
+          "book_examples": "カジ旅・遊雅堂・bet365：個別市場の掲載確認不能。採用価格未登録。"
+        },
+        "estimated_win_probability_pct": null,
+        "estimated_ev_pct": null,
+        "added_at": "2026-11-10T19:21:25+09:00",
+        "analysis_reviewed_at": "2026-11-10T19:21:25+09:00",
+        "sources": [
+          "https://efelercup.volleystation.com/en/schedule/",
+          "https://efeler.volleystation.com/en/phase-6226-lig-etabi/standings/",
+          "https://ziraatsporkulubu.ziraatbank.com.tr/tr/fikstur",
+          "https://scores24.live/en/volleyball/m-17-11-2026-ziraat-bankasi-ankara-alanya-belediye",
+          "https://vblineup.com/tr/men-efeler2026/teams/alanya-belediyespor",
+          "https://www.365scores.com/volleyball/match/efeler-ligi-5766/galatasaray-ziraat-bankasi-16318-23046-5766",
+          "https://tvf.org.tr/icerik/ziraat-bankkart-cev-sampiyonlar-ligini-bronz-madalya-ile-tamamladi"
+        ],
+        "conclusion": "①実績型：試合H2Hは6勝1敗、直近6試合全勝。ただし最新H2Hの第1セットは19-25で敗戦。試合勝率を第1セット勝率に流用しない。②総合戦力型：リーグ首位6勝0敗、18-5セットでZiraat優勢。照合：試合全体は同方向だが第1セット市場はサンプル不足。ユーザー指定で第1セット勝利を正式採用。",
+        "risk": "試合全体の強さを第1セット確率へ転用不可。最新直接対決は第1セット敗戦。",
+        "analysis_detail": {
+          "h2h": {
+            "summary": "公開確認7件、Ziraat6勝1敗・19-8セット。直近5対戦には3-0なし。第1セット別の全件取得は未完了。",
+            "items": [
+              {
+                "date": "2026-10-31",
+                "label": "Ziraatアウェー",
+                "result": "3-2（第1セット19-25）"
+              },
+              {
+                "date": "2026-02-22",
+                "label": "Ziraatホーム",
+                "result": "3-1"
+              },
+              {
+                "date": "2025-11-29",
+                "label": "Ziraatアウェー",
+                "result": "3-1"
+              },
+              {
+                "date": "2025-03-08",
+                "label": "Ziraatアウェー",
+                "result": "1-3"
+              },
+              {
+                "date": "2024-12-08",
+                "label": "Ziraatホーム",
+                "result": "3-1"
+              },
+              {
+                "date": "2024-03-16",
+                "label": "Ziraatアウェー",
+                "result": "3-0"
+              },
+              {
+                "date": "2023-12-06",
+                "label": "Ziraatホーム",
+                "result": "3-0"
+              }
+            ]
+          },
+          "recent_form": {
+            "side_a": {
+              "label": "Ziraat",
+              "summary": "10戦8勝2敗／26-13・平均差+1.30。6戦6勝0敗／18-5・平均差+2.17。5戦5勝0敗／15-5・平均差+2.00。2戦2勝0敗／6-0・平均差+3.00。1戦1勝0敗／3-0・平均差+3.00。日付は開催地基準。最新7件は今季、残り3件は前季。試合・セット集計であり第1セット集計ではない。",
+              "items": [
+                {
+                  "date": "2026-11-07",
+                  "opponent": "IBB",
+                  "result": "W 3-0"
+                },
+                {
+                  "date": "2026-11-03",
+                  "opponent": "Sungurlu",
+                  "result": "W 3-0"
+                },
+                {
+                  "date": "2026-10-31",
+                  "opponent": "Alanya",
+                  "result": "W 3-2"
+                },
+                {
+                  "date": "2026-10-27",
+                  "opponent": "Gaziantep",
+                  "result": "W 3-1"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "Altekma",
+                  "result": "W 3-2"
+                },
+                {
+                  "date": "2026-10-17",
+                  "opponent": "Fenerbahce",
+                  "result": "W 3-0"
+                },
+                {
+                  "date": "2026-10-12",
+                  "opponent": "Galatasaray（Super Cup）",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-05-17",
+                  "opponent": "Projekt Warszawa",
+                  "result": "W 3-2"
+                },
+                {
+                  "date": "2026-05-16",
+                  "opponent": "Zawiercie",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-04-27",
+                  "opponent": "Galatasaray",
+                  "result": "W 3-0"
+                }
+              ]
+            },
+            "side_b": {
+              "label": "Alanya",
+              "summary": "10戦3勝7敗／19-25・平均差-0.60。6戦3勝3敗／13-13・平均差+0.00。5戦2勝3敗／10-11・平均差-0.20。2戦0勝2敗／4-6・平均差-1.00。1戦0勝1敗／2-3・平均差-1.00。日付は開催地基準。10/17の不戦勝は除外。実施試合10件。旧季4件は現戦力への参考度低下。",
+              "items": [
+                {
+                  "date": "2026-11-07",
+                  "opponent": "Gaziantep",
+                  "result": "L 2-3"
+                },
+                {
+                  "date": "2026-10-31",
+                  "opponent": "Ziraat",
+                  "result": "L 2-3"
+                },
+                {
+                  "date": "2026-10-27",
+                  "opponent": "Fenerbahce",
+                  "result": "L 0-3"
+                },
+                {
+                  "date": "2026-10-24",
+                  "opponent": "Istanbul Genclik",
+                  "result": "W 3-0"
+                },
+                {
+                  "date": "2026-10-10",
+                  "opponent": "IBB（Cup）",
+                  "result": "W 3-2"
+                },
+                {
+                  "date": "2026-10-08",
+                  "opponent": "Istanbul Genclik（Cup）",
+                  "result": "W 3-2"
+                },
+                {
+                  "date": "2026-03-22",
+                  "opponent": "Altekma",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-03-18",
+                  "opponent": "Galatasaray",
+                  "result": "L 1-3"
+                },
+                {
+                  "date": "2026-03-15",
+                  "opponent": "Bursa",
+                  "result": "L 2-3"
+                },
+                {
+                  "date": "2026-03-08",
+                  "opponent": "Istanbul Genclik",
+                  "result": "L 2-3"
+                }
+              ]
+            }
+          },
+          "common_opponent_comparison": {
+            "summary": "今季3相手。第1セット同士の比較は未取得。",
+            "items": [
+              {
+                "opponent": "Fenerbahce",
+                "side_a": {
+                  "date": "2026-10-17",
+                  "result": "3-0"
+                },
+                "side_b": {
+                  "date": "2026-10-27",
+                  "result": "0-3"
+                },
+                "comparison": "ともにアウェー、試合結果はZiraat方向。"
+              },
+              {
+                "opponent": "Gaziantep",
+                "side_a": {
+                  "date": "2026-10-27",
+                  "result": "3-1"
+                },
+                "side_b": {
+                  "date": "2026-11-07",
+                  "result": "2-3"
+                },
+                "comparison": "Ziraatホーム対Alanyaアウェーで条件差。"
+              },
+              {
+                "opponent": "IBB",
+                "side_a": {
+                  "date": "2026-11-07",
+                  "result": "3-0"
+                },
+                "side_b": {
+                  "date": "2026-10-10",
+                  "result": "3-2"
+                },
+                "comparison": "リーグとカップ、会場差あり。"
+              }
+            ]
+          },
+          "ranking_or_rating": {
+            "text": "公式リーグZiraat1位6勝0敗16点・18-5セット、Alanya7位2勝3敗8点・10-9セット。Alanya公式表は不戦勝1件を含む。"
+          },
+          "availability": {
+            "text": "Ziraat登録Nimir、Ishikawa、Toniutti。当日先発ローテーション・両軍欠場未確認。"
+          },
+          "sport_specific": {
+            "text": "採用市場は第1セット勝者（set1_winner）。最低1セット獲得や試合勝利とは別。第1セット勝率とローテーション相性はデータ不足。"
+          },
+          "summary": "①実績型：試合H2Hは6勝1敗、直近6試合全勝。ただし最新H2Hの第1セットは19-25で敗戦。試合勝率を第1セット勝率に流用しない。②総合戦力型：リーグ首位6勝0敗、18-5セットでZiraat優勢。照合：試合全体は同方向だが第1セット市場はサンプル不足。ユーザー指定で第1セット勝利を正式採用。",
+          "home_away": {
+            "text": "TVF Ziraat Bankkart Voleybol Salonu／Ziraatホーム"
+          },
+          "market": {
+            "text": "第1セット勝利。仮想100USD追跡、実購入なし。オッズ・EV未確定。"
+          },
+          "post_match": {
+            "text": "Ziraat第1セット25-23で的中。試合全体は3-0（25-23、25-13、25-15）。 採用オッズ未登録につき利益額未確定。"
+          }
+        },
+        "favored_result": "win",
+        "result": "Ziraat第1セット25-23で的中。試合全体は3-0（25-23、25-13、25-15）。",
+        "result_note": "Ziraat第1セット25-23で的中。試合全体は3-0（25-23、25-13、25-15）。",
+        "result_status": "final",
+        "match_status": "final",
+        "result_confirmed_at": "2026-11-11T00:17:12+09:00",
+        "result_updated_at": "2026-11-11T00:17:12+09:00",
+        "result_sources": [
+          "https://efelercup.volleystation.com/en/matches/2602343/",
+          "https://www.sofascore.com/volleyball/match/alanya-belediye-ziraat-bankasi/Rqrspmhc"
+        ],
+        "archived_at": "2026-11-11T00:17:12+09:00",
+        "archive_reason": "第1セット結果確定・試合終了"
       }
     ],
     "summary": {
@@ -19211,7 +19227,7 @@
       "caution": "勝率推定はレンジで扱い、確実性を意味しない。最新オッズは開始前に変動する。"
     },
     "result_summary": {
-      "favored_wins": 84,
+      "favored_wins": 85,
       "favored_losses": 8,
       "pending": 0,
       "void": 2
@@ -19222,7 +19238,7 @@
     "note": "2026-09-28以前の旧RMC取引・分析データは表示/収支集計から削除。前回11件＋今回5件を新しい基準として保持。終了済みカードは更新時に結果まで反映する。"
   },
   "meta": {
-    "as_of": "2026-11-10T19:21:25+09:00",
-    "note": "指定2件追加・前回未公開分を含め4件勝利確定。既存無効2件を維持。"
+    "as_of": "2026-11-11T00:17:12+09:00",
+    "note": "Ziraat第1セット勝利確定、履歴へ移動。Knicksは開始前。"
   }
 }

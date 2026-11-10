@@ -4,7 +4,7 @@
     "generated_by": "Claude Code（手動確認）",
     "legacy_source": null,
     "legacy_commit": null,
-    "as_of": "2026-11-10T19:21:25+09:00",
+    "as_of": "2026-11-11T00:17:12+09:00",
     "status": "active",
     "note": "移行基準点（2026-09-26 06:45 JST）より後の試合事実の更新ログ。matches.json は書き換えず、ここへ更新回ごとに追記する。確認できた結果だけを changes に入れ、確認できないものは reviews に要確認として残す。"
   },
@@ -3506,6 +3506,61 @@
             "verified_at": "2026-11-10T19:21:25+09:00",
             "source_confidence": "specialist_db",
             "note": "11/8現地・リーグ第11節・Estrelaホーム・最終結果を本文で照合。公式検索結果とも一致。"
+          }
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "run_id": "mr-2026-11-11-0017-result-update",
+      "kind": "result_update",
+      "at": "2026-11-11T00:17:12+09:00",
+      "source": "VolleyStation公式・Sofascore",
+      "note": "第1セット市場の的中確定。ニックスは11/11 09:30 JST開始前。新たな中止確認なし。",
+      "changes": [
+        {
+          "match_id": "2026-11-10-ziraat-alanya-volleyball",
+          "set": {
+            "status": "final",
+            "result": {
+              "final": {
+                "a": 3,
+                "b": 0
+              },
+              "periods": {
+                "set1": {
+                  "a": 25,
+                  "b": 23
+                },
+                "set2": {
+                  "a": 25,
+                  "b": 13
+                },
+                "set3": {
+                  "a": 25,
+                  "b": 15
+                }
+              },
+              "text": "Ziraat第1セット25-23で的中。試合全体は3-0（25-23、25-13、25-15）。"
+            },
+            "result_confirmed_at": "2026-11-11T00:17:12+09:00"
+          },
+          "evidence": {
+            "sources": [
+              {
+                "name": "VolleyStation公式",
+                "url": "https://efelercup.volleystation.com/en/matches/2602343/",
+                "type": "official"
+              },
+              {
+                "name": "Sofascore",
+                "url": "https://www.sofascore.com/volleyball/match/alanya-belediye-ziraat-bankasi/Rqrspmhc",
+                "type": "specialist_db"
+              }
+            ],
+            "verified_at": "2026-11-11T00:17:12+09:00",
+            "source_confidence": "specialist_db",
+            "note": "第1セット25-23は公式と専門DB一致。公式表示は第3セット途中で更新遅延、最終3-0と第3セット25-15はSofascore本文で確認。"
           }
         }
       ],
